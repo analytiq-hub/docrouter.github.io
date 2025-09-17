@@ -44,13 +44,13 @@ title: "DocRouter Open Source"
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Getting Started</h2>
             <p class="text-gray-600 mb-6">Clone the repository and start with Docker Compose for local development:</p>
 
-            <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-6"><code>git clone https://github.com/analytiq-hub/doc-router.git
+            <pre><code>git clone https://github.com/analytiq-hub/doc-router.git
 cd doc-router
 docker-compose up -d</code></pre>
 
             <p class="text-gray-600 mt-6 mb-6">For production deployment with Kubernetes:</p>
 
-            <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-6"><code>kubectl apply -f k8s/
+            <pre><code>kubectl apply -f k8s/
 kubectl port-forward svc/docrouter-frontend 8080:80</code></pre>
         </section>
 

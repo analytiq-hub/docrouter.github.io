@@ -32,7 +32,7 @@ title: "DocRouter Python SDK"
 
             <p class="text-gray-600 mt-6 mb-6">Alternatively, you can clone the repository and install in development mode:</p>
 
-            <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-6"><code>git clone https://github.com/analytiq-hub/doc-router.git
+            <pre><code>git clone https://github.com/analytiq-hub/doc-router.git
 cd doc-router/packages
 pip install -e .</code></pre>
         </section>
@@ -50,7 +50,7 @@ pip install -e .</code></pre>
 
             <h3 class="text-lg font-medium text-gray-900 mb-3">Basic Usage</h3>
 
-            <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-6"><code>from docrouter import DocRouterClient
+            <pre><code>from docrouter import DocRouterClient
 
 # Initialize the client
 client = DocRouterClient(
@@ -119,7 +119,7 @@ print(analysis.structured_data)</code></pre>
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Examples</h2>
 
             <h3 class="text-lg font-medium text-gray-900 mb-3">Batch Document Processing</h3>
-            <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-6"><code>import os
+            <pre><code>import os
 from docrouter import DocRouterClient
 
 client = DocRouterClient(

@@ -52,11 +52,11 @@ title: "DocRouter MCP Server"
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Installation</h2>
             <p class="text-gray-600 mb-6">Install the MCP server from the DocRouter repository:</p>
 
-            <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-6"><code>pip install git+https://github.com/analytiq-hub/doc-router.git#subdirectory=mcp_server</code></pre>
+            <pre><code>pip install git+https://github.com/analytiq-hub/doc-router.git#subdirectory=mcp_server</code></pre>
 
             <p class="text-gray-600 mt-6 mb-6">Or clone and install in development mode:</p>
 
-            <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-6"><code>git clone https://github.com/analytiq-hub/doc-router.git
+            <pre><code>git clone https://github.com/analytiq-hub/doc-router.git
 cd doc-router/mcp_server
 pip install -e .</code></pre>
         </section>
@@ -65,7 +65,7 @@ pip install -e .</code></pre>
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Configuration</h2>
             <p class="text-gray-600 mb-6">Configure the MCP server by adding it to your Claude Desktop configuration:</p>
 
-            <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-6"><code>{
+            <pre><code>{
   "mcpServers": {
     "docrouter": {
       "command": "python",
