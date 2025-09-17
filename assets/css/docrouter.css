@@ -236,3 +236,54 @@ body {
     color: #2563EB;
     text-decoration: none;
 }
+
+/* Code block styles - match analytiq-hub.github.io exactly */
+.prose pre {
+    background-color: rgb(31, 41, 55);
+    color: rgb(229, 231, 235);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.prose pre code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+.prose code {
+    background-color: rgb(243, 244, 246);
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* Fallback for pre elements without .prose class */
+pre {
+    background-color: rgb(31, 41, 55) !important;
+    color: rgb(229, 231, 235) !important;
+    padding: 1rem !important;
+    border-radius: 0.5rem !important;
+    overflow-x: auto !important;
+    margin: 1.5rem 0 !important;
+    font-family: 'JetBrains Mono', ui-monospace, monospace !important;
+}
+
+pre code {
+    background-color: transparent !important;
+    padding: 0 !important;
+    color: inherit !important;
+    font-family: 'JetBrains Mono', ui-monospace, monospace !important;
+}
+
+/* Inline code styling */
+code {
+    background-color: rgb(243, 244, 246) !important;
+    padding: 0.125rem 0.25rem !important;
+    border-radius: 0.25rem !important;
+    font-size: 0.875em !important;
+    font-family: 'JetBrains Mono', ui-monospace, monospace !important;
+}
