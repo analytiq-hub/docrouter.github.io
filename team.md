@@ -15,7 +15,7 @@ title: "Our Team - DocRouter.AI"
         <!-- Founder Section -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-                <img src="{{ '/assets/images/andrei_radulescu_banu.jpeg' | relative_url }}" alt="Andrei Radulescu-Banu" class="w-32 h-32 rounded-full border-4 border-blue-200 shadow-md flex-shrink-0">
+                <img src="{{ '/assets/images/andrei.jpg' | relative_url }}" alt="Andrei Radulescu-Banu" class="w-32 h-32 rounded-full border-4 border-blue-200 shadow-md flex-shrink-0">
                 <div class="text-center md:text-left">
                     <h2 class="text-2xl font-semibold text-gray-900 mb-2">Andrei Radulescu-Banu</h2>
                     <p class="text-gray-700 mb-2 font-semibold">Founder, and Engineering Leader</p>
