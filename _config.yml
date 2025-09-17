@@ -1,0 +1,129 @@
+title: Analytiq Hub
+author:
+  name: Andrei Radulescu-Banu
+  email: "andrei@analytiqhub.com"
+description: > # this means to ignore newlines until "show_excerpts:"
+  Analytiq Hub provides custom AI solutions and expert guidance 
+  for biotech and healthtech companies.
+
+show_excerpts: false # set to true to show excerpts on the homepage
+permalink: pretty
+baseurl: ""
+
+
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+  #skin: classic
+  skin: dark
+  #skin: solarized-dark
+  #skin: solarized
+
+  # generate social links in footer
+  social_links:
+    twitter: bitdribble
+    github:  andrei-radulescu-banu
+    # devto: jekyll
+    # dribbble: jekyll
+    # facebook: jekyll
+    # flickr:   jekyll
+    # instagram: jekyll
+    linkedin: andrei-radulescu-banu
+    # pinterest: jekyll
+    # youtube: jekyll
+    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+    # youtube_channel_name: CloudCannon
+    # telegram: jekyll
+    # googleplus: +jekyll
+    # microdotblog: jekyll
+    # keybase: jekyll
+
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+    # GitLab instances
+    # gitlab:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+header_pages:
+  - title: "Resources"
+    url: "#"
+    children:
+      - title: "Case Studies"
+        url: "/case-studies"
+      - title: "Technology"
+        url: "/technology"
+  - title: "Talks"
+    url: "/talks"
+  - title: "Blog"
+    url: "/blog"
+  - title: "About"
+    url: "/about"
+  - title: "Get Started"
+    url: "/contact"
+    button_style: "solid"
+
+# Footer sitemap - simplified navigation for footer display
+site_map:
+  - title: "Services"
+    links:
+      - title: "Case Studies"
+        url: "/case-studies"
+      - title: "Technology"
+        url: "/technology"
+  - title: "Company"
+    links:
+      - title: "About"
+        url: "/about"
+  - title: "Resources"
+    links:
+      - title: "Blog"
+        url: "/blog"
+      - title: "Talks"
+        url: "/talks"
+
+# Build settings
+# theme: minima  # Removed - using Tailwind CSS instead
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:title/
+
+# Pagination configuration for jekyll-paginate-v2
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title - Page :num'
+  limit: 0
+  trail:
+    before: 2
+    after: 2
+  sort_field: 'date'
+  sort_reverse: true
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
+ - jekyll-pdf-embed # Per example at https://github.com/MihajloNesic/minimal-mistakes-pdf-example/
+ - jekyll-paginate-v2
+
+
+
+future: true
+
+# GitHub repository configuration
+repository:  analytiq-hub/analytiq-hub.github.io 

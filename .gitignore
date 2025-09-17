@@ -1,0 +1,14 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+
+# Tailwind CSS executable
+tailwindcss
+tailwindcss-*
+
+# macOS system files
+.DS_Store
+**/.DS_Store
