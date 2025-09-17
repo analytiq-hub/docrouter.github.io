@@ -28,7 +28,7 @@ title: "DocRouter Python SDK"
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Installation</h2>
             <p class="text-gray-600 mb-6">You can install the DocRouter SDK directly from GitHub:</p>
 
-            <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-6"><code>pip install git+https://github.com/analytiq-hub/doc-router.git#subdirectory=packages</code></pre>
+            <pre><code>pip install git+https://github.com/analytiq-hub/doc-router.git#subdirectory=packages</code></pre>
 
             <p class="text-gray-600 mt-6 mb-6">Alternatively, you can clone the repository and install in development mode:</p>
 
