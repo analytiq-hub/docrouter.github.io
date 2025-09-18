@@ -156,22 +156,13 @@ function enhanceCodeBlocks() {
     // Skip if already enhanced
     if (preElement.closest('.code-block-container')) return;
     
-    // Extract language from class
-    const languageClass = Array.from(codeElement.classList).find(cls => cls.startsWith('language-'));
-    const language = languageClass ? languageClass.replace('language-', '') : 'text';
-    
     // Create enhanced container
     const container = document.createElement('div');
     container.className = 'code-block-container';
-    
+
     // Create header
     const header = document.createElement('div');
     header.className = 'code-block-header';
-    
-    // Language label
-    const languageLabel = document.createElement('span');
-    languageLabel.className = 'code-block-language';
-    languageLabel.textContent = language.toLowerCase();
     
     // Button container
     const buttonsContainer = document.createElement('div');
@@ -206,7 +197,6 @@ function enhanceCodeBlocks() {
     `;
     
     // Assemble header
-    header.appendChild(languageLabel);
     buttonsContainer.appendChild(collapseBtn);
     buttonsContainer.appendChild(wrapBtn);
     buttonsContainer.appendChild(copyBtn);
