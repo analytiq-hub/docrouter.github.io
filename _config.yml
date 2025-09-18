@@ -56,6 +56,10 @@ minima:
 
 # DocRouter navigation structure
 header_pages:
+  - title: "Launch Application"
+    url: "https://app.docrouter.ai"
+    button_style: "solid"
+    external: true
   - title: "Use Cases"
     url: "#"
     children:
@@ -72,6 +76,8 @@ header_pages:
   - title: "Documentation"
     url: "#"
     children:
+      - title: "REST APIs"
+        url: "/rest-api"
       - title: "Python SDK"
         url: "/python-sdk"
       - title: "MCP Server"
