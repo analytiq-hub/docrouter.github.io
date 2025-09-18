@@ -56,22 +56,33 @@ minima:
 
 # DocRouter navigation structure
 header_pages:
+  - title: "Launch Application"
+    url: "https://app.docrouter.ai"
+    external: true
+    button_style: "primary"
   - title: "Use Cases"
     url: "#"
     children:
       - title: "Overview"
         url: "/use-cases"
-      - title: "Insurance"
-        url: "/use-cases/insurance"
-      - title: "Supply Chain"
-        url: "/use-cases/supply-chain"
+      - title: "Banking"
+        url: "/use-cases/banking"
       - title: "Clinical Trials"
         url: "/use-cases/clinical-trials"
+      - title: "Durable Medical Equipment"
+        url: "/use-cases/dme"
+      - title: "Insurance"
+        url: "/use-cases/insurance"
       - title: "Private Equity"
         url: "/use-cases/private-equity"
+      - title: "Supply Chain"
+        url: "/use-cases/supply-chain"
   - title: "Documentation"
     url: "#"
     children:
+      - title: "REST API"
+        url: "https://doc-router.analytiqhub.com/fastapi/docs#/"
+        external: true
       - title: "Python SDK"
         url: "/python-sdk"
       - title: "MCP Server"

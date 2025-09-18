@@ -26,15 +26,27 @@
                 </button>
                 <div class="dropdown-menu absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-xl min-w-[250px] z-50 opacity-0 invisible -translate-y-2 transition-all duration-200 py-2 text-left">
                   {%- for child in item.children -%}
-                    <a class="block px-4 py-2 text-gray-600 no-underline font-normal transition-colors duration-200 hover:bg-gray-50 hover:text-blue-600 whitespace-nowrap" href="{{ child.url | relative_url }}">{{ child.title | escape }}</a>
+                    {%- if child.external -%}
+                      <a class="block px-4 py-2 text-gray-600 no-underline font-normal transition-colors duration-200 hover:bg-gray-50 hover:text-blue-600 whitespace-nowrap" href="{{ child.url }}" target="_blank" rel="noopener noreferrer">{{ child.title | escape }}</a>
+                    {%- else -%}
+                      <a class="block px-4 py-2 text-gray-600 no-underline font-normal transition-colors duration-200 hover:bg-gray-50 hover:text-blue-600 whitespace-nowrap" href="{{ child.url | relative_url }}">{{ child.title | escape }}</a>
+                    {%- endif -%}
                   {%- endfor -%}
                 </div>
               </div>
             {%- else -%}
-              {%- if item.button_style == "solid" -%}
-                <a class="inline-block px-4 py-2 text-white !text-white no-underline font-medium transition-all duration-200 bg-blue-600 hover:bg-blue-700 rounded-md whitespace-nowrap" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+              {%- if item.button_style == "solid" or item.button_style == "primary" -%}
+                {%- if item.external -%}
+                  <a class="inline-block px-4 py-2 text-white !text-white no-underline font-medium transition-all duration-200 bg-blue-600 hover:bg-blue-700 rounded-md whitespace-nowrap" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a>
+                {%- else -%}
+                  <a class="inline-block px-4 py-2 text-white !text-white no-underline font-medium transition-all duration-200 bg-blue-600 hover:bg-blue-700 rounded-md whitespace-nowrap" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+                {%- endif -%}
               {%- else -%}
-                <a class="inline-block px-4 py-2 text-gray-600 no-underline font-medium transition-all duration-200 hover:text-blue-600 hover:bg-gray-50 rounded-md whitespace-nowrap" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+                {%- if item.external -%}
+                  <a class="inline-block px-4 py-2 text-gray-600 no-underline font-medium transition-all duration-200 hover:text-blue-600 hover:bg-gray-50 rounded-md whitespace-nowrap" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a>
+                {%- else -%}
+                  <a class="inline-block px-4 py-2 text-gray-600 no-underline font-medium transition-all duration-200 hover:text-blue-600 hover:bg-gray-50 rounded-md whitespace-nowrap" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+                {%- endif -%}
               {%- endif -%}
             {%- endif -%}
           {%- endfor -%}
@@ -71,15 +83,27 @@
               </button>
               <div class="mobile-dropdown-menu hidden pl-8 pb-2 space-y-1">
                 {%- for child in item.children -%}
-                  <a class="block px-4 py-2 text-gray-600 no-underline font-normal active:text-blue-600 active:bg-blue-50 focus:text-blue-600 focus:bg-gray-50 rounded-md transition-all duration-200 touch-manipulation" href="{{ child.url | relative_url }}">{{ child.title | escape }}</a>
+                  {%- if child.external -%}
+                    <a class="block px-4 py-2 text-gray-600 no-underline font-normal active:text-blue-600 active:bg-blue-50 focus:text-blue-600 focus:bg-gray-50 rounded-md transition-all duration-200 touch-manipulation" href="{{ child.url }}" target="_blank" rel="noopener noreferrer">{{ child.title | escape }}</a>
+                  {%- else -%}
+                    <a class="block px-4 py-2 text-gray-600 no-underline font-normal active:text-blue-600 active:bg-blue-50 focus:text-blue-600 focus:bg-gray-50 rounded-md transition-all duration-200 touch-manipulation" href="{{ child.url | relative_url }}">{{ child.title | escape }}</a>
+                  {%- endif -%}
                 {%- endfor -%}
               </div>
             </div>
           {%- else -%}
-            {%- if item.button_style == "solid" -%}
-              <a class="block px-4 py-3 text-white !text-white no-underline font-medium active:text-white active:bg-blue-700 focus:text-white focus:bg-blue-700 bg-blue-600 rounded-md transition-all duration-200 touch-manipulation" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+            {%- if item.button_style == "solid" or item.button_style == "primary" -%}
+              {%- if item.external -%}
+                <a class="block px-4 py-3 text-white !text-white no-underline font-medium active:text-white active:bg-blue-700 focus:text-white focus:bg-blue-700 bg-blue-600 rounded-md transition-all duration-200 touch-manipulation" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a>
+              {%- else -%}
+                <a class="block px-4 py-3 text-white !text-white no-underline font-medium active:text-white active:bg-blue-700 focus:text-white focus:bg-blue-700 bg-blue-600 rounded-md transition-all duration-200 touch-manipulation" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+              {%- endif -%}
             {%- else -%}
-              <a class="block px-4 py-3 text-gray-700 no-underline font-medium active:text-blue-600 active:bg-blue-50 focus:text-blue-600 focus:bg-gray-50 rounded-md transition-all duration-200 touch-manipulation" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+              {%- if item.external -%}
+                <a class="block px-4 py-3 text-gray-700 no-underline font-medium active:text-blue-600 active:bg-blue-50 focus:text-blue-600 focus:bg-gray-50 rounded-md transition-all duration-200 touch-manipulation" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a>
+              {%- else -%}
+                <a class="block px-4 py-3 text-gray-700 no-underline font-medium active:text-blue-600 active:bg-blue-50 focus:text-blue-600 focus:bg-gray-50 rounded-md transition-all duration-200 touch-manipulation" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
+              {%- endif -%}
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
