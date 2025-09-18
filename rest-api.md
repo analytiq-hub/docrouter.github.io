@@ -1,10 +1,8 @@
 ---
 layout: page
-title: REST API
+title: DocRouter REST API
 permalink: /rest-api/
 ---
-
-# DocRouter REST API
 
 The DocRouter platform provides a comprehensive REST API that mirrors all functionality available in the UI. This allows you to integrate DocRouter's document processing capabilities directly into your applications and workflows.
 
