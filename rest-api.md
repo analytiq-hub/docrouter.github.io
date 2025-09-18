@@ -99,21 +99,6 @@ curl -X GET "https://app.docrouter.ai/fastapi/v0/orgs/12345678abcdef123456789a/d
 }
 ```
 
-#### Upload and Process Document
-```bash
-curl -X POST "https://app.docrouter.ai/fastapi/v0/orgs/12345678abcdef123456789a/documents/upload" \
-     -H "Authorization: Bearer YOUR_WORKSPACE_TOKEN" \
-     -F "file=@/path/to/your/document.pdf" \
-     -F "processor_type=invoice"
-```
-
-#### Get Processing Results
-```bash
-curl -X GET "https://app.docrouter.ai/fastapi/v0/orgs/12345678abcdef123456789a/documents/12345678abcdef123456789d/results" \
-     -H "Authorization: Bearer YOUR_WORKSPACE_TOKEN" \
-     -H "Content-Type: application/json"
-```
-
 ## Interactive API Documentation
 
 For complete API documentation with interactive testing capabilities, visit our **Swagger/OpenAPI documentation** at:
