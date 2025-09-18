@@ -28,14 +28,14 @@ DocRouter uses token-based authentication with two types of tokens:
 
 #### Get Account Information
 ```bash
-curl -X GET "https://api.docrouter.ai/v0/account/profile" \
+curl -X GET "https://app.docrouter.ai/fastapi/v0/account/profile" \
      -H "Authorization: Bearer YOUR_ACCOUNT_TOKEN" \
      -H "Content-Type: application/json"
 ```
 
 #### List All Organizations
 ```bash
-curl -X GET "https://api.docrouter.ai/v0/account/organizations" \
+curl -X GET "https://app.docrouter.ai/fastapi/v0/account/organizations" \
      -H "Authorization: Bearer YOUR_ACCOUNT_TOKEN" \
      -H "Content-Type: application/json"
 ```
@@ -44,7 +44,7 @@ curl -X GET "https://api.docrouter.ai/v0/account/organizations" \
 
 #### Upload and Process Document
 ```bash
-curl -X POST "https://api.docrouter.ai/v0/orgs/{organization_id}/documents/upload" \
+curl -X POST "https://app.docrouter.ai/fastapi/v0/orgs/{organization_id}/documents/upload" \
      -H "Authorization: Bearer YOUR_WORKSPACE_TOKEN" \
      -F "file=@/path/to/your/document.pdf" \
      -F "processor_type=invoice"
@@ -52,7 +52,7 @@ curl -X POST "https://api.docrouter.ai/v0/orgs/{organization_id}/documents/uploa
 
 #### Get Processing Results
 ```bash
-curl -X GET "https://api.docrouter.ai/v0/orgs/{organization_id}/documents/{document_id}/results" \
+curl -X GET "https://app.docrouter.ai/fastapi/v0/orgs/{organization_id}/documents/{document_id}/results" \
      -H "Authorization: Bearer YOUR_WORKSPACE_TOKEN" \
      -H "Content-Type: application/json"
 ```
@@ -61,7 +61,7 @@ curl -X GET "https://api.docrouter.ai/v0/orgs/{organization_id}/documents/{docum
 
 For complete API documentation with interactive testing capabilities, visit our **Swagger/OpenAPI documentation** at:
 
-🔗 **[docs/#/](https://docrouter.ai/docs/#/)**
+🔗 **[docs/#/](https://app.docrouter.ai/fastapi/docs/#/)**
 
 ### Using the Swagger Interface
 
@@ -99,6 +99,6 @@ For complete API documentation with interactive testing capabilities, visit our 
 ## Support
 
 For API support and questions:
-- Review the interactive documentation at [docs/#/](https://docrouter.ai/docs/#/)
+- Review the interactive documentation at [docs/#/](https://app.docrouter.ai/fastapi/docs/#/)
 - Contact our support team through the DocRouter UI
 - Check our [Python SDK](/python-sdk) for ready-to-use client libraries
