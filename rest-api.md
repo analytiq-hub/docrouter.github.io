@@ -100,7 +100,7 @@ DocRouter uses token-based authentication with two types of tokens:
   <div class="mt-6">
     <!-- Account Tab Content -->
     <div id="account-content" class="tab-content">
-      <h3 class="text-lg font-semibold text-gray-900 mb-4">List All Organizations</h3>
+      List All Organizations That The User Can Access
       
       <div class="mb-4">
         <h4 class="text-sm font-medium text-gray-700 mb-2">Request:</h4>
@@ -137,7 +137,7 @@ DocRouter uses token-based authentication with two types of tokens:
 
     <!-- Organization Tab Content -->
     <div id="organization-content" class="tab-content hidden">
-      <h3 class="text-lg font-semibold text-gray-900 mb-4">List Documents</h3>
+      List All Documents In The Organization
       
       <div class="mb-4">
         <h4 class="text-sm font-medium text-gray-700 mb-2">Request:</h4>
