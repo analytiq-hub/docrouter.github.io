@@ -62,7 +62,7 @@ DocRouter uses token-based authentication with two types of tokens:
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0h3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
         </svg>
       </div>
-      <h3 class="text-xl font-semibold text-green-900">Workspace-Level Tokens</h3>
+      <h3 class="text-xl font-semibold text-green-900">Organization-Level Tokens</h3>
     </div>
     <div class="space-y-3 text-green-800">
       <div class="flex items-start gap-2">
@@ -117,12 +117,12 @@ curl -X GET "https://app.docrouter.ai/fastapi/v0/account/organizations" \
 }
 ```
 
-### Workspace-Level API Examples
+### Organization-Level API Examples
 
 #### List Documents
 ```bash
 curl -X GET "https://app.docrouter.ai/fastapi/v0/orgs/12345678abcdef123456789a/documents" \
-     -H "Authorization: Bearer YOUR_WORKSPACE_TOKEN" \
+     -H "Authorization: Bearer YOUR_ORGANIZATION_TOKEN" \
      -H "Content-Type: application/json"
 ```
 
@@ -168,7 +168,7 @@ For complete API documentation with interactive testing capabilities, visit our 
 
 #### 1. Authentication Setup
 - Click the **"Authorize"** button at the top of the Swagger page
-- Enter your API token (account or workspace-level depending on the endpoint)
+- Enter your API token (account or organization-level depending on the endpoint)
 - Click **"Authorize"** to authenticate your session
 
 #### 2. Testing API Endpoints
