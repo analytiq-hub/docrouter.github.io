@@ -65,14 +65,18 @@ header_pages:
     children:
       - title: "Overview"
         url: "/use-cases"
-      - title: "Insurance"
-        url: "/use-cases/insurance"
-      - title: "Supply Chain"
-        url: "/use-cases/supply-chain"
+      - title: "Banking"
+        url: "/use-cases/banking"
       - title: "Clinical Trials"
         url: "/use-cases/clinical-trials"
+      - title: "Durable Medical Equipment"
+        url: "/use-cases/dme"
+      - title: "Insurance"
+        url: "/use-cases/insurance"
       - title: "Private Equity"
         url: "/use-cases/private-equity"
+      - title: "Supply Chain"
+        url: "/use-cases/supply-chain"
   - title: "Documentation"
     url: "#"
     children:
@@ -86,11 +90,20 @@ header_pages:
         url: "/architecture"
       - title: "Open Source"
         url: "/open-source"
-  - title: "Team"
-    url: "/team"
-  - title: "Contact Us"
-    url: "/contact"
-    button_style: "solid"
+  - title: "Resources"
+    url: "#"
+    children:
+      - title: "Blog"
+        url: "/blog"
+      - title: "Talks"
+        url: "/talks"
+  - title: "Company"
+    url: "#"
+    children:
+      - title: "Team"
+        url: "/team"
+      - title: "Contact"
+        url: "/contact"
 
 # Footer sitemap - simplified navigation for footer display
 site_map:
