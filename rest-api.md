@@ -83,18 +83,35 @@ DocRouter uses token-based authentication with two types of tokens:
 
 ## API Examples
 
-### Account-Level API Examples
+<div class="mt-6">
+  <!-- Tab Navigation -->
+  <div class="border-b border-gray-200">
+    <nav class="-mb-px flex space-x-8">
+      <button onclick="switchTab('account')" id="account-tab" class="tab-button active py-2 px-1 border-b-2 border-blue-500 font-medium text-sm text-blue-600">
+        Account-Level APIs
+      </button>
+      <button onclick="switchTab('organization')" id="organization-tab" class="tab-button py-2 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
+        Organization-Level APIs
+      </button>
+    </nav>
+  </div>
 
-#### List All Organizations
-```bash
-curl -X GET "https://app.docrouter.ai/fastapi/v0/account/organizations" \
+  <!-- Tab Content -->
+  <div class="mt-6">
+    <!-- Account Tab Content -->
+    <div id="account-content" class="tab-content">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">List All Organizations</h3>
+      
+      <div class="mb-4">
+        <h4 class="text-sm font-medium text-gray-700 mb-2">Request:</h4>
+        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>curl -X GET "https://app.docrouter.ai/fastapi/v0/account/organizations" \
      -H "Authorization: Bearer YOUR_ACCOUNT_TOKEN" \
-     -H "Content-Type: application/json"
-```
+     -H "Content-Type: application/json"</code></pre>
+      </div>
 
-**Example Response:**
-```json
-{
+      <div>
+        <h4 class="text-sm font-medium text-gray-700 mb-2">Example Response:</h4>
+        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>{
   "organizations": [
     {
       "id": "12345678abcdef123456789a",
@@ -114,21 +131,24 @@ curl -X GET "https://app.docrouter.ai/fastapi/v0/account/organizations" \
       "updated_at": "2025-01-15T14:20:00.000000"
     }
   ]
-}
-```
+}</code></pre>
+      </div>
+    </div>
 
-### Organization-Level API Examples
-
-#### List Documents
-```bash
-curl -X GET "https://app.docrouter.ai/fastapi/v0/orgs/12345678abcdef123456789a/documents" \
+    <!-- Organization Tab Content -->
+    <div id="organization-content" class="tab-content hidden">
+      <h3 class="text-lg font-semibold text-gray-900 mb-4">List Documents</h3>
+      
+      <div class="mb-4">
+        <h4 class="text-sm font-medium text-gray-700 mb-2">Request:</h4>
+        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>curl -X GET "https://app.docrouter.ai/fastapi/v0/orgs/12345678abcdef123456789a/documents" \
      -H "Authorization: Bearer YOUR_ORGANIZATION_TOKEN" \
-     -H "Content-Type: application/json"
-```
+     -H "Content-Type: application/json"</code></pre>
+      </div>
 
-**Example Response:**
-```json
-{
+      <div>
+        <h4 class="text-sm font-medium text-gray-700 mb-2">Example Response:</h4>
+        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>{
   "documents": [
     {
       "id": "12345678abcdef123456789d",
@@ -155,8 +175,34 @@ curl -X GET "https://app.docrouter.ai/fastapi/v0/orgs/12345678abcdef123456789a/d
   ],
   "total_count": 2,
   "skip": 0
+}</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function switchTab(tabName) {
+  // Hide all tab contents
+  document.querySelectorAll('.tab-content').forEach(content => {
+    content.classList.add('hidden');
+  });
+  
+  // Remove active class from all tabs
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.classList.remove('active', 'border-blue-500', 'text-blue-600');
+    button.classList.add('border-transparent', 'text-gray-500');
+  });
+  
+  // Show selected tab content
+  document.getElementById(tabName + '-content').classList.remove('hidden');
+  
+  // Add active class to selected tab
+  const activeTab = document.getElementById(tabName + '-tab');
+  activeTab.classList.add('active', 'border-blue-500', 'text-blue-600');
+  activeTab.classList.remove('border-transparent', 'text-gray-500');
 }
-```
+</script>
 
 ## Interactive API Documentation
 
