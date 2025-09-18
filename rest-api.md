@@ -26,18 +26,36 @@ DocRouter uses token-based authentication with two types of tokens:
 
 ### Account-Level API Examples
 
-#### Get Account Information
-```bash
-curl -X GET "https://app.docrouter.ai/fastapi/v0/account/profile" \
-     -H "Authorization: Bearer YOUR_ACCOUNT_TOKEN" \
-     -H "Content-Type: application/json"
-```
-
 #### List All Organizations
 ```bash
 curl -X GET "https://app.docrouter.ai/fastapi/v0/account/organizations" \
      -H "Authorization: Bearer YOUR_ACCOUNT_TOKEN" \
      -H "Content-Type: application/json"
+```
+
+**Example Response:**
+```json
+{
+  "organizations": [
+    {
+      "id": "12345678abcdef123456789a",
+      "name": "my-organization",
+      "members": [
+        {
+          "user_id": "12345678abcdef123456789b",
+          "role": "admin"
+        },
+        {
+          "user_id": "12345678abcdef123456789c",
+          "role": "user"
+        }
+      ],
+      "type": "team",
+      "created_at": "2025-01-15T10:30:00.000000",
+      "updated_at": "2025-01-15T14:20:00.000000"
+    }
+  ]
+}
 ```
 
 ### Workspace-Level API Examples
