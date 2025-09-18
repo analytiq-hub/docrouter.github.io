@@ -204,11 +204,26 @@ function switchTab(tabName) {
 }
 </script>
 
-## Interactive API Documentation
+<div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-3 mb-8">
+  <div class="flex-1">
+    <p class="text-lg text-gray-600 leading-relaxed">
+     For complete API documentation with interactive testing capabilities, visit our **Swagger/OpenAPI documentation**:
+    </p>
+  </div>
 
-For complete API documentation with interactive testing capabilities, visit our **Swagger/OpenAPI documentation** at:
-
-🔗 **[docs/#/](https://app.docrouter.ai/fastapi/docs/#/)**
+  <div class="lg:w-80">
+    <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white shadow-lg flex flex-col items-center text-center">
+      <p class="text-blue-100 mb-3">Jump to our interactive API docs</p>
+      <a href="https://app.docrouter.ai/fastapi/docs/#/" target="_blank" rel="noopener noreferrer"
+         class="inline-flex items-center gap-2 bg-white text-blue-600 px-4 py-2 rounded-md font-medium hover:bg-blue-50 transition-colors">
+        <span>Open Swagger UI</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
 
 ### Using the Swagger Interface
 
@@ -228,24 +243,3 @@ For complete API documentation with interactive testing capabilities, visit our 
 - After executing an API call, scroll down to the **"Response"** section
 - Find the **"Curl"** tab to see the equivalent cURL command
 - Copy the command to use in your terminal or scripts
-
-### Example Workflow in Swagger UI
-
-1. **Authenticate**: Use the Authorize button with your token
-2. **Upload Document**: Use `/v0/orgs/{organization_id}/documents/upload`
-3. **Check Status**: Use `/v0/orgs/{organization_id}/documents/{document_id}/status`
-4. **Get Results**: Use `/v0/orgs/{organization_id}/documents/{document_id}/results`
-
-## Rate Limits and Best Practices
-
-- **Rate Limits**: API calls are subject to rate limiting based on your subscription plan
-- **Async Processing**: Document processing is asynchronous - poll the status endpoint for completion
-- **Error Handling**: All endpoints return standard HTTP status codes with descriptive error messages
-- **Pagination**: List endpoints support pagination with `limit` and `offset` parameters
-
-## Support
-
-For API support and questions:
-- Review the interactive documentation at [docs/#/](https://app.docrouter.ai/fastapi/docs/#/)
-- Contact our support team through the DocRouter UI
-- Check our [Python SDK](/python-sdk) for ready-to-use client libraries
