@@ -60,9 +60,48 @@ curl -X GET "https://app.docrouter.ai/fastapi/v0/account/organizations" \
 
 ### Workspace-Level API Examples
 
+#### List Documents
+```bash
+curl -X GET "https://app.docrouter.ai/fastapi/v0/orgs/12345678abcdef123456789a/documents" \
+     -H "Authorization: Bearer YOUR_WORKSPACE_TOKEN" \
+     -H "Content-Type: application/json"
+```
+
+**Example Response:**
+```json
+{
+  "documents": [
+    {
+      "id": "12345678abcdef123456789d",
+      "pdf_id": "12345678abcdef123456789e",
+      "document_name": "invoice_2025_001.pdf",
+      "upload_date": "2025-01-15T10:30:00.000000Z",
+      "uploaded_by": "John Doe",
+      "state": "llm_completed",
+      "tag_ids": ["12345678abcdef123456789f"],
+      "type": "invoice",
+      "metadata": {}
+    },
+    {
+      "id": "12345678abcdef123456789g",
+      "pdf_id": "12345678abcdef123456789h",
+      "document_name": "contract_agreement.pdf",
+      "upload_date": "2025-01-14T15:20:00.000000Z",
+      "uploaded_by": "Jane Smith",
+      "state": "processing",
+      "tag_ids": ["12345678abcdef123456789i"],
+      "type": "contract",
+      "metadata": {}
+    }
+  ],
+  "total_count": 2,
+  "skip": 0
+}
+```
+
 #### Upload and Process Document
 ```bash
-curl -X POST "https://app.docrouter.ai/fastapi/v0/orgs/{organization_id}/documents/upload" \
+curl -X POST "https://app.docrouter.ai/fastapi/v0/orgs/12345678abcdef123456789a/documents/upload" \
      -H "Authorization: Bearer YOUR_WORKSPACE_TOKEN" \
      -F "file=@/path/to/your/document.pdf" \
      -F "processor_type=invoice"
@@ -70,7 +109,7 @@ curl -X POST "https://app.docrouter.ai/fastapi/v0/orgs/{organization_id}/documen
 
 #### Get Processing Results
 ```bash
-curl -X GET "https://app.docrouter.ai/fastapi/v0/orgs/{organization_id}/documents/{document_id}/results" \
+curl -X GET "https://app.docrouter.ai/fastapi/v0/orgs/12345678abcdef123456789a/documents/12345678abcdef123456789d/results" \
      -H "Authorization: Bearer YOUR_WORKSPACE_TOKEN" \
      -H "Content-Type: application/json"
 ```
