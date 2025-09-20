@@ -57,17 +57,17 @@ permalink: /rest-api/
       </div>
       <div class="space-y-3">
         <div class="flex items-start gap-3">
-          <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+          <div class="w-2 h-2 bg-blue-500 rounded-full mt-2.5 flex-shrink-0"></div>
           <div>
             <span class="font-medium text-gray-900">Scope:</span>
             <span class="text-gray-700">APIs under <code class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-sm font-mono">/v0/account</code></span>
           </div>
         </div>
         <div class="flex items-start gap-3">
-          <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+          <div class="w-2 h-2 bg-blue-500 rounded-full mt-2.5 flex-shrink-0"></div>
           <div>
-            <span class="font-medium text-gray-900">Creation:</span>
-            <span class="text-gray-700">Settings → Account Tokens</span>
+            <span class="font-medium text-gray-900">To Create:</span>
+            <span class="text-gray-700">Click <code class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-sm font-mono">Settings → Account Tokens</code></span>
           </div>
         </div>
       </div>
@@ -87,17 +87,17 @@ permalink: /rest-api/
       </div>
       <div class="space-y-3">
         <div class="flex items-start gap-3">
-          <div class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+          <div class="w-2 h-2 bg-green-500 rounded-full mt-2.5 flex-shrink-0"></div>
           <div>
             <span class="font-medium text-gray-900">Scope:</span>
             <span class="text-gray-700">APIs under <code class="bg-green-50 text-green-700 px-2 py-1 rounded text-sm font-mono">/v0/orgs/{organization_id}</code></span>
           </div>
         </div>
         <div class="flex items-start gap-3">
-          <div class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+          <div class="w-2 h-2 bg-green-500 rounded-full mt-2.5 flex-shrink-0"></div>
           <div>
-            <span class="font-medium text-gray-900">Creation:</span>
-            <span class="text-gray-700">Settings → Organization Tokens</span>
+            <span class="font-medium text-gray-900">To Create:</span>
+            <span class="text-gray-700">Click <code class="bg-green-50 text-green-700 px-2 py-1 rounded text-sm font-mono">Settings → Organization Tokens</code></span>
           </div>
         </div>
       </div>
