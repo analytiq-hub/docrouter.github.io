@@ -107,49 +107,65 @@ permalink: /rest-api/
 
 ## API Examples
 
-<div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
-  <!-- Tab Navigation -->
-  <div class="bg-gray-50 border-b border-gray-200 px-6">
-    <nav class="flex space-x-8">
-      <button onclick="switchTab('account')" id="account-tab" class="tab-button active py-4 px-1 border-b-2 border-blue-500 font-medium text-sm text-blue-600">
-        Account-Level APIs
-      </button>
-      <button onclick="switchTab('organization')" id="organization-tab" class="tab-button py-4 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
-        Organization-Level APIs
-      </button>
-    </nav>
-  </div>
-
-  <!-- Tab Content -->
-  <div class="p-6">
-    <!-- Account Tab Content -->
-    <div id="account-content" class="tab-content">
-      <div class="mb-6">
-        <h3 class="text-lg font-semibold text-gray-900 mb-2">List All Organizations</h3>
-        <p class="text-gray-600">Retrieve all organizations that the authenticated user can access.</p>
-      </div>
-      
-      <div class="space-y-6">
-        <div>
-          <h4 class="text-sm font-medium text-gray-900 mb-3 flex items-center gap-2">
-            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+<div class="space-y-4">
+  <!-- Account-Level APIs Accordion -->
+  <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+    <button onclick="toggleAccordion('account')" class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
             </svg>
-            Request
-          </h4>
-          <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto border border-gray-700"><code>curl -X GET "https://app.docrouter.ai/fastapi/v0/account/organizations" \
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">Account-Level APIs</h3>
+            <p class="text-sm text-gray-600">User-scoped operations and account management</p>
+          </div>
+        </div>
+        <svg id="account-chevron" class="w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </div>
+    </button>
+    
+    <div id="account-content" class="accordion-content hidden">
+      <div class="p-6 border-t border-gray-200">
+        <div class="mb-6">
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">List All Organizations</h4>
+          <p class="text-gray-600">Retrieve all organizations that the authenticated user can access.</p>
+        </div>
+        
+        <div class="space-y-6">
+          <div>
+            <h5 class="text-sm font-medium text-gray-900 mb-3 flex items-center gap-2">
+              <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+              Request
+            </h5>
+            <div class="relative">
+              <button onclick="copyToClipboard('account-curl')" class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs transition-colors">
+                Copy
+              </button>
+              <pre id="account-curl" class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto border border-gray-700"><code>curl -X GET "https://app.docrouter.ai/fastapi/v0/account/organizations" \
      -H "Authorization: Bearer YOUR_ACCOUNT_TOKEN" \
      -H "Content-Type: application/json"</code></pre>
-        </div>
+            </div>
+          </div>
 
-        <div>
-          <h4 class="text-sm font-medium text-gray-900 mb-3 flex items-center gap-2">
-            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-            Response
-          </h4>
-          <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto border border-gray-700"><code>{
+          <div>
+            <h5 class="text-sm font-medium text-gray-900 mb-3 flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Response (200 OK)
+            </h5>
+            <div class="relative">
+              <button onclick="copyToClipboard('account-response')" class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs transition-colors">
+                Copy
+              </button>
+              <pre id="account-response" class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto border border-gray-700"><code>{
   "organizations": [
     {
       "id": "12345678abcdef123456789a",
@@ -170,38 +186,71 @@ permalink: /rest-api/
     }
   ]
 }</code></pre>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Organization Tab Content -->
-    <div id="organization-content" class="tab-content hidden">
-      <div class="mb-6">
-        <h3 class="text-lg font-semibold text-gray-900 mb-2">List All Documents</h3>
-        <p class="text-gray-600">Retrieve all documents within a specific organization.</p>
-      </div>
-      
-      <div class="space-y-6">
-        <div>
-          <h4 class="text-sm font-medium text-gray-900 mb-3 flex items-center gap-2">
-            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+  <!-- Organization-Level APIs Accordion -->
+  <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+    <button onclick="toggleAccordion('organization')" class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-inset">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0h3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
             </svg>
-            Request
-          </h4>
-          <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto border border-gray-700"><code>curl -X GET "https://app.docrouter.ai/fastapi/v0/orgs/12345678abcdef123456789a/documents" \
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">Organization-Level APIs</h3>
+            <p class="text-sm text-gray-600">Team-scoped operations and document management</p>
+          </div>
+        </div>
+        <svg id="organization-chevron" class="w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </div>
+    </button>
+    
+    <div id="organization-content" class="accordion-content hidden">
+      <div class="p-6 border-t border-gray-200">
+        <div class="mb-6">
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">List All Documents</h4>
+          <p class="text-gray-600">Retrieve all documents within a specific organization.</p>
+        </div>
+        
+        <div class="space-y-6">
+          <div>
+            <h5 class="text-sm font-medium text-gray-900 mb-3 flex items-center gap-2">
+              <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+              Request
+            </h5>
+            <div class="relative">
+              <button onclick="copyToClipboard('org-curl')" class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs transition-colors">
+                Copy
+              </button>
+              <pre id="org-curl" class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto border border-gray-700"><code>curl -X GET "https://app.docrouter.ai/fastapi/v0/orgs/12345678abcdef123456789a/documents" \
      -H "Authorization: Bearer YOUR_ORGANIZATION_TOKEN" \
      -H "Content-Type: application/json"</code></pre>
-        </div>
+            </div>
+          </div>
 
-        <div>
-          <h4 class="text-sm font-medium text-gray-900 mb-3 flex items-center gap-2">
-            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-            Response
-          </h4>
-          <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto border border-gray-700"><code>{
+          <div>
+            <h5 class="text-sm font-medium text-gray-900 mb-3 flex items-center gap-2">
+              <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Response (200 OK)
+            </h5>
+            <div class="relative">
+              <button onclick="copyToClipboard('org-response')" class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs transition-colors">
+                Copy
+              </button>
+              <pre id="org-response" class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto border border-gray-700"><code>{
   "documents": [
     {
       "id": "12345678abcdef123456789d",
@@ -229,6 +278,8 @@ permalink: /rest-api/
   "total_count": 2,
   "skip": 0
 }</code></pre>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -236,25 +287,41 @@ permalink: /rest-api/
 </div>
 
 <script>
-function switchTab(tabName) {
-  // Hide all tab contents
-  document.querySelectorAll('.tab-content').forEach(content => {
+function toggleAccordion(sectionName) {
+  const content = document.getElementById(sectionName + '-content');
+  const chevron = document.getElementById(sectionName + '-chevron');
+  
+  if (content.classList.contains('hidden')) {
+    // Expand the accordion
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(180deg)';
+  } else {
+    // Collapse the accordion
     content.classList.add('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+  }
+}
+
+function copyToClipboard(elementId) {
+  const element = document.getElementById(elementId);
+  const text = element.textContent || element.innerText;
+  
+  navigator.clipboard.writeText(text).then(() => {
+    // Show feedback
+    const button = element.parentElement.querySelector('button');
+    const originalText = button.textContent;
+    button.textContent = 'Copied!';
+    button.classList.add('bg-green-600', 'hover:bg-green-700');
+    button.classList.remove('bg-gray-700', 'hover:bg-gray-600');
+    
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.classList.remove('bg-green-600', 'hover:bg-green-700');
+      button.classList.add('bg-gray-700', 'hover:bg-gray-600');
+    }, 2000);
+  }).catch(err => {
+    console.error('Failed to copy text: ', err);
   });
-  
-  // Remove active class from all tabs
-  document.querySelectorAll('.tab-button').forEach(button => {
-    button.classList.remove('active', 'border-blue-500', 'text-blue-600');
-    button.classList.add('border-transparent', 'text-gray-500');
-  });
-  
-  // Show selected tab content
-  document.getElementById(tabName + '-content').classList.remove('hidden');
-  
-  // Add active class to selected tab
-  const activeTab = document.getElementById(tabName + '-tab');
-  activeTab.classList.add('active', 'border-blue-500', 'text-blue-600');
-  activeTab.classList.remove('border-transparent', 'text-gray-500');
 }
 </script>
 
