@@ -7,13 +7,13 @@ permalink: /rest-api/
 <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-3 mb-8">
   <div class="flex-1">
     <p class="text-lg text-gray-600 leading-relaxed">
-      The DocRouter platform provides a comprehensive REST API that mirrors all functionality available in the UI.
+      Anything in the DocRouter UI is also available through REST APIs. The DocRouter UI runs on top of the same REST API available for external integrations.
     </p>
   </div>
 
   <div class="lg:w-80">
     <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white shadow-lg flex flex-col items-center text-center">
-      <p class="text-blue-100 mb-3">Jump to our interactive API docs</p>
+      <p class="text-blue-100 mb-3">Jump to our interactive REST API docs</p>
       <a href="https://app.docrouter.ai/fastapi/docs/#/" target="_blank" rel="noopener noreferrer"
          class="inline-flex items-center gap-2 bg-white text-blue-600 px-4 py-2 rounded-md font-medium hover:bg-blue-50 transition-colors">
         <span>Open Swagger UI</span>
@@ -27,7 +27,7 @@ permalink: /rest-api/
 
 ## Authentication
 
-DocRouter uses token-based authentication with two types of tokens:
+The DocRouter REST API uses token-based authentication with two types of tokens:
 
 <div class="grid md:grid-cols-2 gap-6 my-6">
   <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
