@@ -282,15 +282,15 @@ function switchTab(tabName) {
         <div class="w-10 h-10 mt-4 bg-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-sm">1</div>
         <h3 class="text-lg font-semibold text-gray-900">Authenticate</h3>
       </div>
-      <ul class="space-y-3 text-gray-700 leading-relaxed">
-        <li class="flex items-start gap-2">
-          <span>Click the <span class="font-semibold text-blue-600">"Authorize"</span> button</span>
+      <ul class="list-disc list-inside space-y-3 text-sm text-gray-700 leading-relaxed ml-4">
+        <li class="text-blue-500">
+          <span class="text-gray-700">Click the <span class="font-semibold text-blue-600">"Authorize"</span> button</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span>Enter your API token</span>
+        <li class="text-blue-500">
+          <span class="text-gray-700">Enter your API token</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span>Click <span class="font-semibold text-blue-600">"Authorize"</span> to authenticate</span>
+        <li class="text-blue-500">
+          <span class="text-gray-700">Click <span class="font-semibold text-blue-600">"Authorize"</span> to authenticate</span>
         </li>
       </ul>
     </div>
@@ -301,15 +301,15 @@ function switchTab(tabName) {
         <div class="w-10 h-10 mt-4 bg-green-500 rounded-xl flex items-center justify-center text-white font-bold text-sm">2</div>
         <h3 class="text-lg font-semibold text-gray-900">Test Endpoints</h3>
       </div>
-      <ul class="space-y-3 text-gray-700 leading-relaxed">
-        <li class="flex items-start gap-2">
-          <span>Browse endpoints by category</span>
+      <ul class="list-disc list-inside space-y-3 text-sm text-gray-700 leading-relaxed ml-4">
+        <li class="text-green-500">
+          <span class="text-gray-700">Browse endpoints by category</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span>Click <span class="font-semibold text-green-600">"Try it out"</span> to enable forms</span>
+        <li class="text-green-500">
+          <span class="text-gray-700">Click <span class="font-semibold text-green-600">"Try it out"</span> to enable forms</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span>Fill parameters and click <span class="font-semibold text-green-600">"Execute"</span></span>
+        <li class="text-green-500">
+          <span class="text-gray-700">Fill parameters and click <span class="font-semibold text-green-600">"Execute"</span></span>
         </li>
       </ul>
     </div>
@@ -320,15 +320,15 @@ function switchTab(tabName) {
         <div class="w-10 h-10 mt-4 bg-purple-500 rounded-xl flex items-center justify-center text-white font-bold text-sm">3</div>
         <h3 class="text-lg font-semibold text-gray-900">Generate Code</h3>
       </div>
-      <ul class="space-y-3 text-gray-700 leading-relaxed">
-        <li class="flex items-start gap-2">
-          <span>View the <span class="font-semibold text-purple-600">"Response"</span> section</span>
+      <ul class="list-disc list-inside space-y-3 text-sm text-gray-700 leading-relaxed ml-4">
+        <li class="text-purple-500">
+          <span class="text-gray-700">View the <span class="font-semibold text-purple-600">"Response"</span> section</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span>Find the <span class="font-semibold text-purple-600">"Curl"</span> tab</span>
+        <li class="text-purple-500">
+          <span class="text-gray-700">Find the <span class="font-semibold text-purple-600">"Curl"</span> tab</span>
         </li>
-        <li class="flex items-start gap-2">
-          <span>Copy commands for your scripts</span>
+        <li class="text-purple-500">
+          <span class="text-gray-700">Copy commands for your scripts</span>
         </li>
       </ul>
     </div>
