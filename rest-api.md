@@ -239,32 +239,56 @@ function switchTab(tabName) {
 
 ## Client Libraries & OpenAPI Specification
 
-<div class="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6">
-  <div class="grid md:grid-cols-2 gap-6">
-    <div>
-      <h3 class="text-lg font-semibold text-gray-900 mb-3">OpenAPI Specification</h3>
-      <p class="text-gray-600 mb-4">Access the complete API schema in OpenAPI 3.1.0 format:</p>
-      <a href="https://app.docrouter.ai/fastapi/openapi.json" target="_blank" rel="noopener noreferrer"
-         class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium">
-        <span>View OpenAPI JSON</span>
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<div class="grid md:grid-cols-2 gap-6 my-6">
+  <!-- OpenAPI Specification Panel -->
+  <div class="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-lg p-6">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-blue-900">OpenAPI Specification</h3>
+    </div>
+    <p class="text-blue-800 mb-4">Access the complete OpenAPI schema</p>
+    <a href="https://app.docrouter.ai/fastapi/openapi.json" target="_blank" rel="noopener noreferrer"
+       class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-700 hover:text-white transition-colors shadow-md hover:shadow-lg">
+      <span class="text-white">View OpenAPI JSON</span>
+      <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Client Libraries Panel -->
+  <div class="bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-lg p-6">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
+        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-green-900">Client Libraries</h3>
+    </div>
+    <p class="text-green-800 mb-4">Ready-to-use SDKs and code generation</p>
+    <div class="space-y-3">
+      <div class="flex items-center justify-between bg-white rounded-md p-3 border border-green-200">
+        <div>
+          <a href="/python-sdk/" class="text-green-700 hover:text-green-800 font-medium">Python SDK</a>
+          <p class="text-green-600 text-sm">Official client library</p>
+        </div>
+        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </div>
+      <div class="flex items-center justify-between bg-white rounded-md p-3 border border-green-200">
+        <div>
+          <a href="https://openapi-generator.tech/" target="_blank" rel="noopener noreferrer" class="text-green-700 hover:text-green-800 font-medium">OpenAPI Generator</a>
+          <p class="text-green-600 text-sm">Generate clients for TypeScript, Rust, Go, Java, and more</p>
+        </div>
+        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
         </svg>
-      </a>
-    </div>
-    
-    <div>
-      <h3 class="text-lg font-semibold text-gray-900 mb-3">Client Libraries</h3>
-      <p class="text-gray-600 mb-4">Ready-to-use SDKs and code generation:</p>
-      <div class="space-y-2">
-        <div>
-          <a href="/python-sdk/" class="text-blue-600 hover:text-blue-800 font-medium">Python SDK</a>
-          <span class="text-gray-500 text-sm ml-2">Official client library</span>
-        </div>
-        <div>
-          <a href="https://openapi-generator.tech/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-medium">OpenAPI Generator</a>
-          <span class="text-gray-500 text-sm ml-2">Generate clients for TypeScript, Rust, Go, Java, and more</span>
-        </div>
       </div>
     </div>
   </div>
