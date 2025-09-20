@@ -217,6 +217,39 @@ function switchTab(tabName) {
   </div>
 </div>
 
+## Client Libraries & OpenAPI Specification
+
+<div class="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6">
+  <div class="grid md:grid-cols-2 gap-6">
+    <div>
+      <h3 class="text-lg font-semibold text-gray-900 mb-3">OpenAPI Specification</h3>
+      <p class="text-gray-600 mb-4">Access the complete API schema in OpenAPI 3.1.0 format:</p>
+      <a href="https://app.docrouter.ai/fastapi/openapi.json" target="_blank" rel="noopener noreferrer"
+         class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium">
+        <span>View OpenAPI JSON</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+        </svg>
+      </a>
+    </div>
+    
+    <div>
+      <h3 class="text-lg font-semibold text-gray-900 mb-3">Client Libraries</h3>
+      <p class="text-gray-600 mb-4">Ready-to-use SDKs and code generation:</p>
+      <div class="space-y-2">
+        <div>
+          <a href="/python-sdk/" class="text-blue-600 hover:text-blue-800 font-medium">Python SDK</a>
+          <span class="text-gray-500 text-sm ml-2">Official client library</span>
+        </div>
+        <div>
+          <a href="https://openapi-generator.tech/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-medium">OpenAPI Generator</a>
+          <span class="text-gray-500 text-sm ml-2">Generate clients for TypeScript, Rust, Go, Java, and more</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 ### Using the Swagger Interface
 
 #### 1. Authentication Setup
