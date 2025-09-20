@@ -103,6 +103,28 @@ permalink: /rest-api/
       </div>
     </div>
   </div>
+  
+  <!-- Token Management Screenshots -->
+  <div class="mt-6 pt-4 border-t border-gray-200">
+    <h3 class="text-base font-semibold text-gray-900 mb-3 text-center">Token Management Interface</h3>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+      <div class="flex-shrink-0">
+        <img src="/assets/images/manage_tokens1.jpeg" 
+             alt="Account Tokens Management Interface" 
+             class="max-w-full h-auto rounded border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+             style="max-height: 162px; width: auto;">
+      </div>
+      <div class="flex-shrink-0">
+        <img src="/assets/images/manage_tokens2.jpeg" 
+             alt="Organization Tokens Management Interface" 
+             class="max-w-full h-auto rounded border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+             style="max-height: 162px; width: auto;">
+      </div>
+    </div>
+    <p class="text-xs text-gray-600 text-center mt-2">
+      Screenshots showing the token management interface in the DocRouter application
+    </p>
+  </div>
 </div>
 
 ## API Examples
