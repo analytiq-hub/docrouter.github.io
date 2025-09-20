@@ -112,15 +112,15 @@ permalink: /rest-api/
   <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
     <button onclick="toggleAccordion('account')" class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
       <div class="flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="flex items-center gap-3 mb-4 mt-4">
+          <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
             </svg>
           </div>
           <div>
-            <h3 class="text-lg font-semibold text-gray-900">Account-Level APIs</h3>
-            <p class="text-sm text-gray-600">User-scoped operations and account management</p>
+            <div class="text-xl font-semibold text-gray-900 leading-tight">Account-Level APIs</div>
+            <div class="text-sm text-gray-600">User-scoped operations and account management</div>
           </div>
         </div>
         <svg id="account-chevron" class="w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -197,15 +197,15 @@ permalink: /rest-api/
   <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
     <button onclick="toggleAccordion('organization')" class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-inset">
       <div class="flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
-            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="flex items-center gap-3 mb-4 mt-4">
+          <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0h3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
             </svg>
           </div>
           <div>
-            <h3 class="text-lg font-semibold text-gray-900">Organization-Level APIs</h3>
-            <p class="text-sm text-gray-600">Team-scoped operations and document management</p>
+            <div class="text-xl font-semibold text-gray-900 leading-tight">Organization-Level APIs</div>
+            <div class="text-sm text-gray-600">Team-scoped operations and document management</div>
           </div>
         </div>
         <svg id="organization-chevron" class="w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
