@@ -373,7 +373,7 @@ function copyToClipboard(elementId) {
           <span class="text-gray-700">Browse endpoints by category</span>
         </li>
         <li class="text-green-500">
-          <span class="text-gray-700">Click <span class="font-semibold text-green-600">"Try it out"</span> to enable forms</span>
+          <span class="text-gray-700">Click <span class="font-semibold text-green-600">"Try it out"</span> to enable</span>
         </li>
         <li class="text-green-500">
           <span class="text-gray-700">Fill parameters and click <span class="font-semibold text-green-600">"Execute"</span></span>
