@@ -14,7 +14,7 @@ permalink: /rest-api/
   <div class="lg:w-80">
     <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white shadow-lg flex flex-col items-center text-center">
       <p class="text-blue-100 mb-3">Jump to our interactive REST API docs</p>
-      <a href="https://app.docrouter.ai/fastapi/docs/#/" target="_blank" rel="noopener noreferrer"
+      <a href="https://app.docrouter.ai/fastapi/docs#/" target="_blank" rel="noopener noreferrer"
          class="inline-flex items-center gap-2 bg-white text-blue-600 px-4 py-2 rounded-md font-medium hover:bg-blue-50 transition-colors">
         <span>Open Swagger UI</span>
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -206,7 +206,7 @@ function switchTab(tabName) {
   <div class="lg:w-80">
     <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white shadow-lg flex flex-col items-center text-center">
       <p class="text-blue-100 mb-3">Jump to our interactive API docs</p>
-      <a href="https://app.docrouter.ai/fastapi/docs/#/" target="_blank" rel="noopener noreferrer"
+      <a href="https://app.docrouter.ai/fastapi/docs#/" target="_blank" rel="noopener noreferrer"
          class="inline-flex items-center gap-2 bg-white text-blue-600 px-4 py-2 rounded-md font-medium hover:bg-blue-50 transition-colors">
         <span>Open Swagger UI</span>
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
