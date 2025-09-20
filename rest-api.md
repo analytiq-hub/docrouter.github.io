@@ -217,6 +217,26 @@ function switchTab(tabName) {
   </div>
 </div>
 
+
+### Using the Swagger Interface
+
+#### 1. Authentication Setup
+- Click the **"Authorize"** button at the top of the Swagger page
+- Enter your API token (account or organization-level depending on the endpoint)
+- Click **"Authorize"** to authenticate your session
+
+#### 2. Testing API Endpoints
+- Browse the available endpoints organized by category
+- Click on any endpoint to expand its details
+- Click **"Try it out"** to enable the interactive form
+- Fill in required parameters and request body
+- Click **"Execute"** to make the API call
+
+#### 3. Generating cURL Commands
+- After executing an API call, scroll down to the **"Response"** section
+- Find the **"Curl"** tab to see the equivalent cURL command
+- Copy the command to use in your terminal or scripts
+
 ## Client Libraries & OpenAPI Specification
 
 <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6">
@@ -249,22 +269,3 @@ function switchTab(tabName) {
     </div>
   </div>
 </div>
-
-### Using the Swagger Interface
-
-#### 1. Authentication Setup
-- Click the **"Authorize"** button at the top of the Swagger page
-- Enter your API token (account or organization-level depending on the endpoint)
-- Click **"Authorize"** to authenticate your session
-
-#### 2. Testing API Endpoints
-- Browse the available endpoints organized by category
-- Click on any endpoint to expand its details
-- Click **"Try it out"** to enable the interactive form
-- Fill in required parameters and request body
-- Click **"Execute"** to make the API call
-
-#### 3. Generating cURL Commands
-- After executing an API call, scroll down to the **"Response"** section
-- Find the **"Curl"** tab to see the equivalent cURL command
-- Copy the command to use in your terminal or scripts
