@@ -284,15 +284,12 @@ function switchTab(tabName) {
       </div>
       <ul class="space-y-3 text-gray-700 leading-relaxed">
         <li class="flex items-start gap-2">
-          <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
           <span>Click the <span class="font-semibold text-blue-600">"Authorize"</span> button</span>
         </li>
         <li class="flex items-start gap-2">
-          <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
           <span>Enter your API token</span>
         </li>
         <li class="flex items-start gap-2">
-          <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
           <span>Click <span class="font-semibold text-blue-600">"Authorize"</span> to authenticate</span>
         </li>
       </ul>
@@ -306,15 +303,12 @@ function switchTab(tabName) {
       </div>
       <ul class="space-y-3 text-gray-700 leading-relaxed">
         <li class="flex items-start gap-2">
-          <div class="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
           <span>Browse endpoints by category</span>
         </li>
         <li class="flex items-start gap-2">
-          <div class="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
           <span>Click <span class="font-semibold text-green-600">"Try it out"</span> to enable forms</span>
         </li>
         <li class="flex items-start gap-2">
-          <div class="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
           <span>Fill parameters and click <span class="font-semibold text-green-600">"Execute"</span></span>
         </li>
       </ul>
@@ -328,15 +322,12 @@ function switchTab(tabName) {
       </div>
       <ul class="space-y-3 text-gray-700 leading-relaxed">
         <li class="flex items-start gap-2">
-          <div class="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
           <span>View the <span class="font-semibold text-purple-600">"Response"</span> section</span>
         </li>
         <li class="flex items-start gap-2">
-          <div class="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
           <span>Find the <span class="font-semibold text-purple-600">"Curl"</span> tab</span>
         </li>
         <li class="flex items-start gap-2">
-          <div class="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
           <span>Copy commands for your scripts</span>
         </li>
       </ul>
