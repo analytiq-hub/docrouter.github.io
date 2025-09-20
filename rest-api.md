@@ -353,15 +353,17 @@ function copyToClipboard(elementId) {
 
 <div class="bg-gradient-to-br from-indigo-50 via-white to-blue-50 rounded-2xl p-8 mb-8 border border-indigo-100">
   <div class="text-center mb-8">
-    <div class="inline-flex items-center justify-center w-16 h-16 bg-indigo-500 rounded-2xl mb-6">
-      <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <a href="https://app.docrouter.ai/fastapi/docs#/" target="_blank" rel="noopener noreferrer"
+       class="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-indigo-700 transition-colors shadow-lg hover:shadow-xl text-lg">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
       </svg>
-    </div>
-    <h2 class="text-2xl font-bold text-gray-900 mb-4">Get Started with Swagger UI</h2>
-    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      <span class="text-white hover:text-blue-100">Open Swagger UI</span>
+    </a>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
       Our interactive API documentation makes it easy to test endpoints, generate code samples, and understand the API structure.
     </p>
+
   </div>
 
   <div class="grid md:grid-cols-3 gap-6">
