@@ -340,15 +340,15 @@ function switchTab(tabName) {
 <div class="grid md:grid-cols-2 gap-6">
   <!-- OpenAPI Specification Panel -->
   <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
-    <div class="flex items-center gap-3 mb-4">
+    <div class="flex items-center gap-3 mb-4 mt-4">
       <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
         </svg>
       </div>
       <div>
-        <h3 class="text-lg font-semibold text-gray-900">OpenAPI Specification</h3>
-        <p class="text-sm text-gray-600">Complete API schema</p>
+        <div class="text-xl font-semibold text-gray-900 leading-tight">OpenAPI Specification</div>
+        <div class="text-sm text-gray-600">Complete API schema</div>
       </div>
     </div>
     <p class="text-gray-700 mb-4">Access the complete OpenAPI 3.0 specification for code generation and API exploration.</p>
@@ -363,15 +363,15 @@ function switchTab(tabName) {
 
   <!-- Client Libraries Panel -->
   <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
-    <div class="flex items-center gap-3 mb-4">
+    <div class="flex items-center gap-3 mb-4 mt-4">
       <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
         </svg>
       </div>
       <div>
-        <h3 class="text-lg font-semibold text-gray-900">Client Libraries</h3>
-        <p class="text-sm text-gray-600">SDKs and code generation</p>
+        <div class="text-xl font-semibold text-gray-900 leading-tight">Client Libraries</div>
+        <div class="text-sm text-gray-600">SDKs and code generation</div>
       </div>
     </div>
     <p class="text-gray-700 mb-4">Ready-to-use SDKs and tools for generating client libraries in your preferred language.</p>
