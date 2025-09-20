@@ -41,12 +41,8 @@ The DocRouter REST API uses token-based authentication with two types of tokens:
     </div>
     <div class="space-y-3 text-blue-800">
       <div class="flex items-start gap-2">
-        <span class="font-medium">Usage:</span>
-        <span>For APIs under <code class="bg-blue-100 px-2 py-1 rounded text-sm">/v0/account</code></span>
-      </div>
-      <div class="flex items-start gap-2">
         <span class="font-medium">Scope:</span>
-        <span>Account Access</span>
+        <span>For APIs under <code class="bg-blue-100 px-2 py-1 rounded text-sm">/v0/account</code></span>
       </div>
       <div class="flex items-start gap-2">
         <span class="font-medium">Creation:</span>
@@ -66,12 +62,8 @@ The DocRouter REST API uses token-based authentication with two types of tokens:
     </div>
     <div class="space-y-3 text-green-800">
       <div class="flex items-start gap-2">
-        <span class="font-medium">Usage:</span>
-        <span>For APIs under <code class="bg-green-100 px-2 py-1 rounded text-sm">/v0/orgs/{organization_id}</code></span>
-      </div>
-      <div class="flex items-start gap-2">
         <span class="font-medium">Scope:</span>
-        <span>Organization Access</span>
+        <span>For APIs under <code class="bg-green-100 px-2 py-1 rounded text-sm">/v0/orgs/{organization_id}</code></span>
       </div>
       <div class="flex items-start gap-2">
         <span class="font-medium">Creation:</span>
