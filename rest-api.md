@@ -5,7 +5,7 @@ permalink: /rest-api/
 ---
 
 <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-3 mb-8">
-  <div class="flex-1">
+  <div class="flex-1 mt-4">
     <p class="text-lg text-gray-600 leading-relaxed">
       Anything in the DocRouter UI is also available through REST APIs. The DocRouter UI runs on top of the same REST API available for external integrations.
     </p>
