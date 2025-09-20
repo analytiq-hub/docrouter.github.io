@@ -370,7 +370,7 @@ function copyToClipboard(elementId) {
     <!-- Step 1: Authentication -->
     <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-200">
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-10 h-10 mt-4 bg-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-sm">1</div>
+        <div class="w-10 h-10 sm:w-12 sm:h-12 mt-4 bg-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-sm sm:text-base flex-shrink-0">1</div>
         <h3 class="text-lg font-semibold text-gray-900">Authenticate</h3>
       </div>
       <ul class="list-disc list-inside space-y-3 text-sm text-gray-700 leading-relaxed ml-4">
@@ -389,7 +389,7 @@ function copyToClipboard(elementId) {
     <!-- Step 2: Testing Endpoints -->
     <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-200">
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-10 h-10 mt-4 bg-green-500 rounded-xl flex items-center justify-center text-white font-bold text-sm">2</div>
+        <div class="w-10 h-10 sm:w-12 sm:h-12 mt-4 bg-green-500 rounded-xl flex items-center justify-center text-white font-bold text-sm sm:text-base flex-shrink-0">2</div>
         <h3 class="text-lg font-semibold text-gray-900">Test Endpoints</h3>
       </div>
       <ul class="list-disc list-inside space-y-3 text-sm text-gray-700 leading-relaxed ml-4">
@@ -408,7 +408,7 @@ function copyToClipboard(elementId) {
     <!-- Step 3: cURL Commands -->
     <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-200">
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-10 h-10 mt-4 bg-purple-500 rounded-xl flex items-center justify-center text-white font-bold text-sm">3</div>
+        <div class="w-10 h-10 sm:w-12 sm:h-12 mt-4 bg-purple-500 rounded-xl flex items-center justify-center text-white font-bold text-sm sm:text-base flex-shrink-0">3</div>
         <h3 class="text-lg font-semibold text-gray-900">Generate Code</h3>
       </div>
       <ul class="list-disc list-inside space-y-3 text-sm text-gray-700 leading-relaxed ml-4">
