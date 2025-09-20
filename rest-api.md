@@ -198,9 +198,9 @@ function switchTab(tabName) {
 
 <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-3 mb-8">
   <div class="flex-1">
-    <p class="text-lg text-gray-600 leading-relaxed">
-     For complete API documentation with interactive testing capabilities, visit our **Swagger/OpenAPI documentation**:
-    </p>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        For complete API documentation with interactive testing capabilities, visit our <span class="font-semibold text-blue-600">Swagger/OpenAPI documentation</span>.
+      </p>
   </div>
 
   <div class="lg:w-80">
