@@ -218,24 +218,61 @@ function switchTab(tabName) {
 </div>
 
 
-### Using the Swagger Interface
+<div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-xl p-8 my-8">
+  <div class="text-center mb-8">
+    <div class="inline-flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 bg-indigo-500 rounded-xl flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+      </div>
+      <h2 class="text-2xl font-bold text-gray-900">Using the Swagger Interface</h2>
+    </div>
+    <p class="text-gray-600 text-lg">Follow these simple steps to get started with our interactive API documentation</p>
+  </div>
 
-#### 1. Authentication Setup
-- Click the **"Authorize"** button at the top of the Swagger page
-- Enter your API token (account or organization-level depending on the endpoint)
-- Click **"Authorize"** to authenticate your session
+  <div class="grid md:grid-cols-3 gap-6">
+    <!-- Step 1: Authentication -->
+    <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+        <h3 class="text-lg font-semibold text-gray-900">Authentication Setup</h3>
+      </div>
+      <ul class="space-y-3 text-gray-700 leading-relaxed">
+        <li>Click the <span class="font-semibold text-blue-600">"Authorize"</span> button at the top of the Swagger page</li>
+        <li>Enter your API token (account or organization-level depending on the endpoint)</li>
+        <li>Click <span class="font-semibold text-blue-600">"Authorize"</span> to authenticate your session</li>
+      </ul>
+    </div>
 
-#### 2. Testing API Endpoints
-- Browse the available endpoints organized by category
-- Click on any endpoint to expand its details
-- Click **"Try it out"** to enable the interactive form
-- Fill in required parameters and request body
-- Click **"Execute"** to make the API call
+    <!-- Step 2: Testing Endpoints -->
+    <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+        <h3 class="text-lg font-semibold text-gray-900">Testing API Endpoints</h3>
+      </div>
+      <ul class="space-y-3 text-gray-700 leading-relaxed">
+        <li>Browse the available endpoints organized by category</li>
+        <li>Click on any endpoint to expand its details</li>
+        <li>Click <span class="font-semibold text-green-600">"Try it out"</span> to enable the interactive form</li>
+        <li>Fill in required parameters and request body, then click <span class="font-semibold text-green-600">"Execute"</span></li>
+      </ul>
+    </div>
 
-#### 3. Generating cURL Commands
-- After executing an API call, scroll down to the **"Response"** section
-- Find the **"Curl"** tab to see the equivalent cURL command
-- Copy the command to use in your terminal or scripts
+    <!-- Step 3: cURL Commands -->
+    <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+        <h3 class="text-lg font-semibold text-gray-900">Generating cURL Commands</h3>
+      </div>
+      <ul class="space-y-3 text-gray-700 leading-relaxed">
+        <li>After executing an API call, scroll down to the <span class="font-semibold text-purple-600">"Response"</span> section</li>
+        <li>Find the <span class="font-semibold text-purple-600">"Curl"</span> tab to see the equivalent cURL command</li>
+        <li>Copy the command to use in your terminal or scripts</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 <div class="grid md:grid-cols-2 gap-6 my-6">
   <!-- OpenAPI Specification Panel -->
