@@ -237,8 +237,6 @@ function switchTab(tabName) {
 - Find the **"Curl"** tab to see the equivalent cURL command
 - Copy the command to use in your terminal or scripts
 
-## Client Libraries & OpenAPI Specification
-
 <div class="grid md:grid-cols-2 gap-6 my-6">
   <!-- OpenAPI Specification Panel -->
   <div class="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-lg p-6">
