@@ -4,22 +4,32 @@ title: DocRouter REST API
 permalink: /rest-api/
 ---
 
-<div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-3 mb-8">
-  <div class="flex-1 mt-4">
-    <p class="text-lg text-gray-600 leading-relaxed">
-      Anything in the DocRouter UI is also available through REST APIs. The DocRouter UI runs on top of the same REST API available for external integrations.
+<!-- Hero Section -->
+<div class="bg-gradient-to-br from-blue-50 via-white to-indigo-50 rounded-2xl p-8 mb-12 border border-blue-100">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-500 rounded-2xl mb-6">
+      <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+      </svg>
+    </div>
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Complete API Access</h2>
+    <p class="text-lg text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+      Everything in the DocRouter UI is available through REST APIs. Build custom integrations, automate workflows, and access all features programmatically.
     </p>
-  </div>
-
-  <div class="lg:w-80">
-    <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white shadow-lg flex flex-col items-center text-center">
-      <p class="text-blue-100 mb-3">Jump to our interactive REST API docs</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
       <a href="https://app.docrouter.ai/fastapi/docs#/" target="_blank" rel="noopener noreferrer"
-         class="inline-flex items-center gap-2 bg-white text-blue-600 px-4 py-2 rounded-md font-medium hover:bg-blue-50 transition-colors">
-        <span>Open Swagger UI</span>
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+         class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
         </svg>
+        <span>Interactive API Docs</span>
+      </a>
+      <a href="https://app.docrouter.ai/fastapi/openapi.json" target="_blank" rel="noopener noreferrer"
+         class="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors border border-blue-200">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+        <span>OpenAPI Schema</span>
       </a>
     </div>
   </div>
@@ -27,47 +37,69 @@ permalink: /rest-api/
 
 ## Authentication
 
-The DocRouter REST API uses token-based authentication with two types of tokens:
+<div class="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-200">
+  <p class="text-gray-700 leading-relaxed mb-6">
+    The DocRouter REST API uses token-based authentication. Choose the appropriate token type based on your integration needs:
+  </p>
+  
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="bg-white border border-blue-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900">Account-Level Tokens</h3>
+          <p class="text-sm text-gray-600">User-scoped access</p>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <div class="flex items-start gap-3">
+          <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+          <div>
+            <span class="font-medium text-gray-900">Scope:</span>
+            <span class="text-gray-700">APIs under <code class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-sm font-mono">/v0/account</code></span>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+          <div>
+            <span class="font-medium text-gray-900">Creation:</span>
+            <span class="text-gray-700">Settings → Account Tokens</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="grid md:grid-cols-2 gap-6 my-6">
-  <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
-    <div class="flex items-center gap-3 mb-4">
-      <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mt-3">
-        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0h3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-        </svg>
+    <div class="bg-white border border-green-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0h3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900">Organization-Level Tokens</h3>
+          <p class="text-sm text-gray-600">Team-scoped access</p>
+        </div>
       </div>
-      <h3 class="text-xl font-semibold text-blue-900">Account-Level Tokens</h3>
-    </div>
-    <div class="space-y-3 text-blue-800">
-      <div class="flex items-start gap-2">
-        <span class="font-medium">Scope:</span>
-        <span>For APIs under <code class="bg-blue-100 px-2 py-1 rounded text-sm">/v0/account</code></span>
-      </div>
-      <div class="flex items-start gap-2">
-        <span class="font-medium">Creation:</span>
-        <span>Go to Settings > Account Tokens</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="bg-green-50 border border-green-200 rounded-lg p-6">
-    <div class="flex items-center gap-3 mb-4">
-      <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center mt-3">
-        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0h3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-        </svg>
-      </div>
-      <h3 class="text-xl font-semibold text-green-900">Organization-Level Tokens</h3>
-    </div>
-    <div class="space-y-3 text-green-800">
-      <div class="flex items-start gap-2">
-        <span class="font-medium">Scope:</span>
-        <span>For APIs under <code class="bg-green-100 px-2 py-1 rounded text-sm">/v0/orgs/{organization_id}</code></span>
-      </div>
-      <div class="flex items-start gap-2">
-        <span class="font-medium">Creation:</span>
-        <span>Go to Settings > Organizations Tokens</span>
+      <div class="space-y-3">
+        <div class="flex items-start gap-3">
+          <div class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+          <div>
+            <span class="font-medium text-gray-900">Scope:</span>
+            <span class="text-gray-700">APIs under <code class="bg-green-50 text-green-700 px-2 py-1 rounded text-sm font-mono">/v0/orgs/{organization_id}</code></span>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+          <div>
+            <span class="font-medium text-gray-900">Creation:</span>
+            <span class="text-gray-700">Settings → Organization Tokens</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -75,35 +107,49 @@ The DocRouter REST API uses token-based authentication with two types of tokens:
 
 ## API Examples
 
-<div class="mt-6">
+<div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
   <!-- Tab Navigation -->
-  <div class="border-b border-gray-200">
-    <nav class="-mb-px flex space-x-8">
-      <button onclick="switchTab('account')" id="account-tab" class="tab-button active py-2 px-1 border-b-2 border-blue-500 font-medium text-sm text-blue-600">
+  <div class="bg-gray-50 border-b border-gray-200 px-6">
+    <nav class="flex space-x-8">
+      <button onclick="switchTab('account')" id="account-tab" class="tab-button active py-4 px-1 border-b-2 border-blue-500 font-medium text-sm text-blue-600">
         Account-Level APIs
       </button>
-      <button onclick="switchTab('organization')" id="organization-tab" class="tab-button py-2 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
+      <button onclick="switchTab('organization')" id="organization-tab" class="tab-button py-4 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
         Organization-Level APIs
       </button>
     </nav>
   </div>
 
   <!-- Tab Content -->
-  <div class="mt-6">
+  <div class="p-6">
     <!-- Account Tab Content -->
     <div id="account-content" class="tab-content">
-      List All Organizations That The User Can Access
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">List All Organizations</h3>
+        <p class="text-gray-600">Retrieve all organizations that the authenticated user can access.</p>
+      </div>
       
-      <div class="mb-4">
-        <h4 class="text-sm font-medium text-gray-700 mb-2">Request:</h4>
-        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>curl -X GET "https://app.docrouter.ai/fastapi/v0/account/organizations" \
+      <div class="space-y-6">
+        <div>
+          <h4 class="text-sm font-medium text-gray-900 mb-3 flex items-center gap-2">
+            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+            Request
+          </h4>
+          <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto border border-gray-700"><code>curl -X GET "https://app.docrouter.ai/fastapi/v0/account/organizations" \
      -H "Authorization: Bearer YOUR_ACCOUNT_TOKEN" \
      -H "Content-Type: application/json"</code></pre>
-      </div>
+        </div>
 
-      <div>
-        <h4 class="text-sm font-medium text-gray-700 mb-2">Example Response:</h4>
-        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>{
+        <div>
+          <h4 class="text-sm font-medium text-gray-900 mb-3 flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Response
+          </h4>
+          <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto border border-gray-700"><code>{
   "organizations": [
     {
       "id": "12345678abcdef123456789a",
@@ -124,23 +170,38 @@ The DocRouter REST API uses token-based authentication with two types of tokens:
     }
   ]
 }</code></pre>
+        </div>
       </div>
     </div>
 
     <!-- Organization Tab Content -->
     <div id="organization-content" class="tab-content hidden">
-      List All Documents In The Organization
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">List All Documents</h3>
+        <p class="text-gray-600">Retrieve all documents within a specific organization.</p>
+      </div>
       
-      <div class="mb-4">
-        <h4 class="text-sm font-medium text-gray-700 mb-2">Request:</h4>
-        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>curl -X GET "https://app.docrouter.ai/fastapi/v0/orgs/12345678abcdef123456789a/documents" \
+      <div class="space-y-6">
+        <div>
+          <h4 class="text-sm font-medium text-gray-900 mb-3 flex items-center gap-2">
+            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+            Request
+          </h4>
+          <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto border border-gray-700"><code>curl -X GET "https://app.docrouter.ai/fastapi/v0/orgs/12345678abcdef123456789a/documents" \
      -H "Authorization: Bearer YOUR_ORGANIZATION_TOKEN" \
      -H "Content-Type: application/json"</code></pre>
-      </div>
+        </div>
 
-      <div>
-        <h4 class="text-sm font-medium text-gray-700 mb-2">Example Response:</h4>
-        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>{
+        <div>
+          <h4 class="text-sm font-medium text-gray-900 mb-3 flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Response
+          </h4>
+          <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto border border-gray-700"><code>{
   "documents": [
     {
       "id": "12345678abcdef123456789d",
@@ -168,6 +229,7 @@ The DocRouter REST API uses token-based authentication with two types of tokens:
   "total_count": 2,
   "skip": 0
 }</code></pre>
+        </div>
       </div>
     </div>
   </div>
@@ -196,122 +258,151 @@ function switchTab(tabName) {
 }
 </script>
 
-<div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-3 mb-8">
-  <div class="flex-1">
-        <p class="text-lg text-gray-600 leading-relaxed">
-          For complete API documentation with interactive testing capabilities, visit our <a href="https://app.docrouter.ai/fastapi/docs#/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 hover:text-blue-800 transition-colors">Swagger</a> and <a href="https://app.docrouter.ai/fastapi/openapi.json" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 hover:text-blue-800 transition-colors">OpenAPI documentation</a>.
-        </p>
-  </div>
-</div>
 
 
-<div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-xl p-8 my-8">
+## Interactive Documentation
+
+<div class="bg-gradient-to-br from-indigo-50 via-white to-blue-50 rounded-2xl p-8 mb-8 border border-indigo-100">
   <div class="text-center mb-8">
-    <div class="inline-flex items-center gap-3 mb-4">
-      <div class="w-12 h-12 mt-3 bg-indigo-500 rounded-xl flex items-center justify-center">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-        </svg>
-      </div>
-      <h2 class="text-2xl font-bold text-gray-900">Using the Swagger Interface</h2>
+    <div class="inline-flex items-center justify-center w-16 h-16 bg-indigo-500 rounded-2xl mb-6">
+      <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+      </svg>
     </div>
-    <p class="text-gray-600 text-lg">Follow these simple steps to get started with our interactive API documentation</p>
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Get Started with Swagger UI</h2>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      Our interactive API documentation makes it easy to test endpoints, generate code samples, and understand the API structure.
+    </p>
   </div>
 
   <div class="grid md:grid-cols-3 gap-6">
     <!-- Step 1: Authentication -->
-    <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+    <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-200">
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-8 h-8 aspect-square bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
-        <h3 class="text-lg font-semibold text-gray-900">Authentication Setup</h3>
+        <div class="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-sm">1</div>
+        <h3 class="text-lg font-semibold text-gray-900">Authenticate</h3>
       </div>
       <ul class="space-y-3 text-gray-700 leading-relaxed">
-        <li>Click the <span class="font-semibold text-blue-600">"Authorize"</span> button at the top of the Swagger page</li>
-        <li>Enter your API token (account or organization-level depending on the endpoint)</li>
-        <li>Click <span class="font-semibold text-blue-600">"Authorize"</span> to authenticate your session</li>
+        <li class="flex items-start gap-2">
+          <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+          <span>Click the <span class="font-semibold text-blue-600">"Authorize"</span> button</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+          <span>Enter your API token</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+          <span>Click <span class="font-semibold text-blue-600">"Authorize"</span> to authenticate</span>
+        </li>
       </ul>
     </div>
 
     <!-- Step 2: Testing Endpoints -->
-    <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+    <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-200">
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-8 h-8 aspect-square bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
-        <h3 class="text-lg font-semibold text-gray-900">Testing API Endpoints</h3>
+        <div class="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center text-white font-bold text-sm">2</div>
+        <h3 class="text-lg font-semibold text-gray-900">Test Endpoints</h3>
       </div>
       <ul class="space-y-3 text-gray-700 leading-relaxed">
-        <li>Browse the available endpoints organized by category</li>
-        <li>Click on any endpoint to expand its details</li>
-        <li>Click <span class="font-semibold text-green-600">"Try it out"</span> to enable the interactive form</li>
-        <li>Fill in required parameters and request body, then click <span class="font-semibold text-green-600">"Execute"</span></li>
+        <li class="flex items-start gap-2">
+          <div class="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+          <span>Browse endpoints by category</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <div class="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+          <span>Click <span class="font-semibold text-green-600">"Try it out"</span> to enable forms</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <div class="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+          <span>Fill parameters and click <span class="font-semibold text-green-600">"Execute"</span></span>
+        </li>
       </ul>
     </div>
 
     <!-- Step 3: cURL Commands -->
-    <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+    <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-200">
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-8 h-8 aspect-square bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
-        <h3 class="text-lg font-semibold text-gray-900">Generating cURL Commands</h3>
+        <div class="w-10 h-10 bg-purple-500 rounded-xl flex items-center justify-center text-white font-bold text-sm">3</div>
+        <h3 class="text-lg font-semibold text-gray-900">Generate Code</h3>
       </div>
       <ul class="space-y-3 text-gray-700 leading-relaxed">
-        <li>After executing an API call, scroll down to the <span class="font-semibold text-purple-600">"Response"</span> section</li>
-        <li>Find the <span class="font-semibold text-purple-600">"Curl"</span> tab to see the equivalent cURL command</li>
-        <li>Copy the command to use in your terminal or scripts</li>
+        <li class="flex items-start gap-2">
+          <div class="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+          <span>View the <span class="font-semibold text-purple-600">"Response"</span> section</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <div class="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+          <span>Find the <span class="font-semibold text-purple-600">"Curl"</span> tab</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <div class="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+          <span>Copy commands for your scripts</span>
+        </li>
       </ul>
     </div>
   </div>
 </div>
 
-<div class="grid md:grid-cols-2 gap-6 my-6">
+## Resources & Tools
+
+<div class="grid md:grid-cols-2 gap-6">
   <!-- OpenAPI Specification Panel -->
-  <div class="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-lg p-6">
+  <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
     <div class="flex items-center gap-3 mb-4">
-      <div class="w-10 h-10 mt-3 bg-blue-500 rounded-lg flex items-center justify-center">
-        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
         </svg>
       </div>
-      <h3 class="text-xl font-semibold text-blue-900">OpenAPI Specification</h3>
+      <div>
+        <h3 class="text-lg font-semibold text-gray-900">OpenAPI Specification</h3>
+        <p class="text-sm text-gray-600">Complete API schema</p>
+      </div>
     </div>
-    <p class="text-blue-800 mb-4">Access the complete OpenAPI schema</p>
+    <p class="text-gray-700 mb-4">Access the complete OpenAPI 3.0 specification for code generation and API exploration.</p>
     <a href="https://app.docrouter.ai/fastapi/openapi.json" target="_blank" rel="noopener noreferrer"
-       class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-700 hover:text-white transition-colors shadow-md hover:shadow-lg">
-      <span class="text-white">View OpenAPI JSON</span>
-      <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+       class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+      <span>View OpenAPI JSON</span>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
       </svg>
     </a>
   </div>
 
   <!-- Client Libraries Panel -->
-  <div class="bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-lg p-6">
+  <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
     <div class="flex items-center gap-3 mb-4">
-      <div class="w-10 h-10 mt-3 bg-green-500 rounded-lg flex items-center justify-center">
-        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
         </svg>
       </div>
-      <h3 class="text-xl font-semibold text-green-900">Client Libraries</h3>
+      <div>
+        <h3 class="text-lg font-semibold text-gray-900">Client Libraries</h3>
+        <p class="text-sm text-gray-600">SDKs and code generation</p>
+      </div>
     </div>
-    <p class="text-green-800 mb-4">Ready-to-use SDKs and code generation</p>
+    <p class="text-gray-700 mb-4">Ready-to-use SDKs and tools for generating client libraries in your preferred language.</p>
     <div class="space-y-3">
-      <div class="flex items-center justify-between bg-white rounded-md p-3 border border-green-200">
+      <a href="/python-sdk/" class="flex items-center justify-between bg-gray-50 hover:bg-gray-100 rounded-lg p-3 transition-colors group">
         <div>
-          <a href="/python-sdk/" class="text-green-700 hover:text-green-800 font-medium">Python SDK</a>
-          <p class="text-green-600 text-sm">Official client library</p>
+          <span class="font-medium text-gray-900 group-hover:text-green-600">Python SDK</span>
+          <p class="text-sm text-gray-600">Official client library</p>
         </div>
-        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-5 h-5 text-gray-400 group-hover:text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
         </svg>
-      </div>
-      <div class="flex items-center justify-between bg-white rounded-md p-3 border border-green-200">
+      </a>
+      <a href="https://openapi-generator.tech/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between bg-gray-50 hover:bg-gray-100 rounded-lg p-3 transition-colors group">
         <div>
-          <a href="https://openapi-generator.tech/" target="_blank" rel="noopener noreferrer" class="text-green-700 hover:text-green-800 font-medium">OpenAPI Generator</a>
-          <p class="text-green-600 text-sm">Generate clients for TypeScript, Rust, Go, Java, and more</p>
+          <span class="font-medium text-gray-900 group-hover:text-green-600">OpenAPI Generator</span>
+          <p class="text-sm text-gray-600">Generate clients for TypeScript, Rust, Go, Java, and more</p>
         </div>
-        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-5 h-5 text-gray-400 group-hover:text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
         </svg>
-      </div>
+      </a>
     </div>
   </div>
 </div>
