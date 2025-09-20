@@ -222,7 +222,7 @@ function switchTab(tabName) {
     <!-- Step 1: Authentication -->
     <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+        <div class="w-8 h-8 aspect-square bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
         <h3 class="text-lg font-semibold text-gray-900">Authentication Setup</h3>
       </div>
       <ul class="space-y-3 text-gray-700 leading-relaxed">
@@ -235,7 +235,7 @@ function switchTab(tabName) {
     <!-- Step 2: Testing Endpoints -->
     <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+        <div class="w-8 h-8 aspect-square bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
         <h3 class="text-lg font-semibold text-gray-900">Testing API Endpoints</h3>
       </div>
       <ul class="space-y-3 text-gray-700 leading-relaxed">
@@ -249,7 +249,7 @@ function switchTab(tabName) {
     <!-- Step 3: cURL Commands -->
     <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+        <div class="w-8 h-8 aspect-square bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
         <h3 class="text-lg font-semibold text-gray-900">Generating cURL Commands</h3>
       </div>
       <ul class="space-y-3 text-gray-700 leading-relaxed">
