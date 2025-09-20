@@ -133,24 +133,15 @@ collections:
     output: true
     permalink: /:categories/:title/
 
-# Pagination configuration for jekyll-paginate-v2
-pagination:
-  enabled: true
-  per_page: 5
-  permalink: '/page/:num/'
-  title: ':title - Page :num'
-  limit: 0
-  trail:
-    before: 2
-    after: 2
-  sort_field: 'date'
-  sort_reverse: true
+# Pagination configuration for jekyll-paginate (GitHub Pages compatible)
+paginate: 5
+paginate_path: "/blog/page:num/"
 
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
  - jekyll-pdf-embed # Per example at https://github.com/MihajloNesic/minimal-mistakes-pdf-example/
- - jekyll-paginate-v2
+ - jekyll-paginate
 
 
 
