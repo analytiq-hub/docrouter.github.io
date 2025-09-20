@@ -202,19 +202,6 @@ function switchTab(tabName) {
           For complete API documentation with interactive testing capabilities, visit our <a href="https://app.docrouter.ai/fastapi/docs#/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 hover:text-blue-800 transition-colors">Swagger</a> and <a href="https://app.docrouter.ai/fastapi/openapi.json" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 hover:text-blue-800 transition-colors">OpenAPI documentation</a>.
         </p>
   </div>
-
-  <div class="lg:w-80">
-    <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-4 text-white shadow-lg flex flex-col items-center text-center">
-      <p class="text-blue-100 mb-3">Jump to our interactive API docs</p>
-      <a href="https://app.docrouter.ai/fastapi/docs#/" target="_blank" rel="noopener noreferrer"
-         class="inline-flex items-center gap-2 bg-white text-blue-600 px-4 py-2 rounded-md font-medium hover:bg-blue-50 transition-colors">
-        <span>Open Swagger UI</span>
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-        </svg>
-      </a>
-    </div>
-  </div>
 </div>
 
 
