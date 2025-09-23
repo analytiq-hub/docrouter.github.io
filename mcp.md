@@ -57,7 +57,7 @@ title: "DocRouter MCP Server"
             <p class="text-gray-600 mt-6 mb-6">Or clone and install in development mode:</p>
 
             <pre><code>git clone https://github.com/analytiq-hub/doc-router.git
-cd doc-router/mcp_server
+cd packages/docrouter_mcp
 pip install -e .</code></pre>
         </section>
 
