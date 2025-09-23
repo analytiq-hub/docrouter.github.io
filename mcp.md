@@ -52,7 +52,7 @@ title: "DocRouter MCP Server"
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Installation</h2>
             <p class="text-gray-600 mb-6">Install the MCP server from the DocRouter repository:</p>
 
-            <pre><code>pip install git+https://github.com/analytiq-hub/doc-router.git#subdirectory=mcp_server</code></pre>
+            <pre><code>pip install git+https://github.com/analytiq-hub/doc-router.git#subdirectory=packages/docrouter_mcp</code></pre>
 
             <p class="text-gray-600 mt-6 mb-6">Or clone and install in development mode:</p>
 
