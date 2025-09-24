@@ -7,11 +7,10 @@ title: "DocRouter - AI-Powered Document Processing"
     <!-- Hero Section - Lead with Problem -->
     <header class="text-center md:mb-12 mb-8">
         <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Stop Manual Document Processing
+            Stop Wasting Hours on Manual Data Entry
         </h1>
         <div class="text-xl md:text-2xl text-gray-600 mb-8">
-            <p class="mb-4">Your team spends hours manually entering data from invoices, manifests, and reports</p>
-            <p class="text-lg">We automate it with AI - saving 90% of processing time</p>
+            <p class="mb-4">We automate document processing for invoices, manifests, and reports - reducing processing time by <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">90%</span></p>
         </div>
 
         <!-- Primary CTA -->
@@ -29,10 +28,70 @@ title: "DocRouter - AI-Powered Document Processing"
         </div>
     </header>
 
+    <!-- Animated Document Processing Demo -->
+    <section class="bg-gray-50 rounded-lg p-8 mb-12">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">See How It Works</h3>
+            <div class="relative bg-white rounded-lg p-8 shadow-inner">
+                <!-- Document Processing Animation -->
+                <div class="flex items-center justify-between relative h-32">
+                    <!-- Input Document -->
+                    <div class="document-input">
+                        <div class="w-16 h-20 bg-blue-100 rounded-lg shadow-md flex items-center justify-center transform transition-all duration-1000 ease-in-out animate-pulse">
+                            <span class="text-2xl">📄</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2 text-center">Invoice</p>
+                    </div>
+                    
+                    <!-- Processing Arrows -->
+                    <div class="flex-1 flex items-center justify-center">
+                        <div class="flex space-x-2">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+                            <div class="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+                            <div class="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI Processing -->
+                    <div class="ai-processing">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                            <span class="text-white text-xl">🤖</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2 text-center">AI Processing</p>
+                    </div>
+                    
+                    <!-- Processing Arrows -->
+                    <div class="flex-1 flex items-center justify-center">
+                        <div class="flex space-x-2">
+                            <div class="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style="animation-delay: 0.3s"></div>
+                            <div class="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+                            <div class="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style="animation-delay: 0.5s"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Output Data -->
+                    <div class="document-output">
+                        <div class="w-16 h-20 bg-green-100 rounded-lg shadow-md flex items-center justify-center transform transition-all duration-1000 ease-in-out animate-pulse">
+                            <span class="text-2xl">📊</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2 text-center">Structured Data</p>
+                    </div>
+                </div>
+                
+                <!-- Time Savings Indicator -->
+                <div class="mt-6 text-center">
+                    <div class="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full">
+                        <span class="text-sm font-medium">⚡ 90% Faster Processing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <main>
         <!-- Problem Statement Section -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">The Problem We Solve</h2>
+            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">We Solve Problems</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
                     <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
