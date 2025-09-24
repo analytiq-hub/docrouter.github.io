@@ -37,7 +37,7 @@ title: "DocRouter - AI-Powered Document Processing"
                 <div class="flex items-center justify-between relative h-32">
                     <!-- Input Document -->
                     <div class="document-input">
-                        <div class="w-16 h-20 bg-blue-100 rounded-lg shadow-md flex items-center justify-center transform transition-all duration-1000 ease-in-out animate-pulse">
+                        <div class="w-16 h-20 bg-blue-100 rounded-lg shadow-md flex items-center justify-center">
                             <span class="text-2xl">📄</span>
                         </div>
                         <p class="text-sm text-gray-600 mt-2 text-center">Invoice</p>
@@ -46,15 +46,15 @@ title: "DocRouter - AI-Powered Document Processing"
                     <!-- Processing Arrows -->
                     <div class="flex-1 flex items-center justify-center">
                         <div class="flex space-x-2">
-                            <div class="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
-                            <div class="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
-                            <div class="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                            <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <div class="w-2 h-2 bg-blue-500 rounded-full" style="animation-delay: 0.1s"></div>
+                            <div class="w-2 h-2 bg-blue-500 rounded-full" style="animation-delay: 0.2s"></div>
                         </div>
                     </div>
                     
                     <!-- AI Processing -->
                     <div class="ai-processing">
-                        <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
                             <span class="text-white text-xl">🤖</span>
                         </div>
                         <p class="text-sm text-gray-600 mt-2 text-center">AI Processing</p>
@@ -63,15 +63,15 @@ title: "DocRouter - AI-Powered Document Processing"
                     <!-- Processing Arrows -->
                     <div class="flex-1 flex items-center justify-center">
                         <div class="flex space-x-2">
-                            <div class="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style="animation-delay: 0.3s"></div>
-                            <div class="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
-                            <div class="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style="animation-delay: 0.5s"></div>
+                            <div class="w-2 h-2 bg-purple-500 rounded-full" style="animation-delay: 0.3s"></div>
+                            <div class="w-2 h-2 bg-purple-500 rounded-full" style="animation-delay: 0.4s"></div>
+                            <div class="w-2 h-2 bg-purple-500 rounded-full" style="animation-delay: 0.5s"></div>
                         </div>
                     </div>
                     
                     <!-- Output Data -->
                     <div class="document-output">
-                        <div class="w-16 h-20 bg-green-100 rounded-lg shadow-md flex items-center justify-center transform transition-all duration-1000 ease-in-out animate-pulse">
+                        <div class="w-16 h-20 bg-green-100 rounded-lg shadow-md flex items-center justify-center">
                             <span class="text-2xl">📊</span>
                         </div>
                         <p class="text-sm text-gray-600 mt-2 text-center">Structured Data</p>
