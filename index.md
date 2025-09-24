@@ -31,28 +31,28 @@ title: "DocRouter - AI-Powered Document Processing"
     <main>
         <!-- Problem Statement Section -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">We Solve Problems</h2>
+            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">The Problems We Eliminate</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
                     <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">⏰</span>
+                        <span class="text-2xl">🖊️</span>
                     </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-2">Time Wasted</h3>
-                    <p class="text-gray-600">Hours spent manually typing data from documents into your systems</p>
+                    <h3 class="text-xl font-medium text-gray-900 mb-2">Manual Data Entry</h3>
+                    <p class="text-gray-600">Stop wasting hours typing data from invoices, manifests, and reports</p>
                 </div>
                 <div class="text-center">
                     <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">❌</span>
+                        <span class="text-2xl">⚠️</span>
                     </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-2">Errors Cost Money</h3>
-                    <p class="text-gray-600">Manual entry mistakes lead to costly rework and compliance issues</p>
+                    <h3 class="text-xl font-medium text-gray-900 mb-2">Human Errors</h3>
+                    <p class="text-gray-600">Eliminate costly mistakes and compliance issues from manual entry</p>
                 </div>
                 <div class="text-center">
                     <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">📊</span>
+                        <span class="text-2xl">📚</span>
                     </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-2">Backlog Grows</h3>
-                    <p class="text-gray-600">Documents pile up while your team struggles to keep up</p>
+                    <h3 class="text-xl font-medium text-gray-900 mb-2">Growing Backlog</h3>
+                    <p class="text-gray-600">Clear document backlogs with automated processing</p>
                 </div>
             </div>
         </section>
