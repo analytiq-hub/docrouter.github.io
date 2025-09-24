@@ -18,7 +18,7 @@ title: "DocRouter - AI-Powered Document Processing"
             <a href="https://app.docrouter.ai"
                target="_blank"
                rel="noopener noreferrer"
-               class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
+               class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 border-2 border-transparent">
                 Try It Free
             </a>
             <a href="#featured-use-cases"
