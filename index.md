@@ -10,7 +10,7 @@ title: "DocRouter - AI-Powered Document Processing"
             Stop Wasting Hours on Manual Data Entry
         </h1>
         <div class="text-xl md:text-2xl text-gray-600 mb-8">
-            <p class="mb-4">We automate document processing for invoices, manifests, and reports - reducing processing time by <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">90%</span></p>
+            <p class="mb-4">We reduce processing time by <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">90%</span> for invoices, manifests, reports, and more</p>
         </div>
 
         <!-- Primary CTA -->
