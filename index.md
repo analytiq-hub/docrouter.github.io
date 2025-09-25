@@ -18,7 +18,7 @@ title: "DocRouter - AI-Powered Document Processing"
             <a href="https://app.docrouter.ai"
                target="_blank"
                rel="noopener noreferrer"
-               class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 border-2 border-transparent">
+               class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 border-2 border-transparent">
                 Try It Free
             </a>
             <a href="#featured-use-cases"
@@ -175,7 +175,7 @@ title: "DocRouter - AI-Powered Document Processing"
 
             <div class="text-center mt-8">
                 <a href="{{ '/use-cases/' | relative_url }}"
-                   class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
+                   class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
                     See More Use Cases
                 </a>
             </div>
