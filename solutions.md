@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Use Cases - DocRouter"
+title: "Solutions - DocRouter"
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
@@ -37,7 +37,7 @@ title: "Use Cases - DocRouter"
                     <div class="text-sm text-gray-500 mb-4">
                         <strong>Problem:</strong> 50% handwritten applications, manual data entry into Ellis AMS
                     </div>
-                    <a href="{{ '/use-cases/insurance/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                    <a href="{{ '/solutions/insurance/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
 
                 <!-- Banking/Loan Applications -->
@@ -54,7 +54,7 @@ title: "Use Cases - DocRouter"
                     <div class="text-sm text-gray-500 mb-4">
                         <strong>Problem:</strong> Manual verification of complex financial documents
                     </div>
-                    <a href="{{ '/use-cases/banking/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                    <a href="{{ '/solutions/banking/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
 
                 <!-- Supply Chain -->
@@ -71,7 +71,7 @@ title: "Use Cases - DocRouter"
                     <div class="text-sm text-gray-500 mb-4">
                         <strong>Problem:</strong> Manual verification of manifest data against physical inventory
                     </div>
-                    <a href="{{ '/use-cases/supply-chain/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                    <a href="{{ '/solutions/supply-chain/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
 
                 <!-- Clinical Trials -->
@@ -88,7 +88,7 @@ title: "Use Cases - DocRouter"
                     <div class="text-sm text-gray-500 mb-4">
                         <strong>Problem:</strong> Manual verification of complex contract terms
                     </div>
-                    <a href="{{ '/use-cases/clinical-trials/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                    <a href="{{ '/solutions/clinical-trials/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
 
                 <!-- Private Equity -->
@@ -105,7 +105,7 @@ title: "Use Cases - DocRouter"
                     <div class="text-sm text-gray-500 mb-4">
                         <strong>Problem:</strong> Manual extraction consuming 20-40% of team time
                     </div>
-                    <a href="{{ '/use-cases/private-equity/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                    <a href="{{ '/solutions/private-equity/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
 
                 <!-- Durable Medical Equipment -->
@@ -122,7 +122,7 @@ title: "Use Cases - DocRouter"
                     <div class="text-sm text-gray-500 mb-4">
                         <strong>Problem:</strong> Manual processing of complex medical documentation and insurance requirements
                     </div>
-                    <a href="{{ '/use-cases/dme/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                    <a href="{{ '/solutions/dme/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
             </div>
         </section>

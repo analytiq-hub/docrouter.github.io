@@ -1,44 +1,44 @@
 ---
 layout: default
-title: "Durable Medical Equipment Processing - DocRouter Use Cases"
+title: "Private Equity Reports - DocRouter Solutions"
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
     <!-- Hero Section -->
     <header class="text-center md:mb-12 mb-8">
         <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Durable Medical Equipment Processing
+            Private Equity Reports
         </h1>
         <div class="text-xl md:text-2xl text-gray-600 mb-8">
-            <p>Automate the processing of DME orders, prescriptions, and insurance authorizations to streamline medical equipment distribution</p>
+            <p>Extract and analyze financial data from private equity reports, investment memos, and due diligence documents</p>
         </div>
     </header>
 
     <main>
         <!-- Problem Statement Section -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">The DME Challenge</h2>
+            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">The Private Equity Challenge</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
                     <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">🏥</span>
+                        <span class="text-2xl">📊</span>
                     </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-2">Insurance Complexity</h3>
-                    <p class="text-gray-600">Complex medical documentation and insurance authorization requirements</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">📄</span>
-                    </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-2">Manual Processing</h3>
-                    <p class="text-gray-600">Hours spent manually processing prescriptions and authorizations</p>
+                    <h3 class="text-xl font-medium text-gray-900 mb-2">Volume Processing</h3>
+                    <p class="text-gray-600">30-50 quarterly statements from fund managers requiring manual extraction</p>
                 </div>
                 <div class="text-center">
                     <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">⏱️</span>
                     </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-2">Patient Delays</h3>
-                    <p class="text-gray-600">Processing delays impact patient care and equipment delivery times</p>
+                    <h3 class="text-xl font-medium text-gray-900 mb-2">Time Intensive</h3>
+                    <p class="text-gray-600">Manual extraction consuming 20-40% of team time each quarter</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🗋</span>
+                    </div>
+                    <h3 class="text-xl font-medium text-gray-900 mb-2">Reporting Pressure</h3>
+                    <p class="text-gray-600">Tight deadlines for Excel and PowerPoint reporting to stakeholders</p>
                 </div>
             </div>
         </section>
@@ -46,27 +46,27 @@ title: "Durable Medical Equipment Processing - DocRouter Use Cases"
         <!-- Solution Section -->
         <section class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-lg p-8 mb-12">
             <div class="text-center">
-                <h2 class="text-3xl font-semibold text-white mb-6">How DocRouter Streamlines DME Operations</h2>
+                <h2 class="text-3xl font-semibold text-white mb-6">How DocRouter Transforms PE Operations</h2>
                 <p class="text-xl text-blue-100 mb-8">
-                    Automated processing of medical documents and insurance workflows
+                    Automated financial data extraction and report generation
                 </p>
                 <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-white mb-3">Document Processing</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• DME orders and prescriptions</li>
-                            <li>• Insurance authorization forms</li>
-                            <li>• Medical necessity documentation</li>
-                            <li>• Patient information and eligibility</li>
+                            <li>• Quarterly fund statements</li>
+                            <li>• Investment memos and reports</li>
+                            <li>• Financial statements and valuations</li>
+                            <li>• Due diligence documents</li>
                         </ul>
                     </div>
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
-                        <h3 class="text-xl font-medium text-white mb-3">Automated Workflows</h3>
+                        <h3 class="text-xl font-medium text-white mb-3">Automated Reporting</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Insurance eligibility verification</li>
-                            <li>• Prior authorization processing</li>
-                            <li>• Order fulfillment automation</li>
-                            <li>• Compliance documentation</li>
+                            <li>• Excel template population</li>
+                            <li>• PowerPoint generation</li>
+                            <li>• Performance analytics</li>
+                            <li>• Portfolio tracking updates</li>
                         </ul>
                     </div>
                 </div>
@@ -75,18 +75,18 @@ title: "Durable Medical Equipment Processing - DocRouter Use Cases"
 
         <!-- Results Section -->
         <section class="bg-gray-50 rounded-lg p-8 mb-12">
-            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">DME Results</h2>
+            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">Private Equity Results</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">80%</div>
-                    <div class="text-gray-600">Faster Processing</div>
+                    <div class="text-4xl font-bold text-blue-600 mb-2">85%</div>
+                    <div class="text-gray-600">Time Savings</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">95%</div>
-                    <div class="text-gray-600">Authorization Accuracy</div>
+                    <div class="text-4xl font-bold text-blue-600 mb-2">98%</div>
+                    <div class="text-gray-600">Data Accuracy</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">$90K+</div>
+                    <div class="text-4xl font-bold text-blue-600 mb-2">$120K+</div>
                     <div class="text-gray-600">Annual Savings</div>
                 </div>
             </div>
@@ -94,10 +94,10 @@ title: "Durable Medical Equipment Processing - DocRouter Use Cases"
 
         <!-- Contact Section -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Ready to Streamline DME Processing?</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Ready to Automate Your PE Reporting?</h2>
             <div class="text-center">
                 <p class="text-gray-600 mb-6">
-                    Contact us to discuss your DME processing needs and see how DocRouter can help improve patient care and operational efficiency.
+                    Contact us to discuss your private equity document processing needs and see how DocRouter can help streamline operations.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <button onclick="openCalendly()"

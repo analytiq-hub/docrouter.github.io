@@ -56,23 +56,23 @@ minima:
 
 # DocRouter navigation structure
 header_pages:
-  - title: "Use Cases"
+  - title: "Solutions"
     url: "#"
     children:
       - title: "Overview"
-        url: "/use-cases"
+        url: "/solutions"
       - title: "Banking"
-        url: "/use-cases/banking"
+        url: "/solutions/banking"
       - title: "Clinical Trials"
-        url: "/use-cases/clinical-trials"
+        url: "/solutions/clinical-trials"
       - title: "Durable Medical Equipment"
-        url: "/use-cases/dme"
+        url: "/solutions/dme"
       - title: "Insurance"
-        url: "/use-cases/insurance"
+        url: "/solutions/insurance"
       - title: "Private Equity"
-        url: "/use-cases/private-equity"
+        url: "/solutions/private-equity"
       - title: "Supply Chain"
-        url: "/use-cases/supply-chain"
+        url: "/solutions/supply-chain"
   - title: "Documentation"
     url: "#"
     children:

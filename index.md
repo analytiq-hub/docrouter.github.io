@@ -21,7 +21,7 @@ title: "DocRouter - AI-Powered Document Processing"
                class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 border-2 border-transparent">
                 Try It Free
             </a>
-            <a href="#featured-use-cases"
+            <a href="#featured-solutions"
                class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
                 See How It Works
             </a>
@@ -94,8 +94,8 @@ title: "DocRouter - AI-Powered Document Processing"
             </div>
         </section>
 
-        <!-- Featured Use Cases - Above the Fold -->
-        <section id="featured-use-cases" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+        <!-- Featured Solutions - Above the Fold -->
+        <section id="featured-solutions" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">Solutions for Your Industry</h2>
             <p class="text-gray-600 mb-8 text-center text-lg">
                 We specialize in these document processing challenges. Don't see yours? We can build it.
@@ -116,7 +116,7 @@ title: "DocRouter - AI-Powered Document Processing"
                     <div class="text-sm text-gray-500 mb-4">
                         <strong>Problem:</strong> 50% handwritten applications, manual data entry into Ellis AMS
                     </div>
-                    <a href="{{ '/use-cases/insurance/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                    <a href="{{ '/solutions/insurance/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
 
                 <!-- Shipping Manifests -->
@@ -133,7 +133,7 @@ title: "DocRouter - AI-Powered Document Processing"
                     <div class="text-sm text-gray-500 mb-4">
                         <strong>Problem:</strong> Manual verification of manifest data against physical inventory
                     </div>
-                    <a href="{{ '/use-cases/supply-chain/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                    <a href="{{ '/solutions/supply-chain/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
 
                 <!-- Clinical Trial Invoices -->
@@ -150,7 +150,7 @@ title: "DocRouter - AI-Powered Document Processing"
                     <div class="text-sm text-gray-500 mb-4">
                         <strong>Problem:</strong> Manual verification of complex contract terms
                     </div>
-                    <a href="{{ '/use-cases/clinical-trials/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                    <a href="{{ '/solutions/clinical-trials/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
 
                 <!-- Private Equity Statements -->
@@ -167,14 +167,14 @@ title: "DocRouter - AI-Powered Document Processing"
                     <div class="text-sm text-gray-500 mb-4">
                         <strong>Problem:</strong> Manual extraction consuming 20-40% of team time
                     </div>
-                    <a href="{{ '/use-cases/private-equity/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                    <a href="{{ '/solutions/private-equity/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
             </div>
 
             <div class="text-center mt-8">
-                <a href="{{ '/use-cases/' | relative_url }}"
+                <a href="{{ '/solutions/' | relative_url }}"
                    class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
-                    See More Use Cases
+                    See More Solutions
                 </a>
             </div>
         </section>

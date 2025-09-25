@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Insurance Applications - DocRouter Use Cases"
+title: "Insurance Applications - DocRouter Solutions"
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
