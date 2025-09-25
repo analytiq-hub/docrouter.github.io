@@ -29,12 +29,10 @@ title: "DocRouter - AI-Powered Document Processing"
     </header>
 
     <!-- Banner Graphic Section -->
-    <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-        <div class="text-center">
-            <img src="{{ '/assets/images/banner_graphic.jpg' | relative_url }}" 
-                 alt="DocRouter Banner" 
-                 class="w-full max-w-4xl mx-auto rounded-lg">
-        </div>
+    <section class="mb-12">
+        <img src="{{ '/assets/images/banner_graphic.jpg' | relative_url }}" 
+             alt="DocRouter Banner" 
+             class="w-full">
     </section>
 
     <main>
