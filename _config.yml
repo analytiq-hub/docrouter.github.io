@@ -56,10 +56,6 @@ minima:
 
 # DocRouter navigation structure
 header_pages:
-  - title: "Launch Application"
-    url: "https://app.docrouter.ai"
-    button_style: "solid"
-    external: true
   - title: "Use Cases"
     url: "#"
     children:
@@ -104,6 +100,10 @@ header_pages:
         url: "/team"
       - title: "Contact"
         url: "/contact"
+  - title: "Launch Application"
+    url: "https://app.docrouter.ai"
+    button_style: "solid"
+    external: true
 
 # Footer sitemap - simplified navigation for footer display
 site_map:
