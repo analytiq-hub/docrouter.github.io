@@ -35,6 +35,25 @@ title: "DocRouter - AI-Powered Document Processing"
              class="w-full">
     </section>
 
+    <!-- Results Section -->
+    <section class="bg-gray-50 rounded-lg p-8 mb-12">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">What Our Clients Achieve</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2">90%</div>
+                <div class="text-gray-600">Faster Processing</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2">95%</div>
+                <div class="text-gray-600">Error Reduction</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2">$50K+</div>
+                <div class="text-gray-600">Annual Savings</div>
+            </div>
+        </div>
+    </section>
+
     <main>
         <!-- Problem Statement Section -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
@@ -179,24 +198,6 @@ title: "DocRouter - AI-Powered Document Processing"
             </div>
         </section>
 
-        <!-- Results Section -->
-        <section class="bg-gray-50 rounded-lg p-8 mb-12">
-            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">What Our Clients Achieve</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">90%</div>
-                    <div class="text-gray-600">Faster Processing</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">95%</div>
-                    <div class="text-gray-600">Error Reduction</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">$50K+</div>
-                    <div class="text-gray-600">Annual Savings</div>
-                </div>
-            </div>
-        </section>
 
         <!-- User Experience Section -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
