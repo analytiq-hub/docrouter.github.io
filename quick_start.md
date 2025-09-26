@@ -21,7 +21,7 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
   </div>
   <div class="rounded-xl border border-indigo-200 bg-indigo-50 p-6">
     <h2 class="text-2xl font-bold mb-3">Sample File, Schema and Prompt</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-3 gap-3">
+    <div class="grid grid-cols-1 gap-3">
       <a href="/assets/files/Acord80_Homeowners_App.pdf" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
         <div class="flex items-center gap-3 min-w-0">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">PDF</span>
