@@ -55,7 +55,10 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
 
 ---
 
-## Step 1: Upload Your First Document
+<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3">
+  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 1: Upload Your First Document</span>
+  <p class="text-sm text-gray-600 mt-1">Start by uploading a file and verifying it processed.</p>
+</div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
   <div>
@@ -121,9 +124,11 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
 
 ---
 
-## Step 2: Configure a Tag, Schema and Prompt
-
-To prevent running all the prompts on all the documents, we use a tag mechanism to assign which prompts run on which documents.
+<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
+  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 2: Configure a Tag, Schema and Prompt</span>
+  <p class="text-sm text-gray-600 mt-1">To prevent running all the prompts on all the documents, we use a tag mechanism to assign which prompts run on which documents.
+</p>
+</div>
 
 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
   <div>
@@ -198,11 +203,11 @@ To prevent running all the prompts on all the documents, we use a tag mechanism 
 </div>
 
 
-## Step 3: Run The Prompt On The Tagged Document(s)
-
-If a document is tagged at upload time, all prompts with that tag will be run automatically. However, if a prompt is added, updated or tagged after the document has been uploaded, the prompt will need to be manually run on the matching documents.
-
-A separate mechanism, using file <strong>Actions</strong>, is available to run a new prompt in bulk on all matching documents that already exist.
+<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
+  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 3: Run The Prompt On The Tagged Document(s)</span>
+  <p class="text-sm text-gray-600 mt-1">If a document is tagged at upload time, all prompts with that tag will be run automatically. However, if a prompt is added, updated or tagged after the document has been uploaded, the prompt will need to be manually run on the matching documents.</p>
+  <p class="text-sm text-gray-600 mt-1">A separate mechanism, using file <strong>Actions</strong>, is available to run a new prompt in bulk on all matching documents that already exist.</p>
+</div>
 
 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
   <div>
@@ -241,9 +246,10 @@ A separate mechanism, using file <strong>Actions</strong>, is available to run a
 ---
 
 
-## Step 4. Prompt Engineering
-
-Craft effective prompts for data extraction:
+<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
+  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 4. Prompt Engineering</span>
+  <p class="text-sm text-gray-600 mt-1">Iterate on prompts to improve extraction quality.</p>
+</div>
 
 ```text
 Extract the following information from this invoice:
@@ -266,7 +272,10 @@ Be precise with numbers and dates.
 
 ---
 
-## Step 5: Manual Automation
+<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
+  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 5: Manual Automation</span>
+  <p class="text-sm text-gray-600 mt-1">Leverage bulk uploads and actions for scale.</p>
+</div>
 
 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
   <div>
@@ -299,7 +308,10 @@ Be precise with numbers and dates.
 
 ---
 
-## Step 6: Full Automation with APIs
+<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
+  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 6: Full Automation with APIs</span>
+  <p class="text-sm text-gray-600 mt-1">Automate end-to-end with REST API or Python SDK.</p>
+</div>
 
 ### REST API Automation
 
