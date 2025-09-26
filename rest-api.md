@@ -7,12 +7,6 @@ permalink: /rest-api/
 <!-- Hero Section -->
 <div class="bg-gradient-to-br from-blue-50 via-white to-indigo-50 rounded-2xl p-8 mb-12 border border-blue-100">
   <div class="max-w-4xl mx-auto text-center">
-    <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-500 rounded-2xl mb-6">
-      <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-      </svg>
-    </div>
-    <h2 class="text-2xl font-bold text-gray-900 mb-4">Complete API Access</h2>
     <p class="text-lg text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
       Everything in the DocRouter UI is available through REST APIs. Build custom integrations, automate workflows, and access all features programmatically.
     </p>
