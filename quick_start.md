@@ -83,36 +83,25 @@ DocRouter transforms your document processing workflow through these key steps:
 
 ---
 
-## Step 2: Tag Your Documents
+## Step 2: Configure a Tag, Schema and Prompt
 
-### Manual Tagging
+To prevent running all the prompts on all the documents, we use a tag mechanism to assign which prompts run on which documents.
 
-1. Select your uploaded document
-2. Click **"Add Tags"**
-3. Add relevant tags like:
-   - `invoice`
-   - `Q4-2024`
-   - `acme-corp`
-   - `high-priority`
-
-### API Tagging
-
-```bash
-curl -X POST https://api.docrouter.ai/v1/documents/{document_id}/tags \
-  -H "Authorization: Bearer YOUR_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"tags": ["invoice", "Q4-2024", "acme-corp"]}'
-```
-
-### Python SDK Tagging
-
-```python
-# Add tags to document
-client.documents.add_tags(
-    document_id=document.id,
-    tags=["invoice", "Q4-2024", "acme-corp"]
-)
-```
+<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+  <div>
+    <h4 class="text-lg font-semibold mb-2">Create a Tag</h4>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li>Go to <strong>Tags</strong> in the left sidebar.</li>
+      <li>Click <strong>Create Tag</strong>.</li>
+      <li>Enter a descriptive tag name (e.g., <code>invoice</code>).</li>
+      <li>Click <strong>Save tag</strong>.</li>
+    </ol>
+  </div>
+  <div>
+    <img src="/assets/images/create_tag.png" alt="Create Tag dialog showing tag name input" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
+    <p class="text-sm text-gray-500 mt-2">Create a new tag to scope which prompts run on which documents.</p>
+  </div>
+</div>
 
 ---
 
