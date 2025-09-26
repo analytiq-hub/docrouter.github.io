@@ -76,6 +76,8 @@ header_pages:
   - title: "Documentation"
     url: "#"
     children:
+      - title: "Quick Start"
+        url: "/quick-start"
       - title: "REST APIs"
         url: "/rest-api"
       - title: "Python SDK"
