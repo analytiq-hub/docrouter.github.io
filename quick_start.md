@@ -11,10 +11,12 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
     <h2 class="text-2xl font-bold mb-3">Overview</h2>
     <p>DocRouter transforms your document processing workflow through these key steps:</p>
     <ol class="list-decimal pl-5 space-y-2 mt-2">
-      <li><strong>Upload</strong> documents (PDFs, images, or text files)</li>
-      <li><strong>Tag</strong> documents with labels for organization</li>
-      <li><strong>Iterate</strong> on schema and prompt definitions</li>
-      <li><strong>Automate</strong> the process using REST APIs or Python SDK</li>
+      <li><strong>Upload</strong> your first document</li>
+      <li><strong>Configure</strong> a tag, schema, and prompt</li>
+      <li><strong>Run</strong> the prompt on tagged document(s)</li>
+      <li><strong>Prompt Engineering</strong> to improve extraction quality</li>
+      <li><strong>Manual Automation</strong> using bulk actions</li>
+      <li><strong>Full Automation</strong> with REST API or Python SDK</li>
     </ol>
   </div>
   <div class="rounded-xl border border-indigo-200 bg-indigo-50 p-6">
@@ -55,7 +57,7 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
 
 ## Step 1: Upload Your First Document
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
   <div>
     <h3 class="text-xl font-semibold mb-3">Manual Upload via Web Interface</h3>
     <ol class="list-decimal pl-5 space-y-2">
@@ -88,7 +90,7 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
   </div>
 </div>
 
-<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start rounded-xl p-4">
   <div>
     <h3 class="text-xl font-semibold mb-3">Verify Processing in Document List</h3>
     <ol class="list-decimal pl-5 space-y-2">
@@ -103,7 +105,7 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
   </div>
 </div>
 
-<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
   <div>
     <h3 class="text-xl font-semibold mb-3">Review the Document</h3>
     <ol class="list-decimal pl-5 space-y-2">
@@ -123,7 +125,7 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
 
 To prevent running all the prompts on all the documents, we use a tag mechanism to assign which prompts run on which documents.
 
-<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
   <div>
     <h4 class="text-lg font-semibold mb-2">Create a Tag</h4>
     <ol class="list-decimal pl-5 space-y-2">
@@ -139,7 +141,7 @@ To prevent running all the prompts on all the documents, we use a tag mechanism 
   </div>
 </div>
 
-<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start rounded-xl p-4">
   <div>
     <h4 class="text-lg font-semibold mb-2">Create Schema (Drag & Drop)</h4>
     <ol class="list-decimal pl-5 space-y-2">
@@ -156,7 +158,7 @@ To prevent running all the prompts on all the documents, we use a tag mechanism 
   </div>
 </div>
 
-<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
   <div>
     <h4 class="text-lg font-semibold mb-2">Create Schema (JSON Editor)</h4>
     <ol class="list-decimal pl-5 space-y-2">
@@ -202,7 +204,7 @@ If a document is tagged at upload time, all prompts with that tag will be run au
 
 A separate mechanism, using file <strong>Actions</strong>, is available to run a new prompt in bulk on all matching documents that already exist.
 
-<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
   <div>
     <h4 class="text-lg font-semibold mb-2">Assign Tag to Existing Document</h4>
     <ol class="list-decimal pl-5 space-y-2">
@@ -218,7 +220,7 @@ A separate mechanism, using file <strong>Actions</strong>, is available to run a
   </div>
 </div>
 
-<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start rounded-xl p-4">
   <div>
     <h4 class="text-lg font-semibold mb-2">Run Prompt on Document</h4>
     <ol class="list-decimal pl-5 space-y-2">
@@ -266,7 +268,7 @@ Be precise with numbers and dates.
 
 ## Step 5: Manual Automation
 
-<div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
   <div>
     <h4 class="text-lg font-semibold mb-2">Upload pre-tagged documents at scale</h4>
     <ol class="list-decimal pl-5 space-y-2">
@@ -280,8 +282,7 @@ Be precise with numbers and dates.
   </div>
 </div>
 
-<div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-  <div>
+<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start rounded-xl p-4">  <div>
     <h4 class="text-lg font-semibold mb-2">Update prompts and re-run on documents at scale</h4>
     <ol class="list-decimal pl-5 space-y-2">
       <li>Open the <strong>Documents</strong> list and filter by the tag used by your prompt.</li>
