@@ -15,6 +15,38 @@ DocRouter transforms your document processing workflow through these key steps:
 3. **Iterate** on schema and prompt definitions
 4. **Automate** the process using REST APIs or Python SDK
 
+## Sample File, Schema and Prompt
+
+<div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+  <a href="/assets/files/Acord80_Homeowners_App.pdf" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition">
+    <div class="flex items-center gap-3 min-w-0">
+      <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">PDF</span>
+      <div class="min-w-0">
+        <div class="font-medium group-hover:text-blue-700 truncate" title="Acord80_Homeowners_App.pdf">Acord80_Homeowners_App.pdf</div>
+        <div class="text-xs text-gray-500">Sample document</div>
+      </div>
+    </div>
+  </a>
+  <a href="/assets/files/acord_80_homeowners_app_prompt.txt" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition">
+    <div class="flex items-center gap-3 min-w-0">
+      <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">TXT</span>
+      <div class="min-w-0">
+        <div class="font-medium group-hover:text-blue-700 truncate" title="acord_80_homeowners_app_prompt.txt">acord_80_homeowners_app_prompt.txt</div>
+        <div class="text-xs text-gray-500">Prompt to extract fields</div>
+      </div>
+    </div>
+  </a>
+  <a href="/assets/files/acord_80_homeowners_app_schema.json" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition">
+    <div class="flex items-center gap-3 min-w-0">
+      <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">JSON</span>
+      <div class="min-w-0">
+        <div class="font-medium group-hover:text-blue-700 truncate" title="acord_80_homeowners_app_schema.json">acord_80_homeowners_app_schema.json</div>
+        <div class="text-xs text-gray-500">Schema for structured output</div>
+      </div>
+    </div>
+  </a>
+</div>
+
 ---
 
 ## Step 1: Upload Your First Document

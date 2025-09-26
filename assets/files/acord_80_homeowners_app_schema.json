@@ -1,0 +1,927 @@
+{
+  "name": "document_extraction",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "formMetadata": {
+        "type": "object",
+        "description": "Metadata about the form itself",
+        "properties": {
+          "formType": {
+            "type": "string",
+            "description": "Type of form - should be 'ACORD HOMEOWNER APPLICATION'"
+          },
+          "formDate": {
+            "type": "string",
+            "description": "Date the form was filled out in MM/DD/YYYY format"
+          }
+        }
+      },
+      "producer": {
+        "type": "object",
+        "description": "Insurance producer/agent information",
+        "properties": {
+          "phone": {
+            "type": "string",
+            "description": "Producer phone number in X-XXX-XXX-XXXX or XXX-XXX-XXXX format"
+          },
+          "fax": {
+            "type": "string",
+            "description": "Producer fax number in X-XXX-XXX-XXXX or XXX-XXX-XXXX format"
+          }
+        }
+      },
+      "applicant": {
+        "type": "object",
+        "description": "Primary applicant information",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Full name of the applicant"
+          },
+          "mailingAddress": {
+            "type": "object",
+            "description": "Applicant's mailing address",
+            "properties": {
+              "street": {
+                "type": "string",
+                "description": "Street address"
+              },
+              "city": {
+                "type": "string",
+                "description": "City"
+              },
+              "state": {
+                "type": "string",
+                "description": "State abbreviation (e.g., IL, CA)"
+              },
+              "zipCode": {
+                "type": "string",
+                "description": "ZIP code with optional +4 extension"
+              },
+              "county": {
+                "type": "string",
+                "description": "County name"
+              }
+            }
+          },
+          "previousAddress": {
+            "type": "object",
+            "description": "Previous address if less than 3 years at current",
+            "properties": {
+              "street": {
+                "type": "string",
+                "description": "Street address"
+              },
+              "city": {
+                "type": "string",
+                "description": "City"
+              },
+              "state": {
+                "type": "string",
+                "description": "State abbreviation"
+              },
+              "zipCode": {
+                "type": "string",
+                "description": "ZIP code"
+              },
+              "yearsAtAddress": {
+                "type": "integer",
+                "description": "Number of years at previous address"
+              }
+            }
+          },
+          "occupation": {
+            "type": "string",
+            "description": "Applicant's occupation or nature of business if self-employed"
+          },
+          "employer": {
+            "type": "object",
+            "description": "Applicant's employer information",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Employer name"
+              },
+              "address": {
+                "type": "string",
+                "description": "Employer address"
+              },
+              "yearsInCurrentOccupation": {
+                "type": "integer",
+                "description": "Years in current occupation"
+              },
+              "yearsWithCurrentEmployer": {
+                "type": "integer",
+                "description": "Years with current employer"
+              },
+              "yearsWithPriorEmployer": {
+                "type": "integer",
+                "description": "Years with prior employer"
+              }
+            }
+          },
+          "maritalStatus": {
+            "type": "string",
+            "description": "Marital status - M for married, S for single"
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "description": "Date of birth in MM/DD/YYYY format"
+          },
+          "socialSecurityNumber": {
+            "type": "string",
+            "description": "Social Security Number (may be partially masked)"
+          }
+        }
+      },
+      "coApplicant": {
+        "type": "object",
+        "description": "Co-applicant information (same structure as applicant)",
+        "properties": {
+          "occupation": {
+            "type": "string",
+            "description": "Co-applicant's occupation"
+          },
+          "employer": {
+            "type": "object",
+            "description": "Co-applicant's employer information",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Employer name"
+              },
+              "address": {
+                "type": "string",
+                "description": "Employer address"
+              },
+              "yearsInCurrentOccupation": {
+                "type": "integer",
+                "description": "Years in current occupation"
+              },
+              "yearsWithCurrentEmployer": {
+                "type": "integer",
+                "description": "Years with current employer"
+              },
+              "yearsWithPriorEmployer": {
+                "type": "integer",
+                "description": "Years with prior employer"
+              }
+            }
+          },
+          "maritalStatus": {
+            "type": "string",
+            "description": "Marital status - M for married, S for single"
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "description": "Date of birth in MM/DD/YYYY format"
+          },
+          "socialSecurityNumber": {
+            "type": "string",
+            "description": "Social Security Number (may be partially masked)"
+          }
+        }
+      },
+      "policyInformation": {
+        "type": "object",
+        "description": "Policy details",
+        "properties": {
+          "naicCode": {
+            "type": "string",
+            "description": "NAIC code"
+          },
+          "facilityCode": {
+            "type": "string",
+            "description": "Facility code"
+          },
+          "policyNumber": {
+            "type": "string",
+            "description": "Policy number"
+          },
+          "dateAtCurrentResidence": {
+            "type": "string",
+            "description": "Date moved to current residence in MM/DD/YYYY format"
+          },
+          "coPlan": {
+            "type": "string",
+            "description": "Co-plan type"
+          },
+          "code": {
+            "type": "string",
+            "description": "Policy code (e.g., HO3)"
+          },
+          "subcode": {
+            "type": "string",
+            "description": "Policy subcode"
+          },
+          "effectiveDate": {
+            "type": "string",
+            "description": "Policy effective date in MM/DD/YYYY format"
+          },
+          "expirationDate": {
+            "type": "string",
+            "description": "Policy expiration date in MM/DD/YYYY format"
+          },
+          "homePhone": {
+            "type": "string",
+            "description": "Home phone number in X-XXX-XXX-XXXX or XXX-XXX-XXXX format"
+          },
+          "businessPhone": {
+            "type": "string",
+            "description": "Business phone number in X-XXX-XXX-XXXX or XXX-XXX-XXXX format"
+          },
+          "phoneTimePreference": {
+            "type": "string",
+            "description": "Preferred time to call - DAY or EVE"
+          }
+        }
+      },
+      "propertyLocation": {
+        "type": "object",
+        "description": "Property location if different from mailing address",
+        "properties": {
+          "sameAsMailingAddress": {
+            "type": "boolean",
+            "description": "Whether property location is same as mailing address"
+          },
+          "address": {
+            "type": "object",
+            "description": "Property address if different",
+            "properties": {
+              "street": {
+                "type": "string",
+                "description": "Street address"
+              },
+              "city": {
+                "type": "string",
+                "description": "City"
+              },
+              "state": {
+                "type": "string",
+                "description": "State abbreviation"
+              },
+              "zipCode": {
+                "type": "string",
+                "description": "ZIP code"
+              },
+              "county": {
+                "type": "string",
+                "description": "County name"
+              }
+            }
+          }
+        }
+      },
+      "agentInformation": {
+        "type": "object",
+        "description": "Agent/broker information",
+        "properties": {
+          "howLongKnownApplicant": {
+            "type": "string",
+            "description": "How long agent has known the applicant"
+          },
+          "dateLastInspectedProperty": {
+            "type": "string",
+            "description": "Date agent last inspected property in MM/DD/YYYY format"
+          },
+          "agencyCustomerId": {
+            "type": "string",
+            "description": "Agency customer ID"
+          }
+        }
+      },
+      "coverages": {
+        "type": "object",
+        "description": "Coverage limits and liability information",
+        "properties": {
+          "hoForm": {
+            "type": "string",
+            "description": "Homeowner form type (e.g., HO-3)"
+          },
+          "dwelling": {
+            "type": "string",
+            "description": "Dwelling coverage amount"
+          },
+          "otherStructures": {
+            "type": "string",
+            "description": "Other structures coverage amount"
+          },
+          "personalProperty": {
+            "type": "string",
+            "description": "Personal property coverage amount"
+          },
+          "lossOfUse": {
+            "type": "string",
+            "description": "Loss of use coverage amount"
+          },
+          "personalLiability": {
+            "type": "string",
+            "description": "Personal liability coverage amount per occurrence"
+          },
+          "medicalPayments": {
+            "type": "string",
+            "description": "Medical payments coverage amount per person"
+          },
+          "deductibles": {
+            "type": "object",
+            "description": "Deductible amounts",
+            "properties": {
+              "allPeril": {
+                "type": "string",
+                "description": "All peril deductible amount"
+              },
+              "windHail": {
+                "type": "string",
+                "description": "Wind/hail deductible amount"
+              },
+              "theft": {
+                "type": "string",
+                "description": "Theft deductible amount"
+              },
+              "namedHurricane": {
+                "type": "string",
+                "description": "Named hurricane deductible amount or N/A"
+              }
+            }
+          }
+        }
+      },
+      "endorsements": {
+        "type": "object",
+        "description": "Policy endorsements",
+        "properties": {
+          "replacementCostDwelling": {
+            "type": "boolean",
+            "description": "Whether replacement cost coverage for dwelling is included"
+          },
+          "replacementCostContents": {
+            "type": "boolean",
+            "description": "Whether replacement cost coverage for contents is included"
+          },
+          "otherEndorsements": {
+            "type": "array",
+            "description": "List of other endorsements",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "premium": {
+        "type": "object",
+        "description": "Premium information",
+        "properties": {
+          "totalPremium": {
+            "type": "string",
+            "description": "Total premium amount"
+          },
+          "deposit": {
+            "type": "string",
+            "description": "Deposit amount"
+          },
+          "balance": {
+            "type": "string",
+            "description": "Balance amount"
+          }
+        }
+      },
+      "paymentPlan": {
+        "type": "object",
+        "description": "Payment plan details",
+        "properties": {
+          "accountNumber": {
+            "type": "string",
+            "description": "Account number"
+          },
+          "billingMethod": {
+            "type": "string",
+            "description": "Billing method - DIRECT BILL, AGENCY BILL, etc."
+          },
+          "paymentFrequency": {
+            "type": "string",
+            "description": "Payment frequency - MONTHLY, FULL PAY, etc."
+          },
+          "mailPolicyTo": {
+            "type": "string",
+            "description": "Where to mail policy - AGENT, APPLICANT, or OTHER"
+          }
+        }
+      },
+      "propertyDetails": {
+        "type": "object",
+        "description": "Property characteristics and details",
+        "properties": {
+          "structureType": {
+            "type": "string",
+            "description": "Structure type - DWELLING, TOWNHOUSE, CONDO, etc."
+          },
+          "usageType": {
+            "type": "string",
+            "description": "Usage type - PRIMARY, SECONDARY, SEASONAL, VACANT"
+          },
+          "constructionType": {
+            "type": "string",
+            "description": "Construction type - FRAME, MASONRY, MASONRY VENEER, ALUMINUM SIDING, PLASTIC SIDING"
+          },
+          "yearBuilt": {
+            "type": "string",
+            "description": "Year the property was built"
+          },
+          "numberOfRooms": {
+            "type": "integer",
+            "description": "Total number of rooms"
+          },
+          "squareFeet": {
+            "type": "string",
+            "description": "Square footage of the property"
+          },
+          "numberOfApartments": {
+            "type": "string",
+            "description": "Number of apartments if applicable"
+          },
+          "marketValue": {
+            "type": "string",
+            "description": "Market value of the property"
+          },
+          "replacementCost": {
+            "type": "string",
+            "description": "Replacement cost of the property"
+          },
+          "numberOfFamilies": {
+            "type": "integer",
+            "description": "Number of families (1 for single family, 2 for duplex, etc.)"
+          },
+          "farmAcres": {
+            "type": "string",
+            "description": "Number of farm acres if applicable"
+          },
+          "territoryCode": {
+            "type": "string",
+            "description": "Territory code"
+          },
+          "premiumGroup": {
+            "type": "string",
+            "description": "Premium group"
+          },
+          "protectionClass": {
+            "type": "string",
+            "description": "Protection class"
+          },
+          "distanceToHydrant": {
+            "type": "string",
+            "description": "Distance to fire hydrant"
+          },
+          "distanceToFireStation": {
+            "type": "string",
+            "description": "Distance to fire station"
+          }
+        }
+      },
+      "protectionDevices": {
+        "type": "object",
+        "description": "Protection devices installed",
+        "properties": {
+          "smokeDetector": {
+            "type": "boolean",
+            "description": "Whether smoke detectors are installed"
+          },
+          "fireAlarm": {
+            "type": "object",
+            "description": "Fire alarm system details",
+            "properties": {
+              "present": {
+                "type": "boolean",
+                "description": "Whether fire alarm is present"
+              },
+              "type": {
+                "type": "string",
+                "description": "Type of fire alarm - CENTRAL, DIRECT, LOCAL"
+              }
+            }
+          },
+          "burglarAlarm": {
+            "type": "object",
+            "description": "Burglar alarm system details",
+            "properties": {
+              "present": {
+                "type": "boolean",
+                "description": "Whether burglar alarm is present"
+              },
+              "type": {
+                "type": "string",
+                "description": "Type of burglar alarm - CENTRAL, DIRECT, LOCAL"
+              }
+            }
+          },
+          "sprinklerSystem": {
+            "type": "boolean",
+            "description": "Whether sprinkler system is installed"
+          }
+        }
+      },
+      "dwellingLocation": {
+        "type": "object",
+        "description": "Dwelling location characteristics",
+        "properties": {
+          "withinCityLimits": {
+            "type": "boolean",
+            "description": "Whether property is within city limits"
+          },
+          "withinProtectedSuburb": {
+            "type": "boolean",
+            "description": "Whether property is within protected suburb"
+          },
+          "occupiedBy": {
+            "type": "string",
+            "description": "Who occupies the property - OWNER or TENANT"
+          },
+          "occupiedDaily": {
+            "type": "boolean",
+            "description": "Whether property is occupied daily"
+          },
+          "visibleToNeighbors": {
+            "type": "boolean",
+            "description": "Whether property is visible to neighbors"
+          },
+          "housekeepingCondition": {
+            "type": "string",
+            "description": "Housekeeping condition - ABOVE AVERAGE, AVERAGE, BELOW AVERAGE"
+          }
+        }
+      },
+      "heatingSystem": {
+        "type": "object",
+        "description": "Heating system information",
+        "properties": {
+          "heatType": {
+            "type": "string",
+            "description": "Type of heating system"
+          },
+          "fuelType": {
+            "type": "string",
+            "description": "Fuel type for heating"
+          },
+          "oilStorageTankLocation": {
+            "type": "string",
+            "description": "Location of oil storage tank if applicable"
+          }
+        }
+      },
+      "generalInformation": {
+        "type": "object",
+        "description": "General yes/no questions about the property and applicant",
+        "properties": {
+          "farmingOrBusinessOnPremises": {
+            "type": "object",
+            "properties": {
+              "answer": {
+                "type": "boolean",
+                "description": "Whether farming or business is conducted on premises"
+              },
+              "explanation": {
+                "type": "string",
+                "description": "Explanation if yes"
+              }
+            }
+          },
+          "residenceEmployees": {
+            "type": "object",
+            "properties": {
+              "answer": {
+                "type": "boolean",
+                "description": "Whether there are residence employees"
+              },
+              "details": {
+                "type": "string",
+                "description": "Number and type of employees"
+              }
+            }
+          },
+          "floodingOrFireHazard": {
+            "type": "boolean",
+            "description": "Whether there is flooding, brush, forest fire hazard, landslide, etc."
+          },
+          "otherResidenceOwned": {
+            "type": "boolean",
+            "description": "Whether applicant owns other residences"
+          },
+          "otherInsuranceWithCompany": {
+            "type": "object",
+            "properties": {
+              "answer": {
+                "type": "boolean",
+                "description": "Whether applicant has other insurance with this company"
+              },
+              "policyNumbers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "List of other policy numbers"
+              }
+            }
+          },
+          "insuranceTransferredWithinAgency": {
+            "type": "boolean",
+            "description": "Whether insurance has been transferred within agency"
+          },
+          "coverageDeclinedOrCancelled": {
+            "type": "boolean",
+            "description": "Whether coverage has been declined, cancelled or non-renewed in last 3 years"
+          },
+          "buildingUnderRenovation": {
+            "type": "object",
+            "properties": {
+              "answer": {
+                "type": "boolean",
+                "description": "Whether building is undergoing renovation"
+              },
+              "completionDate": {
+                "type": "string",
+                "description": "Estimated completion date"
+              },
+              "value": {
+                "type": "string",
+                "description": "Dollar value of renovation"
+              }
+            }
+          },
+          "foreclosureOrBankruptcy": {
+            "type": "boolean",
+            "description": "Whether applicant had foreclosure, repossession or bankruptcy in past 5 years"
+          },
+          "nearTidalWater": {
+            "type": "boolean",
+            "description": "Whether property is within two miles of tidal water"
+          },
+          "moreThanFiveAcres": {
+            "type": "object",
+            "properties": {
+              "answer": {
+                "type": "boolean",
+                "description": "Whether property is on more than five acres"
+              },
+              "landUse": {
+                "type": "string",
+                "description": "Description of land use if yes"
+              }
+            }
+          },
+          "recreationalVehicles": {
+            "type": "object",
+            "properties": {
+              "answer": {
+                "type": "boolean",
+                "description": "Whether applicant owns recreational vehicles"
+              },
+              "vehicles": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "year": {
+                      "type": "string",
+                      "description": "Year of vehicle"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Type of vehicle"
+                    },
+                    "make": {
+                      "type": "string",
+                      "description": "Make of vehicle"
+                    },
+                    "model": {
+                      "type": "string",
+                      "description": "Model of vehicle"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "earthquakeRetrofitted": {
+            "type": "boolean",
+            "description": "Whether building is retrofitted for earthquake"
+          },
+          "arsonConviction": {
+            "type": "boolean",
+            "description": "Whether any applicant has been convicted of arson in past 5 years (10 years in RI)"
+          },
+          "managerOnPremises": {
+            "type": "boolean",
+            "description": "For renters/condos: whether there is a manager on premises"
+          },
+          "securityAttendant": {
+            "type": "boolean",
+            "description": "For renters/condos: whether there is a security attendant"
+          },
+          "buildingEntranceLocked": {
+            "type": "boolean",
+            "description": "For renters/condos: whether building entrance is locked"
+          },
+          "uncorrectedCodeViolations": {
+            "type": "boolean",
+            "description": "Whether there are uncorrected fire or building code violations"
+          },
+          "animalsOrExoticPets": {
+            "type": "object",
+            "properties": {
+              "answer": {
+                "type": "boolean",
+                "description": "Whether there are animals or exotic pets on premises"
+              },
+              "details": {
+                "type": "string",
+                "description": "Breed and bite history"
+              }
+            }
+          },
+          "houseForSale": {
+            "type": "boolean",
+            "description": "Whether house is for sale"
+          },
+          "nearCommercialProperty": {
+            "type": "boolean",
+            "description": "Whether property is within 300 ft of commercial or non-residential property"
+          },
+          "trampolineOnPremises": {
+            "type": "boolean",
+            "description": "Whether there is a trampoline on premises"
+          },
+          "structureConverted": {
+            "type": "boolean",
+            "description": "Whether structure was originally built for other than private residence and converted"
+          },
+          "leadPaintHazard": {
+            "type": "boolean",
+            "description": "Whether there is any lead paint hazard"
+          },
+          "fuelOilTankInsurance": {
+            "type": "object",
+            "properties": {
+              "answer": {
+                "type": "boolean",
+                "description": "Whether other insurance has been obtained for fuel oil tank"
+              },
+              "details": {
+                "type": "string",
+                "description": "First party and third party limits"
+              }
+            }
+          }
+        }
+      },
+      "lossHistory": {
+        "type": "object",
+        "description": "Loss history information",
+        "properties": {
+          "anyLosses": {
+            "type": "boolean",
+            "description": "Whether there were any losses in the last 3 years"
+          },
+          "losses": {
+            "type": "array",
+            "description": "List of losses",
+            "items": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string",
+                  "description": "Date of loss"
+                },
+                "type": {
+                  "type": "string",
+                  "description": "Type of loss"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "Description of loss"
+                },
+                "amount": {
+                  "type": "string",
+                  "description": "Loss amount"
+                }
+              }
+            }
+          },
+          "applicantInitials": {
+            "type": "string",
+            "description": "Applicant's initials confirming loss history"
+          }
+        }
+      },
+      "priorCoverage": {
+        "type": "object",
+        "description": "Prior insurance coverage information",
+        "properties": {
+          "priorCarrier": {
+            "type": "string",
+            "description": "Name of prior insurance carrier"
+          },
+          "priorPolicyNumber": {
+            "type": "string",
+            "description": "Prior policy number"
+          },
+          "expirationDate": {
+            "type": "string",
+            "description": "Expiration date of prior policy in MM/DD/YYYY format"
+          },
+          "riskNewToAgency": {
+            "type": "boolean",
+            "description": "Whether this is a new risk to the agency"
+          }
+        }
+      },
+      "additionalInterests": {
+        "type": "array",
+        "description": "Additional interest parties (mortgagees, additional insureds)",
+        "items": {
+          "type": "object",
+          "properties": {
+            "interestNumber": {
+              "type": "integer",
+              "description": "Interest number"
+            },
+            "type": {
+              "type": "string",
+              "description": "Type of interest - MORTGAGEE or ADDITIONAL INTEREST"
+            },
+            "name": {
+              "type": "string",
+              "description": "Name of interested party"
+            },
+            "address": {
+              "type": "string",
+              "description": "Address of interested party"
+            },
+            "loanNumber": {
+              "type": "string",
+              "description": "Loan number if applicable"
+            }
+          }
+        }
+      },
+      "remarks": {
+        "type": "string",
+        "description": "Additional remarks or notes"
+      },
+      "attachments": {
+        "type": "array",
+        "description": "List of attachments included with application",
+        "items": {
+          "type": "string",
+          "description": "Type of attachment - STATE SUPPLEMENT, PROTECTION DEVICE CERTIFICATE, INLAND MARINE APPLICATION, etc."
+        }
+      },
+      "binder": {
+        "type": "object",
+        "description": "Insurance binder information if applicable",
+        "properties": {
+          "coverageIsBound": {
+            "type": "boolean",
+            "description": "Whether coverage is bound"
+          },
+          "effectiveDate": {
+            "type": "string",
+            "description": "Binder effective date"
+          },
+          "effectiveTime": {
+            "type": "string",
+            "description": "Binder effective time - 12:01 AM or NOON"
+          },
+          "expirationDate": {
+            "type": "string",
+            "description": "Binder expiration date"
+          }
+        }
+      },
+      "signatures": {
+        "type": "object",
+        "description": "Signature information",
+        "properties": {
+          "applicantSignatureDate": {
+            "type": "string",
+            "description": "Date of applicant's signature"
+          },
+          "producerSignatureDate": {
+            "type": "string",
+            "description": "Date of producer's signature"
+          },
+          "privacyNoticeGiven": {
+            "type": "boolean",
+            "description": "Whether copy of notice of information practices was given to applicant"
+          }
+        }
+      }
+    },
+    "required": [
+      "applicant",
+      "propertyDetails",
+      "coverages"
+    ],
+    "additionalProperties": false
+  },
+  "strict": true
+}
