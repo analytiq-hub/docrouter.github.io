@@ -266,12 +266,19 @@ Be precise with numbers and dates.
 
 ## Step 5: Manual Automation
 
-### Upload pre-tagged documents at scale
-
-Once satisfied with the quality of the prompt and the extractions, scale up the document processing by:
-
-1. Setting the document tag at upload time
-2. Prompts matching the tag will run automatically
+<div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+  <div>
+    <h4 class="text-lg font-semibold mb-2">Upload pre-tagged documents at scale</h4>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li>Setting the document tag at upload time</li>
+      <li>Prompts matching the tag will run automatically.</li>
+    </ol>
+  </div>
+  <div class="max-h-[520px] overflow-auto">
+    <img src="/assets/images/upload_files_bulk.png" alt="Bulk upload with tags assigned" class="w-full h-auto rounded-lg shadow-md ring-1 ring-gray-200 object-contain" />
+    <p class="text-sm text-gray-500 mt-2">Upload many files at once and apply tags so prompts run automatically.</p>
+  </div>
+</div>
 
 <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
   <div>
