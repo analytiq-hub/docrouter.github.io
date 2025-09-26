@@ -177,15 +177,14 @@ To prevent running all the prompts on all the documents, we use a tag mechanism 
 ---
 
 
-
-## Step 3: Define Schema and Prompts
-
 <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
   <div>
     <h4 class="text-lg font-semibold mb-2">Create a Prompt</h4>
     <ol class="list-decimal pl-5 space-y-2">
       <li>Go to <strong>Prompts</strong> in the left sidebar.</li>
       <li>Create a new prompt.</li>
+      <li>Paste the contents of the downloaded prompt file
+        (<a href="/assets/files/acord_80_homeowners_app_prompt.txt" class="text-blue-600 underline">acord_80_homeowners_app_prompt.txt</a>).</li>
       <li>Assign the <strong>schema</strong> and <strong>tag</strong> you created so it runs only on the intended documents.</li>
       <li>Select one of the <strong>language models</strong> available. <strong>Gemini 2.5 Flash</strong> and <strong>GPT 4.0 Mini</strong> are good choices for simple document layouts.</li>
     </ol>
@@ -195,6 +194,33 @@ To prevent running all the prompts on all the documents, we use a tag mechanism 
     <p class="text-sm text-gray-500 mt-2">Select or create a prompt and align it with your tag.</p>
   </div>
 </div>
+
+
+## Step 4: Run The Prompt On The Tagged Document(s)
+
+If a document is tagged at upload time, all prompts with that tag will be run automatically. However, if a prompt is added, updated or tagged after the document has been uploaded, the prompt will need to be manually run on the matching documents.
+
+A separate mechanism, using file <strong>Actions</strong>, is available to run a new prompt in bulk on all matching documents that already exist.
+
+<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+  <div>
+    <h4 class="text-lg font-semibold mb-2">Assign Tag to Existing Document</h4>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li>Open the <strong>Documents</strong> list.</li>
+      <li>Click the document three dots action menu, and select <strong>Edit Tags & Metadata</strong>.</li>
+      <li>Add the tag linked to your prompt and save.</li>
+    </ol>
+    Tags can be assigned in bulk, and LLMs can be run in bulk using the <strong>Actions</strong> button.
+  </div>
+  <div class="max-h-[520px] overflow-auto">
+    <img src="/assets/images/assign_tag_to_doc.png" alt="Assign tag to document UI" class="w-full h-auto rounded-lg shadow-md ring-1 ring-gray-200 object-contain" />
+    <p class="text-sm text-gray-500 mt-2">Tag existing documents to trigger the correct prompts.</p>
+  </div>
+</div>
+
+---
+
+
 
 
 ### Prompt Engineering
