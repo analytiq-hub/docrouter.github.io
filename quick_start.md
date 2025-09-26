@@ -29,20 +29,20 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
           </div>
         </div>
       </a>
-      <a href="/assets/files/acord_80_homeowners_app_prompt.txt" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
+      <a href="/assets/files/acord_clearance_search_prompt.txt" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
         <div class="flex items-center gap-3 min-w-0">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">TXT</span>
           <div class="min-w-0">
-            <div class="font-medium group-hover:text-blue-700 truncate" title="acord_80_homeowners_app_prompt.txt">acord_80_homeowners_app_prompt.txt</div>
+            <div class="font-medium group-hover:text-blue-700 truncate" title="acord_clearance_search_prompt.txt">acord_clearance_search_prompt.txt</div>
             <div class="text-xs text-gray-500">Prompt to extract fields</div>
           </div>
         </div>
       </a>
-      <a href="/assets/files/acord_80_homeowners_app_schema.json" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
+      <a href="/assets/files/acord_clearance_search_schema.json" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
         <div class="flex items-center gap-3 min-w-0">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">JSON</span>
           <div class="min-w-0">
-            <div class="font-medium group-hover:text-blue-700 truncate" title="acord_80_homeowners_app_schema.json">acord_80_homeowners_app_schema.json</div>
+            <div class="font-medium group-hover:text-blue-700 truncate" title="acord_clearance_search_schema.json">acord_clearance_search_schema.json</div>
             <div class="text-xs text-gray-500">Schema for structured output</div>
           </div>
         </div>
@@ -162,7 +162,7 @@ To prevent running all the prompts on all the documents, we use a tag mechanism 
     <ol class="list-decimal pl-5 space-y-2">
       <li>Open the <strong>JSON</strong> tab in the schema editor.</li>
       <li>Paste the contents of the downloaded schema file
-        (<a href="/assets/files/acord_80_homeowners_app_schema.json" class="text-blue-600 underline">acord_80_homeowners_app_schema.json</a>).
+        (<a href="/assets/files/acord_clearance_search_schema.json" class="text-blue-600 underline">acord_clearance_search_schema.json</a>).
       </li>
       <li>Click <strong>Save Schema</strong>.</li>
     </ol>
@@ -184,7 +184,7 @@ To prevent running all the prompts on all the documents, we use a tag mechanism 
       <li>Go to <strong>Prompts</strong> in the left sidebar.</li>
       <li>Create a new prompt.</li>
       <li>Paste the contents of the downloaded prompt file
-        (<a href="/assets/files/acord_80_homeowners_app_prompt.txt" class="text-blue-600 underline">acord_80_homeowners_app_prompt.txt</a>).</li>
+        (<a href="/assets/files/acord_clearance_search_prompt.txt" class="text-blue-600 underline">acord_clearance_search_prompt.txt</a>).</li>
       <li>Assign the <strong>schema</strong> and <strong>tag</strong> you created so it runs only on the intended documents.</li>
       <li>Select one of the <strong>language models</strong> available. <strong>Gemini 2.5 Flash</strong> and <strong>GPT 4.0 Mini</strong> are good choices for simple document layouts.</li>
     </ol>

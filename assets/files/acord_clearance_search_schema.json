@@ -1,0 +1,226 @@
+{
+    "type": "json_schema",
+    "json_schema": {
+      "name": "document_extraction",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "document_type": {
+            "type": "string",
+            "description": "Type of insurance application. One of: personal, commercial, unknown. Do not leave empty."
+          },
+          "clearance_search_fields": {
+            "type": "object",
+            "properties": {
+              "insured_name": {
+                "type": "object",
+                "properties": {
+                  "full_name": {
+                    "type": "string",
+                    "description": "Complete name as it appears in the document"
+                  },
+                  "first_name": {
+                    "type": "string",
+                    "description": "First name if individual"
+                  },
+                  "middle_name": {
+                    "type": "string",
+                    "description": "Middle name or initial if present"
+                  },
+                  "last_name": {
+                    "type": "string",
+                    "description": "Last name if individual"
+                  },
+                  "entity_type": {
+                    "type": "string",
+                    "description": "Type of entity"
+                  },
+                  "confidence": {
+                    "type": "integer",
+                    "description": "Confidence score for this field, on a scale from 0 to 10."
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "full_name",
+                  "first_name",
+                  "middle_name",
+                  "last_name",
+                  "entity_type",
+                  "confidence"
+                ],
+                "description": "Name of the applicant/insured (may be individual, trust, or business)"
+              },
+              "mailing_address": {
+                "type": "object",
+                "properties": {
+                  "street_address": {
+                    "type": "string",
+                    "description": "Street number and name"
+                  },
+                  "street_address_2": {
+                    "type": "string",
+                    "description": "Apartment, suite, unit, etc."
+                  },
+                  "city": {
+                    "type": "string",
+                    "description": "City name"
+                  },
+                  "state": {
+                    "type": "string",
+                    "description": "State abbreviation or full name"
+                  },
+                  "zip_code": {
+                    "type": "string",
+                    "description": "ZIP code (5 or 9 digits)"
+                  },
+                  "confidence": {
+                    "type": "integer",
+                    "description": "Confidence score for this field, on a scale from 0 to 10."
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "street_address",
+                  "street_address_2",
+                  "city",
+                  "state",
+                  "zip_code",
+                  "confidence"
+                ],
+                "description": "Mailing address of the applicant/insured (not property address)"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "insured_name",
+              "mailing_address"
+            ],
+            "description": "Primary fields required for clearance search"
+          },
+          "additional_clearance_fields": {
+            "type": "object",
+            "properties": {
+              "date_of_birth": {
+                "type": "string",
+                "description": "Date of birth if individual."
+              },
+              "occupation": {
+                "type": "string",
+                "description": "Occupation of insured if provided."
+              },
+              "phone_number": {
+                "type": "string",
+                "description": "Primary phone number"
+              },
+              "email": {
+                "type": "string",
+                "description": "Email address if provided"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "date_of_birth",
+              "occupation",
+              "phone_number",
+              "email"
+            ],
+            "description": "Additional fields that may be needed for clearance"
+          },
+          "document_quality_indicators": {
+            "type": "object",
+            "properties": {
+              "is_handwritten": {
+                "type": "boolean",
+                "description": "Contains handwritten portions"
+              },
+              "is_scanned": {
+                "type": "boolean",
+                "description": "Appears to be a scanned document"
+              },
+              "has_corrections": {
+                "type": "boolean",
+                "description": "Contains crossed out or corrected information"
+              },
+              "quality_issues": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "List of quality issues encountered"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "is_handwritten",
+              "is_scanned",
+              "has_corrections",
+              "quality_issues"
+            ],
+            "description": "Indicators of document quality and extraction challenges"
+          },
+          "human_review_guidance": {
+            "type": "object",
+            "properties": {
+              "review_required": {
+                "type": "boolean",
+                "description": "Whether human review is required"
+              },
+              "confidence_score": {
+                "type": "integer",
+                "description": "Overall confidence score for the extraction, on a scale from 0 to 10."
+              },
+              "extraction_warnings": {
+                "type": "string",
+                "description": "List of warnings or issues during extraction"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "review_required",
+              "confidence_score",
+              "extraction_warnings"
+            ],
+            "description": "Specific guidance for human review if needed"
+          },
+          "review_reasons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "field": {
+                  "type": "string",
+                  "description": "Field that needs to be reviewed"
+                },
+                "reason": {
+                  "type": "string",
+                  "description": "Reason to review"
+                },
+                "suggested_action": {
+                  "type": "string",
+                  "description": "Suggested corrective actions"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "field",
+                "reason",
+                "suggested_action"
+              ]
+            },
+            "description": "Reasons why review is needed"
+          }
+        },
+        "required": [
+          "document_type",
+          "clearance_search_fields",
+          "additional_clearance_fields",
+          "document_quality_indicators",
+          "human_review_guidance",
+          "review_reasons"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    }
+  }
