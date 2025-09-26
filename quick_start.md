@@ -139,7 +139,44 @@ To prevent running all the prompts on all the documents, we use a tag mechanism 
   </div>
 </div>
 
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+  <div>
+    <h4 class="text-lg font-semibold mb-2">Create Schema (Drag & Drop)</h4>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li>Go to <strong>Schemas</strong> in the left sidebar.</li>
+      <li>Click <strong>Create Schema</strong>.</li>
+      <li>Set schema name</li>
+      <li>Add schema elements.</li>
+    </ol>
+    Schema elements can be of <strong>String, Integer, Float, Boolean, Object, Array</strong> type. Each element has an optional description, aiding the LLM detection. <strong>Object</strong> and <strong>Array</strong> can have embedded elements.
+  </div>
+  <div>
+    <img src="/assets/images/create_schema1.png" alt="Create Schema screen showing drag-and-drop area" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
+    <p class="text-sm text-gray-500 mt-2">Use drag-and-drop to start a schema from a sample document.</p>
+  </div>
+</div>
+
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+  <div>
+    <h4 class="text-lg font-semibold mb-2">Create Schema (JSON Editor)</h4>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li>Open the <strong>JSON</strong> tab in the schema editor.</li>
+      <li>Paste the contents of the downloaded schema file
+        (<a href="/assets/files/acord_80_homeowners_app_schema.json" class="text-blue-600 underline">acord_80_homeowners_app_schema.json</a>).
+      </li>
+      <li>Click <strong>Save Schema</strong>.</li>
+    </ol>
+  </div>
+  <div>
+    <img src="/assets/images/create_schema2.png" alt="Schema JSON editor with pasted schema" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
+    <p class="text-sm text-gray-500 mt-2">Paste the JSON schema and save.</p>
+  </div>
+</div>
+
+
 ---
+
+
 
 ## Step 3: Define Schema and Prompts
 
