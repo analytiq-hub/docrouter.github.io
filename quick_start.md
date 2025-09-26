@@ -353,73 +353,14 @@ curl -X GET https://api.docrouter.ai/v0/orgs/YOUR_ORG_ID/llm/results/DOCUMENT_ID
 - `llm_completed`: All processing complete, results available
 - `llm_failed`: Processing failed
 
+For more details, see - [REST API Documentation](/rest-api).
+
 ### Python SDK Automation
 
-Complete automation workflow:
-
-```python
-from docrouter import DocRouter
-import json
-
-client = DocRouter(api_key="YOUR_API_KEY")
-
-class InvoiceProcessor:
-    def __init__(self):
-        self.schema = {...}  # Your invoice schema
-        self.prompt = "..."  # Your extraction prompt
-
-    def process_invoice(self, file_path):
-        # Upload document
-        document = client.documents.upload(
-            file_path=file_path,
-            tags=["invoice", "auto-processed"]
-        )
-
-        # Extract data
-        result = client.documents.extract(
-            document_id=document.id,
-            schema=self.schema,
-            prompt=self.prompt
-        )
-
-        # Post-process and validate
-        return self.validate_and_format(result.data)
-
-    def validate_and_format(self, data):
-        # Add custom validation logic
-        if not data.get('invoice_number'):
-            raise ValueError("Invoice number is required")
-
-        return {
-            'document_id': data['document_id'],
-            'extracted_data': data,
-            'processed_at': datetime.now().isoformat()
-        }
-
-# Use the processor
-processor = InvoiceProcessor()
-result = processor.process_invoice("new_invoice.pdf")
-print(json.dumps(result, indent=2))
-```
+Refer to the [Python SDK Reference](/python-sdk).
 
 ---
 
-## Next Steps
-
-1. **Explore Advanced Features**
-   - [REST API Documentation](/rest-api)
-   - [Python SDK Reference](/python-sdk)
-   - [Architecture Overview](/architecture)
-
-2. **Scale Your Solution**
-   - Batch processing for high volumes
-   - Multi-tenant configurations
-
----
-
-## Support
-
-- **Documentation**: Comprehensive guides and API references
-- **Support**: Contact our technical support team
+For **Support**: Contact our technical support team.
 
 Ready to get started? [Launch DocRouter Application](https://app.docrouter.ai) or explore our [REST API](/rest-api) and [Python SDK](/python-sdk) documentation.
