@@ -73,7 +73,7 @@ header_pages:
         url: "/solutions/private-equity"
       - title: "Supply Chain"
         url: "/solutions/supply-chain"
-  - title: "Documentation"
+  - title: "Docs"
     url: "#"
     children:
       - title: "Quick Start Guide"
@@ -109,22 +109,49 @@ header_pages:
 
 # Footer sitemap - simplified navigation for footer display
 site_map:
-  - title: "Services"
+  - title: "Solutions"
     links:
-      - title: "Case Studies"
-        url: "/case-studies"
-      - title: "Technology"
-        url: "/technology"
-  - title: "Company"
+      - title: "Overview"
+        url: "/solutions"
+      - title: "Banking"
+        url: "/solutions/banking"
+      - title: "Clinical Trials"
+        url: "/solutions/clinical-trials"
+      - title: "Durable Medical Equipment"
+        url: "/solutions/dme"
+      - title: "Insurance"
+        url: "/solutions/insurance"
+      - title: "Private Equity"
+        url: "/solutions/private-equity"
+      - title: "Supply Chain"
+        url: "/solutions/supply-chain"
+  - title: "Docs"
     links:
-      - title: "About"
-        url: "/about"
+      - title: "Quick Start Guide"
+        url: "/quick-start"
+      - title: "REST APIs"
+        url: "/rest-api"
+      - title: "Python SDK"
+        url: "/python-sdk"
+      - title: "MCP Server"
+        url: "/mcp"
+      - title: "Architecture"
+        url: "/architecture"
+      - title: "Open Source"
+        url: "/open-source"
   - title: "Resources"
     links:
       - title: "Blog"
         url: "/blog"
       - title: "Talks"
         url: "/talks"
+  - title: "Company"
+    links:
+      - title: "Team"
+        url: "/team"
+      - title: "Contact"
+        url: "/contact"
+
 
 # Build settings
 # theme: minima  # Removed - using Tailwind CSS instead
