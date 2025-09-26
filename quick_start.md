@@ -196,7 +196,7 @@ To prevent running all the prompts on all the documents, we use a tag mechanism 
 </div>
 
 
-## Step 4: Run The Prompt On The Tagged Document(s)
+## Step 3: Run The Prompt On The Tagged Document(s)
 
 If a document is tagged at upload time, all prompts with that tag will be run automatically. However, if a prompt is added, updated or tagged after the document has been uploaded, the prompt will need to be manually run on the matching documents.
 
@@ -239,9 +239,7 @@ A separate mechanism, using file <strong>Actions</strong>, is available to run a
 ---
 
 
-
-
-### Prompt Engineering
+## Step 4. Prompt Engineering
 
 Craft effective prompts for data extraction:
 
@@ -266,25 +264,30 @@ Be precise with numbers and dates.
 
 ---
 
-## Step 4: Manual Automation
+## Step 5: Manual Automation
 
-### Batch Processing
+### Upload pre-tagged documents at scale
 
-Process multiple documents with the same schema:
+Once satisfied with the quality of the prompt and the extractions, scale up the document processing by:
 
-```python
-# Process multiple documents
-documents = client.documents.list(tags=["invoice"])
+1. Setting the document tag at upload time
+2. Prompts matching the tag will run automatically
 
-results = []
-for doc in documents:
-    result = client.documents.extract(
-        document_id=doc.id,
-        schema=invoice_schema,
-        prompt=extraction_prompt
-    )
-    results.append(result)
-```
+<div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+  <div>
+    <h4 class="text-lg font-semibold mb-2">Update prompts and re-run on documents at scale</h4>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li>Open the <strong>Documents</strong> list and filter by the tag used by your prompt.</li>
+      <li>Click <strong>Actions</strong> → <strong>Run Prompt</strong>.</li>
+      <li>Select the updated prompt and confirm to run across all filtered documents.</li>
+      <li>Monitor progress; re-run as you iterate on prompt or schema.</li>
+    </ol>
+  </div>
+  <div class="max-h-[520px] overflow-auto">
+    <img src="/assets/images/bulk_actions.png" alt="Bulk actions to run prompt on many documents" class="w-full h-auto rounded-lg shadow-md ring-1 ring-gray-200 object-contain" />
+    <p class="text-sm text-gray-500 mt-2">Use bulk Actions to apply an updated prompt to many documents at once.</p>
+  </div>
+</div>
 
 ### Workflow Automation
 
