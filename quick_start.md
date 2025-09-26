@@ -67,6 +67,20 @@ DocRouter transforms your document processing workflow through these key steps:
   </div>
 </div>
 
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+  <div>
+    <h3 class="text-xl font-semibold mb-3">Review the Document</h3>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li>On the document page, use the viewer to page through the file.</li>
+      <li>Initially, only a Document Summary is extracted.</li>
+    </ol>
+  </div>
+  <div>
+    <img src="/assets/images/document_show1.png" alt="Document viewer screen for reviewing extracted data" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
+    <p class="text-sm text-gray-500 mt-2">Document review: navigate pages and inspect extracted fields.</p>
+  </div>
+</div>
+
 ---
 
 ## Step 2: Tag Your Documents
