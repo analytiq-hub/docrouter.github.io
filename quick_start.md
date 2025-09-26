@@ -296,97 +296,258 @@ Be precise with numbers and dates.
   </div>
 </div>
 
-### Workflow Automation
-
-Create reusable workflows:
-
-```python
-# Define a workflow
-workflow = client.workflows.create(
-    name="Invoice Processing",
-    schema=invoice_schema,
-    prompt=extraction_prompt,
-    tags=["invoice"],
-    output_format="json"
-)
-
-# Apply workflow to documents
-for doc in new_invoices:
-    client.workflows.apply(
-        workflow_id=workflow.id,
-        document_id=doc.id
-    )
-```
-
 ---
 
-## Step 5: Full Automation with APIs
+## Step 6: Full Automation with APIs
 
 ### REST API Automation
 
-Set up automated processing endpoints:
+DocRouter provides REST endpoints for automated document processing. Here are the key operations:
+
+#### 1. Upload Documents with Tags
 
 ```bash
-# Create processing pipeline
-curl -X POST https://api.docrouter.ai/v1/pipelines \
+# Upload documents with tags for automatic processing
+curl -X POST https://api.docrouter.ai/v0/orgs/YOUR_ORG_ID/documents \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "name": "Invoice Pipeline",
-    "triggers": ["upload", "tag:invoice"],
-    "schema": {...},
-    "prompt": "Extract invoice data...",
-    "webhook_url": "https://yourapp.com/webhook"
+    "documents": [{
+      "name": "invoice.pdf",
+      "content": "BASE64_ENCODED_CONTENT",
+      "tag_ids": ["invoice_tag_id"],
+      "metadata": {"source": "api_upload"}
+    }]
   }'
 ```
 
+#### 2. List Documents and Check Status
+
+```bash
+# List documents with filtering
+curl -X GET "https://api.docrouter.ai/v0/orgs/YOUR_ORG_ID/documents?skip=0&limit=10" \
+  -H "Authorization: Bearer YOUR_API_KEY"
+
+# Get specific document details
+curl -X GET https://api.docrouter.ai/v0/orgs/YOUR_ORG_ID/documents/DOCUMENT_ID \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+#### 3. Retrieve Extraction Results
+
+```bash
+# Get LLM extraction results (wait for state: "llm_completed")
+curl -X GET https://api.docrouter.ai/v0/orgs/YOUR_ORG_ID/llm/result/DOCUMENT_ID \
+  -H "Authorization: Bearer YOUR_API_KEY"
+
+# Download all results for a document
+curl -X GET https://api.docrouter.ai/v0/orgs/YOUR_ORG_ID/llm/results/DOCUMENT_ID/download \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+**Document Processing States:**
+- `uploaded`: Document uploaded, OCR pending
+- `ocr_processing`: OCR in progress
+- `ocr_completed`: OCR complete, LLM processing pending
+- `llm_processing`: LLM extraction in progress
+- `llm_completed`: All processing complete, results available
+- `llm_failed`: Processing failed
+
 ### Python SDK Automation
 
-Complete automation workflow:
+Complete automation workflow using the DocRouter Python SDK:
 
 ```python
-from docrouter import DocRouter
+import base64
+import time
 import json
-
-client = DocRouter(api_key="YOUR_API_KEY")
+from datetime import datetime
+from docrouter import DocRouterClient
 
 class InvoiceProcessor:
-    def __init__(self):
-        self.schema = {...}  # Your invoice schema
-        self.prompt = "..."  # Your extraction prompt
+    def __init__(self, api_key, organization_id):
+        self.client = DocRouterClient(api_key=api_key)
+        self.organization_id = organization_id
+        self.invoice_tag_id = None  # Set after creating tag
+
+    def setup_processing_pipeline(self):
+        """Set up tags, schema, and prompts for invoice processing"""
+        # Create tag for invoice documents
+        tag_response = self.client.tags.create(
+            organization_id=self.organization_id,
+            name="invoice",
+            description="Invoice documents for automated processing"
+        )
+        self.invoice_tag_id = tag_response.id
+
+        # Create schema for structured extraction
+        schema = {
+            "type": "object",
+            "properties": {
+                "invoice_number": {"type": "string", "description": "Invoice number"},
+                "invoice_date": {"type": "string", "format": "date", "description": "Invoice date"},
+                "vendor_name": {"type": "string", "description": "Vendor/supplier name"},
+                "total_amount": {"type": "number", "description": "Total amount"},
+                "line_items": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "description": {"type": "string"},
+                            "quantity": {"type": "number"},
+                            "unit_price": {"type": "number"},
+                            "total": {"type": "number"}
+                        }
+                    }
+                }
+            }
+        }
+
+        schema_response = self.client.schemas.create(
+            organization_id=self.organization_id,
+            name="Invoice Extraction Schema",
+            schema=schema
+        )
+
+        # Create prompt for extraction
+        prompt_text = """Extract the following information from this invoice:
+        - Invoice number
+        - Invoice date (format: YYYY-MM-DD)
+        - Vendor/supplier name
+        - Total amount
+        - All line items with descriptions, quantities, unit prices, and totals
+
+        Format the response as JSON matching the provided schema.
+        Be precise with numbers and dates."""
+
+        prompt_response = self.client.prompts.create(
+            organization_id=self.organization_id,
+            name="Invoice Data Extraction",
+            text=prompt_text,
+            schema_id=schema_response.id,
+            tag_ids=[self.invoice_tag_id],
+            model="gemini-2.0-flash-exp"
+        )
+
+        return {
+            'tag_id': self.invoice_tag_id,
+            'schema_id': schema_response.id,
+            'prompt_id': prompt_response.id
+        }
+
+    def upload_document_with_tags(self, file_path):
+        """Upload document with invoice tag for automatic processing"""
+        # Read and encode file
+        with open(file_path, 'rb') as f:
+            file_content = base64.b64encode(f.read()).decode('utf-8')
+
+        # Upload with tags
+        upload_response = self.client.documents.upload(
+            organization_id=self.organization_id,
+            documents=[{
+                "name": file_path.split('/')[-1],
+                "content": file_content,
+                "tag_ids": [self.invoice_tag_id],
+                "metadata": {"source": "api_automation", "processed_at": datetime.now().isoformat()}
+            }]
+        )
+
+        return upload_response.documents[0].document_id
+
+    def wait_for_processing_completion(self, document_id, timeout=300):
+        """Wait for document processing to complete"""
+        start_time = time.time()
+
+        while time.time() - start_time < timeout:
+            # Check document status
+            document = self.client.documents.get(
+                organization_id=self.organization_id,
+                document_id=document_id
+            )
+
+            print(f"Document state: {document.state}")
+
+            if document.state == "llm_completed":
+                return True
+            elif document.state in ["ocr_failed", "llm_failed"]:
+                raise Exception(f"Document processing failed with state: {document.state}")
+
+            time.sleep(5)  # Wait 5 seconds before checking again
+
+        raise Exception(f"Processing timeout after {timeout} seconds")
+
+    def get_extraction_results(self, document_id):
+        """Retrieve extraction results for processed document"""
+        try:
+            # Get LLM results
+            results = self.client.llm.get_results(
+                organization_id=self.organization_id,
+                document_id=document_id
+            )
+
+            return results.extracted_data
+        except Exception as e:
+            print(f"Error retrieving results: {e}")
+            return None
 
     def process_invoice(self, file_path):
-        # Upload document
-        document = client.documents.upload(
-            file_path=file_path,
-            tags=["invoice", "auto-processed"]
-        )
+        """Complete invoice processing workflow"""
+        try:
+            # 1. Upload document with tags
+            print("Uploading document...")
+            document_id = self.upload_document_with_tags(file_path)
+            print(f"Document uploaded with ID: {document_id}")
 
-        # Extract data
-        result = client.documents.extract(
-            document_id=document.id,
-            schema=self.schema,
-            prompt=self.prompt
-        )
+            # 2. Wait for processing to complete
+            print("Waiting for processing to complete...")
+            self.wait_for_processing_completion(document_id)
 
-        # Post-process and validate
-        return self.validate_and_format(result.data)
+            # 3. Retrieve results
+            print("Retrieving extraction results...")
+            extracted_data = self.get_extraction_results(document_id)
 
-    def validate_and_format(self, data):
-        # Add custom validation logic
-        if not data.get('invoice_number'):
+            # 4. Validate and format results
+            return self.validate_and_format(document_id, extracted_data)
+
+        except Exception as e:
+            print(f"Processing failed: {e}")
+            return None
+
+    def validate_and_format(self, document_id, data):
+        """Validate and format extracted data"""
+        if not data or not data.get('invoice_number'):
             raise ValueError("Invoice number is required")
 
         return {
-            'document_id': data['document_id'],
+            'document_id': document_id,
+            'invoice_number': data.get('invoice_number'),
+            'vendor_name': data.get('vendor_name'),
+            'total_amount': data.get('total_amount'),
+            'invoice_date': data.get('invoice_date'),
+            'line_items_count': len(data.get('line_items', [])),
             'extracted_data': data,
             'processed_at': datetime.now().isoformat()
         }
 
-# Use the processor
-processor = InvoiceProcessor()
-result = processor.process_invoice("new_invoice.pdf")
-print(json.dumps(result, indent=2))
+# Usage example
+if __name__ == "__main__":
+    # Initialize processor
+    processor = InvoiceProcessor(
+        api_key="your_api_key_here",
+        organization_id="your_org_id_here"
+    )
+
+    # Set up processing pipeline (run once)
+    # pipeline_config = processor.setup_processing_pipeline()
+    # print("Pipeline configured:", pipeline_config)
+
+    # Process invoice
+    result = processor.process_invoice("path/to/invoice.pdf")
+    if result:
+        print("Processing completed successfully:")
+        print(json.dumps(result, indent=2))
+    else:
+        print("Processing failed")
 ```
 
 ### Webhook Integration
