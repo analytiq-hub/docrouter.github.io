@@ -180,34 +180,22 @@ To prevent running all the prompts on all the documents, we use a tag mechanism 
 
 ## Step 3: Define Schema and Prompts
 
-### Schema Definition
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+  <div>
+    <h4 class="text-lg font-semibold mb-2">Create a Prompt</h4>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li>Go to <strong>Prompts</strong> in the left sidebar.</li>
+      <li>Create a new prompt.</li>
+      <li>Assign the <strong>schema</strong> and <strong>tag</strong> you created so it runs only on the intended documents.</li>
+      <li>Select one of the <strong>language models</strong> available. <strong>Gemini 2.5 Flash</strong> and <strong>GPT 4.0 Mini</strong> are good choices for simple document layouts.</li>
+    </ol>
+  </div>
+  <div class="max-h-[520px] overflow-auto">
+    <img src="/assets/images/create_prompt.png" alt="Prompt selection screen" class="w-full h-auto rounded-lg shadow-md ring-1 ring-gray-200 object-contain" />
+    <p class="text-sm text-gray-500 mt-2">Select or create a prompt and align it with your tag.</p>
+  </div>
+</div>
 
-Create a JSON schema to define the structure of data you want to extract:
-
-```json
-{
-  "type": "object",
-  "properties": {
-    "invoice_number": {"type": "string"},
-    "date": {"type": "string", "format": "date"},
-    "vendor": {"type": "string"},
-    "total_amount": {"type": "number"},
-    "line_items": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "description": {"type": "string"},
-          "quantity": {"type": "number"},
-          "unit_price": {"type": "number"},
-          "total": {"type": "number"}
-        }
-      }
-    }
-  },
-  "required": ["invoice_number", "date", "vendor", "total_amount"]
-}
-```
 
 ### Prompt Engineering
 
