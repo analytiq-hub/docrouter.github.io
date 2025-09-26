@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: Quick Start Guide
 permalink: /quick-start/
 ---

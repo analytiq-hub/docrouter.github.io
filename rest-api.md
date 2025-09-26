@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: DocRouter REST API
 permalink: /rest-api/
 ---

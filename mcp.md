@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: docs
 title: "DocRouter MCP Server"
 ---
 
