@@ -218,6 +218,24 @@ A separate mechanism, using file <strong>Actions</strong>, is available to run a
   </div>
 </div>
 
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+  <div>
+    <h4 class="text-lg font-semibold mb-2">Run Prompt on Document</h4>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li>Open the document, and switch to the <strong>Extractions</strong> tab.</li>
+      <li>Click spinner to (re)run prompt.</li>
+      <li>Review extraction.</li>
+      <li>Refine prompt, schema then re-run on similar documents to improve quality</li>
+      <li>Optionally edit result, clicking on pencil icon.</li>
+      <li>Export JSON or copy values into your workflow.</li>
+    </ol>
+  </div>
+  <div class="max-h-[520px] overflow-auto">
+    <img src="/assets/images/extractions2.png" alt="Extractions results view" class="w-full h-auto rounded-lg shadow-md ring-1 ring-gray-200 object-contain" />
+    <p class="text-sm text-gray-500 mt-2">The Extractions tab shows structured results for your schema.</p>
+  </div>
+</div>
+
 ---
 
 
