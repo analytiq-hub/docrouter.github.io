@@ -113,6 +113,35 @@ title: "DocRouter - AI-Powered Document Processing"
             </div>
         </section>
 
+        <!-- Technical Excellence Section -->
+        <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
+            <div class="text-center">
+                <h2 class="text-3xl font-semibold text-white mb-6">Technical Excellence, Implementation Support</h2>
+                <p class="text-xl text-blue-100 mb-8">
+                    Comprehensive APIs for your development team. Professional services when you need implementation expertise.
+                </p>
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-lg text-blue-100 mb-8">
+                        We provide the technical foundation your team needs to build powerful document processing workflows. Our REST APIs, Python SDK, and webhook integrations offer complete programmatic control. For organizations without dedicated technical resources, our implementation services team becomes an extension of your team, handling everything from architecture design to deployment and training.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="{{ '/rest-api/' | relative_url }}"
+                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30">
+                            View API Documentation
+                        </a>
+                        <a href="{{ '/python-sdk/' | relative_url }}"
+                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30">
+                            Python SDK
+                        </a>
+                        <a href="javascript:void(0)" onclick="openCalendly()"
+                           class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition-all duration-200">
+                            Discuss Implementation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Featured Solutions - Above the Fold -->
         <section id="featured-solutions" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">Solutions for Your Industry</h2>
@@ -195,36 +224,6 @@ title: "DocRouter - AI-Powered Document Processing"
                    class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
                     See More Solutions
                 </a>
-            </div>
-        </section>
-
-
-        <!-- User Experience Section -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">User Experience</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="{{ '/assets/images/docrouter/files.png' | relative_url }}" alt="Document List Interface" class="w-full">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="{{ '/assets/images/docrouter/extractions.png' | relative_url }}" alt="Data Extraction Interface" class="w-full">
-                </div>
-            </div>
-        </section>
-
-        <!-- DocRouter Workflow Sections -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <div class="flex justify-center">
-                <img src="{{ '/assets/images/docrouter/flow.svg' | relative_url }}" alt="DocRouter Workflow" class="w-full max-w-2xl">
-            </div>
-        </section>
-
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <div class="flex justify-center">
-                <img src="{{ '/assets/images/docrouter/docrouter-workflow.svg' | relative_url }}" alt="Detailed Workflow" class="w-full max-w-4xl">
-            </div>
-            <div class="mt-6 text-center text-sm text-gray-600">
-                <p>Documents flow through automated processing with human oversight for quality control</p>
             </div>
         </section>
 
