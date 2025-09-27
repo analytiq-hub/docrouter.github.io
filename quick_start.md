@@ -295,7 +295,7 @@ Be precise with numbers and dates.
     <h4 class="text-lg font-semibold mb-2">Update prompts and re-run on documents at scale</h4>
     <ol class="list-decimal pl-5 space-y-2">
       <li>Open the <strong>Documents</strong> list and filter by the tag used by your prompt.</li>
-      <li>Click <strong>Actions</strong> → <strong>Run Prompt</strong>.</li>
+      <li>Click <strong>Actions</strong> → <strong>Run LLM</strong>.</li>
       <li>Select the updated prompt and confirm to run across all filtered documents.</li>
       <li>Monitor progress; re-run as you iterate on prompt or schema.</li>
     </ol>
