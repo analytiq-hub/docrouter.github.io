@@ -25,13 +25,8 @@ title: "DocRouter Python SDK"
     <main>
         <section id="overview" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Overview</h2>
-            <p class="text-gray-600 mb-6">
-                The DocRouter Python SDK provides a simple and powerful way to interact with the DocRouter API.
-                It enables programmatic access to your documents, OCR data, LLM analysis, schemas, prompts, and tags.
-            </p>
-            <p class="text-gray-600 mb-6">
-                This SDK makes it easy to integrate DocRouter's document processing capabilities into your Python applications,
-                allowing you to automate document workflows and extract structured data from your documents.
+            <p class="text-gray-600 mb-0">
+                The DocRouter Python SDK gives programmatic access to documents, OCR, LLM analysis, schemas, prompts, and tags—so you can automate document workflows and extract structured data directly from your apps.
             </p>
         </section>
 
@@ -41,11 +36,14 @@ title: "DocRouter Python SDK"
 
             <pre><code>pip install docrouter_sdk</code></pre>
 
-            <p class="text-gray-600 mt-6 mb-6">For SDK development, clone the repository and install in editable mode:</p>
-
-            <pre><code>git clone https://github.com/analytiq-hub/doc-router.git
+            <details class="mt-6">
+                <summary class="cursor-pointer text-gray-900 font-medium">Developer setup (editable install)</summary>
+                <div class="mt-4">
+                    <pre><code>git clone https://github.com/analytiq-hub/doc-router.git
 cd doc-router/packages/docrouter_sdk
 pip install -e .</code></pre>
+                </div>
+            </details>
         </section>
 
         <section id="quickstart" class="bg-white rounded-lg shadow-lg p-8 mb-12">
@@ -154,9 +152,12 @@ pip install -e .</code></pre>
 
         <section id="examples" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Code Examples</h2>
+            <p class="text-gray-600 mb-4">Expand a section to view examples. For a runnable walkthrough, use the Colab at the top.</p>
 
-            <h3 class="text-lg font-medium text-gray-900 mb-3">Documents API</h3>
-            <pre><code># List documents
+            <details class="mb-4">
+                <summary class="cursor-pointer text-gray-900 font-medium">Documents API</summary>
+                <div class="mt-3">
+                    <pre><code># List documents
 documents = client.documents.list(organization_id, skip=0, limit=10, tag_ids=["tag1", "tag2"])
 
 # Get a document
@@ -178,9 +179,13 @@ result = client.documents.upload(organization_id, [{
     "content": content,
     "tag_ids": []
 }])</code></pre>
+                </div>
+            </details>
 
-            <h3 class="text-lg font-medium text-gray-900 mt-6 mb-3">OCR API</h3>
-            <pre><code># Get OCR blocks
+            <details class="mb-4">
+                <summary class="cursor-pointer text-gray-900 font-medium">OCR API</summary>
+                <div class="mt-3">
+                    <pre><code># Get OCR blocks
 blocks = client.ocr.get_blocks(organization_id, document_id)
 
 # Get OCR text
@@ -189,9 +194,13 @@ text = client.ocr.get_text(organization_id, document_id, page_num=1)
 # Get OCR metadata
 metadata = client.ocr.get_metadata(organization_id, document_id)
 print(f"Number of pages: {metadata.n_pages}")</code></pre>
+                </div>
+            </details>
 
-            <h3 class="text-lg font-medium text-gray-900 mt-6 mb-3">LLM API</h3>
-            <pre><code># List LLM models
+            <details class="mb-4">
+                <summary class="cursor-pointer text-gray-900 font-medium">LLM API</summary>
+                <div class="mt-3">
+                    <pre><code># List LLM models
 models = client.llm.list_models()
 
 # Run LLM analysis
@@ -211,9 +220,13 @@ updated_result = client.llm.update_result(
 
 # Delete LLM result
 client.llm.delete_result(organization_id, document_id, prompt_id="default")</code></pre>
+                </div>
+            </details>
 
-            <h3 class="text-lg font-medium text-gray-900 mt-6 mb-3">Schemas API</h3>
-            <pre><code># Create a schema
+            <details class="mb-4">
+                <summary class="cursor-pointer text-gray-900 font-medium">Schemas API</summary>
+                <div class="mt-3">
+                    <pre><code># Create a schema
 schema_config = {
     "name": "Invoice Schema",
     "response_format": {
@@ -245,9 +258,13 @@ schema = client.schemas.get(organization_id, schema_id)
 
 # Validate data against a schema
 validation_result = client.schemas.validate(organization_id, schema_id, {"invoice_date": "2023-01-01"})</code></pre>
+                </div>
+            </details>
 
-            <h3 class="text-lg font-medium text-gray-900 mt-6 mb-3">Prompts API</h3>
-            <pre><code># Create a prompt
+            <details class="mb-4">
+                <summary class="cursor-pointer text-gray-900 font-medium">Prompts API</summary>
+                <div class="mt-3">
+                    <pre><code># Create a prompt
 prompt_config = {
     "name": "Invoice Extractor",
     "content": "Extract the following fields from the invoice...",
@@ -263,9 +280,13 @@ prompts = client.prompts.list(organization_id, document_id="doc_id", tag_ids=["t
 
 # Get a prompt
 prompt = client.prompts.get(organization_id, prompt_id)</code></pre>
+                </div>
+            </details>
 
-            <h3 class="text-lg font-medium text-gray-900 mt-6 mb-3">Tags API</h3>
-            <pre><code># Create a tag
+            <details>
+                <summary class="cursor-pointer text-gray-900 font-medium">Tags API</summary>
+                <div class="mt-3">
+                    <pre><code># Create a tag
 tag_config = {
     "name": "Invoices",
     "color": "#FF5733",
@@ -278,21 +299,29 @@ tags = client.tags.list(organization_id)
 
 # Update a tag
 updated_tag = client.tags.update(organization_id, tag_id, tag_config)</code></pre>
+                </div>
+            </details>
         </section>
 
         <section id="error-handling" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Error Handling</h2>
-            <p class="text-gray-600 mb-4">The SDK provides detailed error messages when API calls fail:</p>
-            <pre><code>try:
+            <details>
+                <summary class="cursor-pointer text-gray-900 font-semibold text-2xl">Error Handling</summary>
+                <div class="mt-4">
+                    <p class="text-gray-600 mb-4">The SDK provides detailed error messages when API calls fail:</p>
+                    <pre><code>try:
     result = client.documents.get(organization_id, "invalid_id")
 except Exception as e:
     print(f"API Error: {str(e)}")</code></pre>
+                </div>
+            </details>
         </section>
 
         <section id="structure" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">SDK Structure</h2>
-            <p class="text-gray-600 mb-4">The DocRouter SDK is organized into several modules:</p>
-            <pre><code>docrouter_sdk/
+            <details>
+                <summary class="cursor-pointer text-gray-900 font-semibold text-2xl">SDK Structure</summary>
+                <div class="mt-4">
+                    <p class="text-gray-600 mb-4">The DocRouter SDK is organized into several modules:</p>
+                    <pre><code>docrouter_sdk/
 ├── __init__.py                 # Package initialization
 ├── api/                        # API client modules
 │   ├── __init__.py
@@ -314,11 +343,15 @@ except Exception as e:
 └── examples/                   # Usage examples
     ├── README.md
     └── basic_docrouter_client.py</code></pre>
+                </div>
+            </details>
         </section>
 
         <section id="github" class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-lg p-8 mb-12">
             <div class="text-center">
-                <h2 class="text-2xl font-semibold text-white mb-4">GitHub Repository</h2>
+                <span class="text-2xl font-semibold text-white mb-4">
+                <h2>GitHub Repository</h2>
+                </span>
                 <p class="text-blue-100 mb-6">
                     The DocRouter Python SDK is part of the docrouter.ai open source project.
                     You can find the source code on GitHub.
