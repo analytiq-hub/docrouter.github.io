@@ -61,26 +61,18 @@ pip install -e .</code></pre>
 
             <h3 class="text-lg font-medium text-gray-900 mb-3">Basic Usage</h3>
 
-            <pre><code>from docrouter_sdk import DocRouterClient
-
-# Initialize the client
-client = DocRouterClient(
-    base_url="https://app.docrouter.ai/fastapi",  # Default API URL
-    api_token="your_org_api_token"               # Replace with your organization API token
-)
-
-# Example: List documents
-organization_id = "your_organization_id"  # Replace with your organization ID
-documents = client.documents.list(organization_id)
-print(f"Found {documents.total_count} documents")
-
-# Example: List tags
-tags = client.tags.list(organization_id)
-print(f"Found {tags.total_count} tags")
-
-# Example: List available LLM models
-models = client.llm.list_models()
-print(f"Available LLM models: {[model.name for model in models.models]}")</code></pre>
+            <p class="text-gray-600 mb-4">
+                For a guided, runnable walkthrough, please use the Google Colab notebook linked at the top of this page.
+                It includes end-to-end examples for authentication, listing documents and tags, running LLM analysis, and more.
+            </p>
+            <div>
+                <a href="https://colab.research.google.com/github/analytiq-hub/docrouter.github.io/blob/main/notebooks/python_sdk/onboarding.ipynb"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center bg-blue-600 hover:bg-blue-700 px-5 py-2.5 rounded-lg font-medium text-white transition-colors duration-200">
+                    <span class="text-white">Open the DocRouter Python SDK Colab</span>
+                </a>
+            </div>
         </section>
 
         <section id="modules" class="bg-white rounded-lg shadow-lg p-8 mb-12">
