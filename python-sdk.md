@@ -30,7 +30,7 @@ title: "DocRouter Python SDK"
 
             <pre><code>pip install docrouter_sdk</code></pre>
 
-            <p class="text-gray-600 mt-6 mb-6">For development, clone the repository and install in editable mode:</p>
+            <p class="text-gray-600 mt-6 mb-6">For SDK development, clone the repository and install in editable mode:</p>
 
             <pre><code>git clone https://github.com/analytiq-hub/doc-router.git
 cd doc-router/packages/docrouter_sdk
@@ -54,8 +54,8 @@ pip install -e .</code></pre>
 
 # Initialize the client
 client = DocRouterClient(
-    base_url="https://app.docrouter.ai/fastapi",  # Replace with your API URL
-    api_token="your_org_api_token"               # Replace with your API token
+    base_url="https://app.docrouter.ai/fastapi",  # Default API URL
+    api_token="your_org_api_token"               # Replace with your organization API token
 )
 
 # Example: List documents
