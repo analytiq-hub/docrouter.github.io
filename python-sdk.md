@@ -30,17 +30,13 @@ title: "DocRouter Python SDK"
             </p>
         </section>
 
-        <section id="installation" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Installation</h2>
-            <p class="text-gray-600 mb-6">Install the DocRouter SDK from PyPI: <code>pip install docrouter_sdk</code></p>
-        </section>
-
         <section id="quickstart" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Quick Start</h2>
 
             <p class="text-gray-600 mb-4">To get started with the DocRouter SDK:</p>
 
             <ol class="list-decimal list-inside text-gray-600 space-y-2 mb-6">
+                <li>Install the DocRouter SDK from PyPI: <code>pip install docrouter_sdk</code></li>
                 <li>Get your DocRouter organization ID from the URL, e.g. <code class="bg-gray-100 px-2 py-1 rounded">https://app.docrouter.ai/orgs/&lt;docrouter_org_id&gt;</code></li>
                 <li>Create an organization API token from your organization settings</li>
                 <li>Initialize the client and start making API calls</li>
