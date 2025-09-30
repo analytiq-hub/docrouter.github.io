@@ -32,18 +32,7 @@ title: "DocRouter Python SDK"
 
         <section id="installation" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Installation</h2>
-            <p class="text-gray-600 mb-6">Install the DocRouter SDK from PyPI:</p>
-
-            <pre><code>pip install docrouter_sdk</code></pre>
-
-            <details class="mt-6">
-                <summary class="cursor-pointer text-gray-900 font-medium">Developer setup (editable install)</summary>
-                <div class="mt-4">
-                    <pre><code>git clone https://github.com/analytiq-hub/doc-router.git
-cd doc-router/packages/docrouter_sdk
-pip install -e .</code></pre>
-                </div>
-            </details>
+            <p class="text-gray-600 mb-6">Install the DocRouter SDK from PyPI: <code>pip install docrouter_sdk</code></p>
         </section>
 
         <section id="quickstart" class="bg-white rounded-lg shadow-lg p-8 mb-12">
