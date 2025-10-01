@@ -4,6 +4,7 @@ _site/
 .jekyll-metadata
 vendor/
 .bundle/
+.env
 
 # Tailwind CSS executable
 tailwindcss
