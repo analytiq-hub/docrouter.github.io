@@ -105,7 +105,7 @@ title: "DocRouter - AI-Powered Document Processing"
                     </ul>
                     <div class="mt-6">
                         <a href="javascript:void(0)" onclick="openCalendly()"
-                           class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg font-medium transition-all duration-200 w-full text-center">
+                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30 text-center">
                             Discuss Implementation
                         </a>
                     </div>
