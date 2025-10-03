@@ -11,12 +11,12 @@ permalink: /quick-start/
     <h2 class="text-2xl font-bold mb-3">Overview</h2>
     <p>Get up and running with DocRouter in minutes. This guide walks you through the complete workflow from document upload to automation. DocRouter transforms your document processing workflow through these key steps:</p>
     <ol class="list-decimal pl-5 space-y-2 mt-2">
-      <li><strong>Upload</strong> your first document</li>
-      <li><strong>Configure</strong> a tag, schema, and prompt</li>
-      <li><strong>Run</strong> the prompt on tagged document(s)</li>
-      <li><strong>Prompt Engineering</strong> to improve extraction quality</li>
-      <li><strong>Manual Automation</strong> using bulk actions</li>
-      <li><strong>Full Automation</strong> with REST API or Python SDK</li>
+      <li><b>Step 1</b> - Upload your first document</li>
+      <li><b>Step 2</b> - Configure a tag, schema, and prompt</li>
+      <li><b>Step 3</b> - Run the prompt on tagged document(s)</li>
+      <li><b>Step 4</b> - Prompt Engineering to improve extraction quality</li>
+      <li><b>Step 5</b> - Manual Automation using bulk actions</li>
+      <li><b>Step 6</b> - Full Automation with REST API or Python SDK</li>
     </ol>
   </div>
   <div class="rounded-xl border border-indigo-200 bg-indigo-50 p-6">
@@ -27,8 +27,7 @@ permalink: /quick-start/
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">PDF</span>
           <div class="min-w-0">
             <div class="font-medium group-hover:text-blue-700 truncate" title="Acord80_Homeowners_App.pdf">Acord80_Homeowners_App.pdf</div>
-            <div class="text-sm text-gray-500 font-bold">Sample Document</div>
-            <div class="text-xs text-gray-400">A homeowners insurance application.</div>
+            <div class="text-sm text-gray-500"><span class="font-bold">Sample Document</span> - A homeowners insurance application form.</div>
           </div>
         </div>
       </a>
@@ -37,7 +36,7 @@ permalink: /quick-start/
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">TXT</span>
           <div class="min-w-0">
             <div class="font-medium group-hover:text-blue-700 truncate" title="acord_clearance_search_prompt.txt">acord_clearance_search_prompt.txt</div>
-            <div class="text-xs text-gray-500">Prompt to extract fields</div>
+            <div class="text-sm text-gray-500"><span class="font-bold">Sample Prompt</span> - Prompt to extract fields from insurance form</div>
           </div>
         </div>
       </a>
@@ -46,7 +45,7 @@ permalink: /quick-start/
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">JSON</span>
           <div class="min-w-0">
             <div class="font-medium group-hover:text-blue-700 truncate" title="acord_clearance_search_schema.json">acord_clearance_search_schema.json</div>
-            <div class="text-xs text-gray-500">Schema for structured output</div>
+            <div class="text-sm text-gray-500"><span class="font-bold">Sample Schema</span> - Schema for structured output</div>
           </div>
         </div>
       </a>
@@ -57,7 +56,7 @@ permalink: /quick-start/
 ---
 
 <div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 1: Upload Your First Document</span>
+  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2"><b>Step 1</b> - Upload Your First Document</span>
   <p class="text-sm text-gray-600 mt-1">Start by uploading a file and verifying it processed.</p>
 </div>
 
@@ -126,7 +125,7 @@ permalink: /quick-start/
 ---
 
 <div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 2: Configure a Tag, Schema and Prompt</span>
+  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2"><b>Step 2</b> - Configure a Tag, Schema and Prompt</span>
   <p class="text-sm text-gray-600 mt-1">To prevent running all the prompts on all the documents, we use a tag mechanism to assign which prompts run on which documents.
 </p>
 </div>
@@ -205,7 +204,7 @@ permalink: /quick-start/
 
 
 <div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 3: Run The Prompt On The Tagged Document(s)</span>
+  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2"><b>Step 3</b> - Run The Prompt On The Tagged Document(s)</span>
   <p class="text-sm text-gray-600 mt-1">If a document is tagged at upload time, all prompts with that tag will be run automatically. However, if a prompt is added, updated or tagged after the document has been uploaded, the prompt will need to be manually run on the matching documents.</p>
   <p class="text-sm text-gray-600 mt-1">A separate mechanism, using file <strong>Actions</strong>, is available to run a new prompt in bulk on all matching documents that already exist.</p>
 </div>
@@ -248,7 +247,7 @@ permalink: /quick-start/
 
 
 <div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 4. Prompt Engineering</span>
+  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2"><b>Step 4</b> - Prompt Engineering</span>
   <p class="text-sm text-gray-600 mt-1">Iterate on prompts to improve extraction quality.</p>
 </div>
 
@@ -274,7 +273,7 @@ Be precise with numbers and dates.
 ---
 
 <div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 5: Manual Automation</span>
+  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2"><b>Step 5</b> - Manual Automation</span>
   <p class="text-sm text-gray-600 mt-1">Leverage bulk uploads and actions for scale.</p>
 </div>
 
@@ -310,7 +309,7 @@ Be precise with numbers and dates.
 ---
 
 <div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 6: Full Automation with APIs</span>
+  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2"><b>Step 6</b> - Full Automation with APIs</span>
   <p class="text-sm text-gray-600 mt-1">Automate end-to-end with REST API or Python SDK.</p>
 </div>
 
