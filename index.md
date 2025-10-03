@@ -28,6 +28,8 @@ title: "DocRouter - AI-Powered Document Processing"
         </div>
     </header>
 
+    <main>
+
     <!-- Banner Graphic Section -->
     <section class="mb-12">
         <img src="{{ '/assets/images/banner_graphic.jpg' | relative_url }}" 
@@ -35,31 +37,40 @@ title: "DocRouter - AI-Powered Document Processing"
              class="w-full">
     </section>
 
-    <!-- Results Section -->
-    <section class="bg-gray-50 rounded-lg p-8 mb-12">
-        <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">What Our Clients Achieve</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-                <div class="text-4xl font-bold text-blue-600 mb-2">90%</div>
-                <div class="text-gray-600">Faster Processing</div>
+        <!-- Problem Statement Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">The Problems We Eliminate</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🖊️</span>
+                    </div>
+                    <h3 class="text-xl font-medium text-gray-900 mb-2">Manual Data Entry</h3>
+                    <p class="text-gray-600">Stop wasting hours typing data from invoices, manifests, and reports</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">⚠️</span>
+                    </div>
+                    <h3 class="text-xl font-medium text-gray-900 mb-2">Human Errors</h3>
+                    <p class="text-gray-600">Eliminate costly mistakes and compliance issues from manual entry</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📚</span>
+                    </div>
+                    <h3 class="text-xl font-medium text-gray-900 mb-2">Growing Backlog</h3>
+                    <p class="text-gray-600">Clear document backlogs with automated processing</p>
+                </div>
             </div>
-            <div class="text-center">
-                <div class="text-4xl font-bold text-blue-600 mb-2">95%</div>
-                <div class="text-gray-600">Error Reduction</div>
-            </div>
-            <div class="text-center">
-                <div class="text-4xl font-bold text-blue-600 mb-2">$50K+</div>
-                <div class="text-gray-600">Annual Savings</div>
-            </div>
-        </div>
-    </section>
+        </section>
 
     <!-- Technical Excellence Section -->
     <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
         <div class="text-center">
             <h2 class="text-3xl font-semibold text-white mb-6">Built for Developers, Designed for Business Users</h2>
             <p class="text-xl text-blue-100 mb-8">
-                Give your technical team the tools and help they need to integrate seamlessly.
+                Give your technical team the tools and help they need to integrate seamlessly
             </p>
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div class="bg-white bg-opacity-10 rounded-lg p-6">
@@ -103,65 +114,28 @@ title: "DocRouter - AI-Powered Document Processing"
         </div>
     </section>
 
-    <main>
-        <!-- Problem Statement Section -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">The Problems We Eliminate</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">🖊️</span>
-                    </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-2">Manual Data Entry</h3>
-                    <p class="text-gray-600">Stop wasting hours typing data from invoices, manifests, and reports</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">⚠️</span>
-                    </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-2">Human Errors</h3>
-                    <p class="text-gray-600">Eliminate costly mistakes and compliance issues from manual entry</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">📚</span>
-                    </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-2">Growing Backlog</h3>
-                    <p class="text-gray-600">Clear document backlogs with automated processing</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Choose Us - Small Company Advantage -->
-        <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
+        <!-- Results Section -->
+    <section class="bg-gray-50 rounded-lg p-8 mb-12">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">What Our Clients Achieve</h2>
+        <div class="grid md:grid-cols-3 gap-8">
             <div class="text-center">
-                <h2 class="text-3xl font-semibold text-white mb-6">Why Choose a Specialized Solution?</h2>
-                <p class="text-xl text-blue-100 mb-8">
-                    Big companies can't afford to customize for your specific needs. We can.
-                </p>
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-white bg-opacity-10 rounded-lg p-6">
-                        <h3 class="text-xl font-medium text-white mb-3">Big Company Problems</h3>
-                        <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• One-size-fits-all solutions</li>
-                            <li>• Expensive enterprise pricing</li>
-                            <li>• Long implementation cycles</li>
-                            <li>• Generic support</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white bg-opacity-10 rounded-lg p-6">
-                        <h3 class="text-xl font-medium text-white mb-3">Our Advantage</h3>
-                        <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Customized for your industry</li>
-                            <li>• Affordable pricing</li>
-                            <li>• Quick setup and training</li>
-                            <li>• Direct access to our team</li>
-                        </ul>
-                    </div>
-                </div>
+                <div class="text-4xl font-bold text-blue-600 mb-2">90%</div>
+                <div class="text-gray-600">Faster Processing</div>
             </div>
-        </section>
+            <div class="text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2">95%</div>
+                <div class="text-gray-600">Error Reduction</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2">$50K+</div>
+                <div class="text-gray-600">Annual Savings</div>
+            </div>
+        </div>
+    </section>
 
+
+
+  
 
         <!-- Featured Solutions - Above the Fold -->
         <section id="featured-solutions" class="bg-white rounded-lg shadow-lg p-8 mb-12">
