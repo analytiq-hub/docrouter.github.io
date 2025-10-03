@@ -62,11 +62,25 @@ permalink: /quick-start/
   </div>
 </div>
 
+<!-- Progress Indicator -->
+<div class="bg-gray-100 rounded-lg p-4 mb-8 sticky top-4 z-10">
+  <div class="flex items-center justify-between text-sm">
+    <span class="font-medium">Quick Start Progress</span>
+    <span class="text-gray-600">Step <span id="current-step">1</span> of 6</span>
+  </div>
+  <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+    <div id="progress-bar" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 16.67%"></div>
+  </div>
+</div>
+
 ---
 
-<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2"><b>Step 1</b> - Upload Your First Document</span>
-  <p class="text-sm text-gray-600 mt-1">Start by uploading a file and verifying it processed.</p>
+<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3" id="step-1">
+  <div class="flex items-center mb-2">
+    <span class="bg-indigo-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 1</span>
+    <span class="text-2xl font-bold text-indigo-800">Upload Your First Document</span>
+  </div>
+  <p class="text-base text-gray-600 mt-1">Start by uploading a file and verifying it processed.</p>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
@@ -133,9 +147,12 @@ permalink: /quick-start/
 
 ---
 
-<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2"><b>Step 2</b> - Configure a Tag, Schema and Prompt</span>
-  <p class="text-sm text-gray-600 mt-1">To prevent running all the prompts on all the documents, we use a tag mechanism to assign which prompts run on which documents.
+<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-2">
+  <div class="flex items-center mb-2">
+    <span class="bg-indigo-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 2</span>
+    <span class="text-2xl font-bold text-indigo-800">Configure a Tag, Schema and Prompt</span>
+  </div>
+  <p class="text-base text-gray-600 mt-1">To prevent running all the prompts on all the documents, we use a tag mechanism to assign which prompts run on which documents.
 </p>
 </div>
 
@@ -212,10 +229,13 @@ permalink: /quick-start/
 </div>
 
 
-<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2"><b>Step 3</b> - Run The Prompt On The Tagged Document(s)</span>
-  <p class="text-sm text-gray-600 mt-1">If a document is tagged at upload time, all prompts with that tag will be run automatically. However, if a prompt is added, updated or tagged after the document has been uploaded, the prompt will need to be manually run on the matching documents.</p>
-  <p class="text-sm text-gray-600 mt-1">A separate mechanism, using file <strong>Actions</strong>, is available to run a new prompt in bulk on all matching documents that already exist.</p>
+<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-3">
+  <div class="flex items-center mb-2">
+    <span class="bg-indigo-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 3</span>
+    <span class="text-2xl font-bold text-indigo-800">Run The Prompt On The Tagged Document(s)</span>
+  </div>
+  <p class="text-base text-gray-600 mt-1">If a document is tagged at upload time, all prompts with that tag will be run automatically. However, if a prompt is added, updated or tagged after the document has been uploaded, the prompt will need to be manually run on the matching documents.</p>
+  <p class="text-base text-gray-600 mt-1">A separate mechanism, using file <strong>Actions</strong>, is available to run a new prompt in bulk on all matching documents that already exist.</p>
 </div>
 
 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
@@ -255,9 +275,12 @@ permalink: /quick-start/
 ---
 
 
-<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2"><b>Step 4</b> - Prompt Engineering</span>
-  <p class="text-sm text-gray-600 mt-1">Iterate on prompts to improve extraction quality.</p>
+<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-4">
+  <div class="flex items-center mb-2">
+    <span class="bg-indigo-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 4</span>
+    <span class="text-2xl font-bold text-indigo-800">Prompt Engineering</span>
+  </div>
+  <p class="text-base text-gray-600 mt-1">Iterate on prompts to improve extraction quality.</p>
 </div>
 
 ```text
@@ -281,9 +304,12 @@ Be precise with numbers and dates.
 
 ---
 
-<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2"><b>Step 5</b> - Manual Automation</span>
-  <p class="text-sm text-gray-600 mt-1">Leverage bulk uploads and actions for scale.</p>
+<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-5">
+  <div class="flex items-center mb-2">
+    <span class="bg-indigo-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 5</span>
+    <span class="text-2xl font-bold text-indigo-800">Manual Automation</span>
+  </div>
+  <p class="text-base text-gray-600 mt-1">Leverage bulk uploads and actions for scale.</p>
 </div>
 
 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
@@ -317,9 +343,12 @@ Be precise with numbers and dates.
 
 ---
 
-<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2"><b>Step 6</b> - Full Automation with APIs</span>
-  <p class="text-sm text-gray-600 mt-1">Automate end-to-end with REST API or Python SDK.</p>
+<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-6">
+  <div class="flex items-center mb-2">
+    <span class="bg-indigo-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 6</span>
+    <span class="text-2xl font-bold text-indigo-800">Full Automation with APIs</span>
+  </div>
+  <p class="text-base text-gray-600 mt-1">Automate end-to-end with REST API or Python SDK.</p>
 </div>
 
 ### REST API Automation
@@ -388,3 +417,39 @@ Refer to the [Python SDK Reference](/python-sdk).
 For **Support**: Contact our technical support team.
 
 Ready to get started? [Launch DocRouter Application](https://app.docrouter.ai) or explore our [REST API](/rest-api) and [Python SDK](/python-sdk) documentation.
+
+<script>
+// Interactive Progress Indicator
+document.addEventListener('DOMContentLoaded', function() {
+  const progressBar = document.getElementById('progress-bar');
+  const currentStepSpan = document.getElementById('current-step');
+  const steps = ['step-1', 'step-2', 'step-3', 'step-4', 'step-5', 'step-6'];
+  
+  function updateProgress() {
+    let visibleStep = 1;
+    
+    // Check which step is currently visible in the viewport
+    steps.forEach((stepId, index) => {
+      const element = document.getElementById(stepId);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const isVisible = rect.top <= window.innerHeight * 0.5 && rect.bottom >= 0;
+        if (isVisible) {
+          visibleStep = index + 1;
+        }
+      }
+    });
+    
+    // Update progress bar and current step
+    const progress = (visibleStep / 6) * 100;
+    progressBar.style.width = progress + '%';
+    currentStepSpan.textContent = visibleStep;
+  }
+  
+  // Update progress on scroll
+  window.addEventListener('scroll', updateProgress);
+  
+  // Update progress on page load
+  updateProgress();
+});
+</script>
