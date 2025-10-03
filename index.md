@@ -21,7 +21,7 @@ title: "DocRouter - AI-Powered Document Processing"
                class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 border-2 border-transparent">
                 Launch Application
             </a>
-            <a href="quick-start"
+            <a href="how-it-works"
                class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
                 See How It Works
             </a>
