@@ -54,6 +54,35 @@ title: "DocRouter - AI-Powered Document Processing"
         </div>
     </section>
 
+    <!-- Technical Excellence Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
+        <div class="text-center">
+            <h2 class="text-3xl font-semibold text-white mb-6">Your Developers Will Love This</h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Built for developers, designed for business users. Give your technical team the tools they need to integrate seamlessly.
+            </p>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg text-blue-100 mb-8">
+                    Your development team gets comprehensive APIs, SDKs, and documentation to integrate document processing into your existing workflows. Stop asking your developers to build custom solutions from scratch - we've built everything they need.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="{{ '/rest-api/' | relative_url }}"
+                       class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30">
+                        View API Documentation
+                    </a>
+                    <a href="{{ '/python-sdk/' | relative_url }}"
+                       class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30">
+                        Python SDK
+                    </a>
+                    <a href="javascript:void(0)" onclick="openCalendly()"
+                       class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition-all duration-200">
+                        Discuss Implementation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <main>
         <!-- Problem Statement Section -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
