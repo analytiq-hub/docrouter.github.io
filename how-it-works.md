@@ -16,6 +16,35 @@ permalink: /how-it-works/
     </header>
 
     <main>
+        <!-- User Experience Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">User Experience</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="{{ '/assets/images/docrouter/files.png' | relative_url }}" alt="Document List Interface" class="w-full">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="{{ '/assets/images/docrouter/extractions.png' | relative_url }}" alt="Data Extraction Interface" class="w-full">
+                </div>
+            </div>
+        </section>
+
+        <!-- DocRouter Workflow Sections -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <div class="flex justify-center">
+                <img src="{{ '/assets/images/docrouter/flow.svg' | relative_url }}" alt="DocRouter Workflow" class="w-full max-w-2xl">
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <div class="flex justify-center">
+                <img src="{{ '/assets/images/docrouter/docrouter-workflow.svg' | relative_url }}" alt="Detailed Workflow" class="w-full max-w-4xl">
+            </div>
+            <div class="mt-6 text-center text-sm text-gray-600">
+                <p>Documents flow through automated processing with human oversight for quality control</p>
+            </div>
+        </section>
+        
         <!-- Process Overview -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">The DocRouter Process</h2>
