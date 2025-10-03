@@ -16,36 +16,8 @@ permalink: /how-it-works/
     </header>
 
     <main>
-        <!-- User Experience Section -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">User Experience</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="{{ '/assets/images/docrouter/files.png' | relative_url }}" alt="Document List Interface" class="w-full">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="{{ '/assets/images/docrouter/extractions.png' | relative_url }}" alt="Data Extraction Interface" class="w-full">
-                </div>
-            </div>
-        </section>
 
-        <!-- DocRouter Workflow Sections -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <div class="flex justify-center">
-                <img src="{{ '/assets/images/docrouter/flow.svg' | relative_url }}" alt="DocRouter Workflow" class="w-full max-w-2xl">
-            </div>
-        </section>
-
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <div class="flex justify-center">
-                <img src="{{ '/assets/images/docrouter/docrouter-workflow.svg' | relative_url }}" alt="Detailed Workflow" class="w-full max-w-4xl">
-            </div>
-            <div class="mt-6 text-center text-sm text-gray-600">
-                <p>Documents flow through automated processing with human oversight for quality control</p>
-            </div>
-        </section>
-        
-        <!-- Process Overview -->
+           <!-- Process Overview -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">The DocRouter Process</h2>
             <div class="grid md:grid-cols-3 gap-8">
@@ -78,6 +50,37 @@ permalink: /how-it-works/
             </div>
         </section>
 
+    
+        <!-- How It Works Image -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <div class="flex justify-center">
+                <img src="{{ '/assets/images/docrouter/flow.svg' | relative_url }}" alt="DocRouter Workflow" class="w-full max-w-2xl">
+            </div>
+        </section>
+        
+        <!-- DocRouter Workflow Sections -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <div class="flex justify-center">
+                <img src="{{ '/assets/images/docrouter/docrouter-workflow.svg' | relative_url }}" alt="Detailed Workflow" class="w-full max-w-4xl">
+            </div>
+            <div class="mt-6 text-center text-sm text-gray-600">
+                <p>Documents flow through automated processing with human oversight for quality control</p>
+            </div>
+        </section>
+        
+        <!-- User Experience Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">User Experience</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="{{ '/assets/images/docrouter/files.png' | relative_url }}" alt="Document List Interface" class="w-full">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="{{ '/assets/images/docrouter/extractions.png' | relative_url }}" alt="Data Extraction Interface" class="w-full">
+                </div>
+            </div>
+        </section>
+
         <!-- Integration Methods -->
         <section class="bg-gray-50 rounded-lg p-8 mb-12">
             <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">Integration Methods</h2>
@@ -98,19 +101,18 @@ permalink: /how-it-works/
                     </a>
                 </div>
 
-                <!-- Email Integration -->
+                <!-- Email and Faxes Integration -->
                 <div class="bg-white rounded-lg p-6">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Email Processing</h3>
-                    <p class="text-gray-600 mb-4">Send documents via email and receive results automatically.</p>
+                    <p class="text-gray-600 mb-4">Send documents via email or fax and receive results automatically.</p>
                     <ul class="text-gray-600 space-y-2 mb-6">
                         <li>• Forward emails with attachments</li>
                         <li>• Automatic document detection</li>
                         <li>• Email-based notifications</li>
-                        <li>• No technical setup required</li>
                     </ul>
                     <a href="javascript:void(0)" onclick="openCalendly()" 
-                       class="inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200">
-                        Set Up Email Processing
+                       class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200">
+                        Schedule a Meeting to Discuss
                     </a>
                 </div>
             </div>
@@ -139,16 +141,15 @@ permalink: /how-it-works/
                     <ul class="text-gray-600 space-y-2">
                         <li>• PDF documents</li>
                         <li>• JPEG, PNG images</li>
-                        <li>• TIFF files</li>
                         <li>• Scanned documents</li>
-                        <li>• Multi-page documents</li>
-                        <li>• Password-protected PDFs</li>
+                        <li>• Emails and Faxes</li>
+                        <li>• ...and many more!</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Security & Compliance -->
+        <!-- Security & Compliance 
         <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
             <div class="text-center">
                 <h2 class="text-3xl font-semibold text-white mb-6">Security & Compliance</h2>
@@ -186,6 +187,7 @@ permalink: /how-it-works/
                 </div>
             </div>
         </section>
+        -->
 
         <!-- Getting Started -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
