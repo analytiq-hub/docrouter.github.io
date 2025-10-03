@@ -27,7 +27,8 @@ permalink: /quick-start/
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">PDF</span>
           <div class="min-w-0">
             <div class="font-medium group-hover:text-blue-700 truncate" title="Acord80_Homeowners_App.pdf">Acord80_Homeowners_App.pdf</div>
-            <div class="text-gray-500 font-bold">Sample Document</div>
+            <div class="text-sm text-gray-500 font-bold">Sample Document</div>
+            <div class="text-xs text-gray-400">A homeowners insurance application.</div>
           </div>
         </div>
       </a>
