@@ -103,12 +103,13 @@ permalink: /how-it-works/
 
                 <!-- Email and Faxes Integration -->
                 <div class="bg-white rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Email Processing</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Email and Fax Processing</h3>
                     <p class="text-gray-600 mb-4">Send documents via email or fax and receive results automatically.</p>
                     <ul class="text-gray-600 space-y-2 mb-6">
                         <li>• Forward emails with attachments</li>
                         <li>• Automatic document detection</li>
-                        <li>• Email-based notifications</li>
+                        <li>• Email notifications</li>
+                        <li>• Fax processing</li>
                     </ul>
                     <a href="javascript:void(0)" onclick="openCalendly()" 
                        class="inline-block border-2 border-gray-600 text-gray-600 hover:bg-gray-50 px-4 py-2 rounded-lg font-medium transition-colors duration-200">
