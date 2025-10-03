@@ -96,7 +96,7 @@ permalink: /how-it-works/
                         <li>• Batch processing support</li>
                     </ul>
                     <a href="{{ '/rest-api/' | relative_url }}" 
-                       class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200">
+                       class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg font-medium transition-colors duration-200">
                         View API Docs
                     </a>
                 </div>
@@ -111,7 +111,7 @@ permalink: /how-it-works/
                         <li>• Email-based notifications</li>
                     </ul>
                     <a href="javascript:void(0)" onclick="openCalendly()" 
-                       class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200">
+                       class="inline-block border-2 border-gray-600 text-gray-600 hover:bg-gray-50 px-4 py-2 rounded-lg font-medium transition-colors duration-200">
                         Schedule a Meeting to Discuss
                     </a>
                 </div>
@@ -203,9 +203,9 @@ permalink: /how-it-works/
                        class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
                         Try It Free
                     </a>
-                    <a href="{{ '/rest-api/' | relative_url }}"
+                    <a href="{{ '/quick-start/' | relative_url }}"
                        class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
-                        View API Docs
+                        Use the Quick Start
                     </a>
                     <a href="javascript:void(0)" onclick="openCalendly()"
                        class="inline-block border-2 border-gray-600 text-gray-600 hover:bg-gray-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
