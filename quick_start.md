@@ -4,12 +4,12 @@ title: Quick Start Guide
 permalink: /quick-start/
 ---
 
-Get up and running with DocRouter in minutes. This guide walks you through the complete workflow from document upload to automation.
+
 
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
   <div class="rounded-xl border border-gray-200 bg-white p-6">
     <h2 class="text-2xl font-bold mb-3">Overview</h2>
-    <p>DocRouter transforms your document processing workflow through these key steps:</p>
+    <p>Get up and running with DocRouter in minutes. This guide walks you through the complete workflow from document upload to automation. DocRouter transforms your document processing workflow through these key steps:</p>
     <ol class="list-decimal pl-5 space-y-2 mt-2">
       <li><strong>Upload</strong> your first document</li>
       <li><strong>Configure</strong> a tag, schema, and prompt</li>
@@ -20,14 +20,14 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
     </ol>
   </div>
   <div class="rounded-xl border border-indigo-200 bg-indigo-50 p-6">
-    <h2 class="text-2xl font-bold mb-3">Sample File, Schema and Prompt</h2>
+    <h2 class="text-2xl font-bold mb-3">Documents You Will Need for this Quick Start</h2>
     <div class="grid grid-cols-1 gap-3">
       <a href="/assets/files/Acord80_Homeowners_App.pdf" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
         <div class="flex items-center gap-3 min-w-0">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">PDF</span>
           <div class="min-w-0">
             <div class="font-medium group-hover:text-blue-700 truncate" title="Acord80_Homeowners_App.pdf">Acord80_Homeowners_App.pdf</div>
-            <div class="text-xs text-gray-500">Sample document</div>
+            <div class="text-gray-500 font-bold">Sample Document</div>
           </div>
         </div>
       </a>
