@@ -22,11 +22,20 @@ permalink: /quick-start/
   <div class="rounded-xl border border-indigo-200 bg-indigo-50 p-6">
     <h2 class="text-2xl font-bold mb-3">Documents You Will Need for this Quick Start</h2>
     <div class="grid grid-cols-1 gap-3">
+      <a href="/assets/files/quick_start_documents.zip" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
+        <div class="flex items-center gap-3 min-w-0">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">ZIP</span>
+          <div class="min-w-0">
+            <div class="text-gray-700"><span class="font-bold">All Sample Files</span> - Download all three files at once</div>
+            <div class="text-xs text-gray-500 truncate" title="quick_start_documents.zip">quick_start_documents.zip</div>
+          </div>
+        </div>
+      </a>
       <a href="/assets/files/Acord80_Homeowners_App.pdf" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
         <div class="flex items-center gap-3 min-w-0">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">PDF</span>
           <div class="min-w-0">
-            <div class="text-gray-700"><span class="font-bold">Sample Document</span> - A homeowners insurance application form.</div>
+            <div class="text-gray-700"><span class="font-bold">Sample Document</span> - A homeowners insurance application form</div>
             <div class="text-xs text-gray-500 truncate" title="Acord80_Homeowners_App.pdf">Acord80_Homeowners_App.pdf</div>
           </div>
         </div>
@@ -373,18 +382,6 @@ For more details, see - [REST API Documentation](/rest-api).
 Refer to the [Python SDK Reference](/python-sdk).
 
 ---
-
-### Download All Sample Files
-
-<div class="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
-  <h3 class="text-lg font-semibold text-blue-900 mb-2">Get Started Quickly</h3>
-  <p class="text-blue-700 mb-4">Download all the sample files used in this guide to follow along step-by-step.</p>
-  <a href="/assets/files/quick_start_documents.zip" 
-     class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
-    📥 Download All Sample Files (ZIP)
-  </a>
-  <p class="text-sm text-blue-600 mt-2">Includes: Sample Document, Sample Prompt, and Sample Schema</p>
-</div>
 
 ---
 
