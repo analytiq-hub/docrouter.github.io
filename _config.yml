@@ -102,7 +102,7 @@ header_pages:
         url: "/team"
       - title: "Contact"
         url: "/contact"
-  - title: "Launch Application"
+  - title: "Get Started"
     url: "https://app.docrouter.ai"
     button_style: "solid"
     external: true

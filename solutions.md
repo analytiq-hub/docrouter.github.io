@@ -232,7 +232,7 @@ title: "Solutions - DocRouter"
                        target="_blank"
                        rel="noopener noreferrer"
                        class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
-                        Try It Free
+                        Launch Application
                     </a>
                 </div>
             </div>
