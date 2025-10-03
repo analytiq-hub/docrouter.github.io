@@ -426,24 +426,32 @@ document.addEventListener('DOMContentLoaded', function() {
   const steps = ['step-1', 'step-2', 'step-3', 'step-4', 'step-5', 'step-6'];
   
   function updateProgress() {
-    let visibleStep = 1;
+    let currentStep = 1;
     
-    // Check which step is currently visible in the viewport
+    // Find the step that's most prominently in view
     steps.forEach((stepId, index) => {
       const element = document.getElementById(stepId);
       if (element) {
         const rect = element.getBoundingClientRect();
-        const isVisible = rect.top <= window.innerHeight * 0.5 && rect.bottom >= 0;
-        if (isVisible) {
-          visibleStep = index + 1;
+        const stepTop = rect.top;
+        const stepBottom = rect.bottom;
+        const viewportCenter = window.innerHeight * 0.5;
+        
+        // If step is above the center of viewport, we've passed it
+        if (stepBottom < viewportCenter) {
+          currentStep = index + 1;
+        }
+        // If step is in the center area of viewport, it's the current step
+        else if (stepTop <= viewportCenter && stepBottom >= viewportCenter) {
+          currentStep = index + 1;
         }
       }
     });
     
     // Update progress bar and current step
-    const progress = (visibleStep / 6) * 100;
+    const progress = (currentStep / 6) * 100;
     progressBar.style.width = progress + '%';
-    currentStepSpan.textContent = visibleStep;
+    currentStepSpan.textContent = currentStep;
   }
   
   // Update progress on scroll
