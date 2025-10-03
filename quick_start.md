@@ -10,14 +10,14 @@ permalink: /quick-start/
   <div class="rounded-xl border border-gray-200 bg-white p-6">
     <h2 class="text-2xl font-bold mb-3">Overview</h2>
     <p>Get up and running with DocRouter in minutes. This guide walks you through the complete workflow from document upload to automation. DocRouter transforms your document processing workflow through these key steps:</p>
-    <ol class="list-decimal pl-5 space-y-2 mt-2">
+    <ul class="list-decimal pl-5 space-y-2 mt-2">
       <li><b>Step 1</b> - Upload your first document</li>
       <li><b>Step 2</b> - Configure a tag, schema, and prompt</li>
       <li><b>Step 3</b> - Run the prompt on tagged document(s)</li>
       <li><b>Step 4</b> - Prompt Engineering to improve extraction quality</li>
       <li><b>Step 5</b> - Manual Automation using bulk actions</li>
       <li><b>Step 6</b> - Full Automation with REST API or Python SDK</li>
-    </ol>
+    </ul>
   </div>
   <div class="rounded-xl border border-indigo-200 bg-indigo-50 p-6">
     <h2 class="text-2xl font-bold mb-3">Documents You Will Need for this Quick Start</h2>
@@ -26,8 +26,8 @@ permalink: /quick-start/
         <div class="flex items-center gap-3 min-w-0">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">PDF</span>
           <div class="min-w-0">
-            <div class="font-medium group-hover:text-blue-700 truncate" title="Acord80_Homeowners_App.pdf">Acord80_Homeowners_App.pdf</div>
-            <div class="text-sm text-gray-500"><span class="font-bold">Sample Document</span> - A homeowners insurance application form.</div>
+            <div class="text-gray-700"><span class="font-bold">Sample Document</span> - A homeowners insurance application form.</div>
+            <div class="text-xs text-gray-500 truncate" title="Acord80_Homeowners_App.pdf">Acord80_Homeowners_App.pdf</div>
           </div>
         </div>
       </a>
@@ -35,8 +35,8 @@ permalink: /quick-start/
         <div class="flex items-center gap-3 min-w-0">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">TXT</span>
           <div class="min-w-0">
-            <div class="font-medium group-hover:text-blue-700 truncate" title="acord_clearance_search_prompt.txt">acord_clearance_search_prompt.txt</div>
-            <div class="text-sm text-gray-500"><span class="font-bold">Sample Prompt</span> - Prompt to extract fields from insurance form</div>
+            <div class="text-gray-700"><span class="font-bold">Sample Prompt</span> - Prompt to extract fields from insurance form</div>
+            <div class="text-xs text-gray-500 truncate" title="acord_clearance_search_prompt.txt">acord_clearance_search_prompt.txt</div>
           </div>
         </div>
       </a>
@@ -44,8 +44,8 @@ permalink: /quick-start/
         <div class="flex items-center gap-3 min-w-0">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">JSON</span>
           <div class="min-w-0">
-            <div class="font-medium group-hover:text-blue-700 truncate" title="acord_clearance_search_schema.json">acord_clearance_search_schema.json</div>
-            <div class="text-sm text-gray-500"><span class="font-bold">Sample Schema</span> - Schema for structured output</div>
+            <div class="text-gray-700"><span class="font-bold">Sample Schema</span> - Schema for structured output</div>
+            <div class="text-xs text-gray-500 truncate" title="acord_clearance_search_schema.json">acord_clearance_search_schema.json</div>
           </div>
         </div>
       </a>
@@ -371,6 +371,20 @@ For more details, see - [REST API Documentation](/rest-api).
 ### Python SDK Automation
 
 Refer to the [Python SDK Reference](/python-sdk).
+
+---
+
+### Download All Sample Files
+
+<div class="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
+  <h3 class="text-lg font-semibold text-blue-900 mb-2">Get Started Quickly</h3>
+  <p class="text-blue-700 mb-4">Download all the sample files used in this guide to follow along step-by-step.</p>
+  <a href="/assets/files/quick_start_documents.zip" 
+     class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
+    📥 Download All Sample Files (ZIP)
+  </a>
+  <p class="text-sm text-blue-600 mt-2">Includes: Sample Document, Sample Prompt, and Sample Schema</p>
+</div>
 
 ---
 
