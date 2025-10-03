@@ -69,7 +69,7 @@ permalink: /quick-start/
     <span class="text-gray-600">Step <span id="current-step">1</span> of 6</span>
   </div>
   <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
-    <div id="progress-bar" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 16.67%"></div>
+    <div id="progress-bar" class="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full transition-all duration-300" style="width: 16.67%"></div>
   </div>
 </div>
 
@@ -77,7 +77,7 @@ permalink: /quick-start/
 
 <div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3" id="step-1">
   <div class="flex items-center mb-2">
-    <span class="bg-indigo-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 1</span>
+    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 1</span>
     <span class="text-2xl font-bold text-indigo-800">Upload Your First Document</span>
   </div>
   <p class="text-base text-gray-600 mt-1">Start by uploading a file and verifying it processed.</p>
@@ -149,7 +149,7 @@ permalink: /quick-start/
 
 <div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-2">
   <div class="flex items-center mb-2">
-    <span class="bg-indigo-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 2</span>
+    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 2</span>
     <span class="text-2xl font-bold text-indigo-800">Configure a Tag, Schema and Prompt</span>
   </div>
   <p class="text-base text-gray-600 mt-1">To prevent running all the prompts on all the documents, we use a tag mechanism to assign which prompts run on which documents.
@@ -231,7 +231,7 @@ permalink: /quick-start/
 
 <div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-3">
   <div class="flex items-center mb-2">
-    <span class="bg-indigo-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 3</span>
+    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 3</span>
     <span class="text-2xl font-bold text-indigo-800">Run The Prompt On The Tagged Document(s)</span>
   </div>
   <p class="text-base text-gray-600 mt-1">If a document is tagged at upload time, all prompts with that tag will be run automatically. However, if a prompt is added, updated or tagged after the document has been uploaded, the prompt will need to be manually run on the matching documents.</p>
@@ -277,7 +277,7 @@ permalink: /quick-start/
 
 <div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-4">
   <div class="flex items-center mb-2">
-    <span class="bg-indigo-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 4</span>
+    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 4</span>
     <span class="text-2xl font-bold text-indigo-800">Prompt Engineering</span>
   </div>
   <p class="text-base text-gray-600 mt-1">Iterate on prompts to improve extraction quality.</p>
@@ -306,7 +306,7 @@ Be precise with numbers and dates.
 
 <div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-5">
   <div class="flex items-center mb-2">
-    <span class="bg-indigo-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 5</span>
+    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 5</span>
     <span class="text-2xl font-bold text-indigo-800">Manual Automation</span>
   </div>
   <p class="text-base text-gray-600 mt-1">Leverage bulk uploads and actions for scale.</p>
@@ -345,7 +345,7 @@ Be precise with numbers and dates.
 
 <div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-6">
   <div class="flex items-center mb-2">
-    <span class="bg-indigo-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 6</span>
+    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 6</span>
     <span class="text-2xl font-bold text-indigo-800">Full Automation with APIs</span>
   </div>
   <p class="text-base text-gray-600 mt-1">Automate end-to-end with REST API or Python SDK.</p>
