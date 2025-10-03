@@ -57,27 +57,47 @@ title: "DocRouter - AI-Powered Document Processing"
     <!-- Technical Excellence Section -->
     <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
         <div class="text-center">
-            <h2 class="text-3xl font-semibold text-white mb-6">Your Developers Will Love This</h2>
+            <h2 class="text-3xl font-semibold text-white mb-6">Built for Developers, Designed for Business Users</h2>
             <p class="text-xl text-blue-100 mb-8">
-                Built for developers, designed for business users. Give your technical team the tools they need to integrate seamlessly.
+                Give your technical team the tools and help they need to integrate seamlessly.
             </p>
-            <div class="max-w-4xl mx-auto">
-                <p class="text-lg text-blue-100 mb-8">
-                    Your development team gets comprehensive APIs, SDKs, and documentation to integrate document processing into your existing workflows. Stop asking your developers to build custom solutions from scratch - we've built everything they need.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="{{ '/rest-api/' | relative_url }}"
-                       class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30">
-                        View API Documentation
-                    </a>
-                    <a href="{{ '/python-sdk/' | relative_url }}"
-                       class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30">
-                        Python SDK
-                    </a>
-                    <a href="javascript:void(0)" onclick="openCalendly()"
-                       class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition-all duration-200">
-                        Discuss Implementation
-                    </a>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                    <h3 class="text-xl font-medium text-white mb-3">What Your Developers Get</h3>
+                    <ul class="text-blue-100 space-y-2 text-left">
+                        <li>• Comprehensive REST APIs with full documentation</li>
+                        <li>• Python SDK with code examples and samples</li>
+                        <li>• Webhook integrations for real-time processing</li>
+                        <li>• Interactive API documentation and Postman collections</li>
+                        <li>• Sandbox environment for testing integrations</li>
+                        <li>• Enterprise-grade security and compliance</li>
+                        <li>• Dedicated developer support and technical guidance</li>
+                    </ul>
+                    <div class="mt-6 flex flex-col gap-2">
+                        <a href="{{ '/rest-api/' | relative_url }}"
+                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30 text-center">
+                            View API Documentation
+                        </a>
+                        <a href="{{ '/python-sdk/' | relative_url }}"
+                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30 text-center">
+                            Python SDK
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                    <h3 class="text-xl font-medium text-white mb-3">Implementation Services & Support</h3>
+                    <ul class="text-blue-100 space-y-2 text-left">
+                        <li>• Custom integration architecture design</li>
+                        <li>• End-to-end implementation and deployment</li>
+                        <li>• Team training and knowledge transfer</li>
+                        <li>• Ongoing technical support and maintenance</li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="javascript:void(0)" onclick="openCalendly()"
+                           class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg font-medium transition-all duration-200 w-full text-center">
+                            Discuss Implementation
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -142,34 +162,6 @@ title: "DocRouter - AI-Powered Document Processing"
             </div>
         </section>
 
-        <!-- Technical Excellence Section -->
-        <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
-            <div class="text-center">
-                <h2 class="text-3xl font-semibold text-white mb-6">Technical Excellence, Implementation Support</h2>
-                <p class="text-xl text-blue-100 mb-8">
-                    Comprehensive APIs for your development team. Professional services when you need implementation expertise.
-                </p>
-                <div class="max-w-4xl mx-auto">
-                    <p class="text-lg text-blue-100 mb-8">
-                        We provide the technical foundation your team needs to build powerful document processing workflows. Our REST APIs, Python SDK, and webhook integrations offer complete programmatic control. For organizations without dedicated technical resources, our implementation services team becomes an extension of your team, handling everything from architecture design to deployment and training.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <a href="{{ '/rest-api/' | relative_url }}"
-                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30">
-                            View API Documentation
-                        </a>
-                        <a href="{{ '/python-sdk/' | relative_url }}"
-                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30">
-                            Python SDK
-                        </a>
-                        <a href="javascript:void(0)" onclick="openCalendly()"
-                           class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition-all duration-200">
-                            Discuss Implementation
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Featured Solutions - Above the Fold -->
         <section id="featured-solutions" class="bg-white rounded-lg shadow-lg p-8 mb-12">
