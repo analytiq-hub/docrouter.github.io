@@ -127,6 +127,37 @@ title: "Solutions - DocRouter"
             </div>
         </section>
 
+              <!-- Why Choose Us - Small Company Advantage -->
+        <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
+            <div class="text-center">
+                <h2 class="text-3xl font-semibold text-white mb-6">Why Choose a Specialized Solution?</h2>
+                <p class="text-xl text-blue-100 mb-8">
+                    Big companies can't afford to customize for your specific needs. We can.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                        <h3 class="text-xl font-medium text-white mb-3">Big Company Problems</h3>
+                        <ul class="text-blue-100 space-y-2 text-left">
+                            <li>• One-size-fits-all solutions</li>
+                            <li>• Expensive enterprise pricing</li>
+                            <li>• Long implementation cycles</li>
+                            <li>• Generic support</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                        <h3 class="text-xl font-medium text-white mb-3">Our Advantage</h3>
+                        <ul class="text-blue-100 space-y-2 text-left">
+                            <li>• Customized for your industry</li>
+                            <li>• Affordable pricing</li>
+                            <li>• Quick setup and training</li>
+                            <li>• Direct access to our team</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
         <!-- User Experience Section -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">User Experience</h2>
