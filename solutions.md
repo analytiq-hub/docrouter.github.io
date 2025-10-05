@@ -2,6 +2,7 @@
 layout: default
 title: "Solutions - DocRouter"
 ---
+<!-- Force GitHub Pages rebuild -->
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
     <!-- Hero Section -->
@@ -124,66 +125,6 @@ title: "Solutions - DocRouter"
                     </div>
                     <a href="{{ '/solutions/dme/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
-            </div>
-        </section>
-
-              <!-- Why Choose Us - Small Company Advantage -->
-        <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
-            <div class="text-center">
-                <h2 class="text-3xl font-semibold text-white mb-6">Why Choose a Specialized Solution?</h2>
-                <p class="text-xl text-blue-100 mb-8">
-                    Big companies can't afford to customize for your specific needs. We can.
-                </p>
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-white bg-opacity-10 rounded-lg p-6">
-                        <h3 class="text-xl font-medium text-white mb-3">Big Company Problems</h3>
-                        <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• One-size-fits-all solutions</li>
-                            <li>• Expensive enterprise pricing</li>
-                            <li>• Long implementation cycles</li>
-                            <li>• Generic support</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white bg-opacity-10 rounded-lg p-6">
-                        <h3 class="text-xl font-medium text-white mb-3">Our Advantage</h3>
-                        <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Customized for your industry</li>
-                            <li>• Affordable pricing</li>
-                            <li>• Quick setup and training</li>
-                            <li>• Direct access to our team</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        
-        <!-- User Experience Section -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">User Experience</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="{{ '/assets/images/docrouter/files.png' | relative_url }}" alt="Document List Interface" class="w-full">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="{{ '/assets/images/docrouter/extractions.png' | relative_url }}" alt="Data Extraction Interface" class="w-full">
-                </div>
-            </div>
-        </section>
-
-        <!-- DocRouter Workflow Sections -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <div class="flex justify-center">
-                <img src="{{ '/assets/images/docrouter/flow.svg' | relative_url }}" alt="DocRouter Workflow" class="w-full max-w-2xl">
-            </div>
-        </section>
-
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <div class="flex justify-center">
-                <img src="{{ '/assets/images/docrouter/docrouter-workflow.svg' | relative_url }}" alt="Detailed Workflow" class="w-full max-w-4xl">
-            </div>
-            <div class="mt-6 text-center text-sm text-gray-600">
-                <p>Documents flow through automated processing with human oversight for quality control</p>
             </div>
         </section>
 
