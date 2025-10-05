@@ -80,7 +80,7 @@ permalink: /quick-start/
     <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 1</span>
     <span class="text-2xl font-bold text-indigo-800">Upload Your First Document</span>
   </div>
-  <p class="text-base text-gray-600 mt-1">Start by uploading a file and verifying it processed.</p>
+  <p class="text-base text-gray-600 mt-1">We start by uploading a file and making sure it processes correctly.</p>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
@@ -152,8 +152,7 @@ permalink: /quick-start/
     <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 2</span>
     <span class="text-2xl font-bold text-indigo-800">Configure a Tag, Schema and Prompt</span>
   </div>
-  <p class="text-base text-gray-600 mt-1">To prevent running all the prompts on all the documents, we use a tag mechanism to assign which prompts run on which documents.
-</p>
+  <p class="text-base text-gray-600 mt-1">We'll set up tags to tell DocRouter which prompts should run on which documents.</p>
 </div>
 
 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
@@ -234,8 +233,7 @@ permalink: /quick-start/
     <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 3</span>
     <span class="text-2xl font-bold text-indigo-800">Run The Prompt On The Tagged Document(s)</span>
   </div>
-  <p class="text-base text-gray-600 mt-1">If a document is tagged at upload time, all prompts with that tag will be run automatically. However, if a prompt is added, updated or tagged after the document has been uploaded, the prompt will need to be manually run on the matching documents.</p>
-  <p class="text-base text-gray-600 mt-1">A separate mechanism, using file <strong>Actions</strong>, is available to run a new prompt in bulk on all matching documents that already exist.</p>
+  <p class="text-base text-gray-600 mt-1">We'll run the prompts on documents that match our tags and see the results.</p>
 </div>
 
 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
@@ -280,7 +278,7 @@ permalink: /quick-start/
     <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 4</span>
     <span class="text-2xl font-bold text-indigo-800">Prompt Engineering</span>
   </div>
-  <p class="text-base text-gray-600 mt-1">Iterate on prompts to improve extraction quality.</p>
+  <p class="text-base text-gray-600 mt-1">We'll refine our prompts to get better and more accurate results.</p>
 </div>
 
 ```text
@@ -309,7 +307,7 @@ Be precise with numbers and dates.
     <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 5</span>
     <span class="text-2xl font-bold text-indigo-800">Manual Automation</span>
   </div>
-  <p class="text-base text-gray-600 mt-1">Leverage bulk uploads and actions for scale.</p>
+  <p class="text-base text-gray-600 mt-1">We'll process multiple documents at once to handle larger volumes.</p>
 </div>
 
 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
@@ -348,7 +346,7 @@ Be precise with numbers and dates.
     <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 6</span>
     <span class="text-2xl font-bold text-indigo-800">Full Automation with APIs</span>
   </div>
-  <p class="text-base text-gray-600 mt-1">Automate end-to-end with REST API or Python SDK.</p>
+  <p class="text-base text-gray-600 mt-1">We'll connect DocRouter to your systems for fully automated processing.</p>
 </div>
 
 ### REST API Automation
