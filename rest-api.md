@@ -5,14 +5,14 @@ permalink: /rest-api/
 ---
 
 <!-- Hero Section -->
-<div class="bg-gradient-to-br from-blue-50 via-white to-indigo-50 rounded-2xl p-8 mb-12 border border-blue-100">
+<div class="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl p-8 mb-12 border border-blue-100 shadow-lg">
   <div class="max-w-4xl mx-auto text-center">
     <p class="text-lg text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
       Everything in the DocRouter UI is available through REST APIs. Build custom integrations, automate workflows, and access all features programmatically.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
       <a href="https://app.docrouter.ai/fastapi/docs#/" target="_blank" rel="noopener noreferrer"
-         class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
+         class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl">
         <svg class="w-5 h-5 text-white hover:text-blue-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
         </svg>
@@ -31,8 +31,10 @@ permalink: /rest-api/
 
 ## Authentication
 
-<div class="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-200">
-  <p class="text-gray-700 leading-relaxed mb-6">
+<div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 mb-8 text-white">
+  <h3 class="text-2xl font-semibold text-white mb-4">🔐 API Authentication</h3>
+  <div class="bg-white bg-opacity-10 rounded-lg p-6">
+  <p class="text-blue-100 leading-relaxed mb-6">
     The DocRouter REST API uses token-based authentication. Choose the appropriate token type based on your integration needs:
   </p>
   
@@ -115,9 +117,10 @@ permalink: /rest-api/
              style="max-height: 162px; width: auto;">
       </div>
     </div>
-    <p class="text-xs text-gray-600 text-center mt-2">
+    <p class="text-xs text-blue-100 text-center mt-2">
       Screenshots showing the token management interface in the DocRouter application
     </p>
+  </div>
   </div>
 </div>
 
@@ -345,10 +348,10 @@ function copyToClipboard(elementId) {
 
 ## Interactive Documentation
 
-<div class="bg-gradient-to-br from-indigo-50 via-white to-blue-50 rounded-2xl p-8 mb-8 border border-indigo-100">
+<div class="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl p-8 mb-8 border border-blue-100 shadow-lg">
   <div class="text-center mb-8">
     <a href="https://app.docrouter.ai/fastapi/docs#/" target="_blank" rel="noopener noreferrer"
-       class="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-indigo-700 transition-colors shadow-lg hover:shadow-xl text-lg">
+       class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold transition-colors shadow-lg hover:shadow-xl text-lg">
       <svg class="w-5 h-5 text-white hover:text-blue-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
         </svg>
@@ -422,6 +425,11 @@ function copyToClipboard(elementId) {
 
 ## Resources & Tools
 
+<div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 mb-8 text-white">
+  <h3 class="text-2xl font-semibold text-white mb-2">🛠️ Developer Resources</h3>
+  <p class="text-blue-100">Everything you need to integrate with DocRouter APIs</p>
+</div>
+
 <div class="grid md:grid-cols-2 gap-6">
   <!-- OpenAPI Specification Panel -->
   <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
@@ -438,7 +446,7 @@ function copyToClipboard(elementId) {
     </div>
     <p class="text-gray-700 mb-4">Access the complete OpenAPI 3.0 specification for code generation and API exploration.</p>
     <a href="https://app.docrouter.ai/fastapi/openapi.json" target="_blank" rel="noopener noreferrer"
-       class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+       class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
       <span class="text-white hover:text-blue-100">View OpenAPI JSON</span>
       <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
