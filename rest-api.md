@@ -31,10 +31,8 @@ permalink: /rest-api/
 
 ## Authentication
 
-<div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 mb-8 text-white">
-  <h3 class="text-2xl font-semibold text-white mb-4">🔐 API Authentication</h3>
-  <div class="bg-white bg-opacity-10 rounded-lg p-6">
-  <p class="text-blue-100 leading-relaxed mb-6">
+<div class="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-200">
+  <p class="text-gray-700 leading-relaxed mb-6">
     The DocRouter REST API uses token-based authentication. Choose the appropriate token type based on your integration needs:
   </p>
   
@@ -117,10 +115,9 @@ permalink: /rest-api/
              style="max-height: 162px; width: auto;">
       </div>
     </div>
-    <p class="text-xs text-blue-100 text-center mt-2">
+    <p class="text-xs text-gray-600 text-center mt-2">
       Screenshots showing the token management interface in the DocRouter application
     </p>
-  </div>
   </div>
 </div>
 
@@ -424,11 +421,6 @@ function copyToClipboard(elementId) {
 </div>
 
 ## Resources & Tools
-
-<div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 mb-8 text-white">
-  <h3 class="text-2xl font-semibold text-white mb-2">🛠️ Developer Resources</h3>
-  <p class="text-blue-100">Everything you need to integrate with DocRouter APIs</p>
-</div>
 
 <div class="grid md:grid-cols-2 gap-6">
   <!-- OpenAPI Specification Panel -->
