@@ -410,12 +410,6 @@ Refer to the [Python SDK Reference](/python-sdk).
 
 ---
 
----
-
-For **Support**: Contact our technical support team.
-
-Ready to get started? [Launch DocRouter Application](https://app.docrouter.ai) or explore our [REST API](/rest-api) and [Python SDK](/python-sdk) documentation.
-
 <script>
 // Interactive Progress Indicator
 document.addEventListener('DOMContentLoaded', function() {
