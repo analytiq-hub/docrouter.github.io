@@ -31,7 +31,7 @@ permalink: /rest-api/
 
 ## Authentication
 
-<div class="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-200">
+<div class="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl p-8 mb-8 border border-blue-100 shadow-lg">
   <p class="text-gray-700 leading-relaxed mb-6">
     The DocRouter REST API uses token-based authentication. Choose the appropriate token type based on your integration needs:
   </p>
@@ -422,7 +422,8 @@ function copyToClipboard(elementId) {
 
 ## Resources & Tools
 
-<div class="grid md:grid-cols-2 gap-6">
+<div class="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl p-8 mb-8 border border-blue-100 shadow-lg">
+  <div class="grid md:grid-cols-2 gap-6">
   <!-- OpenAPI Specification Panel -->
   <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
     <div class="flex items-center gap-3 mb-4 mt-4">
@@ -481,4 +482,5 @@ function copyToClipboard(elementId) {
       </a>
     </div>
   </div>
+</div>
 </div>
