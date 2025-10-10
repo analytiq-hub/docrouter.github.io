@@ -21,12 +21,14 @@ title: "DocRouter - AI-Powered Document Processing"
                class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 border-2 border-transparent">
                 Launch Application
             </a>
-            <a href="quick-start"
+            <a href="how-it-works"
                class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
                 See How It Works
             </a>
         </div>
     </header>
+
+    <main>
 
     <!-- Banner Graphic Section -->
     <section class="mb-12">
@@ -35,26 +37,6 @@ title: "DocRouter - AI-Powered Document Processing"
              class="w-full">
     </section>
 
-    <!-- Results Section -->
-    <section class="bg-gray-50 rounded-lg p-8 mb-12">
-        <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">What Our Clients Achieve</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-                <div class="text-4xl font-bold text-blue-600 mb-2">90%</div>
-                <div class="text-gray-600">Faster Processing</div>
-            </div>
-            <div class="text-center">
-                <div class="text-4xl font-bold text-blue-600 mb-2">95%</div>
-                <div class="text-gray-600">Error Reduction</div>
-            </div>
-            <div class="text-center">
-                <div class="text-4xl font-bold text-blue-600 mb-2">$50K+</div>
-                <div class="text-gray-600">Annual Savings</div>
-            </div>
-        </div>
-    </section>
-
-    <main>
         <!-- Problem Statement Section -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">The Problems We Eliminate</h2>
@@ -83,35 +65,77 @@ title: "DocRouter - AI-Powered Document Processing"
             </div>
         </section>
 
-        <!-- Why Choose Us - Small Company Advantage -->
-        <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
-            <div class="text-center">
-                <h2 class="text-3xl font-semibold text-white mb-6">Why Choose a Specialized Solution?</h2>
-                <p class="text-xl text-blue-100 mb-8">
-                    Big companies can't afford to customize for your specific needs. We can.
-                </p>
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-white bg-opacity-10 rounded-lg p-6">
-                        <h3 class="text-xl font-medium text-white mb-3">Big Company Problems</h3>
-                        <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• One-size-fits-all solutions</li>
-                            <li>• Expensive enterprise pricing</li>
-                            <li>• Long implementation cycles</li>
-                            <li>• Generic support</li>
-                        </ul>
+    <!-- Technical Excellence Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
+        <div class="text-center">
+            <h2 class="text-3xl font-semibold text-white mb-6">Built for Developers, Designed for Business Users</h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Give your technical team the tools and help they need to integrate seamlessly
+            </p>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                    <h3 class="text-xl font-medium text-white mb-3">What Your Developers Get</h3>
+                    <ul class="text-blue-100 space-y-2 text-left">
+                        <li>• Comprehensive REST APIs with full documentation</li>
+                        <li>• Python SDK with code examples and samples</li>
+                        <li>• Webhook integrations for real-time processing</li>
+                        <li>• Interactive API documentation and Postman collections</li>
+                        <li>• Sandbox environment for testing integrations</li>
+                        <li>• Enterprise-grade security and compliance</li>
+                        <li>• Dedicated developer support and technical guidance</li>
+                    </ul>
+                    <div class="mt-6 flex flex-col gap-2">
+                        <a href="{{ '/rest-api/' | relative_url }}"
+                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30 text-center">
+                            View API Documentation
+                        </a>
+                        <a href="{{ '/python-sdk/' | relative_url }}"
+                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30 text-center">
+                            Python SDK
+                        </a>
                     </div>
-                    <div class="bg-white bg-opacity-10 rounded-lg p-6">
-                        <h3 class="text-xl font-medium text-white mb-3">Our Advantage</h3>
-                        <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Customized for your industry</li>
-                            <li>• Affordable pricing</li>
-                            <li>• Quick setup and training</li>
-                            <li>• Direct access to our team</li>
-                        </ul>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                    <h3 class="text-xl font-medium text-white mb-3">Implementation Services & Support</h3>
+                    <ul class="text-blue-100 space-y-2 text-left">
+                        <li>• Custom integration architecture design</li>
+                        <li>• End-to-end implementation and deployment</li>
+                        <li>• Team training and knowledge transfer</li>
+                        <li>• Ongoing technical support and maintenance</li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="javascript:void(0)" onclick="openCalendly()"
+                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30 text-center">
+                            Discuss Implementation
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+        <!-- Results Section -->
+    <section class="bg-gray-50 rounded-lg p-8 mb-12">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">What Our Clients Achieve</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2">90%</div>
+                <div class="text-gray-600">Faster Processing</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2">95%</div>
+                <div class="text-gray-600">Error Reduction</div>
+            </div>
+            <div class="text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2">$50K+</div>
+                <div class="text-gray-600">Annual Savings</div>
+            </div>
+        </div>
+    </section>
+
+
+
+  
 
         <!-- Featured Solutions - Above the Fold -->
         <section id="featured-solutions" class="bg-white rounded-lg shadow-lg p-8 mb-12">
@@ -195,36 +219,6 @@ title: "DocRouter - AI-Powered Document Processing"
                    class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
                     See More Solutions
                 </a>
-            </div>
-        </section>
-
-
-        <!-- User Experience Section -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">User Experience</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="{{ '/assets/images/docrouter/files.png' | relative_url }}" alt="Document List Interface" class="w-full">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="{{ '/assets/images/docrouter/extractions.png' | relative_url }}" alt="Data Extraction Interface" class="w-full">
-                </div>
-            </div>
-        </section>
-
-        <!-- DocRouter Workflow Sections -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <div class="flex justify-center">
-                <img src="{{ '/assets/images/docrouter/flow.svg' | relative_url }}" alt="DocRouter Workflow" class="w-full max-w-2xl">
-            </div>
-        </section>
-
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <div class="flex justify-center">
-                <img src="{{ '/assets/images/docrouter/docrouter-workflow.svg' | relative_url }}" alt="Detailed Workflow" class="w-full max-w-4xl">
-            </div>
-            <div class="mt-6 text-center text-sm text-gray-600">
-                <p>Documents flow through automated processing with human oversight for quality control</p>
             </div>
         </section>
 

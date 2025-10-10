@@ -76,6 +76,8 @@ header_pages:
   - title: "Docs"
     url: "#"
     children:
+      - title: "How It Works"
+        url: "/how-it-works"
       - title: "Quick Start Guide"
         url: "/quick-start"
       - title: "REST APIs"

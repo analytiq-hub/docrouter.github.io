@@ -11,3 +11,8 @@ function openCalendlyModal() {
         window.open('https://calendly.com/analytiqhub', '_blank', 'width=800,height=600,scrollbars=yes,resizable=yes');
     }
 }
+
+// Alias function for consistency across pages
+function openCalendly() {
+    openCalendlyModal();
+}

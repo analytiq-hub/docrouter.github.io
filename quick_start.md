@@ -4,30 +4,39 @@ title: Quick Start Guide
 permalink: /quick-start/
 ---
 
-Get up and running with DocRouter in minutes. This guide walks you through the complete workflow from document upload to automation.
+
 
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
   <div class="rounded-xl border border-gray-200 bg-white p-6">
     <h2 class="text-2xl font-bold mb-3">Overview</h2>
-    <p>DocRouter transforms your document processing workflow through these key steps:</p>
-    <ol class="list-decimal pl-5 space-y-2 mt-2">
-      <li><strong>Upload</strong> your first document</li>
-      <li><strong>Configure</strong> a tag, schema, and prompt</li>
-      <li><strong>Run</strong> the prompt on tagged document(s)</li>
-      <li><strong>Prompt Engineering</strong> to improve extraction quality</li>
-      <li><strong>Manual Automation</strong> using bulk actions</li>
-      <li><strong>Full Automation</strong> with REST API or Python SDK</li>
-    </ol>
+    <p>Get up and running with DocRouter in minutes. This guide walks you through the complete workflow from document upload to automation. DocRouter transforms your document processing workflow through these key steps:</p>
+    <ul class="list-decimal pl-5 space-y-2 mt-2">
+      <li><b>Step 1</b> - Upload your first document</li>
+      <li><b>Step 2</b> - Configure a tag, schema, and prompt</li>
+      <li><b>Step 3</b> - Run the prompt on tagged document(s)</li>
+      <li><b>Step 4</b> - Prompt Engineering to improve extraction quality</li>
+      <li><b>Step 5</b> - Manual Automation using bulk actions</li>
+      <li><b>Step 6</b> - Full Automation with REST API or Python SDK</li>
+    </ul>
   </div>
   <div class="rounded-xl border border-indigo-200 bg-indigo-50 p-6">
-    <h2 class="text-2xl font-bold mb-3">Sample File, Schema and Prompt</h2>
+    <h2 class="text-2xl font-bold mb-3">Documents You Will Need for this Quick Start</h2>
     <div class="grid grid-cols-1 gap-3">
+      <a href="/assets/files/quick_start_documents.zip" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
+        <div class="flex items-center gap-3 min-w-0">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">ZIP</span>
+          <div class="min-w-0">
+            <div class="text-gray-700"><span class="font-bold">All Sample Files</span> - Download all three files at once</div>
+            <div class="text-xs text-gray-500 truncate" title="quick_start_documents.zip">quick_start_documents.zip</div>
+          </div>
+        </div>
+      </a>
       <a href="/assets/files/Acord80_Homeowners_App.pdf" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
         <div class="flex items-center gap-3 min-w-0">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">PDF</span>
           <div class="min-w-0">
-            <div class="font-medium group-hover:text-blue-700 truncate" title="Acord80_Homeowners_App.pdf">Acord80_Homeowners_App.pdf</div>
-            <div class="text-xs text-gray-500">Sample document</div>
+            <div class="text-gray-700"><span class="font-bold">Sample Document</span> - A homeowners insurance application form</div>
+            <div class="text-xs text-gray-500 truncate" title="Acord80_Homeowners_App.pdf">Acord80_Homeowners_App.pdf</div>
           </div>
         </div>
       </a>
@@ -35,8 +44,8 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
         <div class="flex items-center gap-3 min-w-0">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">TXT</span>
           <div class="min-w-0">
-            <div class="font-medium group-hover:text-blue-700 truncate" title="acord_clearance_search_prompt.txt">acord_clearance_search_prompt.txt</div>
-            <div class="text-xs text-gray-500">Prompt to extract fields</div>
+            <div class="text-gray-700"><span class="font-bold">Sample Prompt</span> - Prompt to extract fields from insurance form</div>
+            <div class="text-xs text-gray-500 truncate" title="acord_clearance_search_prompt.txt">acord_clearance_search_prompt.txt</div>
           </div>
         </div>
       </a>
@@ -44,8 +53,8 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
         <div class="flex items-center gap-3 min-w-0">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">JSON</span>
           <div class="min-w-0">
-            <div class="font-medium group-hover:text-blue-700 truncate" title="acord_clearance_search_schema.json">acord_clearance_search_schema.json</div>
-            <div class="text-xs text-gray-500">Schema for structured output</div>
+            <div class="text-gray-700"><span class="font-bold">Sample Schema</span> - Schema for structured output</div>
+            <div class="text-xs text-gray-500 truncate" title="acord_clearance_search_schema.json">acord_clearance_search_schema.json</div>
           </div>
         </div>
       </a>
@@ -53,11 +62,25 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
   </div>
 </div>
 
+<!-- Progress Indicator -->
+<div class="bg-gray-100 rounded-lg p-4 mb-8 sticky top-4 z-10">
+  <div class="flex items-center justify-between text-sm">
+    <span class="font-medium">Quick Start Progress</span>
+    <span class="text-gray-600">Step <span id="current-step">1</span> of 6</span>
+  </div>
+  <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+    <div id="progress-bar" class="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full transition-all duration-300" style="width: 16.67%"></div>
+  </div>
+</div>
+
 ---
 
-<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 1: Upload Your First Document</span>
-  <p class="text-sm text-gray-600 mt-1">Start by uploading a file and verifying it processed.</p>
+<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3" id="step-1">
+  <div class="flex items-center mb-2">
+    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 1</span>
+    <span class="text-2xl font-bold text-indigo-800">Upload Your First Document</span>
+  </div>
+  <p class="text-base text-gray-600 mt-1">We start by uploading a file and making sure it processes correctly.</p>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
@@ -124,10 +147,12 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
 
 ---
 
-<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 2: Configure a Tag, Schema and Prompt</span>
-  <p class="text-sm text-gray-600 mt-1">To prevent running all the prompts on all the documents, we use a tag mechanism to assign which prompts run on which documents.
-</p>
+<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-2">
+  <div class="flex items-center mb-2">
+    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 2</span>
+    <span class="text-2xl font-bold text-indigo-800">Configure a Tag, Schema and Prompt</span>
+  </div>
+  <p class="text-base text-gray-600 mt-1">We'll set up tags to tell DocRouter which prompts should run on which documents.</p>
 </div>
 
 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
@@ -203,10 +228,12 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
 </div>
 
 
-<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 3: Run The Prompt On The Tagged Document(s)</span>
-  <p class="text-sm text-gray-600 mt-1">If a document is tagged at upload time, all prompts with that tag will be run automatically. However, if a prompt is added, updated or tagged after the document has been uploaded, the prompt will need to be manually run on the matching documents.</p>
-  <p class="text-sm text-gray-600 mt-1">A separate mechanism, using file <strong>Actions</strong>, is available to run a new prompt in bulk on all matching documents that already exist.</p>
+<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-3">
+  <div class="flex items-center mb-2">
+    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 3</span>
+    <span class="text-2xl font-bold text-indigo-800">Run The Prompt On The Tagged Document(s)</span>
+  </div>
+  <p class="text-base text-gray-600 mt-1">We'll run the prompts on documents that match our tags and see the results.</p>
 </div>
 
 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
@@ -246,9 +273,12 @@ Get up and running with DocRouter in minutes. This guide walks you through the c
 ---
 
 
-<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 4. Prompt Engineering</span>
-  <p class="text-sm text-gray-600 mt-1">Iterate on prompts to improve extraction quality.</p>
+<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-4">
+  <div class="flex items-center mb-2">
+    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 4</span>
+    <span class="text-2xl font-bold text-indigo-800">Prompt Engineering</span>
+  </div>
+  <p class="text-base text-gray-600 mt-1">We'll refine our prompts to get better and more accurate results.</p>
 </div>
 
 ```text
@@ -272,9 +302,12 @@ Be precise with numbers and dates.
 
 ---
 
-<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 5: Manual Automation</span>
-  <p class="text-sm text-gray-600 mt-1">Leverage bulk uploads and actions for scale.</p>
+<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-5">
+  <div class="flex items-center mb-2">
+    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 5</span>
+    <span class="text-2xl font-bold text-indigo-800">Manual Automation</span>
+  </div>
+  <p class="text-base text-gray-600 mt-1">We'll process multiple documents at once to handle larger volumes.</p>
 </div>
 
 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
@@ -308,9 +341,12 @@ Be precise with numbers and dates.
 
 ---
 
-<div class="rounded-lg bg-indigo-50 border border-indigo-200 px-4 py-3 mb-3 mt-10">
-  <span class="text-2xl font-bold text-indigo-800" role="heading" aria-level="2">Step 6: Full Automation with APIs</span>
-  <p class="text-sm text-gray-600 mt-1">Automate end-to-end with REST API or Python SDK.</p>
+<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-6">
+  <div class="flex items-center mb-2">
+    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 6</span>
+    <span class="text-2xl font-bold text-indigo-800">Full Automation with APIs</span>
+  </div>
+  <p class="text-base text-gray-600 mt-1">We'll connect DocRouter to your systems for fully automated processing.</p>
 </div>
 
 ### REST API Automation
@@ -374,6 +410,46 @@ Refer to the [Python SDK Reference](/python-sdk).
 
 ---
 
-For **Support**: Contact our technical support team.
-
-Ready to get started? [Launch DocRouter Application](https://app.docrouter.ai) or explore our [REST API](/rest-api) and [Python SDK](/python-sdk) documentation.
+<script>
+// Interactive Progress Indicator
+document.addEventListener('DOMContentLoaded', function() {
+  const progressBar = document.getElementById('progress-bar');
+  const currentStepSpan = document.getElementById('current-step');
+  const steps = ['step-1', 'step-2', 'step-3', 'step-4', 'step-5', 'step-6'];
+  
+  function updateProgress() {
+    let currentStep = 1;
+    
+    // Find the step that's most prominently in view
+    steps.forEach((stepId, index) => {
+      const element = document.getElementById(stepId);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const stepTop = rect.top;
+        const stepBottom = rect.bottom;
+        const viewportCenter = window.innerHeight * 0.5;
+        
+        // If step is above the center of viewport, we've passed it
+        if (stepBottom < viewportCenter) {
+          currentStep = index + 1;
+        }
+        // If step is in the center area of viewport, it's the current step
+        else if (stepTop <= viewportCenter && stepBottom >= viewportCenter) {
+          currentStep = index + 1;
+        }
+      }
+    });
+    
+    // Update progress bar and current step
+    const progress = (currentStep / 6) * 100;
+    progressBar.style.width = progress + '%';
+    currentStepSpan.textContent = currentStep;
+  }
+  
+  // Update progress on scroll
+  window.addEventListener('scroll', updateProgress);
+  
+  // Update progress on page load
+  updateProgress();
+});
+</script>
