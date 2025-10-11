@@ -50,16 +50,48 @@
     }
   </script>
   
+  <!-- Basic light theme for code blocks -->
+  <style>
+    pre, code, .hljs {
+      background: #ffffff;
+      color: #333333;
+    }
+  </style>
+  
   <!-- Syntax highlighting with highlight.js -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Simple light theme application
+      const style = document.createElement('style');
+      style.textContent = `
+        pre[class*="language-"],
+        code[class*="language-"],
+        .hljs {
+          background: #ffffff;
+          color: #333333;
+        }
+        .hljs-keyword, .hljs-selector-tag, .hljs-built_in { color: #9333ea; }
+        .hljs-name, .hljs-title.function_ { color: #2563eb; }
+        .hljs-string, .hljs-attr { color: #ea580c; }
+        .hljs-comment, .hljs-quote { color: #6b7280; font-style: italic; }
+        .hljs-number, .hljs-literal { color: #2563eb; }
+        .hljs-type, .hljs-class, .hljs-title.class_ { color: #ea580c; }
+        .hljs-variable, .hljs-property { color: #374151; }
+      `;
+      document.head.appendChild(style);
+      
+      // Apply highlighting
+      hljs.highlightAll();
+    });
+  </script>
   
   <!-- Custom styles link -->
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 
   <!-- DocRouter custom styles -->
   <link rel="stylesheet" href="{{ "/assets/css/docrouter.css" | relative_url }}">
+  
   
   <!-- Pagination script -->
   <script src="{{ "/assets/js/pagination.js" | relative_url }}" defer></script>
