@@ -66,16 +66,16 @@ title: "DocRouter - AI-Powered Document Processing"
         </section>
 
     <!-- Technical Excellence Section -->
-    <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
+    <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
         <div class="text-center">
-            <h2 class="text-3xl font-semibold text-white mb-6">Built for Developers, Designed for Business Users</h2>
-            <p class="text-xl text-blue-100 mb-8">
+            <h2 class="text-3xl font-semibold text-gray-900 mb-6">Built for Developers, Designed for Business Users</h2>
+            <p class="text-xl text-gray-600 mb-8">
                 Give your technical team the tools and help they need to integrate seamlessly
             </p>
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 shadow-md">
                     <h3 class="text-xl font-medium text-white mb-3">What Your Developers Get</h3>
-                    <ul class="text-blue-100 space-y-2 text-left">
+                    <ul class="text-white space-y-2 text-left">
                         <li>• Comprehensive REST APIs with full documentation</li>
                         <li>• Python SDK with code examples and samples</li>
                         <li>• Webhook integrations for real-time processing</li>
@@ -86,18 +86,18 @@ title: "DocRouter - AI-Powered Document Processing"
                     </ul>
                     <div class="mt-6 flex flex-col gap-2">
                         <a href="{{ '/docs/rest-api/' | relative_url }}"
-                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30 text-center">
+                           class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center">
                             View API Documentation
                         </a>
                         <a href="{{ '/docs/python-sdk/' | relative_url }}"
-                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30 text-center">
+                           class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center">
                             Python SDK
                         </a>
                     </div>
                 </div>
-                <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 shadow-md">
                     <h3 class="text-xl font-medium text-white mb-3">Implementation Services & Support</h3>
-                    <ul class="text-blue-100 space-y-2 text-left">
+                    <ul class="text-white space-y-2 text-left">
                         <li>• Custom integration architecture design</li>
                         <li>• End-to-end implementation and deployment</li>
                         <li>• Team training and knowledge transfer</li>
@@ -105,7 +105,7 @@ title: "DocRouter - AI-Powered Document Processing"
                     </ul>
                     <div class="mt-6">
                         <a href="javascript:void(0)" onclick="openCalendly()"
-                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30 text-center">
+                           class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center">
                             Discuss Implementation
                         </a>
                     </div>
