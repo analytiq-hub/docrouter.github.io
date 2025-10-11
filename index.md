@@ -238,6 +238,11 @@ title: "DocRouter - AI-Powered Document Processing"
                                 <a href="mailto:andrei@analytiqhub.com" class="text-blue-600 hover:text-blue-800">
                                     andrei@analytiqhub.com
                                 </a>
+                                <div class="mt-3">
+                                    <img src="{{ '/assets/images/nvidia-inception-program-badge-rgb-for-screen.png' | relative_url }}" 
+                                         alt="NVIDIA Inception Program" 
+                                         class="h-12 w-auto">
+                                </div>
                             </div>
                         </div>
                         <div class="flex items-center">
