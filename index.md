@@ -265,11 +265,14 @@ title: "DocRouter - AI-Powered Document Processing"
                                    class="text-blue-600 hover:text-blue-800">
                                     linkedin.com/company/docrouter
                                 </a>
-                                <div class="mt-3">
-                                    <img src="{{ '/assets/images/nvidia-inception-program-badge-rgb-for-screen.png' | relative_url }}" 
-                                         alt="NVIDIA Inception Program" 
-                                         class="h-12 w-auto">
-                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 mr-4"></div>
+                            <div>
+                                <img src="{{ '/assets/images/nvidia-inception-program-badge-rgb-for-screen.png' | relative_url }}" 
+                                     alt="NVIDIA Inception Program" 
+                                     class="h-12 w-auto">
                             </div>
                         </div>
                     </div>
