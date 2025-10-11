@@ -45,7 +45,7 @@ title: Blog
                                         <span class="text-gray-400">•</span>
                                         <div class="flex flex-wrap gap-2">
                                             {% for category in post.categories %}
-                                                <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-md text-xs font-medium">
+                                                <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-2 py-1 rounded-md text-xs font-medium">
                                                     {{ category | replace: '_', ' ' | capitalize }}
                                                 </span>
                                             {% endfor %}
@@ -99,7 +99,7 @@ title: Blog
                         <div class="flex items-center gap-2">
                             {% for page in (1..paginator.total_pages) %}
                                 {% if page == paginator.page %}
-                                    <span class="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-md">
+                                    <span class="px-3 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-md">
                                         {{ page }}
                                     </span>
                                 {% elsif page == 1 %}
