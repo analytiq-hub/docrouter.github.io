@@ -85,15 +85,15 @@ title: "Supply Chain Document Processing - DocRouter Solutions"
             <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">Supply Chain Results</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">85%</div>
+                    <div class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">85%</div>
                     <div class="text-gray-600">Faster Processing</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">98%</div>
+                    <div class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">98%</div>
                     <div class="text-gray-600">Data Accuracy</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">$75K+</div>
+                    <div class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">$75K+</div>
                     <div class="text-gray-600">Annual Savings</div>
                 </div>
             </div>
