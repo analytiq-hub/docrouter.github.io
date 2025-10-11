@@ -136,7 +136,7 @@ title: "DocRouter Python SDK"
             </div>
         </section>
 
-        <section id="github" class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-lg p-8 mb-12">
+        <section id="github" class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
             <div class="text-center">
                 <span class="text-2xl font-semibold text-white mb-4">
                 <h2>GitHub Repository</h2>
