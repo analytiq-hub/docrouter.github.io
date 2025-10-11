@@ -51,7 +51,7 @@ title: "Supply Chain Document Processing - DocRouter Solutions"
         </section>
 
         <!-- Solution Section -->
-        <section class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-lg p-8 mb-12">
+        <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
             <div class="text-center">
                 <h2 class="text-3xl font-semibold text-white mb-6">How DocRouter Transforms Supply Chain Operations</h2>
                 <p class="text-xl text-blue-100 mb-8">
@@ -108,7 +108,7 @@ title: "Supply Chain Document Processing - DocRouter Solutions"
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <button onclick="openCalendly()"
-                            class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
+                            class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
                         Schedule a Meeting
                     </button>
                     <a href="https://app.docrouter.ai"
