@@ -34,8 +34,8 @@ All DocRouter schemas follow this format:
     "name": "document_extraction",
     "schema": {
       "type": "object",
-      "properties": { ... },
-      "required": [ ... ],
+      "properties": {},
+      "required": [],
       "additionalProperties": false
     },
     "strict": true
