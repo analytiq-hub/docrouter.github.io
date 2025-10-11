@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How It Works - DocRouter"
-permalink: /how-it-works/
+permalink: /docs/how-it-works/
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
@@ -95,7 +95,7 @@ permalink: /how-it-works/
                         <li>• Webhook notifications</li>
                         <li>• Batch processing support</li>
                     </ul>
-                    <a href="{{ '/rest-api/' | relative_url }}" 
+                    <a href="{{ '/docs/rest-api/' | relative_url }}" 
                        class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg font-medium transition-colors duration-200">
                         View API Docs
                     </a>
@@ -204,7 +204,7 @@ permalink: /how-it-works/
                        class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
                         Try It Free
                     </a>
-                    <a href="{{ '/quick-start/' | relative_url }}"
+                    <a href="{{ '/docs/quick-start/' | relative_url }}"
                        class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
                         Use the Quick Start
                     </a>

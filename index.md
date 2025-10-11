@@ -85,11 +85,11 @@ title: "DocRouter - AI-Powered Document Processing"
                         <li>• Dedicated developer support and technical guidance</li>
                     </ul>
                     <div class="mt-6 flex flex-col gap-2">
-                        <a href="{{ '/rest-api/' | relative_url }}"
+                        <a href="{{ '/docs/rest-api/' | relative_url }}"
                            class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30 text-center">
                             View API Documentation
                         </a>
-                        <a href="{{ '/python-sdk/' | relative_url }}"
+                        <a href="{{ '/docs/python-sdk/' | relative_url }}"
                            class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30 text-center">
                             Python SDK
                         </a>

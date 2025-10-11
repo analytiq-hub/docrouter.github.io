@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Quick Start Guide
-permalink: /quick-start/
+permalink: /docs/quick-start/
 ---
 
 
@@ -402,11 +402,11 @@ curl -X GET https://api.docrouter.ai/v0/orgs/YOUR_ORG_ID/llm/results/DOCUMENT_ID
 - `llm_completed`: All processing complete, results available
 - `llm_failed`: Processing failed
 
-For more details, see - [REST API Documentation](/rest-api).
+For more details, see - [REST API Documentation](/docs/rest-api).
 
 ### Python SDK Automation
 
-Refer to the [Python SDK Reference](/python-sdk).
+Refer to the [Python SDK Reference](/docs/python-sdk).
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: DocRouter REST API
-permalink: /rest-api/
+permalink: /docs/rest-api/
 ---
 
 <!-- Hero Section -->
@@ -462,7 +462,7 @@ function copyToClipboard(elementId) {
     </div>
     <p class="text-gray-700 mb-4">Ready-to-use SDKs and tools for generating client libraries in your preferred language.</p>
     <div class="space-y-3">
-      <a href="/python-sdk/" class="flex items-center justify-between bg-gray-50 hover:bg-gray-100 rounded-lg p-3 transition-colors group">
+      <a href="/docs/python-sdk/" class="flex items-center justify-between bg-gray-50 hover:bg-gray-100 rounded-lg p-3 transition-colors group">
         <div>
           <span class="font-medium text-gray-900 group-hover:text-green-600">Python SDK</span>
           <p class="text-sm text-gray-600">Official client library</p>
