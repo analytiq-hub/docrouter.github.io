@@ -4,8 +4,6 @@ title: "DocRouter Schema Definition Manual"
 permalink: /docs/schemas/
 ---
 
-# DocRouter Schema Definition Manual
-
 ## Overview
 
 DocRouter uses **OpenAI's Structured Outputs JSON Schema format** to define extraction schemas for document processing. Schemas ensure that AI-extracted data from documents follows a consistent, validated structure.
@@ -51,18 +49,17 @@ All DocRouter schemas follow this format:
 |-----------|------|----------|-------------|
 | `type` | string | Yes | Must be `"json_schema"` |
 | `json_schema` | object | Yes | Container for schema definition |
-| `json_schema.name` | string | Yes | Identifier for the schema (typically `"document_extraction"`) |
+| `json_schema.name` | string | Yes | Identifier for the schema |
 | `json_schema.schema` | object | Yes | JSON Schema specification following JSON Schema Draft 7 |
 | `json_schema.strict` | boolean | Yes | **Must be `true`** - Ensures 100% schema adherence |
 
 ### Strict Mode Constraints
 
-When `strict: true` is enabled (mandatory for DocRouter), the following rules apply:
+DocRouter always uses `strict: true` mode, which requires these additional constraints beyond standard JSON Schema:
 
 1. **All properties MUST be in the `required` array** - No optional fields allowed
 2. **`additionalProperties: false` MUST be set** - At every level, including nested objects
-3. **Perfect schema adherence** - The LLM output will always match the schema exactly
-4. **Default values for missing data** - Empty strings, zeros, false, or empty arrays/objects
+
 
 ---
 
@@ -205,24 +202,6 @@ DocRouter schemas support standard JSON Schema data types:
 
 ---
 
-## Required Fields and Strict Mode
-
-### Strict Mode Requirements
-
-**IMPORTANT:** When using OpenAI's Structured Outputs with `strict: true` (which DocRouter uses), **ALL properties MUST be listed in the `required` array**. This is a mandatory requirement from OpenAI's API.
-
-```json
-{
-  "type": "object",
-  "properties": {
-    "name": { "type": "string", "description": "Full name" },
-    "email": { "type": "string", "description": "Email address" },
-    "middle_name": { "type": "string", "description": "Middle name" }
-  },
-  "required": ["name", "email", "middle_name"],
-  "additionalProperties": false
-}
-```
 
 ### How the LLM Handles Missing Data
 
@@ -247,181 +226,39 @@ Since all fields must be required in strict mode, the LLM handles missing data a
 - **Handle validation in your application code** instead of in the schema
 - **Use detailed descriptions** to guide the LLM rather than strict constraints
 
-### Enums (Restricted Values) - ⚠️ NOT RECOMMENDED
 
-While OpenAI supports limiting field values to specific options, this feature may not work with other LLM providers:
 
-```json
-{
-  "document_type": {
-    "type": "string",
-    "description": "Type of document",
-    "enum": ["invoice", "receipt", "contract", "bill"]
-  }
-}
-```
-
-**Better approach:**
-```json
-{
-  "document_type": {
-    "type": "string",
-    "description": "Type of document (e.g., invoice, receipt, contract, or bill)"
-  }
-}
-```
-
-### String Patterns - ⚠️ NOT RECOMMENDED
-
-Regex validation is OpenAI-specific and reduces portability:
-
-```json
-{
-  "phone": {
-    "type": "string",
-    "description": "Phone number in E.164 format",
-    "pattern": "^\\+[1-9]\\d{1,14}$"
-  }
-}
-```
-
-**Better approach:**
-```json
-{
-  "phone": {
-    "type": "string",
-    "description": "Phone number in E.164 format (e.g., +1234567890)"
-  }
-}
-```
-
-### Number Constraints - ⚠️ NOT RECOMMENDED
-
-Minimum, maximum, and multipleOf constraints may not be portable:
-
-```json
-{
-  "age": {
-    "type": "integer",
-    "description": "Age in years",
-    "minimum": 0,
-    "maximum": 150
-  },
-  "price": {
-    "type": "number",
-    "description": "Price in USD",
-    "minimum": 0,
-    "multipleOf": 0.01
-  }
-}
-```
-
-**Better approach:**
-```json
-{
-  "age": {
-    "type": "integer",
-    "description": "Age in years (0-150)"
-  },
-  "price": {
-    "type": "number",
-    "description": "Price in USD (e.g., 19.99)"
-  }
-}
-```
-
-### Array Constraints - ⚠️ NOT RECOMMENDED
-
-Array size and uniqueness constraints are not universally supported:
-
-```json
-{
-  "tags": {
-    "type": "array",
-    "description": "Document tags",
-    "items": {
-      "type": "string"
-    },
-    "minItems": 1,
-    "maxItems": 10,
-    "uniqueItems": true
-  }
-}
-```
-
-**Better approach:**
-```json
-{
-  "tags": {
-    "type": "array",
-    "description": "Document tags (1-10 unique tags)",
-    "items": {
-      "type": "string"
-    }
-  }
-}
-```
-
-### Complex Nested Objects
-
-```json
-{
-  "work_history": {
-    "type": "array",
-    "description": "Employment history",
-    "items": {
-      "type": "object",
-      "properties": {
-        "company": {
-          "type": "string",
-          "description": "Company name"
-        },
-        "position": {
-          "type": "string",
-          "description": "Job title"
-        },
-        "start_date": {
-          "type": "string",
-          "description": "Start date (YYYY-MM-DD)"
-        },
-        "end_date": {
-          "type": "string",
-          "description": "End date (YYYY-MM-DD or 'Present')"
-        },
-        "responsibilities": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "List of job responsibilities"
-        }
-      },
-      "required": ["company", "position", "start_date", "end_date", "responsibilities"],
-      "additionalProperties": false
-    }
-  }
-}
-```
 
 ---
 
 ## Best Practices
 
-### 1. Use Clear, Descriptive Field Names
+### 1. Use Clear, Descriptive Field Names and Detailed Descriptions
 
 **Good:**
 ```json
-"current_academic_program": { "type": "string", "description": "Current degree program" }
+{
+  "current_academic_program": {
+    "type": "string",
+    "description": "Current degree program (e.g., MEng Computing, BSc Computer Science)"
+  }
+}
 ```
 
 **Avoid:**
 ```json
-"prog": { "type": "string", "description": "program" }
+{
+  "prog": {
+    "type": "string",
+    "description": "program"
+  }
+}
 ```
 
-### 2. Provide Detailed Descriptions
-
-Descriptions guide the LLM on what to extract:
+Descriptions guide the LLM on what to extract and should include:
+- What data to extract
+- Expected format
+- Examples when helpful
 
 **Good:**
 ```json
@@ -443,33 +280,20 @@ Descriptions guide the LLM on what to extract:
 }
 ```
 
-### 3. Choose Appropriate Field Types
+**Additional Context in Prompts:** While field descriptions provide specific guidance for each field, you can also provide additional context and instructions in the prompt associated with the schema. This is particularly useful for:
+- Document-specific extraction rules
+- Edge case handling instructions
+- Format preferences that apply across multiple fields
+- Business logic that guides the overall extraction process
+
+### 2. Choose Appropriate Field Types
 
 - Use **string** for currency values with formatting (e.g., "$1,234.56")
 - Use **number** for numeric calculations
 - Use **array** for multiple items instead of comma-separated strings
 - Use **object** to group related fields
 
-### 4. Set `additionalProperties: false`
-
-Prevent the LLM from adding unexpected fields:
-
-```json
-{
-  "type": "object",
-  "properties": { ... },
-  "additionalProperties": false
-}
-```
-
-### 5. All Fields Must Be Required (Strict Mode)
-
-- **ALL fields must be listed in the `required` array** when using `strict: true`
-- The LLM will return empty/default values for fields not found in the document
-- Design your schema to handle empty values gracefully in your application logic
-- There are no optional fields in strict mode - this is an OpenAI API requirement
-
-### 6. Avoid Advanced Constraints for Portability
+### 3. Avoid Advanced Constraints for Portability
 
 For maximum portability across LLM providers (OpenAI, Anthropic, Gemini, etc.):
 
@@ -498,12 +322,6 @@ For maximum portability across LLM providers (OpenAI, Anthropic, Gemini, etc.):
 }
 ```
 
-### 7. Document Your Schema
-
-Include clear descriptions that explain:
-- What data to extract
-- Expected format
-- How to handle edge cases
 
 ---
 
