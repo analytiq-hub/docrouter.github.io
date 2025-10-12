@@ -45,7 +45,7 @@ title: Blog
                                         <span class="text-gray-400">•</span>
                                         <div class="flex flex-wrap gap-2">
                                             {% for category in post.categories %}
-                                                <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-2 py-1 rounded-md text-xs font-medium">
+                                                <span class="border border-gray-300 text-gray-700 px-2 py-1 rounded-md text-xs font-medium hover:bg-gray-50 transition-colors">
                                                     {{ category | replace: '_', ' ' | capitalize }}
                                                 </span>
                                             {% endfor %}
