@@ -115,7 +115,7 @@ kubectl port-forward svc/docrouter-frontend 8080:80</code></pre>
                     <a href="https://github.com/analytiq-hub/doc-router"
                        target="_blank"
                        rel="noopener noreferrer"
-                       class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
+                       class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
                         View on GitHub
                     </a>
                     <button onclick="openCalendly()"

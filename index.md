@@ -66,16 +66,16 @@ title: "DocRouter - AI-Powered Document Processing"
         </section>
 
     <!-- Technical Excellence Section -->
-    <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
+    <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
         <div class="text-center">
-            <h2 class="text-3xl font-semibold text-white mb-6">Built for Developers, Designed for Business Users</h2>
-            <p class="text-xl text-blue-100 mb-8">
+            <h2 class="text-3xl font-semibold text-gray-900 mb-6">Built for Developers, Designed for Business Users</h2>
+            <p class="text-xl text-gray-600 mb-8">
                 Give your technical team the tools and help they need to integrate seamlessly
             </p>
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 shadow-md">
                     <h3 class="text-xl font-medium text-white mb-3">What Your Developers Get</h3>
-                    <ul class="text-blue-100 space-y-2 text-left">
+                    <ul class="text-white space-y-2 text-left">
                         <li>• Comprehensive REST APIs with full documentation</li>
                         <li>• Python SDK with code examples and samples</li>
                         <li>• Webhook integrations for real-time processing</li>
@@ -86,18 +86,18 @@ title: "DocRouter - AI-Powered Document Processing"
                     </ul>
                     <div class="mt-6 flex flex-col gap-2">
                         <a href="{{ '/docs/rest-api/' | relative_url }}"
-                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30 text-center">
+                           class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center">
                             View API Documentation
                         </a>
                         <a href="{{ '/docs/python-sdk/' | relative_url }}"
-                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30 text-center">
+                           class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center">
                             Python SDK
                         </a>
                     </div>
                 </div>
-                <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 shadow-md">
                     <h3 class="text-xl font-medium text-white mb-3">Implementation Services & Support</h3>
-                    <ul class="text-blue-100 space-y-2 text-left">
+                    <ul class="text-white space-y-2 text-left">
                         <li>• Custom integration architecture design</li>
                         <li>• End-to-end implementation and deployment</li>
                         <li>• Team training and knowledge transfer</li>
@@ -105,7 +105,7 @@ title: "DocRouter - AI-Powered Document Processing"
                     </ul>
                     <div class="mt-6">
                         <a href="javascript:void(0)" onclick="openCalendly()"
-                           class="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 border border-white border-opacity-30 text-center">
+                           class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center">
                             Discuss Implementation
                         </a>
                     </div>
@@ -253,7 +253,9 @@ title: "DocRouter - AI-Powered Document Processing"
                         </div>
                         <div class="flex items-center">
                             <div class="bg-blue-100 rounded-full w-10 h-10 flex items-center justify-center mr-4">
-                                <span class="text-lg">🔗</span>
+                                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
                             </div>
                             <div>
                                 <p class="font-medium text-gray-900">LinkedIn</p>
