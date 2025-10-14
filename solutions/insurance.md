@@ -44,7 +44,7 @@ title: "Insurance Applications - DocRouter Solutions"
         </section>
 
         <!-- Solution Section -->
-        <section class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-lg p-8 mb-12">
+        <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
             <div class="text-center">
                 <h2 class="text-3xl font-semibold text-white mb-6">How DocRouter Solves Insurance Challenges</h2>
                 <p class="text-xl text-blue-100 mb-8">
@@ -79,7 +79,7 @@ title: "Insurance Applications - DocRouter Solutions"
 
             <div class="space-y-6 max-w-4xl mx-auto">
                 <div class="border border-gray-200 rounded-lg">
-                    <button class="w-full text-left px-6 py-4 focus:outline-none bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg"
+                    <button class="w-full text-left px-6 py-4 focus:outline-none bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg"
                             onclick="toggleUseCase('insurance-workflow')">
                         <div class="flex justify-between items-center">
                             <h3 class="text-lg font-medium text-white">Handwritten Application Processing</h3>
@@ -142,7 +142,7 @@ title: "Insurance Applications - DocRouter Solutions"
                 </div>
 
                 <div class="border border-gray-200 rounded-lg">
-                    <button class="w-full text-left px-6 py-4 focus:outline-none bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg"
+                    <button class="w-full text-left px-6 py-4 focus:outline-none bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg"
                             onclick="toggleUseCase('insurance-benefits')">
                         <div class="flex justify-between items-center">
                             <h3 class="text-lg font-medium text-white">Insurance-Specific Benefits</h3>
@@ -194,15 +194,15 @@ title: "Insurance Applications - DocRouter Solutions"
             <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">Expected Insurance Results</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">80%</div>
+                    <div class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">80%</div>
                     <div class="text-gray-600">Faster Processing</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">95%</div>
+                    <div class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">95%</div>
                     <div class="text-gray-600">Handwriting Accuracy</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">$60K+</div>
+                    <div class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">$60K+</div>
                     <div class="text-gray-600">Annual Savings</div>
                 </div>
             </div>
@@ -217,7 +217,7 @@ title: "Insurance Applications - DocRouter Solutions"
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <button onclick="openCalendly()"
-                            class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
+                            class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
                         Schedule a Meeting
                     </button>
                     <a href="https://app.docrouter.ai"

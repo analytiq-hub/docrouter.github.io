@@ -2,6 +2,7 @@
 layout: default
 title: "Solutions - DocRouter"
 ---
+<!-- Force GitHub Pages rebuild -->
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
     <!-- Hero Section -->
@@ -127,21 +128,32 @@ title: "Solutions - DocRouter"
             </div>
         </section>
 
-        <!-- Results Section -->
-        <section class="bg-gray-50 rounded-lg p-8 mb-12">
-            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">What Our Clients Achieve</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">90%</div>
-                    <div class="text-gray-600">Faster Processing</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">95%</div>
-                    <div class="text-gray-600">Error Reduction</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">$50K+</div>
-                    <div class="text-gray-600">Annual Savings</div>
+        <!-- Why Choose a Specialized Solution Section -->
+        <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
+            <div class="text-center">
+                <h2 class="text-3xl font-semibold text-white mb-6">Why Choose a Specialized Solution?</h2>
+                <p class="text-xl text-blue-100 mb-8">
+                    Big companies can't afford to customize for your specific needs. We can.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                        <h3 class="text-xl font-medium text-white mb-3">Big Company Problems</h3>
+                        <ul class="text-blue-100 space-y-2 text-left">
+                            <li>• One-size-fits-all solutions</li>
+                            <li>• Expensive enterprise pricing</li>
+                            <li>• Long implementation cycles</li>
+                            <li>• Generic support</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-lg p-6">
+                        <h3 class="text-xl font-medium text-white mb-3">Our Advantage</h3>
+                        <ul class="text-blue-100 space-y-2 text-left">
+                            <li>• Customized for your industry</li>
+                            <li>• Affordable pricing</li>
+                            <li>• Quick setup and training</li>
+                            <li>• Direct access to our team</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -185,7 +197,7 @@ title: "Solutions - DocRouter"
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <button onclick="openCalendly()"
-                            class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
+                            class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
                         Schedule a Meeting
                     </button>
                     <a href="https://app.docrouter.ai"
