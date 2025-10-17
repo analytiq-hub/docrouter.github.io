@@ -16,6 +16,18 @@ permalink: /talks/
         <!-- Talks Container -->
         <div class="space-y-8" id="talks-container">
             {% include talk-card.html 
+                title="How To Train Your AI Agent"
+                speaker="Andrei Radulescu-Banu"
+                date="Oct 15, 2025"
+                event="AI Camp"
+                event_url="https://www.aicamp.ai/event/eventdetails/W2024072614"
+                logos="/assets/images/ai-camp.png"
+                image="/assets/images/how_to_train_your_ai_agent.png"
+                links="https://www.aicamp.ai/event/eventdetails/W2025101515;Event Details|https://docs.google.com/presentation/d/1GFcD4bruJBJPFeJkPp_K-MfkU8ZrHtgfrV7WoLumKd4;Slides|https://www.linkedin.com/feed/update/urn:li:activity:7384733807968526337/;LinkedIn Post|https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7384621615977820160/;LinkedIn Post|https://www.linkedin.com/feed/update/urn:li:activity:7383136087935832064/;LinkedIn Post|https://www.linkedin.com/feed/update/urn:li:activity:7384566447072616448/;LinkedIn Post"
+                abstract="What are the steps to create an AI Agent? Our AI Camp talk is a deep-dive into how AI Agents are implemented, in practice. With lessons learned from our DocRouter.AI coding agent, and our consulting engagement implementing a coding agent for lab information management systems company Starlims."
+            %}
+
+             {% include talk-card.html 
                 title="Engineering with Guardrails: Innovating in Regulated Spaces"
                 speaker="Ilsa Webeck, Andrei Radulescu-Banu, Marjan Monfared"
                 date="September 9, 2025"
@@ -24,7 +36,7 @@ permalink: /talks/
                 logos="/assets/images/startup_boston_week.png"
                 image="/assets/images/engineering_with_guardrails.png"
                 links="https://sbw2025.sched.com/event/264KN/engineering-with-guardrails-innovating-in-regulated-spaces;Event Details|https://streamyard.com/watch/GWAw3FHAfUZy;Recording|https://www.linkedin.com/feed/update/urn:li:activity:7371516401406124032/;LinkedIn Post"
-                abstract="<p>Building fast doesn’t mean ignoring the rules—especially in healthcare, fintech, AI, or consumer hardware. Our panel explores how to embed compliance into the development process without slowing innovation - for CTOs, technical founders, and engineering leaders operating in regulated industries.</p>
+                abstract="Building fast doesn’t mean ignoring the rules—especially in healthcare, fintech, AI, or consumer hardware. Our panel explores how to embed compliance into the development process without slowing innovation - for CTOs, technical founders, and engineering leaders operating in regulated industries.</p>
                 Moderated by Rabeeh Majidi."
             %}
             
