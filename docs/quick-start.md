@@ -22,15 +22,6 @@ permalink: /docs/quick-start/
   <div class="rounded-xl border border-indigo-200 bg-indigo-50 p-6">
     <h2 class="text-2xl font-bold mb-3">Documents You Will Need for this Quick Start</h2>
     <div class="grid grid-cols-1 gap-3">
-      <a href="/assets/files/quick_start_documents.zip" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
-        <div class="flex items-center gap-3 min-w-0">
-          <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">ZIP</span>
-          <div class="min-w-0">
-            <div class="text-gray-700"><span class="font-bold">All Sample Files</span> - Download all three files at once</div>
-            <div class="text-xs text-gray-500 truncate" title="quick_start_documents.zip">quick_start_documents.zip</div>
-          </div>
-        </div>
-      </a>
       <a href="/assets/files/Acord80_Homeowners_App.pdf" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
         <div class="flex items-center gap-3 min-w-0">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">PDF</span>
