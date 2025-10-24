@@ -224,27 +224,6 @@ title: "DocRouter - AI-Powered Document Processing"
                 </div>
             </div>
 
-            <!-- Additional Use Cases -->
-            <div class="mt-8 p-6 bg-gray-50 rounded-lg">
-                <h3 class="text-xl font-medium text-gray-900 mb-4 text-center">More Use Cases</h3>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="text-center">
-                        <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                            <span class="text-xl">🎓</span>
-                        </div>
-                        <h4 class="font-medium text-gray-900 mb-2">Education</h4>
-                        <p class="text-gray-600 text-sm">Auto-grade quizzes with teacher oversight</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                            <span class="text-xl">🔒</span>
-                        </div>
-                        <h4 class="font-medium text-gray-900 mb-2">Security Audits</h4>
-                        <p class="text-gray-600 text-sm">Automate security audits and reconciliations</p>
-                    </div>
-                </div>
-            </div>
-
             <div class="text-center mt-8">
                 <a href="{{ '/solutions/' | relative_url }}"
                    class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
