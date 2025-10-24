@@ -34,10 +34,10 @@ title: "DocRouter - AI-Powered Document Processing"
     <section class="mb-12">
         <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden;">
             <iframe 
-                src="https://www.youtube.com/embed/CygPVLuReSw" 
+                src="https://player.vimeo.com/video/1130281211?title=0&byline=0&portrait=0&color=ffffff" 
                 title="DocRouter - AI-Powered Document Processing Introduction"
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allow="autoplay; fullscreen; picture-in-picture" 
                 allowfullscreen
                 class="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg">
             </iframe>
