@@ -7,10 +7,10 @@ title: "DocRouter - AI-Powered Document Processing"
     <!-- Hero Section - Lead with Problem -->
     <header class="text-center md:mb-12 mb-8">
         <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Stop Wasting Hours on Manual Data Entry
+            Your Documents Redefined
         </h1>
         <div class="text-xl md:text-2xl text-gray-600 mb-8">
-            <p class="mb-4">We reduce processing time by <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">90%</span> for invoices, manifests, reports, and more</p>
+            <p class="mb-4">Processes <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">unstructured documents</span> with AI and human-in-the-loop</p>
         </div>
 
         <!-- Primary CTA -->
@@ -30,11 +30,18 @@ title: "DocRouter - AI-Powered Document Processing"
 
     <main>
 
-    <!-- Banner Graphic Section -->
+    <!-- Video Introduction Section -->
     <section class="mb-12">
-        <img src="{{ '/assets/images/banner_graphic.jpg' | relative_url }}" 
-             alt="DocRouter Banner" 
-             class="w-full">
+        <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe 
+                src="https://www.youtube.com/embed/CygPVLuReSw" 
+                title="DocRouter - AI-Powered Document Processing Introduction"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                class="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg">
+            </iframe>
+        </div>
     </section>
 
         <!-- Problem Statement Section -->
@@ -65,6 +72,7 @@ title: "DocRouter - AI-Powered Document Processing"
             </div>
         </section>
 
+
     <!-- Technical Excellence Section -->
     <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
         <div class="text-center">
@@ -76,10 +84,7 @@ title: "DocRouter - AI-Powered Document Processing"
                 <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 shadow-md">
                     <h3 class="text-xl font-medium text-white mb-3">What Your Developers Get</h3>
                     <ul class="text-white space-y-2 text-left">
-                        <li>• Comprehensive REST APIs with full documentation</li>
-                        <li>• Python SDK with code examples and samples</li>
-                        <li>• Webhook integrations for real-time processing</li>
-                        <li>• Interactive API documentation and Postman collections</li>
+                        <li>• Comprehensive REST APIs, Claude Agent integration, Python and TypeScript SDKs</li>
                         <li>• Sandbox environment for testing integrations</li>
                         <li>• Enterprise-grade security and compliance</li>
                         <li>• Dedicated developer support and technical guidance</li>
@@ -93,6 +98,10 @@ title: "DocRouter - AI-Powered Document Processing"
                            class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center">
                             Python SDK
                         </a>
+                        <a href="{{ '/docs/typescript-sdk/' | relative_url }}"
+                           class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center">
+                            TypeScript SDK
+                        </a>
                     </div>
                 </div>
                 <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 shadow-md">
@@ -101,6 +110,7 @@ title: "DocRouter - AI-Powered Document Processing"
                         <li>• Custom integration architecture design</li>
                         <li>• End-to-end implementation and deployment</li>
                         <li>• Team training and knowledge transfer</li>
+                        <li>• Claude integration for intelligent code generation</li>
                         <li>• Ongoing technical support and maintenance</li>
                     </ul>
                     <div class="mt-6">
@@ -145,19 +155,19 @@ title: "DocRouter - AI-Powered Document Processing"
             </p>
 
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Insurance Applications -->
+                <!-- Insurance Claims & ACORD Forms -->
                 <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                     <div class="flex items-center mb-4">
                         <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
                             <span class="text-xl">📋</span>
                         </div>
-                        <h3 class="text-xl font-medium text-gray-900">Insurance Applications</h3>
+                        <h3 class="text-xl font-medium text-gray-900">Insurance Claims & ACORD Forms</h3>
                     </div>
                     <p class="text-gray-600 mb-4">
-                        Process handwritten and typed insurance applications from email. Extract customer data and integrate with your AMS system.
+                        Process claims and ACORD forms for faster payouts. Extract customer data and integrate with your AMS system.
                     </p>
                     <div class="text-sm text-gray-500 mb-4">
-                        <strong>Problem:</strong> 50% handwritten applications, manual data entry into Ellis AMS
+                        <strong>Use Case:</strong> Accelerate claims processing and reduce payout times
                     </div>
                     <a href="{{ '/solutions/insurance/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
@@ -179,38 +189,59 @@ title: "DocRouter - AI-Powered Document Processing"
                     <a href="{{ '/solutions/supply-chain/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
 
-                <!-- Clinical Trial Invoices -->
+                <!-- Healthcare Denials & Lab Results -->
                 <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                     <div class="flex items-center mb-4">
                         <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
-                            <span class="text-xl">🧪</span>
+                            <span class="text-xl">🏥</span>
                         </div>
-                        <h3 class="text-xl font-medium text-gray-900">Clinical Trial Invoices</h3>
+                        <h3 class="text-xl font-medium text-gray-900">Healthcare Denials & Lab Results</h3>
                     </div>
                     <p class="text-gray-600 mb-4">
-                        Verify lab service invoices against contracts. Check rates, service eligibility, and billing cycles automatically.
+                        Handle denials, patient records, and lab results with precision. Process complex medical documents automatically.
                     </p>
                     <div class="text-sm text-gray-500 mb-4">
-                        <strong>Problem:</strong> Manual verification of complex contract terms
+                        <strong>Use Case:</strong> Streamline medical document processing and reduce errors
                     </div>
-                    <a href="{{ '/solutions/clinical-trials/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                    <a href="{{ '/solutions/healthcare/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
 
-                <!-- Private Equity Statements -->
+                <!-- Finance: Loan Origination & KYC -->
                 <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                     <div class="flex items-center mb-4">
                         <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
                             <span class="text-xl">💰</span>
                         </div>
-                        <h3 class="text-xl font-medium text-gray-900">Private Equity Reports</h3>
+                        <h3 class="text-xl font-medium text-gray-900">Finance: Loan Origination & KYC</h3>
                     </div>
                     <p class="text-gray-600 mb-4">
-                        Process 30-50 quarterly statements from fund managers. Extract financial data for Excel and PowerPoint reporting.
+                        Accelerate loan origination, KYC checks, and audits. Process financial documents and compliance forms automatically.
                     </p>
                     <div class="text-sm text-gray-500 mb-4">
-                        <strong>Problem:</strong> Manual extraction consuming 20-40% of team time
+                        <strong>Use Case:</strong> Speed up financial processes and reduce compliance risk
                     </div>
-                    <a href="{{ '/solutions/private-equity/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                    <a href="{{ '/solutions/finance/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                </div>
+            </div>
+
+            <!-- Additional Use Cases -->
+            <div class="mt-8 p-6 bg-gray-50 rounded-lg">
+                <h3 class="text-xl font-medium text-gray-900 mb-4 text-center">More Use Cases</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="text-center">
+                        <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                            <span class="text-xl">🎓</span>
+                        </div>
+                        <h4 class="font-medium text-gray-900 mb-2">Education</h4>
+                        <p class="text-gray-600 text-sm">Auto-grade quizzes with teacher oversight</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                            <span class="text-xl">🔒</span>
+                        </div>
+                        <h4 class="font-medium text-gray-900 mb-2">Security Audits</h4>
+                        <p class="text-gray-600 text-sm">Automate security audits and reconciliations</p>
+                    </div>
                 </div>
             </div>
 
