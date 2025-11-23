@@ -27,21 +27,6 @@ title: "Our Team - DocRouter.AI"
             </div>
         </section>
 
-        <!-- Team Member: Sal Darji -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-                <img src="{{ '/assets/images/sal_darji.jpg' | relative_url }}" alt="Sal Darji" class="w-32 h-32 rounded-full border-4 border-blue-200 shadow-md flex-shrink-0">
-                <div class="text-center md:text-left">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-2">Sal Darji</h2>
-                    <p class="text-gray-700 mb-2 font-semibold">Product and Operations Leader</p>
-                    <p class="text-gray-700 mb-2">20+ years in Product Management, Strategy, and Operations across Health Tech and Enterprise Software.</p>
-                    <p class="text-gray-700 mb-2">Mentor @C10 Labs, Moderator, AI Tinkerers</p>
-                    <p class="text-gray-700 mb-2">MBA, Northeastern University</p>
-                    <a href="https://www.linkedin.com/in/saldarji/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">View LinkedIn Profile</a>
-                </div>
-            </div>
-        </section>
-
         <!-- Contact Section -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Join Our Team</h2>
