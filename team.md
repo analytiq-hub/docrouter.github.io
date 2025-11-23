@@ -20,7 +20,7 @@ title: "Our Team - DocRouter.AI"
                     <h2 class="text-2xl font-semibold text-gray-900 mb-2">Andrei Radulescu-Banu</h2>
                     <p class="text-gray-700 mb-2 font-semibold">Founder, and Engineering Leader</p>
                     <p class="text-gray-700 mb-2">20+ years in LLMs, Computer Vision, Fintech, Digital Health, Self Driving Cars, Wall St Infrastructure</p>
-                    <p class="text-gray-700 mb-2">Speaker at Boston tech events: Startup Boston, AI Camp, AI Tinkerers, Boston PyData</p>
+                    <p class="text-gray-700 mb-2">Speaker at <a href="{{ '/talks/' | relative_url }}" class="text-blue-600 hover:text-blue-800 underline">Boston tech events</a>: Startup Boston, AI Camp, AI Tinkerers, Boston PyData</p>
                     <p class="text-gray-700 mb-2">Math PhD, MIT</p>
                     <a href="https://www.linkedin.com/in/andrei-radulescu-banu/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">View LinkedIn Profile</a>
                 </div>
