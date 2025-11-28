@@ -204,7 +204,7 @@ title: "DocRouter - AI-Powered Document Processing"
                     <div class="text-sm text-gray-500 mb-4">
                         <strong>Use Case:</strong> Streamline medical document processing and reduce errors
                     </div>
-                    <a href="{{ '/solutions/healthcare/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                    <a href="{{ '/solutions/dme/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
 
                 <!-- Finance: Loan Origination & KYC -->
