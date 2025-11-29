@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/analytiq-hub/analytiq-pages-theme
-  revision: 3fdc44322f3ca4b1d95dec36de5df3a68b80e48f
-  tag: v0.1.7
+  revision: 0f399d5e70425eacd805b7812d9bfee9784019b7
+  tag: v0.1.8
   specs:
     analytiq-pages-theme (0.1.0)
       jekyll (>= 3.9, < 5.0)
