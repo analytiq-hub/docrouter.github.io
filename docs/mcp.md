@@ -7,7 +7,6 @@ title: "DocRouter MCP Server"
     <header class="md:mb-12 mb-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div>
-                <h1 class="text-4xl font-bold text-gray-900 mb-4">DocRouter MCP Server</h1>
                 <p class="text-xl text-gray-600">Model Context Protocol server for seamless AI assistant integration</p>
             </div>
             <div class="rounded-xl border border-blue-200 bg-gradient-to-br from-blue-50 via-white to-purple-50 p-6 text-center shadow-lg">
@@ -28,14 +27,7 @@ title: "DocRouter MCP Server"
         <section id="overview" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Overview</h2>
             <p class="text-gray-600 mb-4">
-                The DocRouter MCP Server is a TypeScript-based server that implements the Model Context Protocol,
-                enabling AI assistants like Claude Desktop, Cursor IDE, and other MCP-compatible tools to directly
-                interact with your DocRouter organization.
-            </p>
-            <p class="text-gray-600 mb-4">
-                This server provides seamless document processing capabilities within your AI workflows, allowing AI
-                assistants to upload documents, retrieve analysis results, and manage your document processing workflows
-                programmatically.
+                The DocRouter MCP Server enables AI assistants (Claude Desktop, Cursor IDE) to interact directly with DocRouter.AI for document processing workflows.
             </p>
             <ul class="list-disc list-inside text-gray-600 space-y-2">
                 <li>Document management and retrieval</li>
@@ -57,33 +49,23 @@ title: "DocRouter MCP Server"
             </ul>
 
             <h3 class="text-lg font-medium text-gray-900 mb-3">Global Installation (Recommended)</h3>
-            <p class="text-gray-600 mb-3">Install the package globally to make the <code class="bg-gray-100 px-2 py-1 rounded">docrouter-mcp</code> binary available system-wide:</p>
             <div class="bg-gray-50 rounded-lg p-4 mb-6">
                 <code class="text-sm text-gray-800">npm install -g @docrouter/mcp</code>
             </div>
 
-            <p class="text-gray-600 mb-3">Verify the installation:</p>
+            <p class="text-gray-600 mb-3">Verify installation:</p>
             <div class="bg-gray-50 rounded-lg p-4 mb-6">
-                <pre class="text-sm text-gray-800 overflow-x-auto"><code># Check if binary is available
-which docrouter-mcp
-
-# Test the installation
+                <pre class="text-sm text-gray-800 overflow-x-auto"><code>which docrouter-mcp
 docrouter-mcp --help</code></pre>
             </div>
 
-            <h3 class="text-lg font-medium text-gray-900 mb-3">Local Installation</h3>
-            <p class="text-gray-600 mb-3">For project-specific installation:</p>
-            <div class="bg-gray-50 rounded-lg p-4">
-                <code class="text-sm text-gray-800">npm install @docrouter/mcp</code>
-            </div>
-            <p class="text-gray-600 mt-2 text-sm">Note: Local installation requires using the full path to the executable in your MCP configuration.</p>
         </section>
 
         <section id="configuration" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Configuration</h2>
 
-            <h3 class="text-lg font-medium text-gray-900 mb-3">For Cursor IDE</h3>
-            <p class="text-gray-600 mb-3">Create <code class="bg-gray-100 px-2 py-1 rounded">.mcp.json</code> in your project root:</p>
+            <h3 class="text-lg font-medium text-gray-900 mb-3">Cursor IDE</h3>
+            <p class="text-gray-600 mb-3">Create <code class="bg-gray-100 px-2 py-1 rounded">.mcp.json</code> in project root:</p>
             <div class="bg-gray-50 rounded-lg p-4 mb-6">
                 <pre class="text-sm text-gray-800 overflow-x-auto"><code>{
   "mcpServers": {
@@ -99,8 +81,8 @@ docrouter-mcp --help</code></pre>
 }</code></pre>
             </div>
 
-            <h3 class="text-lg font-medium text-gray-900 mb-3">For Claude Desktop</h3>
-            <p class="text-gray-600 mb-3">Add to your <code class="bg-gray-100 px-2 py-1 rounded">claude_desktop_config.json</code>:</p>
+            <h3 class="text-lg font-medium text-gray-900 mb-3">Claude Desktop</h3>
+            <p class="text-gray-600 mb-3">Add to <code class="bg-gray-100 px-2 py-1 rounded">claude_desktop_config.json</code>:</p>
             <div class="bg-gray-50 rounded-lg p-4 mb-6">
                 <pre class="text-sm text-gray-800 overflow-x-auto"><code>{
   "mcpServers": {
@@ -125,8 +107,7 @@ docrouter-mcp --help</code></pre>
         </section>
 
         <section id="features" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-6">Available MCP Tools</h2>
-            <p class="text-gray-600 mb-6">Once configured, the following tools become available in your AI application:</p>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-6">Available Tools</h2>
 
             <div class="space-y-8">
                 <!-- Document Management -->
@@ -279,159 +260,72 @@ docrouter-mcp --help</code></pre>
         <section id="workflows" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-6">Example Workflows</h2>
 
-            <div class="space-y-6">
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">1. Document Analysis Workflow</h3>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <pre class="text-sm text-gray-800 overflow-x-auto"><code>// Search for invoice documents
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Document Analysis</h3>
+            <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                <pre class="text-sm text-gray-800 overflow-x-auto"><code>// Search for documents and run extraction
 const documents = await search_docrouter_documents("invoice");
-
-// Get OCR text for the first document
 const ocrText = await get_docrouter_document_ocr(documents.documents[0].id);
-
-// Find available prompts for invoice processing
 const prompts = await search_docrouter_prompts("invoice");
+const extraction = await run_docrouter_extraction(documents.documents[0].id, prompts.prompts[0].id);</code></pre>
+            </div>
 
-// Run extraction with a specific prompt
-const extraction = await run_docrouter_extraction(
-  documents.documents[0].id,
-  prompts.prompts[0].id
-);</code></pre>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">2. Document Discovery Workflow</h3>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <pre class="text-sm text-gray-800 overflow-x-auto"><code>// Get all documents
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Discovery</h3>
+            <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                <pre class="text-sm text-gray-800 overflow-x-auto"><code>// Get all resources
 const allDocuments = await get_docrouter_documents();
-
-// Get all available prompts
 const allPrompts = await get_docrouter_prompts();
-
-// Get all tags for categorization
 const allTags = await get_docrouter_tags();</code></pre>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">3. Guided Analysis Workflow</h3>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <pre class="text-sm text-gray-800 overflow-x-auto"><code>// Get a step-by-step guide for analyzing a specific document
-const guide = await docrouter_document_analysis_guide("document-id");
-
-// Follow the guide to analyze the document
-// The guide will provide specific prompts and extraction strategies</code></pre>
-                    </div>
-                </div>
             </div>
         </section>
 
         <section id="troubleshooting" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-6">Troubleshooting</h2>
 
-            <div class="space-y-6">
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">MCP Server Not Connecting</h3>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>Verify the binary exists: <code class="bg-gray-100 px-2 py-1 rounded text-sm">which docrouter-mcp</code></li>
-                        <li>Check configuration syntax in your <code class="bg-gray-100 px-2 py-1 rounded text-sm">.mcp.json</code></li>
-                        <li>Ensure environment variables are set correctly</li>
-                        <li>Test the server manually: <code class="bg-gray-100 px-2 py-1 rounded text-sm">docrouter-mcp</code></li>
-                    </ul>
-                </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Connection Issues</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+                <li>Verify binary: <code class="bg-gray-100 px-2 py-1 rounded text-sm">which docrouter-mcp</code></li>
+                <li>Check config syntax in <code class="bg-gray-100 px-2 py-1 rounded text-sm">.mcp.json</code></li>
+                <li>Verify environment variables</li>
+            </ul>
 
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Command Not Found</h3>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>Reinstall globally: <code class="bg-gray-100 px-2 py-1 rounded text-sm">npm install -g @docrouter/mcp</code></li>
-                        <li>Check your PATH: <code class="bg-gray-100 px-2 py-1 rounded text-sm">echo $PATH</code></li>
-                        <li>Use full path in configuration if needed</li>
-                    </ul>
-                </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Command Not Found</h3>
+            <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+                <li>Reinstall: <code class="bg-gray-100 px-2 py-1 rounded text-sm">npm install -g @docrouter/mcp</code></li>
+                <li>Check PATH or use full path</li>
+            </ul>
 
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Environment Variables Not Set</h3>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>Verify variable names: <code class="bg-gray-100 px-2 py-1 rounded text-sm">DOCROUTER_ORG_ID</code>, <code class="bg-gray-100 px-2 py-1 rounded text-sm">DOCROUTER_ORG_API_TOKEN</code></li>
-                        <li>Check variable values are correct and not expired</li>
-                        <li>Test API access with your credentials</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Enable Debug Mode</h3>
-                    <p class="text-gray-600 mb-3">Add debug logging to your environment:</p>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <pre class="text-sm text-gray-800 overflow-x-auto"><code>"env": {
-  "DOCROUTER_API_URL": "https://app.docrouter.ai/fastapi",
-  "DOCROUTER_ORG_ID": "your-org-id",
-  "DOCROUTER_ORG_API_TOKEN": "your-api-token",
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Debug Mode</h3>
+            <div class="bg-gray-50 rounded-lg p-4">
+                <pre class="text-sm text-gray-800 overflow-x-auto"><code>"env": {
   "DEBUG": "mcp:*"
 }</code></pre>
-                    </div>
-                </div>
             </div>
         </section>
 
         <section id="security" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-6">Security Best Practices</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-6">Security</h2>
 
-            <div class="space-y-4">
-                <div class="flex items-start">
-                    <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <div>
-                        <h3 class="font-semibold text-gray-900">Never Commit Credentials</h3>
-                        <p class="text-gray-600">Add <code class="bg-gray-100 px-2 py-1 rounded text-sm">.mcp.json</code> to <code class="bg-gray-100 px-2 py-1 rounded text-sm">.gitignore</code> if it contains real credentials</p>
-                    </div>
-                </div>
-
-                <div class="flex items-start">
-                    <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <div>
-                        <h3 class="font-semibold text-gray-900">Use Environment Variables</h3>
-                        <p class="text-gray-600">Store credentials in environment variables instead of hardcoded values</p>
-                    </div>
-                </div>
-
-                <div class="flex items-start">
-                    <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <div>
-                        <h3 class="font-semibold text-gray-900">Rotate API Tokens</h3>
-                        <p class="text-gray-600">Regularly rotate API tokens and limit permissions to minimum required access</p>
-                    </div>
-                </div>
-            </div>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>Add <code class="bg-gray-100 px-2 py-1 rounded text-sm">.mcp.json</code> to <code class="bg-gray-100 px-2 py-1 rounded text-sm">.gitignore</code> to avoid committing credentials</li>
+                <li>Use environment variables for sensitive data</li>
+                <li>Regularly rotate API tokens</li>
+            </ul>
         </section>
 
-        <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8">
-            <h2 class="text-2xl font-semibold text-white mb-4 text-center">Ready to Get Started?</h2>
-            <div class="text-center">
-                <p class="text-blue-100 mb-6">
-                    Install the MCP server and start processing documents with AI assistance.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="https://github.com/analytiq-hub/doc-router/tree/main/packages/typescript/docrouter-mcp"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
-                        View on GitHub
-                    </a>
-                    <a href="https://app.docrouter.ai"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="inline-block border-2 border-white text-white hover:bg-blue-700 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
-                        Get API Credentials
-                    </a>
-                </div>
-            </div>
-        </section>
+        <div class="text-center mt-8">
+            <a href="https://github.com/analytiq-hub/doc-router/tree/main/packages/typescript/docrouter-mcp"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-block bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 mr-4">
+                View on GitHub
+            </a>
+            <a href="https://app.docrouter.ai"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
+                Get API Credentials
+            </a>
+        </div>
     </main>
 
     <footer class="mt-12 text-center text-gray-600">
