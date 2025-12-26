@@ -11,7 +11,7 @@ title: "DocRouter MCP Server"
                 <p class="text-xl text-gray-600">Model Context Protocol server for seamless AI assistant integration</p>
             </div>
             <div class="rounded-xl border border-blue-200 bg-gradient-to-br from-blue-50 via-white to-purple-50 p-6 text-center shadow-lg">
-                <a href="https://github.com/analytiq-hub/doc-router/tree/main/packages/typescript/docrouter-mcp"
+                <a href="https://github.com/analytiq-hub/doc-router/tree/main/packages/typescript/mcp"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6 py-3 rounded-lg font-medium transition-colors duration-200">
