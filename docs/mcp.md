@@ -95,33 +95,68 @@ docrouter-mcp --help</code></pre>
             <h2 class="text-2xl font-semibold text-gray-900 mb-6">Available Tools</h2>
 
             <div class="space-y-8">
-                <!-- Document Management -->
+                <!-- Documents -->
                 <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Document Management</h3>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Documents</h3>
                     <div class="overflow-x-auto">
                         <table class="min-w-full">
                             <tbody class="divide-y divide-gray-200">
                                 <tr>
                                     <td class="py-3 pr-4 align-top">
-                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_docrouter_documents()</code>
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">upload_documents(documents)</code>
                                     </td>
-                                    <td class="py-3 text-sm text-gray-600">List all documents</td>
+                                    <td class="py-3 text-sm text-gray-600">Upload documents</td>
                                 </tr>
                                 <tr>
                                     <td class="py-3 pr-4 align-top">
-                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_docrouter_document(documentId)</code>
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">list_documents(skip, limit, tagIds, nameSearch, metadataSearch)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">List documents</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_document(documentId, fileType)</code>
                                     </td>
                                     <td class="py-3 text-sm text-gray-600">Get document by ID</td>
                                 </tr>
                                 <tr>
                                     <td class="py-3 pr-4 align-top">
-                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_docrouter_document_ocr(documentId)</code>
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">update_document(documentId, documentName, tagIds, metadata)</code>
                                     </td>
-                                    <td class="py-3 text-sm text-gray-600">Get raw OCR text</td>
+                                    <td class="py-3 text-sm text-gray-600">Update document metadata</td>
                                 </tr>
                                 <tr>
                                     <td class="py-3 pr-4 align-top">
-                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_docrouter_document_ocr_metadata(documentId)</code>
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">delete_document(documentId)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Delete document</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- OCR -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">OCR</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_ocr_blocks(documentId)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Get OCR blocks</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_ocr_text(documentId, pageNum)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Get OCR text</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_ocr_metadata(documentId)</code>
                                     </td>
                                     <td class="py-3 text-sm text-gray-600">Get OCR metadata</td>
                                 </tr>
@@ -130,110 +165,287 @@ docrouter-mcp --help</code></pre>
                     </div>
                 </div>
 
-                <!-- Data Extraction -->
+                <!-- LLM Extraction -->
                 <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Data Extraction</h3>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">LLM Extraction</h3>
                     <div class="overflow-x-auto">
                         <table class="min-w-full">
                             <tbody class="divide-y divide-gray-200">
                                 <tr>
                                     <td class="py-3 pr-4 align-top">
-                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">run_docrouter_extraction(documentId, promptRevId, force)</code>
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">run_llm(documentId, promptRevId, force)</code>
                                     </td>
                                     <td class="py-3 text-sm text-gray-600">Run AI extraction</td>
                                 </tr>
                                 <tr>
                                     <td class="py-3 pr-4 align-top">
-                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_docrouter_extraction(documentId, promptRevId)</code>
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_llm_result(documentId, promptRevId, fallback)</code>
                                     </td>
                                     <td class="py-3 text-sm text-gray-600">Get extraction results</td>
                                 </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- Search and Discovery -->
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Search and Discovery</h3>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full">
-                            <tbody class="divide-y divide-gray-200">
                                 <tr>
                                     <td class="py-3 pr-4 align-top">
-                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">search_docrouter_documents(query, tagIds)</code>
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">update_llm_result(documentId, promptId, result, isVerified)</code>
                                     </td>
-                                    <td class="py-3 text-sm text-gray-600">Search documents</td>
+                                    <td class="py-3 text-sm text-gray-600">Update extraction results</td>
                                 </tr>
                                 <tr>
                                     <td class="py-3 pr-4 align-top">
-                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">search_docrouter_prompts(query)</code>
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">delete_llm_result(documentId, promptId)</code>
                                     </td>
-                                    <td class="py-3 text-sm text-gray-600">Search prompts</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 pr-4 align-top">
-                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">search_docrouter_tags(query)</code>
-                                    </td>
-                                    <td class="py-3 text-sm text-gray-600">Search tags</td>
+                                    <td class="py-3 text-sm text-gray-600">Delete extraction results</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
 
-                <!-- Management -->
+                <!-- Tags -->
                 <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Management</h3>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Tags</h3>
                     <div class="overflow-x-auto">
                         <table class="min-w-full">
                             <tbody class="divide-y divide-gray-200">
                                 <tr>
                                     <td class="py-3 pr-4 align-top">
-                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_docrouter_prompts()</code>
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">create_tag(tag)</code>
                                     </td>
-                                    <td class="py-3 text-sm text-gray-600">List all prompts</td>
+                                    <td class="py-3 text-sm text-gray-600">Create tag</td>
                                 </tr>
                                 <tr>
                                     <td class="py-3 pr-4 align-top">
-                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_docrouter_prompt(promptRevId)</code>
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">list_tags(skip, limit, nameSearch)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">List tags</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_tag(tagId)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Get tag by ID</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">update_tag(tagId, tag)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Update tag</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">delete_tag(tagId)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Delete tag</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Prompts -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Prompts</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">create_prompt(prompt)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Create prompt</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">list_prompts(skip, limit, document_id, tag_ids, nameSearch)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">List prompts</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_prompt(promptRevId)</code>
                                     </td>
                                     <td class="py-3 text-sm text-gray-600">Get prompt by ID</td>
                                 </tr>
                                 <tr>
                                     <td class="py-3 pr-4 align-top">
-                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_docrouter_tags()</code>
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">update_prompt(promptId, content)</code>
                                     </td>
-                                    <td class="py-3 text-sm text-gray-600">List all tags</td>
+                                    <td class="py-3 text-sm text-gray-600">Update prompt</td>
                                 </tr>
                                 <tr>
                                     <td class="py-3 pr-4 align-top">
-                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_docrouter_tag(tagId)</code>
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">delete_prompt(promptId)</code>
                                     </td>
-                                    <td class="py-3 text-sm text-gray-600">Get tag by ID</td>
+                                    <td class="py-3 text-sm text-gray-600">Delete prompt</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
 
-                <!-- Help and Guidance -->
+                <!-- Schemas -->
                 <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Help and Guidance</h3>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Schemas</h3>
                     <div class="overflow-x-auto">
                         <table class="min-w-full">
                             <tbody class="divide-y divide-gray-200">
                                 <tr>
                                     <td class="py-3 pr-4 align-top">
-                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">docrouter_help()</code>
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">create_schema(name, response_format)</code>
                                     </td>
-                                    <td class="py-3 text-sm text-gray-600">Get help information</td>
+                                    <td class="py-3 text-sm text-gray-600">Create schema</td>
                                 </tr>
                                 <tr>
                                     <td class="py-3 pr-4 align-top">
-                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">docrouter_document_analysis_guide(documentId)</code>
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">list_schemas(skip, limit, nameSearch)</code>
                                     </td>
-                                    <td class="py-3 text-sm text-gray-600">Generate analysis guide</td>
+                                    <td class="py-3 text-sm text-gray-600">List schemas</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_schema(schemaRevId)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Get schema by ID</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">update_schema(schemaId, schema)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Update schema</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">delete_schema(schemaId)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Delete schema</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">validate_schema(schema)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Validate schema format</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">validate_against_schema(schemaRevId, data)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Validate data against schema</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Forms -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Forms</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">create_form(name, response_format)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Create form</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">list_forms(skip, limit, tag_ids)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">List forms</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_form(formRevId)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Get form by ID</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">update_form(formId, form)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Update form</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">delete_form(formId)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Delete form</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">submit_form(documentId, formRevId, submission_data, submitted_by)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Submit form</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">get_form_submission(documentId, formRevId)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Get form submission</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">delete_form_submission(documentId, formRevId)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Delete form submission</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">validate_form(form)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Validate form format</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- LLM Chat -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">LLM Chat</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">run_llm_chat(messages, model, temperature, max_tokens, stream)</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Run LLM chat</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Help -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b">Help</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">help()</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Get general API help</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">help_prompts()</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Get prompts help</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">help_schemas()</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Get schemas help</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 pr-4 align-top">
+                                        <code class="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">help_forms()</code>
+                                    </td>
+                                    <td class="py-3 text-sm text-gray-600">Get forms help</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -247,19 +459,19 @@ docrouter-mcp --help</code></pre>
 
             <h3 class="text-lg font-semibold text-gray-900 mb-2">Document Analysis</h3>
             <div class="bg-gray-50 rounded-lg p-4 mb-4">
-                <pre class="text-sm text-gray-800 overflow-x-auto"><code>// Search for documents and run extraction
-const documents = await search_docrouter_documents("invoice");
-const ocrText = await get_docrouter_document_ocr(documents.documents[0].id);
-const prompts = await search_docrouter_prompts("invoice");
-const extraction = await run_docrouter_extraction(documents.documents[0].id, prompts.prompts[0].id);</code></pre>
+                <pre class="text-sm text-gray-800 overflow-x-auto"><code>// List documents and run extraction
+const documents = await list_documents({ nameSearch: "invoice" });
+const ocrText = await get_ocr_text({ documentId: documents.documents[0].id });
+const prompts = await list_prompts({ nameSearch: "invoice" });
+const extraction = await run_llm({ documentId: documents.documents[0].id, promptRevId: prompts.prompts[0].id });</code></pre>
             </div>
 
             <h3 class="text-lg font-semibold text-gray-900 mb-2">Discovery</h3>
             <div class="bg-gray-50 rounded-lg p-4 mb-4">
                 <pre class="text-sm text-gray-800 overflow-x-auto"><code>// Get all resources
-const allDocuments = await get_docrouter_documents();
-const allPrompts = await get_docrouter_prompts();
-const allTags = await get_docrouter_tags();</code></pre>
+const allDocuments = await list_documents({});
+const allPrompts = await list_prompts({});
+const allTags = await list_tags({});</code></pre>
             </div>
         </section>
 
