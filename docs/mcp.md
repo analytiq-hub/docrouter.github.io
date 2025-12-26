@@ -61,9 +61,15 @@ docrouter-mcp --help</code></pre>
         <section id="configuration" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Configuration</h2>
 
-            <h3 class="text-lg font-medium text-gray-900 mb-3">Cursor IDE</h3>
-            <p class="text-gray-600 mb-3">Create <code class="bg-gray-100 px-2 py-1 rounded">.mcp.json</code> in project root:</p>
-            <div class="bg-gray-50 rounded-lg p-4 mb-6">
+            <p class="text-gray-600 mb-6">Configure the MCP server for your AI assistant:</p>
+
+            <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                <li><strong>Cursor IDE:</strong> Create <code class="bg-gray-100 px-2 py-1 rounded">.mcp.json</code></li>
+                <li><strong>Claude Desktop:</strong> Update <code class="bg-gray-100 px-2 py-1 rounded">claude_desktop_config.json</code></li>
+                <li><strong>Claude Agent:</strong> Configure MCP server</li>
+            </ul>
+
+            <div class="bg-gray-50 rounded-lg p-6 mt-6">
                 <pre class="text-sm text-gray-800 overflow-x-auto"><code>{
   "mcpServers": {
     "docrouter": {
@@ -78,27 +84,9 @@ docrouter-mcp --help</code></pre>
 }</code></pre>
             </div>
 
-            <h3 class="text-lg font-medium text-gray-900 mb-3">Claude Desktop</h3>
-            <p class="text-gray-600 mb-3">Add to <code class="bg-gray-100 px-2 py-1 rounded">claude_desktop_config.json</code>:</p>
-            <div class="bg-gray-50 rounded-lg p-4 mb-6">
-                <pre class="text-sm text-gray-800 overflow-x-auto"><code>{
-  "mcpServers": {
-    "docrouter": {
-      "command": "docrouter-mcp",
-      "env": {
-        "DOCROUTER_API_URL": "https://app.docrouter.ai/fastapi",
-        "DOCROUTER_ORG_ID": "your-org-id",
-        "DOCROUTER_ORG_API_TOKEN": "your-api-token"
-      }
-    }
-  }
-}</code></pre>
-            </div>
-
-            <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-4">
                 <p class="text-sm text-gray-700">
-                    <strong>Important:</strong> Replace <code class="bg-gray-100 px-2 py-1 rounded">your-org-id</code> and
-                    <code class="bg-gray-100 px-2 py-1 rounded">your-api-token</code> with your actual DocRouter credentials.
+                    Replace <code class="bg-gray-100 px-2 py-1 rounded">your-org-id</code> and <code class="bg-gray-100 px-2 py-1 rounded">your-api-token</code> with your actual DocRouter credentials.
                 </p>
             </div>
         </section>
