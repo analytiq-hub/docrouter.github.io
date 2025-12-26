@@ -40,6 +40,17 @@ The solution requires:
 - **State management**: Tracks processed pages and identified patients
 - **Long-running workflows**: Handles processes that take minutes to hours
 
+Temporal's architecture is built around two key concepts: **Workflows** (orchestration logic) and **Activities** (actual work). The diagram below illustrates how these components work together:
+
+<div data-excalidraw="/assets/excalidraw/temporal_workflows_activities.excalidraw" class="excalidraw-container">
+  <div class="loading-placeholder">Loading diagram...</div>
+</div>
+<div style="text-align: center; margin-top: 1rem;">
+  <a href="/excalidraw-edit?file=/assets/excalidraw/temporal_workflows_activities.excalidraw" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">
+    📝 Edit in Excalidraw
+  </a>
+</div>
+
 ## The Workflow Implementation
 
 The implementation uses a hierarchical workflow structure with two main workflows:
