@@ -25,17 +25,27 @@ The implementation is available at [doc-router-temporal](https://github.com/anal
 ## The Problem: Large Multi-Page Documents
 
 Surgery schedule documents can contain hundreds of pages, with each page potentially containing:
-- Surgery schedule information
-- Patient demographic information (name, date of birth)
-- Medical insurance card information
+- Medical insurance card
+- Pre-operative documentation
+- Anesthesia records
+- Other records
 
 The challenge is that these documents are too large to process in a single LLM prompt. Modern LLMs have token limits (typically 128K-200K tokens), and a 200-page PDF can easily exceed these limits when converted to text. Even if it fits, processing the entire document at once is inaccurate.
 
 The solution requires:
 1. **Chunking**: Split the PDF into individual pages
-2. **Classification**: Identify which pages contain surgery schedules vs. insurance card vs other patient information
+2. **Classification**: Identify which pages contain insurance card vs pre-operative evaluations vs. anesthesia records vs other patient information
 3. **Grouping**: Group patient pages by patient (using name and DOB as keys)
 4. **Extraction**: Extract structured data from each patient set of pages, including insurance card information
+
+<div data-excalidraw="/assets/excalidraw/document_processing_solution.excalidraw" class="excalidraw-container">
+  <div class="loading-placeholder">Loading diagram...</div>
+</div>
+<div style="text-align: center; margin-top: 1rem;">
+  <a href="/excalidraw-edit?file=/assets/excalidraw/document_processing_solution.excalidraw" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">
+    📝 Edit in Excalidraw
+  </a>
+</div>
 
 ## Why Temporal for Document Chunking and Processing?
 
