@@ -456,23 +456,50 @@ docrouter-mcp --help</code></pre>
         </section>
 
         <section id="workflows" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-6">Example Workflows</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-6">Example Prompts</h2>
 
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Document Analysis</h3>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Create a Schema</h3>
             <div class="bg-gray-50 rounded-lg p-4 mb-4">
-                <pre class="text-sm text-gray-800 overflow-x-auto"><code>// List documents and run extraction
-const documents = await list_documents({ nameSearch: "invoice" });
-const ocrText = await get_ocr_text({ documentId: documents.documents[0].id });
-const prompts = await list_prompts({ nameSearch: "invoice" });
-const extraction = await run_llm({ documentId: documents.documents[0].id, promptRevId: prompts.prompts[0].id });</code></pre>
+                <pre class="text-sm text-gray-800 overflow-x-auto"><code>Create a schema for extracting invoice information with the following fields:
+- invoice_number (string, required)
+- date (string, format: date)
+- total_amount (number, required)
+- vendor_name (string)
+- line_items (array of objects with description, quantity, unit_price, total)
+
+Use the create_schema tool with:
+- name: "Invoice Extraction Schema"
+- response_format: A JSON Schema object defining the structure above</code></pre>
             </div>
 
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Discovery</h3>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Update a Schema</h3>
             <div class="bg-gray-50 rounded-lg p-4 mb-4">
-                <pre class="text-sm text-gray-800 overflow-x-auto"><code>// Get all resources
-const allDocuments = await list_documents({});
-const allPrompts = await list_prompts({});
-const allTags = await list_tags({});</code></pre>
+                <pre class="text-sm text-gray-800 overflow-x-auto"><code>Update the invoice schema to add a new optional field:
+- payment_terms (string)
+
+Use the update_schema tool with:
+- schemaId: The ID of the existing schema
+- schema: The updated schema object including the new payment_terms field</code></pre>
+            </div>
+
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Create a Prompt</h3>
+            <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                <pre class="text-sm text-gray-800 overflow-x-auto"><code>Create a prompt for extracting invoice data from documents.
+
+Use the create_prompt tool with:
+- prompt: {
+    name: "Invoice Extraction Prompt",
+    content: "Extract all invoice information from this document. Include invoice number, date, total amount, vendor name, and all line items with their details."
+  }</code></pre>
+            </div>
+
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Update a Prompt</h3>
+            <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                <pre class="text-sm text-gray-800 overflow-x-auto"><code>Update the invoice extraction prompt to be more specific about date formats.
+
+Use the update_prompt tool with:
+- promptId: The ID of the existing prompt
+- content: "Extract all invoice information from this document. Include invoice number, date (in YYYY-MM-DD format), total amount, vendor name, and all line items with their details. Ensure dates are parsed correctly regardless of the original format."</code></pre>
             </div>
         </section>
 
