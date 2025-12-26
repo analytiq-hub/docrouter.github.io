@@ -27,14 +27,13 @@ title: "DocRouter MCP Server"
         <section id="overview" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Overview</h2>
             <p class="text-gray-600 mb-4">
-                The DocRouter MCP Server enables AI assistants (Claude Desktop, Cursor IDE) to interact directly with DocRouter.AI for document processing workflows.
+                The DocRouter MCP Server enables AI agents to interact directly with DocRouter.AI for document processing workflows.
             </p>
             <ul class="list-disc list-inside text-gray-600 space-y-2">
                 <li>Document management and retrieval</li>
-                <li>OCR text extraction and metadata</li>
-                <li>AI-powered data extraction using prompts</li>
-                <li>Tag and prompt management</li>
-                <li>Advanced search functionality</li>
+                <li>AI-powered document processing</li>
+                <li>Schema and prompt configuration</li>
+                <li>Web forms configuration</li>
             </ul>
         </section>
 
@@ -44,11 +43,9 @@ title: "DocRouter MCP Server"
             <h3 class="text-lg font-medium text-gray-900 mb-3">Prerequisites</h3>
             <ul class="list-disc list-inside text-gray-600 space-y-1 mb-6">
                 <li>Node.js 18+ installed on your system</li>
-                <li>DocRouter Account with API access</li>
-                <li>DocRouter Organization ID and API Token</li>
             </ul>
 
-            <h3 class="text-lg font-medium text-gray-900 mb-3">Global Installation (Recommended)</h3>
+            <h3 class="text-lg font-medium text-gray-900 mb-3">Installation</h3>
             <div class="bg-gray-50 rounded-lg p-4 mb-6">
                 <code class="text-sm text-gray-800">npm install -g @docrouter/mcp</code>
             </div>
