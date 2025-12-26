@@ -147,7 +147,6 @@ The schema should include:
 - First name
 - Last name  
 - Date of birth
-- Address (street, city, state, zip)
 - Insurance information (provider, policy number, group number)
 ```
 
@@ -234,7 +233,7 @@ The implementation includes:
 ## Results and Next Steps
 
 The implementation successfully processes surgery schedule documents with hundreds of pages, extracting:
-- Patient names, dates of birth, and addresses
+- Patient names, dates of birth
 - Medical insurance card information
 - Surgery schedule page identification
 
