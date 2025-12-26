@@ -96,26 +96,24 @@ docrouter-mcp --help</code></pre>
 
             <h3 class="text-lg font-semibold text-gray-900 mb-2">Create a Schema</h3>
             <div class="bg-gray-50 rounded-lg p-4 mb-4">
-                <pre class="text-sm text-gray-800 overflow-x-auto"><code>Create a schema for extracting invoice information with the following fields:
+                <pre class="text-sm text-gray-800 overflow-x-auto"><code>Create a schema for extracting invoices with these fields:
 - invoice_number (string, required)
 - date (string, format: date)
 - total_amount (number, required)
 - vendor_name (string)
-- line_items (array of objects with description, quantity, unit_price, total)
-
-Use the create_schema tool with:
-- name: "Invoice Extraction Schema"
-- response_format: A JSON Schema object defining the structure above</code></pre>
+- line_items (array of objects). The line_items object: 
+  - description 
+  - quantity 
+  - unit_price
+  - total
+</code></pre>
             </div>
 
             <h3 class="text-lg font-semibold text-gray-900 mb-2">Update a Schema</h3>
             <div class="bg-gray-50 rounded-lg p-4 mb-4">
                 <pre class="text-sm text-gray-800 overflow-x-auto"><code>Update the invoice schema to add a new optional field:
 - payment_terms (string)
-
-Use the update_schema tool with:
-- schemaId: The ID of the existing schema
-- schema: The updated schema object including the new payment_terms field</code></pre>
+</code></pre>
             </div>
 
             <h3 class="text-lg font-semibold text-gray-900 mb-2">Create a Prompt</h3>
