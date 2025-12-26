@@ -86,7 +86,7 @@ The main workflow (`ClassifyGroupAndExtractInsuranceWorkflow`) orchestrates the 
 
 <script type="module" src="/assets/js/excalidraw/render-excalidraw.js"></script>
 
-## Creating Schemas with Claude Agent
+## Creating Schemas and Prompts with Claude Agent
 
 Before building the Temporal workflow, we created the extraction schemas and prompts using the **Claude Agent for DocRouter.AI** (an MCP server at [`doc-router/packages/typescript/mcp`](https://github.com/analytiq-hub/doc-router/tree/main/packages/typescript/mcp)).
 
@@ -118,9 +118,26 @@ For each patient group, the workflow:
 
 To avoid passing large binary data through Temporal, PDFs are read from disk and uploaded directly to DocRouter.AI.
 
-## Key Implementation Details
+## Creating Temporal Workflows with Cursor
 
-The workflow was developed in **Cursor** over 2 days with 3-4 iterations, adding chunking, classification, grouping, insurance extraction, and error handling.
+The Temporal workflow was developed in **Cursor** using natural language prompts. Cursor's AI understood the codebase context and Temporal patterns, enabling rapid development without deep workflow expertise.
+
+**Key benefits:**
+- Context awareness across multiple files and existing activities
+- Automatic Temporal pattern suggestions (activities, workflows, child workflows)
+- Natural language refactoring and error handling implementation
+
+**Example development prompts:**
+
+*"Create a workflow that processes each patient's pages into separate PDFs, uploads them with insurance_card tag, waits for completion, then retrieves insurance extraction results."*
+
+*"Add fuzzy name matching to group pages with names differing by up to 2 letters using Levenshtein distance."*
+
+*"Handle edge cases where surgery schedules contain individual patient names vs. multiple patient summaries."*
+
+Cursor handled the complex Temporal implementation, error handling, and performance optimizations, resulting in production-ready code in just a few hours.
+
+## Key Implementation Details
 
 ### Design Decisions
 
