@@ -120,20 +120,13 @@ docrouter-mcp --help</code></pre>
             <div class="bg-gray-50 rounded-lg p-4 mb-4">
                 <pre class="text-sm text-gray-800 overflow-x-auto"><code>Create a prompt for extracting invoice data from documents.
 
-Use the create_prompt tool with:
-- prompt: {
-    name: "Invoice Extraction Prompt",
-    content: "Extract all invoice information from this document. Include invoice number, date, total amount, vendor name, and all line items with their details."
-  }</code></pre>
+Configure it with the invoice schema, and tag it with a tag named 'green'
+</code></pre>
             </div>
 
             <h3 class="text-lg font-semibold text-gray-900 mb-2">Update a Prompt</h3>
             <div class="bg-gray-50 rounded-lg p-4 mb-4">
-                <pre class="text-sm text-gray-800 overflow-x-auto"><code>Update the invoice extraction prompt to be more specific about date formats.
-
-Use the update_prompt tool with:
-- promptId: The ID of the existing prompt
-- content: "Extract all invoice information from this document. Include invoice number, date (in YYYY-MM-DD format), total amount, vendor name, and all line items with their details. Ensure dates are parsed correctly regardless of the original format."</code></pre>
+                <pre class="text-sm text-gray-800 overflow-x-auto"><code>Update the invoice extraction prompt to ensure the date is in YYYY-MM-DD format."</code></pre>
             </div>
         </section>
 
