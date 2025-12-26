@@ -103,6 +103,19 @@ Before building the Temporal workflow, we created the extraction schemas and pro
 
 The Claude Agent allows Claude Code to create extraction schemas and prompts. For example, you can prompt: *"Create a schema for extracting patient information from surgery schedule pages"* and it will validate, create, and test the schema automatically.
 
+The diagram below illustrates how DocRouter.AI operations work and how they integrate with Temporal workflows:
+
+<div data-excalidraw="/assets/excalidraw/docrouter_operations.excalidraw" class="excalidraw-container">
+  <div class="loading-placeholder">Loading diagram...</div>
+</div>
+<div style="text-align: center; margin-top: 1rem;">
+  <a href="/excalidraw-edit?file=/assets/excalidraw/docrouter_operations.excalidraw" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">
+    📝 Edit in Excalidraw
+  </a>
+</div>
+
+**Key distinction**: DocRouter.AI implements **discrete operations** (single prompt-and-schema processing per document), while Temporal implements the **workflow orchestration** (chunking, grouping, uploading pages for classification, and uploading chunks for extraction).
+
 For this implementation, we created:
 - **`anesthesia_bundle_page_classifier`**: Classifies pages as surgery schedule, patient information, or other
 - **`insurance_card`**: Extracts insurance card information from patient pages
