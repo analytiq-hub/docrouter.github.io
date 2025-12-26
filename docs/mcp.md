@@ -503,42 +503,8 @@ Use the update_prompt tool with:
             </div>
         </section>
 
-        <section id="troubleshooting" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-6">Troubleshooting</h2>
-
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Connection Issues</h3>
-            <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-                <li>Verify binary: <code class="bg-gray-100 px-2 py-1 rounded text-sm">which docrouter-mcp</code></li>
-                <li>Check config syntax in <code class="bg-gray-100 px-2 py-1 rounded text-sm">.mcp.json</code></li>
-                <li>Verify environment variables</li>
-            </ul>
-
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Command Not Found</h3>
-            <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
-                <li>Reinstall: <code class="bg-gray-100 px-2 py-1 rounded text-sm">npm install -g @docrouter/mcp</code></li>
-                <li>Check PATH or use full path</li>
-            </ul>
-
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Debug Mode</h3>
-            <div class="bg-gray-50 rounded-lg p-4">
-                <pre class="text-sm text-gray-800 overflow-x-auto"><code>"env": {
-  "DEBUG": "mcp:*"
-}</code></pre>
-            </div>
-        </section>
-
-        <section id="security" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-6">Security</h2>
-
-            <ul class="list-disc list-inside text-gray-600 space-y-2">
-                <li>Add <code class="bg-gray-100 px-2 py-1 rounded text-sm">.mcp.json</code> to <code class="bg-gray-100 px-2 py-1 rounded text-sm">.gitignore</code> to avoid committing credentials</li>
-                <li>Use environment variables for sensitive data</li>
-                <li>Regularly rotate API tokens</li>
-            </ul>
-        </section>
-
         <div class="text-center mt-8">
-            <a href="https://github.com/analytiq-hub/doc-router/tree/main/packages/typescript/docrouter-mcp"
+            <a href="https://github.com/analytiq-hub/doc-router/tree/main/packages/typescript/mcp"
                target="_blank"
                rel="noopener noreferrer"
                class="inline-block bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 mr-4">
