@@ -7,19 +7,49 @@ image: /assets/images/temporal_docrouter_workflows.svg
 categories: [tech, programming, ai, tutorials]
 ---
 
-Processing large multi-page documents with AI requires careful orchestration. When documents are hundreds of pages long, they can't be processed in a single LLM prompt due to token limits. This post describes a real-world implementation that uses [Temporal](https://temporal.io/) to orchestrate document processing workflows with [DocRouter.AI](http://docrouter.ai), solving the specific problem of extracting patient information from surgery schedule documents.
+🚀 Just spent the last few days building a powerful multi-step document processing pipeline — and it handles 200+ page medical records like a champ!
 
-The implementation is available at [doc-router-temporal](https://github.com/analytiq-hub/doc-router-temporal/blob/blog_post_dec_2025) and processes surgery schedule documents containing hundreds of pages, extracting patient names, dates of birth, and medical insurance information.
+Single-prompt tools like DocRouter.AI shine for ~20-25 page docs… but what about massive collated files with labs, facesheets, insurance cards, and multiple patients mixed together? → One prompt = impossible.
 
-## The Problem and Solution
+**Enter the solution: Temporal + DocRouter.AI in a smart, scalable workflow.**
 
-Surgery schedule documents can contain hundreds of pages with medical insurance cards, pre-operative documentation, anesthesia records, and other patient information. The challenge is that these documents are too large to process in a single LLM prompt due to token limits (typically 128K-200K tokens).
+This post describes a real-world implementation that uses [Temporal](https://temporal.io/) to orchestrate document processing workflows with [DocRouter.AI](http://docrouter.ai), solving the challenge of processing massive medical records through intelligent multi-step orchestration.
 
-The solution requires:
-1. **Chunking**: Split the PDF into individual pages
-2. **Classification**: Identify page types (insurance card, pre-op, anesthesia records, etc.)
-3. **Grouping**: Group patient pages by patient (using name and DOB as keys)
-4. **Extraction**: Extract structured data from each patient set of pages
+The implementation is available at [doc-router-temporal](https://github.com/analytiq-hub/doc-router-temporal/blob/blog_post_dec_2025) and processes medical documents containing hundreds of pages, extracting patient names, dates of birth, and medical insurance information.
+
+## The Problem: Massive Medical Records Need Smart Orchestration
+
+Medical records often come as massive collated files containing 200+ pages with:
+- Lab results and test reports
+- Patient facesheets with demographics
+- Insurance cards and coverage details
+- Clinical notes and progress reports
+- Multiple patients' information mixed together
+
+**The challenge**: These documents are too large to process in a single LLM prompt due to token limits (typically 128K-200K tokens). One prompt = impossible for comprehensive extraction.
+
+**The solution**: A multi-step workflow that intelligently orchestrates the process:
+
+1. **Split**: Break the massive PDF into individual pages
+2. **Classify**: Identify each page's type and which patient it belongs to
+3. **Group**: Intelligently group pages by patient
+4. **Extract**: Process each patient's page bundle for precise, targeted extraction
+
+## Why This Pattern Rocks
+
+This Temporal + DocRouter.AI combination delivers powerful advantages:
+
+✅ **Constant memory usage** — scales effortlessly to 1,000+ pages without running out of resources
+
+✅ **Super general pattern** → classify → group → process per group → works for any document type
+
+✅ **Fully durable & retry-safe** thanks to Temporal's built-in resilience
+
+✅ **Built lightning-fast** in just a couple of days using AI tools
+
+✅ **Parallel processing** — handles multiple patients simultaneously while maintaining order
+
+✅ **Production-ready** with automatic error handling, timeouts, and state management
 
 <div data-excalidraw="/assets/excalidraw/document_processing_solution.excalidraw" class="excalidraw-container">
   <div class="loading-placeholder">Loading diagram...</div>
@@ -29,6 +59,24 @@ The solution requires:
     📝 Edit in Excalidraw
   </a>
 </div>
+
+## The Smart Workflow in Action
+
+Here's how the Temporal + DocRouter.AI workflow processes massive medical records:
+
+🔹 **Temporal splits** the 200+ page PDF into individual pages
+
+🔹 **Uploads them one by one** to DocRouter.AI for processing
+
+🔹 **DocRouter classifies each page** → identifies patient name + document type (lab results, insurance card, facesheet, etc.)
+
+🔹 **Temporal intelligently groups pages by patient** using fuzzy name matching and DOB correlation
+
+🔹 **Sends each patient's page bundle back to DocRouter.AI** for precise, targeted extraction
+
+🔹 **Temporal aggregates everything** → clean, complete per-patient results
+
+## Technical Implementation
 
 ## Why Temporal?
 
@@ -101,7 +149,7 @@ The main workflow (`ClassifyGroupAndExtractInsuranceWorkflow`) orchestrates the 
 
 Before building the Temporal workflow, we created the extraction schemas and prompts using the **Claude Agent for DocRouter.AI** (an MCP server at [`doc-router/packages/typescript/mcp`](https://github.com/analytiq-hub/doc-router/tree/main/packages/typescript/mcp)).
 
-The Claude Agent allows Claude Code to create extraction schemas and prompts. For example, you can prompt: *"Create a schema for extracting patient information from surgery schedule pages"* and it will validate, create, and test the schema automatically.
+The Claude Agent allows Claude Code to create extraction schemas and prompts. For example, you can prompt: *"Create a schema for extracting patient information from medical record pages"* and it will validate, create, and test the schema automatically.
 
 The diagram below illustrates how DocRouter.AI operations work and how they integrate with Temporal workflows:
 
@@ -117,7 +165,7 @@ The diagram below illustrates how DocRouter.AI operations work and how they inte
 **Key distinction**: DocRouter.AI implements **discrete operations** (single prompt-and-schema processing per document), while Temporal implements the **workflow orchestration** (chunking, grouping, uploading pages for classification, and uploading chunks for extraction).
 
 For this implementation, we created:
-- **`anesthesia_bundle_page_classifier`**: Classifies pages as surgery schedule, patient information, or other
+- **`medical_page_classifier`**: Classifies pages as labs, facesheets, insurance cards, clinical notes, or other document types
 - **`insurance_card`**: Extracts insurance card information from patient pages
 
 ## Workflow Implementation
@@ -157,7 +205,7 @@ The Temporal workflow was developed in **Cursor** using natural language prompts
 
 *"Add fuzzy name matching to group pages with names differing by up to 2 letters using Levenshtein distance."*
 
-*"Handle edge cases where surgery schedules contain individual patient names vs. multiple patient summaries."*
+*"Handle edge cases where medical records contain individual patient names vs. multiple patient summaries."*
 
 Cursor handled the complex Temporal implementation, error handling, and performance optimizations, resulting in production-ready code in just a few hours.
 
@@ -172,7 +220,7 @@ Cursor handled the complex Temporal implementation, error handling, and performa
 
 ## Results
 
-The implementation successfully processes surgery schedule documents with hundreds of pages, extracting patient names, dates of birth, and medical insurance information. It handles large documents (200+ pages), parallel patient processing, error recovery, and long-running operations.
+The implementation successfully processes massive medical record documents with hundreds of pages, extracting patient names, dates of birth, and medical insurance information. It handles large documents (200+ pages), parallel patient processing, error recovery, and long-running operations.
 
 ### Running the Workflow
 
@@ -188,9 +236,15 @@ See the [README](https://github.com/analytiq-hub/doc-router-temporal/blob/blog_p
 
 The workflow returns JSON with file name, page classifications, schedule pages, and patient data with insurance information.
 
-## Conclusion
+## We're in a New Era
 
-Temporal and DocRouter.AI together provide reliable, scalable document processing with durable workflows, parallel processing, and rapid schema iteration using the Claude Agent. The implementation took just 2 days to build.
+**What used to take months of engineering can now be shipped in days.**
+
+This Temporal + DocRouter.AI pipeline was built end-to-end using Claude Code-based Agent (for prompts + schemas) + Cursor (for Temporal workflows). I barely knew Temporal before starting — didn't matter. AI tools let me iterate fast, prototype, and perfect the logic in record time.
+
+The result: reliable, scalable document processing with durable workflows, parallel processing, and rapid schema iteration. The implementation took just 2 days to build and handles 200+ page medical records like a champ.
+
+If you're building AI-powered document workflows (especially in healthcare), this combo is 🔥.
 
 Code available at [doc-router-temporal](https://github.com/analytiq-hub/doc-router-temporal/tree/blog_post_dec_2025).
 
