@@ -11,6 +11,8 @@ We recently shipped outbound **webhook support** in DocRouter. This post is a pr
 
 If you just want to use webhooks (not implement them), see the docs: [`/docs/webhooks/`](/docs/webhooks/).
 
+<img src="/assets/images/webhook_config.png" alt="DocRouter webhook configuration screen" style="display: block; margin: 2rem auto; width: 90%; border-radius: 0.75rem; box-shadow: 0 12px 20px -6px rgba(0, 0, 0, 0.15);">
+
 ## The AI workflow (what actually happened)
 
 Here are the salient facts, in order:
