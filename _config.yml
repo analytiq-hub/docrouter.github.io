@@ -89,6 +89,8 @@ header_pages:
         url: "/docs/schemas"
       - title: "REST APIs"
         url: "/docs/rest-api"
+      - title: "Webhooks"
+        url: "/docs/webhooks"
       - title: "Python SDK"
         url: "/docs/python-sdk"
       - title: "TypeScript SDK"
