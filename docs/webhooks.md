@@ -24,6 +24,8 @@ DocRouter sends webhook notifications for these events:
 | `llm.error` | LLM processing failed |
 | `webhook.test` | Test event sent when testing webhook configuration |
 
+<img src="/assets/images/webhook_config.png" alt="DocRouter webhook configuration screen" style="display: block; margin: 2rem auto; width: 90%; border-radius: 0.75rem; box-shadow: 0 12px 20px -6px rgba(0, 0, 0, 0.15);">
+
 ## Setup {#setup}
 
 1. **Access Settings**: Go to your organization settings → Webhooks tab
