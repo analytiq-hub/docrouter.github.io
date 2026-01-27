@@ -2,6 +2,18 @@
 
 This file tracks development decisions, patterns, and conventions for this Jekyll site.
 
+## Source Code Reference
+
+**Important:** The source code for DocRouter.AI is checked out in `../doc-router` (relative to this repository).
+
+When creating documentation or marketing material for this site, you should browse the `../doc-router` directory to:
+- Understand the project structure and architecture
+- Learn about features, APIs, and capabilities
+- Ensure documentation accuracy and completeness
+- Reference actual code examples and implementations
+
+This helps maintain consistency between the documentation site and the actual product.
+
 ## Include File Architecture
 
 ### Overview
