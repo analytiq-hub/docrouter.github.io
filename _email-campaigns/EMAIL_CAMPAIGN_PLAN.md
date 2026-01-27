@@ -1,10 +1,10 @@
-# Email Campaign Plan for DocRouter
+# Email Campaign Plan for DocRouter.AI
 
 ## Overview
 
 This document outlines four active email campaigns plus future campaigns:
 1. **Onboarding Campaign** - For users who have registered an account
-2. **Prospect Campaign** - For potential users who might be interested in DocRouter
+2. **Prospect Campaign** - For potential users who might be interested in DocRouter.AI
 3. **Investor/Friends Newsletter** - For investors, advisors, and close contacts
 4. **Product Updates Newsletter** - For registered users with product announcements
 5. **Educational Series** - Monthly deep-dive content for active users
@@ -21,16 +21,16 @@ This document outlines four active email campaigns plus future campaigns:
 
 | Email | Day | Subject Line | Preview Text |
 |-------|-----|--------------|--------------|
-| Email 1: Tag, Prompt, Upload | 0 | "DocRouter: Tag, prompt, upload - Get started in 4 steps 📄" | Welcome to DocRouter! Create a tag and a prompt, upload a document, and see your first extraction in minutes. |
-| Email 2: Learn About Schemas | 3 | "DocRouter: Learn about schemas for document extraction 🤖" | Schemas ensure consistent, validated output from your prompts. Learn how to create and use them effectively. |
-| Email 3: Customer Success Check | 7 | "How's your DocRouter journey going? We're here to help 👋" | You've been using DocRouter for a week. We're here to help with questions and hear how it's working for you. |
+| Email 1: Tag, Prompt, Upload | 0 | "DocRouter.AI: Tag, prompt, upload - Get started in 4 steps 📄" | Welcome to DocRouter.AI! Create a tag and a prompt, upload a document, and see your first extraction in minutes. |
+| Email 2: Learn About Schemas | 3 | "DocRouter.AI: Learn about schemas for document extraction 🤖" | Schemas ensure consistent, validated output from your prompts. Learn how to create and use them effectively. |
+| Email 3: Customer Success Check | 7 | "How's your DocRouter.AI journey going? We're here to help 👋" | You've been using DocRouter.AI for a week. We're here to help with questions and hear how it's working for you. |
 
 ### Campaign 2: Prospect Campaign (Non-Registered Users)
 
 | Email | Day | Subject Line | Preview Text |
 |-------|-----|--------------|--------------|
-| Email 1: Introduction & Demo Invitation | 0 | "DocRouter.AI: Transform Your Document Processing with AI" | See how DocRouter extracts data from unstructured documents with AI. Book a free demo to learn more. |
-| Email 2: Follow-up Demo Reminder | 3-5 | "Ready to See DocRouter in Action?" | Book your free demo and discover how AI can transform your document processing workflow. |
+| Email 1: Introduction & Demo Invitation | 0 | "DocRouter.AI: Transform Your Document Processing with AI" | See how DocRouter.AI extracts data from unstructured documents with AI. Book a free demo to learn more. |
+| Email 2: Follow-up Demo Reminder | 3-5 | "Ready to See DocRouter.AI in Action?" | Book your free demo and discover how DocRouter.AI can transform your document processing workflow. |
 
 ---
 
@@ -58,8 +58,8 @@ Users who have successfully registered and verified their email address.
 **Key Sections (with alternating background colors):**
 
 **Section 1 (White background):**
-- Personal greeting: "Hi {{ contact.FIRSTNAME | default: 'there' }}, welcome to DocRouter! Let's get you extracting data from your first document."
-- Introduction: "The fastest way to see DocRouter in action is to create a tag and a prompt, upload a document with that tag, and see the results. Here's how to get started in four simple steps."
+- Personal greeting: "Hi {{ contact.FIRSTNAME | default: 'there' }}, welcome to DocRouter.AI! Let's get you extracting data from your first document."
+- Introduction: "The fastest way to see DocRouter.AI in action is to create a tag and a prompt, upload a document with that tag, and see the results. Here's how to get started in four simple steps."
 - Primary CTA: "Upload Your First Document"
 
 **Section 2 (Light colored background - e.g., #f8f9fa):**
@@ -69,13 +69,13 @@ Users who have successfully registered and verified their email address.
   2. **Create a prompt** - Write instructions for what data to extract from documents with this tag
   3. **Upload documents** - Drag & drop files and apply the tag during upload
   4. **See results** - Review AI-extracted data and verify accuracy
-- Brief explanation: "Create your tag and a prompt first, then upload documents with that tag. This ensures your documents are automatically processed. Once you see your first extraction, you'll understand how DocRouter works. Then you can refine prompts and explore advanced features."
+- Brief explanation: "Create your tag and a prompt first, then upload documents with that tag. This ensures your documents are automatically processed. Once you see your first extraction, you'll understand how DocRouter.AI works. Then you can refine prompts and explore advanced features."
 
 **Section 3 (White background):**
 - "Learn more (in-depth)" headline
 - Brief descriptions with links:
   - **Schemas** - Define structured output formats for consistent data extraction → [Learn about schemas]({{ params.site_url }}/docs/knowledge_base/schemas)
-  - **REST API** - Integrate DocRouter into your workflows programmatically → [API Documentation]({{ params.site_url }}/docs/api)
+  - **REST API** - Integrate DocRouter.AI into your workflows programmatically → [API Documentation]({{ params.site_url }}/docs/api)
   - **Workflows** - Automate document processing with N8N and Temporal → [Workflow Guide]({{ params.site_url }}/docs/workflows)
   - **Claude Code** - Use Claude Code to create schemas and configure prompts → [Claude Code Guide]({{ params.site_url }}/docs/claude-code)
 - Brief explanation: "These resources will help you go deeper once you've seen your first results."
@@ -86,10 +86,10 @@ Users who have successfully registered and verified their email address.
 - CTA: "Contact Support"
 
 **Subject Line:**
-"DocRouter: Tag, prompt, upload - Get started in 4 steps 📄"
+"DocRouter.AI: Tag, prompt, upload - Get started in 4 steps 📄"
 
 **Preview Text:**
-Welcome to DocRouter! Create a tag and a prompt, upload a document, and see your first extraction in minutes.
+Welcome to DocRouter.AI! Create a tag and a prompt, upload a document, and see your first extraction in minutes.
 
 ---
 
@@ -109,13 +109,13 @@ Welcome to DocRouter! Create a tag and a prompt, upload a document, and see your
 **Key Sections (with alternating background colors):**
 
 **Section 1 (White background):**
-- Personal greeting: "{{ contact.FIRSTNAME | default: 'there' }}, now that you've seen DocRouter extract data, let's talk about schemas."
+- Personal greeting: "{{ contact.FIRSTNAME | default: 'there' }}, now that you've seen DocRouter.AI extract data, let's talk about schemas."
 - Introduction: "Schemas define the structure of your extracted data. They ensure consistency, validate output, and make your data easier to work with. Let's explore how to use them effectively."
 - Primary CTA: "Create Your First Schema"
 
 **Section 2 (Light colored background):**
 - "What are schemas?" headline
-- Explanation: "Schemas are JSON Schema definitions that specify the structure and validation rules for your extracted data. When you link a schema to a prompt, DocRouter ensures the AI output matches your defined structure."
+- Explanation: "Schemas are JSON Schema definitions that specify the structure and validation rules for your extracted data. When you link a schema to a prompt, DocRouter.AI ensures the AI output matches your defined structure."
 - Benefits with checkmarks:
   - ✓ Consistent output format across all extractions
   - ✓ Automatic validation of extracted data
@@ -140,7 +140,7 @@ Welcome to DocRouter! Create a tag and a prompt, upload a document, and see your
 **Section 5 (White background):**
 - "Workflows: Automate at scale" headline
 - Brief overview:
-  - **N8N integration** - Connect DocRouter to email, fax, and ERP systems for automated document ingestion
+  - **N8N integration** - Connect DocRouter.AI to email, fax, and ERP systems for automated document ingestion
   - **Temporal workflows** - Build multi-step document processing workflows that scale
 - Brief explanation: "Workflows let you automate document processing end-to-end, from ingestion to data extraction to integration."
 - Links:
@@ -153,7 +153,7 @@ Welcome to DocRouter! Create a tag and a prompt, upload a document, and see your
 - Support message with CTA: "Contact Support"
 
 **Subject Line:**
-"DocRouter: Learn about schemas for document extraction 🤖"
+"DocRouter.AI: Learn about schemas for document extraction 🤖"
 
 **Preview Text:**
 Schemas ensure consistent, validated output from your prompts. Learn how to create and use them effectively.
@@ -174,8 +174,8 @@ Schemas ensure consistent, validated output from your prompts. Learn how to crea
 **Key Sections (with alternating background colors):**
 
 **Section 1 (White background):**
-- Personal greeting: "{{ contact.FIRSTNAME | default: 'there' }}, how's your DocRouter journey going?"
-- Check-in message: "You've been using DocRouter for a week now. We'd love to hear how it's working for you and help with any questions or challenges you might have."
+- Personal greeting: "{{ contact.FIRSTNAME | default: 'there' }}, how's your DocRouter.AI journey going?"
+- Check-in message: "You've been using DocRouter.AI for a week now. We'd love to hear how it's working for you and help with any questions or challenges you might have."
 - Conditional content: If user has activity, reference it (e.g., "We noticed you've uploaded {{ contact.documents_uploaded }} documents and created {{ contact.prompts_created }} prompts!")
 
 **Section 2 (Light colored background):**
@@ -188,20 +188,20 @@ Schemas ensure consistent, validated output from your prompts. Learn how to crea
 
 **Section 3 (White background):**
 - "We're here to help" headline
-- Support message: "Whether you're just getting started or scaling your document processing, our support team can help you succeed with DocRouter."
+- Support message: "Whether you're just getting started or scaling your document processing, our support team can help you succeed with DocRouter.AI."
 - Primary CTA: "Contact Support"
 - Secondary links: Documentation, API docs, workflow guides
 
 **Section 4 (Light colored background):**
 - "Share your feedback" headline
-- Request: "Your feedback helps us improve DocRouter. What's working well? What could be better?"
+- Request: "Your feedback helps us improve DocRouter.AI. What's working well? What could be better?"
 - Optional CTA: "Share Feedback"
 
 **Subject Line:**
-"How's your DocRouter journey going? We're here to help 👋"
+"How's your DocRouter.AI journey going? We're here to help 👋"
 
 **Preview Text:**
-You've been using DocRouter for a week. We're here to help with questions and hear how it's working for you.
+You've been using DocRouter.AI for a week. We're here to help with questions and hear how it's working for you.
 
 ---
 
@@ -218,10 +218,10 @@ People who have shown interest but haven't registered (e.g., visited website, do
 #### Email 1: Introduction to Smart Document Router (Day 0)
 **Trigger:** User added to prospect list (via form submission, event, etc.)
 
-**Purpose:** Introduce DocRouter and its core value proposition.
+**Purpose:** Introduce DocRouter.AI and its core value proposition.
 
 **Content:**
-- What is Smart Document Router?
+- What is DocRouter.AI?
 - Problem it solves (unstructured documents from faxes, email, ERPs)
 - Key differentiators (human-in-the-loop, enterprise-focused, open-source)
 - High-level overview of how it works
@@ -229,18 +229,18 @@ People who have shown interest but haven't registered (e.g., visited website, do
 - Social proof (if available)
 
 **Key Sections:**
-- "Meet Smart Document Router"
+- "Meet DocRouter.AI"
 - "The Problem We Solve"
 - "How It Works (High-Level)"
-- "Who Uses DocRouter?"
-- "Why Choose DocRouter?"
+- "Who Uses DocRouter.AI?"
+- "Why Choose DocRouter.AI?"
 - CTA: "Get Started Free" or "Learn More"
 
 **Subject Line:**
 "DocRouter.AI: Transform Your Document Processing with AI"
 
 **Preview Text:**
-Meet Smart Document Router: Extract structured data from unstructured documents with AI-powered automation.
+Meet DocRouter.AI: Extract structured data from unstructured documents with AI-powered automation.
 
 ---
 
@@ -351,17 +351,17 @@ Flexible deployment options, powerful APIs, Python/TypeScript SDKs, and open-sou
 "DocRouter.AI: Ready to Transform Your Document Workflow?"
 
 **Preview Text:**
-Get started with DocRouter today. Create your free account or schedule a demo to see it in action.
+Get started with DocRouter.AI today. Create your free account or schedule a demo to see it in action.
 
 ---
 
 ## Campaign 3: Investor/Friends Newsletter
 
 ### Goal
-Maintain relationships with investors, advisors, and close contacts through regular updates on company progress and milestones.
+Maintain relationships with investors, advisors, and close contacts through regular updates on DocRouter.AI progress and milestones.
 
 ### Target Audience
-Investors, advisors, mentors, and close professional contacts who want to stay updated on DocRouter's journey.
+Investors, advisors, mentors, and close professional contacts who want to stay updated on DocRouter.AI's journey.
 
 ### Email Schedule
 Quarterly only - focused on major milestones and strategic updates.
@@ -370,13 +370,13 @@ Quarterly only - focused on major milestones and strategic updates.
 
 #### Quarterly Updates
 **Subject Line Examples:**
-- "Q4 DocRouter Update: Major Milestones & What's Next"
-- "DocRouter Quarterly: Progress, Partnerships & Plans"
-- "Behind the Scenes: Building DocRouter's Future"
+- "Q4 DocRouter.AI Update: Major Milestones & What's Next"
+- "DocRouter.AI Quarterly: Progress, Partnerships & Plans"
+- "Behind the Scenes: Building DocRouter.AI's Future"
 
 **Content Focus:**
 - Key milestones achieved (user growth, partnerships, funding)
-- Product development updates (high-level, not technical)
+- DocRouter.AI product development updates (high-level, not technical)
 - Team growth and hires
 - Industry insights and market trends
 - Challenges overcome and lessons learned
@@ -413,7 +413,7 @@ Bi-weekly or monthly, depending on update frequency.
 - "What's New: Improved Document Processing"
 
 **Content Focus:**
-- New features and capabilities
+- New DocRouter.AI features and capabilities
 - Performance improvements
 - Bug fixes and security updates
 - API changes or deprecations
@@ -488,7 +488,7 @@ Build expertise and demonstrate thought leadership while keeping users engaged.
 Active users who want to get more value from DocRouter.
 
 ### Email Schedule
-Monthly series: "DocRouter Deep Dives" - 4 emails over a month.
+Monthly series: "DocRouter.AI Deep Dives" - 4 emails over a month.
 
 #### Email 1: Advanced Prompting Techniques
 #### Email 2: Schema Design Best Practices
