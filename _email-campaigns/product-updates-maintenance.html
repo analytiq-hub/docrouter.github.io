@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DocRouter Update: {{ params.update_title | default: 'Security & Performance Improvements' }}</title>
+    <!--[if mso]>
+    <style type="text/css">
+        table {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+    </style>
+    <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+    <!-- Wrapper Table -->
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f5f5f5;">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <!-- Main Container -->
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; width: 100%; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+
+                    <!-- Header -->
+                    <tr>
+                        <td style="padding: 40px 40px 30px 40px; text-align: center; background: linear-gradient(135deg, #0070f3 0%, #0051cc 100%); border-radius: 8px 8px 0 0;">
+                            <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 600; line-height: 1.2;">
+                                🔄 DocRouter Update
+                            </h1>
+                            <p style="margin: 10px 0 0 0; color: #e8f0ff; font-size: 16px; line-height: 1.4;">
+                                {{ params.update_title | default: 'Security & Performance Improvements' }}
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Update Summary -->
+                    <tr>
+                        <td style="padding: 30px 40px 20px 40px;">
+                            <p style="margin: 0; color: #333333; font-size: 16px; line-height: 1.6;">
+                                Hi {{ contact.FIRSTNAME | default: 'there' }},
+                            </p>
+                            <p style="margin: 15px 0 0 0; color: #333333; font-size: 16px; line-height: 1.6;">
+                                We've deployed important updates to DocRouter that improve security, performance, and reliability. Here's what changed:
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Performance & Reliability -->
+                    <tr>
+                        <td style="padding: 20px 40px;">
+                            <h2 style="margin: 0 0 20px 0; color: #333333; font-size: 22px; font-weight: 600;">
+                                ⚡ Performance & Reliability
+                            </h2>
+
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td style="padding-bottom: 15px;">
+                                        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 4px;">
+                                            <h3 style="margin: 0 0 8px 0; color: #333333; font-size: 16px; font-weight: 600;">
+                                                {{ params.performance_improvement | default: 'Faster Document Processing' }}
+                                            </h3>
+                                            <p style="margin: 0; color: #555555; font-size: 14px; line-height: 1.6;">
+                                                {{ params.performance_description | default: 'Reduced average processing time by 25% through optimized AI model loading and caching improvements.' }}
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 4px;">
+                                            <h3 style="margin: 0 0 8px 0; color: #333333; font-size: 16px; font-weight: 600;">
+                                                {{ params.reliability_improvement | default: 'Enhanced System Stability' }}
+                                            </h3>
+                                            <p style="margin: 0; color: #555555; font-size: 14px; line-height: 1.6;">
+                                                {{ params.reliability_description | default: 'Improved error handling and automatic recovery mechanisms reduce system downtime by 40%.' }}
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Bug Fixes & Security -->
+                    <tr>
+                        <td style="padding: 20px 40px; background-color: #f8f9fa;">
+                            <h2 style="margin: 0 0 20px 0; color: #333333; font-size: 22px; font-weight: 600;">
+                                🐛 Bug Fixes & Security
+                            </h2>
+
+                            <div style="background-color: #ffffff; padding: 20px; border-radius: 6px; border-left: 4px solid #28a745;">
+                                <h3 style="margin: 0 0 15px 0; color: #333333; font-size: 18px; font-weight: 600;">
+                                    Security Updates
+                                </h3>
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                    <tr>
+                                        <td style="padding-bottom: 10px;">
+                                            <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
+                                                <span style="color: #28a745; font-size: 18px; margin-right: 8px;">✓</span>
+                                                {{ params.security_fix_1 | default: 'Enhanced API authentication with improved token validation' }}
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-bottom: 10px;">
+                                            <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
+                                                <span style="color: #28a745; font-size: 18px; margin-right: 8px;">✓</span>
+                                                {{ params.security_fix_2 | default: 'Updated encryption protocols for data in transit' }}
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
+                                                <span style="color: #28a745; font-size: 18px; margin-right: 8px;">✓</span>
+                                                {{ params.security_fix_3 | default: 'Strengthened input validation across all endpoints' }}
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div style="background-color: #ffffff; padding: 20px; border-radius: 6px; border-left: 4px solid #ffc107; margin-top: 15px;">
+                                <h3 style="margin: 0 0 15px 0; color: #333333; font-size: 18px; font-weight: 600;">
+                                    Bug Fixes
+                                </h3>
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                    <tr>
+                                        <td style="padding-bottom: 10px;">
+                                            <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
+                                                <span style="color: #ffc107; font-size: 18px; margin-right: 8px;">🔧</span>
+                                                {{ params.bug_fix_1 | default: 'Fixed PDF parsing issues with complex table structures' }}
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-bottom: 10px;">
+                                            <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
+                                                <span style="color: #ffc107; font-size: 18px; margin-right: 8px;">🔧</span>
+                                                {{ params.bug_fix_2 | default: 'Resolved webhook delivery failures for large payloads' }}
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
+                                                <span style="color: #ffc107; font-size: 18px; margin-right: 8px;">🔧</span>
+                                                {{ params.bug_fix_3 | default: 'Improved error messages for failed document uploads' }}
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- What's Next -->
+                    <tr>
+                        <td style="padding: 30px 40px;">
+                            <h2 style="margin: 0 0 20px 0; color: #333333; font-size: 22px; font-weight: 600;">
+                                🔮 What's Next
+                            </h2>
+                            <p style="margin: 0 0 15px 0; color: #555555; font-size: 15px; line-height: 1.6;">
+                                {{ params.next_update_note | default: 'We\'re continuously working to improve DocRouter. Our next major feature release will include advanced workflow automation capabilities.' }}
+                            </p>
+                            <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">
+                                Have questions about these updates? We're here to help.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- CTA -->
+                    <tr>
+                        <td style="padding: 20px 40px 30px 40px; text-align: center;">
+                            <a href="{{ params.site_url | default: 'https://docrouter.ai' }}/support" style="display: inline-block; background-color: #0070f3; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 6px; font-size: 15px; font-weight: 600;">
+                                Get Support
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="padding: 30px 40px; background-color: #ffffff; border-radius: 0 0 8px 8px; text-align: center; border-top: 1px solid #eaeaea;">
+                            <p style="margin: 0 0 10px 0; color: #999999; font-size: 12px; line-height: 1.5;">
+                                © 2026 Analytiq Hub LLC. All rights reserved.
+                            </p>
+                            <p style="margin: 0 0 10px 0; color: #999999; font-size: 12px; line-height: 1.5;">
+                                You received this update because you're a DocRouter user.
+                            </p>
+                            <p style="margin: 0; color: #999999; font-size: 12px; line-height: 1.5;">
+                                <a href="{{ mirror }}" style="color: #0070f3; text-decoration: none;">View in browser</a> |
+                                <a href="{{ params.site_url | default: 'https://docrouter.ai' }}/changelog" style="color: #0070f3; text-decoration: none;">Full Changelog</a> |
+                                <a href="{{ unsubscribe }}" style="color: #0070f3; text-decoration: none;">Unsubscribe</a>
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Responsive Styles -->
+    <style type="text/css">
+        @media only screen and (max-width: 600px) {
+            table[class="main-container"] {
+                width: 100% !important;
+            }
+            td[style*="padding: 30px 40px"] {
+                padding: 20px !important;
+            }
+            h1 {
+                font-size: 24px !important;
+            }
+            h2 {
+                font-size: 20px !important;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DocRouter Quarterly Update: [Quarter] [Year]</title>
+    <!--[if mso]>
+    <style type="text/css">
+        table {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+    </style>
+    <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+    <!-- Wrapper Table -->
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f5f5f5;">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <!-- Main Container -->
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; width: 100%; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+
+                    <!-- Header -->
+                    <tr>
+                        <td style="padding: 40px 40px 30px 40px; text-align: center; background: linear-gradient(135deg, #0070f3 0%, #0051cc 100%); border-radius: 8px 8px 0 0;">
+                            <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 600; line-height: 1.2;">
+                                DocRouter Quarterly Update
+                            </h1>
+                            <p style="margin: 10px 0 0 0; color: #e8f0ff; font-size: 16px; line-height: 1.4;">
+                                Q{{ params.quarter | default: '4' }} {{ params.year | default: '2025' }}
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Personal Greeting -->
+                    <tr>
+                        <td style="padding: 30px 40px 20px 40px;">
+                            <p style="margin: 0; color: #333333; font-size: 16px; line-height: 1.6;">
+                                Dear {{ contact.FIRSTNAME | default: 'valued partner' }},
+                            </p>
+                            <p style="margin: 15px 0 0 0; color: #333333; font-size: 16px; line-height: 1.6;">
+                                As we wrap up another quarter, I wanted to share some highlights from DocRouter's journey and what's on the horizon.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- What's New This Quarter -->
+                    <tr>
+                        <td style="padding: 20px 40px;">
+                            <h2 style="margin: 0 0 20px 0; color: #333333; font-size: 22px; font-weight: 600; border-bottom: 2px solid #0070f3; padding-bottom: 10px;">
+                                🚀 What's New This Quarter
+                            </h2>
+
+                            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 6px; margin-bottom: 20px;">
+                                <h3 style="margin: 0 0 10px 0; color: #333333; font-size: 18px; font-weight: 600;">
+                                    User Growth & Adoption
+                                </h3>
+                                <ul style="margin: 0; padding-left: 20px; color: #555555; font-size: 15px; line-height: 1.8;">
+                                    <li>{{ params.new_users | default: '150+' }} new organizations joined DocRouter</li>
+                                    <li>{{ params.documents_processed | default: '500K+' }} documents processed this quarter</li>
+                                    <li>{{ params.enterprise_customers | default: '12' }} enterprise customers onboarded</li>
+                                    <li>Expanded to {{ params.new_industries | default: '3' }} new industry verticals</li>
+                                </ul>
+                            </div>
+
+                            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 6px; margin-bottom: 20px;">
+                                <h3 style="margin: 0 0 10px 0; color: #333333; font-size: 18px; font-weight: 600;">
+                                    Product Developments
+                                </h3>
+                                <ul style="margin: 0; padding-left: 20px; color: #555555; font-size: 15px; line-height: 1.8;">
+                                    <li>Launched {{ params.new_features | default: 'advanced workflow automation' }} capabilities</li>
+                                    <li>Enhanced API with {{ params.new_endpoints | default: '15' }} new endpoints</li>
+                                    <li>Improved accuracy by {{ params.accuracy_improvement | default: '12%' }} through better AI models</li>
+                                    <li>Added support for {{ params.new_integrations | default: '5' }} new third-party integrations</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Team & Company Updates -->
+                    <tr>
+                        <td style="padding: 20px 40px; background-color: #f8f9fa;">
+                            <h2 style="margin: 0 0 20px 0; color: #333333; font-size: 22px; font-weight: 600;">
+                                👥 Team & Company Updates
+                            </h2>
+
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td width="50%" valign="top" style="padding-right: 15px; padding-bottom: 15px;">
+                                        <div style="background-color: #ffffff; padding: 15px; border-radius: 4px;">
+                                            <h3 style="margin: 0 0 10px 0; color: #333333; font-size: 16px; font-weight: 600;">
+                                                New Team Members
+                                            </h3>
+                                            <p style="margin: 0; color: #555555; font-size: 14px; line-height: 1.6;">
+                                                Welcome {{ params.new_hires | default: 'Sarah (Engineering), Mike (Sales), and Lisa (Customer Success)' }} to the DocRouter team!
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td width="50%" valign="top" style="padding-left: 15px; padding-bottom: 15px;">
+                                        <div style="background-color: #ffffff; padding: 15px; border-radius: 4px;">
+                                            <h3 style="margin: 0 0 10px 0; color: #333333; font-size: 16px; font-weight: 600;">
+                                                Company Milestones
+                                            </h3>
+                                            <p style="margin: 0; color: #555555; font-size: 14px; line-height: 1.6;">
+                                                {{ params.milestones | default: 'Reached profitability, secured Series A funding, expanded to new markets' }}
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Industry Insights -->
+                    <tr>
+                        <td style="padding: 20px 40px;">
+                            <h2 style="margin: 0 0 20px 0; color: #333333; font-size: 22px; font-weight: 600;">
+                                📊 Industry Insights
+                            </h2>
+
+                            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 6px; border-left: 4px solid #0070f3;">
+                                <p style="margin: 0 0 15px 0; color: #555555; font-size: 15px; line-height: 1.6;">
+                                    <strong>AI Document Processing Market:</strong> The market continues to grow rapidly, with enterprises increasingly adopting AI solutions for document automation. We're seeing particular interest in healthcare and financial services sectors.
+                                </p>
+                                <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">
+                                    <strong>Key Trend:</strong> Companies are moving beyond simple OCR to intelligent document understanding that can extract meaning and context, not just text.
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- What's Next -->
+                    <tr>
+                        <td style="padding: 20px 40px; background-color: #f8f9fa;">
+                            <h2 style="margin: 0 0 20px 0; color: #333333; font-size: 22px; font-weight: 600;">
+                                🎯 What's Next
+                            </h2>
+
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td style="padding-bottom: 15px;">
+                                        <h3 style="margin: 0 0 8px 0; color: #333333; font-size: 18px; font-weight: 600;">
+                                            Next Quarter Priorities
+                                        </h3>
+                                        <ul style="margin: 0; padding-left: 20px; color: #555555; font-size: 15px; line-height: 1.8;">
+                                            <li>{{ params.next_quarter_focus | default: 'Expand enterprise sales team and launch advanced AI features' }}</li>
+                                            <li>{{ params.upcoming_features | default: 'Multi-language support and enhanced security features' }}</li>
+                                            <li>{{ params.market_expansion | default: 'Enter European market and add 5 new industry verticals' }}</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Personal Note -->
+                    <tr>
+                        <td style="padding: 30px 40px;">
+                            <h2 style="margin: 0 0 15px 0; color: #333333; font-size: 22px; font-weight: 600;">
+                                📝 A Note From Andrei
+                            </h2>
+                            <p style="margin: 0 0 15px 0; color: #555555; font-size: 15px; line-height: 1.6;">
+                                {{ params.personal_note | default: 'It\'s been an exciting quarter building DocRouter with the team. The feedback from our customers and the growth we\'re seeing validates our vision for transforming document processing. I\'m grateful for your continued support and partnership.' }}
+                            </p>
+                            <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">
+                                As always, I'm happy to discuss any aspect of DocRouter's progress or answer questions about our strategy.
+                            </p>
+                            <p style="margin: 20px 0 0 0; color: #333333; font-size: 16px; line-height: 1.6;">
+                                Best regards,<br>
+                                <strong>Andrei Radulescu-Banu</strong><br>
+                                CEO & Founder, DocRouter.AI
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="padding: 30px 40px; background-color: #ffffff; border-radius: 0 0 8px 8px; text-align: center; border-top: 1px solid #eaeaea;">
+                            <p style="margin: 0 0 10px 0; color: #999999; font-size: 12px; line-height: 1.5;">
+                                © 2026 Analytiq Hub LLC. All rights reserved.
+                            </p>
+                            <p style="margin: 0 0 10px 0; color: #999999; font-size: 12px; line-height: 1.5;">
+                                This quarterly update is sent to our valued investors and partners.
+                            </p>
+                            <p style="margin: 0; color: #999999; font-size: 12px; line-height: 1.5;">
+                                <a href="{{ mirror }}" style="color: #0070f3; text-decoration: none;">View in browser</a> |
+                                <a href="{{ params.site_url | default: 'https://docrouter.ai' }}/contact" style="color: #0070f3; text-decoration: none;">Contact us</a> |
+                                <a href="{{ unsubscribe }}" style="color: #0070f3; text-decoration: none;">Unsubscribe</a>
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Responsive Styles -->
+    <style type="text/css">
+        @media only screen and (max-width: 600px) {
+            table[class="main-container"] {
+                width: 100% !important;
+            }
+            td[style*="padding: 30px 40px"] {
+                padding: 20px !important;
+            }
+            h1 {
+                font-size: 24px !important;
+            }
+            h2 {
+                font-size: 20px !important;
+            }
+            table[width="100%"] td[width="50%"] {
+                width: 100% !important;
+                display: block !important;
+                padding: 10px 0 !important;
+            }
+        }
+    </style>
+</body>
+</html>
