@@ -2,9 +2,16 @@
 
 ## Overview
 
-This document outlines two email campaigns:
+This document outlines four active email campaigns plus future campaigns:
 1. **Onboarding Campaign** - For users who have registered an account
 2. **Prospect Campaign** - For potential users who might be interested in DocRouter
+3. **Investor/Friends Newsletter** - For investors, advisors, and close contacts
+4. **Product Updates Newsletter** - For registered users with product announcements
+5. **Educational Series** - Monthly deep-dive content for active users
+
+### Future Campaigns (For Later Implementation)
+6. **Re-engagement Campaign** - For inactive users to return to the platform
+7. **Referral Program** - Leverage users to bring in new customers
 
 ---
 
@@ -14,19 +21,16 @@ This document outlines two email campaigns:
 
 | Email | Day | Subject Line | Preview Text |
 |-------|-----|--------------|--------------|
-| Email 1: Upload, Tailor, See Results | 0 | "Upload, tailor, see results - Get started in 3 steps 📄" | Welcome to DocRouter! Upload a document, create a prompt, and see your first extraction in minutes. |
-| Email 2: Learn About Schemas | 3 | "Learn about schemas - Structure your data extraction 🤖" | Schemas ensure consistent, validated output from your prompts. Learn how to create and use them effectively. |
+| Email 1: Tag, Prompt, Upload | 0 | "DocRouter: Tag, prompt, upload - Get started in 4 steps 📄" | Welcome to DocRouter! Create a tag and a prompt, upload a document, and see your first extraction in minutes. |
+| Email 2: Learn About Schemas | 3 | "DocRouter: Learn about schemas for document extraction 🤖" | Schemas ensure consistent, validated output from your prompts. Learn how to create and use them effectively. |
 | Email 3: Customer Success Check | 7 | "How's your DocRouter journey going? We're here to help 👋" | You've been using DocRouter for a week. We're here to help with questions and hear how it's working for you. |
 
 ### Campaign 2: Prospect Campaign (Non-Registered Users)
 
 | Email | Day | Subject Line | Preview Text |
 |-------|-----|--------------|--------------|
-| Email 1: Introduction to Smart Document Router | 0 | "Transform Your Document Processing with AI" | Meet Smart Document Router: Extract structured data from unstructured documents with AI-powered automation. |
-| Email 2: Key Features Deep Dive | 3 | "5 Powerful Features That Set DocRouter Apart" | Discover AI-powered extraction, human verification, smart routing, API integration, and enterprise-ready capabilities. |
-| Email 3: Use Cases & Success Stories | 7 | "How Companies Use DocRouter to Save Time & Money" | See real-world applications: invoice processing, form extraction, and automated workflows that deliver ROI. |
-| Email 4: Technical Overview & Getting Started | 10 | "Built for Developers: DocRouter Technical Overview" | Flexible deployment options, powerful APIs, Python/TypeScript SDKs, and open-source architecture for developers. |
-| Email 5: Final Call to Action | 14 | "Ready to Transform Your Document Workflow?" | Get started with DocRouter today. Create your free account or schedule a demo to see it in action. |
+| Email 1: Introduction & Demo Invitation | 0 | "DocRouter.AI: Transform Your Document Processing with AI" | See how DocRouter extracts data from unstructured documents with AI. Book a free demo to learn more. |
+| Email 2: Follow-up Demo Reminder | 3-5 | "Ready to See DocRouter in Action?" | Book your free demo and discover how AI can transform your document processing workflow. |
 
 ---
 
@@ -40,31 +44,32 @@ Users who have successfully registered and verified their email address.
 
 ### Email Sequence
 
-#### Email 1: Upload, Tailor, See Results (Day 0 - Immediate)
+#### Email 1: Tag, Prompt, Upload (Day 0 - Immediate)
 **Trigger:** User completes email verification
 
-**Purpose:** Get users to their first successful extraction quickly - upload documents, create/tailor a prompt, and see results.
+**Purpose:** Get users to their first successful extraction quickly - create a tag and a prompt, upload documents with tag, and see results.
 
 **Content:**
 - Welcome message
-- Quick start: Upload documents → Create/Tailor prompt → See results
+- Quick start: Create tag → Create prompt → Upload documents (with tag) → See results
 - Brief overview of the process
 - Links to in-depth resources (schemas, REST API, workflows, Claude Code)
 
 **Key Sections (with alternating background colors):**
 
 **Section 1 (White background):**
-- Personal greeting: "{{ contact.FIRSTNAME | default: 'there' }}, welcome to DocRouter! Let's get you extracting data from your first document."
-- Introduction: "The fastest way to see DocRouter in action is to upload a document, create a prompt, and see the results. Here's how to get started in three simple steps."
+- Personal greeting: "Hi {{ contact.FIRSTNAME | default: 'there' }}, welcome to DocRouter! Let's get you extracting data from your first document."
+- Introduction: "The fastest way to see DocRouter in action is to create a tag and a prompt, upload a document with that tag, and see the results. Here's how to get started in four simple steps."
 - Primary CTA: "Upload Your First Document"
 
 **Section 2 (Light colored background - e.g., #f8f9fa):**
 - "Get started in 3 steps" headline
 - Step-by-step guide:
-  1. **Upload documents** - Drag & drop or browse files (PDFs, images, Word, Excel, etc.)
-  2. **Tailor your prompt** - Write clear instructions about what data to extract
-  3. **See results** - Review AI-extracted data and verify accuracy
-- Brief explanation: "Once you see your first extraction, you'll understand how DocRouter works. Then you can refine prompts and explore advanced features."
+  1. **Create a tag** - Set up a category for your document type (e.g., "invoices", "receipts")
+  2. **Create a prompt** - Write instructions for what data to extract from documents with this tag
+  3. **Upload documents** - Drag & drop files and apply the tag during upload
+  4. **See results** - Review AI-extracted data and verify accuracy
+- Brief explanation: "Create your tag and a prompt first, then upload documents with that tag. This ensures your documents are automatically processed. Once you see your first extraction, you'll understand how DocRouter works. Then you can refine prompts and explore advanced features."
 
 **Section 3 (White background):**
 - "Learn more (in-depth)" headline
@@ -81,10 +86,10 @@ Users who have successfully registered and verified their email address.
 - CTA: "Contact Support"
 
 **Subject Line:**
-"Upload, tailor, see results - Get started in 3 steps 📄"
+"DocRouter: Tag, prompt, upload - Get started in 4 steps 📄"
 
 **Preview Text:**
-Welcome to DocRouter! Upload a document, create a prompt, and see your first extraction in minutes.
+Welcome to DocRouter! Create a tag and a prompt, upload a document, and see your first extraction in minutes.
 
 ---
 
@@ -148,7 +153,7 @@ Welcome to DocRouter! Upload a document, create a prompt, and see your first ext
 - Support message with CTA: "Contact Support"
 
 **Subject Line:**
-"Learn about schemas - Structure your data extraction 🤖"
+"DocRouter: Learn about schemas for document extraction 🤖"
 
 **Preview Text:**
 Schemas ensure consistent, validated output from your prompts. Learn how to create and use them effectively.
@@ -203,7 +208,7 @@ You've been using DocRouter for a week. We're here to help with questions and he
 ## Campaign 2: Prospect Campaign (Non-Registered Users)
 
 ### Goal
-Introduce DocRouter to potential users, explain value proposition, and encourage sign-up.
+Get prospects to book a demo call. Focus on value proposition and social proof, not product education.
 
 ### Target Audience
 People who have shown interest but haven't registered (e.g., visited website, downloaded resources, attended webinars, etc.)
@@ -232,7 +237,7 @@ People who have shown interest but haven't registered (e.g., visited website, do
 - CTA: "Get Started Free" or "Learn More"
 
 **Subject Line:**
-"Transform Your Document Processing with AI"
+"DocRouter.AI: Transform Your Document Processing with AI"
 
 **Preview Text:**
 Meet Smart Document Router: Extract structured data from unstructured documents with AI-powered automation.
@@ -343,10 +348,174 @@ Flexible deployment options, powerful APIs, Python/TypeScript SDKs, and open-sou
 - CTA: "Create Free Account" (primary) + "Schedule Demo" (secondary)
 
 **Subject Line:**
-"Ready to Transform Your Document Workflow?"
+"DocRouter.AI: Ready to Transform Your Document Workflow?"
 
 **Preview Text:**
 Get started with DocRouter today. Create your free account or schedule a demo to see it in action.
+
+---
+
+## Campaign 3: Investor/Friends Newsletter
+
+### Goal
+Maintain relationships with investors, advisors, and close contacts through regular updates on company progress and milestones.
+
+### Target Audience
+Investors, advisors, mentors, and close professional contacts who want to stay updated on DocRouter's journey.
+
+### Email Schedule
+Quarterly only - focused on major milestones and strategic updates.
+
+### Email Content Structure
+
+#### Quarterly Updates
+**Subject Line Examples:**
+- "Q4 DocRouter Update: Major Milestones & What's Next"
+- "DocRouter Quarterly: Progress, Partnerships & Plans"
+- "Behind the Scenes: Building DocRouter's Future"
+
+**Content Focus:**
+- Key milestones achieved (user growth, partnerships, funding)
+- Product development updates (high-level, not technical)
+- Team growth and hires
+- Industry insights and market trends
+- Challenges overcome and lessons learned
+- Future plans and goals
+
+**Tone:** Casual, authentic, relationship-focused
+
+**Key Sections:**
+- "What's New This Month"
+- "Team & Company Updates"
+- "Industry Insights"
+- "What's Next"
+- Personal note from founder
+
+---
+
+## Campaign 4: Product Updates Newsletter
+
+### Goal
+Keep registered users informed about new features, improvements, and important updates to reduce support inquiries and increase engagement.
+
+### Target Audience
+All registered DocRouter users who have opted into product updates.
+
+### Email Schedule
+Bi-weekly or monthly, depending on update frequency.
+
+### Email Content Structure
+
+#### Feature Release Announcements
+**Subject Line Examples:**
+- "New Feature: Advanced Schema Validation"
+- "DocRouter Update: Enhanced API Rate Limits"
+- "What's New: Improved Document Processing"
+
+**Content Focus:**
+- New features and capabilities
+- Performance improvements
+- Bug fixes and security updates
+- API changes or deprecations
+- Integration updates
+- Usage tips and best practices
+
+**Tone:** Professional, helpful, user-focused
+
+**Key Sections:**
+- "🚀 New Features"
+- "⚡ Performance & Reliability"
+- "🐛 Bug Fixes & Security"
+- "📚 Resources & Tips"
+- "🔮 Coming Soon"
+
+---
+
+## Newsletter Implementation Notes
+
+### Segmentation & Personalization
+- **Investor Newsletter:** Highly personalized with specific updates relevant to each contact's interests
+- **Product Updates:** Segmented by user type (free vs paid, active vs inactive) and feature usage
+
+### Opt-in & Compliance
+- Both newsletters require explicit opt-in
+- Clear unsubscribe options in every email
+- GDPR/CCPA compliant with data usage transparency
+
+### Analytics & Optimization
+- Track open rates, click-through rates, and unsubscribe rates
+- A/B test subject lines and content structure
+- Monitor engagement to adjust frequency and content
+
+### Content Calendar
+- **Investor Newsletter:** Plan 3 months in advance, align with board meetings and investor updates
+- **Product Updates:** Release-driven, supplement with educational content during quiet periods
+
+---
+
+## Future Campaigns
+
+### Campaign 5: Re-engagement Campaign (Future)
+
+### Goal
+Re-activate inactive users and bring them back to the platform.
+
+### Target Audience
+Users who haven't logged in for 30+ days or haven't uploaded documents recently.
+
+### Email Sequence
+
+#### Email 1: Gentle Re-engagement (Day 0)
+**Subject:** "We Miss You at DocRouter - Here's What's New"
+**Content:** Update on new features, gentle reminder of value, easy re-entry
+
+#### Email 2: Value Reminder (Day 7)
+**Subject:** "Quick Win: Process One Document in 2 Minutes"
+**Content:** Simple tutorial, success story, clear next steps
+
+#### Email 3: Final Attempt (Day 14)
+**Subject:** "Your DocRouter Account - Last Chance to Save Progress"
+**Content:** Warning about potential data loss, special offer, final CTA
+
+---
+
+## Campaign 5: Educational Series
+
+### Goal
+Build expertise and demonstrate thought leadership while keeping users engaged.
+
+### Target Audience
+Active users who want to get more value from DocRouter.
+
+### Email Schedule
+Monthly series: "DocRouter Deep Dives" - 4 emails over a month.
+
+#### Email 1: Advanced Prompting Techniques
+#### Email 2: Schema Design Best Practices
+#### Email 3: Workflow Automation with N8N/Temporal
+#### Email 4: API Integration Examples
+
+### Campaign 6: Referral Program (Future)
+
+### Goal
+Leverage existing users to bring in new customers through referrals.
+
+### Target Audience
+Highly engaged users (high document volume, long tenure).
+
+### Email Sequence
+
+#### Email 1: Program Introduction
+**Subject:** "Get Free DocRouter Credits by Referring Friends"
+**Content:** Explain referral program, benefits, how it works
+
+#### Email 2: Success Story (if they haven't referred yet)
+**Subject:** "How [User] Earned $500 in DocRouter Credits"
+**Content:** Case study of successful referrer, program reminder
+
+#### Email 3: Limited Time Boost (if still no referrals)
+**Subject:** "Double Referral Credits - Limited Time"
+**Content:** Temporary bonus offer to encourage participation
 
 ---
 
@@ -559,15 +728,30 @@ Before implementing the email campaigns, create these custom attributes in Brevo
 For email templates:
 
 **Onboarding Campaign (Registered Users):**
-- `onboarding-email-1-upload-tailor-results.html` - Email 1 (Day 0): Upload, tailor prompt, see results
+- `onboarding-email-1-upload-tailor-results.html` - Email 1 (Day 0): Create tag and prompt, upload with tag, see results
 - `onboarding-email-2-schemas.html` - Email 2 (Day 3): Learn about schemas
 - `onboarding-email-3-checkin.html` - Email 3 (Day 7): Customer success check
 
 **Prospect Campaign (Non-Registered Users):**
-- `prospect-introduction.html` - Email 1 (Day 0): Prospect intro
-- `prospect-features.html` - Email 2 (Day 3): Features
-- `prospect-use-cases.html` - Email 3 (Day 7): Use cases
-- `prospect-technical.html` - Email 4 (Day 10): Technical overview
-- `prospect-final-cta.html` - Email 5 (Day 14): Final CTA
+- `prospect-email-1-demo-invitation.html` - Email 1 (Day 0): Introduction & demo invitation
+- `prospect-email-2-followup.html` - Email 2 (Day 3-5): Follow-up demo reminder
+
+**Investor/Friends Newsletter:**
+- `investor-newsletter-quarterly.html` - Quarterly comprehensive updates
+
+**Product Updates Newsletter:**
+- `product-updates-feature-release.html` - New feature announcements
+- `product-updates-maintenance.html` - Maintenance and security updates
+- `product-updates-tips.html` - Educational content and tips
+
+**Educational Series:**
+- `educational-series-prompting.html` - Advanced prompting techniques
+- `educational-series-schemas.html` - Schema design best practices
+- `educational-series-workflows.html` - Workflow automation guide
+- `educational-series-api.html` - API integration examples
+
+**Future Campaigns (Templates for Later):**
+- `reengagement-email-*.html` - Re-engagement sequence templates
+- `referral-program-*.html` - Referral program templates
 
 **Note:** The existing `welcome-email-template.html` and `onboarding-email-*.html` files may need to be updated or replaced to match the new structure.

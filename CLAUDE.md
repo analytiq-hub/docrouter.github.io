@@ -14,6 +14,26 @@ When creating documentation or marketing material for this site, you should brow
 
 This helps maintain consistency between the documentation site and the actual product.
 
+## DocRouter Workflow Understanding
+
+**Key Technical Insight:** Tags are required for prompts to trigger on documents. The correct onboarding workflow is:
+1. Create a tag and a prompt (categorization and extraction instructions)
+2. Upload documents with the tag applied
+3. See automatic extraction results
+
+This counter-intuitive but efficient flow ensures immediate results for new users.
+
+**Email Campaign Strategy:**
+- **Onboarding (Registered Users):** 3 emails over 7 days - progressive learning from setup to advanced features
+- **Prospects (Non-Registered):** 2 emails max - focus on demo booking, not product education
+- **Investor/Friends Newsletter:** Quarterly - relationship building and milestone updates
+- **Product Updates Newsletter:** Bi-weekly/monthly - feature announcements and user education
+- **Educational Series:** Monthly - build expertise and engagement
+
+**Future Campaigns:**
+- **Re-engagement:** 3 emails over 14 days - bring back inactive users (when retention becomes priority)
+- **Referral Program:** 3 emails - leverage users for growth (when scale requires user acquisition)
+
 ## Include File Architecture
 
 ### Overview
