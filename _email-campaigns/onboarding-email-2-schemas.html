@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Learn About Schemas - Structure Your Data Extraction</title>
+    <!--[if mso]>
+    <style type="text/css">
+        table {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+    </style>
+    <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+    <!-- Wrapper Table -->
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f5f5f5;">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <!-- Main Container -->
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; width: 100%; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    
+                    <!-- Header -->
+                    <tr>
+                        <td style="padding: 40px 40px 30px 40px; text-align: center; background: linear-gradient(135deg, #0070f3 0%, #0051cc 100%); border-radius: 8px 8px 0 0;">
+                            <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 600; line-height: 1.2;">
+                                Learn About Schemas 🤖
+                            </h1>
+                        </td>
+                    </tr>
+                    
+                    <!-- Section 1: Greeting & Introduction (White background) -->
+                    <tr>
+                        <td style="padding: 30px 40px 20px 40px; background-color: #ffffff;">
+                            <p style="margin: 0; color: #333333; font-size: 16px; line-height: 1.6;">
+                                {{ contact.FIRSTNAME | default: 'there' }}, now that you've seen DocRouter extract data, let's talk about schemas.
+                            </p>
+                            <p style="margin: 15px 0 0 0; color: #333333; font-size: 16px; line-height: 1.6;">
+                                Schemas define the structure of your extracted data. They ensure consistency, validate output, and make your data easier to work with. Let's explore how to use them effectively.
+                            </p>
+                            <p style="margin: 30px 0 0 0; text-align: center;">
+                                <a href="{{ params.site_url }}/orgs/{{ contact.organization_name }}/schemas" style="display: inline-block; background-color: #0070f3; color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 6px; font-size: 16px; font-weight: 600; line-height: 1.5;">
+                                    Create Your First Schema
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Section 2: What Are Schemas? (Light background) -->
+                    <tr>
+                        <td style="padding: 30px 40px; background-color: #f8f9fa;">
+                            <h2 style="margin: 0 0 20px 0; color: #333333; font-size: 22px; font-weight: 600;">
+                                What are schemas?
+                            </h2>
+                            <p style="margin: 0 0 20px 0; color: #555555; font-size: 15px; line-height: 1.6;">
+                                Schemas are JSON Schema definitions that specify the structure and validation rules for your extracted data. When you link a schema to a prompt, DocRouter ensures the AI output matches your defined structure.
+                            </p>
+                            
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td style="padding-bottom: 12px;">
+                                        <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
+                                            <span style="color: #28a745; font-size: 18px; margin-right: 8px;">✓</span>
+                                            <strong style="color: #333333;">Consistent output format</strong> across all extractions
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 12px;">
+                                        <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
+                                            <span style="color: #28a745; font-size: 18px; margin-right: 8px;">✓</span>
+                                            <strong style="color: #333333;">Automatic validation</strong> of extracted data
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 12px;">
+                                        <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
+                                            <span style="color: #28a745; font-size: 18px; margin-right: 8px;">✓</span>
+                                            <strong style="color: #333333;">Better integration</strong> with downstream systems
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
+                                            <span style="color: #28a745; font-size: 18px; margin-right: 8px;">✓</span>
+                                            <strong style="color: #333333;">Clearer documentation</strong> of expected data structure
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Section 3: How to Create Schemas (White background) -->
+                    <tr>
+                        <td style="padding: 30px 40px; background-color: #ffffff;">
+                            <h2 style="margin: 0 0 20px 0; color: #333333; font-size: 22px; font-weight: 600;">
+                                How to create schemas
+                            </h2>
+                            
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td style="padding-bottom: 15px;">
+                                        <div style="display: flex; align-items: flex-start;">
+                                            <div style="width: 32px; height: 32px; background-color: #0070f3; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 600; font-size: 16px; margin-right: 15px; flex-shrink: 0;">1</div>
+                                            <div>
+                                                <h3 style="margin: 0 0 5px 0; color: #333333; font-size: 18px; font-weight: 600;">Navigate to Schemas page</h3>
+                                                <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">Go to the Schemas section in your organization</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 15px;">
+                                        <div style="display: flex; align-items: flex-start;">
+                                            <div style="width: 32px; height: 32px; background-color: #0070f3; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 600; font-size: 16px; margin-right: 15px; flex-shrink: 0;">2</div>
+                                            <div>
+                                                <h3 style="margin: 0 0 5px 0; color: #333333; font-size: 18px; font-weight: 600;">Click "Create Schema"</h3>
+                                                <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">Start creating a new schema</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 15px;">
+                                        <div style="display: flex; align-items: flex-start;">
+                                            <div style="width: 32px; height: 32px; background-color: #0070f3; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 600; font-size: 16px; margin-right: 15px; flex-shrink: 0;">3</div>
+                                            <div>
+                                                <h3 style="margin: 0 0 5px 0; color: #333333; font-size: 18px; font-weight: 600;">Define your JSON Schema structure</h3>
+                                                <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">Specify fields, types, and validation rules</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 15px;">
+                                        <div style="display: flex; align-items: flex-start;">
+                                            <div style="width: 32px; height: 32px; background-color: #0070f3; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 600; font-size: 16px; margin-right: 15px; flex-shrink: 0;">4</div>
+                                            <div>
+                                                <h3 style="margin: 0 0 5px 0; color: #333333; font-size: 18px; font-weight: 600;">Link schema to prompts</h3>
+                                                <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">Connect schemas to prompts for structured output</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="display: flex; align-items: flex-start;">
+                                            <div style="width: 32px; height: 32px; background-color: #0070f3; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 600; font-size: 16px; margin-right: 15px; flex-shrink: 0;">5</div>
+                                            <div>
+                                                <h3 style="margin: 0 0 5px 0; color: #333333; font-size: 18px; font-weight: 600;">Test with sample documents</h3>
+                                                <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">Verify your schema works as expected</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <!-- Example Schema -->
+                            <div style="margin-top: 25px; padding: 20px; background-color: #f8f9fa; border-left: 4px solid #0070f3; border-radius: 4px;">
+                                <h3 style="margin: 0 0 10px 0; color: #333333; font-size: 16px; font-weight: 600;">Example: Invoice Schema</h3>
+                                <pre style="margin: 0; color: #555555; font-size: 13px; line-height: 1.5; font-family: 'Courier New', monospace; overflow-x: auto;">{
+  "type": "object",
+  "properties": {
+    "invoice_number": {"type": "string"},
+    "date": {"type": "string"},
+    "vendor": {"type": "string"},
+    "total": {"type": "number"}
+  },
+  "required": ["invoice_number", "date", "total"]
+}</pre>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Section 4: Pro Tip - Use Claude Code (Light background) -->
+                    <tr>
+                        <td style="padding: 30px 40px; background-color: #f8f9fa;">
+                            <h2 style="margin: 0 0 15px 0; color: #333333; font-size: 22px; font-weight: 600;">
+                                Pro tip: Use Claude Code
+                            </h2>
+                            <p style="margin: 0 0 20px 0; color: #555555; font-size: 15px; line-height: 1.6;">
+                                Claude Code can help you create schemas and configure prompts more efficiently. Use it to generate schema definitions from examples or refine existing schemas.
+                            </p>
+                            <p style="margin: 0; text-align: center;">
+                                <a href="{{ params.site_url }}/docs/claude-code/schemas-prompts" style="color: #0070f3; text-decoration: none; font-size: 15px; font-weight: 500;">Learn how Claude Code creates schemas and configures prompts →</a>
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Section 5: Workflows - Automate at Scale (White background) -->
+                    <tr>
+                        <td style="padding: 30px 40px; background-color: #ffffff;">
+                            <h2 style="margin: 0 0 20px 0; color: #333333; font-size: 22px; font-weight: 600;">
+                                Workflows: Automate at scale
+                            </h2>
+                            
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td style="padding-bottom: 20px;">
+                                        <div style="background-color: #f8f9fa; padding: 20px; border-radius: 6px; border-left: 4px solid #0070f3;">
+                                            <h3 style="margin: 0 0 8px 0; color: #333333; font-size: 18px; font-weight: 600;">N8N Integration</h3>
+                                            <p style="margin: 0 0 10px 0; color: #555555; font-size: 15px; line-height: 1.6;">
+                                                Connect DocRouter to email, fax, and ERP systems for automated document ingestion.
+                                            </p>
+                                            <p style="margin: 0;">
+                                                <a href="{{ params.site_url }}/docs/workflows/n8n" style="color: #0070f3; text-decoration: none; font-size: 15px; font-weight: 500;">N8N Integration Guide →</a>
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="background-color: #f8f9fa; padding: 20px; border-radius: 6px; border-left: 4px solid #0070f3;">
+                                            <h3 style="margin: 0 0 8px 0; color: #333333; font-size: 18px; font-weight: 600;">Temporal Workflows</h3>
+                                            <p style="margin: 0 0 10px 0; color: #555555; font-size: 15px; line-height: 1.6;">
+                                                Build multi-step document processing workflows that scale.
+                                            </p>
+                                            <p style="margin: 0;">
+                                                <a href="{{ params.site_url }}/docs/workflows/temporal" style="color: #0070f3; text-decoration: none; font-size: 15px; font-weight: 500;">Temporal Workflows →</a>
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <p style="margin: 20px 0 0 0; color: #555555; font-size: 15px; line-height: 1.6;">
+                                Workflows let you automate document processing end-to-end, from ingestion to data extraction to integration.
+                            </p>
+                            
+                            <p style="margin: 20px 0 0 0;">
+                                <a href="{{ params.site_url }}/docs/api" style="color: #0070f3; text-decoration: none; font-size: 15px; font-weight: 500;">REST API Documentation →</a>
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Section 6: Need a Hand? (Light background) -->
+                    <tr>
+                        <td style="padding: 30px 40px; background-color: #f8f9fa;">
+                            <h2 style="margin: 0 0 15px 0; color: #333333; font-size: 22px; font-weight: 600;">
+                                Need a hand?
+                            </h2>
+                            <p style="margin: 0 0 20px 0; color: #555555; font-size: 15px; line-height: 1.6;">
+                                We're here to help. If you have questions, our support team is just a click away.
+                            </p>
+                            <p style="margin: 0; text-align: center;">
+                                <a href="{{ params.site_url }}/support" style="display: inline-block; background-color: #0070f3; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 6px; font-size: 15px; font-weight: 600;">
+                                    Contact Support
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td style="padding: 30px 40px; background-color: #ffffff; border-radius: 0 0 8px 8px; text-align: center; border-top: 1px solid #eaeaea;">
+                            <p style="margin: 0 0 10px 0; color: #999999; font-size: 12px; line-height: 1.5;">
+                                © 2026 Analytiq Hub LLC. All rights reserved.
+                            </p>
+                            <p style="margin: 0 0 10px 0; color: #999999; font-size: 12px; line-height: 1.5;">
+                                This email was sent to {{ contact.EMAIL }} because you created a DocRouter account.
+                            </p>
+                            <p style="margin: 0; color: #999999; font-size: 12px; line-height: 1.5;">
+                                <a href="{{ mirror }}" style="color: #0070f3; text-decoration: none;">View in browser</a> | 
+                                <a href="{{ params.site_url }}/contact" style="color: #0070f3; text-decoration: none;">Contact us</a> | 
+                                <a href="{{ unsubscribe }}" style="color: #0070f3; text-decoration: none;">Unsubscribe</a>
+                            </p>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+    </table>
+    
+    <!-- Responsive Styles -->
+    <style type="text/css">
+        @media only screen and (max-width: 600px) {
+            table[class="main-container"] {
+                width: 100% !important;
+            }
+            td[style*="padding: 30px 40px"] {
+                padding: 20px !important;
+            }
+            h1 {
+                font-size: 24px !important;
+            }
+            h2 {
+                font-size: 20px !important;
+            }
+        }
+    </style>
+</body>
+</html>
