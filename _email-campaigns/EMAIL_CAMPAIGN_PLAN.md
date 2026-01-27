@@ -745,10 +745,7 @@ For email templates:
 - `product-updates-tips.html` - Educational content and tips
 
 **Educational Series:**
-- `educational-series-prompting.html` - Advanced prompting techniques
-- `educational-series-schemas.html` - Schema design best practices
-- `educational-series-workflows.html` - Workflow automation guide
-- `educational-series-api.html` - API integration examples
+- `educational-series-template.html` - Single reusable template for monthly educational content
 
 **Future Campaigns (Templates for Later):**
 - `reengagement-email-*.html` - Re-engagement sequence templates
