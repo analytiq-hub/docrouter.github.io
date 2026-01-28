@@ -99,24 +99,36 @@ permalink: /docs/rest-api/
   </div>
   
   <!-- Token Management Screenshots -->
-  <div class="mt-6 pt-4 border-t border-gray-200">
-    <h3 class="text-base font-semibold text-gray-900 mb-3 text-center">Token Management Interface</h3>
-    <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
-      <div class="flex-shrink-0">
-        <img src="/assets/images/manage_tokens1.jpeg" 
-             alt="Account Tokens Management Interface" 
-             class="max-w-full h-auto rounded border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
-             style="max-height: 162px; width: auto;">
+  <div class="mt-8 pt-6 border-t border-gray-200">
+    <h3 class="text-lg font-semibold text-gray-900 mb-4 text-center">Token Management Interface</h3>
+    <div class="space-y-6 max-w-4xl mx-auto">
+      <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm">
+        <div style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+          <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">1</div>
+          <div style="flex: 1;">
+            <h4 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.5rem 0;">Access Settings</h4>
+            <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 1rem 0;">Click your user menu → Settings</p>
+            <img src="/assets/images/manage_tokens1.jpeg" 
+                 alt="Step 1: Access Settings menu" 
+                 class="w-full h-auto rounded border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          </div>
+        </div>
       </div>
-      <div class="flex-shrink-0">
-        <img src="/assets/images/manage_tokens2.jpeg" 
-             alt="Organization Tokens Management Interface" 
-             class="max-w-full h-auto rounded border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
-             style="max-height: 162px; width: auto;">
+      <div class="bg-white rounded-lg p-4 border border-gray-200 shadow-sm">
+        <div style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+          <div style="width: 40px; height: 40px; min-width: 40px; background-color: #22c55e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">2</div>
+          <div style="flex: 1;">
+            <h4 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.5rem 0;">Manage Tokens</h4>
+            <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 1rem 0;">Click "Manage" for Account or Organization Tokens</p>
+            <img src="/assets/images/manage_tokens2.jpeg" 
+                 alt="Step 2: Manage tokens interface" 
+                 class="w-full h-auto rounded border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          </div>
+        </div>
       </div>
     </div>
-    <p class="text-xs text-gray-600 text-center mt-2">
-      Screenshots showing the token management interface in the DocRouter application
+    <p class="text-xs text-gray-600 text-center mt-4">
+      Screenshots showing how to access the token management interface in the DocRouter application
     </p>
   </div>
 </div>
