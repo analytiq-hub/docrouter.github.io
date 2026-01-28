@@ -4,33 +4,54 @@ title: "Claude Code Integration"
 permalink: /docs/claude-code/
 ---
 
-<div class="bg-blue-50 rounded-2xl p-8 mb-12 border border-blue-100 shadow-lg text-center">
-  <h1 class="text-4xl font-bold text-gray-900 mb-4">Claude Code Integration</h1>
-  <p class="text-lg text-gray-600">
-    Connect DocRouter.AI to Claude Code using the Model Context Protocol (MCP) for a seamless developer experience.
-  </p>
+<div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 mb-10 text-center">
+  <h2 class="text-2xl font-semibold text-white mb-2">Connect DocRouter to Claude Code</h2>
+  <p class="text-blue-100">Use the Model Context Protocol (MCP) to manage documents, schemas, and prompts directly from your terminal.</p>
 </div>
 
-## Overview
+## Get started in 3 steps
 
-Claude Code can interact directly with your DocRouter.AI organization using our MCP server. This allows you to manage documents, schemas, and prompts directly from your terminal-based AI assistant.
+<div class="bg-gray-50 rounded-lg p-6 my-6">
+  <div style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+    <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">1</div>
+    <div style="flex: 1;">
+      <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.25rem 0;">Install the MCP server</h3>
+      <p style="color: #4b5563; margin: 0;">Run <code class="bg-gray-100 px-1 rounded">npm install -g @docrouter/mcp</code> to install the DocRouter MCP server.</p>
+    </div>
+  </div>
+  <div style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+    <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">2</div>
+    <div style="flex: 1;">
+      <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.25rem 0;">Configure Claude Code</h3>
+      <p style="color: #4b5563; margin: 0;">Add the DocRouter MCP server to your Claude Code configuration with your Organization ID and API Token.</p>
+    </div>
+  </div>
+  <div style="display: flex; align-items: flex-start;">
+    <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">3</div>
+    <div style="flex: 1;">
+      <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.25rem 0;">Start using DocRouter</h3>
+      <p style="color: #4b5563; margin: 0;">Ask Claude Code to list documents, create schemas, run prompts, and more.</p>
+    </div>
+  </div>
+</div>
 
 ---
 
-## Setup Instructions
+## What is Claude Code Integration?
 
-### 1. Install the MCP Server
-Ensure you have Node.js installed, then run:
+Claude Code can interact directly with your DocRouter.AI organization using our MCP server. This allows you to manage documents, schemas, and prompts directly from your terminal-based AI assistant.
 
-```bash
-npm install -g @docrouter/mcp
-```
+- **Terminal-based access**: Manage DocRouter without leaving your terminal
+- **AI-powered automation**: Use Claude to script complex document processing tasks
+- **Context-aware**: Claude can use document data to help you write code or documentation
 
-### 2. Configure Claude Code
-Add the DocRouter MCP server to your Claude Code configuration. You will need your **Organization ID** and **API Token** from the DocRouter dashboard.
+---
 
-```bash
-# Edit your config (usually ~/.claude_desktop_config.json or similar for CLI)
+## Configuration
+
+Add the DocRouter MCP server to your Claude Code configuration:
+
+```json
 {
   "mcpServers": {
     "docrouter": {
@@ -45,6 +66,8 @@ Add the DocRouter MCP server to your Claude Code configuration. You will need yo
 }
 ```
 
+You'll need your **Organization ID** and **API Token** from the DocRouter dashboard.
+
 ---
 
 ## Example Usage
@@ -58,17 +81,27 @@ Once configured, you can ask Claude Code to perform tasks like:
 
 ---
 
-## Benefits
+## Best Practices
 
-- **Speed**: No need to switch between your terminal and the web UI.
-- **Automation**: Use Claude to script complex document processing tasks.
-- **Context**: Claude can use document data to help you write code or documentation.
+<div class="my-6">
+  <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Secure Credentials</strong> — Store your API token securely and never commit it to version control.</p>
+  <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Use Environment Variables</strong> — Configure credentials via environment variables for better security.</p>
+  <p style="margin: 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Test First</strong> — Start with simple queries like listing documents before running complex operations.</p>
+</div>
 
 ---
 
-<div class="bg-blue-600 rounded-lg shadow-lg p-8 mt-12 text-center">
-  <h2 class="text-2xl font-semibold text-white mb-4">Get your API credentials</h2>
-  <a href="https://app.docrouter.ai/settings/api" class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
-    API Settings
+## Learn More
+
+- <a href="/docs/mcp">MCP Server</a> — Learn about the Model Context Protocol
+- <a href="/docs/rest-api">REST API</a> — Complete API reference
+- <a href="/docs/cursor">Cursor Integration</a> — Similar integration for Cursor editor
+
+---
+
+<div class="bg-blue-600 rounded-lg p-8 mt-10 text-center">
+  <h2 class="text-2xl font-semibold text-white mb-4">Ready to connect Claude Code?</h2>
+  <a href="https://app.docrouter.ai" class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
+    Get API Credentials
   </a>
 </div>

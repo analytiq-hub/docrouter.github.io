@@ -4,57 +4,78 @@ title: "Webhooks"
 permalink: /docs/webhooks/
 ---
 
-<div class="bg-blue-50 rounded-2xl p-8 mb-12 border border-blue-100 shadow-lg">
-  <div class="max-w-4xl mx-auto text-center">
-    <p class="text-lg text-gray-600 mb-8">
-      Get real-time notifications when documents are uploaded, processed, or encounter errors.
-    </p>
+<div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 mb-10 text-center">
+  <h2 class="text-2xl font-semibold text-white mb-2">Webhooks deliver real-time notifications</h2>
+  <p class="text-blue-100">Get notified instantly when documents are processed, completed, or encounter errors.</p>
+</div>
+
+## Get started in 3 steps
+
+<div class="bg-gray-50 rounded-lg p-6 my-6">
+  <div style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+    <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">1</div>
+    <div style="flex: 1;">
+      <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.25rem 0;">Create your webhook endpoint</h3>
+      <p style="color: #4b5563; margin: 0;">Set up an HTTPS endpoint that can receive POST requests with JSON payloads.</p>
+    </div>
+  </div>
+  <div style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+    <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">2</div>
+    <div style="flex: 1;">
+      <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.25rem 0;">Configure in DocRouter</h3>
+      <p style="color: #4b5563; margin: 0;">Go to <strong>Organization Settings → Webhooks</strong>, enable webhooks, enter your URL, and select events.</p>
+    </div>
+  </div>
+  <div style="display: flex; align-items: flex-start;">
+    <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">3</div>
+    <div style="flex: 1;">
+      <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.25rem 0;">Test and verify</h3>
+      <p style="color: #4b5563; margin: 0;">Click <strong>Test webhook</strong> to verify your endpoint receives events correctly.</p>
+    </div>
   </div>
 </div>
 
-## Event Types {#events}
+---
 
-DocRouter sends webhook notifications for these events:
+## What are Webhooks?
 
-| Event | Description |
-|-------|-------------|
-| `document.uploaded` | Document uploaded and ready for processing |
-| `document.error` | Document processing failed |
-| `llm.completed` | LLM processing finished successfully |
-| `llm.error` | LLM processing failed |
-| `webhook.test` | Test event sent when testing webhook configuration |
+Webhooks are HTTP callbacks that notify your application when events occur in DocRouter. They enable real-time integrations without polling.
 
-<img src="/assets/images/webhook_config.png" alt="DocRouter webhook configuration screen" style="display: block; margin: 2rem auto; width: 90%; border-radius: 0.75rem; box-shadow: 0 12px 20px -6px rgba(0, 0, 0, 0.15);">
-
-## Integration Guides
-
-### N8N Integration {#n8n}
-
-DocRouter.AI integrates seamlessly with N8N to automate your document workflows.
-
-1. **Webhook Node**: In N8N, create a Webhook node and copy the URL.
-2. **DocRouter Config**: In DocRouter, go to Organization Settings → Webhooks and paste the N8N URL.
-3. **Select Events**: Choose `llm.completed` to receive extracted data.
-4. **Process Data**: Use N8N nodes to send the extracted JSON to your ERP, CRM, or database.
-
-### Temporal Workflows {#temporal}
-
-For complex, long-running, or high-reliability workflows, use Temporal with DocRouter.AI.
-
-1. **Start Workflow**: Trigger a Temporal workflow when a document is uploaded.
-2. **Wait for Signal**: Use a Temporal signal to wait for the `llm.completed` webhook from DocRouter.
-3. **Handle Results**: Once the signal is received, the workflow can continue with the extracted data, performing validation, human-in-the-loop steps, or downstream integrations.
+- **Real-time notifications**: Get instant alerts when documents are processed
+- **Event-driven workflows**: Trigger actions in your systems automatically
+- **Reliable delivery**: Automatic retries with exponential backoff
+- **Secure**: HMAC signature verification for authentication
 
 ---
 
-## Setup {#setup}
+## Event Types
 
-1. **Access Settings**: Go to your organization settings → Webhooks tab
-2. **Enable Webhooks**: Toggle "Enabled" on
-3. **Set URL**: Enter your HTTPS webhook endpoint URL
-4. **Choose Authentication**: Select HMAC signature (recommended) or header authentication
-5. **Select Events**: Choose which events to receive
-6. **Save**: Click "Save" to apply changes
+DocRouter sends webhook notifications for these events:
+
+- **`document.uploaded`** — Document uploaded and ready for processing
+- **`llm.completed`** — LLM processing finished successfully
+- **`llm.error`** — LLM processing failed
+- **`document.error`** — Document processing failed
+- **`webhook.test`** — Test event sent when testing webhook configuration
+
+---
+
+## Integration Guides
+
+<div class="grid md:grid-cols-2 gap-6 my-6">
+  <div class="bg-white border border-gray-200 rounded-lg p-5">
+    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.75rem 0;">N8N Integration</h3>
+    <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 0.5rem 0;">Create a Webhook node in N8N, copy the URL, and paste it into DocRouter webhook settings. Select <code class="bg-gray-100 px-1 rounded">llm.completed</code> to receive extracted data.</p>
+    <p style="color: #4b5563; font-size: 0.875rem; margin: 0;">Use N8N nodes to send extracted JSON to your ERP, CRM, or database.</p>
+  </div>
+  <div class="bg-white border border-gray-200 rounded-lg p-5">
+    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.75rem 0;">Temporal Workflows</h3>
+    <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 0.5rem 0;">For complex, long-running workflows, use Temporal signals to wait for the <code class="bg-gray-100 px-1 rounded">llm.completed</code> webhook.</p>
+    <p style="color: #4b5563; font-size: 0.875rem; margin: 0;">Once received, continue with validation, human-in-the-loop steps, or downstream integrations.</p>
+  </div>
+</div>
+
+---
 
 ## Authentication
 
@@ -75,11 +96,13 @@ function verifySignature(secret, timestamp, body, signature) {
 
 ### Header Authentication
 
-Send a static header value (compatible with n8n, Zapier, etc.).
+Send a static header value (compatible with N8N, Zapier, etc.).
+
+---
 
 ## Payload Format
 
-All webhooks send JSON payloads like this:
+All webhooks send JSON payloads:
 
 ```json
 {
@@ -96,12 +119,19 @@ All webhooks send JSON payloads like this:
 }
 ```
 
-## Testing
+---
 
-1. Configure your webhook URL and settings
-2. Click "Test webhook" button
-3. Check that your endpoint receives a `webhook.test` event
-4. Verify authentication works correctly
+## Best Practices
+
+<div class="my-6">
+  <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Use HTTPS</strong> — Only use HTTPS endpoints for secure delivery.</p>
+  <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Verify Signatures</strong> — Always verify HMAC signatures to ensure authenticity.</p>
+  <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Check Timestamps</strong> — Reject requests older than 5 minutes to prevent replay attacks.</p>
+  <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Prevent Duplicates</strong> — Use <code class="bg-gray-100 px-1 rounded">event_id</code> to prevent duplicate processing.</p>
+  <p style="margin: 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Respond Quickly</strong> — Endpoints must respond within 10 seconds. Return HTTP 2xx for success.</p>
+</div>
+
+---
 
 ## Delivery & Retries
 
@@ -111,43 +141,18 @@ All webhooks send JSON payloads like this:
 - **Monitoring**: View all deliveries in the webhook settings UI
 - **Manual Retry**: Click "Retry" on failed deliveries
 
-## Example Handler
+---
 
-```javascript
-app.post('/webhook', (req, res) => {
-  const { event_type, document, llm_output, error } = req.body;
+## Learn More
 
-  switch(event_type) {
-    case 'document.uploaded':
-      console.log(`Document uploaded: ${document.document_name}`);
-      break;
-    case 'llm.completed':
-      console.log(`Processing complete for: ${document.document_name}`);
-      // Access extracted data: llm_output.extracted_data
-      break;
-    case 'llm.error':
-      console.error(`Processing failed: ${error.message}`);
-      break;
-  }
+- <a href="/docs/rest-api">REST API</a> — Complete API reference for webhook endpoints
+- <a href="https://app.docrouter.ai/fastapi/docs">Interactive API Docs</a> — Test webhook endpoints
 
-  res.status(200).send('OK');
-});
-```
+---
 
-## Security Best Practices
-
-- ✅ Use HTTPS endpoints only
-- ✅ Verify HMAC signatures
-- ✅ Check timestamps (reject requests >5 minutes old)
-- ✅ Use `event_id` to prevent duplicate processing
-- ✅ Store secrets securely
-
-## API Reference
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/v0/orgs/{org_id}/webhook` | Get webhook configuration |
-| PUT | `/v0/orgs/{org_id}/webhook` | Update webhook settings |
-| POST | `/v0/orgs/{org_id}/webhook/test` | Send test webhook |
-| GET | `/v0/orgs/{org_id}/webhook/deliveries` | List delivery attempts |
-| POST | `/v0/orgs/{org_id}/webhook/deliveries/{id}/retry` | Retry failed delivery |
+<div class="bg-blue-600 rounded-lg p-8 mt-10 text-center">
+  <h2 class="text-2xl font-semibold text-white mb-4">Ready to set up webhooks?</h2>
+  <a href="https://app.docrouter.ai" class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
+    Open Dashboard
+  </a>
+</div>
