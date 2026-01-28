@@ -4,7 +4,7 @@ title: "Webhooks"
 permalink: /docs/webhooks/
 ---
 
-<div class="bg-gradient-to-br from-green-50 via-white to-blue-50 rounded-2xl p-8 mb-12 border border-green-100 shadow-lg">
+<div class="bg-blue-50 rounded-2xl p-8 mb-12 border border-blue-100 shadow-lg">
   <div class="max-w-4xl mx-auto text-center">
     <p class="text-lg text-gray-600 mb-8">
       Get real-time notifications when documents are uploaded, processed, or encounter errors.
@@ -25,6 +25,27 @@ DocRouter sends webhook notifications for these events:
 | `webhook.test` | Test event sent when testing webhook configuration |
 
 <img src="/assets/images/webhook_config.png" alt="DocRouter webhook configuration screen" style="display: block; margin: 2rem auto; width: 90%; border-radius: 0.75rem; box-shadow: 0 12px 20px -6px rgba(0, 0, 0, 0.15);">
+
+## Integration Guides
+
+### N8N Integration {#n8n}
+
+DocRouter.AI integrates seamlessly with N8N to automate your document workflows.
+
+1. **Webhook Node**: In N8N, create a Webhook node and copy the URL.
+2. **DocRouter Config**: In DocRouter, go to Organization Settings → Webhooks and paste the N8N URL.
+3. **Select Events**: Choose `llm.completed` to receive extracted data.
+4. **Process Data**: Use N8N nodes to send the extracted JSON to your ERP, CRM, or database.
+
+### Temporal Workflows {#temporal}
+
+For complex, long-running, or high-reliability workflows, use Temporal with DocRouter.AI.
+
+1. **Start Workflow**: Trigger a Temporal workflow when a document is uploaded.
+2. **Wait for Signal**: Use a Temporal signal to wait for the `llm.completed` webhook from DocRouter.
+3. **Handle Results**: Once the signal is received, the workflow can continue with the extracted data, performing validation, human-in-the-loop steps, or downstream integrations.
+
+---
 
 ## Setup {#setup}
 

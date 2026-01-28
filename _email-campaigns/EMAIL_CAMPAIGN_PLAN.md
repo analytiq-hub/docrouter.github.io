@@ -8,6 +8,26 @@ This document outlines the active email campaigns and their templates:
 3. **Investor/Friends Newsletter** - Updates for investors, advisors, and close contacts
 4. **Product Updates Newsletter** - 3 template types for registered users (features, tips, deep dive)
 
+  - `onboarding-email-1-tag-prompt-upload.html` - Tag, prompt, upload workflow
+  - `onboarding-email-2-schemas.html` - Schema creation and usage
+  - `onboarding-email-3-checkin.html` - Week 1 check-in and support
+  - `prospect-email-1-demo-invitation.html` - Initial demo invitation
+  - `prospect-email-2-followup.html` - Follow-up demo reminder
+  - `investor-newsletter.html` - Strategic updates
+  - `updates-features.html` - New feature announcements
+  - `updates-tips.html` - Best practices and tips
+  - `updates-deep-dive.html` - Monthly educational content
+
+### Documentation Pages (Aligned with Email Campaign)
+  - `docs/quick-start.md` - Standardized to blue theme, matching onboarding emails
+  - `docs/how-it-works.md` - Standardized to blue theme, matching onboarding emails
+  - `docs/mcp.md` - Standardized to blue theme
+  - `docs/webhooks.md` - Standardized to blue theme
+  - `docs/tags.md` - (NEW) Core workflow documentation
+  - `docs/knowledge-bases.md` - (NEW) Dedicated knowledge base documentation
+  - `docs/claude-code.md` - (NEW) Claude Code integration guide
+  - `docs/cursor.md` - (NEW) Cursor integration guide
+
 ### Active Templates (9 total)
 - `onboarding-email-1-tag-prompt-upload.html` - Tag, prompt, upload workflow
 - `onboarding-email-2-schemas.html` - Schema creation and usage

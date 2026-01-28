@@ -355,7 +355,7 @@ const result = await client.uploadDocuments({
                 <a href="https://github.com/analytiq-hub/doc-router/tree/main/packages/typescript/docrouter-sdk"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-medium transition-colors duration-200">
+                   class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-medium transition-colors duration-200 no-underline">
                     View on GitHub
                 </a>
             </div>

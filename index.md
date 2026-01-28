@@ -19,11 +19,11 @@ title: "DocRouter - AI-Powered Document Processing"
             <a href="https://app.docrouter.ai"
                target="_blank"
                rel="noopener noreferrer"
-               class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 border-2 border-transparent">
+               class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 border-2 border-transparent no-underline">
                 Launch Application
             </a>
             <a href="docs/how-it-works"
-               class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
+               class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
                 See How It Works
             </a>
         </div>
@@ -92,15 +92,15 @@ title: "DocRouter - AI-Powered Document Processing"
                     </ul>
                     <div class="mt-6 flex flex-col gap-2">
                         <a href="{{ '/docs/rest-api/' | relative_url }}"
-                           class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center">
+                           class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center no-underline">
                             View API Documentation
                         </a>
                         <a href="{{ '/docs/python-sdk/' | relative_url }}"
-                           class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center">
+                           class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center no-underline">
                             Python SDK
                         </a>
                         <a href="{{ '/docs/typescript-sdk/' | relative_url }}"
-                           class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center">
+                           class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center no-underline">
                             TypeScript SDK
                         </a>
                     </div>
@@ -116,7 +116,7 @@ title: "DocRouter - AI-Powered Document Processing"
                     </ul>
                     <div class="mt-6">
                         <a href="javascript:void(0)" onclick="openCalendly()"
-                           class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center">
+                           class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center no-underline">
                             Discuss Implementation
                         </a>
                     </div>
@@ -227,7 +227,7 @@ title: "DocRouter - AI-Powered Document Processing"
 
             <div class="text-center mt-8">
                 <a href="{{ '/solutions/' | relative_url }}"
-                   class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
+                   class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 no-underline">
                     See More Solutions
                 </a>
             </div>

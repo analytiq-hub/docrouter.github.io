@@ -11,7 +11,7 @@ permalink: /technology/
             <p class="text-xl max-w-3xl mx-auto mb-6">
                 At Analytiq Hub, we don't just use technology—we orchestrate it to automate workflows, extract insights, and drive efficiency across industries like finance, healthcare, and logistics. Let's walk through how we do it.
             </p>
-            <a href="#foundation" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold">Explore Our Stack</a>
+            <a href="#foundation" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold no-underline">Explore Our Stack</a>
         </section>
 
         <!-- Section 1: The Foundation - Cloud Platforms (Start of the Story) -->

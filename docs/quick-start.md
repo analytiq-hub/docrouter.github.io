@@ -4,23 +4,21 @@ title: Quick Start Guide
 permalink: /docs/quick-start/
 ---
 
-
-
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
   <div class="rounded-xl border border-gray-200 bg-white p-6">
     <h2 class="text-2xl font-bold mb-3">Overview</h2>
-    <p>Get up and running with DocRouter in minutes. This guide walks you through the complete workflow from document upload to automation. DocRouter transforms your document processing workflow through these key steps:</p>
+    <p>Get up and running with DocRouter in minutes. This guide walks you through the complete workflow from setup to automation. DocRouter transforms your document processing workflow through these key steps:</p>
     <ul class="list-decimal pl-5 space-y-2 mt-2">
-      <li><b>Step 1</b> - Upload your first document</li>
-      <li><b>Step 2</b> - Configure a tag, schema, and prompt</li>
-      <li><b>Step 3</b> - Run the prompt on tagged document(s)</li>
+      <li><b>Step 1</b> - Create a tag and a prompt</li>
+      <li><b>Step 2</b> - Upload your first document with the tag</li>
+      <li><b>Step 3</b> - See automatic extraction results</li>
       <li><b>Step 4</b> - Prompt Engineering to improve extraction quality</li>
       <li><b>Step 5</b> - Manual Automation using bulk actions</li>
       <li><b>Step 6</b> - Full Automation with REST API or Python SDK</li>
     </ul>
   </div>
-  <div class="rounded-xl border border-indigo-200 bg-indigo-50 p-6">
-    <h2 class="text-2xl font-bold mb-3">Documents You Will Need for this Quick Start</h2>
+  <div class="rounded-xl border border-blue-200 bg-blue-50 p-6">
+    <h2 class="text-2xl font-bold mb-3">Documents You Will Need</h2>
     <div class="grid grid-cols-1 gap-3">
       <a href="/assets/files/Acord80_Homeowners_App.pdf" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
         <div class="flex items-center gap-3 min-w-0">
@@ -60,214 +58,106 @@ permalink: /docs/quick-start/
     <span class="text-gray-600">Step <span id="current-step">1</span> of 6</span>
   </div>
   <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
-    <div id="progress-bar" class="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full transition-all duration-300" style="width: 16.67%"></div>
+    <div id="progress-bar" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 16.67%"></div>
   </div>
 </div>
 
 ---
 
-<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3" id="step-1">
+<div class="rounded-lg bg-blue-50 border-l-4 border-blue-500 px-4 py-3 mb-3" id="step-1">
   <div class="flex items-center mb-2">
-    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 1</span>
-    <span class="text-2xl font-bold text-indigo-800">Upload Your First Document</span>
+    <span class="bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 1</span>
+    <span class="text-2xl font-bold text-blue-800">Create a Tag and a Prompt</span>
   </div>
-  <p class="text-base text-gray-600 mt-1">We start by uploading a file and making sure it processes correctly.</p>
+  <p class="text-base text-gray-600 mt-1">We'll set up tags and prompts first so your documents process automatically upon upload.</p>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-white rounded-xl p-4">
   <div>
-    <h3 class="text-xl font-semibold mb-3">Manual Upload via Web Interface</h3>
-    <ol class="list-decimal pl-5 space-y-2">
-      <li>
-        Navigate to <a href="https://app.docrouter.ai" class="text-blue-600 underline">app.docrouter.ai</a>
-      </li>
-      <li>
-        Click <strong>"Upload Document"</strong> or drag and drop your file
-      </li>
-      <li>
-        Supported formats:
-        <div class="mt-2 flex flex-wrap gap-2">
-          <span class="px-2 py-1 rounded bg-gray-100 text-gray-800 text-sm">PDF</span>
-          <span class="px-2 py-1 rounded bg-gray-100 text-gray-800 text-sm">DOC</span>
-          <span class="px-2 py-1 rounded bg-gray-100 text-gray-800 text-sm">XLS</span>
-          <span class="px-2 py-1 rounded bg-gray-100 text-gray-800 text-sm">CSV</span>
-          <span class="px-2 py-1 rounded bg-gray-100 text-gray-800 text-sm">TXT</span>
-          <span class="px-2 py-1 rounded bg-gray-100 text-gray-800 text-sm">PNG</span>
-          <span class="px-2 py-1 rounded bg-gray-100 text-gray-800 text-sm">JPG</span>
-        </div>
-      </li>
-      <li>
-        Skip tag or metadata assignment. Wait for the upload confirmation.
-      </li>
-    </ol>
-  </div>
-  <div>
-    <img src="/assets/images/upload_file.png" alt="Upload Documents screen with drag-and-drop area and Continue button" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
-    <p class="text-sm text-gray-500 mt-2">Upload screen: drag-and-drop files, then select Continue.</p>
-  </div>
-</div>
-
-<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start rounded-xl p-4">
-  <div>
-    <h3 class="text-xl font-semibold mb-3">Verify Processing in Document List</h3>
-    <ol class="list-decimal pl-5 space-y-2">
-      <li>Open the <strong>Documents</strong> list from the left sidebar.</li>
-      <li>Wait until your document status becomes <code>llm_completed</code>.</li>
-      <li>Click the <strong>document name</strong> to open and view the results.</li>
-    </ol>
-  </div>
-  <div>
-    <img src="/assets/images/document_list.png" alt="Document list view highlighting status and document link" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
-    <p class="text-sm text-gray-500 mt-2">Documents list: wait for status <code>llm_completed</code>, then open the document.</p>
-  </div>
-</div>
-
-<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
-  <div>
-    <h3 class="text-xl font-semibold mb-3">Review the Document</h3>
-    <ol class="list-decimal pl-5 space-y-2">
-      <li>On the document page, use the viewer to page through the file.</li>
-      <li>Initially, only a Document Summary is extracted.</li>
-    </ol>
-  </div>
-  <div>
-    <img src="/assets/images/document_show1.png" alt="Document viewer screen for reviewing extracted data" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
-    <p class="text-sm text-gray-500 mt-2">Document review: navigate pages and inspect extracted fields.</p>
-  </div>
-</div>
-
----
-
-<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-2">
-  <div class="flex items-center mb-2">
-    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 2</span>
-    <span class="text-2xl font-bold text-indigo-800">Configure a Tag, Schema and Prompt</span>
-  </div>
-  <p class="text-base text-gray-600 mt-1">We'll set up tags to tell DocRouter which prompts should run on which documents.</p>
-</div>
-
-<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
-  <div>
-    <h4 class="text-lg font-semibold mb-2">Create a Tag</h4>
+    <h3 class="text-xl font-semibold mb-3">1. Create a Tag</h3>
     <ol class="list-decimal pl-5 space-y-2">
       <li>Go to <strong>Tags</strong> in the left sidebar.</li>
       <li>Click <strong>Create Tag</strong>.</li>
-      <li>Enter a descriptive tag name (e.g., <code>invoice</code>).</li>
+      <li>Enter a descriptive name (e.g., <code>invoice</code>).</li>
       <li>Click <strong>Save tag</strong>.</li>
     </ol>
   </div>
   <div>
-    <img src="/assets/images/create_tag.png" alt="Create Tag dialog showing tag name input" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
-    <p class="text-sm text-gray-500 mt-2">Create a new tag to scope which prompts run on which documents.</p>
+    <img src="/assets/images/create_tag.png" alt="Create Tag dialog" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
   </div>
 </div>
 
-<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start rounded-xl p-4">
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-white rounded-xl p-4">
   <div>
-    <h4 class="text-lg font-semibold mb-2">Create Schema (Drag & Drop)</h4>
-    <ol class="list-decimal pl-5 space-y-2">
-      <li>Go to <strong>Schemas</strong> in the left sidebar.</li>
-      <li>Click <strong>Create Schema</strong>.</li>
-      <li>Set schema name</li>
-      <li>Add schema elements.</li>
-    </ol>
-    Schema elements can be of <strong>String, Integer, Float, Boolean, Object, Array</strong> type. Each element has an optional description, aiding the LLM detection. <strong>Object</strong> and <strong>Array</strong> can have embedded elements.
-  </div>
-  <div>
-    <img src="/assets/images/create_schema1.png" alt="Create Schema screen showing drag-and-drop area" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
-    <p class="text-sm text-gray-500 mt-2">Use drag-and-drop to start a schema from a sample document.</p>
-  </div>
-</div>
-
-<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
-  <div>
-    <h4 class="text-lg font-semibold mb-2">Create Schema (JSON Editor)</h4>
-    <ol class="list-decimal pl-5 space-y-2">
-      <li>Open the <strong>JSON</strong> tab in the schema editor.</li>
-      <li>Paste the contents of the downloaded schema file
-        (<a href="/assets/files/acord_clearance_search_schema.json" class="text-blue-600 underline">acord_clearance_search_schema.json</a>).
-      </li>
-      <li>Click <strong>Save Schema</strong>.</li>
-    </ol>
-  </div>
-  <div>
-    <img src="/assets/images/create_schema2.png" alt="Schema JSON editor with pasted schema" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
-    <p class="text-sm text-gray-500 mt-2">Paste the JSON schema and save.</p>
-  </div>
-</div>
-
-
----
-
-
-<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-  <div>
-    <h4 class="text-lg font-semibold mb-2">Create a Prompt</h4>
+    <h3 class="text-xl font-semibold mb-3">2. Create a Prompt</h3>
     <ol class="list-decimal pl-5 space-y-2">
       <li>Go to <strong>Prompts</strong> in the left sidebar.</li>
-      <li>Create a new prompt.</li>
-      <li>Paste the contents of the downloaded prompt file
-        (<a href="/assets/files/acord_clearance_search_prompt.txt" class="text-blue-600 underline">acord_clearance_search_prompt.txt</a>).</li>
-      <li>Assign the <strong>schema</strong> and <strong>tag</strong> you created so it runs only on the intended documents.</li>
-      <li>Select one of the <strong>language models</strong> available. <strong>Gemini 2.5 Flash</strong> and <strong>GPT 4.0 Mini</strong> are good choices for simple document layouts.</li>
+      <li>Click <strong>Create Prompt</strong>.</li>
+      <li>Enter a name and instructions for the AI.</li>
+      <li><strong>Crucial:</strong> Assign the tag you just created.</li>
+      <li>Click <strong>Save prompt</strong>.</li>
     </ol>
   </div>
-  <div class="max-h-[520px] overflow-auto">
-    <img src="/assets/images/create_prompt.png" alt="Prompt selection screen" class="w-full h-auto rounded-lg shadow-md ring-1 ring-gray-200 object-contain" />
-    <p class="text-sm text-gray-500 mt-2">Select or create a prompt and align it with your tag.</p>
-  </div>
-</div>
-
-
-<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-3">
-  <div class="flex items-center mb-2">
-    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 3</span>
-    <span class="text-2xl font-bold text-indigo-800">Run The Prompt On The Tagged Document(s)</span>
-  </div>
-  <p class="text-base text-gray-600 mt-1">We'll run the prompts on documents that match our tags and see the results.</p>
-</div>
-
-<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
   <div>
-    <h4 class="text-lg font-semibold mb-2">Assign Tag to Existing Document</h4>
-    <ol class="list-decimal pl-5 space-y-2">
-      <li>Open the <strong>Documents</strong> list.</li>
-      <li>Click the document three dots action menu, and select <strong>Edit Tags & Metadata</strong>.</li>
-      <li>Add the tag linked to your prompt and save.</li>
-    </ol>
-    Tags can be assigned in bulk, and LLMs can be run in bulk using the <strong>Actions</strong> button.
-  </div>
-  <div class="max-h-[520px] overflow-auto">
-    <img src="/assets/images/assign_tag_to_doc.png" alt="Assign tag to document UI" class="w-full h-auto rounded-lg shadow-md ring-1 ring-gray-200 object-contain" />
-    <p class="text-sm text-gray-500 mt-2">Tag existing documents to trigger the correct prompts.</p>
-  </div>
-</div>
-
-<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start rounded-xl p-4">
-  <div>
-    <h4 class="text-lg font-semibold mb-2">Run Prompt on Document</h4>
-    <ol class="list-decimal pl-5 space-y-2">
-      <li>Open the document, and switch to the <strong>Extractions</strong> tab.</li>
-      <li>Click spinner to (re)run prompt.</li>
-      <li>Review extraction.</li>
-      <li>Refine prompt, schema then re-run on similar documents to improve quality</li>
-      <li>Optionally edit result, clicking on pencil icon.</li>
-      <li>Export JSON or copy values into your workflow.</li>
-    </ol>
-  </div>
-  <div class="max-h-[520px] overflow-auto">
-    <img src="/assets/images/extractions2.png" alt="Extractions results view" class="w-full h-auto rounded-lg shadow-md ring-1 ring-gray-200 object-contain" />
-    <p class="text-sm text-gray-500 mt-2">The Extractions tab shows structured results for your schema.</p>
+    <img src="/assets/images/create_prompt.png" alt="Create Prompt screen" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
   </div>
 </div>
 
 ---
 
-
-<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-4">
+<div class="rounded-lg bg-blue-50 border-l-4 border-blue-500 px-4 py-3 mb-3 mt-10" id="step-2">
   <div class="flex items-center mb-2">
-    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 4</span>
-    <span class="text-2xl font-bold text-indigo-800">Prompt Engineering</span>
+    <span class="bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 2</span>
+    <span class="text-2xl font-bold text-blue-800">Upload Your First Document</span>
+  </div>
+  <p class="text-base text-gray-600 mt-1">Now, upload a file and apply the tag to trigger the prompt.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-white rounded-xl p-4">
+  <div>
+    <h3 class="text-xl font-semibold mb-3">Manual Upload with Tag</h3>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li>Click <strong>"Upload Document"</strong>.</li>
+      <li>Select your file.</li>
+      <li>In the <strong>Tags</strong> dropdown, select the tag you created in Step 1.</li>
+      <li>Click <strong>Continue</strong>.</li>
+    </ol>
+  </div>
+  <div>
+    <img src="/assets/images/upload_file.png" alt="Upload Documents screen" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
+  </div>
+</div>
+
+---
+
+<div class="rounded-lg bg-blue-50 border-l-4 border-blue-500 px-4 py-3 mb-3 mt-10" id="step-3">
+  <div class="flex items-center mb-2">
+    <span class="bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 3</span>
+    <span class="text-2xl font-bold text-blue-800">See Automatic Extraction Results</span>
+  </div>
+  <p class="text-base text-gray-600 mt-1">Wait for processing to complete and view your data.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-white rounded-xl p-4">
+  <div>
+    <h3 class="text-xl font-semibold mb-3">Review Extractions</h3>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li>Wait for status <code>llm_completed</code>.</li>
+      <li>Click the document name.</li>
+      <li>Go to the <strong>Extractions</strong> tab to see structured data.</li>
+    </ol>
+  </div>
+  <div>
+    <img src="/assets/images/extractions2.png" alt="Extractions results view" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
+  </div>
+</div>
+
+---
+
+<div class="rounded-lg bg-blue-50 border-l-4 border-blue-500 px-4 py-3 mb-3 mt-10" id="step-4">
+  <div class="flex items-center mb-2">
+    <span class="bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 4</span>
+    <span class="text-2xl font-bold text-blue-800">Prompt Engineering</span>
   </div>
   <p class="text-base text-gray-600 mt-1">We'll refine our prompts to get better and more accurate results.</p>
 </div>
@@ -293,15 +183,15 @@ Be precise with numbers and dates.
 
 ---
 
-<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-5">
+<div class="rounded-lg bg-blue-50 border-l-4 border-blue-500 px-4 py-3 mb-3 mt-10" id="step-5">
   <div class="flex items-center mb-2">
-    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 5</span>
-    <span class="text-2xl font-bold text-indigo-800">Manual Automation</span>
+    <span class="bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 5</span>
+    <span class="text-2xl font-bold text-blue-800">Manual Automation</span>
   </div>
   <p class="text-base text-gray-600 mt-1">We'll process multiple documents at once to handle larger volumes.</p>
 </div>
 
-<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-gray-100 rounded-xl p-4">
+<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-white rounded-xl p-4">
   <div>
     <h4 class="text-lg font-semibold mb-2">Upload pre-tagged documents at scale</h4>
     <ol class="list-decimal pl-5 space-y-2">
@@ -315,7 +205,8 @@ Be precise with numbers and dates.
   </div>
 </div>
 
-<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start rounded-xl p-4">  <div>
+<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-white rounded-xl p-4">
+  <div>
     <h4 class="text-lg font-semibold mb-2">Update prompts and re-run on documents at scale</h4>
     <ol class="list-decimal pl-5 space-y-2">
       <li>Open the <strong>Documents</strong> list and filter by the tag used by your prompt.</li>
@@ -332,10 +223,10 @@ Be precise with numbers and dates.
 
 ---
 
-<div class="rounded-lg bg-indigo-50 border-l-4 border-indigo-500 px-4 py-3 mb-3 mt-10" id="step-6">
+<div class="rounded-lg bg-blue-50 border-l-4 border-blue-500 px-4 py-3 mb-3 mt-10" id="step-6">
   <div class="flex items-center mb-2">
-    <span class="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 6</span>
-    <span class="text-2xl font-bold text-indigo-800">Full Automation with APIs</span>
+    <span class="bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 6</span>
+    <span class="text-2xl font-bold text-blue-800">Full Automation with APIs</span>
   </div>
   <p class="text-base text-gray-600 mt-1">We'll connect DocRouter to your systems for fully automated processing.</p>
 </div>

@@ -118,13 +118,13 @@ title: "DocRouter Architecture"
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <button onclick="openCalendly()"
-                            class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
+                            class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
                         Schedule Architecture Review
                     </button>
                     <a href="https://github.com/analytiq-hub/doc-router"
                        target="_blank"
                        rel="noopener noreferrer"
-                       class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
+                       class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
                         View Source Code
                     </a>
                 </div>

@@ -81,8 +81,7 @@ permalink: /docs/how-it-works/
             </div>
         </section>
 
-        <!-- Integration Methods -->
-        <section class="bg-gray-50 rounded-lg p-8 mb-12">
+        <section class="bg-blue-50 rounded-lg p-8 mb-12">
             <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">Integration Methods</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- API Integration -->
@@ -96,7 +95,7 @@ permalink: /docs/how-it-works/
                         <li>• Batch processing support</li>
                     </ul>
                     <a href="{{ '/docs/rest-api/' | relative_url }}" 
-                       class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg font-medium transition-colors duration-200">
+                       class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg font-medium transition-colors duration-200 no-underline">
                         View API Docs
                     </a>
                 </div>
@@ -112,7 +111,7 @@ permalink: /docs/how-it-works/
                         <li>• Fax processing</li>
                     </ul>
                     <a href="javascript:void(0)" onclick="openCalendly()" 
-                       class="inline-block border-2 border-gray-600 text-gray-600 hover:bg-gray-50 px-4 py-2 rounded-lg font-medium transition-colors duration-200">
+                       class="inline-block border-2 border-gray-600 text-gray-600 hover:bg-gray-50 px-4 py-2 rounded-lg font-medium transition-colors duration-200 no-underline">
                         Schedule a Meeting to Discuss
                     </a>
                 </div>
@@ -190,27 +189,26 @@ permalink: /docs/how-it-works/
         </section>
         -->
 
-        <!-- Getting Started -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">Get Started Today</h2>
+        <section class="bg-blue-600 rounded-lg shadow-lg p-8 mb-12">
             <div class="text-center">
-                <p class="text-lg text-gray-600 mb-8">
+                <h2 class="text-3xl font-semibold text-white mb-6">Get Started Today</h2>
+                <p class="text-lg text-blue-100 mb-8">
                     Ready to automate your document processing? Choose the path that works best for your team.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="https://app.docrouter.ai"
                        target="_blank"
                        rel="noopener noreferrer"
-                       class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
+                       class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
                         Try It Free
                     </a>
                     <a href="{{ '/docs/quick-start/' | relative_url }}"
-                       class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
+                       class="inline-block border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
                         Use the Quick Start
                     </a>
                     <a href="javascript:void(0)" onclick="openCalendly()"
-                       class="inline-block border-2 border-gray-600 text-gray-600 hover:bg-gray-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200">
-                        Schedule a Meeting to Discuss
+                       class="inline-block border-2 border-blue-200 text-blue-100 hover:bg-blue-700 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
+                        Schedule a Meeting
                     </a>
                 </div>
             </div>
