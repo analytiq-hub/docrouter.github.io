@@ -2,16 +2,26 @@
 
 ## Overview
 
-This document outlines five active email campaigns plus future campaigns:
-1. **Onboarding Campaign** - For users who have registered an account
-2. **Prospect Campaign** - For potential users who might be interested in DocRouter.AI
-3. **Investor/Friends Newsletter** - For investors, advisors, and close contacts
-4. **Product Updates Newsletter** - For registered users with product announcements
-5. **Educational Series** - Monthly deep-dive content for active users
+This document outlines the active email campaigns and their templates:
+1. **Onboarding Campaign** - 3 emails for users who have registered an account
+2. **Prospect Campaign** - 2 emails for potential users interested in DocRouter.AI
+3. **Investor/Friends Newsletter** - Updates for investors, advisors, and close contacts
+4. **Product Updates Newsletter** - 3 template types for registered users (features, tips, deep dive)
+
+### Active Templates (9 total)
+- `onboarding-email-1-upload-tailor-results.html` - Tag, prompt, upload workflow
+- `onboarding-email-2-schemas.html` - Schema creation and usage
+- `onboarding-email-3-checkin.html` - Week 1 check-in and support
+- `prospect-email-1-demo-invitation.html` - Initial demo invitation
+- `prospect-email-2-followup.html` - Follow-up demo reminder
+- `investor-newsletter.html` - Strategic updates
+- `updates-features.html` - New feature announcements
+- `updates-tips.html` - Best practices and tips
+- `updates-deep-dive.html` - Monthly educational content
 
 ### Future Campaigns (For Later Implementation)
-6. **Re-engagement Campaign** - For inactive users to return to the platform
-7. **Referral Program** - Leverage users to bring in new customers
+- **Re-engagement Campaign** - For inactive users to return to the platform
+- **Referral Program** - Leverage users to bring in new customers
 
 ---
 
@@ -753,3 +763,121 @@ All documentation links in email templates point to `https://docrouter.ai/docs/*
 - What's next
 - Personal note from CEO
 - No documentation links (relationship-focused)
+
+---
+
+## Documentation Requirements & Strategy
+
+### Required Documentation Pages
+
+Based on email template analysis, the following documentation pages are needed:
+
+#### Core Pages (Already Exist)
+- ✅ `/docs` - Main documentation index
+- ✅ `/docs/schemas` - Schema documentation
+- ✅ `/docs/prompts` - Prompts guide
+- ✅ `/docs/rest-api` - REST API documentation
+- ✅ `/docs/webhooks` - Webhooks/workflows documentation
+- ✅ `/docs/mcp` - MCP/Claude Code documentation
+
+#### Missing or Needs Enhancement
+- ❌ **Tags** - No dedicated page. Core workflow concept (Tag → Prompt → Upload) needs documentation
+- ❌ **Knowledge Bases** - Referenced but links to generic `/docs`. Needs dedicated page or clear section
+- ⚠️ **N8N Integration** - Referenced but links to generic `/docs/webhooks`. Needs dedicated section or page
+- ⚠️ **Temporal Workflows** - Referenced but links to generic `/docs/webhooks`. Needs dedicated section or page
+
+### Documentation Structure Recommendations
+
+To avoid repetition and ensure comprehensive coverage:
+
+#### 1. Tags Documentation (`/docs/tags`)
+**Content:**
+- What tags are and why they're required
+- How tags route documents to prompts
+- Tag creation workflow
+- Best practices for tag naming
+- Relationship to prompts and schemas
+- Cross-references: Prompts, Quick Start, How It Works
+
+**Avoid Repetition:**
+- Don't duplicate prompt creation steps (link to prompts doc)
+- Don't duplicate schema information (link to schemas doc)
+- Focus on tags as routing mechanism
+
+#### 2. Knowledge Bases Documentation (`/docs/knowledge-bases`)
+**Content:**
+- What knowledge bases are
+- How they enhance extraction accuracy
+- How to create and manage knowledge bases
+- Integration with prompts
+- Best practices
+- Cross-references: Prompts, Schemas
+
+**Avoid Repetition:**
+- Don't duplicate prompt writing guide (link to prompts doc)
+- Don't duplicate schema structure (link to schemas doc)
+- Focus on knowledge base-specific features
+
+#### 3. Workflows Documentation Enhancement (`/docs/webhooks`)
+**Current:** Generic webhooks documentation
+**Needs:**
+- Clear sections for:
+  - N8N Integration (with specific setup guide)
+  - Temporal Workflows (with specific setup guide)
+  - General webhook usage
+- Or split into:
+  - `/docs/webhooks` - General webhook documentation
+  - `/docs/workflows/n8n` - N8N-specific integration
+  - `/docs/workflows/temporal` - Temporal-specific integration
+
+**Avoid Repetition:**
+- Share common webhook concepts in main doc
+- Link to API documentation for endpoint details
+- Focus each integration guide on setup and specific use cases
+
+#### 4. Documentation Cross-Reference Strategy
+
+**Hierarchical Structure:**
+```
+/docs (index)
+├── /docs/quick-start (overview → tags → prompts → schemas)
+├── /docs/how-it-works (workflow explanation)
+├── /docs/tags (NEW - required)
+├── /docs/prompts (existing)
+├── /docs/schemas (existing)
+├── /docs/knowledge-bases (NEW - required)
+├── /docs/mcp (existing - clarify = Claude Code)
+├── /docs/webhooks (enhance with N8N/Temporal sections)
+├── /docs/rest-api (existing)
+└── /docs/[sdk] (Python, TypeScript)
+```
+
+**Cross-Reference Pattern:**
+- Each page should link to related concepts
+- Use "See also" sections at the end of each doc
+- Quick Start should link to all core concepts
+- How It Works should explain the workflow without duplicating step-by-step guides
+
+### Email Template Documentation Link Mapping
+
+| Template | Documentation Links Used | Notes |
+|----------|--------------------------|-------|
+| `onboarding-email-1` | `/docs/schemas`, `/docs/rest-api`, `/docs/webhooks`, `/docs/mcp`, `/docs` (knowledge bases) | Most comprehensive |
+| `onboarding-email-2` | `/docs/mcp`, `/docs/webhooks`, `/docs/rest-api` | Focus on advanced features |
+| `onboarding-email-3` | `/docs`, `/docs/rest-api`, `/docs/webhooks` | General resources |
+| `updates-features` | `/docs` | Main documentation link |
+| `updates-tips` | `/docs/prompts`, `/docs/schemas`, `/blog` | Specific guides |
+| `updates-deep-dive` | `/docs/prompts`, `/docs/schemas` | Educational focus |
+| `prospect-email-1` | None | Demo-focused |
+| `prospect-email-2` | None | Demo-focused |
+| `investor-newsletter` | None | Relationship-focused |
+
+### Action Items for Documentation
+
+1. **Create `/docs/tags` page** - Critical for onboarding workflow understanding
+2. **Create `/docs/knowledge-bases` page** - Currently links to generic docs
+3. **Enhance `/docs/webhooks`** - Add clear N8N and Temporal sections, or create separate pages
+4. **Clarify `/docs/mcp`** - Ensure it's clear this is Claude Code integration
+5. **Update Quick Start** - Ensure it follows Tag → Prompt → Upload workflow
+6. **Update How It Works** - Ensure tags are explained as required prerequisite
+7. **Add cross-references** - Link related concepts across all documentation pages
