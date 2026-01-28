@@ -37,20 +37,11 @@
                             <p style="margin: 15px 0 0 0; color: #333333; font-size: 16px; line-height: 1.6;">
                                 You've been using <a href="https://docrouter.ai" style="color: #0070f3; text-decoration: none;">DocRouter.AI</a> for a week now. We'd love to hear how it's working for you and help with any questions or challenges you might have.
                             </p>
-                            {% if contact.documents_uploaded > 0 or contact.prompts_created > 0 %}
                             <div style="margin-top: 20px; padding: 15px; background-color: #e8f5e9; border-left: 4px solid #28a745; border-radius: 4px;">
                                 <p style="margin: 0; color: #2e7d32; font-size: 15px; line-height: 1.6;">
-                                    <strong>Great progress!</strong> 
-                                    {% if contact.documents_uploaded > 0 and contact.prompts_created > 0 %}
-                                    We noticed you've uploaded {{ contact.documents_uploaded }} document{% if contact.documents_uploaded > 1 %}s{% endif %} and created {{ contact.prompts_created }} prompt{% if contact.prompts_created > 1 %}s{% endif %}. Keep it up!
-                                    {% elif contact.documents_uploaded > 0 %}
-                                    We noticed you've uploaded {{ contact.documents_uploaded }} document{% if contact.documents_uploaded > 1 %}s{% endif %}. Keep it up!
-                                    {% elif contact.prompts_created > 0 %}
-                                    We noticed you've created {{ contact.prompts_created }} prompt{% if contact.prompts_created > 1 %}s{% endif %}. Keep it up!
-                                    {% endif %}
+                                    <strong>💡 Pro tip:</strong> The more you refine your prompts and test with sample documents, the better your extraction accuracy becomes. Don't hesitate to iterate and improve!
                                 </p>
                             </div>
-                            {% endif %}
                         </td>
                     </tr>
                     
