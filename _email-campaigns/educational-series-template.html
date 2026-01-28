@@ -12,24 +12,19 @@
     <![endif]-->
 </head>
 <body style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
-    <!-- Wrapper Table -->
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f5f5f5;">
         <tr>
             <td align="center" style="padding: 20px 0;">
-                <!-- Main Container -->
                 <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; width: 100%; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 
                     <!-- Header -->
                     <tr>
                         <td style="padding: 40px 40px 30px 40px; text-align: center; background: linear-gradient(135deg, #0070f3 0%, #0051cc 100%); border-radius: 8px 8px 0 0;">
                             <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 600; line-height: 1.2;">
-                                📚 DocRouter.AI Deep Dive
+                                📚 <a href="https://docrouter.ai" style="color: #ffffff; text-decoration: none;">DocRouter.AI</a> Deep Dive
                             </h1>
                             <p style="margin: 10px 0 0 0; color: #e8f0ff; font-size: 16px; line-height: 1.4;">
                                 {{ params.series_topic | default: 'Advanced Prompt Engineering' }}
-                            </p>
-                            <p style="margin: 5px 0 0 0; color: #e8f0ff; font-size: 14px; line-height: 1.4;">
-                                {{ params.series_part | default: 'Part 1 of 4' }} in our educational series
                             </p>
                         </td>
                     </tr>
@@ -41,10 +36,7 @@
                                 Hi {{ contact.FIRSTNAME | default: 'there' }},
                             </p>
                             <p style="margin: 15px 0 0 0; color: #333333; font-size: 16px; line-height: 1.6;">
-                                Welcome to our monthly DocRouter.AI Deep Dive series! Each month, we explore advanced techniques and best practices to help you get the most out of DocRouter.AI.
-                            </p>
-                            <p style="margin: 15px 0 0 0; color: #333333; font-size: 16px; line-height: 1.6;">
-                                This month: {{ params.topic_intro | default: 'Advanced techniques for crafting prompts that deliver higher accuracy and better results from your document extractions.' }}
+                                {{ params.topic_intro | default: 'This month we explore advanced techniques for crafting prompts that deliver higher accuracy and better results from your document extractions.' }}
                             </p>
                         </td>
                     </tr>
@@ -53,167 +45,41 @@
                     <tr>
                         <td style="padding: 20px 40px;">
                             <h2 style="margin: 0 0 20px 0; color: #333333; font-size: 22px; font-weight: 600;">
-                                {{ params.main_heading | default: '🎯 Why Advanced Prompt Engineering Matters' }}
+                                {{ params.main_heading | default: '🎯 Key Principles' }}
                             </h2>
 
-                            <div style="background-color: #f8f9fa; padding: 25px; border-radius: 6px; margin-bottom: 20px;">
-                                <p style="margin: 0 0 20px 0; color: #555555; font-size: 15px; line-height: 1.6;">
-                                    {{ params.main_content | default: 'The quality of your prompts directly impacts the accuracy of your document extractions. A well-crafted prompt can improve accuracy by 30-50% compared to generic instructions.' }}
+                            <div style="background-color: #f8f9fa; padding: 20px; border-radius: 6px;">
+                                <p style="margin: 0 0 15px 0; color: #555555; font-size: 15px; line-height: 1.6;">
+                                    {{ params.main_content | default: 'A well-crafted prompt can improve accuracy by 30-50% compared to generic instructions.' }}
                                 </p>
-
-                                <h3 style="margin: 20px 0 15px 0; color: #333333; font-size: 18px; font-weight: 600;">
-                                    Key Principles:
-                                </h3>
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                    <tr>
-                                        <td style="padding-bottom: 12px;">
-                                            <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
-                                                <span style="color: #28a745; font-size: 18px; margin-right: 8px;">1</span>
-                                                <strong>{{ params.principle_1 | default: 'Be Specific' }}</strong> - Include exact field names, formats, and examples
-                                            </p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding-bottom: 12px;">
-                                            <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
-                                                <span style="color: #28a745; font-size: 18px; margin-right: 8px;">2</span>
-                                                <strong>{{ params.principle_2 | default: 'Provide Context' }}</strong> - Explain document type and expected variations
-                                            </p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding-bottom: 12px;">
-                                            <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
-                                                <span style="color: #28a745; font-size: 18px; margin-right: 8px;">3</span>
-                                                <strong>{{ params.principle_3 | default: 'Use Examples' }}</strong> - Show exactly what success looks like
-                                            </p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
-                                                <span style="color: #28a745; font-size: 18px; margin-right: 8px;">4</span>
-                                                <strong>{{ params.principle_4 | default: 'Test & Iterate' }}</strong> - Refine based on actual results
-                                            </p>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <ul style="margin: 0; padding-left: 20px; color: #555555; font-size: 15px; line-height: 1.8;">
+                                    <li><strong>{{ params.principle_1 | default: 'Be Specific' }}</strong> - Include exact field names, formats, and examples</li>
+                                    <li><strong>{{ params.principle_2 | default: 'Provide Context' }}</strong> - Explain document type and expected variations</li>
+                                    <li><strong>{{ params.principle_3 | default: 'Use Examples' }}</strong> - Show exactly what success looks like</li>
+                                    <li><strong>{{ params.principle_4 | default: 'Test & Iterate' }}</strong> - Refine based on actual results</li>
+                                </ul>
                             </div>
-
-                            <!-- Example Section -->
-                            <h3 style="margin: 30px 0 15px 0; color: #333333; font-size: 20px; font-weight: 600;">
-                                📝 Example: Before & After
-                            </h3>
-
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                <tr>
-                                    <td width="48%" valign="top" style="padding-right: 10px;">
-                                        <div style="background-color: #ffebee; border: 1px solid #ffcdd2; padding: 15px; border-radius: 4px;">
-                                            <h4 style="margin: 0 0 10px 0; color: #c62828; font-size: 16px; font-weight: 600;">
-                                                ❌ Generic Prompt
-                                            </h4>
-                                            <p style="margin: 0; color: #555555; font-size: 14px; line-height: 1.6; font-family: 'Courier New', monospace;">
-                                                {{ params.bad_example | default: '"Extract invoice information from this document."' }}
-                                            </p>
-                                        </div>
-                                    </td>
-                                    <td width="48%" valign="top" style="padding-left: 10px;">
-                                        <div style="background-color: #e8f5e9; border: 1px solid #c8e6c9; padding: 15px; border-radius: 4px;">
-                                            <h4 style="margin: 0 0 10px 0; color: #2e7d32; font-size: 16px; font-weight: 600;">
-                                                ✅ Optimized Prompt
-                                            </h4>
-                                            <p style="margin: 0; color: #555555; font-size: 14px; line-height: 1.6; font-family: 'Courier New', monospace;">
-                                                {{ params.good_example | default: '"Extract the invoice number (format: INV-XXXXX), total amount (including currency), vendor name, and due date from this invoice. Example: Invoice INV-2024-001 for $1,250.00 from TechCorp Solutions, due December 15, 2024."' }}
-                                            </p>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-
-                    <!-- Series Navigation -->
-                    <tr>
-                        <td style="padding: 20px 40px; background-color: #f8f9fa;">
-                            <h2 style="margin: 0 0 20px 0; color: #333333; font-size: 22px; font-weight: 600;">
-                                📅 This Month's Series
-                            </h2>
-
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                <tr>
-                                    <td style="padding-bottom: 12px;">
-                                        <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
-                                            <strong>{{ params.current_week | default: 'This Week' }}:</strong> {{ params.current_topic | default: 'Advanced Prompt Engineering Techniques' }}
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="padding-bottom: 12px;">
-                                        <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
-                                            <strong>{{ params.next_week | default: 'Next Week' }}:</strong> {{ params.next_topic | default: 'Schema Design Best Practices' }}
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="padding-bottom: 12px;">
-                                        <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
-                                            <strong>{{ params.week_after | default: 'Week 3' }}:</strong> {{ params.week3_topic | default: 'Workflow Automation with N8N & Temporal' }}
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
-                                            <strong>{{ params.final_week | default: 'Final Week' }}:</strong> {{ params.final_topic | default: 'API Integration Examples & Best Practices' }}
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
                         </td>
                     </tr>
 
                     <!-- Resources -->
                     <tr>
-                        <td style="padding: 30px 40px;">
-                            <h2 style="margin: 0 0 20px 0; color: #333333; font-size: 22px; font-weight: 600;">
-                                🔗 Related Resources
+                        <td style="padding: 20px 40px; background-color: #f8f9fa;">
+                            <h2 style="margin: 0 0 15px 0; color: #333333; font-size: 22px; font-weight: 600;">
+                                🔗 Resources
                             </h2>
-
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                <tr>
-                                    <td style="padding-bottom: 10px;">
-                                        <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">
-                                            <a href="{{ params.site_url | default: 'https://docrouter.ai' }}/docs/{{ params.primary_resource | default: 'prompts' }}" style="color: #0070f3; text-decoration: none;">{{ params.primary_resource_title | default: 'Complete Prompts Guide' }} →</a>
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="padding-bottom: 10px;">
-                                        <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">
-                                            <a href="{{ params.site_url | default: 'https://docrouter.ai' }}/docs/{{ params.secondary_resource | default: 'schemas' }}" style="color: #0070f3; text-decoration: none;">{{ params.secondary_resource_title | default: 'Schema Documentation' }} →</a>
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">
-                                            <a href="{{ params.site_url | default: 'https://docrouter.ai' }}/blog" style="color: #0070f3; text-decoration: none;">Success Stories & Examples →</a>
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
+                            <p style="margin: 0 0 10px 0; color: #555555; font-size: 15px; line-height: 1.6;">
+                                <a href="https://docrouter.ai/docs/prompts" style="color: #0070f3; text-decoration: none;">Complete Prompts Guide →</a>
+                            </p>
+                            <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">
+                                <a href="https://docrouter.ai/docs/schemas" style="color: #0070f3; text-decoration: none;">Schema Documentation →</a>
+                            </p>
                         </td>
                     </tr>
 
                     <!-- CTA -->
                     <tr>
-                        <td style="padding: 20px 40px 30px 40px; text-align: center;">
-                            <h2 style="margin: 0 0 20px 0; color: #333333; font-size: 22px; font-weight: 600;">
-                                Put This Into Practice
-                            </h2>
-                            <p style="margin: 0 0 25px 0; color: #555555; font-size: 15px; line-height: 1.6;">
-                                {{ params.cta_text | default: 'Update one of your existing prompts using these advanced techniques and see the improvement in your next document extraction.' }}
-                            </p>
+                        <td style="padding: 30px 40px; text-align: center;">
                             <a href="{{ params.site_url | default: 'https://app.docrouter.ai' }}/prompts" style="display: inline-block; background-color: #0070f3; color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 6px; font-size: 16px; font-weight: 600; line-height: 1.5;">
                                 {{ params.cta_button | default: 'Try Advanced Prompts' }}
                             </a>
@@ -225,9 +91,6 @@
                         <td style="padding: 30px 40px; background-color: #ffffff; border-radius: 0 0 8px 8px; text-align: center; border-top: 1px solid #eaeaea;">
                             <p style="margin: 0 0 10px 0; color: #999999; font-size: 12px; line-height: 1.5;">
                                 © 2026 Analytiq Hub LLC. All rights reserved.
-                            </p>
-                            <p style="margin: 0 0 10px 0; color: #999999; font-size: 12px; line-height: 1.5;">
-                                You received this as part of our educational series for DocRouter.AI users.
                             </p>
                             <p style="margin: 0; color: #999999; font-size: 12px; line-height: 1.5;">
                                 <a href="{{ mirror }}" style="color: #0070f3; text-decoration: none;">View in browser</a> |
@@ -242,12 +105,8 @@
         </tr>
     </table>
 
-    <!-- Responsive Styles -->
     <style type="text/css">
         @media only screen and (max-width: 600px) {
-            table[class="main-container"] {
-                width: 100% !important;
-            }
             td[style*="padding: 30px 40px"] {
                 padding: 20px !important;
             }
@@ -256,11 +115,6 @@
             }
             h2 {
                 font-size: 20px !important;
-            }
-            table[width="100%"] td[width="48%"] {
-                width: 100% !important;
-                display: block !important;
-                padding: 10px 0 !important;
             }
         }
     </style>
