@@ -25,7 +25,7 @@ This document outlines five active email campaigns plus future campaigns:
 | **Onboarding** | Email 3: Customer Success Check | "How's your DocRouter.AI journey going? We're here to help 👋" | You've been using DocRouter.AI for a week. We're here to help with questions and hear how it's working for you. |
 | **Prospect** | Email 1: Introduction & Demo Invitation | "DocRouter.AI: Transform Your Document Processing with AI" | See how DocRouter.AI extracts data from unstructured documents with AI. Book a free demo to learn more. |
 | **Prospect** | Email 2: Follow-up Demo Reminder | "Ready to See DocRouter.AI in Action?" | Book your free demo and discover how DocRouter.AI can transform your document processing workflow. |
-| **Investor** | Quarterly Newsletter | "DocRouter.AI Quarterly Update: [Quarter] [Year]" | Quarterly update on DocRouter.AI progress, milestones, and strategic updates for our valued partners. |
+| **Investor** | Newsletter | "DocRouter.AI Update: [Update Title]" | Update on DocRouter.AI progress, milestones, and strategic updates for our valued partners. |
 | **Product Updates** | Feature Release | "DocRouter.AI: New Feature - [Feature Name]" | Exciting new feature announcement with details and benefits for DocRouter.AI users. |
 | **Product Updates** | Maintenance & Security | "DocRouter.AI Update: [Update Title]" | Security, performance, and bug fix updates for DocRouter.AI users. |
 | **Product Updates** | Tips & Best Practices | "DocRouter.AI Tip: [Tip Title]" | Educational content and best practices to get more value from DocRouter.AI. |
@@ -48,7 +48,7 @@ This document outlines five active email campaigns plus future campaigns:
 ### Investor/Friends Newsletter
 **Goal:** Maintain relationships and share strategic updates
 **Audience:** Investors, advisors, close contacts
-**Cadence:** Quarterly
+**Cadence:** As needed
 
 ### Product Updates Newsletter
 **Goal:** Keep users informed about features and improvements
@@ -98,7 +98,7 @@ For email templates:
 - `prospect-email-2-followup.html` - Email 2 (Day 3-5): Follow-up demo reminder
 
 **Investor/Friends Newsletter:**
-- `investor-newsletter-quarterly.html` - Quarterly comprehensive updates
+- `investor-newsletter.html` - Comprehensive updates
 
 **Product Updates Newsletter:**
 - `updates-features.html` - New feature announcements
@@ -210,14 +210,14 @@ Maintain relationships with investors, advisors, and close contacts through regu
 Investors, advisors, mentors, and close professional contacts who want to stay updated on DocRouter.AI's journey.
 
 ### Email Schedule
-Quarterly only - focused on major milestones and strategic updates.
+As needed - focused on major milestones and strategic updates.
 
 ### Email Content Structure
 
-#### Quarterly Updates
+#### Updates
 **Subject Line Examples:**
-- "Q4 DocRouter.AI Update: Major Milestones & What's Next"
-- "DocRouter.AI Quarterly: Progress, Partnerships & Plans"
+- "DocRouter.AI Update: Major Milestones & What's Next"
+- "DocRouter.AI Update: Progress, Partnerships & Plans"
 - "Behind the Scenes: Building DocRouter.AI's Future"
 
 **Content Focus:**
@@ -583,7 +583,7 @@ For email templates:
 - `prospect-email-2-followup.html` - Email 2 (Day 3-5): Follow-up demo reminder
 
 **Investor/Friends Newsletter:**
-- `investor-newsletter-quarterly.html` - Quarterly comprehensive updates
+- `investor-newsletter.html` - Comprehensive updates
 
 **Product Updates Newsletter:**
 - `updates-features.html` - New feature announcements
