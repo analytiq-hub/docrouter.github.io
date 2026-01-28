@@ -5,54 +5,36 @@ permalink: /docs/tags/
 ---
 
 <div class="bg-blue-50 rounded-2xl p-8 mb-12 border border-blue-100 shadow-lg text-center">
-  <p class="text-lg text-gray-600">
-    Tag are the core routing mechanism that connects documents to prompts and automates your workflow.
-  </p>
+  <p class="text-xl text-gray-800 font-semibold mb-2">Tags connect documents to prompts.</p>
+  <p class="text-gray-600">They are <strong>required</strong> for automatic data extraction in DocRouter.AI.</p>
 </div>
-
-## What are Tags?
-
-Tags are labels that help organize and route documents to the appropriate prompts. In DocRouter.AI, tags are **required** for prompts to trigger on documents. They enable:
-
-- **Automatic processing**: Documents with matching tags trigger specific prompts immediately.
-- **Organization**: Group related prompts and documents by type or category.
-- **Workflow automation**: Route documents based on their content type (e.g., "invoice", "receipt").
-
----
 
 ## The Tag-Prompt Workflow
 
-The correct onboarding workflow in DocRouter.AI follows these three steps:
+To automate your document processing, follow these three steps:
 
-1. **Create a Tag**: Set up a category (e.g., `invoices`).
-2. **Create a Prompt**: Write instructions and **link it to the tag**.
-3. **Upload Documents**: Apply the tag during upload.
-
-Once the upload is complete, the linked prompt will run automatically.
+1.  **Create a Tag**: Define a category (e.g., `invoices` or `contracts`).
+2.  **Create a Prompt**: Write extraction instructions and **link them to your tag**.
+3.  **Upload Documents**: Apply the tag during upload to trigger the linked prompt automatically.
 
 ---
 
 ## Managing Tags
 
-### Creating a Tag
-1. Navigate to **Tags** in the left sidebar.
-2. Click **Create Tag**.
-3. Enter a descriptive name (e.g., `legal-contracts`).
-4. Choose a color for visual organization.
-5. Click **Save Tag**.
+### Creating Tags
+Navigate to **Tags** in the sidebar, click **Create Tag**, and assign a name and color.
 
-### Assigning Tags to Documents
-- **During Upload**: Select tags from the dropdown in the upload dialog.
-- **Bulk Action**: Select multiple documents in the list, click **Actions** → **Edit Tags**.
-- **Individual**: Open a document, click the three dots menu → **Edit Tags & Metadata**.
+### Assigning Tags
+*   **During Upload**: Select tags from the dropdown in the upload dialog.
+*   **Existing Docs**: Select documents in your list and use **Actions → Edit Tags**, or edit them individually from the document view.
 
 ---
 
 ## Best Practices
 
-- **Be Specific**: Use tags like `invoice-us` or `invoice-eu` if they require different extraction prompts.
-- **Workflow Stages**: Use tags like `pending-review` or `approved` to track document status.
-- **Consistency**: Standardize tag naming across your organization to avoid confusion.
+*   **Be Specific**: Use distinct tags like `invoice-us` vs `invoice-eu` if they need different prompts.
+*   **Track Status**: Use tags like `pending-review` or `approved` to manage your document lifecycle.
+*   **Stay Consistent**: Standardize naming across your team to keep your workspace organized.
 
 ---
 
