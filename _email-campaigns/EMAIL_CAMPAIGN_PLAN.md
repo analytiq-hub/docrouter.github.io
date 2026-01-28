@@ -101,9 +101,8 @@ For email templates:
 - `investor-newsletter-quarterly.html` - Quarterly comprehensive updates
 
 **Product Updates Newsletter:**
-- `product-updates-feature-release.html` - New feature announcements
-- `product-updates-maintenance.html` - Maintenance and security updates
-- `product-updates-tips.html` - Educational content and tips
+- `updates-features.html` - New feature announcements
+- `updates-tips.html` - Educational content and tips
 
 **Educational Series:**
 - `educational-series-template.html` - Single reusable template for monthly educational content
@@ -587,9 +586,8 @@ For email templates:
 - `investor-newsletter-quarterly.html` - Quarterly comprehensive updates
 
 **Product Updates Newsletter:**
-- `product-updates-feature-release.html` - New feature announcements
-- `product-updates-maintenance.html` - Maintenance and security updates
-- `product-updates-tips.html` - Educational content and tips
+- `updates-features.html` - New feature announcements
+- `updates-tips.html` - Educational content and tips
 
 **Educational Series:**
 - `educational-series-template.html` - Single reusable template for monthly educational content
