@@ -20,7 +20,7 @@ permalink: /docs/quick-start/
   <div class="rounded-xl border border-blue-200 bg-blue-50 p-6">
     <h2 class="text-2xl font-bold mb-3">Documents You Will Need</h2>
     <div class="grid grid-cols-1 gap-3">
-      <a href="/assets/files/Acord80_Homeowners_App.pdf" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
+      <a href="/assets/files/Acord80_Homeowners_App.pdf" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white no-underline">
         <div class="flex items-center gap-3 min-w-0">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">PDF</span>
           <div class="min-w-0">
@@ -29,7 +29,7 @@ permalink: /docs/quick-start/
           </div>
         </div>
       </a>
-      <a href="/assets/files/acord_clearance_search_prompt.txt" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
+      <a href="/assets/files/acord_clearance_search_prompt.txt" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white no-underline">
         <div class="flex items-center gap-3 min-w-0">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">TXT</span>
           <div class="min-w-0">
@@ -38,7 +38,7 @@ permalink: /docs/quick-start/
           </div>
         </div>
       </a>
-      <a href="/assets/files/acord_clearance_search_schema.json" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white">
+      <a href="/assets/files/acord_clearance_search_schema.json" class="group block rounded-lg border border-gray-200 p-3 hover:shadow-sm hover:border-gray-300 transition bg-white no-underline">
         <div class="flex items-center gap-3 min-w-0">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-gray-100 text-gray-700 text-xs">JSON</span>
           <div class="min-w-0">

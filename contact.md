@@ -74,7 +74,7 @@ permalink: /contact/
                     <h2 class="text-3xl font-semibold text-gray-900 mb-8">Quick Actions</h2>
                     <div class="space-y-4">
                         <a href="tel:6172168509" 
-                           class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-center px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
+                           class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-center px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 shadow-lg hover:shadow-xl no-underline">
                             Call Us
                         </a>
                         <button onclick="openCalendlyModal()" 

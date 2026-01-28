@@ -284,7 +284,7 @@ title: "DocRouter - AI-Powered Document Processing"
                     <h3 class="text-xl font-medium text-gray-900 mb-4">Schedule a Meeting</h3>
                     <div class="space-y-4">
                         <a href="javascript:void(0)" onclick="openCalendly()"
-                           class="block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium text-center transition-colors duration-200">
+                           class="block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium text-center transition-colors duration-200 no-underline">
                             Schedule a Meeting
                         </a>
                         <p class="text-sm text-gray-600">
@@ -300,7 +300,7 @@ title: "DocRouter - AI-Powered Document Processing"
         <p>© 2024 DocRouter.AI. All rights reserved.</p>
         <div class="mt-4">
             <a href="https://github.com/analytiq-hub/doc-router"
-               class="text-blue-600 hover:text-blue-800">
+               class="text-blue-600 hover:text-blue-800 no-underline">
                 View on GitHub
             </a>
         </div>
