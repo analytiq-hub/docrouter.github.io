@@ -9,7 +9,7 @@ This document outlines the active email campaigns and their templates:
 4. **Product Updates Newsletter** - 3 template types for registered users (features, tips, deep dive)
 
 ### Active Templates (9 total)
-- `onboarding-email-1-upload-tailor-results.html` - Tag, prompt, upload workflow
+- `onboarding-email-1-tag-prompt-upload.html` - Tag, prompt, upload workflow
 - `onboarding-email-2-schemas.html` - Schema creation and usage
 - `onboarding-email-3-checkin.html` - Week 1 check-in and support
 - `prospect-email-1-demo-invitation.html` - Initial demo invitation
@@ -97,7 +97,7 @@ This document outlines the active email campaigns and their templates:
 For email templates:
 
 **Onboarding Campaign (Registered Users):**
-- `onboarding-email-1-upload-tailor-results.html` - Email 1 (Day 0): Create tag and prompt, upload with tag, see results
+- `onboarding-email-1-tag-prompt-upload.html` - Email 1 (Day 0): Create tag and prompt, upload with tag, see results
 - `onboarding-email-2-schemas.html` - Email 2 (Day 3): Learn about schemas
 - `onboarding-email-3-checkin.html` - Email 3 (Day 7): Customer success check
 
@@ -589,7 +589,7 @@ Before implementing the email campaigns, create these custom attributes in Brevo
 For email templates:
 
 **Onboarding Campaign (Registered Users):**
-- `onboarding-email-1-upload-tailor-results.html` - Email 1 (Day 0): Create tag and prompt, upload with tag, see results
+- `onboarding-email-1-tag-prompt-upload.html` - Email 1 (Day 0): Create tag and prompt, upload with tag, see results
 - `onboarding-email-2-schemas.html` - Email 2 (Day 3): Learn about schemas
 - `onboarding-email-3-checkin.html` - Email 3 (Day 7): Customer success check
 
@@ -618,7 +618,7 @@ For email templates:
 All documentation links in email templates point to `https://docrouter.ai/docs/*`. The following documentation pages are referenced:
 
 ### Core Documentation Pages
-- `/docs` - Main documentation index (used in: updates-features, onboarding-email-3-checkin, onboarding-email-1-upload-tailor-results for knowledge bases)
+- `/docs` - Main documentation index (used in: updates-features, onboarding-email-3-checkin, onboarding-email-1-tag-prompt-upload for knowledge bases)
 - `/docs/schemas` - Schema documentation (used in: onboarding-email-1, onboarding-email-2, updates-tips, updates-deep-dive)
 - `/docs/prompts` - Prompts guide (used in: updates-tips, updates-deep-dive)
 - `/docs/rest-api` - REST API documentation (used in: onboarding-email-1, onboarding-email-2, onboarding-email-3)
@@ -862,7 +862,7 @@ To avoid repetition and ensure comprehensive coverage:
 
 | Template | Documentation Links Used | Notes |
 |----------|--------------------------|-------|
-| `onboarding-email-1` | `/docs/schemas`, `/docs/rest-api`, `/docs/webhooks`, `/docs/mcp`, `/docs` (knowledge bases) | Most comprehensive |
+| `onboarding-email-1-tag-prompt-upload` | `/docs/schemas`, `/docs/rest-api`, `/docs/webhooks`, `/docs/mcp`, `/docs` (knowledge bases) | Most comprehensive |
 | `onboarding-email-2` | `/docs/mcp`, `/docs/webhooks`, `/docs/rest-api` | Focus on advanced features |
 | `onboarding-email-3` | `/docs`, `/docs/rest-api`, `/docs/webhooks` | General resources |
 | `updates-features` | `/docs` | Main documentation link |
