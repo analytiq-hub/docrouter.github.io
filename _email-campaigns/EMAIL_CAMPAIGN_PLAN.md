@@ -1,4 +1,3 @@
-eyJhcGlfa2V5IjoieGtleXNpYi05YmJiZjIyMmIwZTRmMTU4ZTVkNDhlMWM1M2FiZjBjMzViNjg0Njg4ZDFiOTQxZmI2OTFmYWY0NzYxMTc2MDVjLXdoTzg5VThZdGFUbzg4cVYifQ==
 # Email Campaign Plan for DocRouter.AI
 
 ## Overview
@@ -27,9 +26,8 @@ This document outlines five active email campaigns plus future campaigns:
 | **Prospect** | Email 2: Follow-up Demo Reminder | "Ready to See DocRouter.AI in Action?" | Book your free demo and discover how DocRouter.AI can transform your document processing workflow. |
 | **Investor** | Newsletter | "DocRouter.AI Update: [Update Title]" | Update on DocRouter.AI progress, milestones, and strategic updates for our valued partners. |
 | **Product Updates** | Feature Release | "DocRouter.AI: New Feature - [Feature Name]" | Exciting new feature announcement with details and benefits for DocRouter.AI users. |
-| **Product Updates** | Maintenance & Security | "DocRouter.AI Update: [Update Title]" | Security, performance, and bug fix updates for DocRouter.AI users. |
 | **Product Updates** | Tips & Best Practices | "DocRouter.AI Tip: [Tip Title]" | Educational content and best practices to get more value from DocRouter.AI. |
-| **Educational** | Monthly Deep Dive | "DocRouter.AI Deep Dive: [Topic]" | Monthly educational content on advanced DocRouter.AI features and techniques. |
+| **Product Updates** | Deep Dive | "DocRouter.AI Deep Dive: [Topic]" | Monthly educational content on advanced DocRouter.AI features and techniques. |
 
 ---
 
@@ -55,7 +53,7 @@ This document outlines five active email campaigns plus future campaigns:
 **Audience:** Registered users
 **Cadence:** Bi-weekly to monthly
 
-### Educational Series
+### Product Updates - Deep Dive
 **Goal:** Build expertise and engagement through advanced content
 **Audience:** Active users
 **Cadence:** Monthly
@@ -252,28 +250,33 @@ Bi-weekly or monthly, depending on update frequency.
 
 ### Email Content Structure
 
-#### Feature Release Announcements
+#### Feature Release (`updates-features.html`)
 **Subject Line Examples:**
+- "DocRouter.AI: New Feature - [Feature Name]"
 - "New Feature: Advanced Schema Validation"
-- "DocRouter Update: Enhanced API Rate Limits"
-- "What's New: Improved Document Processing"
 
-**Content Focus:**
-- New DocRouter.AI features and capabilities
-- Performance improvements
-- Bug fixes and security updates
-- API changes or deprecations
-- Integration updates
-- Usage tips and best practices
+**Content Structure:**
+- Feature announcement
+- Key benefits (3 customizable)
+- How it works (3 steps)
+- CTA to try feature
+- Uses params: `feature_name`, `feature_description`, `benefit_1-3`
 
 **Tone:** Professional, helpful, user-focused
 
-**Key Sections:**
-- "🚀 New Features"
-- "⚡ Performance & Reliability"
-- "🐛 Bug Fixes & Security"
-- "📚 Resources & Tips"
-- "🔮 Coming Soon"
+#### Tips & Best Practices (`updates-tips.html`)
+**Subject Line Examples:**
+- "DocRouter.AI Tip: [Tip Title]"
+- "DocRouter.AI Tip: Improve Extraction Accuracy by 30%"
+
+**Content Structure:**
+- Tip introduction
+- The tip explanation
+- Why it works (3 reasons)
+- Related articles
+- Quick tip section
+- CTA to update prompts
+- Uses params: `tip_title`, `main_tip`, `tip_explanation`, `why_1-3`, `quick_tip`
 
 ---
 
@@ -325,7 +328,7 @@ Users who haven't logged in for 30+ days or haven't uploaded documents recently.
 
 ---
 
-## Campaign 5: Educational Series
+## Product Updates - Deep Dive
 
 ### Goal
 Build expertise and demonstrate thought leadership while keeping users engaged.
@@ -334,12 +337,14 @@ Build expertise and demonstrate thought leadership while keeping users engaged.
 Active users who want to get more value from DocRouter.
 
 ### Email Schedule
-Monthly series: "DocRouter.AI Deep Dives" - 4 emails over a month.
+Monthly - Single reusable template (`updates-deep-dive.html`) with customizable content.
 
-#### Email 1: Advanced Prompting Techniques
-#### Email 2: Schema Design Best Practices
-#### Email 3: Workflow Automation with N8N/Temporal
-#### Email 4: API Integration Examples
+### Template Structure
+- Topic introduction
+- Key principles/content
+- Resources section
+- CTA to try feature
+- Uses params: `series_topic`, `topic_intro`, `main_heading`, `main_content`, `principle_1-4`, `cta_button`
 
 ### Campaign 6: Referral Program (Future)
 
@@ -596,4 +601,155 @@ For email templates:
 - `reengagement-email-*.html` - Re-engagement sequence templates
 - `referral-program-*.html` - Referral program templates
 
-**Note:** The existing `welcome-email-template.html` and `onboarding-email-*.html` files may need to be updated or replaced to match the new structure.
+---
+
+## Documentation Links in Templates
+
+All documentation links in email templates point to `https://docrouter.ai/docs/*`. The following documentation pages are referenced:
+
+### Core Documentation Pages
+- `/docs` - Main documentation index (used in: updates-features, onboarding-email-3-checkin, onboarding-email-1-upload-tailor-results for knowledge bases)
+- `/docs/schemas` - Schema documentation (used in: onboarding-email-1, onboarding-email-2, updates-tips, updates-deep-dive)
+- `/docs/prompts` - Prompts guide (used in: updates-tips, updates-deep-dive)
+- `/docs/rest-api` - REST API documentation (used in: onboarding-email-1, onboarding-email-2, onboarding-email-3)
+- `/docs/webhooks` - Webhooks/workflows documentation (used in: onboarding-email-1, onboarding-email-2, onboarding-email-3)
+- `/docs/mcp` - MCP/Claude Code documentation (used in: onboarding-email-1, onboarding-email-2)
+
+### Documentation Needs Identified
+
+**Missing or Needs Clarification:**
+1. **Knowledge Bases** - Referenced in onboarding-email-1 but links to generic `/docs`. Needs dedicated page or section.
+2. **Tags** - Core workflow concept (Tag → Prompt → Upload) mentioned in emails but no dedicated documentation page.
+3. **N8N Integration** - Referenced in onboarding-email-2 but links to generic `/docs/webhooks`. May need dedicated section or page.
+4. **Temporal Workflows** - Referenced in onboarding-email-2 but links to generic `/docs/webhooks`. May need dedicated section or page.
+
+**Documentation Strategy to Avoid Repetition:**
+- Create a single comprehensive guide for each topic
+- Use cross-references between related topics
+- Structure documentation hierarchically:
+  - Quick Start → Tags → Prompts → Schemas
+  - How It Works → Tags → Prompts → Schemas → Workflows
+  - API Documentation → REST API → Webhooks → SDKs
+- Each email should link to the most relevant documentation page, not duplicate content
+
+---
+
+## Template Inconsistencies & Issues
+
+### URL Parameter Inconsistencies
+1. **`params.site_url` usage:**
+   - Some templates use `{{ params.site_url }}` without defaults (onboarding emails)
+   - Some use `{{ params.site_url | default: 'https://docrouter.ai' }}` (prospect emails, updates)
+   - **Recommendation:** Standardize to always include defaults for reliability
+
+2. **App vs. Site URLs:**
+   - Some CTAs point to `app.docrouter.ai` (updates-features, updates-tips, updates-deep-dive)
+   - Some point to `docrouter.ai` (onboarding emails use `params.site_url`)
+   - **Recommendation:** Use `params.site_url` consistently, or create separate `params.app_url` parameter
+
+3. **Newsletter Preferences:**
+   - Some templates use `{{ params.site_url }}/newsletter` (updates-tips, updates-deep-dive)
+   - Should use `{{ update_profile }}` (Brevo system attribute) for consistency
+   - **Recommendation:** Replace with `{{ update_profile }}` in all templates
+
+### Documentation Link Inconsistencies
+1. **Knowledge Bases:**
+   - Links to generic `/docs` instead of specific page
+   - **Action:** Create `/docs/knowledge-bases` or add section to existing docs
+
+2. **Workflow Documentation:**
+   - N8N and Temporal both link to `/docs/webhooks`
+   - **Action:** Either create separate pages or add clear sections within webhooks doc
+
+3. **MCP vs. Claude Code:**
+   - Templates mention "Claude Code" but link to `/docs/mcp`
+   - **Action:** Ensure documentation clarifies MCP = Claude Code integration, or update template language
+
+### Content Inconsistencies
+1. **Footer Links:**
+   - Most templates: "View in browser | Contact us | Unsubscribe"
+   - Some use "Newsletter Preferences" instead of "Contact us"
+   - **Recommendation:** Standardize footer across all templates
+
+2. **Support Links:**
+   - Some use `{{ params.site_url }}/support`
+   - Some use `{{ params.site_url }}/contact`
+   - **Recommendation:** Determine if both pages exist and use consistently
+
+3. **Feedback Links:**
+   - Only onboarding-email-3-checkin has feedback link (`/feedback`)
+   - **Action:** Verify if this page exists or should be added to other templates
+
+---
+
+## Template Content Summary
+
+### Onboarding Email 1: Tag, Prompt, Upload
+**Key Content:**
+- 4-step workflow: Create tag → Create prompt → Upload documents → See results
+- Learn more section: Schemas, REST API, Workflows, Claude Code, Knowledge Bases
+- Links to: `/docs/schemas`, `/docs/rest-api`, `/docs/webhooks`, `/docs/mcp`, `/docs` (knowledge bases)
+
+### Onboarding Email 2: Learn About Schemas
+**Key Content:**
+- What schemas are and their benefits
+- 5-step schema creation process
+- Example schema code
+- Pro tip: Use Claude Code
+- Workflows: N8N Integration, Temporal Workflows
+- Links to: `/docs/mcp`, `/docs/webhooks`, `/docs/rest-api`
+
+### Onboarding Email 3: Check-in
+**Key Content:**
+- Pro tip about prompt refinement
+- Common questions: accuracy, automation, document types, MCP server, help
+- Support section with documentation links
+- Feedback request
+- Links to: `/docs`, `/docs/rest-api`, `/docs/webhooks`
+
+### Prospect Email 1: Demo Invitation
+**Key Content:**
+- Value proposition
+- Problem/solution framing
+- Social proof
+- Demo CTA
+- No documentation links (prospect-focused)
+
+### Prospect Email 2: Follow-up
+**Key Content:**
+- Follow-up message
+- Demo benefits
+- Social proof/testimonial
+- Demo CTA
+- No documentation links (prospect-focused)
+
+### Updates - Features
+**Key Content:**
+- Feature announcement
+- Benefits list
+- How it works (3 steps)
+- CTA to try feature
+- Links to: `/docs` (main documentation)
+
+### Updates - Tips
+**Key Content:**
+- Tip explanation
+- Why it works
+- Related articles
+- Quick tip section
+- Links to: `/docs/prompts`, `/docs/schemas`, `/blog`
+
+### Updates - Deep Dive
+**Key Content:**
+- Topic introduction
+- Key principles
+- Resources
+- CTA to try
+- Links to: `/docs/prompts`, `/docs/schemas`
+
+### Investor Newsletter
+**Key Content:**
+- Key highlights (Growth & Product, Team & Milestones)
+- What's next
+- Personal note from CEO
+- No documentation links (relationship-focused)
