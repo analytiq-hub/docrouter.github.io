@@ -666,23 +666,23 @@ All documentation links in email templates point to `https://docrouter.ai/docs/*
 
 ---
 
-## Template Inconsistencies & Issues
+## Template Link Standards & Remaining Issues
 
-### URL Parameter Inconsistencies
-1. **`params.site_url` usage:**
-   - Some templates use `{{ params.site_url }}` without defaults (onboarding emails)
-   - Some use `{{ params.site_url | default: 'https://docrouter.ai' }}` (prospect emails, updates)
-   - **Recommendation:** Standardize to always include defaults for reliability
+### URL & CTA Standards
+1. **Docs vs. App URLs:**
+   - Documentation links always use `https://docrouter.ai/docs/*`.
+   - Application CTAs in marketing templates now hard-code `https://app.docrouter.ai` (app root) instead of relying on `params.site_url`.
 
-2. **App vs. Site URLs:**
-   - Some CTAs point to `app.docrouter.ai` (updates-features, updates-tips, updates-deep-dive)
-   - Some point to `docrouter.ai` (onboarding emails use `params.site_url`)
-   - **Recommendation:** Use `params.site_url` consistently, or create separate `params.app_url` parameter
+2. **Contact & Support URLs (standardized):**
+   - All **contact** links now point to `https://docrouter.ai/contact`.
+   - All **support** links now point to `https://docrouter.ai/support`.
+   - Do not use **`params.site_url`**
+   - For transactional or new templates that still use `{{ params.site_url }}`, always provide a default.
+   - Recommended pattern for app CTAs: `https://app.docrouter.ai` 
 
-3. **Newsletter Preferences:**
-   - Some templates use `{{ params.site_url }}/newsletter` (updates-tips, updates-deep-dive)
-   - Should use `{{ update_profile }}` (Brevo system attribute) for consistency
-   - **Recommendation:** Replace with `{{ update_profile }}` in all templates
+4. **Newsletter Preferences (still to improve):**
+   - Historically some templates used `{{ params.site_url }}/newsletter` for preferences.
+   - **Recommendation:** Replace those with Brevo's `{{ update_profile }}` attribute wherever managing preferences is desired.
 
 ### Documentation Link Inconsistencies
 1. **Knowledge Bases:**
@@ -702,16 +702,12 @@ All documentation links in email templates point to `https://docrouter.ai/docs/*
 
 ### Content Inconsistencies
 1. **Footer Links:**
-   - Most templates: "View in browser | Contact us | Unsubscribe"
-   - Some use "Newsletter Preferences" instead of "Contact us"
-   - **Recommendation:** Standardize footer across all templates
+   - All active templates now follow: "View in browser | Contact us | Unsubscribe" with:
+     - `{{ mirror }}` – view in browser
+     - `https://docrouter.ai/contact` – contact
+     - `{{ unsubscribe }}` – unsubscribe
 
-2. **Support Links:**
-   - Some use `{{ params.site_url }}/support`
-   - Some use `{{ params.site_url }}/contact`
-   - **Recommendation:** Determine if both pages exist and use consistently
-
-3. **Feedback Links:**
+2. **Feedback Links:**
    - Only onboarding-email-3-checkin has feedback link (`/feedback`)
    - **Action:** Verify if this page exists or should be added to other templates
 
