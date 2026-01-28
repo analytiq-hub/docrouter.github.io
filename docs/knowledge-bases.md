@@ -29,11 +29,13 @@ permalink: /docs/knowledge-bases/
   <div style="display: flex; align-items: flex-start;">
     <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">3</div>
     <div style="flex: 1;">
-      <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.25rem 0;">Link to prompts</h3>
-      <p style="color: #4b5563; margin: 0;">Select the knowledge base in your prompt editor. The AI will use it automatically when processing documents.</p>
+      <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.25rem 0;">Test the knowledge base by chatting with it</h3>
+      <p style="color: #4b5563; margin: 0;">Open the knowledge base and use the chat interface to ask questions and verify it's working correctly.</p>
     </div>
   </div>
 </div>
+
+<p style="color: #4b5563; margin-top: 1rem;">To use your knowledge base with extraction prompts, select it in the prompt editor. The AI will automatically use it when processing documents.</p>
 
 ---
 
