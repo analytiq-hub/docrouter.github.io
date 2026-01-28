@@ -623,7 +623,9 @@ All documentation links in email templates point to `https://docrouter.ai/docs/*
 - `/docs/prompts` - Prompts guide (used in: updates-tips, updates-deep-dive)
 - `/docs/rest-api` - REST API documentation (used in: onboarding-email-1, onboarding-email-2, onboarding-email-3)
 - `/docs/webhooks` - Webhooks/workflows documentation (used in: onboarding-email-1, onboarding-email-2, onboarding-email-3)
-- `/docs/mcp` - MCP/Claude Code documentation (used in: onboarding-email-1, onboarding-email-2)
+- `/docs/mcp` - MCP documentation (used in: onboarding-email-1, onboarding-email-2)
+- `/docs/claude-code` - Claude Code integration guide (used in: onboarding-email-1, onboarding-email-2)
+- `/docs/cursor` - Cursor integration guide (used in: onboarding-email-1, onboarding-email-2)
 
 ### Documentation Needs Identified
 
@@ -671,9 +673,12 @@ All documentation links in email templates point to `https://docrouter.ai/docs/*
    - N8N and Temporal both link to `/docs/webhooks`
    - **Action:** Either create separate pages or add clear sections within webhooks doc
 
-3. **MCP vs. Claude Code:**
-   - Templates mention "Claude Code" but link to `/docs/mcp`
-   - **Action:** Ensure documentation clarifies MCP = Claude Code integration, or update template language
+3. **MCP Documentation Structure:**
+   - Templates now reference "MCP" and link to three pages: `/docs/mcp`, `/docs/claude-code`, `/docs/cursor`
+   - **Action:** Create three documentation pages:
+     - `/docs/mcp` - Main MCP protocol documentation
+     - `/docs/claude-code` - Claude Code integration (explains MCP should be enabled)
+     - `/docs/cursor` - Cursor integration (explains MCP should be enabled)
 
 ### Content Inconsistencies
 1. **Footer Links:**
@@ -697,17 +702,17 @@ All documentation links in email templates point to `https://docrouter.ai/docs/*
 ### Onboarding Email 1: Tag, Prompt, Upload
 **Key Content:**
 - 4-step workflow: Create tag → Create prompt → Upload documents → See results
-- Learn more section: Schemas, REST API, Workflows, Claude Code, Knowledge Bases
-- Links to: `/docs/schemas`, `/docs/rest-api`, `/docs/webhooks`, `/docs/mcp`, `/docs` (knowledge bases)
+- Learn more section: Schemas, REST API, Workflows, MCP, Knowledge Bases
+- Links to: `/docs/schemas`, `/docs/rest-api`, `/docs/webhooks`, `/docs/mcp`, `/docs/claude-code`, `/docs/cursor`, `/docs` (knowledge bases)
 
 ### Onboarding Email 2: Learn About Schemas
 **Key Content:**
 - What schemas are and their benefits
 - 5-step schema creation process
 - Example schema code
-- Pro tip: Use Claude Code
+- Pro tip: Use MCP
 - Workflows: N8N Integration, Temporal Workflows
-- Links to: `/docs/mcp`, `/docs/webhooks`, `/docs/rest-api`
+- Links to: `/docs/mcp`, `/docs/claude-code`, `/docs/cursor`, `/docs/webhooks`, `/docs/rest-api`
 
 ### Onboarding Email 3: Check-in
 **Key Content:**
@@ -778,7 +783,9 @@ Based on email template analysis, the following documentation pages are needed:
 - ✅ `/docs/prompts` - Prompts guide
 - ✅ `/docs/rest-api` - REST API documentation
 - ✅ `/docs/webhooks` - Webhooks/workflows documentation
-- ✅ `/docs/mcp` - MCP/Claude Code documentation
+- ✅ `/docs/mcp` - MCP documentation
+- ❌ `/docs/claude-code` - Claude Code integration guide (NEW - required)
+- ❌ `/docs/cursor` - Cursor integration guide (NEW - required)
 
 #### Missing or Needs Enhancement
 - ❌ **Tags** - No dedicated page. Core workflow concept (Tag → Prompt → Upload) needs documentation
@@ -846,7 +853,9 @@ To avoid repetition and ensure comprehensive coverage:
 ├── /docs/prompts (existing)
 ├── /docs/schemas (existing)
 ├── /docs/knowledge-bases (NEW - required)
-├── /docs/mcp (existing - clarify = Claude Code)
+├── /docs/mcp (existing - main MCP protocol)
+├── /docs/claude-code (NEW - Claude Code integration)
+├── /docs/cursor (NEW - Cursor integration)
 ├── /docs/webhooks (enhance with N8N/Temporal sections)
 ├── /docs/rest-api (existing)
 └── /docs/[sdk] (Python, TypeScript)
@@ -862,8 +871,8 @@ To avoid repetition and ensure comprehensive coverage:
 
 | Template | Documentation Links Used | Notes |
 |----------|--------------------------|-------|
-| `onboarding-email-1-tag-prompt-upload` | `/docs/schemas`, `/docs/rest-api`, `/docs/webhooks`, `/docs/mcp`, `/docs` (knowledge bases) | Most comprehensive |
-| `onboarding-email-2` | `/docs/mcp`, `/docs/webhooks`, `/docs/rest-api` | Focus on advanced features |
+| `onboarding-email-1-tag-prompt-upload` | `/docs/schemas`, `/docs/rest-api`, `/docs/webhooks`, `/docs/mcp`, `/docs/claude-code`, `/docs/cursor`, `/docs` (knowledge bases) | Most comprehensive |
+| `onboarding-email-2` | `/docs/mcp`, `/docs/claude-code`, `/docs/cursor`, `/docs/webhooks`, `/docs/rest-api` | Focus on advanced features |
 | `onboarding-email-3` | `/docs`, `/docs/rest-api`, `/docs/webhooks` | General resources |
 | `updates-features` | `/docs` | Main documentation link |
 | `updates-tips` | `/docs/prompts`, `/docs/schemas`, `/blog` | Specific guides |
@@ -877,7 +886,10 @@ To avoid repetition and ensure comprehensive coverage:
 1. **Create `/docs/tags` page** - Critical for onboarding workflow understanding
 2. **Create `/docs/knowledge-bases` page** - Currently links to generic docs
 3. **Enhance `/docs/webhooks`** - Add clear N8N and Temporal sections, or create separate pages
-4. **Clarify `/docs/mcp`** - Ensure it's clear this is Claude Code integration
+4. **Create MCP documentation pages:**
+   - `/docs/mcp` - Main MCP protocol documentation
+   - `/docs/claude-code` - Claude Code integration guide (explains MCP should be enabled in Claude Code)
+   - `/docs/cursor` - Cursor integration guide (explains MCP should be enabled in Cursor)
 5. **Update Quick Start** - Ensure it follows Tag → Prompt → Upload workflow
 6. **Update How It Works** - Ensure tags are explained as required prerequisite
 7. **Add cross-references** - Link related concepts across all documentation pages
