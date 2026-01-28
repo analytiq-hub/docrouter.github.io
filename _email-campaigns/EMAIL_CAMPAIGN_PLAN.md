@@ -29,7 +29,7 @@ This document outlines the active email campaigns and their templates:
 
 | Campaign | Template | Subject Line | Preview Text |
 |----------|----------|--------------|--------------|
-| **Onboarding** | Email 1: Tag, Prompt, Upload | "DocRouter.AI: Tag, prompt, upload - Get started in 4 steps 📄" | Welcome to DocRouter.AI! Create a tag and a prompt, upload a document, and see your first extraction in minutes. |
+| **Onboarding** | Email 1: Tag, Prompt, Upload | "DocRouter.AI: Tag, prompt, upload - Get started in 3 steps 📄" | Welcome to DocRouter.AI! Create a tag and a prompt, upload a document, and see your first extraction in minutes. |
 | **Onboarding** | Email 2: Learn About Schemas | "DocRouter.AI: Learn about schemas for document extraction 🤖" | Schemas ensure consistent, validated output from your prompts. Learn how to create and use them effectively. |
 | **Onboarding** | Email 3: Customer Success Check | "How's your DocRouter.AI journey going? We're here to help 👋" | You've been using DocRouter.AI for a week. We're here to help with questions and hear how it's working for you. |
 | **Prospect** | Email 1: Introduction & Demo Invitation | "DocRouter.AI: Transform Your Document Processing with AI" | See how DocRouter.AI extracts data from unstructured documents with AI. Book a free demo to learn more. |
@@ -701,7 +701,7 @@ All documentation links in email templates point to `https://docrouter.ai/docs/*
 
 ### Onboarding Email 1: Tag, Prompt, Upload
 **Key Content:**
-- 4-step workflow: Create tag → Create prompt → Upload documents → See results
+- 3-step workflow: Create tag → Create prompt → Upload documents (results appear automatically)
 - Learn more section: Schemas, REST API, Workflows, MCP, Knowledge Bases
 - Links to: `/docs/schemas`, `/docs/rest-api`, `/docs/webhooks`, `/docs/mcp`, `/docs/claude-code`, `/docs/cursor`, `/docs` (knowledge bases)
 
