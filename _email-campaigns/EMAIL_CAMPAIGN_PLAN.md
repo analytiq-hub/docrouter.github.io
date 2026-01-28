@@ -638,7 +638,7 @@ For email templates:
 All documentation links in email templates point to `https://docrouter.ai/docs/*`. The following documentation pages are referenced:
 
 ### Core Documentation Pages
-- `/docs` - Main documentation index (used in: updates-features, onboarding-email-3-checkin, onboarding-email-1-tag-prompt-upload for knowledge bases)
+- `/docs` - Main documentation index (used in: updates-features, onboarding-email-3-checkin)
 - `/docs/schemas` - Schema documentation (used in: onboarding-email-1, onboarding-email-2, updates-tips, updates-deep-dive)
 - `/docs/prompts` - Prompts guide (used in: updates-tips, updates-deep-dive)
 - `/docs/rest-api` - REST API documentation (used in: onboarding-email-1, onboarding-email-2, onboarding-email-3)
@@ -646,14 +646,14 @@ All documentation links in email templates point to `https://docrouter.ai/docs/*
 - `/docs/mcp` - MCP documentation (used in: onboarding-email-1, onboarding-email-2)
 - `/docs/claude-code` - Claude Code integration guide (used in: onboarding-email-1, onboarding-email-2)
 - `/docs/cursor` - Cursor integration guide (used in: onboarding-email-1, onboarding-email-2)
+- `/docs/knowledge-bases` - Knowledge base documentation (used in: onboarding-email-1)
 
 ### Documentation Needs Identified
 
 **Missing or Needs Clarification:**
-1. **Knowledge Bases** - Referenced in onboarding-email-1 but links to generic `/docs`. Needs dedicated page or section.
-2. **Tags** - Core workflow concept (Tag → Prompt → Upload) mentioned in emails but no dedicated documentation page.
-3. **N8N Integration** - Referenced in onboarding-email-2 but links to generic `/docs/webhooks`. May need dedicated section or page.
-4. **Temporal Workflows** - Referenced in onboarding-email-2 but links to generic `/docs/webhooks`. May need dedicated section or page.
+1. **Tags** - Core workflow concept (Tag → Prompt → Upload) mentioned in emails but no dedicated documentation page.
+2. **N8N Integration** - Referenced in onboarding-email-2 but links to generic `/docs/webhooks`. May need dedicated section or page.
+3. **Temporal Workflows** - Referenced in onboarding-email-2 but links to generic `/docs/webhooks`. May need dedicated section or page.
 
 **Documentation Strategy to Avoid Repetition:**
 - Create a single comprehensive guide for each topic
@@ -800,12 +800,12 @@ Based on email template analysis, the following documentation pages are needed:
 - ✅ `/docs/rest-api` - REST API documentation
 - ✅ `/docs/webhooks` - Webhooks/workflows documentation
 - ✅ `/docs/mcp` - MCP documentation
+- ✅ `/docs/knowledge-bases` - Knowledge base documentation
 - ❌ `/docs/claude-code` - Claude Code integration guide (NEW - required)
 - ❌ `/docs/cursor` - Cursor integration guide (NEW - required)
 
 #### Missing or Needs Enhancement
 - ❌ **Tags** - No dedicated page. Core workflow concept (Tag → Prompt → Upload) needs documentation
-- ❌ **Knowledge Bases** - Referenced but links to generic `/docs`. Needs dedicated page or clear section
 - ⚠️ **N8N Integration** - Referenced but links to generic `/docs/webhooks`. Needs dedicated section or page
 - ⚠️ **Temporal Workflows** - Referenced but links to generic `/docs/webhooks`. Needs dedicated section or page
 
@@ -887,7 +887,7 @@ To avoid repetition and ensure comprehensive coverage:
 
 | Template | Documentation Links Used | Notes |
 |----------|--------------------------|-------|
-| `onboarding-email-1-tag-prompt-upload` | `/docs/schemas`, `/docs/rest-api`, `/docs/webhooks`, `/docs/mcp`, `/docs/claude-code`, `/docs/cursor`, `/docs` (knowledge bases) | Most comprehensive |
+| `onboarding-email-1-tag-prompt-upload` | `/docs/schemas`, `/docs/rest-api`, `/docs/webhooks`, `/docs/mcp`, `/docs/claude-code`, `/docs/cursor`, `/docs/knowledge-bases` | Most comprehensive |
 | `onboarding-email-2` | `/docs/mcp`, `/docs/claude-code`, `/docs/cursor`, `/docs/webhooks`, `/docs/rest-api` | Focus on advanced features |
 | `onboarding-email-3` | `/docs`, `/docs/rest-api`, `/docs/webhooks` | General resources |
 | `updates-features` | `/docs` | Main documentation link |
@@ -900,12 +900,11 @@ To avoid repetition and ensure comprehensive coverage:
 ### Action Items for Documentation
 
 1. **Create `/docs/tags` page** - Critical for onboarding workflow understanding
-2. **Create `/docs/knowledge-bases` page** - Currently links to generic docs
-3. **Enhance `/docs/webhooks`** - Add clear N8N and Temporal sections, or create separate pages
-4. **Create MCP documentation pages:**
+2. **Enhance `/docs/webhooks`** - Add clear N8N and Temporal sections, or create separate pages
+3. **Create MCP documentation pages:**
    - `/docs/mcp` - Main MCP protocol documentation
    - `/docs/claude-code` - Claude Code integration guide (explains MCP should be enabled in Claude Code)
    - `/docs/cursor` - Cursor integration guide (explains MCP should be enabled in Cursor)
-5. **Update Quick Start** - Ensure it follows Tag → Prompt → Upload workflow
-6. **Update How It Works** - Ensure tags are explained as required prerequisite
-7. **Add cross-references** - Link related concepts across all documentation pages
+4. **Update Quick Start** - Ensure it follows Tag → Prompt → Upload workflow
+5. **Update How It Works** - Ensure tags are explained as required prerequisite
+6. **Add cross-references** - Link related concepts across all documentation pages
