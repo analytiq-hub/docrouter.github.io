@@ -105,7 +105,7 @@ For email templates:
 - `updates-tips.html` - Educational content and tips
 
 **Educational Series:**
-- `educational-series-template.html` - Single reusable template for monthly educational content
+- `updates-deep-dive.html` - Single reusable template for monthly educational content
 
 **Future Campaigns (Templates for Later):**
 - `reengagement-email-*.html` - Re-engagement sequence templates
@@ -590,7 +590,7 @@ For email templates:
 - `updates-tips.html` - Educational content and tips
 
 **Educational Series:**
-- `educational-series-template.html` - Single reusable template for monthly educational content
+- `updates-deep-dive.html` - Single reusable template for monthly educational content
 
 **Future Campaigns (Templates for Later):**
 - `reengagement-email-*.html` - Re-engagement sequence templates
