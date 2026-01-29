@@ -483,6 +483,15 @@ function copyToClipboard(elementId) {
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
         </svg>
       </a>
+      <a href="/docs/typescript-sdk/" class="flex items-center justify-between bg-gray-50 hover:bg-gray-100 rounded-lg p-3 transition-colors group">
+        <div>
+          <span class="font-medium text-gray-900 group-hover:text-green-600">TypeScript SDK</span>
+          <p class="text-sm text-gray-600">Official client library</p>
+        </div>
+        <svg class="w-5 h-5 text-gray-400 group-hover:text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
       <a href="https://openapi-generator.tech/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between bg-gray-50 hover:bg-gray-100 rounded-lg p-3 transition-colors group">
         <div>
           <span class="font-medium text-gray-900 group-hover:text-green-600">OpenAPI Generator</span>
