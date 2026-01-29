@@ -106,7 +106,23 @@ Schemas follow OpenAI's Structured Outputs format:
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Choose Right Types</strong> — Use <code class="bg-gray-100 px-1 rounded">string</code> for formatted values (currency), <code class="bg-gray-100 px-1 rounded">number</code> for calculations.</p>
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Keep It Simple</strong> — Use basic types only for maximum portability across LLM providers.</p>
   <p style="margin: 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>All Fields Required</strong> — In strict mode, all fields must be in the <code class="bg-gray-100 px-1 rounded">required</code> array. Missing data returns empty strings or defaults.</p>
+  <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Use AI to Design Schemas</strong> — It is much simpler to use AI to design effective schemas and prompts than to design them manually. Use the <strong>DocRouter.AI MCP server</strong> in Claude Code or Cursor to generate and update schemas.</p>
 </div>
+
+---
+
+## AI-Powered Schema Design
+
+Designing complex JSON schemas manually can be error-prone. We recommend using the **DocRouter.AI MCP Server** to automate this process.
+
+### Using the MCP Server
+If you use **Claude Code** or **Cursor**, you can connect to our Model Context Protocol (MCP) server to manage schemas using natural language.
+
+1.  **Generate Schemas**: Ask the AI: *"Create a DocRouter schema for medical invoices with patient name, date, and a list of procedures."*
+2.  **Update Schemas**: Ask the AI: *"Add a 'total_tax' field to my existing Invoice schema."*
+3.  **Validate**: The AI ensures that `strict: true`, `additionalProperties: false`, and `required` arrays are correctly configured.
+
+This approach allows you to focus on *what* data you need, while the AI handles the *how* of JSON Schema compliance.
 
 ---
 
