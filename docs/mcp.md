@@ -76,8 +76,7 @@ docrouter-mcp --help</code></pre>
       "command": "docrouter-mcp",
       "env": {
         "DOCROUTER_API_URL": "https://app.docrouter.ai/fastapi",
-        "DOCROUTER_ORG_ID": "your-org-id",
-        "DOCROUTER_ORG_API_TOKEN": "your-api-token"
+        "DOCROUTER_ORG_API_TOKEN": "your-org-api-token"
       }
     }
   }
@@ -86,7 +85,7 @@ docrouter-mcp --help</code></pre>
 
             <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-4">
                 <p class="text-sm text-gray-700">
-                    Replace <code class="bg-gray-100 px-2 py-1 rounded">your-org-id</code> and <code class="bg-gray-100 px-2 py-1 rounded">your-api-token</code> with your actual DocRouter credentials.
+                    Replace <code class="bg-gray-100 px-2 py-1 rounded">your-org-api-token</code> with your actual DocRouter <strong>organization API token</strong>. The organization ID is automatically resolved from this token and does not need to be configured.
                 </p>
             </div>
         </section>
