@@ -45,7 +45,7 @@ permalink: /docs/rest-api/
           </svg>
         </div>
           <div>
-            <div class="text-xl font-semibold text-gray-900 leading-tight">Account-Level Tokens</div>
+            <div class="text-xl font-semibold text-gray-900 leading-tight">Account Tokens</div>
             <div class="text-sm text-gray-600">User-scoped access</div>
           </div>
       </div>
@@ -75,7 +75,7 @@ permalink: /docs/rest-api/
           </svg>
         </div>
         <div>
-          <div class="text-xl font-semibold text-gray-900 leading-tight">Organization-Level Tokens</div>
+          <div class="text-xl font-semibold text-gray-900 leading-tight">Organization Tokens</div>
           <div class="text-sm text-gray-600">Team-scoped access</div>
         </div>
       </div>
