@@ -18,15 +18,15 @@ permalink: /docs/how-it-works/
     <main>
 
            <!-- Process Overview -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">The DocRouter Process</h2>
-            <div class="grid md:grid-cols-3 gap-8">
+        <section class="bg-white rounded-lg shadow-lg p-4 md:p-8 mb-8 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-6 text-center">The DocRouter Process</h2>
+            <div class="grid md:grid-cols-3 gap-4 md:gap-8">
                 <!-- Step 1 -->
                 <div class="text-center">
                     <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
                         <span class="text-3xl">📄</span>
                     </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-3">1. Upload Documents</h3>
+                    <h3 class="text-lg md:text-xl font-medium text-gray-900 mb-3">1. Upload Documents</h3>
                     <p class="text-gray-600">Send documents via email, API, or web interface. We support PDFs, images, and scanned documents.</p>
                 </div>
 
@@ -35,7 +35,7 @@ permalink: /docs/how-it-works/
                     <div class="bg-purple-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
                         <span class="text-3xl">🤖</span>
                     </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-3">2. AI Processing</h3>
+                    <h3 class="text-lg md:text-xl font-medium text-gray-900 mb-3">2. AI Processing</h3>
                     <p class="text-gray-600">Our AI extracts data, validates information, and structures it according to your specifications.</p>
                 </div>
 
@@ -44,7 +44,7 @@ permalink: /docs/how-it-works/
                     <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
                         <span class="text-3xl">📊</span>
                     </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-3">3. Get Results</h3>
+                    <h3 class="text-lg md:text-xl font-medium text-gray-900 mb-3">3. Get Results</h3>
                     <p class="text-gray-600">Receive structured data via API, webhook, or direct integration with your existing systems.</p>
                 </div>
             </div>
@@ -52,14 +52,14 @@ permalink: /docs/how-it-works/
 
     
         <!-- How It Works Image -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+        <section class="bg-white rounded-lg shadow-lg p-4 md:p-8 mb-8 md:mb-12">
             <div class="flex justify-center">
                 <img src="{{ '/assets/images/docrouter/flow.svg' | relative_url }}" alt="DocRouter Workflow" class="w-full max-w-2xl">
             </div>
         </section>
         
         <!-- DocRouter Workflow Sections -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+        <section class="bg-white rounded-lg shadow-lg p-4 md:p-8 mb-8 md:mb-12">
             <div class="flex justify-center">
                 <img src="{{ '/assets/images/docrouter/docrouter-workflow.svg' | relative_url }}" alt="Detailed Workflow" class="w-full max-w-4xl">
             </div>
@@ -69,9 +69,9 @@ permalink: /docs/how-it-works/
         </section>
         
         <!-- User Experience Section -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">User Experience</h2>
-            <div class="grid md:grid-cols-2 gap-6">
+        <section class="bg-white rounded-lg shadow-lg p-4 md:p-8 mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-900 mb-4">User Experience</h2>
+            <div class="grid md:grid-cols-2 gap-4 md:gap-6">
                 <div class="overflow-hidden rounded-lg shadow-lg">
                     <img src="{{ '/assets/images/docrouter/files.png' | relative_url }}" alt="Document List Interface" class="w-full">
                 </div>
@@ -81,12 +81,12 @@ permalink: /docs/how-it-works/
             </div>
         </section>
 
-        <section class="bg-blue-50 rounded-lg p-8 mb-12">
-            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">Integration Methods</h2>
+        <section class="bg-blue-50 rounded-lg p-4 md:p-8 mb-8 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-6 text-center">Integration Methods</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- API Integration -->
-                <div class="bg-white rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">REST API</h3>
+                <div class="bg-white rounded-lg p-4 md:p-6">
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-4">REST API</h3>
                     <p class="text-gray-600 mb-4">Integrate directly with your applications using our comprehensive REST API.</p>
                     <ul class="text-gray-600 space-y-2 mb-6">
                         <li>• Upload documents via HTTP POST</li>
@@ -101,8 +101,8 @@ permalink: /docs/how-it-works/
                 </div>
 
                 <!-- Email and Faxes Integration -->
-                <div class="bg-white rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Email and Fax Processing</h3>
+                <div class="bg-white rounded-lg p-4 md:p-6">
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-4">Email and Fax Processing</h3>
                     <p class="text-gray-600 mb-4">Send documents via email or fax and receive results automatically.</p>
                     <ul class="text-gray-600 space-y-2 mb-6">
                         <li>• Forward emails with attachments</li>
@@ -119,12 +119,12 @@ permalink: /docs/how-it-works/
         </section>
 
         <!-- Technical Details -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">Technical Details</h2>
+        <section class="bg-white rounded-lg shadow-lg p-4 md:p-8 mb-8 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-6 text-center">Technical Details</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Processing Capabilities -->
                 <div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Processing Capabilities</h3>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-4">Processing Capabilities</h3>
                     <ul class="text-gray-600 space-y-2">
                         <li>• Handwritten text recognition</li>
                         <li>• Printed text extraction</li>
@@ -137,7 +137,7 @@ permalink: /docs/how-it-works/
 
                 <!-- Supported Formats -->
                 <div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Supported Formats</h3>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-4">Supported Formats</h3>
                     <ul class="text-gray-600 space-y-2">
                         <li>• PDF documents</li>
                         <li>• JPEG, PNG images</li>
@@ -189,7 +189,7 @@ permalink: /docs/how-it-works/
         </section>
         -->
 
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+        <section class="bg-white rounded-lg shadow-lg p-4 md:p-8 mb-8 md:mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Learn More</h2>
             <p class="text-gray-600 mb-4">
                 Once you understand the high-level flow, these docs cover each building block in more detail:
@@ -214,9 +214,9 @@ permalink: /docs/how-it-works/
             </ul>
         </section>
 
-        <section class="bg-blue-600 rounded-lg shadow-lg p-8 mb-12">
+        <section class="bg-blue-600 rounded-lg shadow-lg p-4 md:p-8 mb-8 md:mb-12">
             <div class="text-center">
-                <h2 class="text-3xl font-semibold text-white mb-6">Get Started Today</h2>
+                <h2 class="text-2xl md:text-3xl font-semibold text-white mb-6">Get Started Today</h2>
                 <p class="text-lg text-blue-100 mb-8">
                     Ready to automate your document processing? Choose the path that works best for your team.
                 </p>

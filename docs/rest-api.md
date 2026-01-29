@@ -5,7 +5,7 @@ permalink: /docs/rest-api/
 ---
 
 <!-- Hero Section -->
-<div class="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl p-8 mb-12 border border-blue-100 shadow-lg">
+<div class="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl p-4 md:p-8 mb-8 md:mb-12 border border-blue-100 shadow-lg">
   <div class="max-w-4xl mx-auto text-center">
     <p class="text-lg text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
       Everything in the DocRouter UI is available through REST APIs. Build custom integrations, automate workflows, and access all features programmatically.
@@ -31,7 +31,7 @@ permalink: /docs/rest-api/
 
 ## Authentication
 
-<div class="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl p-8 mb-8 border border-blue-100 shadow-lg">
+<div class="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl p-4 md:p-8 mb-6 md:mb-8 border border-blue-100 shadow-lg">
   <p class="text-gray-700 leading-relaxed mb-6">
     The DocRouter REST API uses token-based authentication. Choose the appropriate token type based on your integration needs:
   </p>
@@ -357,10 +357,10 @@ function copyToClipboard(elementId) {
 
 ## Interactive Documentation
 
-<div class="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl p-8 mb-8 border border-blue-100 shadow-lg">
+<div class="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl p-4 md:p-8 mb-6 md:mb-8 border border-blue-100 shadow-lg">
   <div class="text-center mb-8">
     <a href="https://app.docrouter.ai/fastapi/docs#/" target="_blank" rel="noopener noreferrer"
-       class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold transition-colors shadow-lg hover:shadow-xl text-lg no-underline">
+         class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 md:px-8 md:py-4 rounded-xl font-semibold transition-colors shadow-lg hover:shadow-xl text-base md:text-lg no-underline">
       <svg class="w-5 h-5 text-white hover:text-blue-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
         </svg>
@@ -434,7 +434,7 @@ function copyToClipboard(elementId) {
 
 ## Resources & Tools
 
-<div class="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl p-8 mb-8 border border-blue-100 shadow-lg">
+<div class="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl p-4 md:p-8 mb-6 md:mb-8 border border-blue-100 shadow-lg">
   <div class="grid md:grid-cols-2 gap-6">
   <!-- OpenAPI Specification Panel -->
   <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">

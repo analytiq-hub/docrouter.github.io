@@ -7,13 +7,13 @@ title: "DocRouter MCP Server"
     <header class="md:mb-12 mb-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div>
-                <p class="text-xl text-gray-600">Model Context Protocol server for seamless AI assistant integration</p>
+                <p class="text-base md:text-xl text-gray-600">Model Context Protocol server for seamless AI assistant integration</p>
             </div>
-            <div class="rounded-xl border border-blue-200 bg-blue-50 p-6 text-center shadow-lg">
+            <div class="rounded-xl border border-blue-200 bg-blue-50 p-4 md:p-6 text-center shadow-lg">
                 <a href="https://github.com/analytiq-hub/doc-router/tree/main/packages/typescript/mcp"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="inline-flex items-center bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-medium transition-colors duration-200 no-underline">
+                   class="inline-flex items-center bg-blue-600 hover:bg-blue-700 px-4 py-2 md:px-6 md:py-3 rounded-lg font-medium transition-colors duration-200 no-underline text-sm md:text-base">
                     <svg class="w-5 h-5 mr-2 text-white" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                     </svg>
@@ -24,8 +24,8 @@ title: "DocRouter MCP Server"
     </header>
 
     <main>
-        <section id="overview" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Overview</h2>
+        <section id="overview" class="bg-white rounded-lg shadow-lg p-4 md:p-8 mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-900 mb-4">Overview</h2>
             <p class="text-gray-600 mb-4">
                 The DocRouter MCP Server enables AI agents to interact directly with DocRouter.AI for document processing workflows.
             </p>
@@ -40,18 +40,18 @@ title: "DocRouter MCP Server"
         <section id="installation" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Installation</h2>
 
-            <h3 class="text-lg font-medium text-gray-900 mb-3">Prerequisites</h3>
+            <h3 class="text-base md:text-lg font-medium text-gray-900 mb-3">Prerequisites</h3>
             <ul class="list-disc list-inside text-gray-600 space-y-1 mb-6">
                 <li>Node.js 18+ installed on your system</li>
             </ul>
 
-            <h3 class="text-lg font-medium text-gray-900 mb-3">Installation</h3>
-            <div class="bg-gray-50 rounded-lg p-4 mb-6">
+            <h3 class="text-base md:text-lg font-medium text-gray-900 mb-3">Installation</h3>
+            <div class="bg-gray-50 rounded-lg p-3 md:p-4 mb-4 md:mb-6">
                 <code class="text-sm text-gray-800">npm install -g @docrouter/mcp</code>
             </div>
 
             <p class="text-gray-600 mb-3">Verify installation:</p>
-            <div class="bg-gray-50 rounded-lg p-4 mb-6">
+            <div class="bg-gray-50 rounded-lg p-3 md:p-4 mb-4 md:mb-6">
                 <pre class="text-sm text-gray-800 overflow-x-auto"><code>which docrouter-mcp
 docrouter-mcp --help</code></pre>
             </div>
@@ -59,7 +59,7 @@ docrouter-mcp --help</code></pre>
         </section>
 
         <section id="configuration" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Configuration</h2>
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-900 mb-4">Configuration</h2>
 
             <p class="text-gray-600 mb-6">Configure the MCP server for your AI assistant:</p>
 
@@ -69,7 +69,7 @@ docrouter-mcp --help</code></pre>
                 <li><strong>Claude Agent:</strong> Configure MCP server</li>
             </ul>
 
-            <div class="bg-gray-50 rounded-lg p-6 mt-6">
+            <div class="bg-gray-50 rounded-lg p-4 md:p-6 mt-4 md:mt-6">
                 <pre class="text-sm text-gray-800 overflow-x-auto"><code>{
   "mcpServers": {
     "docrouter": {
@@ -83,7 +83,7 @@ docrouter-mcp --help</code></pre>
 }</code></pre>
             </div>
 
-            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-4">
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-3 md:p-4 mt-3 md:mt-4">
                 <p class="text-sm text-gray-700">
                     Replace <code class="bg-gray-100 px-2 py-1 rounded">your-org-api-token</code> with your actual DocRouter <strong>organization API token</strong>. The organization ID is automatically resolved from this token and does not need to be configured.
                 </p>
@@ -91,9 +91,9 @@ docrouter-mcp --help</code></pre>
         </section>
 
         <section id="examples" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-6">Example Prompts</h2>
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-900 mb-6">Example Prompts</h2>
 
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Create a Schema</h3>
+            <h3 class="text-base md:text-lg font-semibold text-gray-900 mb-2">Create a Schema</h3>
             <div class="bg-gray-50 rounded-lg p-4 mb-4">
                 <pre class="text-sm text-gray-800 overflow-x-auto"><code>Create a schema for extracting invoices with these fields:
 - invoice_number (string, required)
@@ -130,7 +130,7 @@ Configure it with the invoice schema, and tag it with a tag named 'green'
         </section>
 
         <section id="features" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">What the MCP Server Can Do</h2>
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-900 mb-4">What the MCP Server Can Do</h2>
             <p class="text-gray-600 mb-4">
                 The DocRouter MCP server exposes a rich set of tools for documents, OCR, LLM extraction, tags, prompts, schemas,
                 forms, and chat. Instead of listing every tool here, refer to the MCP README and in-assistant <code>help()</code>
@@ -147,7 +147,7 @@ Configure it with the invoice schema, and tag it with a tag named 'green'
         </section>
 
         <section id="learn-more" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Learn More</h2>
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-900 mb-4">Learn More</h2>
             <ul class="list-disc list-inside text-gray-600 space-y-2">
                 <li>
                     <a href="/docs/claude-code/" class="text-blue-600 hover:text-blue-800">Claude Code Integration</a>
@@ -177,13 +177,13 @@ Configure it with the invoice schema, and tag it with a tag named 'green'
                 <a href="https://github.com/analytiq-hub/doc-router/tree/main/packages/typescript/mcp"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="inline-block bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 mr-4 no-underline">
+                   class="inline-block bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold transition-colors duration-200 mr-2 md:mr-4 no-underline text-sm md:text-base">
                     View on GitHub
                 </a>
                 <a href="https://app.docrouter.ai"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 no-underline">
+                   class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold transition-colors duration-200 no-underline text-sm md:text-base">
                     Get API Credentials
                 </a>
             </div>

@@ -4,14 +4,14 @@ title: "Chat Agents"
 permalink: /docs/chat-agents/
 ---
 
-<div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 mb-10 text-center">
-  <h2 class="text-2xl font-semibold text-white mb-2">Chat agents powered by knowledge bases</h2>
-  <p class="text-blue-100">Build conversational interfaces that let users ask natural-language questions over your documents.</p>
+<div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">
+  <h2 class="text-xl md:text-2xl font-semibold text-white mb-2">Chat agents powered by knowledge bases</h2>
+  <p class="text-sm md:text-base text-blue-100">Build conversational interfaces that let users ask natural-language questions over your documents.</p>
 </div>
 
 ## Get started in 3 steps
 
-<div class="bg-gray-50 rounded-lg p-6 my-6">
+<div class="bg-gray-50 rounded-lg p-4 md:p-6 my-4 md:my-6">
   <div style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
     <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">1</div>
     <div style="flex: 1;">
@@ -197,7 +197,7 @@ The AI can make multiple search iterations if needed to gather comprehensive inf
 
 ## Best Practices
 
-<div class="my-6">
+<div class="my-4 md:my-6">
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Use Markdown Documents</strong> — Format your knowledge base documents in Markdown for better structure and readability in chat responses.</p>
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Test Thoroughly</strong> — Use the built-in chat window to test various questions and refine your knowledge base content.</p>
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Choose the Right Model</strong> — Use faster models like <code class="bg-gray-100 px-1 rounded">gpt-4o-mini</code> for simple queries, and more capable models for complex reasoning.</p>
@@ -216,9 +216,9 @@ The AI can make multiple search iterations if needed to gather comprehensive inf
 
 ---
 
-<div class="bg-blue-600 rounded-lg p-8 mt-10 text-center">
-  <h2 class="text-2xl font-semibold text-white mb-4">Ready to build your chat agent?</h2>
-  <a href="https://app.docrouter.ai" class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
+<div class="bg-blue-600 rounded-lg p-4 md:p-8 mt-8 md:mt-10 text-center">
+  <h2 class="text-xl md:text-2xl font-semibold text-white mb-4">Ready to build your chat agent?</h2>
+  <a href="https://app.docrouter.ai" class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-4 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-base md:text-lg transition-colors duration-200 no-underline">
     Open Dashboard
   </a>
 </div>

@@ -4,14 +4,14 @@ title: "Schemas"
 permalink: /docs/schemas/
 ---
 
-<div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 mb-10 text-center">
-  <h2 class="text-2xl font-semibold text-white mb-2">Schemas define structured data extraction</h2>
-  <p class="text-blue-100">Use JSON schemas to ensure consistent, validated output from your prompts.</p>
+<div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">
+  <h2 class="text-xl md:text-2xl font-semibold text-white mb-2">Schemas define structured data extraction</h2>
+  <p class="text-sm md:text-base text-blue-100">Use JSON schemas to ensure consistent, validated output from your prompts.</p>
 </div>
 
 ## Get started in 3 steps
 
-<div class="bg-gray-50 rounded-lg p-6 my-6">
+<div class="bg-gray-50 rounded-lg p-4 md:p-6 my-4 md:my-6">
   <div style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
     <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">1</div>
     <div style="flex: 1;">
@@ -82,7 +82,7 @@ Schemas follow OpenAI's Structured Outputs format:
 
 ## Field Types
 
-<div class="grid md:grid-cols-2 gap-6 my-6">
+<div class="grid md:grid-cols-2 gap-4 md:gap-6 my-4 md:my-6">
   <div class="bg-white border border-gray-200 rounded-lg p-5">
     <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.75rem 0;">Basic Types</h3>
     <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 0.5rem 0;"><strong>string</strong> — Text, names, addresses, formatted numbers</p>
@@ -101,7 +101,7 @@ Schemas follow OpenAI's Structured Outputs format:
 
 ## Best Practices
 
-<div class="my-6">
+<div class="my-4 md:my-6">
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Clear Descriptions</strong> — Write detailed field descriptions that guide the AI on what to extract and expected formats.</p>
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Choose Right Types</strong> — Use <code class="bg-gray-100 px-1 rounded">string</code> for formatted values (currency), <code class="bg-gray-100 px-1 rounded">number</code> for calculations.</p>
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Keep It Simple</strong> — Use basic types only for maximum portability across LLM providers.</p>
@@ -118,9 +118,9 @@ Schemas follow OpenAI's Structured Outputs format:
 
 ---
 
-<div class="bg-blue-600 rounded-lg p-8 mt-10 text-center">
-  <h2 class="text-2xl font-semibold text-white mb-4">Ready to create your first schema?</h2>
-  <a href="https://app.docrouter.ai" class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
+<div class="bg-blue-600 rounded-lg p-4 md:p-8 mt-8 md:mt-10 text-center">
+  <h2 class="text-xl md:text-2xl font-semibold text-white mb-4">Ready to create your first schema?</h2>
+  <a href="https://app.docrouter.ai" class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-4 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-base md:text-lg transition-colors duration-200 no-underline">
     Open Dashboard
   </a>
 </div>

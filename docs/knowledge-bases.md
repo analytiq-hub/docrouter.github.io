@@ -4,14 +4,14 @@ title: "Knowledge Bases"
 permalink: /docs/knowledge-bases/
 ---
 
-<div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 mb-10 text-center">
-  <h2 class="text-2xl font-semibold text-white mb-2">Knowledge bases provide context for better extraction</h2>
-  <p class="text-blue-100">Upload reference documents so the AI can use them to improve accuracy and understand your specific terminology.</p>
+<div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">
+  <h2 class="text-xl md:text-2xl font-semibold text-white mb-2">Knowledge bases provide context for better extraction</h2>
+  <p class="text-sm md:text-base text-blue-100">Upload reference documents so the AI can use them to improve accuracy and understand your specific terminology.</p>
 </div>
 
 ## Get started in 3 steps
 
-<div class="bg-gray-50 rounded-lg p-6 my-6">
+<div class="bg-gray-50 rounded-lg p-4 md:p-6 my-4 md:my-6">
   <div style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
     <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">1</div>
     <div style="flex: 1;">
@@ -64,7 +64,7 @@ When creating a knowledge base, you can configure how documents are indexed and 
 
 These settings determine how documents are split into chunks and embedded. **They cannot be changed after creation** — create a new knowledge base if you need different settings.
 
-<div class="grid md:grid-cols-2 gap-6 my-6">
+<div class="grid md:grid-cols-2 gap-4 md:gap-6 my-4 md:my-6">
   <div class="bg-white border border-gray-200 rounded-lg p-5">
     <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.75rem 0;">Chunker Type</h3>
     <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 0.5rem 0;">How documents are split into chunks:</p>
@@ -114,7 +114,7 @@ You can also manually trigger reconciliation at any time from the knowledge base
 
 ## Managing Knowledge Bases
 
-<div class="grid md:grid-cols-2 gap-6 my-6">
+<div class="grid md:grid-cols-2 gap-4 md:gap-6 my-4 md:my-6">
   <div class="bg-white border border-gray-200 rounded-lg p-5">
     <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.75rem 0;">Creating Knowledge Bases</h3>
     <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 0.5rem 0;">Go to <strong>Knowledge Bases</strong> in the sidebar, click <strong>New Knowledge Base</strong>, configure indexing settings, and assign tags.</p>
@@ -138,7 +138,7 @@ You can also manually trigger reconciliation at any time from the knowledge base
 
 ## Best Practices
 
-<div class="my-6">
+<div class="my-4 md:my-6">
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Keep It Focused</strong> — Create separate knowledge bases for different topics (e.g., "Legal Terms" vs "Product Specs").</p>
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Clean Data</strong> — Ensure reference documents are clear, well-formatted, and up-to-date for best results.</p>
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Update Regularly</strong> — Keep price lists, catalogs, and reference materials current to maintain accuracy.</p>
@@ -156,9 +156,9 @@ You can also manually trigger reconciliation at any time from the knowledge base
 
 ---
 
-<div class="bg-blue-600 rounded-lg p-8 mt-10 text-center">
-  <h2 class="text-2xl font-semibold text-white mb-4">Ready to create your first knowledge base?</h2>
-  <a href="https://app.docrouter.ai" class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
+<div class="bg-blue-600 rounded-lg p-4 md:p-8 mt-8 md:mt-10 text-center">
+  <h2 class="text-xl md:text-2xl font-semibold text-white mb-4">Ready to create your first knowledge base?</h2>
+  <a href="https://app.docrouter.ai" class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-4 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-base md:text-lg transition-colors duration-200 no-underline">
     Open Dashboard
   </a>
 </div>

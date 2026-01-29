@@ -4,14 +4,14 @@ title: "Claude Code Integration"
 permalink: /docs/claude-code/
 ---
 
-<div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 mb-10 text-center">
-  <h2 class="text-2xl font-semibold text-white mb-2">Connect DocRouter to Claude Code</h2>
-  <p class="text-blue-100">Use the Model Context Protocol (MCP) to manage documents, schemas, and prompts directly from your terminal.</p>
+<div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">
+  <h2 class="text-xl md:text-2xl font-semibold text-white mb-2">Connect DocRouter to Claude Code</h2>
+  <p class="text-sm md:text-base text-blue-100">Use the Model Context Protocol (MCP) to manage documents, schemas, and prompts directly from your terminal.</p>
 </div>
 
 ## Get started in 3 steps
 
-<div class="bg-gray-50 rounded-lg p-6 my-6">
+<div class="bg-gray-50 rounded-lg p-4 md:p-6 my-4 md:my-6">
   <div style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
     <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">1</div>
     <div style="flex: 1;">
@@ -82,7 +82,7 @@ Once configured, you can ask Claude Code to perform tasks like:
 
 ## Best Practices
 
-<div class="my-6">
+<div class="my-4 md:my-6">
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Secure Credentials</strong> — Store your API token securely and never commit it to version control.</p>
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Use Environment Variables</strong> — Configure credentials via environment variables for better security.</p>
   <p style="margin: 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Test First</strong> — Start with simple queries like listing documents before running complex operations.</p>
@@ -98,9 +98,9 @@ Once configured, you can ask Claude Code to perform tasks like:
 
 ---
 
-<div class="bg-blue-600 rounded-lg p-8 mt-10 text-center">
-  <h2 class="text-2xl font-semibold text-white mb-4">Ready to connect Claude Code?</h2>
-  <a href="https://app.docrouter.ai" class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
+<div class="bg-blue-600 rounded-lg p-4 md:p-8 mt-8 md:mt-10 text-center">
+  <h2 class="text-xl md:text-2xl font-semibold text-white mb-4">Ready to connect Claude Code?</h2>
+  <a href="https://app.docrouter.ai" class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-4 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-base md:text-lg transition-colors duration-200 no-underline">
     Get API Credentials
   </a>
 </div>
