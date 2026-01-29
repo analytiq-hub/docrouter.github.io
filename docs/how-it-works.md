@@ -119,14 +119,14 @@ permalink: /docs/how-it-works/
                 <div class="bg-white rounded-lg p-5 shadow-sm">
                     <h3 class="font-bold text-gray-900 mb-2">n8n</h3>
                     <p class="text-sm text-gray-600 mb-3">Low-code workflow automation. Connect DocRouter to hundreds of apps without writing code.</p>
-                    <a href="{{ '/docs/integrations/#n8n' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View n8n Setup →</a>
+                    <a href="{{ '/docs/workflows/#n8n' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View n8n Setup →</a>
                 </div>
 
                 <!-- Temporal -->
                 <div class="bg-white rounded-lg p-5 shadow-sm">
                     <h3 class="font-bold text-gray-900 mb-2">Temporal</h3>
                     <p class="text-sm text-gray-600 mb-3">Durable execution for mission-critical document workflows that require high reliability and state management.</p>
-                    <a href="{{ '/docs/integrations/#temporal' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View Temporal Docs →</a>
+                    <a href="{{ '/docs/workflows/#temporal' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View Temporal Docs →</a>
                 </div>
             </div>
         </section>
