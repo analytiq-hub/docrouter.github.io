@@ -22,8 +22,8 @@ permalink: /docs/prompts/
   <div style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
     <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">2</div>
     <div style="flex: 1;">
-      <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.25rem 0;">Link to tags and schemas</h3>
-      <p style="color: #4b5563; margin: 0;">Connect your prompt to <strong>tags</strong> for automatic processing and optionally to a <strong>schema</strong> for structured output.</p>
+      <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.25rem 0;">Associate to tags and schemas</h3>
+      <p style="color: #4b5563; margin: 0;">Configure your prompt with <strong>tags</strong> for automatic processing and optionally to a <strong>schema</strong> for structured output.</p>
     </div>
   </div>
   <div style="display: flex; align-items: flex-start;">
@@ -67,10 +67,33 @@ Prompts are text instructions that guide AI language models to extract specific 
 
 <div class="my-4 md:my-6">
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Be Specific</strong> — Clearly describe each field to extract, include format requirements, and mention edge cases.</p>
+  <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Give Examples and Counter-Examples</strong> — Provide examples of what to extract and clear counter-examples of what to ignore to resolve ambiguity.</p>
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Reference Schemas</strong> — When using a schema, mention it in your prompt and highlight important fields.</p>
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Use Tags Strategically</strong> — Link prompts to document type tags (e.g., "invoice", "receipt") for automatic processing.</p>
-  <p style="margin: 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Test and Iterate</strong> — Start simple, test on sample documents, and refine based on results.</p>
+  <p style="margin: 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Monitor and Iterate</strong> — Review extraction results in Operations, identify corner cases, and update prompts to handle them.</p>
 </div>
+
+---
+
+## Iteration and Monitoring
+
+To achieve high extraction accuracy, treat prompt engineering as an iterative process.
+
+### Using Examples and Counter-Examples
+AI models perform significantly better when they know both what to look for and what to skip.
+
+*   **Positive Example**: "Extract the 'Total Amount' which is the final sum at the bottom of the invoice."
+*   **Counter-Example**: "Ignore 'Subtotal' or 'Balance Forward' amounts. Do not extract tax-only line items as the total."
+
+### Handling Corner Cases
+As you process more documents, you will encounter edge cases that require specific instructions.
+
+1.  **Monitor Operations**: Regularly check the **Operations** logs to see extraction results for diverse documents.
+2.  **Identify Failures**: Look for patterns where the AI misidentified a field or missed information.
+3.  **Update Prompts**: Add specific "IF/THEN" logic to handle these cases.
+    - *Example*: "If the document is a credit memo instead of an invoice, extract the total as a negative number."
+    - *Example*: "When multiple addresses are present, use the 'Remit To' address for the vendor location."
+4.  **Bulk Re-run**: Use the **Actions** menu in the document list to re-run your updated prompt on existing documents to verify the fix.
 
 ---
 
