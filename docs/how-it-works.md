@@ -189,6 +189,31 @@ permalink: /docs/how-it-works/
         </section>
         -->
 
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Learn More</h2>
+            <p class="text-gray-600 mb-4">
+                Once you understand the high-level flow, these docs cover each building block in more detail:
+            </p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>
+                    <a href="{{ '/docs/quick-start/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Quick Start</a>
+                    — Step-by-step Tag → Prompt → Upload workflow.
+                </li>
+                <li>
+                    <a href="{{ '/docs/tags/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Tags</a>
+                    — Required routing layer that connects uploads to prompts.
+                </li>
+                <li>
+                    <a href="{{ '/docs/prompts/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Prompts</a>
+                    — Instructions that drive AI extraction.
+                </li>
+                <li>
+                    <a href="{{ '/docs/schemas/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Schemas</a>
+                    — Structured output for your extraction results.
+                </li>
+            </ul>
+        </section>
+
         <section class="bg-blue-600 rounded-lg shadow-lg p-8 mb-12">
             <div class="text-center">
                 <h2 class="text-3xl font-semibold text-white mb-6">Get Started Today</h2>

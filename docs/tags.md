@@ -61,6 +61,13 @@ permalink: /docs/tags/
 </div>
 
 ---
+## Learn More
+
+- <a href="/docs/prompts">Prompts</a> — Write extraction instructions that run on tagged documents
+- <a href="/docs/schemas">Schemas</a> — Define structured output for your prompts
+- <a href="/docs/quick-start">Quick Start</a> — See the full Tag → Prompt → Upload workflow
+
+---
 
 <div class="bg-blue-600 rounded-lg p-8 mt-10 text-center">
   <h2 class="text-2xl font-semibold text-white mb-4">Ready to start tagging?</h2>

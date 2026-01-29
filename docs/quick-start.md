@@ -290,6 +290,14 @@ For more details, see - [REST API Documentation](/docs/rest-api).
 
 Refer to the [Python SDK Reference](/docs/python-sdk).
 
+## Learn More
+
+- <a href="/docs/tags">Tags</a> — Required routing mechanism that connects uploads to prompts
+- <a href="/docs/prompts">Prompts</a> — Author extraction instructions for your documents
+- <a href="/docs/schemas">Schemas</a> — Define structured JSON output for extractions
+- <a href="/docs/knowledge-bases">Knowledge Bases</a> — Add reference context and power chat agents
+- <a href="/docs/chat-agents">Chat Agents</a> — Chat over your knowledge bases
+
 ---
 
 <script>

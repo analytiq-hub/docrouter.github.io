@@ -146,6 +146,32 @@ Configure it with the invoice schema, and tag it with a tag named 'green'
             </ul>
         </section>
 
+        <section id="learn-more" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Learn More</h2>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>
+                    <a href="/docs/claude-code/" class="text-blue-600 hover:text-blue-800">Claude Code Integration</a>
+                    — Use the DocRouter MCP server from Claude Code.
+                </li>
+                <li>
+                    <a href="/docs/cursor/" class="text-blue-600 hover:text-blue-800">Cursor Integration</a>
+                    — Use the DocRouter MCP server from Cursor.
+                </li>
+                <li>
+                    <a href="/docs/rest-api/" class="text-blue-600 hover:text-blue-800">REST API</a>
+                    — Learn about the underlying HTTP endpoints the MCP server calls.
+                </li>
+                <li>
+                    <a href="/docs/knowledge-bases/" class="text-blue-600 hover:text-blue-800">Knowledge Bases</a>
+                    — Provide retrieval context for extraction and chat workflows.
+                </li>
+                <li>
+                    <a href="/docs/chat-agents/" class="text-blue-600 hover:text-blue-800">Chat Agents</a>
+                    — Build chat experiences on top of DocRouter.
+                </li>
+            </ul>
+        </section>
+
         <section id="workflows" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <div class="text-center mt-8">
                 <a href="https://github.com/analytiq-hub/doc-router/tree/main/packages/typescript/mcp"

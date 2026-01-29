@@ -906,7 +906,7 @@ To avoid repetition and ensure comprehensive coverage:
 3. ✅ **Updated core documentation pages** - Tags, Prompts, Schemas, Knowledge Bases all simplified to match email campaign style
 4. ✅ **Created `/docs/chat-agents`** - New documentation for knowledge base chat functionality
 5. ✅ **Quick Start verified** - Already follows Tag → Prompt → Upload workflow correctly
+6. ✅ **Cross-references added** - "Learn More" sections now link core concepts (Quick Start, Tags, Prompts, Schemas, Knowledge Bases, Chat Agents, MCP, REST API) so users can easily navigate between related docs
 
 #### ⚠️ Remaining Work
-1. **Update `/docs/how-it-works`** - Ensure tags are explained as required prerequisite for prompts to trigger. Currently shows simplified 3-step process without mentioning tags.
-2. **Add cross-references** - Link related concepts across all documentation pages (e.g., "Learn More" sections linking tags → prompts → schemas)
+1. **Update `/docs/how-it-works`** - Ensure tags are explained as required prerequisite for prompts to trigger. Currently shows simplified 3-step process without mentioning tags explicitly in the main flow.

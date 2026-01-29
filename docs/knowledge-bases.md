@@ -151,6 +151,7 @@ You can also manually trigger reconciliation at any time from the knowledge base
 ## Learn More
 
 - <a href="/docs/prompts">Prompts</a> — Link knowledge bases to your extraction prompts
+- <a href="/docs/chat-agents">Chat Agents</a> — Build chat interfaces on top of your knowledge bases
 - <a href="/docs/rest-api">REST API</a> — Create and manage knowledge bases programmatically
 
 ---
