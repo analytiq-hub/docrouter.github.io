@@ -83,37 +83,50 @@ permalink: /docs/how-it-works/
 
         <section class="bg-blue-50 rounded-lg p-4 md:p-8 mb-8 md:mb-12">
             <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-6 text-center">Integration Methods</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- API Integration -->
-                <div class="bg-white rounded-lg p-4 md:p-6">
-                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-4">REST API</h3>
-                    <p class="text-gray-600 mb-4">Integrate directly with your applications using our comprehensive REST API.</p>
-                    <ul class="text-gray-600 space-y-2 mb-6">
-                        <li>• Upload documents via HTTP POST</li>
-                        <li>• Real-time processing status</li>
-                        <li>• Webhook notifications</li>
-                        <li>• Batch processing support</li>
-                    </ul>
-                    <a href="{{ '/docs/rest-api/' | relative_url }}" 
-                       class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg font-medium transition-colors duration-200 no-underline">
-                        View API Docs
-                    </a>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- REST API -->
+                <div class="bg-white rounded-lg p-5 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">REST API</h3>
+                    <p class="text-sm text-gray-600 mb-3">Complete programmatic control for uploading documents and retrieving structured data via standard HTTP requests.</p>
+                    <a href="{{ '/docs/rest-api/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View API Docs →</a>
                 </div>
 
-                <!-- Email and Faxes Integration -->
-                <div class="bg-white rounded-lg p-4 md:p-6">
-                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-4">Email and Fax Processing</h3>
-                    <p class="text-gray-600 mb-4">Send documents via email or fax and receive results automatically.</p>
-                    <ul class="text-gray-600 space-y-2 mb-6">
-                        <li>• Forward emails with attachments</li>
-                        <li>• Automatic document detection</li>
-                        <li>• Email notifications</li>
-                        <li>• Fax processing</li>
-                    </ul>
-                    <a href="javascript:void(0)" onclick="openCalendly()" 
-                       class="inline-block border-2 border-gray-600 text-gray-600 hover:bg-gray-50 px-4 py-2 rounded-lg font-medium transition-colors duration-200 no-underline">
-                        Schedule a Meeting to Discuss
-                    </a>
+                <!-- Webhooks -->
+                <div class="bg-white rounded-lg p-5 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">Webhooks</h3>
+                    <p class="text-sm text-gray-600 mb-3">Real-time push notifications sent to your server immediately when document processing is completed or fails.</p>
+                    <a href="{{ '/docs/webhooks/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View Webhooks →</a>
+                </div>
+
+                <!-- Python & TypeScript SDKs -->
+                <div class="bg-white rounded-lg p-5 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">Python & TS SDKs</h3>
+                    <p class="text-sm text-gray-600 mb-3">Type-safe client libraries for faster development in Python and JavaScript/TypeScript environments.</p>
+                    <div class="flex gap-3">
+                        <a href="{{ '/docs/python-sdk/' | relative_url }}" class="text-xs font-medium text-blue-600 hover:text-blue-800 no-underline">Python</a>
+                        <a href="{{ '/docs/typescript-sdk/' | relative_url }}" class="text-xs font-medium text-blue-600 hover:text-blue-800 no-underline">TypeScript</a>
+                    </div>
+                </div>
+
+                <!-- MCP -->
+                <div class="bg-white rounded-lg p-5 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">MCP</h3>
+                    <p class="text-sm text-gray-600 mb-3">Model Context Protocol server for direct integration with AI assistants like Claude Code and Cursor.</p>
+                    <a href="{{ '/docs/mcp/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View MCP Docs →</a>
+                </div>
+
+                <!-- n8n -->
+                <div class="bg-white rounded-lg p-5 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">n8n</h3>
+                    <p class="text-sm text-gray-600 mb-3">Low-code workflow automation. Connect DocRouter to hundreds of apps without writing code.</p>
+                    <a href="{{ '/docs/integrations/#n8n' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View n8n Setup →</a>
+                </div>
+
+                <!-- Temporal -->
+                <div class="bg-white rounded-lg p-5 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">Temporal</h3>
+                    <p class="text-sm text-gray-600 mb-3">Durable execution for mission-critical document workflows that require high reliability and state management.</p>
+                    <a href="{{ '/docs/integrations/#temporal' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View Temporal Docs →</a>
                 </div>
             </div>
         </section>
