@@ -30,7 +30,7 @@ permalink: /docs/cursor/
     <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">3</div>
     <div style="flex: 1;">
       <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.25rem 0;">Configure credentials</h3>
-      <p style="color: #4b5563; margin: 0;">Add environment variables: <code class="bg-gray-100 px-1 rounded">DOCROUTER_ORG_ID</code> and <code class="bg-gray-100 px-1 rounded">DOCROUTER_ORG_API_TOKEN</code>.</p>
+      <p style="color: #4b5563; margin: 0;">Add environment variable: <code class="bg-gray-100 px-1 rounded">DOCROUTER_ORG_API_TOKEN</code>. The organization ID is resolved automatically from this token.</p>
     </div>
   </div>
 </div>
@@ -57,8 +57,7 @@ By connecting DocRouter.AI to Cursor via MCP, you enable Cursor's AI to search, 
    - **Type**: `command`
    - **Command**: `docrouter-mcp`
 5. Add Environment Variables:
-   - `DOCROUTER_ORG_ID`: Your Organization ID
-   - `DOCROUTER_ORG_API_TOKEN`: Your API Token
+   - `DOCROUTER_ORG_API_TOKEN`: Your organization API token (organization ID is resolved automatically)
 
 ---
 

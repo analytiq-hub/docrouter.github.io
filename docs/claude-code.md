@@ -23,7 +23,7 @@ permalink: /docs/claude-code/
     <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">2</div>
     <div style="flex: 1;">
       <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.25rem 0;">Configure Claude Code</h3>
-      <p style="color: #4b5563; margin: 0;">Add the DocRouter MCP server to your Claude Code configuration with your Organization ID and API Token.</p>
+      <p style="color: #4b5563; margin: 0;">Add the DocRouter MCP server to your Claude Code configuration with your DocRouter <strong>organization API token</strong>. The organization ID is resolved automatically from this token.</p>
     </div>
   </div>
   <div style="display: flex; align-items: flex-start;">
@@ -58,15 +58,14 @@ Add the DocRouter MCP server to your Claude Code configuration:
       "command": "docrouter-mcp",
       "env": {
         "DOCROUTER_API_URL": "https://app.docrouter.ai/fastapi",
-        "DOCROUTER_ORG_ID": "your-org-id",
-        "DOCROUTER_ORG_API_TOKEN": "your-api-token"
+        "DOCROUTER_ORG_API_TOKEN": "your-org-api-token"
       }
     }
   }
 }
 ```
 
-You'll need your **Organization ID** and **API Token** from the DocRouter dashboard.
+You'll need your **organization API token** from the DocRouter dashboard. The organization ID is automatically resolved from the token and does not need to be configured.
 
 ---
 
