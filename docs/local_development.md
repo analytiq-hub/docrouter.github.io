@@ -52,13 +52,22 @@ gem install bundler
 
 1. **Start the development server**:
    ```bash
-   make dev
+   make serve
    ```
 
 2. **Access the website**:
    Open your browser and navigate to `http://localhost:4000`
 
-The development server will automatically regenerate pages when you make changes to files.
+The development server will automatically regenerate pages when you make changes to files in the site directory.
+
+### When you need to restart `make serve`
+
+Jekyll’s watcher does **not** see changes in:
+
+1. **`_config.yml`** — Jekyll does not watch the config file by design. Any change to navigation (`header_pages`, `site_map`), theme options, or other config requires restarting the server.
+2. **Theme files** — The theme is loaded as a gem (e.g. `path: "../analytiq-pages-theme"` in the Gemfile). The watcher only runs inside the site directory, not inside the theme. Edits to the theme’s `_includes/header.html`, `_includes/footer.html`, layouts, or other theme files are not picked up until you stop and run `make serve` again.
+
+So: after editing header/footer (in the theme) or `_config.yml`, run `make serve` again (or stop with Ctrl+C and start it) to see the changes.
 
 ## Development Workflow
 
