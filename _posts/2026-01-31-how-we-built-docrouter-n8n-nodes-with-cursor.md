@@ -14,7 +14,9 @@ We shipped **[n8n-nodes-docrouter](https://www.npmjs.com/package/n8n-nodes-docro
 
 ### Install the package
 
-Where n8n is installed (or in the project that runs n8n):
+The easiest way is in the n8n UI: **Settings → Community Nodes → Install**, then enter the package name **n8n-nodes-docrouter**.
+
+Alternatively, where n8n is installed (or in the project that runs n8n):
 
 ```bash
 npm install n8n-nodes-docrouter
@@ -132,7 +134,7 @@ You’re reading the result of another Cursor prompt in the same “in the open�
 
 ## Summary
 
-- **Use the nodes:** `npm install n8n-nodes-docrouter`, add DocRouter Org or Account credentials, then add DocRouter nodes and pick operations (List, Get, Create, Update, Delete, or operation-specific ones like Chat, Run LLM, Validate Schema).
+- **Use the nodes:** Install via **Settings → Community Nodes → Install** (package name: **n8n-nodes-docrouter**) or `npm install n8n-nodes-docrouter`, add DocRouter Org or Account credentials, then add DocRouter nodes and pick operations (List, Get, Create, Update, Delete, or operation-specific ones like Chat, Run LLM, Validate Schema).
 - **Build process:** One Cursor thread, incremental prompts (documents → webhook → tags → remove GitHub → LLM → Prompts → Schemas → Knowledge Base → stream fix in backend + node → Account node → README → publish and version bump). Cross-checking against `../doc-router` ensured the nodes matched the real API and behavior.
 - **This post:** Same workflow—prompt for a structured blog post, inspect existing posts and repo layout, generate the markdown file in `_posts` with the correct site (docrouter.github.io) and style.
 
