@@ -65,6 +65,10 @@ Create the API token in **DocRouter** (Settings → User → Developer). Then cr
 
 Same node supports **List / Get / Create / Update / Delete Organizations** with the same account credential.
 
+<div class="n8n-img-cred-wrap">
+  <span class="n8n-img-modal-wrap"><img class="n8n-img-modal-trigger" src="/assets/images/n8n_list_users.png" alt="DocRouter List Users in n8n" data-modal-src="/assets/images/n8n_list_users.png" /></span>
+</div>
+
 ### Example: Webhook trigger
 
 1. Add a **DocRouter Webhook** node (trigger).
