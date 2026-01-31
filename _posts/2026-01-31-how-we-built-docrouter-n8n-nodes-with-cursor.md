@@ -23,7 +23,9 @@ You need one of two credential types:
 - **DocRouter Organization API** – organization-level token. Use it for: Documents, Tags, LLM, Prompts, Schemas, Knowledge Base, Webhook.
 - **DocRouter Account API** – account-level token. Use it only for the **DocRouter Account** node (users and organizations).
 
-Create the credential in n8n (Settings → Credentials or when adding a DocRouter node), paste your API token from DocRouter, and optionally override the base URL for self-hosted or staging (default: `https://app.docrouter.ai/fastapi`).
+Create the API token in **DocRouter** (Settings → User → Developer). Then create the credential in **n8n** (Settings → Credentials or when adding a DocRouter node), paste your API token from DocRouter, and optionally override the base URL for self-hosted or staging (default: `https://app.docrouter.ai/fastapi`).
+
+![DocRouter Organization API credential in n8n](/assets/images/n8n_org_creds.png)
 
 ### Example: List documents and get one
 
@@ -33,6 +35,11 @@ Create the credential in n8n (Settings → Credentials or when adding a DocRoute
 4. Run the workflow → you get a list of documents (and total count).
 5. Add another **DocRouter Document** node, Operation: **Get**, set **Document ID** (e.g. from the first node’s output: `{% raw %}{{ $json.id }}{% endraw %}`).
 6. Run → you get that document’s metadata; if it has content, it’s in **binary** (downloadable).
+
+<div class="grid md:grid-cols-2 gap-4 md:gap-6 my-4 md:my-6">
+  <img src="/assets/images/n8n_list_documents.png" alt="DocRouter List Documents in n8n" />
+  <img src="/assets/images/n8n_get_document.png" alt="DocRouter Get Document in n8n" />
+</div>
 
 ### Example: Chat with a knowledge base
 
@@ -114,9 +121,9 @@ So: **implement in the node repo, verify and fix against the real API and backen
 
 You’re reading the result of another Cursor prompt in the same “in the open” style:
 
-- **Request:** Write a markdown blog post that (1) at the top explains how to use the DocRouter n8n nodes with examples, (2) in the middle explains step-by-step how the nodes were created in this Cursor thread, what prompts were used, and how we hooked up to the ../doc-router sandbox to review and fix things, and (3) explains how the blog post itself was written. Put it in `../docrouter.github.ai _posts` similar to the other posts there.
+- **Request:** Write a markdown blog post that (1) at the top explains how to use the DocRouter n8n nodes with examples, (2) in the middle explains step-by-step how the nodes were created in this Cursor thread, what prompts were used, and how we hooked up to the ../doc-router sandbox to review and fix things, and (3) explains how the blog post itself was written. 
 
-- **What I did:** The repo is actually **docrouter.github.io** (not docrouter.github.ai). I listed `_posts`, read a couple of existing posts for front matter and tone (e.g. the webhooks post, the DocRouter + Cursor/Claude post), and created a new file with the usual Jekyll front matter (`layout: post`, `title`, `date`, `author`, `categories`). The content is a synthesis of the conversation summary and the steps we just walked through: usage first, then implementation story and prompts, then “how this post was written.” So the post is both the doc and the meta-story of how it was generated.
+- **What Cursor did:** It read a couple of existing posts for front matter and tone, and created a new one, as a synthesis of the conversation summary and the steps we just walked through: usage first, then implementation story and prompts, then “how this post was written.” So this post is both the doc and the meta-story of how it was generated.
 
 ---
 
@@ -124,7 +131,7 @@ You’re reading the result of another Cursor prompt in the same “in the open�
 
 - **Use the nodes:** Install via **Settings → Community Nodes → Install** (package name: **n8n-nodes-docrouter**),[^1] add DocRouter Org or Account credentials, then add DocRouter nodes and pick operations (List, Get, Create, Update, Delete, or operation-specific ones like Chat, Run LLM, Validate Schema).
 - **Build process:** One Cursor thread, incremental prompts (documents → webhook → tags → remove GitHub → LLM → Prompts → Schemas → Knowledge Base → stream fix in backend + node → Account node → README → publish and version bump). Cross-checking against `../doc-router` ensured the nodes matched the real API and behavior.
-- **This post:** Same workflow—prompt for a structured blog post, inspect existing posts and repo layout, generate the markdown file in `_posts` with the correct site (docrouter.github.io) and style.
+- **This post:** The workflow—prompt used for the current blog post.
 
 [n8n-nodes-docrouter on npm](https://www.npmjs.com/package/n8n-nodes-docrouter) · [Source on GitHub](https://github.com/analytiqhub/n8n-nodes-docrouter) · [DocRouter docs](https://app.docrouter.ai)
 
