@@ -52,6 +52,10 @@ Create the API token in **DocRouter** (Settings → User → Developer). Then cr
 5. **Stream**: off → you get a single JSON object with `text`, `tool_calls`, `tool_results`. Stream on → you get the same shape after the node parses SSE for you.
 6. Run → the output has the assistant’s answer and any tool calls (e.g. `search_knowledge_base`) and results.
 
+<div class="n8n-img-cred-wrap">
+  <span class="n8n-img-modal-wrap"><img class="n8n-img-modal-trigger" src="/assets/images/n8n_chat_with_kb.png" alt="DocRouter Chat with Knowledge Base in n8n" data-modal-src="/assets/images/n8n_chat_with_kb.png" /></span>
+</div>
+
 ### Example: Manage users (account admin)
 
 1. Add a **DocRouter Account** node.
