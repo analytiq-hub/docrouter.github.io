@@ -17,7 +17,16 @@ Workflows react to DocRouter events (e.g. document processed, extraction complet
 
 ## N8N
 
-**N8N** is a visual workflow tool. Use it to integrate DocRouter with third‑party services—for example: ingest email attachments into DocRouter, or send extracted results to a database, CRM, or ERP. Set up a Webhook node in N8N, add its URL in DocRouter webhook settings, and subscribe to events like <code class="bg-gray-100 px-1 rounded">llm.completed</code>. See <a href="/docs/webhooks">Webhooks</a> for setup.
+**N8N** is a visual workflow tool. Use it to connect DocRouter to other apps and services.
+
+- **Package:** <a href="https://www.npmjs.com/package/n8n-nodes-docrouter">n8n-nodes-docrouter</a> — DocRouter nodes and credentials for n8n (Documents, Tags, Prompts, Knowledge Base, and more).
+- **Install, credentials, and examples:** <a href="/ai/programming/engineering/tutorials/how-we-built-docrouter-n8n-nodes-with-cursor/">How We Built the DocRouter n8n Nodes With Cursor</a>.
+
+<p class="my-4">
+  <a href="/ai/programming/engineering/tutorials/how-we-built-docrouter-n8n-nodes-with-cursor/">
+    <img src="/assets/images/n8n_gmail_to_docrouter.png" alt="Gmail to DocRouter workflow in n8n" style="max-width: 50%; display: block; margin: 0 auto;" />
+  </a>
+</p>
 
 ---
 
