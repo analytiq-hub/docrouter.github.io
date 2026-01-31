@@ -160,14 +160,6 @@ You’re reading the result of another Cursor prompt in the same “in the open�
 
 - **What Cursor did:** It read a couple of existing posts for front matter and tone, and created a new one, as a synthesis of the conversation summary and the steps we just walked through: usage first, then implementation story and prompts, then “how this post was written.” So this post is both the doc and the meta-story of how it was generated.
 
----
-
-## Summary
-
-- **Use the nodes:** Install via **Settings → Community Nodes → Install** (package name: **n8n-nodes-docrouter**),[^1] add DocRouter Org or Account credentials, then add DocRouter nodes and pick operations (List, Get, Create, Update, Delete, or operation-specific ones like Chat, Run LLM, Validate Schema).
-- **Build process:** One Cursor thread, incremental prompts (documents → webhook → tags → remove GitHub → LLM → Prompts → Schemas → Knowledge Base → stream fix in backend + node → Account node → README → publish and version bump). Cross-checking against `../doc-router` ensured the nodes matched the real API and behavior.
-- **This post:** The workflow—prompt used for the current blog post.
-
 [n8n-nodes-docrouter on npm](https://www.npmjs.com/package/n8n-nodes-docrouter) · [Source on GitHub](https://github.com/analytiqhub/n8n-nodes-docrouter) · [DocRouter docs](https://app.docrouter.ai)
 
 ----
