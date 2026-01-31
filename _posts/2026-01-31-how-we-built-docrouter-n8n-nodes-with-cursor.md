@@ -16,6 +16,12 @@ We shipped **[n8n-nodes-docrouter](https://www.npmjs.com/package/n8n-nodes-docro
 
 The easiest way is in the n8n UI: **Settings → Community Nodes → Install**, then enter the package name **n8n-nodes-docrouter**.[^1]
 
+The DocRouter nodes then become available in the node search list.
+
+<div class="n8n-img-cred-wrap">
+  <span class="n8n-img-modal-wrap"><img class="n8n-img-modal-trigger" src="/assets/images/n8n_docrouter_nodes.png" alt="DocRouter nodes in n8n" data-modal-src="/assets/images/n8n_docrouter_nodes.png" /></span>
+</div>
+
 ### Credentials
 
 You need one of two credential types:
