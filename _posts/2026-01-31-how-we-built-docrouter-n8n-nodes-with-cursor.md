@@ -82,6 +82,16 @@ Same node supports **List / Get / Create / Update / Delete Organizations** with 
 2. Configure **Webhook path** and, if you use HMAC in DocRouter, the **Secret** and optional **Timestamp tolerance**.
 3. When DocRouter sends an event to that URL, the workflow runs; you can verify the signature and use the payload in the next nodes.
 
+### Example: Gmail to DocRouter
+
+This workflow uploads Gmail attachments to DocRouter: a **Gmail Trigger** (with “download attachments”) feeds into **Split Out** on `$binary` so each attachment becomes its own item; a **Code** node renames the binary key to `attachment`; then a **DocRouter Document** node uploads each file to DocRouter. You need **Gmail OAuth2** and **DocRouter Organization API** credentials.
+
+<div class="n8n-img-cred-wrap">
+  <span class="n8n-img-modal-wrap"><img class="n8n-img-modal-trigger" src="/assets/images/n8n_gmail_to_docrouter.png" alt="Gmail to DocRouter workflow in n8n" data-modal-src="/assets/images/n8n_gmail_to_docrouter.png" /></span>
+</div>
+
+<button type="button" class="n8n-json-modal-trigger" id="n8n-gmail-json-btn">View workflow JSON</button>
+
 Other nodes (**DocRouter Tag**, **LLM**, **Prompt**, **Schema**) follow the same pattern: pick operation (List, Get, Create, Update, Delete—or operation-specific ones like Run LLM, Validate Schema, Search KB), fill resource IDs and body fields, run.
 
 ---
@@ -169,19 +179,45 @@ You’re reading the result of another Cursor prompt in the same “in the open�
 .n8n-img-modal-backdrop.is-open { display: flex; }
 .n8n-img-modal-backdrop img { max-width: 95vw; max-height: 95vh; object-fit: contain; pointer-events: none; }
 .n8n-img-modal-trigger { cursor: pointer; }
+.n8n-json-modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 9999; align-items: center; justify-content: center; cursor: pointer; padding: 1rem; box-sizing: border-box; }
+.n8n-json-modal-backdrop.is-open { display: flex; }
+.n8n-json-modal-backdrop .n8n-json-modal-box { max-width: 90vw; max-height: 90vh; overflow: auto; background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; cursor: default; font-size: 12px; }
+.n8n-json-modal-backdrop .n8n-json-modal-box pre { margin: 0; white-space: pre-wrap; word-break: break-all; }
+.n8n-json-modal-trigger { cursor: pointer; padding: 0.4rem 0.8rem; background: #2563eb; color: #fff; border: none; border-radius: 6px; font-size: 14px; margin-top: 0.5rem; }
+.n8n-json-modal-trigger:hover { background: #1d4ed8; }
 </style>
 <div class="n8n-img-modal-backdrop" id="n8n-img-modal" role="button" tabindex="-1" aria-label="Close">
   <img src="" alt="" id="n8n-img-modal-img" />
 </div>
+<div class="n8n-json-modal-backdrop" id="n8n-json-modal" role="button" tabindex="-1" aria-label="Close">
+  <div class="n8n-json-modal-box" role="document" onclick="event.stopPropagation()">
+    <pre id="n8n-json-modal-content"></pre>
+  </div>
+</div>
+<script type="text/template" id="n8n-gmail-workflow-json">{"name":"DocRouter Gmail Upload Short","nodes":[{"parameters":{"pollTimes":{"item":[{"mode":"everyMinute"}]},"simple":false,"filters":{},"options":{"downloadAttachments":true}},"type":"n8n-nodes-base.gmailTrigger","typeVersion":1.3,"position":[208,-16],"id":"62e7e68f-a33f-42c1-b5de-020ca2a7a0df","name":"Gmail Trigger","credentials":{"gmailOAuth2":{"id":"NefrrTfahhV9uXug","name":"Gmail account"}}},{"parameters":{"jsCode":"const results = [];\n\nfor (const item of $input.all()) {\n  const bin = item.binary || {};\n  const keys = Object.keys(bin);\n  \n  if (keys.length > 0) {\n    const originalKey = keys[0];\n    results.push({\n      json: item.json,\n      binary: { attachment: bin[originalKey] }\n    });\n  }\n}\n\nreturn results;"},"type":"n8n-nodes-base.code","typeVersion":2,"position":[592,-16],"id":"d93ed3f1-754d-4ffa-877f-c82e7c9f3d3b","name":"Rename Attachment Keys"},{"parameters":{"content":"### Split email attachments\n* Multiple nodes needed to set up attachment file name, file size as item keys","height":288,"width":416},"type":"n8n-nodes-base.stickyNote","position":[320,-144],"typeVersion":1,"id":"fc9a3c70-546a-4d6d-a2f4-22bbd0cba8e1","name":"Sticky Note"},{"parameters":{"fieldToSplitOut":"$binary","options":{}},"type":"n8n-nodes-base.splitOut","typeVersion":1,"position":[368,-16],"id":"cc7d3c12-4a7b-4353-837e-3fdbede2073b","name":"Split Out Attachments"},{"parameters":{"content":"### Upload to DocRouter.AI \n** Upload to DocRouter with optional prompt tag","height":288,"width":304},"type":"n8n-nodes-base.stickyNote","position":[768,-144],"typeVersion":1,"id":"cbd3794c-9056-4cef-89ac-889bb56fc8a7","name":"Sticky Note1"},{"parameters":{"binaryPropertyName":"attachment"},"type":"n8n-nodes-docrouter.docRouterDocument","typeVersion":1,"position":[848,-16],"id":"40e9452f-187e-47d8-9641-143f5b01f605","name":"DocRouter Document","credentials":{"docRouterOrgApi":{"id":"XW25oTYKlQBYzt7L","name":"DocRouter Organization"}}},{"parameters":{"content":"# How To Build An N8N->DocRouter.AI Workflow\n### Upload Gmail Attachments to DocRouter.AI","height":96,"width":896,"color":4},"type":"n8n-nodes-base.stickyNote","position":[176,-304],"typeVersion":1,"id":"b6f9f696-e5f7-4070-9252-ae9b5a30df48","name":"Sticky Note2"}],"pinData":{},"connections":{"Gmail Trigger":{"main":[[{"node":"Split Out Attachments","type":"main","index":0}]]},"Rename Attachment Keys":{"main":[[{"node":"DocRouter Document","type":"main","index":0}]]},"Split Out Attachments":{"main":[[{"node":"Rename Attachment Keys","type":"main","index":0}]]}},"active":false,"settings":{"executionOrder":"v1","availableInMCP":false},"versionId":"14a77060-d11b-4a65-9167-ad47acf49b6b","meta":{"templateCredsSetupCompleted":true,"instanceId":"8ab29dcbe42ee02938bb9d98be601e8a092f5bed9d589cf469bcf275a53670cb"},"id":"imAPYvqkas1yKQKM","tags":[]}</script>
 <script>
 (function() {
-  var backdrop = document.getElementById('n8n-img-modal');
+  var imgBackdrop = document.getElementById('n8n-img-modal');
   var modalImg = document.getElementById('n8n-img-modal-img');
-  var triggers = document.querySelectorAll('.n8n-img-modal-trigger');
-  function openModal(src, alt) { modalImg.src = src; modalImg.alt = alt; backdrop.classList.add('is-open'); }
-  function closeModal() { backdrop.classList.remove('is-open'); }
-  triggers.forEach(function(el) { el.addEventListener('click', function() { openModal(el.dataset.modalSrc, el.alt); }); });
-  backdrop.addEventListener('click', closeModal);
-  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+  var imgTriggers = document.querySelectorAll('.n8n-img-modal-trigger');
+  function openImgModal(src, alt) { modalImg.src = src; modalImg.alt = alt; imgBackdrop.classList.add('is-open'); }
+  function closeImgModal() { imgBackdrop.classList.remove('is-open'); }
+  imgTriggers.forEach(function(el) { el.addEventListener('click', function() { openImgModal(el.dataset.modalSrc, el.alt); }); });
+  imgBackdrop.addEventListener('click', closeImgModal);
+
+  var jsonBackdrop = document.getElementById('n8n-json-modal');
+  var jsonContent = document.getElementById('n8n-json-modal-content');
+  var jsonTemplate = document.getElementById('n8n-gmail-workflow-json');
+  var jsonBtn = document.getElementById('n8n-gmail-json-btn');
+  function openJsonModal() {
+    if (jsonTemplate) jsonContent.textContent = JSON.stringify(JSON.parse(jsonTemplate.textContent), null, 2);
+    jsonBackdrop.classList.add('is-open');
+  }
+  function closeJsonModal() { jsonBackdrop.classList.remove('is-open'); }
+  if (jsonBtn) jsonBtn.addEventListener('click', function(e) { e.stopPropagation(); openJsonModal(); });
+  jsonBackdrop.addEventListener('click', closeJsonModal);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { closeImgModal(); closeJsonModal(); }
+  });
 })();
 </script>
