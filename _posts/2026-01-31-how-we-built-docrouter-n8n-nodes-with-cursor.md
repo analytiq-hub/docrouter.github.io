@@ -25,7 +25,9 @@ You need one of two credential types:
 
 Create the API token in **DocRouter** (Settings → User → Developer). Then create the credential in **n8n** (Settings → Credentials or when adding a DocRouter node), paste your API token from DocRouter, and optionally override the base URL for self-hosted or staging (default: `https://app.docrouter.ai/fastapi`).
 
-<span class="n8n-img-modal-wrap"><img class="n8n-img-modal-trigger" src="/assets/images/n8n_org_creds.png" alt="DocRouter Organization API credential in n8n" data-modal-src="/assets/images/n8n_org_creds.png" /></span>
+<div class="n8n-img-cred-wrap">
+  <span class="n8n-img-modal-wrap"><img class="n8n-img-modal-trigger" src="/assets/images/n8n_org_creds.png" alt="DocRouter Organization API credential in n8n" data-modal-src="/assets/images/n8n_org_creds.png" /></span>
+</div>
 
 ### Example: List documents and get one
 
@@ -142,6 +144,9 @@ You’re reading the result of another Cursor prompt in the same “in the open�
 [^1]: **Alternative ways to install (npm or Docker):** Where n8n is installed, run `npm install n8n-nodes-docrouter` and restart n8n. For Docker, set `N8N_COMMUNITY_PACKAGES=n8n-nodes-docrouter`.
 
 <style>
+.n8n-img-cred-wrap { display: flex; justify-content: center; margin: 1rem 0; }
+.n8n-img-cred-wrap .n8n-img-modal-wrap { max-width: 50%; }
+.n8n-img-cred-wrap .n8n-img-modal-wrap img { width: 100%; height: auto; display: block; }
 .n8n-img-modal-wrap { position: relative; display: inline-block; }
 .n8n-img-modal-wrap::after { content: "Click to expand"; position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.75); color: #fff; padding: 4px 10px; border-radius: 4px; font-size: 12px; white-space: nowrap; opacity: 0; transition: opacity 0.2s ease; pointer-events: none; }
 .n8n-img-modal-wrap:hover::after { opacity: 1; }
