@@ -160,6 +160,8 @@ You’re reading the result of another Cursor prompt in the same “in the open�
 
 - **What Cursor did:** It read a couple of existing posts for front matter and tone, and created a new one, as a synthesis of the conversation summary and the steps we just walked through: usage first, then implementation story and prompts, then “how this post was written.” So this post is both the doc and the meta-story of how it was generated.
 
+- ... Then, a few **manual touch-ups** finished the blog post.
+
 [n8n-nodes-docrouter on npm](https://www.npmjs.com/package/n8n-nodes-docrouter) · [Source on GitHub](https://github.com/analytiqhub/n8n-nodes-docrouter) · [DocRouter docs](https://app.docrouter.ai)
 
 ----
