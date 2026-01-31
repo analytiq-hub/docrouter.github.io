@@ -3,6 +3,7 @@ layout: post
 title: "How We Built the DocRouter n8n Nodes With Cursor (In the Open)"
 date: 2026-01-31 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
+image: "assets/images/n8n_gmail_to_docrouter.png"
 categories: [ai, programming, engineering, tutorials]
 ---
 
