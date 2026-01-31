@@ -162,7 +162,7 @@ You’re reading the result of another Cursor prompt in the same “in the open�
 
 - ... Then, a few **manual touch-ups** finished the blog post.
 
-[n8n-nodes-docrouter on npm](https://www.npmjs.com/package/n8n-nodes-docrouter) · [Source on GitHub](https://github.com/analytiqhub/n8n-nodes-docrouter) · [DocRouter docs](https://app.docrouter.ai)
+[n8n-nodes-docrouter on npm](https://www.npmjs.com/package/n8n-nodes-docrouter) · [Source on GitHub](https://github.com/analytiq-hub/n8n-nodes-docrouter) · [DocRouter docs](https://docrouter.ai/docs)
 
 ----
 
