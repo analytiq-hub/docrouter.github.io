@@ -25,7 +25,7 @@ You need one of two credential types:
 
 Create the API token in **DocRouter** (Settings → User → Developer). Then create the credential in **n8n** (Settings → Credentials or when adding a DocRouter node), paste your API token from DocRouter, and optionally override the base URL for self-hosted or staging (default: `https://app.docrouter.ai/fastapi`).
 
-![DocRouter Organization API credential in n8n](/assets/images/n8n_org_creds.png)
+<span class="n8n-img-modal-wrap"><img class="n8n-img-modal-trigger" src="/assets/images/n8n_org_creds.png" alt="DocRouter Organization API credential in n8n" data-modal-src="/assets/images/n8n_org_creds.png" /></span>
 
 ### Example: List documents and get one
 
@@ -37,8 +37,8 @@ Create the API token in **DocRouter** (Settings → User → Developer). Then cr
 6. Run → you get that document’s metadata; if it has content, it’s in **binary** (downloadable).
 
 <div class="grid md:grid-cols-2 gap-4 md:gap-6 my-4 md:my-6">
-  <img src="/assets/images/n8n_list_documents.png" alt="DocRouter List Documents in n8n" />
-  <img src="/assets/images/n8n_get_document.png" alt="DocRouter Get Document in n8n" />
+  <span class="n8n-img-modal-wrap"><img class="n8n-img-modal-trigger" src="/assets/images/n8n_list_documents.png" alt="DocRouter List Documents in n8n" data-modal-src="/assets/images/n8n_list_documents.png" /></span>
+  <span class="n8n-img-modal-wrap"><img class="n8n-img-modal-trigger" src="/assets/images/n8n_get_document.png" alt="DocRouter Get Document in n8n" data-modal-src="/assets/images/n8n_get_document.png" /></span>
 </div>
 
 ### Example: Chat with a knowledge base
@@ -140,3 +140,28 @@ You’re reading the result of another Cursor prompt in the same “in the open�
 ## Footnotes
 
 [^1]: **Alternative ways to install (npm or Docker):** Where n8n is installed, run `npm install n8n-nodes-docrouter` and restart n8n. For Docker, set `N8N_COMMUNITY_PACKAGES=n8n-nodes-docrouter`.
+
+<style>
+.n8n-img-modal-wrap { position: relative; display: inline-block; }
+.n8n-img-modal-wrap::after { content: "Click to expand"; position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.75); color: #fff; padding: 4px 10px; border-radius: 4px; font-size: 12px; white-space: nowrap; opacity: 0; transition: opacity 0.2s ease; pointer-events: none; }
+.n8n-img-modal-wrap:hover::after { opacity: 1; }
+.n8n-img-modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 9999; align-items: center; justify-content: center; cursor: pointer; }
+.n8n-img-modal-backdrop.is-open { display: flex; }
+.n8n-img-modal-backdrop img { max-width: 95vw; max-height: 95vh; object-fit: contain; pointer-events: none; }
+.n8n-img-modal-trigger { cursor: pointer; }
+</style>
+<div class="n8n-img-modal-backdrop" id="n8n-img-modal" role="button" tabindex="-1" aria-label="Close">
+  <img src="" alt="" id="n8n-img-modal-img" />
+</div>
+<script>
+(function() {
+  var backdrop = document.getElementById('n8n-img-modal');
+  var modalImg = document.getElementById('n8n-img-modal-img');
+  var triggers = document.querySelectorAll('.n8n-img-modal-trigger');
+  function openModal(src, alt) { modalImg.src = src; modalImg.alt = alt; backdrop.classList.add('is-open'); }
+  function closeModal() { backdrop.classList.remove('is-open'); }
+  triggers.forEach(function(el) { el.addEventListener('click', function() { openModal(el.dataset.modalSrc, el.alt); }); });
+  backdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+})();
+</script>
