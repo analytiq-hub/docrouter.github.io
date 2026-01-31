@@ -144,7 +144,7 @@ Roughly, the conversation went like this:
 
 ### Hooking up to ../doc-router
 
-Having **doc-router** in the same workspace (as `../doc-router`) was critical:
+Having the **doc-router** source code in the same workspace (as `../doc-router`) was critical:
 
 - **Stream parameter:** We didn’t assume the API “must” support `stream=false`; we searched the Python routes and `run_kb_chat` and saw the parameter existed but the handler always returned a stream. So we fixed the backend first, then the node.
 - **Optional parameters:** The Knowledge Base node had “Could not get parameter” for optional fields like `coalesceNeighborsSearch` and `maxTokens`. We avoided calling `getNodeParameter` for those unless the parameter key existed in `this.getNode().parameters`, matching how n8n omits optional params.
