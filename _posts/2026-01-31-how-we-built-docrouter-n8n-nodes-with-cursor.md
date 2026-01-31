@@ -84,13 +84,21 @@ Same node supports **List / Get / Create / Update / Delete Organizations** with 
 
 ### Example: Gmail to DocRouter
 
-This workflow uploads Gmail attachments to DocRouter: a **Gmail Trigger** (with “download attachments”) feeds into **Split Out** on `$binary` so each attachment becomes its own item; a **Code** node renames the binary key to `attachment`; then a **DocRouter Document** node uploads each file to DocRouter. You need **Gmail OAuth2** and **DocRouter Organization API** credentials.
+This workflow uploads Gmail attachments to DocRouter:
+
+- **Gmail Trigger** (with “download attachments”) → **Split Out** on `$binary` so each attachment becomes its own item.
+- **Code** node renames the binary key to `attachment`.
+- **DocRouter Document** node uploads each file to DocRouter.
+
+You need **Gmail OAuth2** and **DocRouter Organization API** credentials.
 
 <div class="n8n-img-cred-wrap">
   <span class="n8n-img-modal-wrap"><img class="n8n-img-modal-trigger" src="/assets/images/n8n_gmail_to_docrouter.png" alt="Gmail to DocRouter workflow in n8n" data-modal-src="/assets/images/n8n_gmail_to_docrouter.png" /></span>
 </div>
 
+<div align="center">
 <button type="button" class="n8n-json-modal-trigger" id="n8n-gmail-json-btn">View workflow JSON</button>
+</div>
 
 Other nodes (**DocRouter Tag**, **LLM**, **Prompt**, **Schema**) follow the same pattern: pick operation (List, Get, Create, Update, Delete—or operation-specific ones like Run LLM, Validate Schema, Search KB), fill resource IDs and body fields, run.
 
