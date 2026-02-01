@@ -719,7 +719,7 @@ For email templates:
 All documentation links in email templates point to `https://docrouter.ai/docs/*`. The following documentation pages are referenced:
 
 ### Core Documentation Pages
-- `/docs` - Main documentation index (used in: updates-features, onboarding-email-3-checkin) ✅
+- `/docs` - Main documentation index (used in: updates-features, onboarding-email-3-checkin, onboarding-email-1, updates-tips, updates-deep-dive). **Page:** `docs.md` with `permalink: /docs/` so all email links to https://docrouter.ai/docs resolve. ✅
 - `/docs/tags` - Tags documentation (used in: onboarding-email-1 conceptually) ✅ Created
 - `/docs/prompts` - Prompts guide (used in: updates-tips, updates-deep-dive) ✅ Updated
 - `/docs/schemas` - Schema documentation (used in: onboarding-email-1, onboarding-email-2, updates-tips, updates-deep-dive) ✅ Updated

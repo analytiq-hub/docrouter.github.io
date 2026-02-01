@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: "DocRouter MCP Server"
+permalink: /docs/mcp/
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
