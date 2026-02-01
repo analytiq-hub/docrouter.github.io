@@ -59,14 +59,18 @@ permalink: /docs/
         </section>
 
         <section class="bg-blue-50 rounded-lg p-6 md:p-8 border border-blue-100">
-            <h2 class="text-xl font-semibold text-gray-900 mb-3">Need help?</h2>
-            <p class="text-gray-600 mb-4">
-                <a href="{{ '/support/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Support</a> ·
-                <a href="{{ '/contact/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Contact us</a>
-            </p>
-            <a href="https://app.docrouter.ai" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 no-underline">
-                Open DocRouter App
-            </a>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <h2 class="text-xl font-semibold text-gray-900 m-0">Need help?</h2>
+                <a href="{{ '/support/' | relative_url }}" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 no-underline">
+                    Support
+                </a>
+                <a href="{{ '/contact/' | relative_url }}" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 no-underline">
+                    Contact us
+                </a>
+                <a href="https://app.docrouter.ai" target="_blank" rel="noopener noreferrer" class="inline-block bg-white text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 no-underline">
+                    Open DocRouter App
+                </a>
+            </div>
         </section>
     </main>
 </div>
