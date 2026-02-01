@@ -243,12 +243,8 @@ site_map:
         url: "/contact"
   - title: "Docs"
     links:
-      - title: "Getting started"
-        children:
-          - title: "How It Works"
-            url: "/docs/how-it-works"
-          - title: "Quick Start Guide"
-            url: "/docs/quick-start"
+      - title: "Documentation"
+        url: "/docs"
       
 # Build settings
 theme: analytiq-pages-theme
