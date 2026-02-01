@@ -150,6 +150,59 @@ header_pages:
     button_style: "solid"
     external: true
 
+# Docs floating widget (theme renders; optional overrides)
+docs_widget:
+  title: "Docs"
+
+# Docs floating widget sidebar (separate from header dropdown; same structure: title/url or title/children)
+docs_sidebar_pages:
+  - title: "Getting started"
+    children:
+      - title: "How It Works"
+        url: "/docs/how-it-works"
+      - title: "Quick Start Guide"
+        url: "/docs/quick-start"
+  - title: "Core concepts"
+    children:
+      - title: "Tags"
+        url: "/docs/tags"
+      - title: "Prompts"
+        url: "/docs/prompts"
+      - title: "Schemas"
+        url: "/docs/schemas"
+      - title: "Knowledge Bases"
+        url: "/docs/knowledge-bases"
+      - title: "Chat Agents"
+        url: "/docs/chat-agents"
+  - title: "APIs & SDKs"
+    children:
+      - title: "REST APIs"
+        url: "/docs/rest-api"
+      - title: "Webhooks"
+        url: "/docs/webhooks"
+      - title: "Workflows"
+        url: "/docs/workflows"
+      - title: "Python SDK"
+        url: "/docs/python-sdk"
+      - title: "TypeScript SDK"
+        url: "/docs/typescript-sdk"
+  - title: "Integrations"
+    children:
+      - title: "N8N"
+        url: "/docs/n8n"
+      - title: "Temporal"
+        url: "/docs/temporal"
+      - title: "MCP Server"
+        url: "/docs/mcp"
+      - title: "Claude Code"
+        url: "/docs/claude-code"
+      - title: "Cursor"
+        url: "/docs/cursor"
+  - title: "Architecture"
+    url: "/docs/architecture"
+  - title: "Open Source"
+    url: "/docs/open-source"
+
 # Footer sitemap - simplified navigation for footer display
 site_map:
   - title: "Solutions"
