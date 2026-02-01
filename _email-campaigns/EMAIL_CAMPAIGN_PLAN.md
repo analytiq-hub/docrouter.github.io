@@ -113,6 +113,32 @@ This document outlines the active email campaigns and their templates:
 - Monitor unsubscribe rates and engagement metrics
 - Adjust campaign frequency based on performance data
 
+### Deliverability & spam (Yahoo, Gmail, etc.)
+
+**Why Yahoo may say "images disabled" or "links disabled"**
+- When a message is in **Spam**, Yahoo (and similar providers) often:
+  - **Disable images** – do not load remote content.
+  - **Disable links** – e.g. "For your security we disabled links in this email. If you believe it is safe to use, mark this message as not spam."
+- Both are **side effects of Spam classification**, not a bug in the template.
+- **Short-term:** Recipient can mark the message as "Not Spam" so links and images work for that email.
+- **Long-term:** Fix deliverability (see below) so future emails land in Inbox.
+
+**Why mail can land in Spam**
+1. **Placeholder first names** – Greetings like "Hi System", "Hi User", "Hi Friend" trigger filters. In Brevo, do not set `FIRSTNAME` to "System", "User", "Test", or "Friend" for real contacts; use real names or leave blank so the default "there" is used.
+2. **Authentication** – Configure SPF, DKIM, and DMARC for the sending domain.
+3. **Sender reputation** – New domains or low engagement can hurt deliverability.
+
+**Recommendations**
+- Use real or empty contact first names in production.
+- Verify SPF/DKIM/DMARC for the From domain.
+- When testing, add the sender to contacts or mark as "Not Spam" so links work.
+
+**Template anti-spam practices (applied to all templates)**
+- **Preheader:** Hidden preheader div (~130 chars) with natural preview text so the inbox snippet looks legitimate.
+- **Footer:** Include company name line ("Analytiq Hub LLC") for CAN-SPAM; list **Unsubscribe first** in the link row, then View in browser, then Contact us (or Documentation where relevant).
+- **Link density:** Link "DocRouter.AI" only once per section (e.g. first mention); use plain text for later mentions in the same block. Remove redundant docrouter.ai link from the "This email was sent to..." line.
+- **No placeholder greetings:** Rely on `{{ contact.FIRSTNAME | default: 'there' }}` and avoid setting FIRSTNAME to "System", "User", "Test", or "Friend" in Brevo.
+
 ---
 
 ## File Naming Convention
