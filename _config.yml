@@ -133,6 +133,8 @@ header_pages:
   - title: "Company"
     url: "#"
     children:
+      - title: "Pricing"
+        url: "/pricing"
       - title: "Support"
         url: "/support"
       - title: "Team"
@@ -170,6 +172,8 @@ site_map:
         url: "/talks"
   - title: "Company"
     links:
+      - title: "Pricing"
+        url: "/pricing"
       - title: "Support"
         url: "/support"
       - title: "Team"
