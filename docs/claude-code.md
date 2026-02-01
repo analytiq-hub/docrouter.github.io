@@ -95,6 +95,7 @@ Once configured, you can ask Claude Code to perform tasks like:
 - <a href="/docs/mcp">MCP Server</a> — Learn about the Model Context Protocol
 - <a href="/docs/rest-api">REST API</a> — Complete API reference
 - <a href="/docs/cursor">Cursor Integration</a> — Similar integration for Cursor editor
+- <a href="/docs/github-copilot">GitHub Copilot Integration</a> — Similar integration for GitHub Copilot
 
 ---
 

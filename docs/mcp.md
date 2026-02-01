@@ -158,6 +158,10 @@ Configure it with the invoice schema, and tag it with a tag named 'green'
                     — Use the DocRouter MCP server from Cursor.
                 </li>
                 <li>
+                    <a href="/docs/github-copilot/" class="text-blue-600 hover:text-blue-800">GitHub Copilot Integration</a>
+                    — Use the DocRouter MCP server from GitHub Copilot.
+                </li>
+                <li>
                     <a href="/docs/rest-api/" class="text-blue-600 hover:text-blue-800">REST API</a>
                     — Learn about the underlying HTTP endpoints the MCP server calls.
                 </li>

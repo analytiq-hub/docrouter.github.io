@@ -85,6 +85,7 @@ In Cursor Chat (Cmd+L) or Composer (Cmd+I), you can now use DocRouter tools:
 
 - <a href="/docs/mcp">MCP Server</a> — Learn about the Model Context Protocol
 - <a href="/docs/claude-code">Claude Code Integration</a> — Similar integration for Claude Code
+- <a href="/docs/github-copilot">GitHub Copilot Integration</a> — Similar integration for GitHub Copilot
 - <a href="/docs/rest-api">REST API</a> — Complete API reference
 
 ---

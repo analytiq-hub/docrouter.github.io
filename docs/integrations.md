@@ -23,11 +23,12 @@ permalink: /docs/integrations/
   </div>
   <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-5">
     <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.5rem 0;">🤖 AI Assistants</h3>
-    <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 0.75rem 0;">Use DocRouter data directly from Claude Code and Cursor.</p>
+    <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 0.75rem 0;">Use DocRouter data directly from Claude Code, Cursor, and GitHub Copilot.</p>
     <ul style="margin: 0; padding-left: 1.25rem; color: #4b5563; font-size: 0.875rem;">
       <li><a href="/docs/mcp" class="text-blue-600 hover:text-blue-800">MCP Server</a></li>
       <li><a href="/docs/claude-code" class="text-blue-600 hover:text-blue-800">Claude Code</a></li>
       <li><a href="/docs/cursor" class="text-blue-600 hover:text-blue-800">Cursor</a></li>
+      <li><a href="/docs/github-copilot" class="text-blue-600 hover:text-blue-800">GitHub Copilot</a></li>
     </ul>
   </div>
   <div class="bg-white border border-gray-200 rounded-lg p-4 md:p-5">
