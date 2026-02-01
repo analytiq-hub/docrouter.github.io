@@ -11,24 +11,11 @@ permalink: /pricing/
             Pricing
         </h1>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that fits your document processing needs. All plans include access to our AI-powered extraction and APIs.
+            Choose the plan that fits your document processing needs. Subscribe to a monthly plan, or use credits for pay-as-you-go.
         </p>
     </header>
 
     <main>
-        <!-- When to use Monthly Plans -->
-        <section class="mb-12">
-            <div class="bg-green-50 border border-green-200 rounded-lg p-6 md:p-8">
-                <h2 class="text-xl font-semibold text-green-800 mb-4">When to use Monthly Plans</h2>
-                <ul class="text-gray-700 space-y-2 list-disc list-inside">
-                    <li>Best for regular document processing</li>
-                    <li>Includes SPUs with better per-unit pricing</li>
-                    <li>Collaboration features in the Team plan</li>
-                    <li>Predictable monthly costs</li>
-                </ul>
-            </div>
-        </section>
-
         <!-- Pricing Cards -->
         <section class="mb-16">
             <div class="grid md:grid-cols-3 gap-8">
@@ -153,11 +140,43 @@ permalink: /pricing/
         </section>
 
         <!-- About SPU -->
-        <section class="bg-gray-50 rounded-lg p-6 md:p-8">
+        <section class="bg-gray-50 rounded-lg p-6 md:p-8 mb-12">
             <h2 class="text-lg font-semibold text-blue-600 mb-2">About SPU (Service Processing Unit)</h2>
             <p class="text-gray-700">
                 SPU is our flexible billing unit that allows for different pricing based on the complexity of document processing.
             </p>
+        </section>
+
+        <!-- When to use: Plans and Credits (two columns) -->
+        <section class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-green-50 border border-green-200 rounded-lg p-6 md:p-8">
+                <h2 class="text-xl font-semibold text-green-800 mb-4">When to use Monthly Plans</h2>
+                <ul class="text-gray-700 space-y-2 list-disc list-inside">
+                    <li>Best for regular document processing</li>
+                    <li>Includes SPUs with better per-unit pricing</li>
+                    <li>Collaboration features in the Team plan</li>
+                    <li>Predictable monthly costs</li>
+                </ul>
+            </div>
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 md:p-8">
+                <h2 class="text-xl font-semibold text-blue-800 mb-2">$ Credits</h2>
+                <p class="text-gray-700 mb-4">
+                    Each account starts with <strong>100 SPU credits</strong> to try DocRouter. Contact us for additional credit grants.
+                </p>
+                <h3 class="text-lg font-medium text-blue-800 mb-2">When to use Credits</h3>
+                <ul class="text-gray-700 space-y-2 list-disc list-inside">
+                    <li>Perfect for testing and getting started</li>
+                    <li>Ideal for occasional or one-off document processing</li>
+                    <li>No monthly commitment required</li>
+                    <li>Pay only for what you use</li>
+                </ul>
+                <div class="mt-4">
+                    <button onclick="openCalendlyModal()"
+                            class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 text-sm">
+                        Request Additional Credits
+                    </button>
+                </div>
+            </div>
         </section>
 
         <!-- CTA Section -->
