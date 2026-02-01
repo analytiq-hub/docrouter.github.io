@@ -414,7 +414,7 @@ Highly engaged users (high document volume, long tenure).
 6. **Professional but Friendly Tone** - Approachable language that doesn't overwhelm
 
 ### Standard Sections (All Emails)
-1. **Header** - Logo/branding, gradient background (optional)
+1. **Header** - Logo/branding, solid background color (no gradients; use `background-color: #0070f3`)
 2. **Section 1 (White background)** - Personal greeting, introduction, primary CTA
 3. **Section 2 (Light background)** - "How it works" with step-by-step guide or visual reference
 4. **Section 3 (White background)** - Tips, best practices, or additional information with checkmarks
@@ -427,6 +427,58 @@ Highly engaged users (high document volume, long tenure).
 - **Clear CTAs** - Primary action button, secondary text links
 - **Illustration references** - Mention visuals/animations that would be in the actual HTML
 - **Color scheme** - Primary brand color (#0070f3 blue) for CTAs, alternating white/light backgrounds
+
+### Email Client Compatibility (CSS & HTML)
+
+Many email clients (Yahoo Mail, Gmail, Outlook desktop, etc.) strip or ignore modern CSS and HTML. To ensure consistent rendering across clients, follow these rules in all email templates.
+
+#### CSS to avoid
+
+| Feature | Issue | Use instead |
+|--------|--------|-------------|
+| **`linear-gradient()` / `radial-gradient()`** | Not supported in many webmail clients | Solid `background-color` (e.g. `#0070f3`) |
+| **`background` shorthand with gradients/images** | Often ignored | `background-color` only |
+| **`background-image` / `url()`** | Blocked or stripped in many clients | Solid colors; for images use `<img>` with hosted URLs |
+| **`box-shadow`** | Stripped in Outlook and some Yahoo/Gmail | Omit; use borders if separation needed |
+| **`border-radius`** | Ignored in older Outlook (Word engine) | Omit on main container if Outlook is critical; small radius on buttons/circles often works elsewhere |
+| **Flexbox (`display: flex`)** | Unreliable in email | Table-based layout |
+| **CSS Grid** | Largely unsupported | Table-based layout |
+| **`position: fixed` / `absolute`** | Poor or no support | Avoid |
+| **`float`** | Inconsistent | Tables for columns |
+| **`margin`** | Ignored or inconsistent (especially Outlook) | Table `cellpadding` and `padding` on `<td>` |
+| **`max-width` / `min-width`** | Ignored in Outlook | Fixed `width` on `<table>` (e.g. `width="600"`) |
+| **`transform`**, **`animation`**, **`@keyframes`**, **`transition`** | Stripped in most clients | Avoid |
+| **`@font-face` / custom fonts** | Often blocked | Web-safe stack: Arial, Helvetica, Georgia, sans-serif |
+| **`opacity`**, **`calc()`** | Unreliable | Avoid |
+
+#### HTML / structure to avoid
+
+| Feature | Issue | Use instead |
+|--------|--------|-------------|
+| **Layout with `<div>`** | Inconsistent rendering | Table-based layout (`<table>`, `<tr>`, `<td>`) |
+| **External stylesheets (`<link href="...">`)** | Blocked by many clients | Inline styles only |
+| **`<style>` in `<head>` for critical styles** | Stripped by Gmail and others | Inline styles on elements |
+| **HTML5 sectioning** (`<section>`, `<article>`, `<header>`, `<main>`) | Use tables for structure | `<table>` and `<td>` for sections |
+| **`<video>` / `<audio>`** | Blocked or stripped | Link to a web page |
+| **Inline SVG** | Stripped or broken in some clients | Hosted images (`<img src="...">`) |
+| **Forms** (`<form>`, `<input>`, `<button>`) | Often stripped or broken | Links to web forms |
+| **JavaScript** | Removed by virtually all clients | Do not use |
+| **Base64 images** in `src` or CSS | Blocked by Gmail, Outlook, others | Hosted image URLs only |
+
+#### Safe patterns for email
+
+1. **Layout:** Single wrapper `<table>`, nested tables for sections and columns; no flex/grid/float for layout.
+2. **Styling:** Inline styles on `<td>` and `<a>`; use `background-color`, `color`, `font-family`, `font-size`, `padding`, `border`.
+3. **Widths:** Set on `<table>` (e.g. `width="600"`) and key `<td>` cells; do not rely on `max-width` in Outlook.
+4. **Fonts:** Web-safe stack only, e.g. `font-family: Arial, Helvetica, sans-serif;`.
+5. **Images:** Hosted URLs only; always include `width`, `height`, and `alt`.
+6. **Buttons:** Styled `<a>` (or table cell) with inline styles, not `<button>`.
+
+#### Outlook-specific (Word rendering engine)
+
+- **Backgrounds:** `background` / `background-image` on `<td>` often need a VML block for Outlook; prefer solid `background-color`.
+- **Margins:** Largely ignored; use spacer tables or `padding` on `<td>`.
+- **Conditionals:** Use `<!--[if mso]>` for Outlook-only markup when necessary.
 
 ### Brevo Template Variables
 
