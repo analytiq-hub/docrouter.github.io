@@ -22,8 +22,12 @@ title: "DocRouter - AI-Powered Document Processing"
                class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 border-2 border-transparent no-underline">
                 Launch Application
             </a>
-            <a href="docs/how-it-works"
+            <a href="/pricing/"
                class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
+                View Pricing
+            </a>
+            <a href="docs/how-it-works"
+               class="inline-block border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
                 See How It Works
             </a>
         </div>
@@ -85,7 +89,8 @@ title: "DocRouter - AI-Powered Document Processing"
                 <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 shadow-md">
                     <h3 class="text-xl font-medium text-white mb-3">What Your Developers Get</h3>
                     <ul class="text-white space-y-2 text-left">
-                        <li>• Comprehensive REST APIs, Claude Agent integration, Python and TypeScript SDKs</li>
+                        <li>• REST APIs, Python & TypeScript SDKs, N8N nodes, MCP server</li>
+                        <li>• Webhooks for real-time event delivery</li>
                         <li>• Sandbox environment for testing integrations</li>
                         <li>• Enterprise-grade security and compliance</li>
                         <li>• Dedicated developer support and technical guidance</li>
@@ -298,10 +303,18 @@ title: "DocRouter - AI-Powered Document Processing"
 
     <footer class="mt-12 text-center text-gray-600">
         <p>© 2024 DocRouter.AI. All rights reserved.</p>
-        <div class="mt-4">
+        <div class="mt-4 flex flex-wrap justify-center gap-6">
+            <a href="/pricing/"
+               class="text-blue-600 hover:text-blue-800 no-underline">
+                Pricing
+            </a>
+            <a href="/docs/"
+               class="text-blue-600 hover:text-blue-800 no-underline">
+                Documentation
+            </a>
             <a href="https://github.com/analytiq-hub/doc-router"
                class="text-blue-600 hover:text-blue-800 no-underline">
-                View on GitHub
+                GitHub
             </a>
         </div>
     </footer>
