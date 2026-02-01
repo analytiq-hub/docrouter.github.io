@@ -74,7 +74,7 @@
                                         <td style="padding-bottom: 10px;">
                                             <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.8;">
                                                 <span style="color: #28a745; font-size: 18px; margin-right: 8px;">✓</span>
-                                                {{ params.benefit_2 | default: 'Reduced manual review time by 40%' }}
+                                                {{ params.benefit_2 | default: 'Reduced manual review time by 90%' }}
                                             </p>
                                         </td>
                                     </tr>
@@ -98,38 +98,45 @@
                                 🔧 How It Works
                             </h2>
 
+                            <!-- Steps (table-based for email client compatibility; avoid flexbox) -->
                             <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                                 <tr>
-                                    <td style="padding-bottom: 20px;">
-                                        <div style="display: flex; align-items: flex-start;">
-                                            <div style="width: 40px; height: 40px; background-color: #0070f3; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 600; font-size: 18px; margin-right: 15px; flex-shrink: 0;">1</div>
-                                            <div>
-                                                <h3 style="margin: 0 0 5px 0; color: #333333; font-size: 18px; font-weight: 600;">Update Your Schema</h3>
-                                                <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">Add validation rules to your existing schemas or create new ones with enhanced validation.</p>
-                                            </div>
-                                        </div>
+                                    <td width="55" valign="top" style="padding-bottom: 20px; padding-right: 15px; vertical-align: top;">
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td width="40" height="40" align="center" style="background-color: #0070f3; border-radius: 50%; color: #ffffff; font-weight: 600; font-size: 18px; line-height: 40px;">1</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td valign="top" style="padding-bottom: 20px; vertical-align: top;">
+                                        <h3 style="margin: 0 0 5px 0; color: #333333; font-size: 18px; font-weight: 600;">Update Your Schema</h3>
+                                        <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">Add validation rules to your existing schemas or create new ones with enhanced validation.</p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="padding-bottom: 20px;">
-                                        <div style="display: flex; align-items: flex-start;">
-                                            <div style="width: 40px; height: 40px; background-color: #0070f3; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 600; font-size: 18px; margin-right: 15px; flex-shrink: 0;">2</div>
-                                            <div>
-                                                <h3 style="margin: 0 0 5px 0; color: #333333; font-size: 18px; font-weight: 600;">Link to Prompts</h3>
-                                                <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">Connect validated schemas to your prompts for automatic quality assurance.</p>
-                                            </div>
-                                        </div>
+                                    <td width="55" valign="top" style="padding-bottom: 20px; padding-right: 15px; vertical-align: top;">
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td width="40" height="40" align="center" style="background-color: #0070f3; border-radius: 50%; color: #ffffff; font-weight: 600; font-size: 18px; line-height: 40px;">2</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td valign="top" style="padding-bottom: 20px; vertical-align: top;">
+                                        <h3 style="margin: 0 0 5px 0; color: #333333; font-size: 18px; font-weight: 600;">Link to Prompts</h3>
+                                        <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">Connect validated schemas to your prompts for automatic quality assurance.</p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <div style="display: flex; align-items: flex-start;">
-                                            <div style="width: 40px; height: 40px; background-color: #0070f3; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 600; font-size: 18px; margin-right: 15px; flex-shrink: 0;">3</div>
-                                            <div>
-                                                <h3 style="margin: 0 0 5px 0; color: #333333; font-size: 18px; font-weight: 600;">Enjoy Better Results</h3>
-                                                <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">AI extraction results are automatically validated and flagged for any issues.</p>
-                                            </div>
-                                        </div>
+                                    <td width="55" valign="top" style="padding-right: 15px; vertical-align: top;">
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td width="40" height="40" align="center" style="background-color: #0070f3; border-radius: 50%; color: #ffffff; font-weight: 600; font-size: 18px; line-height: 40px;">3</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td valign="top" style="vertical-align: top;">
+                                        <h3 style="margin: 0 0 5px 0; color: #333333; font-size: 18px; font-weight: 600;">Enjoy Better Results</h3>
+                                        <p style="margin: 0; color: #555555; font-size: 15px; line-height: 1.6;">AI extraction results are automatically validated and flagged for any issues.</p>
                                     </td>
                                 </tr>
                             </table>
