@@ -17,22 +17,13 @@ Workflows react to DocRouter events (e.g. document processed, extraction complet
 
 ## N8N
 
-**N8N** is a visual workflow tool. Use it to connect DocRouter to other apps and services.
-
-- **Package:** <a href="https://www.npmjs.com/package/n8n-nodes-docrouter">n8n-nodes-docrouter</a> — DocRouter nodes and credentials for n8n (Documents, Tags, Prompts, Knowledge Base, and more).
-- **Install, credentials, and examples:** <a href="/ai/programming/engineering/tutorials/how-we-built-docrouter-n8n-nodes-with-cursor/">How We Built the DocRouter n8n Nodes With Cursor</a>.
-
-<p class="my-4">
-  <a href="/ai/programming/engineering/tutorials/how-we-built-docrouter-n8n-nodes-with-cursor/">
-    <img src="/assets/images/n8n_gmail_to_docrouter.png" alt="Gmail to DocRouter workflow in n8n" style="max-width: 50%; display: block; margin: 0 auto;" />
-  </a>
-</p>
+**N8N** is a visual workflow tool. Use it to connect DocRouter to other apps and services. See [N8N]({{ '/docs/n8n/' | relative_url }}) for package, install, credentials, and webhook setup.
 
 ---
 
 ## Temporal
 
-**Temporal** is for coded workflows where you need durable orchestration—e.g. classify pages, group them by class, then process each group. Use it when documents must be split, classified, grouped, and processed by group (e.g. multi‑page surgery schedules). For a full walkthrough with DocRouter, see our blog post: <a href="/tech/programming/ai/tutorials/how-to-create-document-workflows-with-temporal-and-docrouter-ai/">How to create document workflows with Temporal and DocRouter.AI</a>.
+**Temporal** is for coded workflows where you need durable orchestration—e.g. classify pages, group them by class, then process each group. See [Temporal]({{ '/docs/temporal/' | relative_url }}) for how it fits with DocRouter and a full walkthrough.
 
 ---
 
