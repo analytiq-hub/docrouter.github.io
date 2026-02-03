@@ -9,8 +9,6 @@
 
 /* @theme docrouter */
 
-@import 'default';
-
 /* ============================================
    Spacing Scale (8px rhythm)
    ============================================ */
@@ -42,10 +40,10 @@
 }
 
 /* ============================================
-   Base Slide Styles
+   Base Slide Styles (using section per Marpit docs)
    ============================================ */
 
-:root {
+section {
   box-sizing: border-box;
   width: 1280px;
   height: 720px;
@@ -55,24 +53,22 @@
   line-height: 1.45;
   color: var(--color-text);
   
-  padding: var(--space-4) var(--space-6);
+  padding: var(--space-5) var(--space-6);
   background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-surface) 100%);
   
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  overflow-y: auto;
-  min-height: 0;
 }
 
-*,
-*::before,
-*::after {
+section *,
+section *::before,
+section *::after {
   box-sizing: inherit;
 }
 
 /* Accent bar */
-:root:not(.lead):not(.closing)::before {
+section:not(.lead):not(.closing)::before {
   content: '';
   position: absolute;
   top: 0;
@@ -147,38 +143,38 @@ a:hover {
    Lead Slide
    ============================================ */
 
-:root.lead {
+section.lead {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
   justify-content: center;
   text-align: center;
   padding: var(--space-6);
 }
 
-:root.lead::before {
+section.lead::before {
   display: none;
 }
 
-:root.lead h1 {
+section.lead h1 {
   color: #ffffff;
   font-size: 2.6rem;
   margin-bottom: var(--space-2);
 }
 
-:root.lead h2 {
+section.lead h2 {
   color: rgba(255, 255, 255, 0.9);
   font-size: 1.4rem;
   font-weight: 500;
   margin-bottom: var(--space-4);
 }
 
-:root.lead p {
+section.lead p {
   color: rgba(255, 255, 255, 0.85);
   font-size: 1.1rem;
   max-width: 600px;
   margin: var(--space-3) auto;
 }
 
-:root.lead a {
+section.lead a {
   color: rgba(255, 255, 255, 0.95);
 }
 
@@ -186,29 +182,29 @@ a:hover {
    Closing Slide
    ============================================ */
 
-:root.closing {
+section.closing {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
   justify-content: center;
   text-align: center;
   padding: var(--space-6);
 }
 
-:root.closing::before {
+section.closing::before {
   display: none;
 }
 
-:root.closing h1 {
+section.closing h1 {
   color: #ffffff;
   font-size: 2.4rem;
 }
 
-:root.closing p {
+section.closing p {
   color: rgba(255, 255, 255, 0.9);
   font-size: 1.1rem;
   margin: var(--space-3) auto;
 }
 
-:root.closing a {
+section.closing a {
   color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 0.2em;
@@ -251,43 +247,63 @@ blockquote {
    Code blocks (compact, no overflow)
    ============================================ */
 
-pre {
-  margin: var(--space-2) 0;
+/* Code blocks - light theme for readability */
+section pre {
+  margin: var(--space-3) 0;
   padding: var(--space-4);
-  background: #1e293b;
-  color: #f1f5f9;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: var(--space-2);
-  font-size: 0.95em;
-  line-height: 1.5;
-  max-height: 240px;
+  font-size: 0.9em;
+  line-height: 1.6;
+  max-height: 280px;
+  overflow-x: auto;
   overflow-y: auto;
-  flex-shrink: 1;
-  min-height: 0;
   font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
-  letter-spacing: 0.01em;
 }
 
-pre code {
+section pre code {
   background: none;
   padding: 0;
-  color: #f1f5f9;
+  color: var(--color-text);
   font-size: 1em;
   font-family: inherit;
 }
 
-pre code span {
-  color: inherit !important;
+/* Override ALL syntax highlighting - force readable colors */
+section pre code,
+section pre code * {
+  color: var(--color-text) !important;
 }
 
-code {
+/* Syntax highlighting with good contrast */
+section pre code .hljs-string,
+section pre code .hljs-attr,
+section pre code .token.string,
+section pre code .token.property {
+  color: #059669 !important;
+}
+
+section pre code .hljs-number,
+section pre code .hljs-literal,
+section pre code .token.number,
+section pre code .token.boolean {
+  color: #d97706 !important;
+}
+
+section pre code .hljs-keyword,
+section pre code .token.keyword {
+  color: var(--color-primary) !important;
+}
+
+/* Inline code */
+section code {
   font-size: 0.9em;
-  padding: 0.1em 0.35em;
+  padding: 0.15em 0.4em;
   background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 4px;
   font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
-}
-
-:not(pre) > code {
   color: var(--color-primary-dark);
 }
 
@@ -478,13 +494,13 @@ code {
   border: 2px solid var(--color-primary);
 }
 
-:root.lead .btn-primary {
+section.lead .btn-primary {
   background: #ffffff;
   color: var(--color-primary);
   box-shadow: 0 10px 22px rgba(15, 23, 42, 0.2);
 }
 
-:root.lead .btn-secondary {
+section.lead .btn-secondary {
   background: transparent;
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.5);
@@ -508,18 +524,36 @@ code {
    Pagination
    ============================================ */
 
+/* Pagination (per Marpit docs) */
 section::after {
-  content: attr(data-marpit-pagination);
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
   position: absolute;
   right: var(--space-4);
   bottom: var(--space-3);
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   color: var(--color-subtle);
-  flex-shrink: 0;
 }
 
-:root.lead::after,
-:root.closing::after {
+/* Header and footer support */
+section header,
+section footer {
+  position: absolute;
+  left: var(--space-6);
+  right: var(--space-6);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+section header {
+  top: var(--space-3);
+}
+
+section footer {
+  bottom: var(--space-3);
+}
+
+section.lead::after,
+section.closing::after {
   color: rgba(255, 255, 255, 0.5);
 }
 
