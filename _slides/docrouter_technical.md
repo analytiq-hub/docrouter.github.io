@@ -12,7 +12,7 @@ description: Architecture, workflow, and integration details
 
 ## Technical Deep Dive
 
-Architecture, workflow, and integration details.
+Architecture, workflow, and integration details for engineering teams.
 
 <div class="cta center mt-5">
   <a class="btn btn-primary" href="https://docrouter.ai/docs">Docs</a>
@@ -21,198 +21,130 @@ Architecture, workflow, and integration details.
 
 ---
 
-# A pipeline built for documents
+# End-to-end pipeline overview
 
-<div class="columns">
-  <div>
-    <h3>Core stages</h3>
-    <ul>
-      <li>Ingest and normalize</li>
-      <li>Route by tag</li>
-      <li>Extract with prompts</li>
-      <li>Validate with schemas</li>
-    </ul>
-  </div>
-  <div>
-    <blockquote>
-      Tags are the routing layer that connect uploads to prompts.
-    </blockquote>
-  </div>
-</div>
+Document-to-data: unstructured files → structured JSON → API or webhooks.
+
+1. **Ingest** — email, web UI, REST API, SDKs
+2. **Normalize** — OCR, segmentation, image cleanup
+3. **Route** — tag-based mapping to prompts and schemas
+4. **Extract** — prompt-driven field extraction
+5. **Validate** — schema + confidence checks
+6. **Deliver** — webhooks, API pulls, workflows
+
+Tags connect uploads to prompts.
 
 ---
 
-# Ingestion is flexible
+# Ingestion and normalization
 
-<div class="cards">
-  <div class="card">
-    <h3>Email and web</h3>
-    <p>Quick onboarding and manual uploads</p>
-  </div>
-  <div class="card">
-    <h3>REST API</h3>
-    <p>Programmatic upload and control</p>
-  </div>
-  <div class="card">
-    <h3>SDKs</h3>
-    <p>Python and TypeScript clients</p>
-  </div>
-</div>
+**Ingestion:** Web UI, email, REST API, Python/TypeScript SDKs
+
+**Normalization:** OCR, layout analysis, multi-page handling, image enhancement (deskew, denoise)
 
 ---
 
-# Routing starts with tags
+# Tags + prompts + schemas = deterministic routing
 
-<div class="columns">
-  <div>
-    <h3>Why tags matter</h3>
-    <ul>
-      <li>Explicit document intent</li>
-      <li>Predictable prompt mapping</li>
-      <li>Immediate extraction results</li>
-      <li>Simple onboarding flow</li>
-    </ul>
-  </div>
-  <div>
-    <h3>Onboarding flow</h3>
-    <ol>
-      <li>Create tag and prompt</li>
-      <li>Upload with tag</li>
-      <li>See extraction results</li>
-    </ol>
-  </div>
-</div>
+Tags define document intent and drive deterministic routing.
+
+**Onboarding sequence**
+1. Create a tag and prompt
+2. Attach schema to prompt (typed output)
+3. Upload documents with the tag
+4. Results appear immediately
+
+**Why this matters**
+- No ambiguity about which prompt runs
+- Stable outputs as document volumes grow
+- Fast iteration on prompt quality
 
 ---
 
-# Prompts define extraction logic
+# Prompt-driven extraction
 
-<div class="cards two">
-  <div class="card">
-    <h3>Instruction-driven</h3>
-    <p>Natural language extraction rules</p>
-  </div>
-  <div class="card">
-    <h3>Repeatable outputs</h3>
-    <p>Consistent results across documents</p>
-  </div>
-</div>
+Prompts specify the extraction logic in natural language and control:
+- What fields to extract
+- Where to look for each field
+- How to handle missing or ambiguous values
+- Formatting requirements (dates, currencies, IDs)
 
-<p class="text-muted text-small mt-4">Prompts are linked to tags for routing.</p>
+Prompts are linked to tags, ensuring deterministic routing.
 
 ---
 
-# Schemas enforce structure
+# Schemas enforce typed output
 
-<div class="columns">
-  <div>
-    <h3>Why schemas</h3>
-    <ul>
-      <li>Typed output fields</li>
-      <li>Stable downstream mapping</li>
-      <li>Validation and consistency</li>
-      <li>Faster integration</li>
-    </ul>
-  </div>
-  <div>
-    <div class="card">
-      <h3>Output example</h3>
-      <p>JSON shaped to your data model</p>
-    </div>
-  </div>
-</div>
+- Strongly typed outputs (strings, numbers, arrays, objects)
+- Stable downstream integrations
+- Field-level validation
+
+Example:
+```json
+{ "invoice_number": "string", "invoice_date": "date",
+  "vendor_name": "string", "total_amount": "number" }
+```
 
 ---
 
-# Human review is optional
+# Confidence and review workflow
 
-<div class="cards two">
-  <div class="card">
-    <h3>Auto-first</h3>
-    <p>Default to fully automated flow</p>
-  </div>
-  <div class="card">
-    <h3>Human-in-the-loop</h3>
-    <p>Review when confidence is low</p>
-  </div>
-</div>
+DocRouter supports auto-first processing with optional human review.
+- Confidence thresholds can trigger review
+- Review UI for field-level correction
+- Auditability for regulated workflows
 
 ---
 
-# Results delivered your way
+# Results delivery patterns
 
-<div class="cards">
-  <div class="card">
-    <h3>Webhooks</h3>
-    <p>Event-driven completion</p>
-  </div>
-  <div class="card">
-    <h3>REST API</h3>
-    <p>Pull results on demand</p>
-  </div>
-  <div class="card">
-    <h3>Integrations</h3>
-    <p>n8n and Temporal workflows</p>
-  </div>
-</div>
+**Delivery options**
+- **Webhooks:** event-driven completion callbacks
+- **REST API:** polling or on-demand pulls
+- **Workflows:** n8n or Temporal integration
+
+Typical webhook payload includes document ID, status, and extraction JSON.
 
 ---
 
-# AI assistant integrations
+# API integration surface
 
-<div class="cards two">
-  <div class="card">
-    <h3>MCP server</h3>
-    <p>Connect Claude Code and Cursor</p>
-  </div>
-  <div class="card">
-    <h3>Agent workflows</h3>
-    <p>Automate extraction in pipelines</p>
-  </div>
-</div>
+Core REST endpoints:
+- `POST /documents` — upload
+- `GET /documents/{id}` — status
+- `GET /documents/{id}/extractions` — results
+- `POST /webhooks` — register callbacks
+
+SDKs wrap these endpoints with typed clients.
 
 ---
 
-# Use cases fit real systems
+# AI agent and MCP integrations
 
-<div class="cards">
-  <div class="card">
-    <h3>Banking</h3>
-    <p>Loan docs and statements</p>
-  </div>
-  <div class="card">
-    <h3>Insurance</h3>
-    <p>Applications and claims</p>
-  </div>
-  <div class="card">
-    <h3>Supply chain</h3>
-    <p>Bills of lading</p>
-  </div>
-</div>
+DocRouter ships an MCP server so AI agents can:
+- Upload documents
+- Fetch extraction results
+- Reason over outputs
+- Orchestrate multi-step workflows
 
 ---
 
-# Start building in minutes
+# Document classes and common schemas
 
-<div class="columns">
-  <div>
-    <ul>
-      <li>Create tag and prompt</li>
-      <li>Upload a sample document</li>
-      <li>Validate schema output</li>
-      <li>Integrate via API</li>
-    </ul>
-    <div class="cta">
-      <a class="btn btn-primary" href="https://docrouter.ai/docs/quick-start/">Quick Start</a>
-      <a class="btn btn-secondary" href="https://docrouter.ai/docs/rest-api/">REST API</a>
-    </div>
-  </div>
-  <div>
-    <blockquote>
-      Document to data in three steps.
-    </blockquote>
-  </div>
-</div>
+**Classes:** Invoices, insurance apps, bills of lading, medical auth, PE reports
+
+**Common fields:** Identifiers, dates (issue/due/effective), parties, line items and totals
+
+---
+
+# Implementation checklist
+
+1. Define document classes and tags
+2. Draft prompts for each class
+3. Attach schemas for typed outputs
+4. Upload sample docs and iterate
+5. Wire webhooks or API pulls
+6. Add review step if needed
 
 ---
 

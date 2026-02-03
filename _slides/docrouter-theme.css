@@ -46,20 +46,29 @@
    ============================================ */
 
 :root {
+  box-sizing: border-box;
   width: 1280px;
   height: 720px;
   
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 26px;
-  line-height: 1.5;
+  font-size: 22px;
+  line-height: 1.45;
   color: var(--color-text);
   
-  padding: var(--space-6) var(--space-7);
+  padding: var(--space-4) var(--space-6);
   background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-surface) 100%);
   
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 /* Accent bar */
@@ -69,8 +78,9 @@
   top: 0;
   left: 0;
   right: 0;
-  height: var(--space-1);
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  border-radius: 0 0 2px 2px;
 }
 
 /* ============================================
@@ -78,19 +88,20 @@
    ============================================ */
 
 h1 {
-  font-size: clamp(2.2rem, 4vw, 2.6rem);
+  font-size: clamp(2rem, 4vw, 2.4rem);
   font-weight: 700;
   color: var(--color-text);
-  margin: 0 0 var(--space-4) 0;
+  margin: 0 0 var(--space-3) 0;
   line-height: 1.15;
   letter-spacing: -0.02em;
+  flex-shrink: 0;
 }
 
 h2 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--color-text);
-  margin: 0 0 var(--space-3) 0;
+  margin: 0 0 var(--space-2) 0;
   line-height: 1.2;
 }
 
@@ -103,7 +114,7 @@ h3 {
 
 p {
   margin: var(--space-2) 0;
-  line-height: 1.55;
+  line-height: 1.5;
   max-width: 65ch;
 }
 
@@ -140,7 +151,7 @@ a:hover {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
   justify-content: center;
   text-align: center;
-  padding: var(--space-7);
+  padding: var(--space-6);
 }
 
 :root.lead::before {
@@ -179,7 +190,7 @@ a:hover {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
   justify-content: center;
   text-align: center;
-  padding: var(--space-7);
+  padding: var(--space-6);
 }
 
 :root.closing::before {
@@ -199,6 +210,8 @@ a:hover {
 
 :root.closing a {
   color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 /* ============================================
@@ -206,13 +219,13 @@ a:hover {
    ============================================ */
 
 ul, ol {
-  margin: var(--space-3) 0;
+  margin: var(--space-2) 0;
   padding-left: 1.2em;
 }
 
 li {
-  margin: var(--space-2) 0;
-  line-height: 1.45;
+  margin: var(--space-1) 0;
+  line-height: 1.4;
 }
 
 li::marker {
@@ -232,6 +245,39 @@ blockquote {
   color: var(--color-muted);
   font-style: italic;
   max-width: 55ch;
+}
+
+/* ============================================
+   Code blocks (compact, no overflow)
+   ============================================ */
+
+pre {
+  margin: var(--space-2) 0;
+  padding: var(--space-3);
+  background: var(--color-text);
+  color: #e2e8f0;
+  border-radius: var(--space-2);
+  font-size: 0.75em;
+  line-height: 1.4;
+  max-height: 220px;
+  overflow-y: auto;
+  flex-shrink: 1;
+  min-height: 0;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  background: var(--color-surface);
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  color: var(--color-primary-dark);
 }
 
 /* ============================================
@@ -454,10 +500,11 @@ blockquote {
 section::after {
   content: attr(data-marpit-pagination);
   position: absolute;
-  right: var(--space-6);
-  bottom: var(--space-4);
+  right: var(--space-4);
+  bottom: var(--space-3);
   font-size: 0.6rem;
   color: var(--color-subtle);
+  flex-shrink: 0;
 }
 
 :root.lead::after,
