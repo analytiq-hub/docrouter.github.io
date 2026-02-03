@@ -7,196 +7,267 @@ description: AI-powered document processing for invoices, manifests, and reports
 ---
 
 <!-- _class: lead -->
-<div class="kicker">Sales Intro</div>
+
 # DocRouter.AI
-## AI-Powered Document Processing
 
-Automate manual data entry from **invoices**, **manifests**, and **reports**.
+## Intelligent Document Processing
+
+<p>Transform unstructured documents into structured data<br/>ready for your APIs, ERPs, and workflows.</p>
+
+<div class="cta" style="justify-content: center; margin-top: 1.5em;">
+  <a class="btn btn-primary" href="https://app.docrouter.ai">Start Free Trial</a>
+  <a class="btn btn-secondary" href="https://calendly.com/analytiqhub">Book a Demo</a>
+</div>
 
 ---
 
-# The Problem
-<div class="cards two">
+# The Challenge
+
+**Every business drowns in documents.** Invoices, applications, reports, forms — all containing critical data trapped in PDFs and scans.
+
+<div class="cards two" style="margin-top: 0.8em;">
   <div class="card">
-    <h3>Manual data entry</h3>
-    <p class="muted">Slow, error-prone, expensive</p>
+    <h3><span class="icon">⏱️</span> Manual Data Entry</h3>
+    <p>Hours spent re-keying information that already exists in documents. Slow, tedious, and error-prone.</p>
   </div>
   <div class="card">
-    <h3>Document volume</h3>
-    <p class="muted">Invoices, applications, BOLs, reports piling up</p>
+    <h3><span class="icon">📈</span> Growing Backlogs</h3>
+    <p>Document volumes increase faster than teams can process them, creating bottlenecks and delays.</p>
   </div>
   <div class="card">
-    <h3>Compliance & audit</h3>
-    <p class="muted">Need validation, traceability, and consistency</p>
+    <h3><span class="icon">⚠️</span> Costly Errors</h3>
+    <p>Manual processing leads to mistakes that impact compliance, customer satisfaction, and revenue.</p>
   </div>
   <div class="card">
-    <h3>Integration gaps</h3>
-    <p class="muted">Data stuck in PDFs instead of your systems</p>
+    <h3><span class="icon">🔗</span> Integration Gaps</h3>
+    <p>Data stuck in documents instead of flowing into your ERP, CRM, and business systems.</p>
   </div>
 </div>
 
 ---
 
-# What DocRouter Does
-<div class="callout">
-  <strong>DocRouter turns unstructured documents into structured data</strong> — ready for your APIs, ERPs, and workflows.
+# The Solution
+
+<div class="callout" style="font-size: 1.05em;">
+  <strong>DocRouter extracts structured data from any document</strong> — invoices, applications, manifests, forms — and delivers it exactly where you need it.
 </div>
 
-<div class="cards">
+<div class="cards" style="margin-top: 1em;">
   <div class="card">
-    <div class="step-badge">1</div>
-    <h3>Upload</h3>
-    <p class="muted">Email, API, or web upload</p>
+    <h3><span class="badge">1</span> Upload</h3>
+    <p>Send documents via email, API, or web interface. PDFs, images, scans — we handle them all.</p>
   </div>
   <div class="card">
-    <div class="step-badge">2</div>
-    <h3>AI extracts</h3>
-    <p class="muted">Validation and structuring to your specs</p>
+    <h3><span class="badge">2</span> Process</h3>
+    <p>AI extracts, validates, and structures data according to your specifications and schemas.</p>
   </div>
   <div class="card">
-    <div class="step-badge">3</div>
-    <h3>Get results</h3>
-    <p class="muted">API, webhook, or direct integration</p>
+    <h3><span class="badge">3</span> Deliver</h3>
+    <p>Receive clean, structured data via API, webhook, or direct integration with your systems.</p>
   </div>
 </div>
 
-*Simple, powerful, and built to fit your workflow.*
+<p class="text-center text-muted" style="margin-top: 0.8em;"><em>Human-in-the-loop review available when you need it.</em></p>
 
 ---
 
-# How It Works
+# Real Results
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat-value">90%</div>
+    <div class="stat-label">Time Saved</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value">99%</div>
+    <div class="stat-label">Accuracy</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value">10x</div>
+    <div class="stat-label">Faster Processing</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value">&lt;1 min</div>
+    <div class="stat-label">Setup Time</div>
+  </div>
+</div>
+
+<div class="callout purple text-center" style="margin-top: 1.2em;">
+  <strong>From days of manual work to minutes of automated processing.</strong><br/>
+  <span class="text-muted">See extraction results immediately after uploading your first document.</span>
+</div>
+
+---
+
+# What We Process
+
 <div class="columns">
   <div>
-    <h3>Workflow at a glance</h3>
+    <h3 style="margin-bottom: 0.5em;"><span class="icon">🔍</span> AI Capabilities</h3>
     <ul>
-      <li><strong>Upload</strong> PDFs, images, or scans</li>
-      <li><strong>Process</strong> with extraction and validation</li>
-      <li><strong>Deliver</strong> results to your systems</li>
+      <li><strong>Handwriting recognition</strong> — even messy forms</li>
+      <li><strong>Table extraction</strong> — complex multi-page tables</li>
+      <li><strong>Form parsing</strong> — checkboxes, signatures, dates</li>
+      <li><strong>Multi-language</strong> — 50+ languages supported</li>
+      <li><strong>Image enhancement</strong> — fix skew, blur, low contrast</li>
     </ul>
   </div>
   <div>
-    <blockquote>
-      Documents flow through automated processing with <strong>human oversight</strong> for quality control when you need it.
+    <h3 style="margin-bottom: 0.5em;"><span class="icon purple">📄</span> Supported Formats</h3>
+    <div style="margin-top: 0.5em;">
+      <span class="pill blue">PDF</span>
+      <span class="pill blue">JPEG</span>
+      <span class="pill blue">PNG</span>
+      <span class="pill blue">TIFF</span>
+      <span class="pill purple">Scanned docs</span>
+      <span class="pill purple">Emails</span>
+      <span class="pill purple">Faxes</span>
+      <span class="pill">Word</span>
+      <span class="pill">Excel</span>
+    </div>
+    <blockquote style="margin-top: 0.8em;">
+      "If a human can read it, DocRouter can extract it."
     </blockquote>
   </div>
 </div>
 
 ---
 
-# Processing Capabilities
+# Industry Solutions
+
+<div class="cards" style="font-size: 0.95em;">
+  <div class="card">
+    <h3><span class="icon">🏦</span> Banking</h3>
+    <p>Loan applications, financial statements, income verification, KYC documents</p>
+  </div>
+  <div class="card">
+    <h3><span class="icon purple">📋</span> Insurance</h3>
+    <p>Handwritten applications, claims forms, policy documents, AMS integration</p>
+  </div>
+  <div class="card">
+    <h3><span class="icon green">📦</span> Supply Chain</h3>
+    <p>Bills of lading, customs forms, commodity reports, shipping manifests</p>
+  </div>
+  <div class="card">
+    <h3><span class="icon">🧪</span> Clinical Trials</h3>
+    <p>Site invoices, patient forms, expense reports, regulatory documents</p>
+  </div>
+  <div class="card">
+    <h3><span class="icon purple">📊</span> Private Equity</h3>
+    <p>Financial reports, investment memos, due diligence documents</p>
+  </div>
+  <div class="card">
+    <h3><span class="icon green">🏥</span> Healthcare / DME</h3>
+    <p>Prescriptions, insurance authorizations, patient intake forms</p>
+  </div>
+</div>
+
+<p class="text-center text-muted" style="margin-top: 0.6em;">Don't see your industry? <strong>We build custom solutions.</strong></p>
+
+---
+
+# Why DocRouter?
+
 <div class="columns">
-  <div>
-    <h3>Capabilities</h3>
-    <ul>
-      <li>Handwritten text recognition</li>
-      <li>Printed text & table parsing</li>
-      <li>Form and signature detection</li>
-      <li>Multi-language support</li>
-      <li>Image quality enhancement</li>
+  <div class="card">
+    <h3>Enterprise Vendors</h3>
+    <ul class="text-small text-muted" style="margin-top: 0.4em;">
+      <li>One-size-fits-all approach</li>
+      <li>6-12 month implementations</li>
+      <li>$100K+ annual contracts</li>
+      <li>Generic support queues</li>
+      <li>Rigid, inflexible systems</li>
     </ul>
   </div>
-  <div>
-    <h3>Supported formats</h3>
-    <p class="muted">PDF, JPEG, PNG, scanned documents, emails, faxes, and more.</p>
-  </div>
-</div>
-
----
-
-# Solutions by Industry
-<div class="cards">
-  <div class="card">
-    <h3>Banking</h3>
-    <p class="muted">Loan apps, financial statements, income verification</p>
-  </div>
-  <div class="card">
-    <h3>Insurance</h3>
-    <p class="muted">Handwritten apps, AMS integration, duplicate detection</p>
-  </div>
-  <div class="card">
-    <h3>Supply Chain</h3>
-    <p class="muted">Bills of lading, commodity reports, manifests</p>
-  </div>
-  <div class="card">
-    <h3>Clinical Trials</h3>
-    <p class="muted">Trial invoices, expense reports, contract terms</p>
-  </div>
-  <div class="card">
-    <h3>Private Equity</h3>
-    <p class="muted">Reports, memos, due diligence</p>
-  </div>
-  <div class="card">
-    <h3>DME</h3>
-    <p class="muted">Orders, prescriptions, authorizations</p>
-  </div>
-</div>
-
-*Don’t see yours? We build custom solutions.*
-
----
-
-# Why a Specialized Solution?
-<div class="columns">
-  <div class="card">
-    <h3>Big vendors</h3>
-    <p class="muted">One-size-fits-all, expensive, long implementations, generic support.</p>
-  </div>
-  <div class="card accent">
+  <div class="card highlight">
     <h3>DocRouter</h3>
-    <p class="muted">Customized for your documents, affordable pricing, quick setup, and direct access to our team.</p>
+    <ul class="text-small" style="margin-top: 0.4em;">
+      <li><strong>Customized</strong> for your documents</li>
+      <li><strong>Same-day</strong> setup and results</li>
+      <li><strong>Transparent</strong> per-document pricing</li>
+      <li><strong>Direct access</strong> to engineering team</li>
+      <li><strong>Flexible</strong> — adapt as needs change</li>
+    </ul>
   </div>
+</div>
+
+<div class="callout success text-center" style="margin-top: 0.8em;">
+  <strong>Start small, scale fast.</strong> No long-term contracts required.
 </div>
 
 ---
 
 # Integrate Your Way
-<div class="cards">
+
+<div class="cards" style="font-size: 0.95em;">
   <div class="card">
-    <h3>REST API</h3>
-    <p class="muted">Full programmatic control</p>
+    <h3><span class="icon">🔌</span> REST API</h3>
+    <p>Full programmatic control over uploads, processing, and results retrieval</p>
   </div>
   <div class="card">
-    <h3>Webhooks</h3>
-    <p class="muted">Real-time completion notifications</p>
+    <h3><span class="icon purple">🔔</span> Webhooks</h3>
+    <p>Real-time notifications when documents are processed</p>
   </div>
   <div class="card">
-    <h3>Python & TS SDKs</h3>
-    <p class="muted">Type-safe, fast development</p>
+    <h3><span class="icon green">🐍</span> Python SDK</h3>
+    <p>Type-safe, async-ready client library for Python apps</p>
   </div>
   <div class="card">
-    <h3>n8n</h3>
-    <p class="muted">Low-code workflows</p>
+    <h3><span class="icon">📘</span> TypeScript SDK</h3>
+    <p>Full TypeScript support for Node.js and browser</p>
   </div>
   <div class="card">
-    <h3>Temporal</h3>
-    <p class="muted">Durable, mission-critical execution</p>
+    <h3><span class="icon purple">⚡</span> n8n & Temporal</h3>
+    <p>Low-code workflows and durable execution</p>
   </div>
   <div class="card">
-    <h3>MCP</h3>
-    <p class="muted">Claude Code, Cursor, AI assistants</p>
+    <h3><span class="icon green">🤖</span> MCP / AI Agents</h3>
+    <p>Claude, Cursor, and AI assistant integrations</p>
   </div>
 </div>
 
 ---
 
-# Get Started
-<div class="callout">
-  Tag → Prompt → Upload → Results — see automatic extraction in minutes.
+# Get Started Today
+
+<div class="columns" style="align-items: center;">
+  <div>
+    <h3 style="margin-bottom: 0.6em;">Three steps to automated extraction:</h3>
+    <ol>
+      <li><strong>Create a tag & prompt</strong> — define what to extract</li>
+      <li><strong>Upload a document</strong> — via web, email, or API</li>
+      <li><strong>Get structured results</strong> — instantly</li>
+    </ol>
+    <div class="cta" style="margin-top: 1em;">
+      <a class="btn btn-primary" href="https://app.docrouter.ai">Start Free Trial</a>
+      <a class="btn btn-secondary" href="https://docrouter.ai/docs/quick-start/">Quick Start Guide</a>
+    </div>
+  </div>
+  <div class="card accent" style="padding: 1.2em;">
+    <h4 class="text-muted" style="margin-bottom: 0.5em;">Ready to see it in action?</h4>
+    <p style="color: var(--dr-text); font-size: 0.9em;">Book a 15-minute demo and we'll process your own documents live.</p>
+    <a class="btn btn-primary" href="https://calendly.com/analytiqhub" style="margin-top: 0.6em;">Schedule Demo →</a>
+  </div>
 </div>
 
-<div class="cta">
-  <a class="button" href="https://app.docrouter.ai">Try it free</a>
-  <a class="button secondary" href="https://docrouter.ai/docs/quick-start/">Quick Start</a>
-  <a class="button secondary" href="https://calendly.com/analytiqhub">Schedule a meeting</a>
-</div>
-
-<p class="muted">Docs & solutions: <a href="https://docrouter.ai">docrouter.ai</a></p>
+<p class="text-center text-muted text-small" style="margin-top: 0.8em;">
+  Questions? Email <a href="mailto:hello@docrouter.ai">hello@docrouter.ai</a> · Docs at <a href="https://docrouter.ai">docrouter.ai</a>
+</p>
 
 ---
 
-<!-- _class: lead -->
-# Thank you
+<!-- _class: closing -->
 
-**DocRouter.AI** — Document automation that works.
+# Thank You
 
-*Questions? Let’s talk.*
+<p style="margin-top: 0.3em;">
+<strong>DocRouter.AI</strong> — Document automation that works.
+</p>
+
+<p style="margin-top: 1.5em; font-size: 0.9em;">
+<a href="https://app.docrouter.ai">app.docrouter.ai</a> · <a href="mailto:hello@docrouter.ai">hello@docrouter.ai</a>
+</p>
+
+<p style="margin-top: 0.5em; opacity: 0.8; font-size: 0.85em;">
+Let's talk about your documents.
+</p>
