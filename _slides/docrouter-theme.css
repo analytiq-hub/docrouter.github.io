@@ -1,0 +1,268 @@
+/* DocRouter Marp theme — use with theme: docrouter and --theme-set _slides/docrouter-theme.css (CLI) or add path in Marp extension settings (VS Code) */
+
+/* @theme docrouter */
+
+@import 'default';
+
+:root {
+  --docrouter-blue: #2563eb;
+  --docrouter-purple: #7c3aed;
+  --docrouter-ink: #0f172a;
+  --docrouter-text: #1f2937;
+  --docrouter-muted: #6b7280;
+  --docrouter-border: #e5e7eb;
+  --docrouter-surface: #ffffff;
+  --docrouter-soft: #f8fafc;
+  width: 1280px;
+  height: 720px;
+  font-size: 28px;
+  padding: 56px 64px;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 32%);
+  color: var(--docrouter-text);
+  position: relative;
+}
+
+:root:not(.lead)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, var(--docrouter-blue), var(--docrouter-purple));
+}
+
+/* Headings */
+h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 0.4em;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.35em;
+  letter-spacing: -0.005em;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: var(--docrouter-muted);
+}
+
+/* Lead slide (title) */
+:root.lead {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  text-align: center;
+  justify-content: center;
+}
+
+:root.lead h1 {
+  color: #ffffff;
+  font-size: 2.7rem;
+  margin-bottom: 0.25em;
+}
+
+:root.lead h2 {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+:root.lead p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  margin-top: 1em;
+}
+
+:root.lead::after {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Links */
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:root.lead a {
+  color: #93c5fd;
+}
+
+/* Lists */
+ul, ol {
+  margin: 0.5em 0;
+  padding-left: 1.25em;
+}
+
+li {
+  margin: 0.35em 0;
+  line-height: 1.45;
+}
+
+::marker {
+  color: var(--docrouter-blue);
+}
+
+.muted {
+  color: var(--docrouter-muted);
+}
+
+.callout {
+  background: #eef2ff;
+  border-left: 6px solid var(--docrouter-blue);
+  padding: 0.65em 0.8em;
+  border-radius: 12px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.9em;
+  margin: 0.75em 0;
+  border: 1px solid var(--docrouter-border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--docrouter-surface);
+}
+
+th, td {
+  border-bottom: 1px solid var(--docrouter-border);
+  padding: 0.5em 0.75em;
+  text-align: left;
+}
+
+th {
+  background-color: #eff6ff;
+  font-weight: 600;
+  color: #374151;
+}
+
+tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+/* Strong */
+strong {
+  font-weight: 600;
+  color: var(--docrouter-ink);
+}
+
+/* Pagination (attr required when paginate: true) */
+:root::after {
+  content: attr(data-marpit-pagination);
+  font-size: 0.65rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+/* Block content spacing */
+p {
+  margin: 0.4em 0;
+  line-height: 1.5;
+}
+
+/* Code (if any) */
+code {
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 0.9em;
+  background-color: #e0e7ff;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: #1e40af;
+}
+
+blockquote {
+  margin: 0.6em 0;
+  padding: 0.5em 0.75em;
+  border-left: 5px solid var(--docrouter-purple);
+  background: #f5f3ff;
+  border-radius: 10px;
+  color: #4338ca;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1em;
+  align-items: start;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7em;
+}
+
+.cards.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+  background: var(--docrouter-surface);
+  border: 1px solid var(--docrouter-border);
+  border-radius: 14px;
+  padding: 0.7em 0.8em;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
+}
+
+.card.accent {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+}
+
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--docrouter-blue), var(--docrouter-purple));
+  color: #ffffff;
+  border-radius: 999px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 0.2em 0.6em;
+}
+
+.cta {
+  margin-top: 0.6em;
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.45em 0.9em;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--docrouter-blue), var(--docrouter-purple));
+}
+
+.button.secondary {
+  background: #ffffff;
+  color: var(--docrouter-blue);
+  border: 1px solid #bfdbfe;
+}
