@@ -12,11 +12,11 @@ description: Architecture, workflow, and integration details
 
 ## Technical Deep Dive
 
-Architecture, workflow, and integration details for engineering teams.
+Architecture, APIs, and integration patterns for engineering teams.
 
 <div class="cta center mt-5">
-  <a class="btn btn-primary" href="https://docrouter.ai/docs">Docs</a>
-  <a class="btn btn-secondary" href="https://app.docrouter.ai">Console</a>
+  <a class="btn btn-primary" href="https://docrouter.ai/docs">Read the Docs</a>
+  <a class="btn btn-secondary" href="https://app.docrouter.ai">Open Console</a>
 </div>
 
 ---
@@ -152,4 +152,9 @@ DocRouter ships an MCP server so AI agents can:
 
 # Questions?
 
-Docs: <a href="https://docrouter.ai/docs">docrouter.ai/docs</a>
+<div class="cta center mt-5">
+  <a class="btn btn-primary" href="https://docrouter.ai/docs">Documentation</a>
+  <a class="btn btn-secondary" href="mailto:hello@docrouter.ai">Contact Us</a>
+</div>
+
+**docrouter.ai**
