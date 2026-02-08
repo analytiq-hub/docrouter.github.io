@@ -120,7 +120,9 @@ title: "DocRouter - AI-Powered Document Processing"
                         <li>• Ongoing technical support and maintenance</li>
                     </ul>
                     <div class="mt-6">
-                        <a href="javascript:void(0)" onclick="openCalendly()"
+                        <a href="{{ site.calendly_url }}"
+                           target="_blank"
+                           rel="noopener noreferrer"
                            class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-center no-underline">
                             Discuss Implementation
                         </a>
@@ -288,7 +290,9 @@ title: "DocRouter - AI-Powered Document Processing"
                 <div>
                     <h3 class="text-xl font-medium text-gray-900 mb-4">Schedule a Meeting</h3>
                     <div class="space-y-4">
-                        <a href="javascript:void(0)" onclick="openCalendly()"
+                        <a href="{{ site.calendly_url }}"
+                           target="_blank"
+                           rel="noopener noreferrer"
                            class="block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium text-center transition-colors duration-200 no-underline">
                             Schedule a Meeting
                         </a>
