@@ -196,6 +196,6 @@ Configure it with the invoice schema, and tag it with a tag named 'green'
     </main>
 
     <footer class="mt-12 text-center text-gray-600">
-        <p>© 2025 DocRouter MCP Server. Part of the <a href="https://github.com/analytiq-hub/doc-router" class="text-blue-600 hover:text-blue-800">docrouter.ai</a> project.</p>
+        <p>© 2026 DocRouter MCP Server. Part of the <a href="https://github.com/analytiq-hub/doc-router" class="text-blue-600 hover:text-blue-800">docrouter.ai</a> project.</p>
     </footer>
 </div>

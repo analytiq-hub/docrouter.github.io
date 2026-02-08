@@ -306,7 +306,7 @@ title: "DocRouter - AI-Powered Document Processing"
     </main>
 
     <footer class="mt-12 text-center text-gray-600">
-        <p>© 2024 DocRouter.AI. All rights reserved.</p>
+        <p>© 2026 DocRouter.AI. All rights reserved.</p>
         <div class="mt-4 flex flex-wrap justify-center gap-6">
             <a href="/pricing/"
                class="text-blue-600 hover:text-blue-800 no-underline">
