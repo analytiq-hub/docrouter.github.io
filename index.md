@@ -5,17 +5,17 @@ title: "DocRouter - AI-Powered Document Processing"
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
     <!-- Hero Section - Lead with Problem -->
-    <header class="text-center md:mb-12 mb-8">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+    <header class="text-center md:mb-8 mb-6">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
             <span class="text-gray-800">Your Documents</span>
             <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Redefined</span>
         </h1>
-        <div class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            <p class="mb-4">Transform unstructured documents into actionable data with enterprise-grade AI processing</p>
-        </div>
+        <p class="text-xl md:text-2xl text-gray-600 mb-6 max-w-3xl mx-auto">
+            Transform unstructured documents into actionable data with enterprise-grade AI processing
+        </p>
 
         <!-- Primary CTA -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
             <a href="https://app.docrouter.ai"
                target="_blank"
                rel="noopener noreferrer"
@@ -306,20 +306,10 @@ title: "DocRouter - AI-Powered Document Processing"
     </main>
 
     <footer class="mt-12 text-center text-gray-600">
-        <p>© 2026 DocRouter.AI. All rights reserved.</p>
-        <div class="mt-4 flex flex-wrap justify-center gap-6">
-            <a href="/pricing/"
-               class="text-blue-600 hover:text-blue-800 no-underline">
-                Pricing
-            </a>
-            <a href="/docs/"
-               class="text-blue-600 hover:text-blue-800 no-underline">
-                Documentation
-            </a>
-            <a href="https://github.com/analytiq-hub/doc-router"
-               class="text-blue-600 hover:text-blue-800 no-underline">
-                GitHub
-            </a>
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-6">
+            <span class="text-xs text-gray-400">Member of</span>
+            <img src="{{ '/assets/images/mit_startup_exchage.png' | relative_url }}" alt="MIT Startup Exchange" class="h-12 w-auto object-contain" />
+            <img src="{{ '/assets/images/nvidia_inception.png' | relative_url }}" alt="NVIDIA Inception" class="h-12 w-auto object-contain" />
         </div>
     </footer>
 </div>
