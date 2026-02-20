@@ -13,23 +13,10 @@ title: "DocRouter - AI-Powered Document Processing"
         <p class="text-xl md:text-2xl text-gray-600 mb-6 max-w-3xl mx-auto">
             Transform unstructured documents into actionable data with enterprise-grade AI processing
         </p>
-
-        <!-- Primary CTA -->
-        <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
-            <a href="https://app.docrouter.ai"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 border-2 border-transparent no-underline">
-                Launch Application
-            </a>
-            <a href="/pricing/"
-               class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
-                View Pricing
-            </a>
-            <a href="docs/how-it-works"
-               class="inline-block border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
-                See How It Works
-            </a>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-8">
+            <span class="text-sm text-gray-500">Member of</span>
+            <img src="{{ '/assets/images/mit_startup_exchage.png' | relative_url }}" alt="MIT Startup Exchange" class="h-12 w-auto object-contain" />
+            <img src="{{ '/assets/images/nvidia_inception.png' | relative_url }}" alt="NVIDIA Inception" class="h-12 w-auto object-contain" />
         </div>
     </header>
 
@@ -77,6 +64,23 @@ title: "DocRouter - AI-Powered Document Processing"
             </div>
         </section>
 
+        <!-- Primary CTA (after problem context for cold traffic) -->
+        <div class="flex flex-col sm:flex-row gap-3 justify-center items-center mb-12">
+            <a href="https://app.docrouter.ai"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 border-2 border-transparent no-underline">
+                Launch App
+            </a>
+            <a href="/pricing/"
+               class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
+                View Pricing
+            </a>
+            <a href="docs/how-it-works"
+               class="inline-block border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
+                See How It Works
+            </a>
+        </div>
 
     <!-- Technical Excellence Section -->
     <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
@@ -306,10 +310,5 @@ title: "DocRouter - AI-Powered Document Processing"
     </main>
 
     <footer class="mt-12 text-center text-gray-600">
-        <div class="mt-6 flex flex-wrap items-center justify-center gap-6">
-            <span class="text-xs text-gray-400">Member of</span>
-            <img src="{{ '/assets/images/mit_startup_exchage.png' | relative_url }}" alt="MIT Startup Exchange" class="h-12 w-auto object-contain" />
-            <img src="{{ '/assets/images/nvidia_inception.png' | relative_url }}" alt="NVIDIA Inception" class="h-12 w-auto object-contain" />
-        </div>
     </footer>
 </div>
