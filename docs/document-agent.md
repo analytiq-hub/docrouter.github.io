@@ -25,6 +25,8 @@ Ask the AI to:
 - **Run and review extraction**
 - **Update document metadata** — Rename, set tags, or edit metadata.
 
+![Document Agent](/assets/images/document_agent.png)
+
 Read-only actions run automatically. Write actions (create/update schema, prompt, tag; run extraction; update document) can require **approval** so you confirm each change before it runs.
 
 ---
