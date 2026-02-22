@@ -16,10 +16,10 @@ The **Document Agent** is the chat on the document page in DocRouter: you talk t
 We built the Document Agent to **cut configuration time for parsing a yet-unseen document by about 90%**.
 
 <div class="rounded-xl border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50/90 p-5 md:p-6 my-6 shadow-md ring-1 ring-blue-100/50">
-  <div class="space-y-4">
-    <p class="text-gray-800"><strong class="text-blue-900">Before:</strong> Setting up extraction for a new document type meant creating schemas, writing prompts, and wiring tags by hand—often tens of minutes or more.</p>
-    <p class="text-gray-800"><strong class="text-blue-900">Now:</strong> It takes <strong>minutes</strong>: you describe what you want in plain language → the AI proposes schemas and prompts → you approve → extraction runs. The AI does the heavy lifting so you can go from “I have a document” to “I have structured data” without leaving the page.</p>
-  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+    <p class="text-gray-800"><strong class="text-blue-900">Before:</strong> Schemas, prompts, and tags by configured by hand.</p>
+    <p class="text-gray-800"><strong class="text-blue-900">Now:</strong> <strong>Minutes:</strong> Plain language: AI proposes → you approve → extraction runs.</p>
+    </div>
 </div>
 
 ---
