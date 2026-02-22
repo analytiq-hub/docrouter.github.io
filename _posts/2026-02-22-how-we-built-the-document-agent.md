@@ -59,19 +59,23 @@ Every turn gets a **system message** built from:
 </div>
 <p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #6b7280;"><strong>Figure 2:</strong> How the system message is built.</p>
 
-### State: turn state vs threads
+### What we store in memory
 
-We keep two kinds of state. **Turn state** is short-lived and in-memory: when we pause for approval, we store the current message list, pending tool calls, working state, model, and related bits keyed by `turn_id`, with a **TTL of 5 minutes**. The approve endpoint looks up by `turn_id`, applies approvals, runs tools, and then clears that turn state. We don’t put this in the database because it’s transient—if the user abandons the tab or the server restarts, the turn simply expires and they can re-send their message. **Threads** are persistent (MongoDB, `agent_threads`): organization, document, and user-scoped. When a turn finishes (no more pending tool calls), we append the user and assistant messages (and the latest extraction) to the thread. So: turn state = “in-flight approval”; threads = “saved conversations” you can list, load, and resume.
+**Browser memory:** Tool approval lives in the client. When the backend returns a `turn_id` and pending tool calls, the UI shows approve/reject cards and holds the user's choices in browser memory until they submit **POST /chat/approve**. Nothing about which tools the user approved is persisted on the server until that request is sent.
 
-<div data-excalidraw="/assets/excalidraw/document-agent-state.excalidraw" class="excalidraw-container">
-  <div class="loading-placeholder">Loading diagram...</div>
-</div>
-<div style="text-align: center; margin-top: 1rem;">
-  <a href="/excalidraw-edit?file=/assets/excalidraw/document-agent-state.excalidraw" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">
-    📝 Edit in Excalidraw
-  </a>
-</div>
-<p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #6b7280;"><strong>Figure 3:</strong> Turn state vs threads.</p>
+**Session memory (server):** When we pause for approval, we keep **turn state** in server memory—message list, pending tool calls, working state, model—keyed by `turn_id`, with a TTL of 5 minutes. The approve endpoint loads by `turn_id`, runs tools, then discards that state. We don’t persist it: if the user closes the tab or the server restarts, the turn expires and they can resend. So "in-flight approval" is deliberately ephemeral.
+
+### What we store in MongoDB
+
+We persist two things that matter for the agent:
+
+1. **Threads** (`agent_threads`). Each document is a conversation thread: `organization_id`, `document_id`, `created_by` (user), plus `title`, `messages`, `extraction`, optional `model`, and timestamps. When a turn finishes (no more pending tool calls), we append the user and assistant messages and the latest extraction to the thread. Threads are what you list, load, and resume in the UI.
+
+2. **LLM provider config** (`llm_providers`). This is where we store **which models are enabled** and, for the document agent specifically, **which models appear in the chat dropdown**. Each provider (Anthropic, OpenAI, Gemini, etc.) has a **model family**: `litellm_models_available` (discovered from the provider), `litellm_models_enabled` (which of those the org has turned on for general use), and `litellm_models_chat_agent`—the subset that is allowed in the document agent. So admins can enable many models for extraction or other features but expose only a few in the agent UI. API keys (tokens) and enabled/disabled per provider live here too.
+
+**Tool definitions** (which tools exist and whether they are read-only vs read-write) are **not** stored in MongoDB. They're defined in code (the tool registry) and exposed via **GET /chat/tools** so the UI can show "these actions need approval." That keeps the security model simple and consistent across environments.
+
+**Why MongoDB here?** The database is document-oriented and schema-flexible by default, but we don't treat it as a free-for-all. We run **versioned migrations** (same idea as SQL migrations): a `migrations` collection tracks schema version, and each migration can add indexes, rename or reshape collections, and backfill data. So we get a **strict, explicit schema** that we evolve in a controlled way—portability and the same kind of regularity you'd expect from a Postgres schema—while keeping MongoDB's strengths: horizontal scaling (sharding, replica sets), flexible documents where we need them, and one deployment story for both structured and semi-structured data. In practice, agent threads and LLM provider config are as regular as relational tables; we just don't pay the cost of rigid columns until we need to scale out.
 
 <style>
 .excalidraw-container {
