@@ -177,7 +177,7 @@ The Document Agent is a tool-calling LLM with:
 
 - A **bounded loop** — LLM → optional user approval → tools → LLM again
 - **Rich context** — document, OCR, @-mentions, working state
-- A **two-state model** — short-lived turn state for approval handoff, persistent threads for conversation history
+- **What we store in memory** (browser: tool approval; server: turn state) vs **what we store in MongoDB** (threads, LLM config)
 
 Splitting read-only and read-write tools keeps approval predictable; one round per approve keeps the user in control; message sanitization keeps thread reloads valid; and working state keeps “what we just created” visible to the agent without extra round-trips. If you’re building something similar—an in-context agent that can read and write—this architecture is a solid starting point.
 
