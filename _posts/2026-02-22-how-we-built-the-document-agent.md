@@ -1,29 +1,46 @@
 ---
 layout: post
-title: "How We Built the Document Agent: Architecture and Decisions"
+title: "Why and How We Created the Document Agent"
 date: 2026-02-22 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
 image: /assets/images/document-agent-blog-splash.png
 categories: [ai, programming, engineering, product]
 ---
 
-The **Document Agent** is the chat on the document page in DocRouter: you talk to an AI in the context of a single document to create or edit schemas, prompts, and tags, run extraction, and tweak results. This post explains how we implemented it—the architecture and the decisions that shaped it.
+The **Document Agent** is the chat on the document page in DocRouter: you talk to an AI in the context of a single document to create or edit schemas, prompts, and tags, run extraction, and tweak results. This post explains why we built it and how we created it—the architecture and the decisions that shaped it.
+
+---
+
+## Why we built it
+
+We built the Document Agent to **cut configuration time for parsing a yet-unseen document by about 90%**.
+
+- **Before:** Setting up extraction for a new document type meant creating schemas, writing prompts, and wiring tags by hand—often tens of minutes or more.
+- **Now:** It takes **minutes**: you describe what you want in plain language → the AI proposes schemas and prompts → you approve → extraction runs. The AI does the heavy lifting so you can go from “I have a document” to “I have structured data” without leaving the page.
 
 ---
 
 ## What the agent does
 
-The agent is a **tool-calling LLM** scoped to one document. It sees the document’s metadata, an OCR text excerpt, optional @-mentions (schemas, prompts, tags you’ve referenced), and the current extraction. It has **25 tools**: schema CRUD and validation, prompt CRUD, tag CRUD, document list/update/delete, get OCR text, run extraction, patch extraction fields, and two help tools (`help_schemas`, `help_prompts`). Read-only tools run automatically; **read-write** tools (create schema, run extraction, update document, etc.) can pause and ask the user to approve or reject each call. Conversations are stored in **threads** per document so you can resume or start a new one.
+The agent is a **tool-calling LLM** scoped to one document. It sees the document’s metadata, an OCR text excerpt, optional @-mentions (schemas, prompts, tags you’ve referenced), and the current extraction. It has **25 tools**: schema CRUD and validation, prompt CRUD, tag CRUD, document list/update/delete, get OCR text, run extraction, patch extraction fields, and two help tools (`help_schemas`, `help_prompts`).
+- **Read-only** tools run automatically; **read-write** tools (create schema, run extraction, update document, etc.) can pause and ask the user to approve or reject each call.
+- Conversations are stored in **threads** per document so you can resume or start a new one.
 
 ---
 
 ## Architecture overview
 
-Three layers matter: the **agent loop**, the **context** we give the LLM, and the **state** we keep between requests.
+Three layers matter:
+
+- The **agent loop** — how we call the LLM and handle tool calls.
+- The **context** we give the LLM (system message).
+- The **state** we keep between requests (memory vs MongoDB).
 
 ### Agent loop
 
-The core is a loop: send messages to the LLM (system + conversation + tool definitions) → get back text and/or tool calls. If there are tool calls and any of them is read-write and not auto-approved, we **stop**, persist the turn state, and return a `turn_id` and the pending tool calls to the client. The client shows approve/reject UI and then calls **POST /chat/approve** with the same `turn_id` and the user’s approvals. The backend executes the approved tools, appends tool-result messages to the conversation, and sends that back to the LLM **once**. We do **not** loop on the approve endpoint: each approve is one LLM round. If the LLM returns more tool calls, we again return them to the client for approval. So the loop is “LLM → maybe pause for user → execute tools → LLM again,” with the pause happening in the client, not in a long-running server loop. We cap the number of tool rounds (e.g. 10) so a turn can’t run forever.
+The core is a loop:
+
+- Send messages to the LLM (system + conversation + tool definitions) → get back text and/or tool calls. If there are tool calls and any is read-write and not auto-approved: **stop**, persist turn state, return `turn_id` and pending tool calls to the client. The client shows approve/reject UI and then calls **POST /chat/approve** with the same `turn_id` and the user’s approvals. - Backend executes the approved tools, appends tool-result messages, and sends that back to the LLM **once**. We do **not** loop on the approve endpoint—each approve is one LLM round. If the LLM returns more tool calls, we return them to the client again. So the loop is “LLM → maybe pause for user → execute tools → LLM again,” with the pause happening in the client, not in a long-running server loop. We cap the number of tool rounds (e.g. 10) so a turn can’t run forever.
 
 Here’s the algorithm in plain form:
 
@@ -71,11 +88,18 @@ We persist two things that matter for the agent:
 
 1. **Threads** (`agent_threads`). Each document is a conversation thread: `organization_id`, `document_id`, `created_by` (user), plus `title`, `messages`, `extraction`, optional `model`, and timestamps. When a turn finishes (no more pending tool calls), we append the user and assistant messages and the latest extraction to the thread. Threads are what you list, load, and resume in the UI.
 
-2. **LLM provider config** (`llm_providers`). This is where we store **which models are enabled** and, for the document agent specifically, **which models appear in the chat dropdown**. Each provider (Anthropic, OpenAI, Gemini, etc.) has a **model family**: `litellm_models_available` (discovered from the provider), `litellm_models_enabled` (which of those the org has turned on for general use), and `litellm_models_chat_agent`—the subset that is allowed in the document agent. So admins can enable many models for extraction or other features but expose only a few in the agent UI. API keys (tokens) and enabled/disabled per provider live here too.
+2. **LLM provider config** (`llm_providers`). We store **which models are enabled** and, for the document agent, **which models appear in the chat dropdown**. Per provider (Anthropic, OpenAI, Gemini, etc.):
+   - `litellm_models_available` — discovered from the provider
+   - `litellm_models_enabled` — which of those the org has turned on for general use
+   - `litellm_models_chat_agent` — the subset allowed in the document agent UI  
+   Admins can enable many models for extraction but expose only a few in the agent. API keys (tokens) and enabled/disabled per provider live here too.
 
 **Tool definitions** (which tools exist and whether they are read-only vs read-write) are **not** stored in MongoDB. They're defined in code (the tool registry) and exposed via **GET /chat/tools** so the UI can show "these actions need approval." That keeps the security model simple and consistent across environments.
 
-**Why MongoDB here?** The database is document-oriented and schema-flexible by default, but we don't treat it as a free-for-all. We run **versioned migrations** (same idea as SQL migrations): a `migrations` collection tracks schema version, and each migration can add indexes, rename or reshape collections, and backfill data. So we get a **strict, explicit schema** that we evolve in a controlled way—portability and the same kind of regularity you'd expect from a Postgres schema—while keeping MongoDB's strengths: horizontal scaling (sharding, replica sets), flexible documents where we need them, and one deployment story for both structured and semi-structured data. In practice, agent threads and LLM provider config are as regular as relational tables; we just don't pay the cost of rigid columns until we need to scale out.
+**Why MongoDB here?** The database is document-oriented and schema-flexible by default, but we don't treat it as a free-for-all.
+
+- We run **versioned migrations** (same idea as SQL): a `migrations` collection tracks schema version; each migration can add indexes, rename or reshape collections, and backfill data.
+- Result: a **strict, explicit schema** we evolve in a controlled way—portability and the same regularity you'd expect from Postgres—while keeping MongoDB's strengths: horizontal scaling (sharding, replica sets), flexible documents where we need them, one deployment story for structured and semi-structured data. In practice, agent threads and LLM provider config are as regular as relational tables; we just don't pay the cost of rigid columns until we need to scale out.
 
 <style>
 .excalidraw-container {
@@ -110,7 +134,9 @@ We persist two things that matter for the agent:
 ## Key decisions
 
 **Read-only vs read-write tools**  
-We split tools into two sets. **Read-only** (e.g. `get_ocr_text`, `list_schemas`, `validate_schema`, `help_schemas`) never require approval—they’re safe to run as soon as the LLM asks. **Read-write** (e.g. `create_schema`, `run_extraction`, `update_document`) require approval by default. The client can send `auto_approve: true` (run everything) or `auto_approved_tools: ["run_extraction"]` (only those run without pausing). That way power users can say “just run extraction when I ask” while still being prompted for “create a new schema.” The backend exposes **GET /chat/tools** returning the two lists so the UI can explain which actions will pause.
+We split tools into two sets:
+
+- **Read-only** (e.g. `get_ocr_text`, `list_schemas`, `validate_schema`, `help_schemas`) never require approval—they’re safe to run as soon as the LLM asks. **Read-write** (e.g. `create_schema`, `run_extraction`, `update_document`) require approval by default. The client can send `auto_approve: true` (run everything) or `auto_approved_tools: ["run_extraction"]` (only those run without pausing). That way power users can say “just run extraction when I ask” while still being prompted for “create a new schema.” The backend exposes **GET /chat/tools** returning the two lists so the UI can explain which actions will pause.
 
 **One LLM round per approve**  
 When the user approves tool calls, we execute them and call the LLM **once** with the new tool results. If the LLM returns more tool calls, we return those to the client again—we don’t keep looping on the server. The reason is **control**: the user sees each batch of proposed actions and can approve or reject. If we looped server-side until “no more tool calls,” a single request could do many creates/updates before the user saw anything. So the “loop” is really a handshake: chat → (optional approve) → chat → (optional approve) → …
@@ -134,12 +160,25 @@ Each LLM call in the agent (and each call inside `run_extraction`) checks **SPU*
 
 ## Frontend and API
 
-The frontend has a chat panel (message list, input, model/tools settings), **tool-call cards** (approve/reject per call, with expandable arguments), a **thinking block** (collapsible, with optional live timer), and a **thread dropdown** (list threads, create, load, delete). When the backend returns a `turn_id` and pending tool_calls, the UI shows the cards and disables send until the user approves or rejects. The same agent is exposed over REST so custom UIs or automation can call **POST /chat** (and **POST /chat/approve** when needed), with optional streaming and thread_id for persistence.
+The frontend includes:
+
+- **Chat panel** — message list, input, model/tools settings
+- **Tool-call cards** — approve/reject per call, with expandable arguments
+- **Thinking block** — collapsible, with optional live timer
+- **Thread dropdown** — list threads, create, load, delete
+
+When the backend returns a `turn_id` and pending tool_calls, the UI shows the cards and disables send until the user approves or rejects. The same agent is exposed over REST: custom UIs or automation can call **POST /chat** (and **POST /chat/approve** when needed), with optional streaming and thread_id for persistence.
 
 ---
 
 ## Summary
 
-The Document Agent is a tool-calling LLM with a **bounded loop** (LLM → optional user approval → tools → LLM again), **rich context** (document, OCR, @-mentions, working state), and **two-state model** (short-lived turn state for approval handoff, persistent threads for conversation history). Splitting read-only and read-write tools keeps approval predictable; one round per approve keeps the user in control; message sanitization keeps thread reloads valid; and working state keeps “what we just created” visible to the agent without extra round-trips. If you’re building something similar—an in-context agent that can read and write—this architecture is a solid starting point.
+The Document Agent is a tool-calling LLM with:
+
+- A **bounded loop** — LLM → optional user approval → tools → LLM again
+- **Rich context** — document, OCR, @-mentions, working state
+- A **two-state model** — short-lived turn state for approval handoff, persistent threads for conversation history
+
+Splitting read-only and read-write tools keeps approval predictable; one round per approve keeps the user in control; message sanitization keeps thread reloads valid; and working state keeps “what we just created” visible to the agent without extra round-trips. If you’re building something similar—an in-context agent that can read and write—this architecture is a solid starting point.
 
 To use the Document Agent, open any document in [DocRouter](https://app.docrouter.ai) and open the Chat / Agent tab. For API details, see [Document Agent](/docs/document-agent/) in the docs.
