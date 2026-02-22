@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: "Chat Agents"
+title: "Knowledge Base Chat"
 permalink: /docs/chat-agents/
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">
-  <h2 class="text-xl md:text-2xl font-semibold text-white mb-2">Chat agents powered by knowledge bases</h2>
+  <h2 class="text-xl md:text-2xl font-semibold text-white mb-2">Chat powered by knowledge bases</h2>
   <p class="text-sm md:text-base text-blue-100">Build conversational interfaces that let users ask natural-language questions over your documents.</p>
 </div>
 
@@ -16,7 +16,7 @@ permalink: /docs/chat-agents/
     <div style="width: 40px; height: 40px; min-width: 40px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 1.125rem; margin-right: 1rem;">1</div>
     <div style="flex: 1;">
       <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.25rem 0;">Create a knowledge base</h3>
-      <p style="color: #4b5563; margin: 0;">Set up a knowledge base with your documents. Use Markdown format for best results when building chat agents.</p>
+      <p style="color: #4b5563; margin: 0;">Set up a knowledge base with your documents. Use Markdown format for best results when building Knowledge Base Chat.</p>
     </div>
   </div>
   <div style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
@@ -37,9 +37,9 @@ permalink: /docs/chat-agents/
 
 ---
 
-## What are Chat Agents?
+## What is Knowledge Base Chat?
 
-Chat agents are conversational interfaces that use knowledge bases to answer questions about your documents. They combine RAG (Retrieval-Augmented Generation) with LLM chat capabilities to provide accurate, context-aware responses.
+Knowledge Base Chat is a conversational interface that uses knowledge bases to answer questions about your documents. They combine RAG (Retrieval-Augmented Generation) with LLM chat capabilities to provide accurate, context-aware responses.
 
 - **Natural language queries**: Users ask questions in plain English
 - **Automatic search**: The AI searches your knowledge base to find relevant information
@@ -185,7 +185,7 @@ curl -X POST \
 
 When a user asks a question:
 
-1. **Question received**: The chat agent receives the user's question
+1. **Question received**: Knowledge Base Chat receives the user's question
 2. **Knowledge base search**: The AI automatically searches the knowledge base for relevant chunks
 3. **Context assembly**: Relevant document chunks are assembled into context
 4. **Response generation**: The LLM generates an answer grounded in the retrieved context
@@ -217,7 +217,7 @@ The AI can make multiple search iterations if needed to gather comprehensive inf
 ---
 
 <div class="bg-blue-600 rounded-lg p-4 md:p-8 mt-8 md:mt-10 text-center">
-  <h2 class="text-xl md:text-2xl font-semibold text-white mb-4">Ready to build your chat agent?</h2>
+  <h2 class="text-xl md:text-2xl font-semibold text-white mb-4">Ready to try Knowledge Base Chat?</h2>
   <a href="https://app.docrouter.ai" class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-4 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-base md:text-lg transition-colors duration-200 no-underline">
     Open Dashboard
   </a>

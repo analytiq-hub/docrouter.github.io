@@ -30,7 +30,8 @@ permalink: /docs/
                 <li><a href="{{ '/docs/prompts/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Prompts</a> — Instructions for data extraction</li>
                 <li><a href="{{ '/docs/schemas/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Schemas</a> — Structured output and validation</li>
                 <li><a href="{{ '/docs/knowledge-bases/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Knowledge Bases</a> — Context for better accuracy</li>
-                <li><a href="{{ '/docs/chat-agents/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Chat Agents</a> — Chat with your documents</li>
+                <li><a href="{{ '/docs/chat-agents/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Knowledge Base Chat</a> — Chat with your documents</li>
+                <li><a href="{{ '/docs/document-agent/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Document Agent</a> — Configure schemas, tags, and prompts with AI</li>
             </ul>
         </section>
 

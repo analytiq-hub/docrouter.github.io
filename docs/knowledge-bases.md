@@ -46,7 +46,7 @@ Knowledge bases are collections of reference documents that help the AI understa
 - **Better accuracy**: AI uses your reference materials to improve extraction
 - **Industry terminology**: Teach the AI specific terms used in your business
 - **Reference data**: Provide price lists, SKU catalogs, vendor IDs, or guidelines
-- **Chat agents**: Use knowledge bases as the backend for chat agents so users can ask questions over your documents
+- **Knowledge Base Chat**: Use knowledge bases as the backend for chat so users can ask questions over your documents
 
 ---
 
@@ -142,8 +142,8 @@ You can also manually trigger reconciliation at any time from the knowledge base
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Keep It Focused</strong> — Create separate knowledge bases for different topics (e.g., "Legal Terms" vs "Product Specs").</p>
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Clean Data</strong> — Ensure reference documents are clear, well-formatted, and up-to-date for best results.</p>
   <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Update Regularly</strong> — Keep price lists, catalogs, and reference materials current to maintain accuracy.</p>
-  <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Use Markdown for Chat Agents</strong> — When building knowledge bases as a chat agent backend, use documents in Markdown format for better structure and readability.</p>
-  <p style="margin: 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Use for Chat</strong> — Knowledge bases can power chat agents, allowing users to ask natural-language questions over your documents.</p>
+  <p style="margin: 0 0 0.75rem 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Use Markdown for Knowledge Base Chat</strong> — When building knowledge bases for chat, use documents in Markdown format for better structure and readability.</p>
+  <p style="margin: 0;"><span style="color: #22c55e; margin-right: 0.5rem;">✓</span> <strong>Use for Chat</strong> — Knowledge bases can power Knowledge Base Chat, allowing users to ask natural-language questions over your documents.</p>
 </div>
 
 ---
@@ -151,7 +151,7 @@ You can also manually trigger reconciliation at any time from the knowledge base
 ## Learn More
 
 - <a href="/docs/prompts">Prompts</a> — Link knowledge bases to your extraction prompts
-- <a href="/docs/chat-agents">Chat Agents</a> — Build chat interfaces on top of your knowledge bases
+- <a href="/docs/chat-agents">Knowledge Base Chat</a> — Build chat interfaces on top of your knowledge bases
 - <a href="/docs/rest-api">REST API</a> — Create and manage knowledge bases programmatically
 
 ---

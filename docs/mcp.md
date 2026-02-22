@@ -171,7 +171,7 @@ Configure it with the invoice schema, and tag it with a tag named 'green'
                     — Provide retrieval context for extraction and chat workflows.
                 </li>
                 <li>
-                    <a href="/docs/chat-agents/" class="text-blue-600 hover:text-blue-800">Chat Agents</a>
+                    <a href="/docs/chat-agents/" class="text-blue-600 hover:text-blue-800">Knowledge Base Chat</a>
                     — Build chat experiences on top of DocRouter.
                 </li>
             </ul>
