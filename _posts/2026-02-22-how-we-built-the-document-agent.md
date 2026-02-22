@@ -15,8 +15,12 @@ The **Document Agent** is the chat on the document page in DocRouter: you talk t
 
 We built the Document Agent to **cut configuration time for parsing a yet-unseen document by about 90%**.
 
-- **Before:** Setting up extraction for a new document type meant creating schemas, writing prompts, and wiring tags by hand—often tens of minutes or more.
-- **Now:** It takes **minutes**: you describe what you want in plain language → the AI proposes schemas and prompts → you approve → extraction runs. The AI does the heavy lifting so you can go from “I have a document” to “I have structured data” without leaving the page.
+<div class="rounded-xl border border-gray-200 bg-gray-50/80 p-5 md:p-6 my-6 shadow-sm">
+  <div class="space-y-4">
+    <p class="text-gray-700"><strong class="text-gray-900">Before:</strong> Setting up extraction for a new document type meant creating schemas, writing prompts, and wiring tags by hand—often tens of minutes or more.</p>
+    <p class="text-gray-700"><strong class="text-gray-900">Now:</strong> It takes <strong>minutes</strong>: you describe what you want in plain language → the AI proposes schemas and prompts → you approve → extraction runs. The AI does the heavy lifting so you can go from “I have a document” to “I have structured data” without leaving the page.</p>
+  </div>
+</div>
 
 ---
 
@@ -136,7 +140,10 @@ We persist two things that matter for the agent:
 **Read-only vs read-write tools**  
 We split tools into two sets:
 
-- **Read-only** (e.g. `get_ocr_text`, `list_schemas`, `validate_schema`, `help_schemas`) never require approval—they’re safe to run as soon as the LLM asks. **Read-write** (e.g. `create_schema`, `run_extraction`, `update_document`) require approval by default. The client can send `auto_approve: true` (run everything) or `auto_approved_tools: ["run_extraction"]` (only those run without pausing). That way power users can say “just run extraction when I ask” while still being prompted for “create a new schema.” The backend exposes **GET /chat/tools** returning the two lists so the UI can explain which actions will pause.
+- **Read-only** (e.g. `get_ocr_text`, `list_schemas`, `validate_schema`, `help_schemas`) never require approval—they’re safe to run as soon as the LLM asks. 
+- **Read-write** (e.g. `create_schema`, `run_extraction`, `update_document`) require approval by default. The client can send `auto_approve: true` (run everything) or `auto_approved_tools: ["run_extraction"]` (only those run without pausing). 
+
+That way power users can say “just run extraction when I ask” while still being prompted for “create a new schema.” The backend exposes **GET /chat/tools** returning the two lists so the UI can explain which actions will pause.
 
 **One LLM round per approve**  
 When the user approves tool calls, we execute them and call the LLM **once** with the new tool results. If the LLM returns more tool calls, we return those to the client again—we don’t keep looping on the server. The reason is **control**: the user sees each batch of proposed actions and can approve or reject. If we looped server-side until “no more tool calls,” a single request could do many creates/updates before the user saw anything. So the “loop” is really a handshake: chat → (optional approve) → chat → (optional approve) → …
