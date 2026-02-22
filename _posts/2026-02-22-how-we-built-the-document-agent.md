@@ -21,14 +21,85 @@ The agent is a **tool-calling LLM** scoped to one document. It sees the document
 
 Three layers matter: the **agent loop**, the **context** we give the LLM, and the **state** we keep between requests.
 
-**1. Agent loop**  
+### Agent loop
+
 The core is a loop: send messages to the LLM (system + conversation + tool definitions) → get back text and/or tool calls. If there are tool calls and any of them is read-write and not auto-approved, we **stop**, persist the turn state, and return a `turn_id` and the pending tool calls to the client. The client shows approve/reject UI and then calls **POST /chat/approve** with the same `turn_id` and the user’s approvals. The backend executes the approved tools, appends tool-result messages to the conversation, and sends that back to the LLM **once**. We do **not** loop on the approve endpoint: each approve is one LLM round. If the LLM returns more tool calls, we again return them to the client for approval. So the loop is “LLM → maybe pause for user → execute tools → LLM again,” with the pause happening in the client, not in a long-running server loop. We cap the number of tool rounds (e.g. 10) so a turn can’t run forever.
 
-**2. Context (system message)**  
-Every turn gets a **system message** built from: (a) document ID and file name, (b) **OCR excerpt** of the document (truncated to ~8k characters so we don’t blow the context window), (c) **resolved @-mentions**—if the user referenced a schema, prompt, or tag, we resolve it server-side and inject the full content (e.g. full JSON schema) into the system message so the LLM doesn’t have to call `get_schema` just to see what they meant, (d) **working state**: the last `schema_revid`, `prompt_revid`, and **extraction** result from this conversation. That way the agent always knows “the schema I just created,” “the prompt I just created,” and “the extraction I just ran,” and can say “run extraction with that prompt” without the user re-specifying IDs. We also inject instructions: use `help_schemas` / `help_prompts` when creating or modifying those artifacts, and **always** call `validate_schema` before `create_schema` or `update_schema` so we never persist invalid schemas.
+Here’s the algorithm in plain form:
 
-**3. State: turn state vs threads**  
+<div data-excalidraw="/assets/excalidraw/document-agent-loop.excalidraw" class="excalidraw-container">
+  <div class="loading-placeholder">Loading diagram...</div>
+</div>
+<div style="text-align: center; margin-top: 1rem;">
+  <a href="/excalidraw-edit?file=/assets/excalidraw/document-agent-loop.excalidraw" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">
+    📝 Edit in Excalidraw
+  </a>
+</div>
+<p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #6b7280;"><strong>Figure 1:</strong> Agent loop.</p>
+
+**Important:** The LLM is **not** called once per request. Inside the loop, it can be called up to 10 times in a row when the model keeps returning auto-approved tool calls (e.g. read schema → read prompt → run extraction). Only when a **write** tool needs approval do we pause and return a `turn_id`; after the client approves, we call the LLM again (and may loop or pause again).
+
+### Context (system message)
+
+Every turn gets a **system message** built from:
+
+- **Document ID and file name**
+- **OCR excerpt** of the document (truncated to ~8k characters so we don’t blow the context window)
+- **Resolved @-mentions** — if the user referenced a schema, prompt, or tag, we resolve it server-side and inject the full content (e.g. full JSON schema) so the LLM doesn’t have to call `get_schema` just to see what they meant
+- **Working state** — the last `schema_revid`, `prompt_revid`, and **extraction** result from this conversation, so the agent can say “run extraction with that prompt” without the user re-specifying IDs
+- **Instructions** — use `help_schemas` / `help_prompts` when creating or modifying those artifacts, and **always** call `validate_schema` before `create_schema` or `update_schema` so we never persist invalid schemas
+
+<div data-excalidraw="/assets/excalidraw/document-agent-context.excalidraw" class="excalidraw-container">
+  <div class="loading-placeholder">Loading diagram...</div>
+</div>
+<div style="text-align: center; margin-top: 1rem;">
+  <a href="/excalidraw-edit?file=/assets/excalidraw/document-agent-context.excalidraw" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">
+    📝 Edit in Excalidraw
+  </a>
+</div>
+<p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #6b7280;"><strong>Figure 2:</strong> How the system message is built.</p>
+
+### State: turn state vs threads
+
 We keep two kinds of state. **Turn state** is short-lived and in-memory: when we pause for approval, we store the current message list, pending tool calls, working state, model, and related bits keyed by `turn_id`, with a **TTL of 5 minutes**. The approve endpoint looks up by `turn_id`, applies approvals, runs tools, and then clears that turn state. We don’t put this in the database because it’s transient—if the user abandons the tab or the server restarts, the turn simply expires and they can re-send their message. **Threads** are persistent (MongoDB, `agent_threads`): organization, document, and user-scoped. When a turn finishes (no more pending tool calls), we append the user and assistant messages (and the latest extraction) to the thread. So: turn state = “in-flight approval”; threads = “saved conversations” you can list, load, and resume.
+
+<div data-excalidraw="/assets/excalidraw/document-agent-state.excalidraw" class="excalidraw-container">
+  <div class="loading-placeholder">Loading diagram...</div>
+</div>
+<div style="text-align: center; margin-top: 1rem;">
+  <a href="/excalidraw-edit?file=/assets/excalidraw/document-agent-state.excalidraw" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">
+    📝 Edit in Excalidraw
+  </a>
+</div>
+<p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #6b7280;"><strong>Figure 3:</strong> Turn state vs threads.</p>
+
+<style>
+.excalidraw-container {
+  width: 100%;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: white;
+  display: block;
+  margin: 2rem 0;
+  min-height: 400px;
+}
+
+.excalidraw-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+.loading-placeholder {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+}
+</style>
+
+<script type="module" src="/assets/js/excalidraw/render-excalidraw.js"></script>
 
 ---
 
