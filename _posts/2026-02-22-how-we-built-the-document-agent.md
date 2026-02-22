@@ -9,6 +9,8 @@ categories: [ai, programming, engineering, product]
 
 The **Document Agent** is the chat on the document page in DocRouter: you talk to an AI in the context of a single document to create or edit schemas, prompts, and tags, run extraction, and tweak results. This post explains why we built it and how we created it—the architecture and the decisions that shaped it.
 
+![Document Agent](/assets/images/document_agent.png)
+
 ---
 
 ## Why we built it
