@@ -5,6 +5,7 @@ date: 2025-09-10
 author: Andrei Radulescu-Banu
 image: /assets/images/engineering_with_guardrails.png
 categories: [ai, programming, tech, reviews]
+description: "Startup compliance insights: HIPAA, SOC 2, and GDPR mistakes, the true cost of non-compliance, and how to build fast in healthcare, fintech, and AI."
 ---
 
 In the dynamic world of startups, especially those operating in heavily regulated sectors like healthcare, fintech, AI, and consumer hardware, compliance isn't just a checkbox—it's a foundational element that safeguards innovation, protects users, and unlocks growth opportunities. 

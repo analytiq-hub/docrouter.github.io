@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Durable Medical Equipment Processing - DocRouter Solutions"
+description: "Streamline DME order processing with AI. Automatically handle prescriptions, insurance authorizations, and medical documentation to speed up patient equipment delivery."
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">

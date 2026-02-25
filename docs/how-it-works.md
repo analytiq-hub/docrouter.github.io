@@ -2,6 +2,7 @@
 layout: default
 title: "How It Works - DocRouter"
 permalink: /docs/how-it-works/
+description: "See how DocRouter turns unstructured documents into structured data: upload via API, email, or UI — AI extracts and validates the data automatically."
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">

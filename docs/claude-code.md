@@ -2,6 +2,7 @@
 layout: docs
 title: "Claude Code Integration"
 permalink: /docs/claude-code/
+description: "Manage DocRouter documents, schemas, and prompts directly from your terminal with the Claude Code MCP integration. Install in minutes using the Model Context Protocol."
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">

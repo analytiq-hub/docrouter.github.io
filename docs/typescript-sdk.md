@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: "DocRouter TypeScript SDK"
+description: "Use the DocRouter TypeScript SDK for type-safe document processing in Node.js or the browser. Full API coverage with built-in error handling and streaming support."
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">

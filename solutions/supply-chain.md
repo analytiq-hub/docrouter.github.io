@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Supply Chain Document Processing - DocRouter Solutions"
+description: "Transform shipping manifests and supply chain documents into structured data. DocRouter handles multi-language, multi-currency documents for real-time logistics visibility."
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">

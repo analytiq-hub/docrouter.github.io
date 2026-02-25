@@ -2,6 +2,7 @@
 layout: docs
 title: "Integrations"
 permalink: /docs/integrations/
+description: "Connect DocRouter to n8n, Temporal, Python/TypeScript SDKs, and AI coding tools like Claude Code, Cursor, and GitHub Copilot via MCP."
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">

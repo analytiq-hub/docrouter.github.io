@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Local Development Setup
+description: "Set up the DocRouter.AI website locally for development with Jekyll. Step-by-step guide for macOS, Linux, and Windows using Ruby, Bundler, and Make."
 ---
 
 # Local Development Setup

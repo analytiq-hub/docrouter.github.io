@@ -5,6 +5,7 @@ date: 2024-10-19
 author: Andrei Radulescu-Banu
 image: /assets/images/how-to-make-a-self-driving-car.png
 categories: [ai, programming, tech, reviews]
+description: "A hands-on engineer's take on self-driving car system design: lidar, ROS, perception, mapping, and cloud data infrastructure — with AI Camp 2024 slides."
 ---
 
 *Notes on an a16z survey of self-driving cars, and slides from my AI Camp Jan 2024 Talk*

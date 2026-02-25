@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: "DocRouter Open Source"
+description: "Deploy DocRouter on your own infrastructure with full source code access. Self-hosted, Docker and Kubernetes ready, with enterprise security and no vendor lock-in."
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">

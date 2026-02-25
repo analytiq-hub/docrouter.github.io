@@ -2,6 +2,7 @@
 layout: docs
 title: Quick Start Guide
 permalink: /docs/quick-start/
+description: "Get started with DocRouter in minutes. Create a tag, write a prompt, upload a document, and see AI extraction results — from first upload to full API automation."
 ---
 
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">

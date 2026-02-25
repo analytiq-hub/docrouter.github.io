@@ -2,6 +2,7 @@
 layout: docs
 title: "GitHub Copilot Integration"
 permalink: /docs/github-copilot/
+description: "Connect DocRouter to GitHub Copilot via MCP. Search, read, and manage documents from Copilot Chat or the Copilot coding agent in VS Code."
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">

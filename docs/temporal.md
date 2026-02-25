@@ -2,6 +2,7 @@
 layout: docs
 title: "Temporal Integration"
 permalink: /docs/temporal/
+description: "Integrate DocRouter with Temporal for durable document workflow orchestration. Classify, group, and process multi-page documents with retryable, scalable workflows."
 ---
 
 Temporal is for **coded workflows** where you need durable orchestration—e.g. classify pages, group them by class, then process each group with DocRouter.

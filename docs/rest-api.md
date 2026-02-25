@@ -2,6 +2,7 @@
 layout: docs
 title: DocRouter REST API
 permalink: /docs/rest-api/
+description: "Access all DocRouter features via REST API. Upload documents, manage schemas and prompts, retrieve extracted data, and build custom integrations programmatically."
 ---
 
 <!-- Hero Section -->

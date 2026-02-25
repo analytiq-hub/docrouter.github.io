@@ -5,6 +5,7 @@ date: 2026-01-31 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
 image: "assets/images/n8n_gmail_to_docrouter.png"
 categories: [ai, programming, engineering, tutorials]
+description: "How the n8n-nodes-docrouter package was built and published in a single Cursor session — with examples for document listing, chat, and Gmail automation workflows."
 ---
 
 We shipped **[n8n-nodes-docrouter](https://www.npmjs.com/package/n8n-nodes-docrouter)**—a full set of n8n community nodes and credentials for [DocRouter.ai](https://app.docrouter.ai). This post does three things: **how to use the nodes** (with examples), **how we built them** in a single Cursor thread while cross-checking the real backend in `../doc-router`, and **how this blog post was written**.

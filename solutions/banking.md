@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Banking & Loan Applications - DocRouter Solutions"
+description: "Accelerate loan processing with AI. DocRouter automatically extracts data from financial statements, tax returns, and KYC documents to speed up banking and lending workflows."
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">

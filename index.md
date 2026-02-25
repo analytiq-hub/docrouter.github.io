@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "DocRouter - AI-Powered Document Processing"
+description: "DocRouter uses AI to extract structured data from invoices, manifests, insurance forms, and any document. Cut manual data entry by 90% and processing errors by 95%."
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">

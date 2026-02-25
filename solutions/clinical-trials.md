@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Clinical Trial Invoices - DocRouter Solutions"
+description: "Automate clinical trial invoice processing for pharma and research organizations. Extract data from complex multi-phase contracts and expense reports with high accuracy."
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">

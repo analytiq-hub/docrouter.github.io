@@ -2,6 +2,7 @@
 layout: docs
 title: "Document Agent"
 permalink: /docs/document-agent/
+description: "Set up DocRouter extraction in plain language with the Document Agent. The AI creates schemas, prompts, and tags, runs extraction, and waits for your approval."
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">

@@ -2,6 +2,7 @@
 layout: docs
 title: "Schemas"
 permalink: /docs/schemas/
+description: "Define JSON schemas in DocRouter to get consistent, validated extraction output. Use the schema editor or API to structure extracted data from any document type."
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">

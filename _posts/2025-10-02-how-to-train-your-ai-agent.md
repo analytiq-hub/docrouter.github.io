@@ -5,6 +5,7 @@ date: 2025-10-02
 author: Andrei Radulescu-Banu
 image: /assets/images/how_to_train_your_ai_agent.png
 categories: [ai, programming, tutorials]
+description: "A six-step framework for building AI agents: tools, knowledge bases, planning, evaluation, and MCP Server integration — with Claude Code and Cursor examples."
 ---
 
 Developing an AI agent comes down to a number of intertwined yet distinct challenges:

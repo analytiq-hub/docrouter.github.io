@@ -2,6 +2,7 @@
 layout: docs
 title: "Webhooks"
 permalink: /docs/webhooks/
+description: "Get real-time notifications when DocRouter processes documents. Configure HTTPS webhook endpoints and subscribe to completion, error, and status change events."
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">

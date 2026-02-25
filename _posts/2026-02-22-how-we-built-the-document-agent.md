@@ -5,6 +5,7 @@ date: 2026-02-22 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
 image: /assets/images/document-agent-blog-splash.png
 categories: [ai, programming, engineering, product]
+description: "How DocRouter's Document Agent was built: a tool-calling AI with 25 tools, human-in-the-loop approval, and an agent loop that cuts document config time by 90%."
 ---
 
 The **Document Agent** is the chat on the document page in DocRouter: you talk to an AI in the context of a single document to create or edit schemas, prompts, and tags, run extraction, and tweak results. This post explains why we built it and how we created it—the architecture and the decisions that shaped it.

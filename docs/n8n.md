@@ -2,6 +2,7 @@
 layout: docs
 title: "N8N Integration"
 permalink: /docs/n8n/
+description: "Connect DocRouter to n8n with community nodes. Automate document workflows visually — integrate with Gmail, ERP, CRM, and databases using n8n-nodes-docrouter."
 ---
 
 n8n is a visual workflow tool. Use it to connect DocRouter to other apps and services (ERP, CRM, email, databases).

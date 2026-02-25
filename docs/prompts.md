@@ -2,6 +2,7 @@
 layout: docs
 title: "Prompts"
 permalink: /docs/prompts/
+description: "Write AI extraction prompts in DocRouter to pull structured data from any document. Link prompts to tags for automatic processing whenever documents are uploaded."
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Private Equity Reports - DocRouter Solutions"
+description: "Extract financial data from PE fund reports automatically. DocRouter processes quarterly statements and investment memos, cutting manual extraction time by up to 40%."
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">

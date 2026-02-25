@@ -2,6 +2,7 @@
 layout: docs
 title: "Document Tags"
 permalink: /docs/tags/
+description: "Tags connect documents to AI extraction prompts in DocRouter. Create a tag, link a prompt, and every uploaded document with that tag is automatically processed."
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">

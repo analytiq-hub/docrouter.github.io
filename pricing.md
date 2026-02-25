@@ -2,6 +2,7 @@
 layout: default
 title: "Pricing - DocRouter"
 permalink: /pricing/
+description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Enterprise plans. Start with 100 free SPU credits — no commitment required to get started."
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">

@@ -2,6 +2,7 @@
 layout: docs
 title: "Knowledge Bases"
 permalink: /docs/knowledge-bases/
+description: "Upload reference documents to DocRouter Knowledge Bases to improve AI extraction accuracy. Use price lists, catalogs, and glossaries to guide your prompts."
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">

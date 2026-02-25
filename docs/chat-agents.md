@@ -2,6 +2,7 @@
 layout: docs
 title: "Knowledge Base Chat"
 permalink: /docs/chat-agents/
+description: "Build conversational interfaces over your documents with DocRouter Knowledge Base Chat. Ask natural-language questions via the built-in UI or REST API."
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">

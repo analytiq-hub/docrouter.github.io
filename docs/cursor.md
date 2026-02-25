@@ -2,6 +2,7 @@
 layout: docs
 title: "Cursor Integration"
 permalink: /docs/cursor/
+description: "Integrate DocRouter with Cursor via MCP. Search, read, and manage your documents directly from the Cursor AI editor using the Model Context Protocol."
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">

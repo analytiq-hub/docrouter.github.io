@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: "DocRouter Architecture"
+description: "Learn how DocRouter's cloud-native architecture processes documents through a multi-stage pipeline combining OCR, AI analysis, and structured data extraction at scale."
 ---
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">

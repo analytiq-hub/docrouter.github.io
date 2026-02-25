@@ -5,6 +5,7 @@ date: 2024-10-19
 author: Andrei Radulescu-Banu
 image: /assets/images/background-jobs-for-fastapi.png
 categories: [ai, programming, tech, reviews]
+description: "Two approaches to FastAPI background jobs with MongoDB queues: async coroutines vs. separate worker processes, with code examples for OCR and LLM tasks."
 ---
 
 I needed my FastAPI backend to spawn background jobs, for example, to run Optical Character Recognition (OCR), Named Entity Recognition (NER), or Large Language Model (LLM) orchestration. The FastAPI ran as an API service to a NextJS frontend React application.

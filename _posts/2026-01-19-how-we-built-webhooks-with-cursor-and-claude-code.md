@@ -5,6 +5,7 @@ date: 2026-01-19 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
 image: /assets/images/docrouter_webhooks.svg
 categories: [ai, programming, engineering]
+description: "How DocRouter built reliable outbound webhooks with Cursor and Claude Code — delivery records, retry logic, HMAC auth, and going from 13% to 100% test coverage."
 ---
 
 We recently shipped outbound **webhook support** in DocRouter. This post is a practical look at *how* we implemented it—both technically and with the AI tooling workflow that got it across the finish line.

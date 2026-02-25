@@ -5,6 +5,7 @@ date: 2025-12-25 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
 image: /assets/images/temporal_docrouter_workflows.svg
 categories: [tech, programming, ai, tutorials]
+description: "Use Temporal to orchestrate DocRouter document workflows at scale — chunk, classify, and extract data from hundred-page medical PDFs with durable parallel execution."
 ---
 
 Processing large multi-page documents with AI requires careful orchestration. When documents are hundreds of pages long, they can't be processed in a single LLM prompt due to token limits. This post describes a real-world implementation that uses [Temporal](https://temporal.io/) to orchestrate document processing workflows with [DocRouter.AI](http://docrouter.ai), solving the specific problem of extracting patient information from surgery schedule documents.

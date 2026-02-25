@@ -2,6 +2,7 @@
 layout: docs
 title: "Workflows"
 permalink: /docs/workflows/
+description: "Automate document processing with DocRouter webhooks and workflow platforms. Connect to n8n, Temporal, Zapier, or your own backend for end-to-end automation."
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">
