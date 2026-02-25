@@ -321,6 +321,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.12)
   jekyll-paginate
   jekyll-pdf-embed (= 1.1.2.1)
+  jekyll-sitemap
 
 BUNDLED WITH
    2.5.22
