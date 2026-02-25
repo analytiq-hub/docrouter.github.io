@@ -13,3 +13,7 @@ tailwindcss-*
 # macOS system files
 .DS_Store
 **/.DS_Store
+
+# Claude Code agents and skills
+.agents/
+skills-lock.json
