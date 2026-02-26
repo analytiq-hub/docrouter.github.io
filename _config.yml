@@ -291,5 +291,10 @@ twitter:
   username: bitdribble
   card: summary_large_image
 
+# Google Search Console verification
+# Get this from https://search.google.com/search-console → Settings → Ownership verification → HTML tag
+# Paste only the content="..." value, e.g. "abc123xyz"
+# google_site_verification: ""
+
 # GitHub repository configuration
 repository:  analytiq-hub/analytiq-hub.github.io

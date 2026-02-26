@@ -5,6 +5,55 @@ permalink: /pricing/
 description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Enterprise plans. Start with 100 free SPU credits — no commitment required to get started."
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an SPU (Service Processing Unit)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SPU is DocRouter's flexible billing unit that allows for different pricing based on the complexity of document processing. Each account starts with 100 SPU credits to try DocRouter at no cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use a monthly plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monthly plans are best for regular document processing. They include SPUs at better per-unit pricing, collaboration features (Team plan), and predictable monthly costs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use credits instead of a monthly plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Credits are perfect for testing and getting started, ideal for occasional or one-off document processing, with no monthly commitment required. You pay only for what you use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does DocRouter cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DocRouter offers an Individual plan at $250/month (5,000 SPUs at $0.05 each), a Team plan at $1,000/month (25,000 SPUs at $0.04 each), and custom Enterprise pricing. All accounts start with 100 free SPU credits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a free trial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every new DocRouter account includes 100 free SPU credits — no credit card required. This lets you upload documents and test AI extraction before committing to a plan."
+      }
+    }
+  ]
+}
+</script>
+
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
     <!-- Hero Section -->
     <header class="text-center md:mb-12 mb-8">

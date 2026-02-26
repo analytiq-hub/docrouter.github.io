@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Solutions - DocRouter"
+title: "DocRouter Solutions — AI Document Processing by Industry"
 ---
 <!-- Force GitHub Pages rebuild -->
 
