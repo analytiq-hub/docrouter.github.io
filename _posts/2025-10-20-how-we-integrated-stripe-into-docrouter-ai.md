@@ -82,7 +82,7 @@ Stripe integration is, thus, an essential ingredient in making this kind of prog
 
 When you are starting, the best pricing is a simple one that your customer understands - especially for self-onboaded customers.
 
-For DocRouter, we want users to start free, upgrade to plans, and be able to buy extra credits without friction. Here's how we did it:
+For DocRouter, we want users to [start free, upgrade to plans](/pricing), and be able to buy extra credits without friction. Here's how we did it:
 
 ![DocRouter Pricing Plans](/assets/images/docrouter_pricing.png)
 
@@ -264,7 +264,7 @@ Key events we handle:
 
 To prevent double-crediting, we track processed transactions in the `db.payments_credit_transactions` collection.
 
-On startup and via webhooks, we sync __Stripe__ data to __MongoDB__. This keeps local data fresh without constant API calls.
+On startup and via webhooks, we sync __Stripe__ data to __MongoDB__. This keeps local data fresh without constant API calls. For how we built DocRouter's own outbound webhook system, see [How We Built Webhooks With Cursor and Claude Code](/ai/programming/engineering/how-we-built-webhooks-with-cursor-and-claude-code/).
 
 ## MongoDB Schema
 

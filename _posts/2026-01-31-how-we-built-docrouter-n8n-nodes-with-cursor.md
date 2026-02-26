@@ -83,6 +83,8 @@ Same node supports **List / Get / Create / Update / Delete Organizations** with 
 2. Configure **Webhook path** and, if you use HMAC in DocRouter, the **Secret** and optional **Timestamp tolerance**.
 3. When DocRouter sends an event to that URL, the workflow runs; you can verify the signature and use the payload in the next nodes.
 
+For a deep-dive into DocRouter's webhook implementation, see [How We Built Webhooks With Cursor and Claude Code](/ai/programming/engineering/how-we-built-webhooks-with-cursor-and-claude-code/).
+
 ### Example: Gmail to DocRouter
 
 This workflow uploads Gmail attachments to DocRouter:
