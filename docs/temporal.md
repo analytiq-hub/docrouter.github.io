@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: "Temporal Integration"
+title: "DocRouter Temporal Integration — Durable Workflows"
 permalink: /docs/temporal/
 description: "Integrate DocRouter with Temporal for durable document workflow orchestration. Classify, group, and process multi-page documents with retryable, scalable workflows."
 ---

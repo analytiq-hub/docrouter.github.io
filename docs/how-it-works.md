@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How It Works - DocRouter"
+title: "How DocRouter Works — AI Document Pipeline"
 permalink: /docs/how-it-works/
 description: "See how DocRouter turns unstructured documents into structured data: upload via API, email, or UI — AI extracts and validates the data automatically."
 ---

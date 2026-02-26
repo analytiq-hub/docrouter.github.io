@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "DocRouter - AI-Powered Document Processing"
+title: "DocRouter.AI — AI-Powered Document Processing"
 description: "DocRouter uses AI to extract structured data from invoices, manifests, insurance forms, and any document. Cut manual data entry by 90% and processing errors by 95%."
 ---
 

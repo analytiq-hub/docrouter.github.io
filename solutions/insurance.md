@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Insurance Applications - DocRouter Solutions"
+title: "AI Insurance Application & ACORD Processing"
 description: "Process insurance applications and ACORD forms automatically. DocRouter extracts data from handwritten forms, detects duplicates, and integrates with your AMS system."
 ---
 

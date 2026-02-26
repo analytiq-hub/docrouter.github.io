@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Banking & Loan Applications - DocRouter Solutions"
+title: "AI Document Processing for Banking & Lending"
 description: "Accelerate loan processing with AI. DocRouter automatically extracts data from financial statements, tax returns, and KYC documents to speed up banking and lending workflows."
 ---
 

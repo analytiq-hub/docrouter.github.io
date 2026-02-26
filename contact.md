@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Contact - Analytiq Hub"
+title: "Contact DocRouter.AI"
 permalink: /contact/
 ---
 

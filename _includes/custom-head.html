@@ -9,6 +9,13 @@
   - Custom CSS or JavaScript for this specific site
 {% endcomment %}
 
+<!-- JSON-LD structured data -->
+{%- include json-ld.html -%}
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="{{ '/assets/images/analytiq_favicon.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/images/analytiq_favicon.png' | relative_url }}">
+
 {%- if jekyll.environment == 'production' and site.google_analytics -%}
   {%- include google-analytics.html -%}
 {%- endif -%}

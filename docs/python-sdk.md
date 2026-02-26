@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: "DocRouter Python SDK"
+title: "DocRouter Python SDK Reference"
 description: "Use the DocRouter Python SDK to automate document processing, OCR, and LLM extraction. Install from PyPI and integrate structured data workflows into your Python apps."
 ---
 

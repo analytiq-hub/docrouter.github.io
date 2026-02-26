@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: "DocRouter MCP Server"
+title: "DocRouter MCP Server — AI Assistant Integration"
 permalink: /docs/mcp/
 description: "The DocRouter MCP Server lets AI assistants manage documents, schemas, and prompts via the Model Context Protocol — works with Claude Code, Cursor, and Copilot."
 ---

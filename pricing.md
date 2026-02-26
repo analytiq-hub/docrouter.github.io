@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Pricing - DocRouter"
+title: "Pricing — AI Document Processing Plans"
 permalink: /pricing/
 description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Enterprise plans. Start with 100 free SPU credits — no commitment required to get started."
 ---

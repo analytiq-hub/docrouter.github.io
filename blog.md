@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog
+title: "DocRouter Blog — AI & Document Automation"
 ---
 
 <script>

@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Quick Start Guide
+title: "Quick Start — Get Extracting in Minutes"
 permalink: /docs/quick-start/
 description: "Get started with DocRouter in minutes. Create a tag, write a prompt, upload a document, and see AI extraction results — from first upload to full API automation."
 ---

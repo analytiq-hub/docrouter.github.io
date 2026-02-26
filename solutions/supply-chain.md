@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Supply Chain Document Processing - DocRouter Solutions"
+title: "AI Supply Chain Document Processing"
 description: "Transform shipping manifests and supply chain documents into structured data. DocRouter handles multi-language, multi-currency documents for real-time logistics visibility."
 ---
 

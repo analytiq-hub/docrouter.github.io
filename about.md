@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: "About DocRouter.AI"
 description: "Andrei Radulescu-Banu, founder of DocRouter.AI — MIT PhD, 20+ years in fintech, health tech, robotics, and self-driving cars. Active in Boston's AI and startup community."
 ---
 

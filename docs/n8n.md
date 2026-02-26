@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: "N8N Integration"
+title: "DocRouter n8n Integration — Automate Workflows"
 permalink: /docs/n8n/
 description: "Connect DocRouter to n8n with community nodes. Automate document workflows visually — integrate with Gmail, ERP, CRM, and databases using n8n-nodes-docrouter."
 ---
