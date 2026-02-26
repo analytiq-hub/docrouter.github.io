@@ -6,6 +6,8 @@ description: > # this means to ignore newlines until "show_excerpts:"
   DocRouter provides AI-powered document processing solutions that automate
   manual data entry from invoices, manifests, and reports.
 
+google_analytics: "G-F9E84SGYPP"
+
 show_excerpts: false # set to true to show excerpts on the homepage
 permalink: pretty
 baseurl: ""
