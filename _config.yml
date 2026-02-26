@@ -284,7 +284,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/images/document_agent.png
+      image: /assets/images/og-default.png
 
 # Twitter card type - summary_large_image gives a large banner preview
 twitter:
