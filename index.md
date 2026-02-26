@@ -234,7 +234,7 @@ image: /assets/images/og-default.png
                     <div class="text-sm text-gray-500 mb-4">
                         <strong>Use Case:</strong> Speed up financial processes and reduce compliance risk
                     </div>
-                    <a href="{{ '/solutions/finance/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+                    <a href="{{ '/solutions/banking/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
                 </div>
             </div>
 
