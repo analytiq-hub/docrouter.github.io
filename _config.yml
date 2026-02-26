@@ -252,6 +252,8 @@ site_map:
         url: "/team"
       - title: "Contact"
         url: "/contact"
+      - title: "Privacy Policy"
+        url: "/privacy"
   - title: "Docs"
     links:
       - title: "Documentation"
