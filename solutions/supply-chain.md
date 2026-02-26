@@ -100,6 +100,37 @@ description: "Transform shipping manifests and supply chain documents into struc
             </div>
         </section>
 
+        <!-- Related Documentation -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-6 text-center">Related Documentation</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <a href="/docs/quick-start" class="block bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-400 hover:shadow-md transition-all no-underline group">
+                    <div class="font-semibold text-gray-900 group-hover:text-blue-600 mb-1">Quick Start Guide</div>
+                    <div class="text-sm text-gray-500">Set up shipping document extraction in minutes</div>
+                </a>
+                <a href="/docs/how-it-works" class="block bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-400 hover:shadow-md transition-all no-underline group">
+                    <div class="font-semibold text-gray-900 group-hover:text-blue-600 mb-1">How It Works</div>
+                    <div class="text-sm text-gray-500">Platform overview and architecture</div>
+                </a>
+                <a href="/docs/schemas" class="block bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-400 hover:shadow-md transition-all no-underline group">
+                    <div class="font-semibold text-gray-900 group-hover:text-blue-600 mb-1">Schemas</div>
+                    <div class="text-sm text-gray-500">Define fields for bills of lading, manifests, and customs forms</div>
+                </a>
+                <a href="/docs/knowledge-bases" class="block bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-400 hover:shadow-md transition-all no-underline group">
+                    <div class="font-semibold text-gray-900 group-hover:text-blue-600 mb-1">Knowledge Bases</div>
+                    <div class="text-sm text-gray-500">Store and query commodity classifications and trade compliance data</div>
+                </a>
+                <a href="/docs/workflows" class="block bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-400 hover:shadow-md transition-all no-underline group">
+                    <div class="font-semibold text-gray-900 group-hover:text-blue-600 mb-1">Workflows</div>
+                    <div class="text-sm text-gray-500">Automate ERP updates and shipment tracking</div>
+                </a>
+                <a href="/docs/document-agent" class="block bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-400 hover:shadow-md transition-all no-underline group">
+                    <div class="font-semibold text-gray-900 group-hover:text-blue-600 mb-1">Document Agent</div>
+                    <div class="text-sm text-gray-500">Configure extraction schemas and prompts using AI</div>
+                </a>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Ready to Streamline Your Supply Chain?</h2>
