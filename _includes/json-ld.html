@@ -37,6 +37,46 @@
 }
 </script>
 
+<!-- SiteNavigationElement — hints preferred sitelinks order to Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "SiteNavigationElement",
+      "position": 1,
+      "name": "Solutions",
+      "url": "{{ site_url }}/solutions/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 2,
+      "name": "How It Works",
+      "url": "{{ site_url }}/how-it-works/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 3,
+      "name": "Pricing",
+      "url": "{{ site_url }}/pricing/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 4,
+      "name": "Documentation",
+      "url": "{{ site_url }}/docs/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 5,
+      "name": "Contact Us",
+      "url": "{{ site_url }}/contact/"
+    }
+  ]
+}
+</script>
+
 {% comment %}Homepage: SoftwareApplication{% endcomment %}
 {% if page.url == '/' %}
 <script type="application/ld+json">
