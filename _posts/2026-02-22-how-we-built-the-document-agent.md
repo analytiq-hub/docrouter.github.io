@@ -144,6 +144,28 @@ We persist two things that matter for the agent:
 
 ---
 
+## Implementation stages
+
+We built the Document Agent in three stages, each one shippable on its own and visible in the product.
+
+<div data-excalidraw="/assets/excalidraw/document-agent-implementation-stages.excalidraw" class="excalidraw-container">
+  <div class="loading-placeholder">Loading diagram...</div>
+</div>
+<div style="text-align: center; margin-top: 1rem;">
+  <a href="/excalidraw-edit?file=/assets/excalidraw/document-agent-implementation-stages.excalidraw" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">
+    📝 Edit in Excalidraw
+  </a>
+</div>
+<p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #6b7280;"><strong>Figure 3:</strong> Left-to-right implementation stages.</p>
+
+From **left to right**:
+
+- **Stage 1 — UI + FastAPI**: we started with the core product surface—document list, schemas, tags, prompts—and added FastAPI endpoints for every UI action. Anything you can point-and-click in the app (create/edit schemas, prompts, tags; run extraction; manage documents) can also be exercised through REST APIs.
+- **Stage 2 — MCP server**: we wrapped all document, schema, tag, and prompt APIs into a TypeScript MCP server. At this point, we could use external agents (e.g. Claude Code) to operate DocRouter via MCP, turning our REST surface into a tool catalog without changing the backend.
+- **Stage 3 — Document Agent UI + loop + caching**: we then built the Document Agent UI, added dedicated Copilot FastAPI endpoints and the agent loop described above, and finally layered in LLM caching—provider-level prompt caching for system messages and MongoDB-based embedding caching—to keep the experience both fast and cost-efficient.
+
+---
+
 ## Key decisions
 
 **Read-only vs read-write tools**  
