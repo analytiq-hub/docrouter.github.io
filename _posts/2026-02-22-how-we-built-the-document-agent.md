@@ -169,6 +169,9 @@ We support **streaming** (SSE) for the main chat endpoint: the client gets event
 **Thinking blocks and API compatibility**  
 Some models (e.g. Claude with extended thinking) return **thinking_blocks** in the response. When we continue the conversation (e.g. after tool execution), we must send those blocks back to the API in the right format—Anthropic requires a non-empty `signature` on each block. Our streaming path sometimes produces blocks without signatures, so we have a pass that only includes blocks that have a signature when we rebuild the message for the next call. We also avoid sending the `thinking` parameter when the last assistant message had tool_calls but no thinking_blocks, so we don’t trigger API warnings or rejections.
 
+**LLM caching**  
+We use **prompt caching at the provider level** to make repeated calls cheaper and faster. For chat models that support prompt caching (via LiteLLM’s `supports_prompt_caching`), we convert the system message into content blocks with `cache_control: {"type": "ephemeral"}` so providers like Anthropic and OpenAI can reuse the long, stable system prompt across turns and tool rounds. We intentionally **skip prompt caching for Gemini/Vertex**—their cached-content APIs reject prompts under certain token thresholds, and our system prompts are often smaller than those limits—so for those providers we fall back to regular calls with no cache directive. 
+
 **SPU and cost**  
 Each LLM call in the agent (and each call inside `run_extraction`) checks **SPU** (our credit system) independently. We don’t reserve or estimate “total cost for this turn” upfront—we charge as we go. If the org runs out of credits mid-turn, that LLM call fails and we surface the error; the turn ends. That matches how the rest of the app works and avoids over-engineering reservation logic.
 
