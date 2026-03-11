@@ -47,7 +47,13 @@ Three layers matter:
 
 The core is a loop:
 
-- Send messages to the LLM (system + conversation + tool definitions) → get back text and/or tool calls. If there are tool calls and any is read-write and not auto-approved: **stop**, persist turn state, return `turn_id` and pending tool calls to the client. The client shows approve/reject UI and then calls **POST /chat/approve** with the same `turn_id` and the user’s approvals. - Backend executes the approved tools, appends tool-result messages, and sends that back to the LLM **once**. We do **not** loop on the approve endpoint—each approve is one LLM round. If the LLM returns more tool calls, we return them to the client again. So the loop is “LLM → maybe pause for user → execute tools → LLM again,” with the pause happening in the client, not in a long-running server loop. We cap the number of tool rounds (e.g. 10) so a turn can’t run forever.
+1. **Call LLM** with system message + conversation + tool definitions → get text and/or tool calls.
+2. **If any tool call is read-write and not auto-approved:** stop, persist turn state, return `turn_id` and pending calls to the client.
+3. **Client shows approve/reject UI** and calls **POST /chat/approve** with approvals.
+4. **Backend executes approved tools**, appends results, calls LLM **once**.
+5. **If LLM returns more tool calls**, return them to the client (repeat from step 2).
+
+We cap tool rounds at 10 so a turn can't run forever. The pause happens in the client, not in a long-running server loop.
 
 Here’s the algorithm in plain form:
 
