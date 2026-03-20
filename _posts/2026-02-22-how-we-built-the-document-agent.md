@@ -47,7 +47,13 @@ Three layers matter:
 
 The core is a loop:
 
-- Send messages to the LLM (system + conversation + tool definitions) → get back text and/or tool calls. If there are tool calls and any is read-write and not auto-approved: **stop**, persist turn state, return `turn_id` and pending tool calls to the client. The client shows approve/reject UI and then calls **POST /chat/approve** with the same `turn_id` and the user’s approvals. - Backend executes the approved tools, appends tool-result messages, and sends that back to the LLM **once**. We do **not** loop on the approve endpoint—each approve is one LLM round. If the LLM returns more tool calls, we return them to the client again. So the loop is “LLM → maybe pause for user → execute tools → LLM again,” with the pause happening in the client, not in a long-running server loop. We cap the number of tool rounds (e.g. 10) so a turn can’t run forever.
+1. **Call LLM** with system message + conversation + tool definitions → get text and/or tool calls.
+2. **If any tool call is read-write and not auto-approved:** stop, persist turn state, return `turn_id` and pending calls to the client.
+3. **Client shows approve/reject UI** and calls **POST /chat/approve** with approvals.
+4. **Backend executes approved tools**, appends results, calls LLM **once**.
+5. **If LLM returns more tool calls**, return them to the client (repeat from step 2).
+
+We cap tool rounds at 10 so a turn can't run forever. The pause happens in the client, not in a long-running server loop.
 
 Here’s the algorithm in plain form:
 
@@ -138,6 +144,28 @@ We persist two things that matter for the agent:
 
 ---
 
+## Implementation stages
+
+We built the Document Agent in three stages, each one shippable on its own and visible in the product.
+
+<div data-excalidraw="/assets/excalidraw/document-agent-implementation-stages.excalidraw" class="excalidraw-container">
+  <div class="loading-placeholder">Loading diagram...</div>
+</div>
+<div style="text-align: center; margin-top: 1rem;">
+  <a href="/excalidraw-edit?file=/assets/excalidraw/document-agent-implementation-stages.excalidraw" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">
+    📝 Edit in Excalidraw
+  </a>
+</div>
+<p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #6b7280;"><strong>Figure 3:</strong> Left-to-right implementation stages.</p>
+
+From **left to right**:
+
+- **Stage 1 — UI + FastAPI**: we started with the core product surface—document list, schemas, tags, prompts—and added FastAPI endpoints for every UI action. Anything you can point-and-click in the app (create/edit schemas, prompts, tags; run extraction; manage documents) can also be exercised through REST APIs.
+- **Stage 2 — MCP server**: we wrapped all document, schema, tag, and prompt APIs into a TypeScript MCP server. At this point, we could use external agents (e.g. Claude Code) to operate DocRouter via MCP, turning our REST surface into a tool catalog without changing the backend.
+- **Stage 3 — Document Agent UI + loop + caching**: we then built the Document Agent UI, added dedicated Copilot FastAPI endpoints and the agent loop described above, and finally layered in LLM caching—provider-level prompt caching for system messages and MongoDB-based embedding caching—to keep the experience both fast and cost-efficient.
+
+---
+
 ## Key decisions
 
 **Read-only vs read-write tools**  
@@ -162,6 +190,9 @@ We support **streaming** (SSE) for the main chat endpoint: the client gets event
 
 **Thinking blocks and API compatibility**  
 Some models (e.g. Claude with extended thinking) return **thinking_blocks** in the response. When we continue the conversation (e.g. after tool execution), we must send those blocks back to the API in the right format—Anthropic requires a non-empty `signature` on each block. Our streaming path sometimes produces blocks without signatures, so we have a pass that only includes blocks that have a signature when we rebuild the message for the next call. We also avoid sending the `thinking` parameter when the last assistant message had tool_calls but no thinking_blocks, so we don’t trigger API warnings or rejections.
+
+**LLM caching**  
+We use **prompt caching at the provider level** to make repeated calls cheaper and faster. For chat models that support prompt caching (via LiteLLM’s `supports_prompt_caching`), we convert the system message into content blocks with `cache_control: {"type": "ephemeral"}` so providers like Anthropic and OpenAI can reuse the long, stable system prompt across turns and tool rounds. We intentionally **skip prompt caching for Gemini/Vertex**—their cached-content APIs reject prompts under certain token thresholds, and our system prompts are often smaller than those limits—so for those providers we fall back to regular calls with no cache directive. 
 
 **SPU and cost**  
 Each LLM call in the agent (and each call inside `run_extraction`) checks **SPU** (our credit system) independently. We don’t reserve or estimate “total cost for this turn” upfront—we charge as we go. If the org runs out of credits mid-turn, that LLM call fails and we surface the error; the turn ends. That matches how the rest of the app works and avoids over-engineering reservation logic.
