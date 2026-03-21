@@ -3,7 +3,7 @@ layout: post
 title: "Grouped Peer Documents: Run One Prompt Across Related Files"
 date: 2026-03-20 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
-image: /assets/images/document-agent-blog-splash.png
+image: /assets/images/grouped-peer-documents-splash.png
 categories: [ai, programming, engineering, product]
 description: "How DocRouter lets a single prompt analyze multiple documents together: configuring group-by metadata in the UI, what happens when you run extraction, and what the APIs return."
 ---
