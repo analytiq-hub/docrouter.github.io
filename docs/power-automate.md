@@ -18,9 +18,19 @@ The connector source, OpenAPI definition, C# script (org id injection), and help
 
 ## Sandbox sample flow
 
-The repo README documents a small reference flow you can reproduce in Power Automate: **manual trigger** → get file content from your storage connector → **Upload Document** to DocRouter (file name + Base64). Screenshots and step-by-step install are in the README:
+The repo README documents a small reference flow you can reproduce in Power Automate: **manual trigger** → get file content from your storage connector → **Upload Document** to DocRouter (file name + Base64). Full setup steps are in the README: **[Sandbox sample flow →](https://github.com/analytiq-hub/power-automate-docrouter#sandbox-sample-flow)**
 
-**[Sandbox sample flow →](https://github.com/analytiq-hub/power-automate-docrouter#sandbox-sample-flow)**
+<p class="my-4">
+  <img src="{{ '/assets/images/power-automate-sandbox-flow.png' | relative_url }}" alt="Power Automate flow: manual trigger, get file metadata, get file content, Upload Document to DocRouter" style="max-width: 100%; height: auto; display: block; margin: 0 auto; border: 1px solid #e5e7eb; border-radius: 8px;" />
+</p>
+
+## DocRouter actions in Power Automate
+
+When you add an action from **DocRouter Organization RC1**, the designer lists the same organization-scoped operations as in the OpenAPI definition (documents, tags, prompts, OCR, LLM, knowledge bases, webhooks, and more).
+
+<p class="my-4">
+  <img src="{{ '/assets/images/power-automate-connector-actions.png' | relative_url }}" alt="DocRouter Organization RC1 actions listed in the Power Automate add-an-action panel" style="max-width: 100%; height: auto; display: block; margin: 0 auto; border: 1px solid #e5e7eb; border-radius: 8px;" />
+</p>
 
 ## Capabilities
 
