@@ -2,7 +2,7 @@
 layout: docs
 title: "Workflows"
 permalink: /docs/workflows/
-description: "Automate document processing with DocRouter webhooks and workflow platforms. Connect to n8n, Temporal, Zapier, or your own backend for end-to-end automation."
+description: "Automate document processing with DocRouter webhooks and workflow platforms. Connect to n8n, Microsoft Power Automate, Temporal, Zapier, or your own backend for end-to-end automation."
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">
@@ -22,6 +22,12 @@ Workflows react to DocRouter events (e.g. document processed, extraction complet
 
 ---
 
+## Microsoft Power Automate
+
+**Microsoft Power Automate** uses the **DocRouter Organization** custom connector (open source, deployed with `paconn`). See [Power Automate integration]({{ '/docs/power-automate/' | relative_url }}) for the GitHub repo, deployment steps, and a [sandbox sample flow](https://github.com/analytiq-hub/power-automate-docrouter#sandbox-sample-flow).
+
+---
+
 ## Temporal
 
 **Temporal** is for coded workflows where you need durable orchestration—e.g. classify pages, group them by class, then process each group. See [Temporal]({{ '/docs/temporal/' | relative_url }}) for how it fits with DocRouter and a full walkthrough.
@@ -30,7 +36,7 @@ Workflows react to DocRouter events (e.g. document processed, extraction complet
 
 ## Other workflow tools
 
-DocRouter exposes a full suite of <a href="/docs/rest-api">REST APIs</a>, including webhooks. You can integrate with any workflow tool that supports REST APIs—Zapier, Make, custom scripts, or your own backend. Configure webhooks to receive events, and use the REST API to upload documents, list results, and manage resources.
+DocRouter exposes a full suite of <a href="/docs/rest-api">REST APIs</a>, including webhooks. You can integrate with any workflow tool that supports REST APIs—Zapier, Make, custom scripts, or your own backend. Configure webhooks to receive events, and use the REST API to upload documents, list results, and manage resources. For Power Automate, start from the <a href="/docs/power-automate">Power Automate docs</a> or the <a href="https://github.com/analytiq-hub/power-automate-docrouter#sandbox-sample-flow">connector sandbox on GitHub</a>.
 
 ---
 
