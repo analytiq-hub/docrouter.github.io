@@ -3,6 +3,7 @@ layout: post
 title: "The AI Retrieval Stack"
 date: 2026-04-12 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
+image: /assets/images/ai-retrieval-stack-splash.png
 categories: [ai, engineering]
 description: "An end-to-end view of the AI retrieval stack: embeddings, vector databases, hybrid search, chunking, and how to choose systems by workload."
 mathjax: true
