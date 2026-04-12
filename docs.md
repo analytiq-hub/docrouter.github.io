@@ -40,7 +40,7 @@ permalink: /docs/
             <ul class="space-y-3 text-gray-600">
                 <li><a href="{{ '/docs/rest-api/' | relative_url }}" class="text-blue-600 hover:text-blue-800">REST API</a> — Upload, manage, and query programmatically</li>
                 <li><a href="{{ '/docs/webhooks/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Webhooks</a> — Real-time events and workflows</li>
-                <li><a href="{{ '/docs/workflows/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Workflows</a> — N8N, Temporal, and automation</li>
+                <li><a href="{{ '/docs/workflows/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Workflows</a> — N8N, Power Automate, Temporal, and automation</li>
                 <li><a href="{{ '/docs/python-sdk/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Python SDK</a> — Python client</li>
                 <li><a href="{{ '/docs/typescript-sdk/' | relative_url }}" class="text-blue-600 hover:text-blue-800">TypeScript SDK</a> — TypeScript/Node client</li>
             </ul>
@@ -51,6 +51,7 @@ permalink: /docs/
             <ul class="space-y-3 text-gray-600">
                 <li><a href="{{ '/docs/integrations/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Integrations</a> — Overview of integration options</li>
                 <li><a href="{{ '/docs/n8n/' | relative_url }}" class="text-blue-600 hover:text-blue-800">N8N</a> — Visual workflow automation</li>
+                <li><a href="{{ '/docs/power-automate/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Power Automate</a> — Custom connector &amp; <a href="https://github.com/analytiq-hub/power-automate-docrouter#sandbox-sample-flow" class="text-blue-600 hover:text-blue-800">sandbox on GitHub</a></li>
                 <li><a href="{{ '/docs/temporal/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Temporal</a> — Durable workflow orchestration</li>
                 <li><a href="{{ '/docs/mcp/' | relative_url }}" class="text-blue-600 hover:text-blue-800">MCP Server</a> — Use DocRouter from AI assistants</li>
                 <li><a href="{{ '/docs/claude-code/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Claude Code</a> — DocRouter in Claude Code</li>

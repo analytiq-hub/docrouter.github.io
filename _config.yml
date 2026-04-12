@@ -124,6 +124,8 @@ header_pages:
             url: "/docs/integrations"
           - title: "N8N"
             url: "/docs/n8n"
+          - title: "Power Automate"
+            url: "/docs/power-automate"
           - title: "Temporal"
             url: "/docs/temporal"
           - title: "MCP Server"
@@ -203,6 +205,8 @@ docs_sidebar_pages:
     children:
       - title: "N8N"
         url: "/docs/n8n"
+      - title: "Power Automate"
+        url: "/docs/power-automate"
       - title: "Temporal"
         url: "/docs/temporal"
       - title: "MCP Server"

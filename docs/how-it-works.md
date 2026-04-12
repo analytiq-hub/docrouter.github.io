@@ -123,6 +123,13 @@ description: "See how DocRouter turns unstructured documents into structured dat
                     <a href="{{ '/docs/workflows/#n8n' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View n8n Setup →</a>
                 </div>
 
+                <!-- Power Automate -->
+                <div class="bg-white rounded-lg p-5 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">Power Automate</h3>
+                    <p class="text-sm text-gray-600 mb-3">Microsoft cloud flows with the DocRouter Organization custom connector—same org APIs as n8n.</p>
+                    <a href="{{ '/docs/power-automate/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View Power Automate docs →</a>
+                </div>
+
                 <!-- Temporal -->
                 <div class="bg-white rounded-lg p-5 shadow-sm">
                     <h3 class="font-bold text-gray-900 mb-2">Temporal</h3>
