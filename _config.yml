@@ -92,6 +92,8 @@ header_pages:
             url: "/docs/how-it-works"
           - title: "Quick Start Guide"
             url: "/docs/quick-start"
+          - title: "Platform"
+            url: "/docs/platform"
       - title: "Core concepts"
         children:
           - title: "Tags"
@@ -175,6 +177,8 @@ docs_sidebar_pages:
         url: "/docs/how-it-works"
       - title: "Quick Start Guide"
         url: "/docs/quick-start"
+      - title: "Platform"
+        url: "/docs/platform"
   - title: "Core concepts"
     children:
       - title: "Tags"
