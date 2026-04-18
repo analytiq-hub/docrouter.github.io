@@ -11,67 +11,33 @@ description: "Hosted DocRouter (SaaS) needs no cloud or LLM configuration from y
   <p class="text-sm md:text-base text-blue-100 mb-0"><strong>Self-hosted:</strong> You supply cloud accounts and LLM keys.</p>
 </div>
 
-<p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 1rem 0;"><strong>Hosted SaaS</strong> (<a href="https://app.docrouter.ai" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">app.docrouter.ai</a>): there is no tenant configuration for infrastructure, model API keys, or OCR backends. <strong>Self-hosted</strong> DocRouter: you operate the stack and can optionally connect cloud accounts (AWS, GCP, Azure) and optionally configure LLM provider keys or cloud identity—only what you need for the features you turn on.</p>
+## Supported clouds
 
----
+<p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 1rem 0;">Each cloud is configured under <b>Settings → Account → Development</b>. Configure only the clouds whose services you use.</p>
 
-## Hosted vs self-hosted
-
-<div class="grid md:grid-cols-2 gap-4 md:gap-6 my-4 md:my-6">
+<div class="not-prose grid md:grid-cols-3 gap-4 md:gap-6 my-4 md:my-6">
   <div class="bg-white border border-gray-200 rounded-lg p-5">
-    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.75rem 0;">Hosted DocRouter (SaaS)</h3>
-    <p style="color: #4b5563; font-size: 0.875rem; margin: 0;">You do <strong>not</strong> configure cloud platforms (AWS, GCP, Azure) or bring your own LLM API keys. DocRouter manages models, OCR, storage, and integrations end to end on its infrastructure.</p>
+    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.75rem 0;">AWS</h3>
+    <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 0.5rem 0;"><b>Services:</b> S3 (document storage), Textract (OCR), Bedrock (LLMs and embeddings).</p>
+    <p style="color: #4b5563; font-size: 0.875rem; margin: 0;"><b>Configuration:</b> IAM user access key ID, secret access key, and S3 bucket name.</p>
   </div>
   <div class="bg-white border border-gray-200 rounded-lg p-5">
-    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.75rem 0;">Self-hosted DocRouter</h3>
-    <p style="color: #4b5563; font-size: 0.875rem; margin: 0;">You may supply <strong>optional</strong> cloud accounts (for storage, Textract, Bedrock, Vertex, Azure/Foundry, IAM, and so on) and <strong>optional</strong> LLM keys or cloud auth—only for the providers and features you enable. Nothing is required unless a chosen code path needs it (see below).</p>
-  </div>
-</div>
-
----
-
-## Supported clouds (self-hosted)
-
-<p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 1rem 0;">The following applies when <strong>you</strong> run DocRouter and connect vendor clouds. It does not describe SaaS tenant setup (there is none).</p>
-
-<p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 1rem 0;"><strong>Feature-to-cloud dependencies</strong> (when those features are in use on a self-hosted deployment):</p>
-
-<ul style="color: #4b5563; font-size: 0.875rem; margin: 0 0 1rem 0; padding-left: 1.25rem;">
-  <li style="margin-bottom: 0.35rem;"><strong>Amazon Textract</strong> OCR and <strong>AWS Bedrock</strong> LLMs require an <strong>AWS</strong> account (credentials, IAM, and typically S3 for the pipeline as configured).</li>
-  <li style="margin-bottom: 0.35rem;"><strong>Google Vertex AI</strong> LLMs require <strong>GCP</strong> (Vertex / Google Cloud project and auth as wired in your environment).</li>
-  <li style="margin-bottom: 0.35rem;"><strong>Microsoft Foundry</strong> LLMs (Azure AI / <code>azure_ai</code> in LiteLLM) require <strong>Azure</strong>.</li>
-  <li style="margin-bottom: 0.35rem;"><strong>Mistral OCR</strong> requires <strong>Mistral</strong> (Mistral API access—API key or auth your deployment uses for Mistral).</li>
-</ul>
-
-<div class="grid md:grid-cols-2 gap-4 md:gap-6 my-4 md:my-6">
-  <div class="bg-white border border-gray-200 rounded-lg p-5">
-    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.75rem 0;">Amazon Web Services (AWS)</h3>
-    <ul style="color: #4b5563; font-size: 0.875rem; margin: 0; padding-left: 1.25rem;">
-      <li style="margin-bottom: 0.5rem;"><strong>Textract</strong> — <a href="#supported-ocr-algorithms">OCR</a> via <code>AnalyzeDocument</code> when OCR mode is <code>textract</code>; requires AWS.</li>
-      <li style="margin-bottom: 0.5rem;"><strong>Bedrock</strong> — LLMs and embeddings routed through LiteLLM; requires AWS.</li>
-      <li><strong>Object storage</strong> — S3-compatible storage for documents and artifacts is typical for production on AWS.</li>
-    </ul>
+    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.75rem 0;">GCP</h3>
+    <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 0.5rem 0;"><b>Services:</b> Vertex AI (Gemini and embeddings).</p>
+    <p style="color: #4b5563; font-size: 0.875rem; margin: 0;"><b>Configuration:</b> Google Cloud service account JSON key.</p>
   </div>
   <div class="bg-white border border-gray-200 rounded-lg p-5">
-    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.75rem 0;">Google Cloud (GCP)</h3>
-    <ul style="color: #4b5563; font-size: 0.875rem; margin: 0; padding-left: 1.25rem;">
-      <li><strong>Vertex AI</strong> — Gemini and embeddings on Vertex require GCP. (Other LiteLLM routes—for example Gemini via Google AI Studio and an API key—follow whatever credentials you configure for that provider.)</li>
-    </ul>
-  </div>
-  <div class="bg-white border border-gray-200 rounded-lg p-5">
-    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.75rem 0;">Microsoft Azure</h3>
-    <ul style="color: #4b5563; font-size: 0.875rem; margin: 0; padding-left: 1.25rem;">
-      <li><strong>Microsoft Foundry</strong> / Azure AI models — require Azure. <strong>Azure OpenAI</strong> deployments also use Azure.</li>
-    </ul>
-  </div>
-  <div class="bg-white border border-gray-200 rounded-lg p-5">
-    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.75rem 0;">Kubernetes</h3>
-    <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 0.5rem 0;">DocRouter ships with Helm-oriented deployment; MongoDB can be Atlas or in-cluster. Cloud choice above is about <strong>vendor APIs and data planes</strong>, not about “Kubernetes itself.”</p>
-    <p style="color: #4b5563; font-size: 0.875rem; margin: 0;">Example write-ups include <strong>Amazon EKS</strong> and <strong>DigitalOcean Kubernetes</strong>; <strong>AKS</strong> is noted as planned. See <a href="{% post_url 2026-03-07-deploying-doc-router-on-kubernetes %}" class="text-blue-600 hover:text-blue-800">Deploying Doc Router on Kubernetes</a>.</p>
+    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin: 0 0 0.75rem 0;">Azure</h3>
+    <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 0.5rem 0;"><b>Services:</b> Azure OpenAI and Microsoft Foundry (Azure AI) LLMs.</p>
+    <p style="color: #4b5563; font-size: 0.875rem; margin: 0;"><b>Configuration:</b> Microsoft Entra service principal (tenant ID, client ID, client secret) and the Foundry service API base URL.</p>
   </div>
 </div>
 
-<p style="color: #4b5563; font-size: 0.875rem; margin: 0;">For how components fit together, see the <a href="{{ '/docs/architecture/' | relative_url }}" class="text-blue-600 hover:text-blue-800">architecture overview</a>.</p>
+---
+
+## Deployment
+
+<p style="color: #4b5563; font-size: 0.875rem; margin: 0;">Self-hosted DocRouter installs via a <b>Kubernetes Helm chart</b> or <b>Docker Compose</b>. See <a href="{% post_url 2026-03-07-deploying-doc-router-on-kubernetes %}" class="text-blue-600 hover:text-blue-800">Deploying Doc Router on Kubernetes</a> and the <a href="{{ '/docs/open-source/' | relative_url }}" class="text-blue-600 hover:text-blue-800">open source</a> page.</p>
 
 ---
 
