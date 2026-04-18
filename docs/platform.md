@@ -43,8 +43,6 @@ description: "Hosted DocRouter (SaaS) needs no cloud or LLM configuration from y
 
 ## Supported LLM providers
 
-<p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 0.75rem 0;"><strong>SaaS:</strong> DocRouter operates the models; you do not supply LLM API keys or enable providers in your tenant. <strong>Self-hosted:</strong> DocRouter routes chat, extraction, embeddings, and optional <a href="#supported-ocr-algorithms">LLM-based OCR</a> through <strong>LiteLLM</strong>; you <strong>optionally</strong> configure provider keys or cloud-side auth for only the vendors you use. Some providers are API-key based; <strong>AWS Bedrock</strong>, <strong>Vertex AI</strong>, and <strong>Microsoft Foundry</strong> tie to the clouds listed above when those routes are enabled.</p>
-
 <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 0.5rem 0;">First-class provider entries in the open-source product include:</p>
 
 <ul style="color: #4b5563; font-size: 0.875rem; margin: 0 0 1rem 0; padding-left: 1.25rem;">
@@ -67,7 +65,7 @@ description: "Hosted DocRouter (SaaS) needs no cloud or LLM configuration from y
 
 ## Supported OCR algorithms
 
-<p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 1rem 0;"><strong>Self-hosted</strong> installs choose <strong>one OCR mode</strong> per organization; the pipeline runs that engine on the document PDF and stores a normalized OCR payload for downstream extraction and search. <strong>SaaS:</strong> DocRouter runs OCR as part of the managed service—you do not select engines or supply vendor credentials.</p>
+<p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 1rem 0;"><strong>Organization admins</strong> choose <strong>one OCR mode</strong> per organization; the pipeline runs that engine on the document PDF and stores a normalized OCR payload for downstream extraction and search. </p>
 
 <div class="overflow-x-auto my-4 md:my-6">
   <table class="min-w-full text-left border border-gray-200" style="font-size: 0.875rem; color: #374151;">
@@ -97,5 +95,3 @@ description: "Hosted DocRouter (SaaS) needs no cloud or LLM configuration from y
     </tbody>
   </table>
 </div>
-
-<p style="color: #4b5563; font-size: 0.875rem; margin: 0;">Implementation details live under <code>analytiq_data.ocr</code> in the DocRouter repository (<code>ocr_config.py</code>, <code>ocr_runners.py</code>).</p>
