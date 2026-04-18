@@ -5,9 +5,10 @@ permalink: /docs/platform/
 description: "Hosted DocRouter (SaaS) needs no cloud or LLM configuration from you. Self-hosted DocRouter can use optional cloud accounts and LLM keys; Textract and Bedrock need AWS, Vertex AI needs GCP, Microsoft Foundry needs Azure, and Mistral OCR needs Mistral."
 ---
 
-<div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">
+<div class="not-prose bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">
   <h2 class="text-xl md:text-2xl font-semibold text-white mb-2">Platform — clouds, LLMs, and OCR</h2>
-  <p class="text-sm md:text-base text-blue-100"><strong>Hosted SaaS:</strong> you do not configure cloud accounts or LLM keys—DocRouter runs everything. <strong>Self-hosted:</strong> you may supply optional cloud accounts and optional LLM keys so your deployment can reach the vendors you choose.</p>
+  <p class="text-sm md:text-base text-blue-100 mb-2"><strong>Hosted SaaS:</strong> Cloud accounts and LLM keys are provided for you.</p>
+  <p class="text-sm md:text-base text-blue-100 mb-0"><strong>Self-hosted:</strong> You supply cloud accounts and LLM keys.</p>
 </div>
 
 <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 1rem 0;"><strong>Hosted SaaS</strong> (<a href="https://app.docrouter.ai" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">app.docrouter.ai</a>): there is no tenant configuration for infrastructure, model API keys, or OCR backends. <strong>Self-hosted</strong> DocRouter: you operate the stack and can optionally connect cloud accounts (AWS, GCP, Azure) and optionally configure LLM provider keys or cloud identity—only what you need for the features you turn on.</p>
