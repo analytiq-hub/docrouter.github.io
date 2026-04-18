@@ -20,7 +20,6 @@ permalink: /docs/
             <ul class="space-y-3 text-gray-600">
                 <li><a href="{{ '/docs/how-it-works/' | relative_url }}" class="text-blue-600 hover:text-blue-800">How It Works</a> — High-level workflow and concepts</li>
                 <li><a href="{{ '/docs/quick-start/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Quick Start Guide</a> — Tag, prompt, upload in minutes</li>
-                <li><a href="{{ '/docs/platform/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Platform</a> — Supported clouds, LLM providers, and OCR modes</li>
             </ul>
         </section>
 
