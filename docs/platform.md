@@ -67,6 +67,8 @@ description: "Hosted DocRouter (SaaS) needs no cloud or LLM configuration from y
 
 <p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 1rem 0;"><strong>Organization admins</strong> choose <strong>one OCR mode</strong> per organization; the pipeline runs that engine on the document PDF and stores a normalized OCR payload for downstream extraction and search. </p>
 
+<p style="color: #4b5563; font-size: 0.875rem; margin: 0 0 1rem 0;">All the OCR models are enabled in the SAAS version of DocRouter, at <a href="https://app.docrouter.ai>" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">https://app.docrouter.ai/</a>. When installed on-prem, here are the requirements to enabled each OCR model:</p>
+
 <div class="overflow-x-auto my-4 md:my-6">
   <table class="min-w-full text-left border border-gray-200" style="font-size: 0.875rem; color: #374151;">
     <thead style="background-color: #f9fafb; color: #111827;">
@@ -78,15 +80,19 @@ description: "Hosted DocRouter (SaaS) needs no cloud or LLM configuration from y
     <tbody>
       <tr style="border-bottom: 1px solid #f3f4f6;">
         <td class="px-3 py-2 font-medium text-gray-900 whitespace-nowrap"><code>textract</code></td>
-        <td class="px-3 py-2"><strong>Amazon Textract</strong> <code>AnalyzeDocument</code>. Self-hosted: configurable feature types (e.g. <code>LAYOUT</code>, <code>TABLES</code>, <code>FORMS</code>, <code>SIGNATURES</code>) and AWS credentials/IAM for Textract and S3 as used by your deployment. <strong>Requires AWS.</strong></td>
+        <td class="px-3 py-2"><strong>Amazon Textract</strong> <code>AnalyzeDocument</code>. Configurable feature types (e.g. <code>LAYOUT</code>, <code>TABLES</code>, <code>FORMS</code>, <code>SIGNATURES</code>). <strong>Requires AWS.</strong></td>
       </tr>
       <tr style="border-bottom: 1px solid #f3f4f6;">
         <td class="px-3 py-2 font-medium text-gray-900 whitespace-nowrap"><code>mistral</code></td>
-        <td class="px-3 py-2"><strong>Mistral OCR</strong> via the Mistral API (model <code>mistral-ocr-latest</code> in product code). Returns Mistral OCR JSON (pages and layout-oriented content). <strong>Requires Mistral.</strong></td>
+        <td class="px-3 py-2"><strong>Mistral OCR</strong> via the Mistral API (model <code>mistral-ocr-latest</code> in product code). Returns Mistral OCR JSON. <strong>Requires Mistral provider.</strong></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f3f4f6;">
+        <td class="px-3 py-2 font-medium text-gray-900 whitespace-nowrap"><code>mistral-vertex</code></td>
+        <td class="px-3 py-2"><strong>Mistral OCR</strong> via GCP (model <code>mistral-ocr-2505</code> in product code). Returns Mistral OCR JSON. <strong>Requires GCP.</strong></td>
       </tr>
       <tr style="border-bottom: 1px solid #f3f4f6;">
         <td class="px-3 py-2 font-medium text-gray-900 whitespace-nowrap"><code>llm</code></td>
-        <td class="px-3 py-2"><strong>Vision LLM OCR</strong> — uses a LiteLLM provider and model for per-page markdown (or equivalent). <strong>Self-hosted:</strong> you configure provider, model, and credentials. <strong>SaaS:</strong> not something you configure in your tenant—processing is fully managed.</td>
+        <td class="px-3 py-2"><strong>Vision LLM OCR</strong> — uses a LiteLLM provider and model for per-page markdown. Gemini models are best performing for LLM OCR.</td>
       </tr>
       <tr>
         <td class="px-3 py-2 font-medium text-gray-900 whitespace-nowrap"><code>pymupdf</code></td>
