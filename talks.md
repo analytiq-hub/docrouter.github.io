@@ -16,7 +16,7 @@ permalink: /talks/
         <!-- Talks Container -->
         <div class="space-y-8" id="talks-container">
             {% include talk-card.html 
-                title="Embed AI Copilot in Your Application"
+                title="How To Embed an AI Copilot in Your Application"
                 speaker="Andrei Radulescu-Banu"
                 date="Mar 12, 2026"
                 event="AI Camp"
