@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How AI Agent Memory Works (and How We Integrated It)"
+title: "How AI Agent Memory Works (and How We Integrated Mem0)"
 date: 2026-05-06 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
 categories: [ai, engineering, agents, rag]
