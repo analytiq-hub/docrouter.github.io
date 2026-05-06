@@ -67,6 +67,20 @@ In our integration, we provide mem0 with a **custom fact extraction prompt** tun
 {"facts":["Role: Plant Manager","Work context: Texas refinery, 40 direct reports"]}
 ```
 
+### The prompts we configure for mem0
+
+mem0 ships with default prompts, but in `koch-ai-book-companion` we **override the prompts** to make memory behave like a disciplined coaching “profile” instead of a grab-bag of notes. Configuration lives under the `mem0:` section (defaults, then overridden per environment).
+
+The three prompts we actively set are:
+
+- **`custom_fact_extraction_prompt`**: turns the latest turn (user and/or assistant text) into a short list of *candidate facts* and returns **JSON only** (`{"facts":[...]}`).
+  - Focuses on stable profile fields, a single active goal, principle exposure progression, session summaries, and open-loop follow-ups.
+  - Explicitly excludes PII/credentials and low-signal chatter.
+- **`custom_update_memory_prompt`**: reconciles *candidate facts* against what’s already stored and emits a full “edit plan” using **ADD / UPDATE / DELETE / NONE**.
+  - This is where dedupe and contradiction-handling happens (e.g. “only one goal at a time”, “open loop resolved → delete”).
+- **`custom_memory_answer_prompt`**: used when mem0 is asked to answer based on stored memories.
+  - It’s written as an internal component: return the relevant facts **without** mentioning “memories” or retrieval mechanics, so the *agent* can incorporate them naturally.
+
 ### The LLM used for ingestion and reconciliation
 
 mem0 uses an LLM twice during ingestion:
