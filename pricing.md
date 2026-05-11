@@ -67,7 +67,7 @@ description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Ent
 
     <main>
         <!-- Pricing Cards -->
-        <section class="mb-16">
+        <section class="mb-8 md:mb-10">
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Individual Plan -->
                 <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col">
@@ -190,21 +190,24 @@ description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Ent
         </section>
 
         <!-- About SPU -->
-        <section class="bg-gray-50 rounded-lg p-6 md:p-8 mb-12">
-            <h2 class="text-lg font-semibold text-blue-600 mb-4">About SPU (Service Processing Unit)</h2>
-            <p class="text-gray-700 mb-4">
+        <section class="bg-gray-50 rounded-lg px-6 md:px-8 py-3 md:py-4 mb-4">
+            <h2 class="text-lg font-semibold text-blue-600 mb-2">About SPU (Service Processing Unit)</h2>
+            <p class="text-gray-700 mb-2">
                 An SPU is DocRouter's billing unit. Every paid operation uses the same formula:
             </p>
-            <p class="text-center font-mono text-gray-800 bg-white border border-gray-200 rounded-lg px-4 py-3 mb-4 text-sm md:text-base">
+            <p class="text-center font-mono text-gray-800 bg-white border border-gray-200 rounded-lg px-4 py-2 mb-2 text-sm md:text-base">
                 SPUs = ceil(2 &times; estimated cloud cost &divide; price per SPU)
             </p>
-            <p class="text-gray-700">
+            <p class="text-gray-700 mb-2">
                 The factor of 2 covers infrastructure and overhead on top of raw cloud cost. A minimum floor also applies: at least 1 SPU per 25 pages for OCR and document extraction, and 1 SPU per agent LLM call. Embedded-text extraction (PyMuPDF) is free.
+            </p>
+            <p class="text-sm text-gray-500 italic mb-0">
+                SPU rates and computation methods are subject to change. We will provide advance notice of any material changes, and updates will apply only to usage on or after the effective date.
             </p>
         </section>
 
         <!-- About Enterprise Plans -->
-        <section class="bg-gray-50 rounded-lg p-6 md:p-8 mb-12">
+        <section class="bg-gray-50 rounded-lg p-6 md:p-8 mb-4">
             <h2 class="text-lg font-semibold text-blue-600 mb-4">About Enterprise Plans</h2>
             <p class="text-gray-700">
                 Enterprise Plans include configuration and dataset evaluation services. On-premises / on-VPC installations require an Enterprise Plan.
