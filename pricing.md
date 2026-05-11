@@ -219,10 +219,9 @@ description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Ent
             <div class="bg-green-50 border border-green-200 rounded-lg p-6 md:p-8">
                 <h2 class="text-xl font-semibold text-green-800 mb-4">When to use Monthly Plans</h2>
                 <ul class="text-gray-700 space-y-2 list-disc list-inside">
-                    <li>Best for regular document processing</li>
+                    <li>Best for predictable monthly costs</li>
                     <li>Includes SPUs with better per-unit pricing</li>
                     <li>Collaboration features in the Team plan</li>
-                    <li>Predictable monthly costs</li>
                 </ul>
             </div>
             <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 md:p-8">
@@ -232,10 +231,8 @@ description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Ent
                 </p>
                 <h3 class="text-lg font-medium text-blue-800 mb-2">When to use Credits</h3>
                 <ul class="text-gray-700 space-y-2 list-disc list-inside">
-                    <li>Perfect for testing and getting started</li>
                     <li>Ideal for occasional or one-off document processing</li>
-                    <li>No monthly commitment required</li>
-                    <li>Pay only for what you use</li>
+                    <li>When you have exceeded the SPUs allocated in your monthly plan</li>
                 </ul>
                 <div class="mt-4">
                     <button onclick="openCalendlyModal()"
@@ -243,6 +240,17 @@ description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Ent
                         Request Additional Credits
                     </button>
                 </div>
+            </div>
+        </section>
+
+        <!-- When to use Enterprise (below Monthly Plans + Credits) -->
+        <section class="mb-12">
+            <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 md:p-8">
+                <h2 class="text-xl font-semibold text-slate-800 mb-4">When to use Enterprise plans</h2>
+                <ul class="text-gray-700 space-y-2 list-disc list-inside">
+                    <li>When you require configuration and dataset evaluation services</li>
+                    <li>When you prefer an on-prem or on-VPC installation connecting with your own cloud and LLM APIs</li>
+                </ul>
             </div>
         </section>
 
