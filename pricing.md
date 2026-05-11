@@ -225,21 +225,12 @@ description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Ent
                 </ul>
             </div>
             <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 md:p-8">
-                <h2 class="text-xl font-semibold text-blue-800 mb-2">$ Credits</h2>
-                <p class="text-gray-700 mb-4">
-                    Each account starts with <strong>100 SPU credits</strong> to try DocRouter. Contact us for additional credit grants.
-                </p>
-                <h3 class="text-lg font-medium text-blue-800 mb-2">When to use Credits</h3>
+                <h2 class="text-xl font-semibold text-blue-800 mb-2">When to use Credits</h2>
                 <ul class="text-gray-700 space-y-2 list-disc list-inside">
-                    <li>Ideal for occasional or one-off document processing</li>
+                    <li>Best for occasional or one-off document processing</li>
                     <li>When you have exceeded the SPUs allocated in your monthly plan</li>
+                    <li>Each account starts with <strong>100 SPU credits</strong> to try DocRouter. Contact us for additional credit grants.</li>
                 </ul>
-                <div class="mt-4">
-                    <button onclick="openCalendlyModal()"
-                            class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 text-sm">
-                        Request Additional Credits
-                    </button>
-                </div>
             </div>
         </section>
 
