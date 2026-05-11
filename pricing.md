@@ -203,6 +203,14 @@ description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Ent
             </p>
         </section>
 
+        <!-- About Enterprise Plans -->
+        <section class="bg-gray-50 rounded-lg p-6 md:p-8 mb-12">
+            <h2 class="text-lg font-semibold text-blue-600 mb-4">About Enterprise Plans</h2>
+            <p class="text-gray-700">
+                Enterprise Plans include configuration and dataset evaluation services. On-premises / on-VPC installations require an Enterprise Plan.
+            </p>
+        </section>
+
         <!-- When to use: Plans and Credits (two columns) -->
         <section class="grid md:grid-cols-2 gap-8 mb-12">
             <div class="bg-green-50 border border-green-200 rounded-lg p-6 md:p-8">
