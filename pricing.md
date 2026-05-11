@@ -15,7 +15,7 @@ description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Ent
       "name": "What is an SPU (Service Processing Unit)?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "SPU is DocRouter's flexible billing unit that allows for different pricing based on the complexity of document processing. Each account starts with 100 SPU credits to try DocRouter at no cost."
+        "text": "An SPU (Service Processing Unit) is DocRouter's billing unit. Every paid operation — OCR, document extraction, and Document Agent chat — uses the same formula: SPUs = ceil(2 × estimated cloud cost / price per SPU), with a minimum floor of 1 SPU per 25 pages (or 1 SPU per agent LLM call). Embedded-text extraction (PyMuPDF) is always free. Each account starts with 100 SPU credits to try DocRouter at no cost."
       }
     },
     {
@@ -191,9 +191,15 @@ description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Ent
 
         <!-- About SPU -->
         <section class="bg-gray-50 rounded-lg p-6 md:p-8 mb-12">
-            <h2 class="text-lg font-semibold text-blue-600 mb-2">About SPU (Service Processing Unit)</h2>
+            <h2 class="text-lg font-semibold text-blue-600 mb-4">About SPU (Service Processing Unit)</h2>
+            <p class="text-gray-700 mb-4">
+                An SPU is DocRouter's billing unit. Every paid operation uses the same formula:
+            </p>
+            <p class="text-center font-mono text-gray-800 bg-white border border-gray-200 rounded-lg px-4 py-3 mb-4 text-sm md:text-base">
+                SPUs = ceil(2 &times; estimated cloud cost &divide; price per SPU)
+            </p>
             <p class="text-gray-700">
-                SPU is our flexible billing unit that allows for different pricing based on the complexity of document processing.
+                The factor of 2 covers infrastructure and overhead on top of raw cloud cost. A minimum floor also applies: at least 1 SPU per 25 pages for OCR and document extraction, and 1 SPU per agent LLM call. Embedded-text extraction (PyMuPDF) is free.
             </p>
         </section>
 
