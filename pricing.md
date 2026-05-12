@@ -239,8 +239,8 @@ description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Ent
             <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 md:p-8">
                 <h2 class="text-xl font-semibold text-slate-800 mb-4">When to use Enterprise plans</h2>
                 <ul class="text-gray-700 space-y-2 list-disc list-inside">
-                    <li>When you require configuration and dataset evaluation services</li>
-                    <li>When you prefer an on-prem or on-VPC installation connecting with your own cloud and LLM APIs</li>
+                    <li>Best when you require configuration and dataset evaluation services</li>
+                    <li>Best for on-prem or on-VPC installation connecting with your own cloud and LLM APIs</li>
                 </ul>
             </div>
         </section>
