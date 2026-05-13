@@ -69,7 +69,7 @@ In our integration, we provide mem0 with a **custom fact extraction prompt** tun
 
 ### The prompts we configure for mem0
 
-mem0 ships with default prompts, but in `koch-ai-book-companion` we **override the prompts** to make memory behave like a disciplined coaching “profile” instead of a grab-bag of notes. Configuration lives under the `mem0:` section (defaults, then overridden per environment).
+mem0 ships with default prompts, but we **override the prompts** to make memory behave like a disciplined coaching “profile” instead of a grab-bag of notes. Configuration lives under the `mem0:` section (defaults, then overridden per environment).
 
 The three prompts we actively set are:
 
