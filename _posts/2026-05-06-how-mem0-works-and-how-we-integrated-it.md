@@ -73,11 +73,14 @@ mem0’s job is to convert raw conversation into **small, high-signal “facts�
 - Progress on “principles” (mentioned → explored → applied)
 - Session summaries and open loops that span sessions
 
-In our integration, we provide mem0 with a **custom fact extraction prompt** tuned for coaching conversations. It returns JSON like:
+Facts are stored as strings in the vector DB, where they become searchable through both vector and token search, for example:
 
-```json
-{"facts":["Role: Plant Manager","Work context: Texas refinery, 40 direct reports"]}
 ```
+"Role: Plant Manager"
+"Work context: Texas refinery, 40 direct reports"
+```
+
+In our application, we provide mem0 with a **custom fact extraction prompt** tuned for the kind of facts that we want to store.
 
 ### The prompts we configure for mem0
 
