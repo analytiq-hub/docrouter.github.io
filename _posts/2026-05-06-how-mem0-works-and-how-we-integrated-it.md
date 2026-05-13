@@ -60,9 +60,9 @@ Users, on the other hand, should get a response quickly, based on the last user 
 
 ## Memory ingestion (background path)
 
-We surface this work as **Memory Save**: a background task that updates memory without blocking the chat. When the user sends a message, we enqueue that task rather than doing ingestion inline.
+When the user enters a new message, we trigger a background task to select, save and reconcile new facts in the memory store.
 
-In the API, we schedule `add_memory(...)` in the request’s background tasks (both non-streaming and streaming endpoints). That means memory writes happen **after** the response is returned (or after streaming finalization), keeping the **time-to-first-token** fast even under load.
+The actual memory writes happen **while** or **after** the response is returned, keeping the **time-to-first-token** fast.
 
 ### What mem0 stores
 
