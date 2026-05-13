@@ -1,64 +1,15 @@
 ---
 layout: default
-title: "Pricing — AI Document Processing Plans"
-permalink: /pricing/
-description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Enterprise plans. Start with 100 free SPU credits — no commitment required to get started."
+title: "SAAS Pricing — AI Document Processing Plans"
+permalink: /pricing/saas/
+description: "DocRouter SAAS pricing: Individual ($250/mo), Team ($1,000/mo), and Enterprise plans. Start with 100 free SPU credits — no commitment required to get started."
 ---
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is an SPU (Service Processing Unit)?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "An SPU (Service Processing Unit) is DocRouter's billing unit. Every paid operation — OCR, document extraction, and Document Agent chat — uses the same formula: SPUs = ceil(2 × estimated cloud cost / price per SPU), with a minimum floor of 1 SPU per 25 pages (or 1 SPU per agent LLM call). Embedded-text extraction (PyMuPDF) is always free. Each account starts with 100 SPU credits to try DocRouter at no cost."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When should I use a monthly plan?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Monthly plans are best for regular document processing. They include SPUs at better per-unit pricing, collaboration features (Team plan), and predictable monthly costs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When should I use credits instead of a monthly plan?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Credits are perfect for testing and getting started, ideal for occasional or one-off document processing, with no monthly commitment required. You pay only for what you use."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does DocRouter cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "DocRouter offers an Individual plan at $250/month (5,000 SPUs at $0.05 each), a Team plan at $1,000/month (25,000 SPUs at $0.04 each), and custom Enterprise pricing. All accounts start with 100 free SPU credits."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is there a free trial?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Every new DocRouter account includes 100 free SPU credits — no credit card required. This lets you upload documents and test AI extraction before committing to a plan."
-      }
-    }
-  ]
-}
-</script>
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
     <!-- Hero Section -->
     <header class="text-center md:mb-12 mb-8">
         <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Pricing
+            SAAS Pricing
         </h1>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
             Choose the plan that fits your document processing needs. Subscribe to a monthly plan, or use credits for pay-as-you-go.
@@ -157,7 +108,7 @@ description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Ent
 
                 <!-- Enterprise Plan -->
                 <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Enterprise</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">SAAS Enterprise</h3>
                     <div class="mb-6">
                         <span class="text-xl font-semibold text-blue-600">Contact Sales</span>
                     </div>

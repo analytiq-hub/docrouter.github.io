@@ -1,67 +1,18 @@
 ---
 layout: default
-title: "Pricing — AI Document Processing Plans"
-permalink: /pricing/
-description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Enterprise plans. Start with 100 free SPU credits — no commitment required to get started."
+title: "On-Prem Pricing — AI Document Processing Plans"
+permalink: /pricing/on-prem/
+description: "DocRouter on-premises / on-VPC pricing. Deploy DocRouter inside your own cloud or data center with your own LLM APIs."
 ---
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is an SPU (Service Processing Unit)?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "An SPU (Service Processing Unit) is DocRouter's billing unit. Every paid operation — OCR, document extraction, and Document Agent chat — uses the same formula: SPUs = ceil(2 × estimated cloud cost / price per SPU), with a minimum floor of 1 SPU per 25 pages (or 1 SPU per agent LLM call). Embedded-text extraction (PyMuPDF) is always free. Each account starts with 100 SPU credits to try DocRouter at no cost."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When should I use a monthly plan?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Monthly plans are best for regular document processing. They include SPUs at better per-unit pricing, collaboration features (Team plan), and predictable monthly costs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When should I use credits instead of a monthly plan?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Credits are perfect for testing and getting started, ideal for occasional or one-off document processing, with no monthly commitment required. You pay only for what you use."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does DocRouter cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "DocRouter offers an Individual plan at $250/month (5,000 SPUs at $0.05 each), a Team plan at $1,000/month (25,000 SPUs at $0.04 each), and custom Enterprise pricing. All accounts start with 100 free SPU credits."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is there a free trial?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Every new DocRouter account includes 100 free SPU credits — no credit card required. This lets you upload documents and test AI extraction before committing to a plan."
-      }
-    }
-  ]
-}
-</script>
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
     <!-- Hero Section -->
     <header class="text-center md:mb-12 mb-8">
         <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Pricing
+            On-Prem Pricing
         </h1>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that fits your document processing needs. Subscribe to a monthly plan, or use credits for pay-as-you-go.
+            Choose the plan that fits your document processing needs.
         </p>
     </header>
 
@@ -69,48 +20,9 @@ description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Ent
         <!-- Pricing Cards -->
         <section class="mb-8 md:mb-10">
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Individual Plan -->
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">SAAS Individual</h3>
-                    <div class="mb-6">
-                        <span class="text-3xl font-bold text-gray-900">$250</span>
-                        <span class="text-gray-600">/month</span>
-                    </div>
-                    <ul class="space-y-3 mb-8 flex-grow">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>$0.05 per SPU</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>5,000 SPUs per month</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Basic document processing</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Additional SPUs at $0.05 each</span>
-                        </li>
-                    </ul>
-                    <span class="block w-full text-center bg-gray-200 text-gray-600 px-6 py-3 rounded-lg font-medium cursor-not-allowed">
-                        Not Available
-                    </span>
-                </div>
-
                 <!-- Team Plan -->
                 <div class="bg-white border-2 border-blue-500 rounded-lg p-6 shadow-md flex flex-col relative">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full">Popular</div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">SAAS Team</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">On-Prem Team</h3>
                     <div class="mb-6">
                         <span class="text-3xl font-bold text-gray-900">$1,000</span>
                         <span class="text-gray-600">/month</span>
@@ -157,7 +69,7 @@ description: "DocRouter pricing: Individual ($250/mo), Team ($1,000/mo), and Ent
 
                 <!-- Enterprise Plan -->
                 <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Enterprise</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">On-Prem Enterprise</h3>
                     <div class="mb-6">
                         <span class="text-xl font-semibold text-blue-600">Contact Sales</span>
                     </div>
