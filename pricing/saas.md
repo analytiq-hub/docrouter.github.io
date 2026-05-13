@@ -22,7 +22,7 @@ description: "DocRouter SAAS pricing: Individual ($250/mo), Team ($1,000/mo), an
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Individual Plan -->
                 <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">SAAS Individual</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Individual <span class="font-normal text-gray-400">(SAAS)</span></h3>
                     <div class="mb-6">
                         <span class="text-3xl font-bold text-gray-900">$250</span>
                         <span class="text-gray-600">/month</span>
@@ -61,7 +61,7 @@ description: "DocRouter SAAS pricing: Individual ($250/mo), Team ($1,000/mo), an
                 <!-- Team Plan -->
                 <div class="bg-white border-2 border-blue-500 rounded-lg p-6 shadow-md flex flex-col relative">
                     <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full">Popular</div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">SAAS Team</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Team <span class="font-normal text-gray-400">(SAAS)</span></h3>
                     <div class="mb-6">
                         <span class="text-3xl font-bold text-gray-900">$1,000</span>
                         <span class="text-gray-600">/month</span>
@@ -106,7 +106,7 @@ description: "DocRouter SAAS pricing: Individual ($250/mo), Team ($1,000/mo), an
 
                 <!-- Enterprise Plan -->
                 <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">SAAS Enterprise</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Enterprise <span class="font-normal text-gray-400">(SAAS)</span></h3>
                     <div class="mb-6">
                         <span class="text-xl font-semibold text-blue-600">Contact Sales</span>
                     </div>
