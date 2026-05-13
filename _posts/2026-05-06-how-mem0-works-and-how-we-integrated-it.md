@@ -90,7 +90,7 @@ mem0 ships with default prompts for multiple internal operations, but we **overr
   - Focuses on facts important for our application
   - Explicitly excludes PII/credentials and low-signal chatter.
 - **`custom_update_memory_prompt`**: reconciles *candidate facts* against what’s already stored and emits a full “edit plan” using **ADD / UPDATE / DELETE / NONE**.
-  - This is where dedupe and contradiction-handling happens (e.g. “only one goal at a time”, “open loop resolved → delete”).
+  - This is where dedupe and contradiction-handling happens (e.g. we don't want to store“Role: Manager” repeated multiple times).
   - The vector database is then updated based on the resulting edit plan
 - **`custom_memory_answer_prompt`**: used when mem0 is asked to answer based on stored memories.
   - It’s written as an internal component: return the relevant facts **without** mentioning “memories” or retrieval mechanics, so the *agent* can incorporate them naturally.
@@ -103,25 +103,6 @@ mem0 uses an LLM twice during ingestion:
 2. **Reconciliation / update**: decide how those facts modify existing memory (**ADD / UPDATE / DELETE / NONE**).
 
 We run these steps on a low-latency, cost-efficient model: **Claude Haiku** (via **AWS Bedrock**) for both ingestion and reconciliation. GPT Mini or Gemini Flash models would work just as well.
-
-### Reconciliation: dedupe + deletes (the important part)
-
-The reconciliation step is what turns “memory” from a junk drawer into something you can trust. For each new fact, mem0 compares it to what’s already stored and produces an “edit plan”:
-
-- **ADD** when it’s truly new information
-- **UPDATE** when it refines or replaces an older memory (e.g., goal changes)
-- **DELETE** when it’s obsolete or contradicted
-- **NONE** when it’s redundant
-
-This is how we avoid:
-
-- Duplicates (“Role: Manager” repeated 50 times)
-- Contradictions (old goal and new goal both present)
-- Stale open loops lingering forever
-
-Operationally, we also rate-limit ingestion: we cap concurrent writers per pod and retry on AWS throttling with exponential backoff.
-
----
 
 ## Memory retrieval (request path)
 
