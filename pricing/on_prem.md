@@ -19,26 +19,20 @@ description: "DocRouter on-premises / on-VPC pricing. Deploy DocRouter inside yo
     <main>
         <!-- Pricing Cards -->
         <section class="mb-8 md:mb-10">
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                 <!-- Team Plan -->
                 <div class="bg-white border-2 border-blue-500 rounded-lg p-6 shadow-md flex flex-col relative">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">On-Prem Team</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Team</h3>
                     <div class="mb-6">
-                        <span class="text-3xl font-bold text-gray-900">$1,000</span>
-                        <span class="text-gray-600">/month</span>
+                        <span class="text-3xl font-bold text-gray-900">$24,000</span>
+                        <span class="text-gray-600">/year</span>
                     </div>
                     <ul class="space-y-3 mb-8 flex-grow">
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
-                            <span>$0.04 per SPU</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>25,000 SPUs per month</span>
+                            <span>Up to 300,000 pages per year</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -56,44 +50,42 @@ description: "DocRouter on-premises / on-VPC pricing. Deploy DocRouter inside yo
                             <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
-                            <span>Additional SPUs at $0.05 each</span>
+                            <span>Free upgrades</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Unlimited technical support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Developer tools</span>
                         </li>
                     </ul>
-                    <a href="https://app.docrouter.ai"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 no-underline">
+                    <button type="button"
+                            class="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
                         Select Plan
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Enterprise Plan -->
                 <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">On-Prem Enterprise</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Enterprise</h3>
                     <div class="mb-6">
-                        <span class="text-xl font-semibold text-blue-600">Contact Sales</span>
+                        <span class="text-xl font-semibold text-blue-600">Call for pricing</span>
                     </div>
                     <ul class="space-y-3 mb-8 flex-grow">
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
-                            <span>Custom document processing</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Dedicated support</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Custom pricing — contact sales</span>
+                            <span>Volumes above 300,000 pages per year</span>
                         </li>
                     </ul>
-                    <button onclick="openCalendlyModal()"
+                    <button type="button"
                             class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
                         Contact Sales
                     </button>
@@ -101,58 +93,24 @@ description: "DocRouter on-premises / on-VPC pricing. Deploy DocRouter inside yo
             </div>
         </section>
 
-        <!-- About SPU -->
-        <section class="bg-gray-50 rounded-lg px-6 md:px-8 py-3 md:py-4 mb-4">
-            <h2 class="text-lg font-semibold text-blue-600 mb-2">About SPU (Service Processing Unit)</h2>
-            <p class="text-gray-700 mb-2">
-                An SPU is DocRouter's billing unit. Every paid operation uses the same formula:
-            </p>
-            <p class="text-center font-mono text-gray-800 bg-white border border-gray-200 rounded-lg px-4 py-2 mb-2 text-sm md:text-base">
-                SPUs = ceil(2 &times; estimated cloud cost &divide; price per SPU)
-            </p>
-            <p class="text-gray-700 mb-2">
-                The factor of 2 covers infrastructure and overhead on top of raw cloud cost. A minimum floor also applies: at least 1 SPU per 25 pages for OCR and document extraction, and 1 SPU per agent LLM call. Embedded-text extraction (PyMuPDF) is free.
-            </p>
-            <p class="text-sm text-gray-500 italic mb-0">
-                SPU rates and computation methods are subject to change. We will provide advance notice of any material changes, and updates will apply only to usage on or after the effective date.
-            </p>
-        </section>
-
-        <!-- About Enterprise Plans -->
-        <section class="bg-gray-50 rounded-lg p-6 md:p-8 mb-4">
-            <h2 class="text-lg font-semibold text-blue-600 mb-4">About Enterprise Plans</h2>
-            <p class="text-gray-700">
-                Enterprise Plans include configuration and dataset evaluation services. On-premises / on-VPC installations require an Enterprise Plan.
-            </p>
-        </section>
-
-        <!-- When to use: Plans and Credits (two columns) -->
+        <!-- Professional Services -->
         <section class="grid md:grid-cols-2 gap-8 mb-12">
-            <div class="bg-green-50 border border-green-200 rounded-lg p-6 md:p-8">
-                <h2 class="text-xl font-semibold text-green-800 mb-4">When to use Monthly Plans</h2>
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 md:p-8">
+                <h2 class="text-xl font-semibold text-blue-600 mb-4">Professional Services</h2>
                 <ul class="text-gray-700 space-y-2 list-disc list-inside">
-                    <li>Best for predictable monthly costs</li>
-                    <li>Includes SPUs with better per-unit pricing</li>
-                    <li>Collaboration features in the Team plan</li>
+                    <li>Configuration</li>
+                    <li>Dataset evaluation</li>
+                    <li>Dataset tuning</li>
+                    <li>Custom integration architecture design</li>
+                    <li>End-to-end implementation and deployment</li>
+                    <li>Team training and knowledge transfer</li>
                 </ul>
             </div>
-            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 md:p-8">
-                <h2 class="text-xl font-semibold text-blue-800 mb-2">When to use Credits</h2>
-                <ul class="text-gray-700 space-y-2 list-disc list-inside">
-                    <li>Best for occasional or one-off document processing</li>
-                    <li>When you have exceeded the SPUs allocated in your monthly plan</li>
-                    <li>Each account starts with <strong>100 SPU credits</strong> to try DocRouter. Contact us for additional credit grants.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- When to use Enterprise (below Monthly Plans + Credits) -->
-        <section class="mb-12">
             <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 md:p-8">
-                <h2 class="text-xl font-semibold text-slate-800 mb-4">When to use Enterprise plans</h2>
+                <h2 class="text-xl font-semibold text-slate-800 mb-4">System Requirements</h2>
                 <ul class="text-gray-700 space-y-2 list-disc list-inside">
-                    <li>Best when you require configuration and dataset evaluation services</li>
-                    <li>Best for on-prem or on-VPC installation connecting with your own cloud and LLM APIs</li>
+                    <li>DocRouter runs on customer's cloud infrastructure</li>
+                    <li>DocRouter uses customer's AI licensing</li>
                 </ul>
             </div>
         </section>

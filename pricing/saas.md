@@ -98,12 +98,10 @@ description: "DocRouter SAAS pricing: Individual ($250/mo), Team ($1,000/mo), an
                             <span>Additional SPUs at $0.05 each</span>
                         </li>
                     </ul>
-                    <a href="https://app.docrouter.ai"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 no-underline">
+                    <button type="button"
+                            class="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
                         Select Plan
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Enterprise Plan -->
@@ -132,7 +130,7 @@ description: "DocRouter SAAS pricing: Individual ($250/mo), Team ($1,000/mo), an
                             <span>Custom pricing — contact sales</span>
                         </li>
                     </ul>
-                    <button onclick="openCalendlyModal()"
+                    <button type="button"
                             class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
                         Contact Sales
                     </button>
