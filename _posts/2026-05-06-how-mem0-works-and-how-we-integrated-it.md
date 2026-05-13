@@ -120,11 +120,7 @@ For retrieval embeddings we use **Amazon Titan Embed Text v2** (via **AWS Bedroc
 
 ## Storage: Postgres and pgvector
 
-Memory lives in a Postgres database with the `vector` extension enabled (pgvector). In production, this is **AWS Aurora Postgres**, and we connect through **RDS Proxy** for connection multiplexing.
-
-mem0 uses the `pgvector` provider, and we map agents to a single shared mem0 “collection”:
-
-- Orchestrator + Learn + Prepare + Reflect all write to the same collection (e.g. `shared_learning_memories`)
+Memory lives in a Postgres database with the `vector` extension enabled (pgvector). In production, this is **AWS Aurora Postgres**, and we connect through **RDS Proxy** for connection multiplexing. mem0 uses the `pgvector` provider.
 
 At a high level, each memory row contains:
 
