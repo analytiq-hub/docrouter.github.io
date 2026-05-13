@@ -39,10 +39,22 @@ This post explains how the integration works end-to-end, using the architecture 
 
 mem0 integration is easiest to understand as **two paths that run in parallel** on each user message:
 
-- **Memory ingestion (async, off the critical path)**: store or update long-term facts.
-- **Memory retrieval (sync, on the critical path)**: fetch relevant facts to condition the next agent response.
+<div class="not-prose grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+  <div class="rounded-xl border border-slate-200 dark:border-slate-600 bg-gradient-to-br from-amber-50/90 to-orange-50/70 dark:from-amber-950/35 dark:to-orange-950/25 p-5 shadow-sm ring-1 ring-amber-100/70 dark:ring-amber-800/30">
+    <span class="inline-flex items-center rounded-full bg-amber-100/90 dark:bg-amber-900/50 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-amber-900 dark:text-amber-100">In the background</span>
+    <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-50 mt-3 mb-2">Memory ingestion</h3>
+    <p class="text-sm text-slate-700 dark:text-slate-300 m-0 leading-relaxed">Store or update long-term facts.</p>
+  </div>
+  <div class="rounded-xl border border-slate-200 dark:border-slate-600 bg-gradient-to-br from-blue-50/90 to-indigo-50/70 dark:from-blue-950/35 dark:to-indigo-950/25 p-5 shadow-sm ring-1 ring-blue-100/70 dark:ring-blue-800/30">
+    <span class="inline-flex items-center rounded-full bg-blue-100/90 dark:bg-blue-900/50 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-blue-900 dark:text-blue-100">In the foreground</span>
+    <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-50 mt-3 mb-2">Memory retrieval</h3>
+    <p class="text-sm text-slate-700 dark:text-slate-300 m-0 leading-relaxed">Fetch relevant facts to condition the next agent response.</p>
+  </div>
+</div>
 
-That split is deliberate: users should get a response quickly, and memory updates should be resilient to retries, throttling, and occasional failures without blocking the chat experience.
+Memory ingestion is a slow operation. Facts need to be extracted from the user prompt, deduplicated, and reconciled with already-stored facts. 
+
+Users, on the other hand, should get a response quickly, based on the last user prompt and on retrieval of previously stored memories. Memory ingestion should not block the chat experience.
 
 ---
 
