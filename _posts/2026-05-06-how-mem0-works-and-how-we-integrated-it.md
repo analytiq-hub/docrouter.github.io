@@ -46,9 +46,9 @@ That split is deliberate: users should get a response quickly, and memory update
 
 ---
 
-## 1) Memory ingestion path (async “Memory Save”)
+## Memory ingestion (background path)
 
-When the user sends a message, we enqueue a background task to update memory rather than doing it inline.
+We surface this work as **Memory Save**: a background task that updates memory without blocking the chat. When the user sends a message, we enqueue that task rather than doing ingestion inline.
 
 In the API, we schedule `add_memory(...)` in the request’s background tasks (both non-streaming and streaming endpoints). That means memory writes happen **after** the response is returned (or after streaming finalization), keeping the **time-to-first-token** fast even under load.
 
@@ -109,9 +109,9 @@ Operationally, we also rate-limit ingestion: we cap concurrent writers per pod a
 
 ---
 
-## 2) Memory retrieval path (sync “Memory Retrieve”)
+## Memory retrieval (request path)
 
-At the start of each agent turn, we retrieve durable memory and attach it to the agent context.
+**Memory Retrieve** runs at the start of each agent turn: we load durable memory and attach it to the agent context.
 
 This happens while we’re building the agent LLM prompt. Memory retrieval runs concurrently with other non-dependent work (like syncing any conversation context directory from object storage), but it’s still on the critical path for prompt construction.
 
@@ -123,9 +123,9 @@ For retrieval embeddings we use **Amazon Titan Embed Text v2** (via **AWS Bedroc
 
 ---
 
-## 3) Where memory lives: Postgres + pgvector (vector DB)
+## Storage: Postgres and pgvector
 
-We store memory in a Postgres database that has the `vector` extension enabled (pgvector). In production, this is **AWS Aurora Postgres**, and we connect through **RDS Proxy** for connection multiplexing.
+Memory lives in a Postgres database with the `vector` extension enabled (pgvector). In production, this is **AWS Aurora Postgres**, and we connect through **RDS Proxy** for connection multiplexing.
 
 mem0 uses the `pgvector` provider, and we map agents to a single shared mem0 “collection”:
 
@@ -142,7 +142,7 @@ mem0 also maintains an internal migrations table (e.g. `mem0migrations`) so it c
 
 ---
 
-## 4) How memory changes the agent prompt
+## Using memory in the agent prompt
 
 Once retrieved, memories are injected into the request metadata and/or prompt context so the agent can respond as if it “remembers”:
 
