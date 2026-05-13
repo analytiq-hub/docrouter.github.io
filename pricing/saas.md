@@ -12,7 +12,7 @@ description: "DocRouter SAAS pricing: Individual ($250/mo), Team ($1,000/mo), an
             SAAS Pricing
         </h1>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that fits your document processing needs. Subscribe to a monthly plan, or use credits for pay-as-you-go.
+            For HIPAA compliant workflows, use <a href="/pricing/on-prem/" class="text-blue-600 hover:text-blue-700 underline">On-Prem Plans</a>.
         </p>
     </header>
 
