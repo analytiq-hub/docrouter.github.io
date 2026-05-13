@@ -76,8 +76,10 @@ mem0’s job is to convert raw conversation into **small, high-signal “facts�
 Facts are stored as strings in the vector DB, where they become searchable through both vector and token search, for example:
 
 ```
+"Name: Mike Smith"
 "Role: Plant Manager"
 "Work context: Texas refinery, 40 direct reports"
+"Hobbies: soccer, hiking, theater"
 ```
 
 In our application, we provide mem0 with a **custom fact extraction prompt** tuned for the kind of facts that we want to store.
