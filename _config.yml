@@ -152,10 +152,10 @@ header_pages:
   - title: "Company"
     url: "#"
     children:
-      - title: "SAAS Pricing"
-        url: "/pricing/saas"
       - title: "On-Prem Pricing"
         url: "/pricing/on-prem"
+      - title: "SAAS Pricing"
+        url: "/pricing/saas"
       - title: "Support"
         url: "/support"
       - title: "Team"
