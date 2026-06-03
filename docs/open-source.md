@@ -24,7 +24,7 @@ description: "Deploy DocRouter on your own infrastructure with full source code 
         </section>
 
         <section id="getting-started" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Quick Start</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Quick Start: Docker Compose</h2>
 
             <pre><code>curl -fsSL https://raw.githubusercontent.com/analytiq-hub/doc-router/main/tools/run-doc-router-docker.sh | bash -s -- up</code></pre>
 
@@ -36,41 +36,51 @@ description: "Deploy DocRouter on your own infrastructure with full source code 
                 <li>Click <strong>LLM Configuration</strong> > <strong>Manage</strong>. Set up the desired LLM key under <strong>Actions</strong> > <strong>Edit Token</strong>.</li>
             </ul>
 
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4 mt-10">Repository Mode</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4 mt-10">Alternative: Kubernetes (Helm)</h2>
 
             <p class="text-gray-600 mb-6">
-                Clone the repository to build from source, customize the stack, or point <code>make deploy-compose</code> at your own MongoDB instance.
+                Install DocRouter from the Helm chart published to GitHub Container Registry (<code>oci://ghcr.io/analytiq-hub/doc-router</code>). Prerequisites: Helm 3.8+, a Kubernetes cluster, an <strong>nginx</strong> ingress controller, MongoDB (Atlas or in-cluster), an AWS S3 bucket, and (for HTTPS) <a href="https://cert-manager.io/" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">cert-manager</a> with a <code>letsencrypt-prod</code> ClusterIssuer — the chart enables TLS by default.
+            </p>
+            <p class="text-gray-600 mb-6">
+                If you cloned the <a href="https://github.com/analytiq-hub/doc-router" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">doc-router</a> repository, prefer <code>./deploy/scripts/k8s-deploy.sh &lt;overlay&gt;</code> with a <code>.env.&lt;overlay&gt;</code> file (see <a href="https://github.com/analytiq-hub/doc-router/blob/main/deploy/README.md" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">deploy/README.md</a>). That script creates the namespace and secret, runs the same Helm upgrade, and restarts pods after secret changes. The steps below are the equivalent manual install.
             </p>
 
-            <h3 class="text-lg font-medium text-gray-900 mb-3">Clone the repository</h3>
-            <pre><code>git clone https://github.com/analytiq-hub/doc-router.git
-cd doc-router</code></pre>
-
-            <h3 class="text-lg font-medium text-gray-900 mb-3 mt-6">Set up the <code>.env</code> file</h3>
+            <h3 class="text-lg font-medium text-gray-900 mb-3">1. Create secrets (before Helm)</h3>
             <p class="text-gray-600 mb-4">
-                Copy the local development template to the repo root and edit it. At minimum, set <code>NEXTAUTH_SECRET</code> and your admin credentials (<code>ADMIN_EMAIL</code>, <code>ADMIN_PASSWORD</code>). Set <code>MONGODB_URI</code> to a MongoDB server the containers can reach (or adjust <code>.env.compose</code> overrides). LLM and AWS keys can be added in <code>.env</code> or later in the UI.
+                Credentials live in a Kubernetes Secret named <code>doc-router-secrets</code>, not in Helm values. Create or update it <strong>before</strong> <code>helm upgrade --install</code> — a pre-install migration Job reads only this Secret. Minimum keys: <code>NEXTAUTH_SECRET</code>, <code>MONGODB_URI</code>, <code>ADMIN_EMAIL</code>, <code>ADMIN_PASSWORD</code>, <code>AWS_ACCESS_KEY_ID</code>, <code>AWS_SECRET_ACCESS_KEY</code>, <code>AWS_S3_BUCKET_NAME</code>. Add LLM keys (<code>OPENAI_API_KEY</code>, etc.) in the Secret or configure them later in the UI.
             </p>
-            <pre><code>cp .env.example.local .env
-# Edit .env with your editor</code></pre>
+            <pre><code>kubectl create namespace doc-router --dry-run=client -o yaml | kubectl apply -f -
 
-            <h3 class="text-lg font-medium text-gray-900 mb-3 mt-6">Deploy with Docker Compose</h3>
+kubectl create secret generic doc-router-secrets \
+  --namespace doc-router \
+  --from-literal=NEXTAUTH_SECRET='change-me' \
+  --from-literal=MONGODB_URI='mongodb+srv://user:pass@cluster.example.net/' \
+  --from-literal=ADMIN_EMAIL='admin@example.com' \
+  --from-literal=ADMIN_PASSWORD='change-me' \
+  --from-literal=AWS_ACCESS_KEY_ID='...' \
+  --from-literal=AWS_SECRET_ACCESS_KEY='...' \
+  --from-literal=AWS_S3_BUCKET_NAME='your-bucket' \
+  --dry-run=client -o yaml | kubectl apply -f -</code></pre>
+
+            <h3 class="text-lg font-medium text-gray-900 mb-3 mt-6">2. Install the chart</h3>
             <p class="text-gray-600 mb-4">
-                From the repository root, run <code>make deploy-compose</code>. This merges <code>.env</code> with <code>.env.compose</code>, builds images, and starts the stack. Requires Docker and a reachable MongoDB at <code>MONGODB_URI</code>.
+                Replace <code>app.example.com</code> with your hostname (DNS must point at the ingress LoadBalancer). Pin <code>--version</code> to the chart version in <a href="https://github.com/analytiq-hub/doc-router/blob/main/deploy/charts/doc-router/Chart.yaml" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">Chart.yaml</a> (currently <code>0.3.7</code>). With empty image tags, the chart pulls <code>ghcr.io/analytiq-hub/doc-router-frontend</code> and <code>doc-router-backend</code> at the chart <code>appVersion</code> (e.g. <code>v27.0.1</code>).
             </p>
-            <pre><code>make deploy-compose</code></pre>
+            <pre><code>helm upgrade --install doc-router oci://ghcr.io/analytiq-hub/doc-router \
+  --version 0.3.7 \
+  --namespace doc-router \
+  --set ingress.host=app.example.com \
+  --set ingress.className=nginx \
+  --set config.nextauthUrl=https://app.example.com \
+  --set config.appBucketName=your-bucket \
+  --set config.region=us-east-1 \
+  --set config.environment=prod \
+  --atomic \
+  --timeout 10m</code></pre>
 
-            <p class="text-gray-600 mt-4 mb-2">
-                When the stack is up, open <a href="http://localhost:3000" class="text-blue-600 hover:text-blue-800">http://localhost:3000</a> and complete AWS and LLM setup using the same steps as Quick Start above (Development settings).
+            <p class="text-gray-600 mt-4 mb-6">
+                After install: <code>https://app.example.com</code> (API docs at <code>/fastapi/docs</code>). If you change the Secret later, restart workloads: <code>kubectl rollout restart deployment/frontend deployment/backend -n doc-router</code>. Rollbacks: <code>helm history doc-router -n doc-router</code>, <code>helm rollback doc-router -n doc-router</code>. More detail: <a href="{{ site.baseurl }}{% post_url 2026-03-07-deploying-doc-router-on-kubernetes %}">Deploying Doc Router on Kubernetes</a> and <a href="https://github.com/analytiq-hub/doc-router/blob/main/deploy/README.md" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">deploy/README.md</a>.
             </p>
-            <p class="text-gray-600 text-sm mb-6">
-                For a self-contained stack with embedded MongoDB, use <code>make deploy-compose-embedded</code> instead. See the <a href="https://github.com/analytiq-hub/doc-router/blob/main/docs/docrouter_docker.md" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">Docker deployment guide</a> in the repository.
-            </p>
-
-            <h3 class="text-lg font-medium text-gray-900 mb-3">Kubernetes (production)</h3>
-            <p class="text-gray-600 mb-4">For production deployment with Kubernetes:</p>
-
-            <pre><code>kubectl apply -f k8s/
-kubectl port-forward svc/docrouter-frontend 8080:80</code></pre>
         </section>
 
         <section class="bg-gray-50 rounded-lg p-8">
