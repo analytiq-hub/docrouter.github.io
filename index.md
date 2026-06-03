@@ -95,11 +95,11 @@ image: /assets/images/og-default.png
                 <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 shadow-md">
                     <h3 class="text-xl font-medium text-white mb-3">What Your Developers Get</h3>
                     <ul class="text-white space-y-2 text-left">
-                        <li>• REST APIs, Python & TypeScript SDKs, N8N nodes, MCP server</li>
-                        <li>• Webhooks for real-time event delivery</li>
-                        <li>• Sandbox environment for testing integrations</li>
-                        <li>• Enterprise-grade security and compliance</li>
-                        <li>• Dedicated developer support and technical guidance</li>
+                        <li>REST APIs, Python & TypeScript SDKs, N8N nodes, MCP server</li>
+                        <li>Webhooks for real-time event delivery</li>
+                        <li>Sandbox environment for testing integrations</li>
+                        <li>Enterprise-grade security and compliance</li>
+                        <li>Dedicated developer support and technical guidance</li>
                     </ul>
                     <div class="mt-6 flex flex-col gap-2">
                         <a href="{{ '/docs/rest-api/' | relative_url }}"
@@ -119,11 +119,11 @@ image: /assets/images/og-default.png
                 <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 shadow-md">
                     <h3 class="text-xl font-medium text-white mb-3">Implementation Services & Support</h3>
                     <ul class="text-white space-y-2 text-left">
-                        <li>• Custom integration architecture design</li>
-                        <li>• End-to-end implementation and deployment</li>
-                        <li>• Team training and knowledge transfer</li>
-                        <li>• Claude integration for intelligent code generation</li>
-                        <li>• Ongoing technical support and maintenance</li>
+                        <li>Custom integration architecture design</li>
+                        <li>End-to-end implementation and deployment</li>
+                        <li>Team training and knowledge transfer</li>
+                        <li>Claude integration for intelligent code generation</li>
+                        <li>Ongoing technical support and maintenance</li>
                     </ul>
                     <div class="mt-6">
                         <a href="{{ site.calendly_url }}"

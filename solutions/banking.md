@@ -55,19 +55,19 @@ description: "Accelerate loan processing with AI. DocRouter automatically extrac
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-white mb-3">Financial Document Processing</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Loan applications and credit reports</li>
-                            <li>• Tax returns and financial statements</li>
-                            <li>• Bank statements and pay stubs</li>
-                            <li>• Asset verification documents</li>
+                            <li>Loan applications and credit reports</li>
+                            <li>Tax returns and financial statements</li>
+                            <li>Bank statements and pay stubs</li>
+                            <li>Asset verification documents</li>
                         </ul>
                     </div>
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-white mb-3">Automated Validation</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Income and debt-to-income calculations</li>
-                            <li>• Credit score and history verification</li>
-                            <li>• Asset and collateral validation</li>
-                            <li>• Regulatory compliance checks</li>
+                            <li>Income and debt-to-income calculations</li>
+                            <li>Credit score and history verification</li>
+                            <li>Asset and collateral validation</li>
+                            <li>Regulatory compliance checks</li>
                         </ul>
                     </div>
                 </div>

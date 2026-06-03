@@ -336,9 +336,9 @@ permalink: /technology/
                     </div>
                     <h3 class="text-xl font-medium text-gray-900 mb-3">Data Security</h3>
                     <ul class="text-gray-600 text-sm space-y-2">
-                        <li>• End-to-end encryption for all data in transit and at rest</li>
-                        <li>• Secure API authentication with role-based access controls</li>
-                        <li>• Data anonymization and deidentification for privacy protection</li>
+                        <li>End-to-end encryption for all data in transit and at rest</li>
+                        <li>Secure API authentication with role-based access controls</li>
+                        <li>Data anonymization and deidentification for privacy protection</li>
                     </ul>
                 </div>
                 
@@ -349,9 +349,9 @@ permalink: /technology/
                     </div>
                     <h3 class="text-xl font-medium text-gray-900 mb-3">Regulatory Compliance</h3>
                     <ul class="text-gray-600 text-sm space-y-2">
-                        <li>• HIPAA compliance for healthcare document processing</li>
-                        <li>• SOC 2 Type II certification for enterprise security</li>
-                        <li>• GDPR and industry-specific privacy frameworks</li>
+                        <li>HIPAA compliance for healthcare document processing</li>
+                        <li>SOC 2 Type II certification for enterprise security</li>
+                        <li>GDPR and industry-specific privacy frameworks</li>
                     </ul>
                 </div>
             </div>

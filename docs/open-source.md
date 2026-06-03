@@ -16,26 +16,25 @@ description: "Deploy DocRouter on your own infrastructure with full source code 
         <section id="overview" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Open Source Benefits</h2>
             <p class="text-gray-600 mb-6">
-                DocRouter is available as an open source project, giving you complete control over your document processing infrastructure.
-                Deploy on your own infrastructure, customize the processing pipeline, and maintain full data sovereignty.
+                DocRouter is available as an open source project, giving you complete control over your document processing infrastructure. Deploy on your own infrastructure, customize the processing pipeline, and maintain full data sovereignty. 
             </p>
             <div class="grid md:grid-cols-2 gap-8">
                 <div>
                     <h3 class="text-lg font-medium text-gray-900 mb-3">Full Control</h3>
                     <ul class="text-gray-600 space-y-2">
-                        <li>• Complete source code access</li>
-                        <li>• Self-hosted deployment options</li>
-                        <li>• Custom modifications and extensions</li>
-                        <li>• No vendor lock-in</li>
+                        <li>Complete source code access</li>
+                        <li>Self-hosted deployment options</li>
+                        <li>Custom modifications and extensions</li>
+                        <li>No vendor lock-in</li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-medium text-gray-900 mb-3">Enterprise Ready</h3>
                     <ul class="text-gray-600 space-y-2">
-                        <li>• Docker and Kubernetes support</li>
-                        <li>• Scalable microservices architecture</li>
-                        <li>• Enterprise security features</li>
-                        <li>• Professional support available</li>
+                        <li>Docker and Kubernetes support</li>
+                        <li>Scalable microservices architecture</li>
+                        <li>Enterprise security features</li>
+                        <li>Professional support available</li>
                     </ul>
                 </div>
             </div>
@@ -61,19 +60,19 @@ kubectl port-forward svc/docrouter-frontend 8080:80</code></pre>
                 <div>
                     <h3 class="text-lg font-medium text-gray-900 mb-3">Processing Pipeline</h3>
                     <ul class="text-gray-600 space-y-2">
-                        <li>• Custom OCR engines</li>
-                        <li>• Additional AI model integrations</li>
-                        <li>• Custom document type handlers</li>
-                        <li>• Workflow customization</li>
+                        <li>Custom OCR engines</li>
+                        <li>Additional AI model integrations</li>
+                        <li>Custom document type handlers</li>
+                        <li>Workflow customization</li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-medium text-gray-900 mb-3">Integration Points</h3>
                     <ul class="text-gray-600 space-y-2">
-                        <li>• Custom API endpoints</li>
-                        <li>• Database connectors</li>
-                        <li>• Message queue integrations</li>
-                        <li>• Authentication providers</li>
+                        <li>Custom API endpoints</li>
+                        <li>Database connectors</li>
+                        <li>Message queue integrations</li>
+                        <li>Authentication providers</li>
                     </ul>
                 </div>
             </div>

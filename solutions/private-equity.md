@@ -55,19 +55,19 @@ description: "Extract financial data from PE fund reports automatically. DocRout
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-white mb-3">Document Processing</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Quarterly fund statements</li>
-                            <li>• Investment memos and reports</li>
-                            <li>• Financial statements and valuations</li>
-                            <li>• Due diligence documents</li>
+                            <li>Quarterly fund statements</li>
+                            <li>Investment memos and reports</li>
+                            <li>Financial statements and valuations</li>
+                            <li>Due diligence documents</li>
                         </ul>
                     </div>
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-white mb-3">Automated Reporting</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Excel template population</li>
-                            <li>• PowerPoint generation</li>
-                            <li>• Performance analytics</li>
-                            <li>• Portfolio tracking updates</li>
+                            <li>Excel template population</li>
+                            <li>PowerPoint generation</li>
+                            <li>Performance analytics</li>
+                            <li>Portfolio tracking updates</li>
                         </ul>
                     </div>
                 </div>

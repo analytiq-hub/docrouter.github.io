@@ -139,19 +139,19 @@ title: "DocRouter Solutions — AI Document Processing by Industry"
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-white mb-3">Big Company Problems</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• One-size-fits-all solutions</li>
-                            <li>• Expensive enterprise pricing</li>
-                            <li>• Long implementation cycles</li>
-                            <li>• Generic support</li>
+                            <li>One-size-fits-all solutions</li>
+                            <li>Expensive enterprise pricing</li>
+                            <li>Long implementation cycles</li>
+                            <li>Generic support</li>
                         </ul>
                     </div>
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-white mb-3">Our Advantage</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Customized for your industry</li>
-                            <li>• Affordable pricing</li>
-                            <li>• Quick setup and training</li>
-                            <li>• Direct access to our team</li>
+                            <li>Customized for your industry</li>
+                            <li>Affordable pricing</li>
+                            <li>Quick setup and training</li>
+                            <li>Direct access to our team</li>
                         </ul>
                     </div>
                 </div>
@@ -169,19 +169,19 @@ title: "DocRouter Solutions — AI Document Processing by Industry"
                     <div class="bg-blue-50 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-gray-900 mb-3">Custom Development</h3>
                         <ul class="text-gray-600 space-y-2 text-left">
-                            <li>• Industry-specific document types</li>
-                            <li>• Custom data extraction rules</li>
-                            <li>• Integration with your systems</li>
-                            <li>• Training and support</li>
+                            <li>Industry-specific document types</li>
+                            <li>Custom data extraction rules</li>
+                            <li>Integration with your systems</li>
+                            <li>Training and support</li>
                         </ul>
                     </div>
                     <div class="bg-blue-50 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-gray-900 mb-3">Implementation Services</h3>
                         <ul class="text-gray-600 space-y-2 text-left">
-                            <li>• Full-service deployment</li>
-                            <li>• Data migration assistance</li>
-                            <li>• User training programs</li>
-                            <li>• Ongoing maintenance</li>
+                            <li>Full-service deployment</li>
+                            <li>Data migration assistance</li>
+                            <li>User training programs</li>
+                            <li>Ongoing maintenance</li>
                         </ul>
                     </div>
                 </div>

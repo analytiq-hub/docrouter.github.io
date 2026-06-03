@@ -55,19 +55,19 @@ description: "Streamline DME order processing with AI. Automatically handle pres
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-white mb-3">Document Processing</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• DME orders and prescriptions</li>
-                            <li>• Insurance authorization forms</li>
-                            <li>• Medical necessity documentation</li>
-                            <li>• Patient information and eligibility</li>
+                            <li>DME orders and prescriptions</li>
+                            <li>Insurance authorization forms</li>
+                            <li>Medical necessity documentation</li>
+                            <li>Patient information and eligibility</li>
                         </ul>
                     </div>
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-white mb-3">Automated Workflows</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Insurance eligibility verification</li>
-                            <li>• Prior authorization processing</li>
-                            <li>• Order fulfillment automation</li>
-                            <li>• Compliance documentation</li>
+                            <li>Insurance eligibility verification</li>
+                            <li>Prior authorization processing</li>
+                            <li>Order fulfillment automation</li>
+                            <li>Compliance documentation</li>
                         </ul>
                     </div>
                 </div>

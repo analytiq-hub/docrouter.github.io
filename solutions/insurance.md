@@ -55,19 +55,19 @@ description: "Process insurance applications and ACORD forms automatically. DocR
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-white mb-3">Handwritten Document Processing</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Advanced OCR for handwritten applications</li>
-                            <li>• Insurance application forms</li>
-                            <li>• Supporting documentation</li>
-                            <li>• Confidence-based flagging for review</li>
+                            <li>Advanced OCR for handwritten applications</li>
+                            <li>Insurance application forms</li>
+                            <li>Supporting documentation</li>
+                            <li>Confidence-based flagging for review</li>
                         </ul>
                     </div>
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-white mb-3">Automated Workflow</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Intelligent data extraction and validation</li>
-                            <li>• Risk assessment support</li>
-                            <li>• Integration with AMS systems</li>
-                            <li>• Compliance documentation and audit trails</li>
+                            <li>Intelligent data extraction and validation</li>
+                            <li>Risk assessment support</li>
+                            <li>Integration with AMS systems</li>
+                            <li>Compliance documentation and audit trails</li>
                         </ul>
                     </div>
                 </div>
