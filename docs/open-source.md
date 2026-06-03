@@ -16,37 +16,25 @@ description: "Deploy DocRouter on your own infrastructure with full source code 
         <section id="overview" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Open Source Benefits</h2>
             <p class="text-gray-600 mb-6">
-                DocRouter is available as an open source project, giving you complete control over your document processing infrastructure. Deploy on your own infrastructure, customize the processing pipeline, and maintain full data sovereignty. 
+                DocRouter source code is available under an Apache 2.0 license, giving you complete control over your document processing infrastructure. Deploy on your own infrastructure, customize the processing pipeline, and maintain full data sovereignty.
             </p>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">Full Control</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>Complete source code access</li>
-                        <li>Self-hosted deployment options</li>
-                        <li>Custom modifications and extensions</li>
-                        <li>No vendor lock-in</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">Enterprise Ready</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>Docker and Kubernetes support</li>
-                        <li>Scalable microservices architecture</li>
-                        <li>Enterprise security features</li>
-                        <li>Professional support available</li>
-                    </ul>
-                </div>
-            </div>
+            <p class="text-gray-600 mb-6">
+                DocRouter is also available under an Enterprise license, including support, maintenance and upgrades. 
+            </p>
         </section>
 
         <section id="getting-started" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Getting Started</h2>
-            <p class="text-gray-600 mb-6">Clone the repository and start with Docker Compose for local development:</p>
 
-            <pre><code>git clone https://github.com/analytiq-hub/doc-router.git
-cd doc-router
-docker-compose up -d</code></pre>
+            <pre><code>curl -fsSL https://raw.githubusercontent.com/analytiq-hub/doc-router/main/tools/run-doc-router-docker.sh | bash -s -- up</code></pre>
+
+            <ul class="text-gray-600 space-y-2 mt-4 mb-6">
+                <li>Open <a href="http://localhost:8080" class="text-blue-600 hover:text-blue-800">http://localhost:8080</a></li>
+                <li>Log in as <code>admin</code> / <code>admin</code></li>
+                <li>Click the user icon (top right) > Settings > Development</li>
+                <li>Click <strong>AWS Setup</strong> > <strong>Manage</strong>, then follow the instructions to set up your AWS account with an S3 bucket and IAM permissions.</li>
+                <li>Click <strong>LLM Configuration</strong> > <strong>Manage</strong>. Set up the desired LLM key under <strong>Actions</strong> > <strong>Edit Token</strong>.</li>
+            </ul>
 
             <p class="text-gray-600 mt-6 mb-6">For production deployment with Kubernetes:</p>
 
