@@ -25,7 +25,11 @@ description: "Deploy DocRouter on your own infrastructure with full source code 
         <section id="getting-started" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Quick Start: Docker Compose</h2>
 
+            Install the DocRouter:
+
             <pre><code>curl -fsSL https://raw.githubusercontent.com/analytiq-hub/doc-router/main/tools/run-doc-router-docker.sh | bash -s -- up</code></pre>
+
+            Configure the DocRouter:
 
             <ul class="text-gray-600 space-y-2 mt-4 mb-6">
                 <li>Open <a href="http://localhost:8080" class="text-blue-600 hover:text-blue-800">http://localhost:8080</a></li>
