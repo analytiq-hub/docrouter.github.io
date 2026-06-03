@@ -24,73 +24,53 @@ description: "Deploy DocRouter on your own infrastructure with full source code 
         </section>
 
         <section id="getting-started" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Getting Started</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Quick Start</h2>
 
             <pre><code>curl -fsSL https://raw.githubusercontent.com/analytiq-hub/doc-router/main/tools/run-doc-router-docker.sh | bash -s -- up</code></pre>
 
             <ul class="text-gray-600 space-y-2 mt-4 mb-6">
                 <li>Open <a href="http://localhost:8080" class="text-blue-600 hover:text-blue-800">http://localhost:8080</a></li>
                 <li>Log in as <code>admin</code> / <code>admin</code></li>
-                <li>Click the user icon (top right) > Settings > Development</li>
+                <li>Click the <strong>User Icon</strong> (top right) > <strong>Settings</strong> > <strong>Development</strong></li>
                 <li>Click <strong>AWS Setup</strong> > <strong>Manage</strong>, then follow the instructions to set up your AWS account with an S3 bucket and IAM permissions.</li>
                 <li>Click <strong>LLM Configuration</strong> > <strong>Manage</strong>. Set up the desired LLM key under <strong>Actions</strong> > <strong>Edit Token</strong>.</li>
             </ul>
 
-            <p class="text-gray-600 mt-6 mb-6">For production deployment with Kubernetes:</p>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4 mt-10">Repository Mode</h2>
+
+            <p class="text-gray-600 mb-6">
+                Clone the repository to build from source, customize the stack, or point <code>make deploy-compose</code> at your own MongoDB instance.
+            </p>
+
+            <h3 class="text-lg font-medium text-gray-900 mb-3">Clone the repository</h3>
+            <pre><code>git clone https://github.com/analytiq-hub/doc-router.git
+cd doc-router</code></pre>
+
+            <h3 class="text-lg font-medium text-gray-900 mb-3 mt-6">Set up the <code>.env</code> file</h3>
+            <p class="text-gray-600 mb-4">
+                Copy the local development template to the repo root and edit it. At minimum, set <code>NEXTAUTH_SECRET</code> and your admin credentials (<code>ADMIN_EMAIL</code>, <code>ADMIN_PASSWORD</code>). Set <code>MONGODB_URI</code> to a MongoDB server the containers can reach (or adjust <code>.env.compose</code> overrides). LLM and AWS keys can be added in <code>.env</code> or later in the UI.
+            </p>
+            <pre><code>cp .env.example.local .env
+# Edit .env with your editor</code></pre>
+
+            <h3 class="text-lg font-medium text-gray-900 mb-3 mt-6">Deploy with Docker Compose</h3>
+            <p class="text-gray-600 mb-4">
+                From the repository root, run <code>make deploy-compose</code>. This merges <code>.env</code> with <code>.env.compose</code>, builds images, and starts the stack. Requires Docker and a reachable MongoDB at <code>MONGODB_URI</code>.
+            </p>
+            <pre><code>make deploy-compose</code></pre>
+
+            <p class="text-gray-600 mt-4 mb-2">
+                When the stack is up, open <a href="http://localhost:3000" class="text-blue-600 hover:text-blue-800">http://localhost:3000</a> and complete AWS and LLM setup using the same steps as Quick Start above (Development settings).
+            </p>
+            <p class="text-gray-600 text-sm mb-6">
+                For a self-contained stack with embedded MongoDB, use <code>make deploy-compose-embedded</code> instead. See the <a href="https://github.com/analytiq-hub/doc-router/blob/main/docs/docrouter_docker.md" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">Docker deployment guide</a> in the repository.
+            </p>
+
+            <h3 class="text-lg font-medium text-gray-900 mb-3">Kubernetes (production)</h3>
+            <p class="text-gray-600 mb-4">For production deployment with Kubernetes:</p>
 
             <pre><code>kubectl apply -f k8s/
 kubectl port-forward svc/docrouter-frontend 8080:80</code></pre>
-        </section>
-
-        <section id="customization" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Customization Options</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">Processing Pipeline</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>Custom OCR engines</li>
-                        <li>Additional AI model integrations</li>
-                        <li>Custom document type handlers</li>
-                        <li>Workflow customization</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">Integration Points</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>Custom API endpoints</li>
-                        <li>Database connectors</li>
-                        <li>Message queue integrations</li>
-                        <li>Authentication providers</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="community" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Community & Support</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">👥</span>
-                    </div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Community Support</h3>
-                    <p class="text-gray-600">GitHub issues, discussions, and community contributions</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">📚</span>
-                    </div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Documentation</h3>
-                    <p class="text-gray-600">Comprehensive setup guides, API docs, and tutorials</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">🔧</span>
-                    </div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Professional Services</h3>
-                    <p class="text-gray-600">Enterprise support, training, and custom development</p>
-                </div>
-            </div>
         </section>
 
         <section class="bg-gray-50 rounded-lg p-8">
