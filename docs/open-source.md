@@ -6,7 +6,6 @@ description: "Deploy DocRouter on your own infrastructure with full source code 
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
     <header class="text-center md:mb-12 mb-4">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">DocRouter Open Source</h1>
         <div class="text-xl text-gray-600">
             <p class="mb-2">Self-hosted document processing with full source code access</p>
         </div>
