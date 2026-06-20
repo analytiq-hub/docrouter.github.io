@@ -62,19 +62,19 @@ description: "Transform shipping manifests and supply chain documents into struc
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-white mb-3">Document Processing</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Bills of lading and shipping manifests</li>
-                            <li>• Commodity reports and certificates</li>
-                            <li>• Customs declarations and permits</li>
-                            <li>• Multi-language document support</li>
+                            <li>Bills of lading and shipping manifests</li>
+                            <li>Commodity reports and certificates</li>
+                            <li>Customs declarations and permits</li>
+                            <li>Multi-language document support</li>
                         </ul>
                     </div>
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-white mb-3">Automated Integration</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Real-time ERP system updates</li>
-                            <li>• Inventory management integration</li>
-                            <li>• Shipment tracking automation</li>
-                            <li>• Compliance verification workflows</li>
+                            <li>Real-time ERP system updates</li>
+                            <li>Inventory management integration</li>
+                            <li>Shipment tracking automation</li>
+                            <li>Compliance verification workflows</li>
                         </ul>
                     </div>
                 </div>

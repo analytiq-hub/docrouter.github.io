@@ -147,12 +147,12 @@ description: "See how DocRouter turns unstructured documents into structured dat
                 <div>
                     <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-4">Processing Capabilities</h3>
                     <ul class="text-gray-600 space-y-2">
-                        <li>• Handwritten text recognition</li>
-                        <li>• Printed text extraction</li>
-                        <li>• Table and form parsing</li>
-                        <li>• Signature detection</li>
-                        <li>• Multi-language support</li>
-                        <li>• Image quality enhancement</li>
+                        <li>Handwritten text recognition</li>
+                        <li>Printed text extraction</li>
+                        <li>Table and form parsing</li>
+                        <li>Signature detection</li>
+                        <li>Multi-language support</li>
+                        <li>Image quality enhancement</li>
                     </ul>
                 </div>
 
@@ -160,11 +160,11 @@ description: "See how DocRouter turns unstructured documents into structured dat
                 <div>
                     <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-4">Supported Formats</h3>
                     <ul class="text-gray-600 space-y-2">
-                        <li>• PDF documents</li>
-                        <li>• JPEG, PNG images</li>
-                        <li>• Scanned documents</li>
-                        <li>• Emails and Faxes</li>
-                        <li>• ...and many more!</li>
+                        <li>PDF documents</li>
+                        <li>JPEG, PNG images</li>
+                        <li>Scanned documents</li>
+                        <li>Emails and Faxes</li>
+                        <li>...and many more!</li>
                     </ul>
                 </div>
             </div>
@@ -181,28 +181,28 @@ description: "See how DocRouter turns unstructured documents into structured dat
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-lg font-medium text-white mb-3">Data Security</h3>
                         <ul class="text-blue-100 space-y-1 text-sm">
-                            <li>• End-to-end encryption</li>
-                            <li>• SOC 2 compliant</li>
-                            <li>• Data retention policies</li>
-                            <li>• Secure data transmission</li>
+                            <li>End-to-end encryption</li>
+                            <li>SOC 2 compliant</li>
+                            <li>Data retention policies</li>
+                            <li>Secure data transmission</li>
                         </ul>
                     </div>
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-lg font-medium text-white mb-3">Privacy</h3>
                         <ul class="text-blue-100 space-y-1 text-sm">
-                            <li>• GDPR compliant</li>
-                            <li>• No data mining</li>
-                            <li>• Client data isolation</li>
-                            <li>• Audit trails</li>
+                            <li>GDPR compliant</li>
+                            <li>No data mining</li>
+                            <li>Client data isolation</li>
+                            <li>Audit trails</li>
                         </ul>
                     </div>
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-lg font-medium text-white mb-3">Reliability</h3>
                         <ul class="text-blue-100 space-y-1 text-sm">
-                            <li>• 99.9% uptime SLA</li>
-                            <li>• Redundant infrastructure</li>
-                            <li>• Automated backups</li>
-                            <li>• 24/7 monitoring</li>
+                            <li>99.9% uptime SLA</li>
+                            <li>Redundant infrastructure</li>
+                            <li>Automated backups</li>
+                            <li>24/7 monitoring</li>
                         </ul>
                     </div>
                 </div>

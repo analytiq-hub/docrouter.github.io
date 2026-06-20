@@ -6,7 +6,6 @@ description: "Deploy DocRouter on your own infrastructure with full source code 
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
     <header class="text-center md:mb-12 mb-4">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">DocRouter Open Source</h1>
         <div class="text-xl text-gray-600">
             <p class="mb-2">Self-hosted document processing with full source code access</p>
         </div>
@@ -16,94 +15,75 @@ description: "Deploy DocRouter on your own infrastructure with full source code 
         <section id="overview" class="bg-white rounded-lg shadow-lg p-8 mb-12">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Open Source Benefits</h2>
             <p class="text-gray-600 mb-6">
-                DocRouter is available as an open source project, giving you complete control over your document processing infrastructure.
-                Deploy on your own infrastructure, customize the processing pipeline, and maintain full data sovereignty.
+                DocRouter source code is available under an Apache 2.0 license, giving you complete control over your document processing infrastructure. Deploy on your own infrastructure, customize the processing pipeline, and maintain full data sovereignty.
             </p>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">Full Control</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>• Complete source code access</li>
-                        <li>• Self-hosted deployment options</li>
-                        <li>• Custom modifications and extensions</li>
-                        <li>• No vendor lock-in</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">Enterprise Ready</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>• Docker and Kubernetes support</li>
-                        <li>• Scalable microservices architecture</li>
-                        <li>• Enterprise security features</li>
-                        <li>• Professional support available</li>
-                    </ul>
-                </div>
-            </div>
+            <p class="text-gray-600 mb-6">
+                DocRouter is also available under an Enterprise license, including support, maintenance and upgrades. 
+            </p>
         </section>
 
         <section id="getting-started" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Getting Started</h2>
-            <p class="text-gray-600 mb-6">Clone the repository and start with Docker Compose for local development:</p>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Quick Start: Docker Compose</h2>
 
-            <pre><code>git clone https://github.com/analytiq-hub/doc-router.git
-cd doc-router
-docker-compose up -d</code></pre>
+            Install the DocRouter:
 
-            <p class="text-gray-600 mt-6 mb-6">For production deployment with Kubernetes:</p>
+            <pre><code>curl -fsSL https://raw.githubusercontent.com/analytiq-hub/doc-router/main/tools/run-doc-router-docker.sh | bash -s -- up</code></pre>
 
-            <pre><code>kubectl apply -f k8s/
-kubectl port-forward svc/docrouter-frontend 8080:80</code></pre>
-        </section>
+            Configure the DocRouter:
 
-        <section id="customization" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Customization Options</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">Processing Pipeline</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>• Custom OCR engines</li>
-                        <li>• Additional AI model integrations</li>
-                        <li>• Custom document type handlers</li>
-                        <li>• Workflow customization</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">Integration Points</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>• Custom API endpoints</li>
-                        <li>• Database connectors</li>
-                        <li>• Message queue integrations</li>
-                        <li>• Authentication providers</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            <ul class="text-gray-600 space-y-2 mt-4 mb-6">
+                <li>Open <a href="http://localhost:8080" class="text-blue-600 hover:text-blue-800">http://localhost:8080</a></li>
+                <li>Log in as <code>admin</code> / <code>admin</code></li>
+                <li>Click the <strong>User Icon</strong> (top right) > <strong>Settings</strong> > <strong>Development</strong></li>
+                <li>Click <strong>AWS Setup</strong> > <strong>Manage</strong>, then follow the instructions to set up your AWS account with an S3 bucket and IAM permissions.</li>
+                <li>Click <strong>LLM Configuration</strong> > <strong>Manage</strong>. Set up the desired LLM key under <strong>Actions</strong> > <strong>Edit Token</strong>.</li>
+            </ul>
 
-        <section id="community" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Community & Support</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">👥</span>
-                    </div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Community Support</h3>
-                    <p class="text-gray-600">GitHub issues, discussions, and community contributions</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">📚</span>
-                    </div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Documentation</h3>
-                    <p class="text-gray-600">Comprehensive setup guides, API docs, and tutorials</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">🔧</span>
-                    </div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Professional Services</h3>
-                    <p class="text-gray-600">Enterprise support, training, and custom development</p>
-                </div>
-            </div>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4 mt-10">Alternative: Kubernetes (Helm)</h2>
+
+            <p class="text-gray-600 mb-6">
+                Install DocRouter from the Helm chart published to GitHub Container Registry (<code>oci://ghcr.io/analytiq-hub/doc-router</code>). Prerequisites: Helm 3.8+, a Kubernetes cluster, an <strong>nginx</strong> ingress controller, MongoDB (Atlas or in-cluster), an AWS S3 bucket, and (for HTTPS) <a href="https://cert-manager.io/" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">cert-manager</a> with a <code>letsencrypt-prod</code> ClusterIssuer — the chart enables TLS by default.
+            </p>
+            <p class="text-gray-600 mb-6">
+                If you cloned the <a href="https://github.com/analytiq-hub/doc-router" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">doc-router</a> repository, prefer <code>./deploy/scripts/k8s-deploy.sh &lt;overlay&gt;</code> with a <code>.env.&lt;overlay&gt;</code> file (see <a href="https://github.com/analytiq-hub/doc-router/blob/main/deploy/README.md" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">deploy/README.md</a>). That script creates the namespace and secret, runs the same Helm upgrade, and restarts pods after secret changes. The steps below are the equivalent manual install.
+            </p>
+
+            <h3 class="text-lg font-medium text-gray-900 mb-3">1. Create secrets (before Helm)</h3>
+            <p class="text-gray-600 mb-4">
+                Credentials live in a Kubernetes Secret named <code>doc-router-secrets</code>, not in Helm values. Create or update it <strong>before</strong> <code>helm upgrade --install</code> — a pre-install migration Job reads only this Secret. Minimum keys: <code>NEXTAUTH_SECRET</code>, <code>MONGODB_URI</code>, <code>ADMIN_EMAIL</code>, <code>ADMIN_PASSWORD</code>, <code>AWS_ACCESS_KEY_ID</code>, <code>AWS_SECRET_ACCESS_KEY</code>, <code>AWS_S3_BUCKET_NAME</code>. Add LLM keys (<code>OPENAI_API_KEY</code>, etc.) in the Secret or configure them later in the UI.
+            </p>
+            <pre><code>kubectl create namespace doc-router --dry-run=client -o yaml | kubectl apply -f -
+
+kubectl create secret generic doc-router-secrets \
+  --namespace doc-router \
+  --from-literal=NEXTAUTH_SECRET='change-me' \
+  --from-literal=MONGODB_URI='mongodb+srv://user:pass@cluster.example.net/' \
+  --from-literal=ADMIN_EMAIL='admin@example.com' \
+  --from-literal=ADMIN_PASSWORD='change-me' \
+  --from-literal=AWS_ACCESS_KEY_ID='...' \
+  --from-literal=AWS_SECRET_ACCESS_KEY='...' \
+  --from-literal=AWS_S3_BUCKET_NAME='your-bucket' \
+  --dry-run=client -o yaml | kubectl apply -f -</code></pre>
+
+            <h3 class="text-lg font-medium text-gray-900 mb-3 mt-6">2. Install the chart</h3>
+            <p class="text-gray-600 mb-4">
+                Replace <code>app.example.com</code> with your hostname (DNS must point at the ingress LoadBalancer). Pin <code>--version</code> to the chart version in <a href="https://github.com/analytiq-hub/doc-router/blob/main/deploy/charts/doc-router/Chart.yaml" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">Chart.yaml</a> (currently <code>0.3.7</code>). With empty image tags, the chart pulls <code>ghcr.io/analytiq-hub/doc-router-frontend</code> and <code>doc-router-backend</code> at the chart <code>appVersion</code> (e.g. <code>v27.0.1</code>).
+            </p>
+            <pre><code>helm upgrade --install doc-router oci://ghcr.io/analytiq-hub/doc-router \
+  --version 0.3.7 \
+  --namespace doc-router \
+  --set ingress.host=app.example.com \
+  --set ingress.className=nginx \
+  --set config.nextauthUrl=https://app.example.com \
+  --set config.appBucketName=your-bucket \
+  --set config.region=us-east-1 \
+  --set config.environment=prod \
+  --atomic \
+  --timeout 10m</code></pre>
+
+            <p class="text-gray-600 mt-4 mb-6">
+                After install: <code>https://app.example.com</code> (API docs at <code>/fastapi/docs</code>). If you change the Secret later, restart workloads: <code>kubectl rollout restart deployment/frontend deployment/backend -n doc-router</code>. Rollbacks: <code>helm history doc-router -n doc-router</code>, <code>helm rollback doc-router -n doc-router</code>. More detail: <a href="{{ site.baseurl }}{% post_url 2026-03-07-deploying-doc-router-on-kubernetes %}">Deploying Doc Router on Kubernetes</a> and <a href="https://github.com/analytiq-hub/doc-router/blob/main/deploy/README.md" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">deploy/README.md</a>.
+            </p>
         </section>
 
         <section class="bg-gray-50 rounded-lg p-8">

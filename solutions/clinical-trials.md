@@ -55,19 +55,19 @@ description: "Automate clinical trial invoice processing for pharma and research
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-white mb-3">Invoice Processing</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Lab service invoices and reports</li>
-                            <li>• Research facility billing statements</li>
-                            <li>• Equipment and supply invoices</li>
-                            <li>• Travel and expense reports</li>
+                            <li>Lab service invoices and reports</li>
+                            <li>Research facility billing statements</li>
+                            <li>Equipment and supply invoices</li>
+                            <li>Travel and expense reports</li>
                         </ul>
                     </div>
                     <div class="bg-white bg-opacity-10 rounded-lg p-6">
                         <h3 class="text-xl font-medium text-white mb-3">Contract Verification</h3>
                         <ul class="text-blue-100 space-y-2 text-left">
-                            <li>• Rate verification against contracts</li>
-                            <li>• Service eligibility checking</li>
-                            <li>• Billing cycle validation</li>
-                            <li>• Regulatory compliance verification</li>
+                            <li>Rate verification against contracts</li>
+                            <li>Service eligibility checking</li>
+                            <li>Billing cycle validation</li>
+                            <li>Regulatory compliance verification</li>
                         </ul>
                     </div>
                 </div>

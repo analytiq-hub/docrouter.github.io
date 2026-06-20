@@ -30,35 +30,35 @@ description: "Learn how DocRouter's cloud-native architecture processes document
                 <div>
                     <h3 class="text-lg font-medium text-gray-900 mb-3">Document Ingestion</h3>
                     <ul class="text-gray-600 space-y-2 mb-6">
-                        <li>• Multi-format document support (PDF, images, Office docs)</li>
-                        <li>• Secure file upload with encryption</li>
-                        <li>• Automatic format detection and conversion</li>
-                        <li>• Batch processing capabilities</li>
+                        <li>Multi-format document support (PDF, images, Office docs)</li>
+                        <li>Secure file upload with encryption</li>
+                        <li>Automatic format detection and conversion</li>
+                        <li>Batch processing capabilities</li>
                     </ul>
 
                     <h3 class="text-lg font-medium text-gray-900 mb-3">OCR Processing</h3>
                     <ul class="text-gray-600 space-y-2">
-                        <li>• Advanced optical character recognition</li>
-                        <li>• Handwriting recognition support</li>
-                        <li>• Multi-language text extraction</li>
-                        <li>• Table and form structure detection</li>
+                        <li>Advanced optical character recognition</li>
+                        <li>Handwriting recognition support</li>
+                        <li>Multi-language text extraction</li>
+                        <li>Table and form structure detection</li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-medium text-gray-900 mb-3">AI Analysis Engine</h3>
                     <ul class="text-gray-600 space-y-2 mb-6">
-                        <li>• Large language model integration</li>
-                        <li>• Custom prompt engineering</li>
-                        <li>• Schema-based data extraction</li>
-                        <li>• Confidence scoring and validation</li>
+                        <li>Large language model integration</li>
+                        <li>Custom prompt engineering</li>
+                        <li>Schema-based data extraction</li>
+                        <li>Confidence scoring and validation</li>
                     </ul>
 
                     <h3 class="text-lg font-medium text-gray-900 mb-3">Integration Layer</h3>
                     <ul class="text-gray-600 space-y-2">
-                        <li>• REST API for programmatic access</li>
-                        <li>• Webhook notifications</li>
-                        <li>• Third-party system integrations</li>
-                        <li>• Real-time status updates</li>
+                        <li>REST API for programmatic access</li>
+                        <li>Webhook notifications</li>
+                        <li>Third-party system integrations</li>
+                        <li>Real-time status updates</li>
                     </ul>
                 </div>
             </div>
