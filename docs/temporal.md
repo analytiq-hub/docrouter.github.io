@@ -7,7 +7,9 @@ description: "Integrate DocRouter with Temporal for durable document workflow or
 
 Temporal is for **coded workflows** where you need durable orchestration—e.g. classify pages, group them by class, then process each group with DocRouter.
 
-**Use it when** documents must be split, classified, grouped, and processed by group (e.g. multi-page surgery schedules, batch processing by type).
+**Use it when** documents must be split, classified, grouped, and processed by group (e.g. multi-page surgery schedules, batch processing by type), and you need custom retry semantics or long-running workflow code you own.
+
+For **visual** document pipelines inside DocRouter (canvas, OCR/LLM nodes, connectors), use [DocRouter Flows]({{ '/docs/flows/' | relative_url }}) instead.
 
 ## How it fits with DocRouter
 
@@ -19,6 +21,7 @@ For a full walkthrough, see [How to create document workflows with Temporal and 
 
 ## See also
 
+- [DocRouter Flows]({{ '/docs/flows/' | relative_url }}) — Built-in visual automation (alternative to coded Temporal workflows)
 - [Webhooks]({{ '/docs/webhooks/' | relative_url }}) — Event types, payloads, authentication
 - [Workflows]({{ '/docs/workflows/' | relative_url }}) — Overview of workflow options
 - [Integrations]({{ '/docs/integrations/' | relative_url }}) — All integration options

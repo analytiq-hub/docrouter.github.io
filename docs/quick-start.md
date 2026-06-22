@@ -16,6 +16,7 @@ description: "Get started with DocRouter in minutes. Create a tag, write a promp
       <li><b>Step 4</b> - Prompt Engineering to improve extraction quality</li>
       <li><b>Step 5</b> - Manual Automation using bulk actions</li>
       <li><b>Step 6</b> - Full Automation with REST API or Python SDK</li>
+      <li><b>Step 7</b> - Visual automation with DocRouter Flows</li>
     </ul>
   </div>
   <div class="rounded-xl border border-blue-200 bg-blue-50 p-6">
@@ -56,10 +57,10 @@ description: "Get started with DocRouter in minutes. Create a tag, write a promp
 <div class="bg-gray-100 rounded-lg p-4 mb-8 sticky top-4 z-10">
   <div class="flex items-center justify-between text-sm">
     <span class="font-medium">Quick Start Progress</span>
-    <span class="text-gray-600">Step <span id="current-step">1</span> of 6</span>
+    <span class="text-gray-600">Step <span id="current-step">1</span> of 7</span>
   </div>
   <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
-    <div id="progress-bar" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 16.67%"></div>
+    <div id="progress-bar" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 14.29%"></div>
   </div>
 </div>
 
@@ -291,6 +292,33 @@ For more details, see - [REST API Documentation](/docs/rest-api).
 
 Refer to the [Python SDK Reference](/docs/python-sdk).
 
+---
+
+<div class="rounded-lg bg-blue-50 border-l-4 border-blue-500 px-4 py-3 mb-3 mt-10" id="step-7">
+  <div class="flex items-center mb-2">
+    <span class="bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-full mr-3">Step 7</span>
+    <span class="text-2xl font-bold text-blue-800">Automate with DocRouter Flows</span>
+  </div>
+  <p class="text-base text-gray-600 mt-1">Build a visual pipeline that runs when documents are uploaded — split, OCR, LLM extraction, and optional downstream steps.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start bg-white rounded-xl p-4">
+  <div>
+    <h3 class="text-xl font-semibold mb-3">Build your first flow</h3>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li>Open <strong>Flows</strong> in the left sidebar → <strong>Create flow</strong>.</li>
+      <li>Add a <strong>Document event trigger</strong>. Set the event to <code>document.uploaded</code> and filter by the tag from Step 1.</li>
+      <li>Add <strong>Document Split</strong> → <strong>Run OCR</strong> → <strong>Run LLM</strong>. Connect OCR output to the LLM node's second input.</li>
+      <li>In <strong>Run LLM</strong>, select the prompt you created in Step 1.</li>
+      <li>Click <strong>Execute workflow</strong>. Click each node to inspect inputs and outputs in the execution log.</li>
+    </ol>
+    <p class="mt-4 text-gray-600">For connector triggers (Gmail, Drive), post-processing code, and human-in-the-loop patterns, see the full <a href="/docs/flows">DocRouter Flows</a> guide.</p>
+  </div>
+  <div>
+    <img src="/assets/images/docrouter_flow_post_to_erp_or_db.png" alt="DocRouter Flows canvas with Gmail trigger, Document Split, OCR, LLM, and HTTP nodes" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
+  </div>
+</div>
+
 ## Learn More
 
 - <a href="/docs/tags">Tags</a> — Required routing mechanism that connects uploads to prompts
@@ -299,6 +327,7 @@ Refer to the [Python SDK Reference](/docs/python-sdk).
 - <a href="/docs/document-agent">Document Agent</a> - Configure schemas, tags, and prompts with AI
 - <a href="/docs/knowledge-bases">Knowledge Bases</a> — Add reference context and power Knowledge Base Chat
 - <a href="/docs/chat-agents">Knowledge Base Chat</a> — Chat over your knowledge bases
+- <a href="/docs/flows">DocRouter Flows</a> — Visual pipelines for split, OCR, LLM, connectors, and delivery
 
 ---
 
@@ -307,7 +336,7 @@ Refer to the [Python SDK Reference](/docs/python-sdk).
 document.addEventListener('DOMContentLoaded', function() {
   const progressBar = document.getElementById('progress-bar');
   const currentStepSpan = document.getElementById('current-step');
-  const steps = ['step-1', 'step-2', 'step-3', 'step-4', 'step-5', 'step-6'];
+  const steps = ['step-1', 'step-2', 'step-3', 'step-4', 'step-5', 'step-6', 'step-7'];
   
   function updateProgress() {
     let currentStep = 1;
@@ -333,7 +362,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Update progress bar and current step
-    const progress = (currentStep / 6) * 100;
+    const progress = (currentStep / 7) * 100;
     progressBar.style.width = progress + '%';
     currentStepSpan.textContent = currentStep;
   }

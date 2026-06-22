@@ -42,6 +42,8 @@ description: "Get real-time notifications when DocRouter processes documents. Co
 
 Webhooks are HTTP callbacks that notify your application when events occur in DocRouter. They enable real-time integrations without polling.
 
+**Note:** This page covers **product webhooks** — outbound notifications when documents are processed (configured under **Organization Settings → Webhooks**). This is distinct from **flow webhook triggers** inside [DocRouter Flows]({{ '/docs/flows/' | relative_url }}), which start a flow when an external system calls an inbound URL.
+
 - **Real-time notifications**: Get instant alerts when documents are processed
 - **Event-driven workflows**: Trigger actions in your systems automatically
 - **Reliable delivery**: Automatic retries with exponential backoff

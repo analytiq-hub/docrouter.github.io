@@ -85,6 +85,13 @@ description: "See how DocRouter turns unstructured documents into structured dat
         <section class="bg-blue-50 rounded-lg p-4 md:p-8 mb-8 md:mb-12">
             <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-6 text-center">Integration Methods</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- DocRouter Flows -->
+                <div class="bg-white rounded-lg p-5 shadow-sm border-2 border-blue-200">
+                    <h3 class="font-bold text-gray-900 mb-2">DocRouter Flows</h3>
+                    <p class="text-sm text-gray-600 mb-3">Built-in visual automation — canvas, OCR/LLM nodes, Gmail and Drive connectors, execution logs.</p>
+                    <a href="{{ '/docs/flows/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View Flows docs →</a>
+                </div>
+
                 <!-- REST API -->
                 <div class="bg-white rounded-lg p-5 shadow-sm">
                     <h3 class="font-bold text-gray-900 mb-2">REST API</h3>
@@ -216,6 +223,10 @@ description: "See how DocRouter turns unstructured documents into structured dat
                 Once you understand the high-level flow, these docs cover each building block in more detail:
             </p>
             <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>
+                    <a href="{{ '/docs/flows/' | relative_url }}" class="text-blue-600 hover:text-blue-800">DocRouter Flows</a>
+                    — Visual pipelines for split, OCR, LLM, and downstream delivery.
+                </li>
                 <li>
                     <a href="{{ '/docs/quick-start/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Quick Start</a>
                     — Step-by-step Tag → Prompt → Upload workflow.
