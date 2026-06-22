@@ -14,6 +14,21 @@ DocRouter is an open-source **Intelligent Document Processing (IDP)** platform, 
 
 The short version: **DocRouter brought the n8n architecture to IDP.**
 
+<div class="rounded-xl border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50/90 p-5 md:p-6 my-6 shadow-md ring-1 ring-blue-100/50">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+    <p class="text-gray-800"><strong class="text-blue-900">Before:</strong> Upload in DocRouter, wire webhooks to n8n or custom code, glue OCR and LLM steps yourself.</p>
+    <p class="text-gray-800"><strong class="text-blue-900">Now:</strong> Drag a canvas: <strong>Gmail → Split → OCR → LLM → ERP</strong> — one product, full execution log.</p>
+  </div>
+</div>
+
+Here is what a workflow looks like in the DocRouter Flows editor — a visual canvas of connected nodes, with per-step input and output you can inspect after each run:
+
+![Gmail trigger through Document Split, OCR, LLM, and post-processing to ERP](/assets/images/docrouter_flow_post_to_erp_or_db.png)
+
+And here is how you configure a node. Click any node to open its panel on the right. The **Run LLM** node, for example, lets you select one of your organisation's configured [DocRouter prompts](/docs/prompts/) from a searchable list. It runs that prompt against the **binary input items** arriving from upstream nodes — typically one PDF page or attachment per item. When an OCR node is connected to the second input port, the model also receives the matching page text alongside the binary.
+
+![Run LLM node configuration — prompt selection, input schema, and output panel](/assets/images/docrouter_flow_llm_node.png)
+
 ---
 
 ## What DocRouter Flows shares with n8n
