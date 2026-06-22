@@ -205,7 +205,7 @@ After IAM is in place, open the **Amazon Bedrock** console → **Model access** 
 
 Then enable the **Bedrock** provider in DocRouter (see LLM section below).
 
-### SES setup
+### SES setup (optional)
 
 1. Verify the sender address or domain in SES.
 2. If the account is in the SES sandbox, verify recipient addresses or request production access.
@@ -384,36 +384,36 @@ Use this ordered checklist for a typical on-prem deployment.
 
 ### AWS
 
-- [ ] Create S3 bucket (encrypted, private, correct region)
-- [ ] Create IAM role `{prefix}-app-role` with Textract, SES, and S3 bucket access
-- [ ] Create IAM user `{prefix}-app-user` with access key
-- [ ] Grant user `sts:AssumeRole` on the role
-- [ ] Grant user `bedrock:InvokeModel` if using Bedrock
-- [ ] (Optional) Verify SES sender and set `SES_FROM_EMAIL`
-- [ ] (Optional) Enable Bedrock foundation models in the console
-- [ ] Put `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_S3_BUCKET_NAME` in `.env` or AWS setup UI
+- Create S3 bucket (encrypted, private, correct region)
+- Create IAM role `{prefix}-app-role` with Textract, SES, and S3 bucket access
+- Create IAM user `{prefix}-app-user` with access key
+- Grant user `sts:AssumeRole` on the role
+- Grant user `bedrock:InvokeModel` if using Bedrock
+- (Optional) Verify SES sender and set `SES_FROM_EMAIL`
+- (Optional) Enable Bedrock foundation models in the console
+- Put `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_S3_BUCKET_NAME` in `.env` or AWS setup UI
 
 ### Application platform
 
-- [ ] Provision server or containers (see [Open Source]({{ '/docs/open-source/' | relative_url }}) for Docker Compose and Helm)
-- [ ] Install MongoDB and set `MONGODB_URI`
-- [ ] Set `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `NEXTAUTH_SECRET`, `NEXTAUTH_URL`
-- [ ] Deploy frontend, backend, worker, and reverse proxy (nginx)
-- [ ] Confirm migrations ran and admin can log in
+- Provision server or containers (see [Open Source]({{ '/docs/open-source/' | relative_url }}) for Docker Compose and Helm)
+- Install MongoDB and set `MONGODB_URI`
+- Set `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `NEXTAUTH_SECRET`, `NEXTAUTH_URL`
+- Deploy frontend, backend, worker, and reverse proxy (nginx)
+- Confirm migrations ran and admin can log in
 
 ### LLM
 
-- [ ] Add API keys via `.env` or **LLM Manager** (OpenAI, Mistral, etc.)
-- [ ] Enable chosen models per organization prompts and flows
-- [ ] (Optional) Enable Bedrock provider after AWS + model access
-- [ ] (Optional) Complete GCP Vertex setup and enable `vertex_ai/gemini-2.5-flash`
+- Add API keys via `.env` or **LLM Manager** (OpenAI, Mistral, etc.)
+- Enable chosen models per organization prompts and flows
+- (Optional) Enable Bedrock provider after AWS + model access
+- (Optional) Complete GCP Vertex setup and enable `vertex_ai/gemini-2.5-flash`
 
 ### Validation
 
-- [ ] Upload a PDF; confirm Textract OCR completes
-- [ ] Run a prompt against your chosen flash model
-- [ ] Send a test email if using SES
-- [ ] (Optional) Test Bedrock or Vertex from LLM Manager
+- Upload a PDF; confirm Textract OCR completes
+- Run a prompt against your chosen flash model
+- (Optional) Send a test email if using SES
+- (Optional) Test Bedrock or Vertex from LLM Manager
 
 ---
 
