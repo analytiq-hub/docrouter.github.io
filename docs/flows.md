@@ -2,7 +2,7 @@
 layout: docs
 title: "DocRouter Flows — Visual Document Automation"
 permalink: /docs/flows/
-description: "Build document processing pipelines on a visual canvas inside DocRouter. Drag-and-drop nodes for OCR, LLM extraction, connectors, code, and HTTP — with n8n-style execution logs and pin data."
+description: "Build document processing pipelines on a visual canvas inside DocRouter. Drag-and-drop nodes for OCR, LLM extraction, connectors, code, and HTTP — with execution logs, pin data, and typed items."
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 md:p-8 mb-6 md:mb-10 text-center">
@@ -12,7 +12,7 @@ description: "Build document processing pipelines on a visual canvas inside DocR
 
 ## Overview
 
-**DocRouter Flows** is a visual workflow editor inside DocRouter. You drag nodes onto a canvas, connect them, run the pipeline, and inspect every input and output per step — the same interaction model [n8n](https://n8n.io) popularised, extended with **document-native nodes** (split, OCR, LLM extraction) and **Apache 2.0** licensing so you can embed the platform in commercial products.
+**DocRouter Flows** is a visual workflow editor inside DocRouter. You drag nodes onto a canvas, connect them, run the pipeline, and inspect every input and output per step — the same interaction model popularized by tools like [n8n](https://n8n.io), extended with **document-native nodes** (split, OCR, LLM extraction) and **Apache 2.0** licensing so you can embed the platform in commercial products.
 
 Flows connects ingestion, extraction, post-processing, and delivery in one product. No separate glue service required for the common path: **Gmail → Document Split → OCR → LLM → ERP**.
 
@@ -39,7 +39,7 @@ Open **Flows** from the left sidebar in the DocRouter app to create or edit pipe
 | Durable **coded** orchestration with custom retry semantics | <a href="{{ '/docs/temporal/' | relative_url }}">Temporal</a> |
 | Simple REST upload and poll | <a href="{{ '/docs/rest-api/' | relative_url }}">REST API</a> or SDKs |
 
-For a deeper architectural walkthrough, see the blog post [DocRouter Flows: Bringing the n8n Architecture to Intelligent Document Processing]({{ site.baseurl }}{% post_url 2026-06-21-docrouter-flows-bringing-the-n8n-architecture-to-intelligent-document-processing %}).
+For a deeper walkthrough, see the blog post [DocRouter Flows: Visual Workflow Automation for Intelligent Document Processing]({{ site.baseurl }}{% post_url 2026-06-21-docrouter-flows-visual-workflow-automation-for-intelligent-document-processing %}).
 
 ---
 
@@ -196,7 +196,7 @@ Every execution records per-node inputs, outputs, timing, and logs in the **Exec
 
 ## Learn more
 
-- [Architecture blog post]({{ site.baseurl }}{% post_url 2026-06-21-docrouter-flows-bringing-the-n8n-architecture-to-intelligent-document-processing %}) — Full walkthrough of the n8n model applied to IDP
+- [Flows blog post]({{ site.baseurl }}{% post_url 2026-06-21-docrouter-flows-visual-workflow-automation-for-intelligent-document-processing %}) — Visual workflow automation for IDP
 - <a href="{{ '/docs/architecture/' | relative_url }}">Architecture</a> — Flows engine and system overview
 - <a href="{{ '/docs/prompts/' | relative_url }}">Prompts</a> — LLM instructions used by the Run LLM node
 - <a href="{{ '/docs/tags/' | relative_url }}">Tags</a> — Filter document event triggers and route uploads

@@ -18,7 +18,7 @@ description: "Learn how DocRouter's cloud-native architecture processes document
             <p class="text-gray-600 mb-6">
                 DocRouter is built on a modern, cloud-native architecture designed for scalability, reliability, and ease of integration.
                 The system processes documents through a multi-stage pipeline that combines OCR, AI analysis, and structured data extraction.
-                <a href="{{ '/docs/flows/' | relative_url }}" class="text-blue-600 hover:text-blue-800">DocRouter Flows</a> adds a visual automation layer on top of that pipeline — n8n-style canvas, document-native nodes, and durable execution state.
+                <a href="{{ '/docs/flows/' | relative_url }}" class="text-blue-600 hover:text-blue-800">DocRouter Flows</a> adds a visual automation layer on top of that pipeline — a node-and-canvas editor, document-native nodes, and durable execution state.
             </p>
             <div class="flex justify-center mb-6">
                 <img src="{{ '/assets/images/docrouter/doc-router-arch.png' | relative_url }}" alt="DocRouter Architecture Diagram" class="w-full max-w-4xl rounded-lg shadow-md">

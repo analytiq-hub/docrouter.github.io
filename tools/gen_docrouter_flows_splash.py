@@ -146,7 +146,7 @@ def main():
 
     subtitle_lines = wrap_text(
         draw,
-        "Bringing the n8n Architecture to Intelligent Document Processing",
+        "Visual Workflow Automation for Intelligent Document Processing",
         subtitle_font,
         text_max_w,
     )

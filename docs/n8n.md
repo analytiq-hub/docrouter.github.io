@@ -7,7 +7,7 @@ description: "Connect DocRouter to n8n with community nodes. Automate document w
 
 n8n is a visual workflow tool. Use it to connect DocRouter to other apps and services (ERP, CRM, email, databases).
 
-If you want n8n-style visual flows **inside DocRouter** without a separate n8n instance, see [DocRouter Flows]({{ '/docs/flows/' | relative_url }}).
+If you want visual workflow automation **inside DocRouter** without a separate n8n instance, see [DocRouter Flows]({{ '/docs/flows/' | relative_url }}).
 
 If you use **Microsoft Power Automate** instead, see the [Power Automate integration]({{ '/docs/power-automate/' | relative_url }}) page for the DocRouter Organization custom connector and a [sandbox sample flow on GitHub](https://github.com/analytiq-hub/power-automate-docrouter#sandbox-sample-flow).
 
