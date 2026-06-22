@@ -37,7 +37,7 @@ DocRouter supports two automation tiers:
 
 **DocRouter Flows** is the first-party visual workflow editor — n8n-style canvas with document-native nodes (Split, OCR, LLM), connector triggers (Gmail, Drive, …), code nodes, and HTTP request nodes.
 
-See [DocRouter Flows]({{ '/docs/flows/' | relative_url }}) for concepts, quick start, connector setup, and example recipes.
+See [DocRouter Flows]({{ '/docs/flows/' | relative_url }}) for concepts, quick start, connector setup, and example recipes. For the full architectural story, read [DocRouter Flows: Bringing the n8n Architecture to Intelligent Document Processing]({{ site.baseurl }}{% post_url 2026-06-21-docrouter-flows-bringing-the-n8n-architecture-to-intelligent-document-processing %}).
 
 ---
 
@@ -74,6 +74,7 @@ DocRouter exposes a full suite of <a href="/docs/rest-api">REST APIs</a>, includ
 ## Learn more
 
 - [DocRouter Flows]({{ '/docs/flows/' | relative_url }}) — Built-in visual automation
+- [DocRouter Flows architecture blog post]({{ site.baseurl }}{% post_url 2026-06-21-docrouter-flows-bringing-the-n8n-architecture-to-intelligent-document-processing %}) — n8n model applied to IDP
 - <a href="/docs/webhooks">Webhooks</a> — Product event notifications
 - <a href="/docs/integrations">Integrations</a> — Overview of integration options
 

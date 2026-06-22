@@ -222,11 +222,7 @@ description: "See how DocRouter turns unstructured documents into structured dat
             <p class="text-gray-600 mb-4">
                 Once you understand the high-level flow, these docs cover each building block in more detail:
             </p>
-            <ul class="list-disc list-inside text-gray-600 space-y-2">
-                <li>
-                    <a href="{{ '/docs/flows/' | relative_url }}" class="text-blue-600 hover:text-blue-800">DocRouter Flows</a>
-                    — Visual pipelines for split, OCR, LLM, and downstream delivery.
-                </li>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">     
                 <li>
                     <a href="{{ '/docs/quick-start/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Quick Start</a>
                     — Step-by-step Tag → Prompt → Upload workflow.
@@ -242,6 +238,10 @@ description: "See how DocRouter turns unstructured documents into structured dat
                 <li>
                     <a href="{{ '/docs/schemas/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Schemas</a>
                     — Structured output for your extraction results.
+                </li>
+                <li>
+                    <a href="{{ '/docs/flows/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Flows</a>
+                    — Visual pipelines for split, OCR, LLM, and downstream delivery.
                 </li>
             </ul>
         </section>
