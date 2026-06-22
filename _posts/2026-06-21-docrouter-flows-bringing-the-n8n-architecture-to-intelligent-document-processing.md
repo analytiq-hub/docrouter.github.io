@@ -84,7 +84,7 @@ DocRouter includes trigger and action nodes for the four most common enterprise 
 
 The four connectors above are examples, not a closed list. Once the connector architecture is in place — manifest schema, credential types, poll triggers, and the declarative HTTP executor — **adding a new integration is a matter of minutes**. Each connector follows the same pattern: define parameters, wire OAuth or API-key credentials, and describe the HTTP calls the node makes. The platform handles the rest (polling, item emission, binary attachment handling, execution logging).
 
-That consistency is what makes AI coding assistants like [Cursor](https://cursor.com) so effective here. Point an assistant at an existing connector and the target API's documentation, and it can scaffold a new node package quickly: the conventions are explicit, the examples are right there in the repo, and there is little bespoke glue to invent. We have used this workflow ourselves — see [How We Built the DocRouter n8n Nodes With Cursor](/blog/2026/01/31/how-we-built-docrouter-n8n-nodes-with-cursor.html) — and the same approach applies inside DocRouter Flows. Need a Box, Dropbox, or Salesforce connector? The architecture is already built; filling in the next one is routine.
+That consistency is what makes AI coding assistants like [Cursor](https://cursor.com) so effective here. Point an assistant at an existing connector and the target API's documentation, and it can scaffold a new node package quickly: the conventions are explicit, the examples are right there in the repo, and there is little bespoke glue to invent. We have used this workflow ourselves — see [How We Built the DocRouter n8n Nodes With Cursor]({% post_url 2026-01-31-how-we-built-docrouter-n8n-nodes-with-cursor %}) — and the same approach applies inside DocRouter Flows. Need a Box, Dropbox, or Salesforce connector? The architecture is already built; filling in the next one is routine.
 
 Setting up a connector takes three steps:
 
@@ -105,8 +105,34 @@ A minimal connector flow looks like this:
 [Run OCR] ─────▶ [Run LLM]   ← OCR output pairs with LLM input
                     │
                     ▼
-          [HTTP Request]  ← POST extracted fields to your ERP or database
+        [Code (Python)]        ← validate and shape fields for your ERP schema
+                    │
+                    ▼
+          [HTTP Request]       ← POST to ERP or database
 ```
+
+![Gmail trigger through Document Split, OCR, LLM, and post-processing to ERP](/assets/images/docrouter_flow_post_to_erp_or_db.png)
+
+The code node is where you adapt LLM output to whatever your downstream system expects — field renaming, type coercion, dropping low-confidence rows, or collapsing per-page results into one payload:
+
+```python
+def run(items, context):
+    """Normalize LLM extraction fields before posting to ERP."""
+    out = []
+    for item in items:
+        data = item.get("extraction") or item
+        out.append({
+            "vendor_name": (data.get("vendor_name") or "").strip(),
+            "invoice_number": data.get("invoice_number"),
+            "invoice_date": data.get("invoice_date"),
+            "total_amount": float(data.get("total_amount") or 0),
+            "currency": data.get("currency") or "USD",
+            "line_items": data.get("line_items") or [],
+        })
+    return out
+```
+
+The HTTP Request node then references these fields with expressions — for example, `={{ $json.invoice_number }}` in the POST body — and sends the result to your ERP or database endpoint.
 
 The same pattern works identically starting from an Outlook, Google Drive, or OneDrive trigger — only the first node changes.
 
@@ -148,6 +174,8 @@ A hospital receives pre-surgery document batches by email. Each batch is a singl
               │
               └──▶  [HTTP Request]       ← post to review queue / Slack / ticketing
 ```
+
+![Document upload through split, OCR, LLM, grouping, and branch to EHR or Slack](/assets/images/docrouter_flow_document_split.png)
 
 The code node runs a patient-grouping algorithm: it normalises names, dates of birth, and medical record numbers, assigns pages to patient groups using MRN as the primary key (falling back to name + DOB), and marks any page that could not be placed as an unknown. If any unknowns remain, it sets a `human_review` flag on the output item.
 
