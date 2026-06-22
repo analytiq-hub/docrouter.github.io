@@ -108,7 +108,7 @@ description: "Learn how DocRouter's cloud-native architecture processes document
                         <span class="text-2xl">🏢</span>
                     </div>
                     <h3 class="text-lg font-medium text-gray-900 mb-2">On-Premise Options</h3>
-                    <p class="text-gray-600">Self-hosted deployment for maximum data control</p>
+                    <p class="text-gray-600">Self-hosted deployment for maximum data control. See the <a href="{{ '/docs/on-prem-installation/' | relative_url }}" class="text-blue-600 hover:text-blue-800">On-Prem Installation</a> guide for AWS, IAM, and LLM setup.</p>
                 </div>
             </div>
         </section>

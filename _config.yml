@@ -146,6 +146,8 @@ header_pages:
         url: "/docs/architecture"
       - title: "Open Source"
         url: "/docs/open-source"
+      - title: "On-Prem Installation"
+        url: "/docs/on-prem-installation"
   - title: "Resources"
     url: "#"
     children:
@@ -235,6 +237,8 @@ docs_sidebar_pages:
     url: "/docs/architecture"
   - title: "Open Source"
     url: "/docs/open-source"
+  - title: "On-Prem Installation"
+    url: "/docs/on-prem-installation"
 
 # Footer sitemap - simplified navigation for footer display
 site_map:

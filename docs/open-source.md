@@ -87,6 +87,10 @@ kubectl create secret generic doc-router-secrets \
             <p class="text-gray-600 mt-4 mb-6">
                 After install: <code>https://app.example.com</code> (API docs at <code>/fastapi/docs</code>). If you change the Secret later, restart workloads: <code>kubectl rollout restart deployment/frontend deployment/backend -n doc-router</code>. Rollbacks: <code>helm history doc-router -n doc-router</code>, <code>helm rollback doc-router -n doc-router</code>. More detail: <a href="{{ site.baseurl }}{% post_url 2026-03-07-deploying-doc-router-on-kubernetes %}">Deploying Doc Router on Kubernetes</a> and <a href="https://github.com/analytiq-hub/doc-router/blob/main/deploy/README.md" class="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">deploy/README.md</a>.
             </p>
+
+            <p class="text-gray-600 mb-6">
+                For AWS IAM, Terraform, LLM provider keys, and Vertex AI Gemini setup after install, see the <a href="{{ '/docs/on-prem-installation/' | relative_url }}" class="text-blue-600 hover:text-blue-800">On-Prem Installation</a> guide.
+            </p>
         </section>
 
         <section class="bg-gray-50 rounded-lg p-8">

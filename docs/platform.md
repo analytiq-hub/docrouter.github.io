@@ -37,7 +37,7 @@ description: "Hosted DocRouter (SaaS) needs no cloud or LLM configuration from y
 
 ## Deployment
 
-<p style="color: #4b5563; font-size: 0.875rem; margin: 0;">Self-hosted DocRouter installs via a <b>Kubernetes Helm chart</b> or <b>Docker Compose</b>. See <a href="{% post_url 2026-03-07-deploying-doc-router-on-kubernetes %}" class="text-blue-600 hover:text-blue-800">Deploying Doc Router on Kubernetes</a> and the <a href="{{ '/docs/open-source/' | relative_url }}" class="text-blue-600 hover:text-blue-800">open source</a> page.</p>
+<p style="color: #4b5563; font-size: 0.875rem; margin: 0;">Self-hosted DocRouter installs via a <b>Kubernetes Helm chart</b> or <b>Docker Compose</b>. See <a href="{% post_url 2026-03-07-deploying-doc-router-on-kubernetes %}" class="text-blue-600 hover:text-blue-800">Deploying Doc Router on Kubernetes</a>, the <a href="{{ '/docs/open-source/' | relative_url }}" class="text-blue-600 hover:text-blue-800">open source</a> page, and the <a href="{{ '/docs/on-prem-installation/' | relative_url }}" class="text-blue-600 hover:text-blue-800">On-Prem Installation</a> guide for AWS IAM, LLM keys, and Vertex AI setup.</p>
 
 ---
 
