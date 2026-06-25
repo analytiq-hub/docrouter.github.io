@@ -139,7 +139,7 @@ def run(items, context):
     return out
 ```
 
-The HTTP Request node then references these fields with expressions — for example, `={{ $json.invoice_number }}` in the POST body — and sends the result to your ERP or database endpoint.
+The HTTP Request node then references these fields with expressions — for example, `={% raw %}{{ $json.invoice_number }}{% endraw %}` in the POST body — and sends the result to your ERP or database endpoint.
 
 The same pattern works identically starting from an Outlook, Google Drive, or OneDrive trigger — only the first node changes.
 

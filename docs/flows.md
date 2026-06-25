@@ -49,7 +49,7 @@ If you have used n8n, these will feel familiar:
 
 - **Canvas** — Drag nodes from a palette, connect output handles to inputs. Node shapes and connection style mirror n8n's look and feel.
 - **Items** — Every node receives and produces a list of *items*. Each item has a `json` payload (structured data) and a `binary` payload (PDF pages, attachments).
-- **Expressions** — Parameters prefixed with `=` reference upstream outputs (e.g. `={{ $json.invoice_number }}`).
+- **Expressions** — Parameters prefixed with `=` reference upstream outputs (e.g. `={% raw %}{{ $json.invoice_number }}{% endraw %}`).
 - **Pin data** — Freeze a node's output so downstream nodes reuse it without re-running expensive OCR or LLM calls.
 - **Execution log** — Per-node status, timing, inputs, outputs, and code-node print output. Click any node after a run to inspect what flowed through it.
 - **Credentials** — OAuth tokens and API keys stored once per organisation under **Settings → Credentials**, injected at runtime — never stored in the graph.
@@ -171,7 +171,7 @@ def run(items, context):
     return out
 ```
 
-The **HTTP Request** node references these fields with expressions — e.g. `={{ $json.invoice_number }}` in the POST body.
+The **HTTP Request** node references these fields with expressions — e.g. `={% raw %}{{ $json.invoice_number }}{% endraw %}` in the POST body.
 
 ---
 
