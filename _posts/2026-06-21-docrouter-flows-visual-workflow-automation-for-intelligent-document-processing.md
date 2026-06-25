@@ -208,5 +208,3 @@ DocRouter Flows brings visual workflow automation to intelligent document proces
 Tools like n8n are excellent general-purpose automation platforms. DocRouter Flows focuses on a narrower problem: turning unstructured documents into structured, actionable data inside production document pipelines.
 
 DocRouter is Apache 2.0 licensed, so teams can embed, modify, and deploy it in commercial or internal systems where document automation is a core product capability.
-
-<p class="text-sm text-gray-500 mt-8"><em>Trademark notice: n8n is a trademark or brand name of n8n GmbH. DocRouter and Analytiq Hub LLC are not affiliated with, sponsored by, or endorsed by n8n GmbH. References to n8n are for identification and comparison only.</em></p>
