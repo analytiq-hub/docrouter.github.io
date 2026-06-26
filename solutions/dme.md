@@ -4,146 +4,100 @@ title: "DME Order & Authorization Processing with AI"
 description: "Streamline DME order processing with AI. Automatically handle prescriptions, insurance authorizations, and medical documentation to speed up patient equipment delivery."
 ---
 
-<div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
-    <!-- Hero Section -->
-    <header class="text-center md:mb-12 mb-8">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Durable Medical Equipment Processing
-        </h1>
-        <div class="text-xl md:text-2xl text-gray-600 mb-8">
-            <p>Automate the processing of DME orders, prescriptions, and insurance authorizations to streamline medical equipment distribution</p>
-        </div>
-    </header>
+<section class="enterprise-hero border-b border-slate-200/80 py-10 md:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="enterprise-section-label mb-3">Solutions</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-[#1a2b4c] mb-4">Durable Medical Equipment Processing</h1>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">Automate the processing of DME orders, prescriptions, and insurance authorizations to streamline medical equipment distribution.</p>
+        <p class="mt-6"><a href="{{ '/solutions/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">← All solutions</a></p>
+    </div>
+</section>
 
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
     <main>
-        <!-- Problem Statement Section -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">The DME Challenge</h2>
+        <section class="enterprise-card p-8 mb-12">
+            <h2 class="text-2xl font-bold text-[#1a2b4c] mb-8 text-center">The DME challenge</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="solution-challenge-icon text-blue-600">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Insurance complexity</h3>
+                    <p class="text-slate-600 text-sm">Complex medical documentation and insurance authorization requirements</p>
+                </div>
+                <div>
+                    <div class="solution-challenge-icon text-blue-600">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Manual processing</h3>
+                    <p class="text-slate-600 text-sm">Hours spent manually processing prescriptions and authorizations</p>
+                </div>
+                <div>
+                    <div class="solution-challenge-icon text-blue-600">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Patient delays</h3>
+                    <p class="text-slate-600 text-sm">Processing delays impact patient care and equipment delivery times</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="enterprise-band rounded-xl p-8 md:p-10 mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-3">How DocRouter streamlines DME operations</h2>
+                <p class="text-slate-300 max-w-2xl mx-auto">Automated processing of medical documents and insurance workflows</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="enterprise-band-card">
+                    <h3 class="text-lg font-semibold text-white mb-3">Document processing</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>DME orders and prescriptions</li>
+                        <li>Insurance authorization forms</li>
+                        <li>Medical necessity documentation</li>
+                        <li>Patient information and eligibility</li>
+                    </ul>
+                </div>
+                <div class="enterprise-band-card">
+                    <h3 class="text-lg font-semibold text-white mb-3">Automated workflows</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>Insurance eligibility verification</li>
+                        <li>Prior authorization processing</li>
+                        <li>Order fulfillment automation</li>
+                        <li>Compliance documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="enterprise-card p-8 mb-12">
+            <h2 class="text-2xl font-bold text-[#1a2b4c] mb-8 text-center">Target outcomes</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">🏥</span>
-                    </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-2">Insurance Complexity</h3>
-                    <p class="text-gray-600">Complex medical documentation and insurance authorization requirements</p>
+                    <div class="text-4xl font-bold enterprise-metric mb-2">80%</div>
+                    <div class="text-slate-600 text-sm">Faster processing</div>
                 </div>
                 <div class="text-center">
-                    <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">📄</span>
-                    </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-2">Manual Processing</h3>
-                    <p class="text-gray-600">Hours spent manually processing prescriptions and authorizations</p>
+                    <div class="text-4xl font-bold enterprise-metric mb-2">95%</div>
+                    <div class="text-slate-600 text-sm">Authorization accuracy</div>
                 </div>
                 <div class="text-center">
-                    <div class="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">⏱️</span>
-                    </div>
-                    <h3 class="text-xl font-medium text-gray-900 mb-2">Patient Delays</h3>
-                    <p class="text-gray-600">Processing delays impact patient care and equipment delivery times</p>
+                    <div class="text-4xl font-bold enterprise-metric mb-2">$90K+</div>
+                    <div class="text-slate-600 text-sm">Annual savings potential</div>
                 </div>
             </div>
+            <p class="text-center text-sm text-slate-500 mt-6">
+                <a href="{{ '/case-studies/dme/' | relative_url }}" class="text-blue-600 hover:text-blue-800 no-underline">Read the prior consulting case study →</a>
+            </p>
         </section>
 
-        <!-- Solution Section -->
-        <section class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 mb-12">
-            <div class="text-center">
-                <h2 class="text-3xl font-semibold text-white mb-6">How DocRouter Streamlines DME Operations</h2>
-                <p class="text-xl text-blue-100 mb-8">
-                    Automated processing of medical documents and insurance workflows
-                </p>
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-white bg-opacity-10 rounded-lg p-6">
-                        <h3 class="text-xl font-medium text-white mb-3">Document Processing</h3>
-                        <ul class="text-blue-100 space-y-2 text-left">
-                            <li>DME orders and prescriptions</li>
-                            <li>Insurance authorization forms</li>
-                            <li>Medical necessity documentation</li>
-                            <li>Patient information and eligibility</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white bg-opacity-10 rounded-lg p-6">
-                        <h3 class="text-xl font-medium text-white mb-3">Automated Workflows</h3>
-                        <ul class="text-blue-100 space-y-2 text-left">
-                            <li>Insurance eligibility verification</li>
-                            <li>Prior authorization processing</li>
-                            <li>Order fulfillment automation</li>
-                            <li>Compliance documentation</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+        {% include solution-related-docs.html
+            quick_start="Set up DME document extraction in minutes"
+            schemas="Define fields for prescriptions, CMNs, and authorization forms"
+            knowledge="Store and query coverage policies and eligibility requirements"
+            workflows="Automate prior authorization and order fulfillment" %}
 
-        <!-- Results Section -->
-        <section class="bg-gray-50 rounded-lg p-8 mb-12">
-            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">DME Results</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">80%</div>
-                    <div class="text-gray-600">Faster Processing</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">95%</div>
-                    <div class="text-gray-600">Authorization Accuracy</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">$90K+</div>
-                    <div class="text-gray-600">Annual Savings</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Related Documentation -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-6 text-center">Related Documentation</h2>
-            <div class="grid md:grid-cols-3 gap-4">
-                <a href="/docs/quick-start" class="block bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-400 hover:shadow-md transition-all no-underline group">
-                    <div class="font-semibold text-gray-900 group-hover:text-blue-600 mb-1">Quick Start Guide</div>
-                    <div class="text-sm text-gray-500">Set up DME document extraction in minutes</div>
-                </a>
-                <a href="/docs/how-it-works" class="block bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-400 hover:shadow-md transition-all no-underline group">
-                    <div class="font-semibold text-gray-900 group-hover:text-blue-600 mb-1">How It Works</div>
-                    <div class="text-sm text-gray-500">Platform overview and architecture</div>
-                </a>
-                <a href="/docs/schemas" class="block bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-400 hover:shadow-md transition-all no-underline group">
-                    <div class="font-semibold text-gray-900 group-hover:text-blue-600 mb-1">Schemas</div>
-                    <div class="text-sm text-gray-500">Define fields for prescriptions, CMNs, and authorization forms</div>
-                </a>
-                <a href="/docs/knowledge-bases" class="block bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-400 hover:shadow-md transition-all no-underline group">
-                    <div class="font-semibold text-gray-900 group-hover:text-blue-600 mb-1">Knowledge Bases</div>
-                    <div class="text-sm text-gray-500">Store and query coverage policies and eligibility requirements</div>
-                </a>
-                <a href="/docs/workflows" class="block bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-400 hover:shadow-md transition-all no-underline group">
-                    <div class="font-semibold text-gray-900 group-hover:text-blue-600 mb-1">Workflows</div>
-                    <div class="text-sm text-gray-500">Automate prior authorization and order fulfillment</div>
-                </a>
-                <a href="/docs/document-agent" class="block bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-400 hover:shadow-md transition-all no-underline group">
-                    <div class="font-semibold text-gray-900 group-hover:text-blue-600 mb-1">Document Agent</div>
-                    <div class="text-sm text-gray-500">Configure extraction schemas and prompts using AI</div>
-                </a>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Ready to Streamline DME Processing?</h2>
-            <div class="text-center">
-                <p class="text-gray-600 mb-6">
-                    Contact us to discuss your DME processing needs and see how DocRouter can help improve patient care and operational efficiency.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <button onclick="openCalendly()"
-                            class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
-                        Schedule a Meeting
-                    </button>
-                    <a href="https://app.docrouter.ai"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
-                        Launch Application
-                    </a>
-                </div>
-            </div>
-        </section>
+        {% include enterprise-cta.html
+            title="Ready to streamline DME processing?"
+            description="Schedule a demo to discuss your DME document workflows—or launch the app to explore DocRouter." %}
     </main>
 </div>

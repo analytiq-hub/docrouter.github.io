@@ -109,3 +109,103 @@
 .enterprise-proof-card {
   border-left: 3px solid var(--dr-blue);
 }
+
+.enterprise-badge {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dr-blue);
+}
+
+.enterprise-band {
+  background-color: var(--dr-navy);
+  color: #ffffff;
+}
+
+.enterprise-band h2,
+.enterprise-band h3 {
+  color: #ffffff;
+}
+
+.enterprise-band p,
+.enterprise-band li {
+  color: #cbd5e1;
+}
+
+.enterprise-band-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.enterprise-doc-link {
+  display: block;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  text-decoration: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enterprise-doc-link:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 2px 8px rgba(26, 43, 76, 0.06);
+}
+
+.case-study-prose > p > em:only-child,
+.case-study-prose > p:first-child em {
+  display: block;
+  font-style: normal;
+  background: #f0f7ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: #1e3a5f;
+  margin-bottom: 1.5rem;
+}
+
+.solution-challenge-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.5rem;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+@media (min-width: 768px) {
+  .solution-challenge-icon {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.enterprise-accordion-btn {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.enterprise-accordion-btn:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.enterprise-accordion-btn h3 {
+  color: var(--dr-navy);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}

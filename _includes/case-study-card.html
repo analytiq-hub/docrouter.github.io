@@ -1,7 +1,10 @@
-<div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow flex flex-col h-full">
-    <h3 class="text-xl font-medium mb-2">
-        <a href="{{ include.url }}" class="text-gray-900 hover:text-blue-600 transition-colors !no-underline">{{ include.title }}</a>
+<div class="enterprise-card enterprise-proof-card p-6 flex flex-col h-full w-full max-w-md">
+    {% if include.badge %}
+    <p class="enterprise-badge mb-3">{{ include.badge }}</p>
+    {% endif %}
+    <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2 leading-snug">
+        <a href="{{ include.url | relative_url }}" class="text-[#1a2b4c] hover:text-blue-600 transition-colors no-underline">{{ include.title }}</a>
     </h3>
-    <p class="text-gray-600 mb-4 flex-grow">{{ include.description }}</p>
-    <a href="{{ include.url }}" class="text-blue-600 hover:text-blue-800 font-medium mt-auto !no-underline">Learn More →</a>
+    <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">{{ include.description }}</p>
+    <a href="{{ include.url | relative_url }}" class="text-blue-600 hover:text-blue-800 text-sm font-medium mt-auto no-underline">Read case study →</a>
 </div>
