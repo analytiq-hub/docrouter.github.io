@@ -1,0 +1,30 @@
+<div class="enterprise-pricing-card{% if include.featured %} enterprise-pricing-card--featured relative{% endif %}">
+    {% if include.badge %}
+    <span class="enterprise-pricing-badge">{{ include.badge }}</span>
+    {% endif %}
+    <h3 class="text-xl font-semibold text-[#1a2b4c] mb-2">{{ include.name }}</h3>
+    <div class="mb-6">
+        {% if include.price %}
+        <span class="text-3xl font-bold text-[#1a2b4c]">{{ include.price }}</span>
+        {% if include.period %}<span class="text-slate-600">{{ include.period }}</span>{% endif %}
+        {% else %}
+        <span class="text-xl font-semibold text-blue-600">{{ include.price_label }}</span>
+        {% endif %}
+    </div>
+    <ul class="enterprise-check-list space-y-3 mb-8 flex-grow">
+        {{ include.features }}
+    </ul>
+    {% if include.button_url %}
+    <a href="{{ include.button_url }}"
+       {% if include.button_external %}target="_blank" rel="noopener noreferrer"{% endif %}
+       class="enterprise-btn-primary block w-full text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200 no-underline">
+        {{ include.button_label | default: "Select Plan" }}
+    </a>
+    {% else %}
+    <button type="button"
+            onclick="{{ include.button_onclick | default: 'openCalendly()' }}"
+            class="enterprise-btn-primary w-full px-6 py-3 rounded-lg font-medium transition-colors duration-200 border-0 cursor-pointer">
+        {{ include.button_label | default: "Select Plan" }}
+    </button>
+    {% endif %}
+</div>

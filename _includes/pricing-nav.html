@@ -1,0 +1,4 @@
+<nav class="enterprise-pricing-nav mb-8" aria-label="Pricing plans">
+    <a href="{{ '/pricing/saas/' | relative_url }}"{% if include.active == 'saas' %} class="is-active"{% endif %}>SAAS</a>
+    <a href="{{ '/pricing/on-prem/' | relative_url }}"{% if include.active == 'on-prem' %} class="is-active"{% endif %}>On-Premises</a>
+</nav>
