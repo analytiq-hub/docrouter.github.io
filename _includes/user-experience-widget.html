@@ -1,0 +1,12 @@
+<div class="grid grid-cols-2 gap-2 sm:gap-3{% if include.gap %} {{ include.gap }}{% endif %}">
+    <div class="overflow-hidden rounded-lg{% if include.frame != 'none' %} border border-slate-200{% endif %}">
+        <img src="{{ '/assets/images/extractions.png' | relative_url }}"
+             alt="Data extraction interface"
+             class="w-full h-auto block">
+    </div>
+    <div class="overflow-hidden rounded-lg{% if include.frame != 'none' %} border border-slate-200{% endif %}">
+        <img src="{{ '/assets/images/docrouter/flow.png' | relative_url }}"
+             alt="DocRouter processing flow"
+             class="w-full h-auto block">
+    </div>
+</div>
