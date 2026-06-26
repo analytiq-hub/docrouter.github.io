@@ -37,16 +37,23 @@
   pointer-events: none;
 }
 
-.enterprise-pipeline-line {
-  background-image: repeating-linear-gradient(
-    90deg,
-    var(--dr-blue) 0,
-    var(--dr-blue) 4px,
-    transparent 4px,
-    transparent 10px
-  );
-  height: 2px;
-  opacity: 0.35;
+.enterprise-pipeline-wave {
+  flex: 1;
+  width: 100%;
+  min-width: 2rem;
+  max-width: 5rem;
+  height: 1.5rem;
+  align-self: flex-start;
+  margin-top: 1.75rem;
+  opacity: 0.45;
+}
+
+.enterprise-pipeline-wave path {
+  fill: none;
+  stroke: var(--dr-blue);
+  stroke-width: 2;
+  stroke-dasharray: 3 7;
+  stroke-linecap: round;
 }
 
 .enterprise-icon-tile {

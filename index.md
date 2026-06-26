@@ -66,7 +66,9 @@ image: /assets/images/og-default.png
                 <span class="text-sm font-semibold text-[#1a2b4c]">Ingest</span>
                 <span class="text-xs text-slate-500 mt-1">PDFs, faxes, email</span>
             </div>
-            <div class="hidden md:block enterprise-pipeline-line flex-1 max-w-[4rem]" aria-hidden="true"></div>
+            <svg class="hidden md:block enterprise-pipeline-wave" viewBox="0 0 80 24" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0 12 C20 12, 20 20, 40 14 S60 6, 80 12" vector-effect="non-scaling-stroke"/>
+            </svg>
             <div class="flex flex-col items-center text-center flex-1">
                 <div class="enterprise-icon-tile w-14 h-14 flex items-center justify-center mb-3">
                     <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -76,7 +78,9 @@ image: /assets/images/og-default.png
                 <span class="text-sm font-semibold text-[#1a2b4c]">Classify</span>
                 <span class="text-xs text-slate-500 mt-1">Tags &amp; schemas</span>
             </div>
-            <div class="hidden md:block enterprise-pipeline-line flex-1 max-w-[4rem]" aria-hidden="true"></div>
+            <svg class="hidden md:block enterprise-pipeline-wave" viewBox="0 0 80 24" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0 12 C20 12, 20 4, 40 10 S60 18, 80 12" vector-effect="non-scaling-stroke"/>
+            </svg>
             <div class="flex flex-col items-center text-center flex-1">
                 <div class="enterprise-icon-tile w-14 h-14 flex items-center justify-center mb-3">
                     <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -86,7 +90,9 @@ image: /assets/images/og-default.png
                 <span class="text-sm font-semibold text-[#1a2b4c]">Extract</span>
                 <span class="text-xs text-slate-500 mt-1">AI-powered fields</span>
             </div>
-            <div class="hidden md:block enterprise-pipeline-line flex-1 max-w-[4rem]" aria-hidden="true"></div>
+            <svg class="hidden md:block enterprise-pipeline-wave" viewBox="0 0 80 24" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0 12 C20 12, 20 20, 40 14 S60 6, 80 12" vector-effect="non-scaling-stroke"/>
+            </svg>
             <div class="flex flex-col items-center text-center flex-1">
                 <div class="enterprise-icon-tile w-14 h-14 flex items-center justify-center mb-3">
                     <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
