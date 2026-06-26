@@ -187,6 +187,10 @@
   }
 }
 
+.solution-challenge-icon--inline {
+  margin: 0;
+}
+
 .enterprise-accordion-btn {
   width: 100%;
   text-align: left;
@@ -208,4 +212,103 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0;
+}
+
+.enterprise-pricing-nav {
+  display: inline-flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  background: #f1f5f9;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.enterprise-pricing-nav a {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #64748b;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.enterprise-pricing-nav a:hover {
+  color: var(--dr-navy);
+}
+
+.enterprise-pricing-nav a.is-active {
+  background: #ffffff;
+  color: var(--dr-navy);
+  box-shadow: 0 1px 3px rgba(26, 43, 76, 0.08);
+}
+
+.enterprise-pricing-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enterprise-pricing-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(26, 43, 76, 0.06);
+}
+
+.enterprise-pricing-card--featured {
+  border: 2px solid var(--dr-blue);
+  box-shadow: 0 4px 16px rgba(0, 123, 255, 0.1);
+}
+
+.enterprise-pricing-badge {
+  position: absolute;
+  top: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--dr-navy);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.enterprise-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.enterprise-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.enterprise-check-list svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--dr-blue);
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.enterprise-info-panel {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.enterprise-info-panel h2,
+.enterprise-info-panel h3 {
+  color: var(--dr-navy);
 }

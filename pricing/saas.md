@@ -5,178 +5,101 @@ permalink: /pricing/saas/
 description: "DocRouter SAAS pricing: Individual ($250/mo), Team ($1,000/mo), and Enterprise plans. Start with 100 free SPU credits — no commitment required to get started."
 ---
 
-<div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
-    <!-- Hero Section -->
-    <header class="text-center md:mb-12 mb-8">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            SAAS Pricing
-        </h1>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            For HIPAA compliant workflows, use <a href="/pricing/on-prem/" class="text-blue-600 hover:text-blue-700 underline">On-Prem Plans</a>.
+<section class="enterprise-hero border-b border-slate-200/80 py-10 md:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="enterprise-section-label mb-3">Pricing</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-[#1a2b4c] mb-4">SAAS plans</h1>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+            For HIPAA-compliant workflows, use <a href="{{ '/pricing/on-prem/' | relative_url }}" class="text-blue-600 hover:text-blue-800 no-underline font-medium">on-premises plans</a>.
         </p>
-    </header>
+    </div>
+</section>
 
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
     <main>
-        <!-- Pricing Cards -->
-        <section class="mb-8 md:mb-10">
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Individual Plan -->
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Individual <span class="font-normal text-gray-400">(SAAS)</span></h3>
-                    <div class="mb-6">
-                        <span class="text-3xl font-bold text-gray-900">$250</span>
-                        <span class="text-gray-600">/month</span>
-                    </div>
-                    <ul class="space-y-3 mb-8 flex-grow">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>$0.05 per SPU</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>5,000 SPUs per month</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Additional SPUs at $0.05 each</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Self-Service</span>
-                        </li>
-                    </ul>
-                    <button type="button"
-                            class="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
-                        Select Plan
-                    </button>
-                </div>
+        <div class="text-center">
+            {% include pricing-nav.html active="saas" %}
+        </div>
 
-                <!-- Team Plan -->
-                <div class="bg-white border-2 border-blue-500 rounded-lg p-6 shadow-md flex flex-col relative">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-sm font-medium px-3 py-1 rounded-full">Popular</div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Team <span class="font-normal text-gray-400">(SAAS)</span></h3>
-                    <div class="mb-6">
-                        <span class="text-3xl font-bold text-gray-900">$1,000</span>
-                        <span class="text-gray-600">/month</span>
-                    </div>
-                    <ul class="space-y-3 mb-8 flex-grow">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>$0.04 per SPU</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>25,000 SPUs per month</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Additional SPUs at $0.05 each</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Team collaboration features</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Self-Service with Support Available</span>
-                        </li>
-                    </ul>
-                    <button type="button"
-                            class="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
-                        Select Plan
-                    </button>
-                </div>
+        <section class="mb-12">
+            <div class="grid md:grid-cols-3 gap-6">
+                {% capture individual_features %}
+                {% include pricing-feature.html text="$0.05 per SPU" %}
+                {% include pricing-feature.html text="5,000 SPUs per month" %}
+                {% include pricing-feature.html text="Additional SPUs at $0.05 each" %}
+                {% include pricing-feature.html text="Self-service" %}
+                {% endcapture %}
+                {% include pricing-plan-card.html
+                    name="Individual (SAAS)"
+                    price="$250"
+                    period="/month"
+                    features=individual_features
+                    button_label="Select Plan" %}
 
-                <!-- Enterprise Plan -->
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Enterprise <span class="font-normal text-gray-400">(SAAS)</span></h3>
-                    <div class="mb-6">
-                        <span class="text-xl font-semibold text-blue-600">Contact Sales</span>
-                    </div>
-                    <ul class="space-y-3 mb-8 flex-grow">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Custom document processing</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Dedicated support</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span>Custom pricing — contact sales</span>
-                        </li>
-                    </ul>
-                    <button type="button"
-                            class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
-                        Contact Sales
-                    </button>
-                </div>
+                {% capture team_features %}
+                {% include pricing-feature.html text="$0.04 per SPU" %}
+                {% include pricing-feature.html text="25,000 SPUs per month" %}
+                {% include pricing-feature.html text="Additional SPUs at $0.05 each" %}
+                {% include pricing-feature.html text="Team collaboration features" %}
+                {% include pricing-feature.html text="Self-service with support available" %}
+                {% endcapture %}
+                {% include pricing-plan-card.html
+                    name="Team (SAAS)"
+                    price="$1,000"
+                    period="/month"
+                    badge="Popular"
+                    featured=true
+                    features=team_features
+                    button_label="Select Plan" %}
+
+                {% capture enterprise_features %}
+                {% include pricing-feature.html text="Custom document processing" %}
+                {% include pricing-feature.html text="Dedicated support" %}
+                {% include pricing-feature.html text="Custom pricing — contact sales" %}
+                {% endcapture %}
+                {% include pricing-plan-card.html
+                    name="Enterprise (SAAS)"
+                    price_label="Contact sales"
+                    features=enterprise_features
+                    button_label="Contact Sales" %}
             </div>
         </section>
 
-        <!-- About SPU -->
-        <section class="bg-gray-50 rounded-lg px-6 md:px-8 py-3 md:py-4 mb-4">
-            <h2 class="text-lg font-semibold text-blue-600 mb-2">About SPU (Service Processing Unit)</h2>
-            <p class="text-gray-700 mb-2">
+        <section class="enterprise-info-panel mb-6">
+            <h2 class="text-lg font-semibold mb-2">About SPU (Service Processing Unit)</h2>
+            <p class="text-slate-600 text-sm mb-3">
                 An SPU is DocRouter's billing unit. Every paid operation uses the same formula:
             </p>
-            <p class="text-center font-mono text-gray-800 bg-white border border-gray-200 rounded-lg px-4 py-2 mb-2 text-sm md:text-base">
+            <p class="text-center font-mono text-[#1a2b4c] bg-white border border-slate-200 rounded-lg px-4 py-2 mb-3 text-sm md:text-base">
                 SPUs = ceil(2 &times; estimated cloud cost &divide; price per SPU)
             </p>
-            <p class="text-gray-700 mb-2">
+            <p class="text-slate-600 text-sm mb-3">
                 The factor of 2 covers infrastructure and overhead on top of raw cloud cost. A minimum floor also applies: at least 1 SPU per 25 pages for OCR and document extraction, and 1 SPU per agent LLM call. Embedded-text extraction (PyMuPDF) is free.
             </p>
-            <p class="text-sm text-gray-500 italic mb-0">
+            <p class="text-xs text-slate-500 italic mb-0">
                 SPU rates and computation methods are subject to change. We will provide advance notice of any material changes, and updates will apply only to usage on or after the effective date.
             </p>
         </section>
 
-        <!-- About Enterprise Plans -->
-        <section class="bg-gray-50 rounded-lg p-6 md:p-8 mb-4">
-            <h2 class="text-lg font-semibold text-blue-600 mb-4">About Enterprise Plans</h2>
-            <p class="text-gray-700">
-                Enterprise Plans include configuration and dataset evaluation services. On-premises / on-VPC installations require an Enterprise Plan.
+        <section class="enterprise-info-panel mb-10">
+            <h2 class="text-lg font-semibold mb-3">About enterprise plans</h2>
+            <p class="text-slate-600 text-sm mb-0">
+                Enterprise plans include configuration and dataset evaluation services. On-premises / on-VPC installations require an enterprise plan.
             </p>
         </section>
 
-        <!-- When to use: Plans and Credits (two columns) -->
-        <section class="grid md:grid-cols-2 gap-8 mb-12">
-            <div class="bg-green-50 border border-green-200 rounded-lg p-6 md:p-8">
-                <h2 class="text-xl font-semibold text-green-800 mb-4">When to use Monthly Plans</h2>
-                <ul class="text-gray-700 space-y-2 list-disc list-inside">
+        <section class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="enterprise-card p-6 md:p-8">
+                <h2 class="text-lg font-semibold text-[#1a2b4c] mb-4">When to use monthly plans</h2>
+                <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside">
                     <li>Best for predictable monthly costs</li>
                     <li>Includes SPUs with better per-unit pricing</li>
                     <li>Collaboration features in the Team plan</li>
                 </ul>
             </div>
-            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 md:p-8">
-                <h2 class="text-xl font-semibold text-blue-800 mb-2">When to use Credits</h2>
-                <ul class="text-gray-700 space-y-2 list-disc list-inside">
+            <div class="enterprise-card p-6 md:p-8">
+                <h2 class="text-lg font-semibold text-[#1a2b4c] mb-4">When to use credits</h2>
+                <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside">
                     <li>Best for occasional or one-off document processing</li>
                     <li>When you have exceeded the SPUs allocated in your monthly plan</li>
                     <li>Each account starts with <strong>100 SPU credits</strong> to try DocRouter. Contact us for additional credit grants.</li>
@@ -184,23 +107,15 @@ description: "DocRouter SAAS pricing: Individual ($250/mo), Team ($1,000/mo), an
             </div>
         </section>
 
-        <!-- When to use Enterprise (below Monthly Plans + Credits) -->
-        <section class="mb-12">
-            <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 md:p-8">
-                <h2 class="text-xl font-semibold text-slate-800 mb-4">When to use Enterprise plans</h2>
-                <ul class="text-gray-700 space-y-2 list-disc list-inside">
-                    <li>Best when you require configuration and dataset evaluation services</li>
-                </ul>
-            </div>
+        <section class="enterprise-card p-6 md:p-8 mb-12">
+            <h2 class="text-lg font-semibold text-[#1a2b4c] mb-4">When to use enterprise plans</h2>
+            <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside mb-0">
+                <li>Best when you require configuration and dataset evaluation services</li>
+            </ul>
         </section>
 
-        <!-- CTA Section -->
-        <section class="mt-12 text-center">
-            <p class="text-gray-600 mb-4">Not sure which plan is right for you?</p>
-            <button onclick="openCalendlyModal()"
-                    class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition-colors duration-200">
-                Schedule a Call
-            </button>
-        </section>
+        {% include enterprise-cta.html
+            title="Not sure which plan is right for you?"
+            description="Schedule a demo to discuss your document volume, compliance needs, and deployment options." %}
     </main>
 </div>
