@@ -24,7 +24,7 @@ description: "Meet the DocRouter team—AI and document processing experts build
                      class="w-32 h-32 rounded-full border-4 border-slate-200 flex-shrink-0 object-cover">
                 <div class="text-center md:text-left">
                     <h2 class="text-2xl font-bold text-[#1a2b4c] mb-2">Andrei Radulescu-Banu</h2>
-                    <p class="text-blue-600 font-semibold text-sm mb-3">Founder and engineering leader</p>
+                    <p class="text-blue-600 font-semibold text-sm mb-3">Founder and CEO</p>
                     <p class="text-slate-600 text-sm mb-2">20+ years in LLMs, computer vision, fintech, digital health, self-driving cars, and Wall St infrastructure</p>
                     <p class="text-slate-600 text-sm mb-2">Speaker at <a href="{{ '/talks/' | relative_url }}" class="text-blue-600 hover:text-blue-800 no-underline">Boston tech events</a>: Startup Boston, AI Camp, AI Tinkerers, Boston PyData</p>
                     <p class="text-slate-600 text-sm mb-4">Math PhD, MIT</p>
