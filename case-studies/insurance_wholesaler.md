@@ -1,101 +1,88 @@
 ---
 layout: case-study
-title: Insurance Automation That Reduces Manual Work
-subtitle: AI-powered submission processing reducing manual work by 75% while ensuring compliance
+title: "Pilot: Insurance ACORD & Clearance Automation"
+subtitle: Completed DocRouter pilot with a specialty insurance wholesaler
 permalink: /case-studies/insurance_wholesaler/
 ---
 
+*This was a **completed pilot**, not a production customer deployment.*
+
 ## The Challenge
 
-A specialty insurance wholesaler processing 7,000 submissions annually faced critical operational bottlenecks: 50% of submissions were handwritten, requiring 10-15 staff members to manually extract data from ACORD forms, perform clearance searches in ALIS, and handle complex workflows. With 600 submissions per month and 7-14 hours of daily manual processing, the organization needed an intelligent solution that could automate data extraction while maintaining regulatory compliance and accuracy standards required in the insurance industry.
+A specialty insurance wholesaler processing roughly 7,000 submissions annually faced operational bottlenecks: about half of submissions were handwritten, requiring staff to manually extract data from ACORD forms, perform clearance searches in ALIS, and handle complex workflows. With hundreds of submissions per month and many hours of daily manual processing, the organization needed to test whether intelligent extraction could maintain regulatory compliance while reducing manual work.
 
 ## The Solution
 
-We delivered DocRouter.AI, an intelligent document processing platform that automates insurance submission workflows while maintaining the human oversight required for regulatory compliance. The solution processes handwritten and typed ACORD forms using advanced OCR and LLM technology, automatically extracting structured data and integrating with ALIS systems—reducing manual processing time from hours to minutes while ensuring accuracy and compliance.
+We completed a **pilot on DocRouter** to automate insurance submission workflows while keeping human oversight for regulatory compliance. The pilot focused on handwritten and typed ACORD forms using OCR and LLM extraction, structured data output, and integration paths toward ALIS clearance workflows.
 
 ![Insurance Automation Platform]({{ '/assets/images/case-studies/insurance-wholesaler/insurance-wholesaler-hero.png' | relative_url }})
-*AI-powered insurance submission processing that automates ACORD form workflows with 75% efficiency gains*
+*DocRouter pilot: ACORD form processing and clearance automation*
 
-## Key Capabilities That Drive Results
+## What We Proved in the Pilot
 
-DocRouter.AI delivers measurable business value through features designed for insurance industry compliance and operational efficiency:
+The pilot validated the following for this use case:
 
-- **Intelligent Document Processing**: Handles handwritten and typed ACORD forms with advanced OCR and LLM technology—processing 600 submissions monthly with 50% handwritten content including complex layouts and crossed-out text
-- **Automated Data Extraction**: Extracts key fields (insured name, address, DOB, occupation, agency info) from unstructured PDFs—reducing manual data entry time from hours to minutes per submission
-- **Smart Classification**: Automatically categorizes submissions as personal vs. commercial lines and binding vs. brokerage—eliminating manual classification bottlenecks
-- **ALIS Integration**: Seamless integration with existing ALIS systems via APIs—enabling automated clearance searches and submission creation without disrupting current workflows
-- **Human-in-the-Loop Validation**: Confidence scoring system flags low-confidence extractions for human review—ensuring regulatory compliance while maintaining processing speed
-- **Compliance-First Design**: Temporary data storage with automatic deletion post-processing—meeting data privacy requirements while maintaining audit trails
+- **Document processing**: Handwritten and typed ACORD forms, including complex layouts and crossed-out text
+- **Data extraction**: Key fields such as insured name, address, DOB, occupation, and agency information
+- **Classification**: Personal vs. commercial lines and binding vs. brokerage categorization
+- **ALIS integration path**: API-based clearance search and submission creation (tested in pilot scope)
+- **Human-in-the-loop review**: Confidence scoring to flag low-confidence extractions before downstream steps
+- **Compliance-oriented design**: Temporary data handling and audit-friendly review workflows
 
-## Platform Architecture Built for Insurance Scale
+## Pilot Architecture
 
-Our solution leverages enterprise-proven technologies to deliver consistent performance and compliance:
+The pilot used DocRouter with supporting tooling typical of insurance document workflows:
 
-### Intelligent Document Processing Pipeline
-**Automated Ingestion**: Emails are automatically forwarded to DocRouter's email listener or uploaded via Outlook extension/API, with attachments processed immediately—eliminating manual upload bottlenecks.
+### Ingestion & extraction
+- Email forwarding and API upload for attachments
+- AWS Textract OCR for handwriting, tables, and checkboxes
+- LLM extraction against custom schemas for applicant, policy, and property fields
+- Form-type detection (e.g. personal auto/homeowner) with low-confidence flagging
 
-**Advanced Extraction Engine**: AWS Textract OCR handles handwriting, tables, and checkboxes while LLMs (GPT/Claude) extract structured data using custom schemas for applicant info, policy details, and property specifics—ensuring consistent data formatting.
+### Integration & review
+- ALIS API exploration via Dyad for clearance searches and submission creation
+- n8n for workflow orchestration during the pilot
+- Split-screen review UI with source linking and color-coded confidence
 
-**Smart Classification**: LLM technology automatically determines form type (personal auto/homeowner) and flags potential issues (N/A fields, low confidence)—reducing manual classification time while improving accuracy.
+### Platform patterns exercised
+- Schema-driven ACORD extraction
+- Confidence scoring (e.g. higher-confidence fields auto-proceed; lower-confidence fields flagged)
+- Role-based review concepts for producers and underwriters
+- Planned extensions documented in pilot scope: OFAC checks and broader AMS integration
 
-### Enterprise Integration & Workflow
-**ALIS Integration**: Extracted data automatically queries ALIS APIs for existing insureds, creating new profiles or updating submissions as needed—streamlining the clearance process while maintaining data integrity.
+## How the Pilot Ran
 
-**Human-in-the-Loop Validation**: Color-coded UI (green=high confidence, yellow/red=needs attention) with source document linking enables efficient review and correction workflows—ensuring accuracy while maintaining processing speed.
+The pilot was executed in structured phases:
 
-**Automated Workflows**: Email-triggered automation with role-based access (producers review extractions, underwriters handle assignments) and planned OFAC API integration for compliance—reducing manual intervention while maintaining regulatory oversight.
+**Phase 1 — Discovery & analysis**: Review of SOPs, sample PDFs, and ALIS screenshots; synthetic documents for testing.
 
-## Enterprise-Ready Technology Foundation
+**Phase 2 — Platform setup**: Email forwarding to DocRouter and API configuration for uploads.
 
-**Built for Insurance Industry Requirements**: Our architecture combines modern AI technologies with insurance-specific compliance and security:
+**Phase 3 — AI pipeline**: Prompt and schema development with OCR for handwriting; initial focus on personal lines (homeowners).
 
-- **Schema-Driven Extraction**: Custom schemas for ACORD forms (insured name, mailing address, zip, state, agency name/address, effective date, coverages, limits, deductibles) ensure consistent data structure
-- **Intelligent Confidence Scoring**: LLMs act as judges to score extractions (>80% confidence = auto-proceed; lower = flag for review) enabling automated decision-making while maintaining human oversight
-- **Intuitive Review Interface**: Split-screen interface (PDF on one side, editable form fields on the other) with lookup function highlighting source text for efficient validation workflows
-- **Seamless API Integration**: CRUD operations for ALIS (search/create submissions) with JSON data transfer enabling real-time system integration
-- **Advanced Workflow Orchestration**: Email-triggered automation with role-based access (producers review extractions, underwriters handle assignments) ensuring proper workflow management
-- **Enterprise Security**: Data deletion APIs, VPC deployment options, and idempotency features prevent duplicates while maintaining data privacy
-- **Proven Scalability**: Handles multi-attachment emails and processes large documents in chunks ensuring consistent performance at scale
+**Phase 4 — Integration**: ALIS API access and n8n orchestration for end-to-end clearance flows.
 
-## Implementation Approach
+**Phase 5 — Review UI**: Color-coded validation interface with source linking.
 
-The pilot is being implemented through a structured, phased approach ensuring successful deployment:
+**Phase 6 — Testing**: Edge cases (including multi-language documents) and documentation of follow-on work (OFAC, AMS).
 
-**Phase 1 - Discovery & Analysis**: Comprehensive analysis of wholesaler's SOPs, sample PDFs, and ALIS screenshots with synthetic document generation for testing—ensuring solution alignment with business requirements.
+## Pilot Findings
 
-**Phase 2 - Platform Setup**: Email forwarding configuration to DocRouter with API setup for direct uploads—enabling seamless document ingestion without disrupting existing workflows.
+Results below are from **pilot testing and simulations**, not a live production rollout:
 
-**Phase 3 - AI Pipeline Development**: LLM prompt development for key fields with OCR integration for handwriting processing—testing on personal lines (homeowners) before expanding to commercial lines.
+**Efficiency (pilot testing)**: Early testing indicated potential to automate a large share of clearance work—in pilot evaluation, on the order of **75%** of clearance steps—with manual entry reduced from hours to minutes per submission in tested scenarios. Projected staff-time savings were on the order of 7–14 hours per day at the wholesaler's volume.
 
-**Phase 4 - System Integration**: ALIS API access via Dyad for clearance searches and submission creation using n8n for end-to-end workflow orchestration—ensuring seamless system integration.
+**Accuracy (pilot testing)**:
+- **90%+** on typed forms with LLM+OCR in pilot samples
+- **~80%** on handwritten forms, with human review for remaining cases
+- Fewer clearance search errors in tested validation flows
 
-**Phase 5 - User Interface**: Simplified review interface with color-coding and source linking—enabling efficient human validation workflows.
+**Scale (simulation)**: Simulated handling of 600+ monthly submissions with document classification (personal vs. commercial) to stress-test the pipeline.
 
-**Phase 6 - Testing & Optimization**: Edge case handling (multi-language documents) with planned OFAC automation and Agency Management System integration—ensuring production readiness.
+**Compliance**: Human review remained required before full automation; OFAC integration was scoped but not completed as part of this pilot.
 
-**Collaborative Development**: Close feedback loops with the wholesaler focusing on user-friendly design (table-like UI over string displays) ensuring optimal user experience.
+## Relevance to DocRouter
 
-## Transformational Business Results
+This pilot showed DocRouter can support specialty insurance submission processing—including handwritten ACORD forms and clearance-oriented workflows. Capabilities developed here inform DocRouter's insurance solution patterns today.
 
-**Proven Efficiency Gains**: Early testing demonstrates the platform's ability to automate 75% of clearance work, reducing manual entry from hours to minutes per submission with projected savings of 7-14 staff hours daily.
-
-**Exceptional Accuracy Performance**: 
-- **90%+ accuracy on typed forms** with LLM+OCR processing
-- **80% accuracy on handwritten forms** with human review for remaining cases
-- **Reduced errors in clearance searches** through automated validation
-
-**Proven Scalability**: Successfully handled 600+ monthly submissions in simulations with accurate document classification (personal vs. commercial lines) demonstrating production readiness.
-
-**Compliance Assurance**: Human oversight ensures no full automation without review, with planned OFAC integration to reduce manual compliance searches—maintaining regulatory standards while improving efficiency.
-
-## Future Growth Opportunities
-
-**Immediate Next Steps**: Full integration with ALIS APIs and completion of OFAC automation will further streamline operations and reduce manual intervention.
-
-**Market Expansion Potential**: The DocRouter.AI platform demonstrates how AI can streamline insurance workflows in regulated environments, with the solution being reusable across specialty insurance sectors and potential expansions to full Agency Management System (AMS) integration.
-
-**Strategic Value**: This implementation positions the insurance wholesaler as a technology leader in automated submission processing, enabling them to handle increased volume while maintaining accuracy and compliance standards required in the insurance industry.
-
-**Competitive Advantage**: The platform's success demonstrates the transformative power of AI-driven insurance automation, providing a sustainable competitive advantage in the rapidly evolving insurance technology landscape.
-
-For more details, contact Andrei Radulescu-Banu at andrei@analytiqhub.com. Platform demo available at [app.docrouter.ai](https://app.docrouter.ai)
+For more details, contact Andrei Radulescu-Banu at andrei@analytiqhub.com. Platform demo available at [app.docrouter.ai](https://app.docrouter.ai).

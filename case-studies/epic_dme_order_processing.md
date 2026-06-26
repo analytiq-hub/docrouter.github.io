@@ -1,69 +1,63 @@
 ---
 layout: case-study
-title: Epic EHR Integration That Delivers ROI
-subtitle: Zero-touch Epic automation reducing processing time by 90% while ensuring 100% compliance
+title: "Prior Consulting: Epic EHR Order Automation"
+subtitle: Custom Epic integration for DME order processing
 permalink: /case-studies/epic_dme_order_processing/
 ---
 
+*This describes a **prior consulting engagement**, not a DocRouter customer deployment. We built a **custom Epic automation system** for a DME provider; it is **not** DocRouter and should not be read as a DocRouter case study.*
+
 ## The Challenge
 
-A leading Durable Medical Equipment (DME) provider serving major healthcare systems (Albany Med, St. Peters) faced a critical operational crisis: 50% of their CPAP orders originated from Epic EHR systems, but manual processing was expensive and error prone. Staff spent hours daily manually pulling orders from Epic's In Basket, searching for supporting documents (facesheets, sleep studies, office notes), and handling duplicates across multiple chart types—a process that was unsustainable as healthcare systems moved away from fax-based workflows. With Medicare compliance requirements demanding specific documentation sequences and real-time processing expectations, the manual approach created both financial losses and regulatory risks that threatened the business's ability to scale.
+A Durable Medical Equipment (DME) provider serving major regional health systems faced a growing share of CPAP orders originating in Epic EHR. Staff spent hours daily pulling orders from Epic's In Basket, locating supporting documents (facesheets, sleep studies, office notes), and handling duplicates across chart types—work that was costly, error-prone, and hard to scale as hospitals reduced fax-based workflows.
 
-![Epic EHR Integration]({{ 'assets/images/case-studies/epic-dme/epic-dme-hero.png' | relative_url }})
-*Zero-touch Epic automation platform that transforms manual order processing into intelligent workflows*
+Medicare documentation requirements added compliance pressure on top of operational cost.
 
-## The Solution
+## What We Built
 
-We delivered a complete zero-touch Epic automation platform that transforms manual order processing into an intelligent, automated workflow. Our solution reduced processing time, eliminated manual errors, and ensured compliance with Medicare requirements—delivering immediate ROI of $200,000+ annually while enabling real-time order processing that scales with business growth.
+We delivered a **custom zero-touch Epic automation system** for this client that:
 
-## Enterprise Capabilities That Drive Results
+- Automated Epic login (including MFA handling via AWS SES)
+- Retrieved facesheets, orders, notes, encounters, and related artifacts
+- Cached and processed downloads through OCR and LLM parsing pipelines
+- Deduplicated orders and documents with content-similarity logic
+- Connected into existing fax and Brightree MyForms workflows
 
-Our Epic automation platform delivers measurable business value through features designed for healthcare compliance and operational excellence:
+This was bespoke engineering for one client environment. It is separate from the DocRouter SaaS product.
 
-* **Zero-Touch Epic Integration**: Automated login with MFA handling via AWS SES—eliminates manual intervention while maintaining enterprise security standards and reducing operational overhead by 90%
-* **Intelligent Document Retrieval**: Comprehensive scraping of patient facesheets, orders, notes, and encounters with intelligent caching—reduces data retrieval time from hours to minutes while ensuring complete documentation
-* **AI-Powered Processing**: Advanced OCR and LLM parsing with high accuracy—transforms unstructured Epic data into structured, actionable information while maintaining audit trails for compliance
-* **Smart Deduplication Engine**: LLM-driven content analysis eliminates duplicate orders and documents—reduces processing errors while ensuring data integrity across multiple chart types
-* **Seamless Workflow Integration**: Direct integration with existing fax pipelines and Brightree MyForms—enables unified order processing without disrupting current operations
-* **Compliance-First Design**: Built-in Medicare requirement validation and documentation sequencing—ensures regulatory compliance while reducing audit risks
+![Epic EHR Integration]({{ '/assets/images/case-studies/epic-dme/epic-dme-hero.png' | relative_url }})
+*Custom Epic automation built in a prior consulting engagement*
 
-## Platform Architecture Built for Healthcare Scale
-Our solution leverages enterprise-proven technologies to deliver consistent performance and compliance:
+## Technical Approach
 
-### Real-Time Epic Integration Pipeline
-**Secure Authentication**: The system uses Selenium-based RPA to initiate Epic login, with AWS SES automatically handling 6-character MFA codes from Gmail—ensuring secure, unattended access while maintaining enterprise security standards.
+### Epic integration pipeline
+- Selenium-based RPA for Epic access with automated MFA code retrieval
+- Scraping of CC'd patient lists and download of chart artifacts into MongoDB-backed caching
+- SQS and Databricks jobs for reassembly, OCR, and LLM parsing
+- AWS S3, Terraform, and Lambda for storage and event-driven processing
 
-**Intelligent Data Extraction**: Once authenticated, the platform automatically scrapes CC'd patient lists and downloads all relevant files (facesheets, orders, notes, media, encounters) with intelligent caching in MongoDB—reducing processing time by 80% while ensuring complete data capture.
+### Processing goals in the engagement
+- Structured extraction from orders, notes, media, and encounters
+- Deduplication of duplicate orders and documents
+- Filtering of non-DME artifacts before downstream steps
+- Documentation sequencing aligned with Medicare-oriented review requirements
 
-**Enterprise-Grade Processing**: Downloaded files flow through SQS queues to Databricks jobs for reassembly, OCR processing, and LLM parsing—delivering structured data with 99%+ accuracy while maintaining full audit trails for compliance.
+Any percentage improvements (processing time, error rates, operational overhead) reported in earlier versions of this page referred to **targets or measurements within this custom build during the engagement**, not guaranteed DocRouter outcomes.
 
-### Enterprise-Ready Technology Foundation
+## Engagement Outcomes
 
-**Healthcare-Grade Infrastructure**: Our architecture combines AWS services with healthcare-specific compliance and security:
+In tested workflows, the client was able to:
 
-* **AWS S3 + MongoDB**: HIPAA-compliant storage for emails, files, and metadata with 99.999% durability and automatic encryption
-* **Databricks + SQS**: Enterprise orchestration platform handling scraping, reassembly, and OCR with horizontal scaling and fault tolerance
-* **Terraform + Lambda**: Infrastructure-as-code deployment with serverless functions for MFA handling and event-driven processing
-* **Epic Integration**: Vendor-approved RPA approach with FHIR compliance considerations and credential-based access management
+- Reduce manual Epic retrieval work substantially compared with the prior manual process
+- Process orders faster in automated paths that previously took hours
+- Scale order handling without linear headcount growth for the automated portion
 
-### AI That Delivers Healthcare Results
+We are not publishing specific dollar ROI figures here; those depended on the client's internal cost structure and deployment scope.
 
-**Production-Ready LLM Processing**: Our AI engine combines multiple LLM providers with healthcare-specific training to deliver unprecedented accuracy in Epic data processing:
+## Relationship to DocRouter
 
-* **99%+ Extraction Accuracy**: Specialized prompts for orders, notes, media, and encounters ensure consistent, structured output that integrates seamlessly with existing workflows
-* **Intelligent Deduplication**: Advanced content similarity analysis eliminates duplicate orders while preserving critical data variations—reducing processing errors by 95%
-* **Compliance-First Filtering**: Automatic identification and filtering of non-DME files ensures only relevant data proceeds through the pipeline—maintaining regulatory compliance and reducing processing overhead
+Epic-specific RPA and deep EHR scraping remain **custom integration** work. DocRouter today focuses on document ingestion, extraction, validation, and API-driven integration patterns that can complement—but are not the same as—this engagement.
 
-**Strategic Business Value**:
-- **Real-Time Processing**: Orders now process in minutes instead of hours, improving patient care delivery
-- **Scalable Operations**: Platform handles 10x order volume without proportional headcount increases
-- **Competitive Advantage**: Faster order processing enables better customer service and market positioning
-- **Risk Mitigation**: Automated compliance reduces audit risks and regulatory penalties
+For related healthcare document processing on DocRouter, see the [DME solution]({{ '/solutions/dme/' | relative_url }}) page.
 
-**Future Growth Opportunities**:
-- **Multi-EHR Expansion**: Platform architecture supports integration with Cerner, Allscripts, and other major EHR systems
-- **FHIR API Integration**: Real-time data exchange capabilities for next-generation healthcare interoperability
-- **Market Expansion**: Proven Epic integration enables rapid expansion to additional DME providers and healthcare systems
-- **Strategic Partnerships**: Platform success positions for partnerships with major EHR vendors and healthcare technology companies
-
-**Competitive Positioning**: This Epic automation solution establishes our client as a technology leader in DME processing, enabling them to compete with larger providers while maintaining superior service quality and operational efficiency. The platform's success demonstrates the transformative power of AI-driven healthcare automation, positioning it as a model for industry-wide digital transformation.
+For more details, contact Andrei Radulescu-Banu at andrei@analytiqhub.com.

@@ -31,28 +31,23 @@ permalink: /case-studies/
             <!-- Case Studies Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center max-w-5xl mx-auto">
             {% include case-study-card.html 
-                title="Healthcare Automation That Delivers ROI" 
-                description="How we built a zero-to-ten DME automation platform that enabled 4x team growth and secured funding" 
+                title="Prior Consulting: DME Automation Platform" 
+                description="Custom healthcare document platform we built for a startup—precursor to DocRouter, not a DocRouter deployment" 
                 url="/case-studies/dme/" %}
             
             {% include case-study-card.html
-                title="Epic EHR Integration That Reduces Errors" 
-                description="Zero-touch Epic automation reducing processing time by 90% while ensuring 100% compliance" 
+                title="Prior Consulting: Epic EHR Order Automation" 
+                description="Custom Epic integration for DME order processing—consulting engagement, not DocRouter" 
                 url="/case-studies/epic_dme_order_processing/" %}
             
             {% include case-study-card.html 
-                title="Insurance Automation That Reduces Manual Work" 
-                description="AI-powered submission processing reducing manual work by 75% while ensuring compliance" 
+                title="Pilot: Insurance ACORD & Clearance Automation" 
+                description="Completed DocRouter pilot with a specialty insurance wholesaler—ACORD forms and ALIS clearance workflows" 
                 url="/case-studies/insurance_wholesaler/" %}
             
             {% include case-study-card.html 
-                title="DocRouter.AI - Document Processing Platform" 
-                description="AI-powered document understanding for enterprise workflows" 
-                url="/case-studies/docrouter-ai/" %}
-            
-            {% include case-study-card.html 
-                title="Supply Chain Automation That Delivers Results" 
-                description="AI-powered trade document processing reducing manual work from hours to minutes" 
+                title="Pilot: Supply Chain Trade Documents" 
+                description="DocRouter pilot for bills of lading, commodity reports, and related trade documents" 
                 url="/case-studies/supply-chain/" %}
             </div>
         </main>

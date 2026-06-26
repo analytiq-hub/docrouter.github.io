@@ -1,86 +1,65 @@
 ---
 layout: case-study
-title: Healthcare Automation That Delivers ROI
-subtitle: How we built a zero-to-ten DME automation platform that enabled 4x team growth and secured funding
+title: "Prior Consulting: DME Automation Platform"
+subtitle: Custom healthcare document platform that informed DocRouter
 permalink: /case-studies/dme/
 ---
 
+*This describes a **prior consulting engagement**, not a DocRouter customer deployment. We built a **custom platform** for a healthcare startup client; that work was a **precursor to DocRouter** and helped shape the product.*
+
 ## Overview
 
-When a healthcare startup needed to transform manual, paper-based medical processes into an intelligent digital system, they turned to us for a complete zero-to-ten implementation. We built their core AI-powered platform from the ground up, enabling them to automate Medical Necessity Review processes that previously required hours of manual work. The result? A scalable solution that not only solved critical customer pain points but also positioned the startup for Series A funding by demonstrating proven product-market fit with multiple pilot customers.
+A healthcare startup engaged us for a zero-to-ten implementation to digitize Durable Medical Equipment (DME) Medical Necessity Review—verifying patient eligibility, insurance coverage, and medical justification before approving equipment such as wheelchairs, oxygen concentrators, and CPAP machines.
+
+We built their core document-processing platform from the ground up. That custom system later informed what became DocRouter.
 
 ![Illustration of a doctor with a patient in a wheelchair]({{ '/assets/images/case-studies/dme/dme.png' | relative_url }})
-*AI-powered DME processing platform that transforms manual workflows into intelligent automation*
+*Custom DME document platform built in a prior consulting engagement*
 
 ## The Challenge
 
-Starting completely from scratch, the customer needed to build a comprehensive cloud platform to digitize and automate the complex process of Durable Medical Equipment (DME) Medical Necessity Review—where healthcare providers must verify patient eligibility, insurance coverage, and medical justification before approving equipment like wheelchairs, oxygen concentrators, and CPAP machines. With deep industry expertise and established pilot partnerships, they needed technical implementation support to bootstrap their product vision into a scalable engineering foundation that could support a growing team.
+The startup needed a cloud platform to replace manual, paper-based review workflows. They had industry expertise and pilot partnerships but needed engineering help to turn the product vision into a scalable foundation.
 
-## The Solution
+## What We Built
 
-We delivered a complete end-to-end AI platform that transformed their manual DME review process into an intelligent, automated workflow. Our solution reduced processing time from hours to minutes while maintaining 99%+ accuracy, enabling the startup to scale operations without proportionally increasing headcount. The platform seamlessly integrates with existing healthcare infrastructure, processes thousands of documents daily, and provides real-time insights that drive better business decisions—giving our client a significant competitive advantage in the rapidly evolving healthcare technology market.
+We delivered a **custom end-to-end document automation platform** (not DocRouter) that:
 
-## Key Capabilities That Drive Results
+- Ingested faxes and related medical documents from common fax providers
+- Extracted structured data with OCR and LLMs
+- Supported operator review of AI extractions
+- Integrated with DME systems such as Brightree and HDMS
 
-Our platform delivers enterprise-grade performance with features designed to maximize operational efficiency and reduce costs:
+During the engagement, the platform processed high document volumes in the client's environment and materially reduced manual review time compared with their prior workflow.
 
-* **Universal Document Ingestion**: Automatically processes faxes from any provider (RightFax, FaxAge, iFax) containing medical orders, chart notes, lab results, and insurance claims—eliminating manual data entry bottlenecks
-* **AI-Powered Intelligence**: Advanced OCR and Large Language Models extract structured data with 99%+ accuracy, turning unstructured documents into actionable information
-* **Human-AI Collaboration**: Intuitive review interface allows operators to validate and refine AI extractions, ensuring quality while maintaining speed
-* **Seamless EHR Integration**: Direct order creation in leading systems (Brightree, HDMS) eliminates duplicate data entry and reduces processing errors by 95%
+## Technical Approach
 
-## Platform Architecture That Scales
-Our solution leverages enterprise-proven technologies to deliver consistent performance at any volume:
+### Ingestion & processing
+- Fax PDF ingestion on a frequent polling cadence
+- AWS S3 storage with Textract OCR and LLM extraction
+- Extraction of demographics, coverage, prescriptions, and supporting clinical fields
+- Parallel processing for throughput during peak loads
 
-### Real-Time Data Pipeline That Never Sleeps {#intelligent-data-ingestion}
+### Stack (client platform)
+- AWS S3, MongoDB, PostgreSQL, Databricks, Prefect, Terraform
+- Label Studio and MLflow for annotation and experimentation
+- API integrations toward Brightree and HDMS
 
-**Zero-Latency Document Processing**: Our automated ingestion engine connects directly to EHR systems and fax portals via **RPA** and **APIs**, capturing critical documents the moment they arrive:
+Metrics such as extraction accuracy and throughput described in the original write-up applied to **this custom platform during the engagement**, not to DocRouter as a product today.
 
-- **Fax PDFs**: Processed in near real-time (every 60 seconds) for immediate turnaround
-- **Patient/Order Data**: Daily synchronization ensures complete visibility
+## Outcomes for Our Client
 
-**Enterprise-Grade AI Processing**: Documents flow through our secure **AWS S3** infrastructure, where **Amazon Textract OCR** and proprietary **Large Language Models** automatically extract and classify:
-- Patient demographics (name, DOB, contact information)
-- Insurance coverage details (payer, plan, deductibles, co-insurance)
-- Prescription data (equipment type, physician NPI, diagnosis codes)
-- Supporting documentation for compliance
+The following outcomes refer to **the startup we supported**, not to DocRouter customers:
 
-**Proven Scalability**: The platform processes **thousands of documents daily** with **25 parallel processing threads** and **50% CPU efficiency**—ensuring consistent performance even during peak volumes.
+- Their pilot sites adopted the custom platform for core review workflows
+- The client grew its engineering team significantly during the engagement period
+- The platform supported the startup's fundraising and product narrative at the time
 
-### Enterprise-Ready Technology Stack {#tech-strategy}
+We do not present this engagement as evidence of DocRouter production deployments or DocRouter customer ROI.
 
-**Built for Healthcare's Demanding Requirements**: Our architecture combines proven technologies to deliver the reliability, security, and compliance healthcare organizations demand:
+## Relationship to DocRouter
 
-- **AWS S3**: Secure, HIPAA-compliant storage for all document types with 99.999% durability
-- **MongoDB**: Flexible data management for AI pipeline outputs, enabling rapid iteration and model improvements
-- **PostgreSQL**: Enterprise-grade transactional database ensuring data integrity for patient and order records
-- **Databricks**: Advanced analytics platform providing real-time business intelligence and operational insights
-- **Prefect**: Robust workflow orchestration enabling horizontal scaling without performance degradation
-- **Terraform**: Infrastructure-as-code ensuring consistent, auditable deployments across environments with complete disaster recovery capabilities
+Patterns proven in this consulting work—schema-driven extraction, human-in-the-loop review, fax and EHR-adjacent ingestion, healthcare compliance constraints—directly influenced DocRouter's architecture and roadmap.
 
-### AI That Actually Works in Healthcare {#leveraging-llms}
+For DocRouter capabilities today, see the [DME solution]({{ '/solutions/dme/' | relative_url }}) page and [platform documentation]({{ '/docs/platform/' | relative_url }}).
 
-**Production-Ready Large Language Models**: Our AI engine combines cutting-edge LLMs with healthcare-specific training to deliver unprecedented accuracy in medical document processing:
-
-- **99%+ Extraction Accuracy**: Precisely captures patient demographics, physician NPIs, lab results, and order details from complex medical documents
-- **Intelligent Document Classification**: Automatically identifies document types (prescriptions, insurance forms, chart notes) to route processing efficiently
-- **Continuous Learning**: **LabelStudio** annotation platform and **MLFlow** experimentation enable ongoing model improvements without system downtime
-
-**Seamless ERP Integration**: Direct API connections to leading DME platforms (**Brightree**, **HDMS**) with comprehensive data schemas supporting:
-- Complete patient profiles with multiple insurance coverage tiers
-- Complex prescription workflows with physician verification
-- Automated compliance documentation and audit trails
-
-## Transformational Business Results
-
-**100% Pilot Success Rate**: All four pilot customers not only completed successful implementations but converted their entire operations to run on the platform—demonstrating clear product-market fit and immediate ROI.
-
-**Exponential Growth Enablement**: The platform's success enabled our client to:
-- **Scale their engineering team 4x** (from 2 to 8-10 engineers) within 18 months
-- **Secure Series A funding** by demonstrating proven revenue and customer traction
-- **Expand into new markets** by adapting the core platform for additional healthcare workflows
-- **Achieve operational efficiency** that competitors using manual processes simply cannot match
-
-**Future-Proof Foundation**: The modular architecture we built positions our client to rapidly expand into adjacent healthcare automation opportunities, including prior authorization, claims processing, and clinical documentation—creating a sustainable competitive moat in the $50B+ healthcare technology market.
-
-**Industry Recognition**: The platform's success has established our client as a thought leader in healthcare AI, opening doors to enterprise partnerships and positioning them for potential acquisition opportunities at premium valuations.
+For more details, contact Andrei Radulescu-Banu at andrei@analytiqhub.com.
