@@ -1,0 +1,18 @@
+<section class="enterprise-card p-8 md:p-10 mb-12">
+    <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4 text-center">{{ include.title | default: "Ready to get started?" }}</h2>
+    <div class="text-center">
+        <p class="text-slate-600 mb-8 max-w-xl mx-auto">{{ include.description }}</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+            <button onclick="openCalendly()"
+                    class="enterprise-btn-primary inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-base transition-colors duration-200 no-underline border-0 cursor-pointer">
+                Schedule a Demo
+            </button>
+            <a href="https://app.docrouter.ai"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="enterprise-btn-secondary inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-base transition-colors duration-200 no-underline">
+                Launch App
+            </a>
+        </div>
+    </div>
+</section>
