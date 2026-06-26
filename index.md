@@ -41,9 +41,7 @@ image: /assets/images/og-default.png
             </div>
             <div class="relative">
                 <div class="rounded-xl border border-slate-200 bg-white p-2 shadow-lg shadow-slate-900/5">
-                    <img src="{{ '/assets/images/doc_router_user_experience.png' | relative_url }}"
-                         alt="DocRouter document processing platform"
-                         class="w-full h-auto rounded-lg" />
+                    {% include user-experience-widget.html %}
                 </div>
             </div>
         </div>

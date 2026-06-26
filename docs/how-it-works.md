@@ -72,14 +72,7 @@ description: "See how DocRouter turns unstructured documents into structured dat
         <!-- User Experience Section -->
         <section class="bg-white rounded-lg shadow-lg p-4 md:p-8 mb-8 md:mb-12">
             <h2 class="text-xl md:text-2xl font-semibold text-gray-900 mb-4">User Experience</h2>
-            <div class="grid md:grid-cols-2 gap-4 md:gap-6">
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="{{ '/assets/images/extractions.png' | relative_url }}" alt="Data extraction interface" class="w-full">
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="{{ '/assets/images/docrouter/flow.png' | relative_url }}" alt="DocRouter processing flow" class="w-full">
-                </div>
-            </div>
+            {% include user-experience-widget.html gap="md:gap-6" %}
         </section>
 
         <section class="bg-blue-50 rounded-lg p-4 md:p-8 mb-8 md:mb-12">
@@ -123,17 +116,24 @@ description: "See how DocRouter turns unstructured documents into structured dat
                     <a href="{{ '/docs/mcp/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View MCP Docs →</a>
                 </div>
 
+                <!-- DocRouter Workflows -->
+                <div class="bg-white rounded-lg p-5 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">DocRouter Workflows</h3>
+                    <p class="text-sm text-gray-600 mb-3">Automate document pipelines with built-in Flows.</p>
+                    <a href="{{ '/docs/workflows/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View Workflows docs →</a>
+                </div>
+
                 <!-- n8n -->
                 <div class="bg-white rounded-lg p-5 shadow-sm">
                     <h3 class="font-bold text-gray-900 mb-2">n8n</h3>
-                    <p class="text-sm text-gray-600 mb-3">Low-code workflow automation. Connect DocRouter to hundreds of apps without writing code.</p>
+                    <p class="text-sm text-gray-600 mb-3">Custom DocRouter n8n connector. Connect DocRouter to hundreds of apps without writing code.</p>
                     <a href="{{ '/docs/workflows/#n8n' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View n8n Setup →</a>
                 </div>
 
                 <!-- Power Automate -->
                 <div class="bg-white rounded-lg p-5 shadow-sm">
                     <h3 class="font-bold text-gray-900 mb-2">Power Automate</h3>
-                    <p class="text-sm text-gray-600 mb-3">Microsoft cloud flows with the DocRouter Organization custom connector—same org APIs as n8n.</p>
+                    <p class="text-sm text-gray-600 mb-3">Microsoft cloud flows with the DocRouter custom connector.</p>
                     <a href="{{ '/docs/power-automate/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline">View Power Automate docs →</a>
                 </div>
 
