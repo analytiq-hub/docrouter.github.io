@@ -20,7 +20,7 @@ description: "DocRouter.AI privacy policy — how we collect, use, and protect y
         DocRouter.AI is operated by Analytiq Hub, LLC, a Massachusetts company. We provide an
         AI-powered document processing platform at <strong>docrouter.ai</strong> and
         <strong>app.docrouter.ai</strong>. Questions about this policy can be sent to
-        <a href="mailto:andrei@analytiqhub.com" class="text-blue-600 hover:text-blue-800">andrei@analytiqhub.com</a>.
+        <a href="mailto:andrei@docrouter.ai" class="text-blue-600 hover:text-blue-800">andrei@docrouter.ai</a>.
       </p>
     </section>
 
@@ -121,7 +121,7 @@ description: "DocRouter.AI privacy policy — how we collect, use, and protect y
         We retain account data for as long as your account is active. Documents uploaded for
         processing are retained according to your account settings and plan. You may request
         deletion of your data at any time by emailing
-        <a href="mailto:andrei@analytiqhub.com" class="text-blue-600 hover:text-blue-800">andrei@analytiqhub.com</a>.
+        <a href="mailto:andrei@docrouter.ai" class="text-blue-600 hover:text-blue-800">andrei@docrouter.ai</a>.
       </p>
     </section>
 
@@ -139,7 +139,7 @@ description: "DocRouter.AI privacy policy — how we collect, use, and protect y
       </ul>
       <p class="text-gray-600 leading-relaxed mt-3">
         To exercise any of these rights, email
-        <a href="mailto:andrei@analytiqhub.com" class="text-blue-600 hover:text-blue-800">andrei@analytiqhub.com</a>.
+        <a href="mailto:andrei@docrouter.ai" class="text-blue-600 hover:text-blue-800">andrei@docrouter.ai</a>.
         We will respond within 30 days.
       </p>
     </section>
@@ -177,7 +177,7 @@ description: "DocRouter.AI privacy policy — how we collect, use, and protect y
       <p class="text-gray-600 leading-relaxed">
         For privacy-related questions or requests:<br>
         <strong>Analytiq Hub, LLC</strong><br>
-        Email: <a href="mailto:andrei@analytiqhub.com" class="text-blue-600 hover:text-blue-800">andrei@analytiqhub.com</a><br>
+        Email: <a href="mailto:andrei@docrouter.ai" class="text-blue-600 hover:text-blue-800">andrei@docrouter.ai</a><br>
         Phone: <a href="tel:6172168509" class="text-blue-600 hover:text-blue-800">617.216.8509</a>
       </p>
     </section>

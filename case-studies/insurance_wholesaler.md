@@ -85,4 +85,4 @@ Results below are from **pilot testing and simulations**, not a live production 
 
 This pilot showed DocRouter can support specialty insurance submission processing—including handwritten ACORD forms and clearance-oriented workflows. Capabilities developed here inform DocRouter's insurance solution patterns today.
 
-For more details, contact Andrei Radulescu-Banu at andrei@analytiqhub.com. Platform demo available at [app.docrouter.ai](https://app.docrouter.ai).
+For more details, contact Andrei Radulescu-Banu at andrei@docrouter.ai. Platform demo available at [app.docrouter.ai](https://app.docrouter.ai).

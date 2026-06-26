@@ -60,4 +60,4 @@ Epic-specific RPA and deep EHR scraping remain **custom integration** work. DocR
 
 For related healthcare document processing on DocRouter, see the [DME solution]({{ '/solutions/dme/' | relative_url }}) page.
 
-For more details, contact Andrei Radulescu-Banu at andrei@analytiqhub.com.
+For more details, contact Andrei Radulescu-Banu at andrei@docrouter.ai.

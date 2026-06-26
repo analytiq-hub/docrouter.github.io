@@ -62,4 +62,4 @@ Patterns proven in this consulting work—schema-driven extraction, human-in-the
 
 For DocRouter capabilities today, see the [DME solution]({{ '/solutions/dme/' | relative_url }}) page and [platform documentation]({{ '/docs/platform/' | relative_url }}).
 
-For more details, contact Andrei Radulescu-Banu at andrei@analytiqhub.com.
+For more details, contact Andrei Radulescu-Banu at andrei@docrouter.ai.

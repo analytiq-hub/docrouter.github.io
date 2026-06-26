@@ -1,7 +1,7 @@
 title: DocRouter.AI
 author:
   name: Andrei Radulescu-Banu
-  email: "andrei@analytiqhub.com"
+  email: "andrei@docrouter.ai"
 description: > # this means to ignore newlines until "show_excerpts:"
   DocRouter provides AI-powered document processing solutions that automate
   manual data entry from invoices, manifests, and reports.
@@ -92,6 +92,8 @@ header_pages:
             url: "/docs/how-it-works"
           - title: "Quick Start Guide"
             url: "/docs/quick-start"
+          - title: "Video Tutorials"
+            url: "/docs/video-tutorials"
       - title: "Core concepts"
         children:
           - title: "Tags"
@@ -185,6 +187,8 @@ docs_sidebar_pages:
         url: "/docs/how-it-works"
       - title: "Quick Start Guide"
         url: "/docs/quick-start"
+      - title: "Video Tutorials"
+        url: "/docs/video-tutorials"
   - title: "Core concepts"
     children:
       - title: "Tags"
@@ -280,7 +284,9 @@ site_map:
     links:
       - title: "Documentation"
         url: "/docs"
-      
+      - title: "Video Tutorials"
+        url: "/docs/video-tutorials"
+
 # Build settings
 theme: analytiq-pages-theme
 

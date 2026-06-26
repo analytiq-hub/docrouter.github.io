@@ -71,4 +71,4 @@ These results reflect **pilot conditions** on sample and provided document setsâ
 
 This pilot validated DocRouter for bills of lading, commodity reports, and related trade documents. Patterns from the pilot inform our [supply chain solution]({{ '/solutions/supply-chain/' | relative_url }}) page.
 
-For more details, contact Andrei Radulescu-Banu at andrei@analytiqhub.com. Platform demo available at [app.docrouter.ai](https://app.docrouter.ai).
+For more details, contact Andrei Radulescu-Banu at andrei@docrouter.ai. Platform demo available at [app.docrouter.ai](https://app.docrouter.ai).

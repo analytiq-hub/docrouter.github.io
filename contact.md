@@ -30,8 +30,8 @@ description: "Contact DocRouter to discuss AI document processing, demos, and en
                             </div>
                             <div>
                                 <p class="text-sm font-semibold text-[#1a2b4c] m-0 mb-1">Email</p>
-                                <a href="mailto:andrei@analytiqhub.com" class="text-blue-600 hover:text-blue-800 text-sm no-underline">
-                                    andrei@analytiqhub.com
+                                <a href="mailto:andrei@docrouter.ai" class="text-blue-600 hover:text-blue-800 text-sm no-underline">
+                                    andrei@docrouter.ai
                                 </a>
                             </div>
                         </div>

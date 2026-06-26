@@ -443,7 +443,7 @@ image: /assets/images/og-default.png
                         </div>
                         <div>
                             <p class="font-medium text-[#1a2b4c] text-sm">Email</p>
-                            <a href="mailto:andrei@analytiqhub.com" class="text-blue-600 hover:text-blue-800 text-sm no-underline">andrei@analytiqhub.com</a>
+                            <a href="mailto:andrei@docrouter.ai" class="text-blue-600 hover:text-blue-800 text-sm no-underline">andrei@docrouter.ai</a>
                         </div>
                     </div>
                     <div class="flex items-center gap-4">
