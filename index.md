@@ -182,8 +182,8 @@ image: /assets/images/og-default.png
 
         <!-- Results -->
         <section class="mb-16 md:mb-20 bg-slate-50 rounded-xl border border-slate-200/80 p-8 md:p-12">
-            <p class="enterprise-section-label text-center mb-3">Proven outcomes</p>
-            <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-10 text-center">What our clients achieve</h2>
+            <p class="enterprise-section-label text-center mb-3">Measured outcomes</p>
+            <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-10 text-center">Document automation results</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
                     <div class="text-4xl md:text-5xl font-bold enterprise-metric mb-2">90%</div>
@@ -204,26 +204,29 @@ image: /assets/images/og-default.png
         <section class="mb-16 md:mb-20">
             <div class="text-center mb-10">
                 <p class="enterprise-section-label mb-3">Case studies</p>
-                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4">Trusted in regulated industries</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4">Experience in regulated industries</h2>
             </div>
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 <a href="{{ '/case-studies/insurance_wholesaler/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
+                    <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Pilot</p>
                     <p class="text-3xl font-bold text-blue-600 mb-2">75%</p>
                     <p class="text-[#1a2b4c] font-semibold mb-2">Less manual work</p>
-                    <p class="text-slate-600 text-sm mb-4">Insurance wholesaler automating ACORD form processing with ALIS integration.</p>
-                    <span class="text-blue-600 text-sm font-medium">Read case study →</span>
-                </a>
-                <a href="{{ '/case-studies/epic_dme_order_processing/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
-                    <p class="text-3xl font-bold text-blue-600 mb-2">90%</p>
-                    <p class="text-[#1a2b4c] font-semibold mb-2">Faster Epic integration</p>
-                    <p class="text-slate-600 text-sm mb-4">Zero-touch DME order automation with 100% compliance in healthcare workflows.</p>
+                    <p class="text-slate-600 text-sm mb-4">Completed pilot with a specialty insurance wholesaler—we handled ACORD form processing and ALIS clearance automation end to end.</p>
                     <span class="text-blue-600 text-sm font-medium">Read case study →</span>
                 </a>
                 <a href="{{ '/case-studies/supply-chain/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
+                    <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Pilot</p>
                     <p class="text-3xl font-bold text-blue-600 mb-2">Hours → min</p>
                     <p class="text-[#1a2b4c] font-semibold mb-2">Trade document processing</p>
-                    <p class="text-slate-600 text-sm mb-4">AI-powered manifest and shipping document extraction for supply chain operations.</p>
+                    <p class="text-slate-600 text-sm mb-4">Pilot for bills of lading, commodity reports, and related trade documents—structured extraction for supply chain operations.</p>
                     <span class="text-blue-600 text-sm font-medium">Read case study →</span>
+                </a>
+                <a href="{{ '/solutions/clinical-trials/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
+                    <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Pilot</p>
+                    <p class="text-3xl font-bold text-blue-600 mb-2">Invoices</p>
+                    <p class="text-[#1a2b4c] font-semibold mb-2">Clinical trial billing</p>
+                    <p class="text-slate-600 text-sm mb-4">Pilot for clinical trial invoices and expense reports—structured extraction and contract-term validation for research operations.</p>
+                    <span class="text-blue-600 text-sm font-medium">Learn more →</span>
                 </a>
             </div>
         </section>
