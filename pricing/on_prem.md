@@ -28,7 +28,7 @@ description: "DocRouter on-premises / on-VPC pricing. Deploy DocRouter inside yo
                 {% include pricing-feature.html text="Advanced document processing" %}
                 {% include pricing-feature.html text="Team collaboration features" %}
                 {% include pricing-feature.html text="Free upgrades" %}
-                {% include pricing-feature.html text="Unlimited technical support" %}
+                {% include pricing-feature.html text="Basic technical support" %}
                 {% include pricing-feature.html text="Developer tools" %}
                 {% endcapture %}
                 {% include pricing-plan-card.html
