@@ -77,7 +77,7 @@ description: "See how DocRouter turns unstructured documents into structured dat
                     <img src="{{ '/assets/images/docrouter/files.png' | relative_url }}" alt="Document List Interface" class="w-full">
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="{{ '/assets/images/docrouter/extractions.png' | relative_url }}" alt="Data Extraction Interface" class="w-full">
+                    <img src="{{ '/assets/images/extractions.png' | relative_url }}" alt="Data Extraction Interface" class="w-full">
                 </div>
             </div>
         </section>
