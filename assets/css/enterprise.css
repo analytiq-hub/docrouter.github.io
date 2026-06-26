@@ -1,0 +1,104 @@
+/* DocRouter enterprise brand — aligned with LinkedIn profile identity */
+
+:root {
+  --dr-navy: #1a2b4c;
+  --dr-blue: #007bff;
+  --dr-blue-dark: #0056b3;
+  --dr-slate: #64748b;
+  --dr-bg: #f8fafc;
+  --dr-bg-accent: #f0f7ff;
+}
+
+.enterprise-hero {
+  background:
+    radial-gradient(ellipse 70% 50% at 90% 20%, rgba(0, 123, 255, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(26, 43, 76, 0.04) 0%, transparent 50%),
+    linear-gradient(180deg, var(--dr-bg-accent) 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.enterprise-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(26, 43, 76, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.35;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 85%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 85%);
+}
+
+.enterprise-hero-ring {
+  position: absolute;
+  border: 1px solid rgba(0, 123, 255, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.enterprise-pipeline-line {
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--dr-blue) 0,
+    var(--dr-blue) 4px,
+    transparent 4px,
+    transparent 10px
+  );
+  height: 2px;
+  opacity: 0.35;
+}
+
+.enterprise-icon-tile {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(26, 43, 76, 0.06);
+}
+
+.enterprise-section-label {
+  color: var(--dr-blue);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.enterprise-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enterprise-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(26, 43, 76, 0.06);
+}
+
+.enterprise-btn-primary {
+  background-color: var(--dr-navy);
+  color: #ffffff;
+}
+
+.enterprise-btn-primary:hover {
+  background-color: #0f1d33;
+}
+
+.enterprise-btn-secondary {
+  background-color: #ffffff;
+  border: 1px solid var(--dr-navy);
+  color: var(--dr-navy);
+}
+
+.enterprise-btn-secondary:hover {
+  background-color: #f8fafc;
+}
+
+.enterprise-metric {
+  color: var(--dr-blue);
+}
+
+.enterprise-proof-card {
+  border-left: 3px solid var(--dr-blue);
+}
