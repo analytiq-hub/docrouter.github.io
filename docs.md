@@ -20,7 +20,6 @@ permalink: /docs/
             <ul class="space-y-3 text-gray-600">
                 <li><a href="{{ '/docs/how-it-works/' | relative_url }}" class="text-blue-600 hover:text-blue-800">How It Works</a> — High-level workflow and concepts</li>
                 <li><a href="{{ '/docs/quick-start/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Quick Start Guide</a> — Tag, prompt, upload in minutes</li>
-                <li><a href="{{ '/docs/video-tutorials/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Video Tutorials</a> — Five videos on configuring DocRouter</li>
             </ul>
         </section>
 

@@ -92,8 +92,6 @@ header_pages:
             url: "/docs/how-it-works"
           - title: "Quick Start Guide"
             url: "/docs/quick-start"
-          - title: "Video Tutorials"
-            url: "/docs/video-tutorials"
       - title: "Core concepts"
         children:
           - title: "Tags"
@@ -187,8 +185,6 @@ docs_sidebar_pages:
         url: "/docs/how-it-works"
       - title: "Quick Start Guide"
         url: "/docs/quick-start"
-      - title: "Video Tutorials"
-        url: "/docs/video-tutorials"
   - title: "Core concepts"
     children:
       - title: "Tags"

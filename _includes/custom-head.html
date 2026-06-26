@@ -21,6 +21,9 @@
 <link rel="icon" type="image/png" href="{{ '/assets/images/analytiq_favicon.png' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/images/analytiq_favicon.png' | relative_url }}">
 
+<!-- Enterprise brand styles (homepage + shared components) -->
+<link rel="stylesheet" href="{{ '/assets/css/enterprise.css' | relative_url }}">
+
 {%- if jekyll.environment == 'production' and site.google_analytics -%}
   {%- include google-analytics.html -%}
 {%- endif -%}
