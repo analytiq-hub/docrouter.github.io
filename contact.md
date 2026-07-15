@@ -21,6 +21,10 @@ description: "Contact DocRouter to discuss AI document processing, demos, and en
             <div class="grid md:grid-cols-2 gap-10">
                 <div>
                     <h2 class="text-2xl font-bold text-[#1a2b4c] mb-8">Contact information</h2>
+                    <p class="text-sm text-slate-500 mb-6">
+                        Contracts and payments are with <strong class="font-medium text-slate-700">Analytiq Hub LLC</strong>
+                        (DBA DocRouter AI).
+                    </p>
                     <div class="space-y-6">
                         <div class="flex items-center gap-4">
                             <div class="solution-challenge-icon solution-challenge-icon--inline text-blue-600 flex-shrink-0">
@@ -58,11 +62,11 @@ description: "Contact DocRouter to discuss AI document processing, demos, and en
                             </div>
                             <div>
                                 <p class="text-sm font-semibold text-[#1a2b4c] m-0 mb-1">LinkedIn</p>
-                                <a href="https://www.linkedin.com/company/analytiq-hub"
+                                <a href="https://www.linkedin.com/company/docrouter"
                                    target="_blank"
                                    rel="noopener noreferrer"
                                    class="text-blue-600 hover:text-blue-800 text-sm no-underline">
-                                    Analytiq Hub
+                                    DocRouter
                                 </a>
                             </div>
                         </div>

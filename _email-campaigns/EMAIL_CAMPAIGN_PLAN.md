@@ -135,7 +135,7 @@ This document outlines the active email campaigns and their templates:
 
 **Template anti-spam practices (applied to all templates)**
 - **Preheader:** Hidden preheader div (~130 chars) with natural preview text so the inbox snippet looks legitimate.
-- **Footer:** Include company name line ("Analytiq Hub LLC") for CAN-SPAM; list **Unsubscribe first** in the link row, then View in browser, then Contact us (or Documentation where relevant).
+- **Footer:** Include company name line ("Analytiq Hub LLC DBA DocRouter AI") for CAN-SPAM; list **Unsubscribe first** in the link row, then View in browser, then Contact us (or Documentation where relevant).
 - **Link density:** Link "DocRouter.AI" only once per section (e.g. first mention); use plain text for later mentions in the same block. Remove redundant docrouter.ai link from the "This email was sent to..." line.
 - **No placeholder greetings:** Rely on `{{ contact.FIRSTNAME | default: 'there' }}` and avoid setting FIRSTNAME to "System", "User", "Test", or "Friend" in Brevo.
 
