@@ -16,6 +16,18 @@ permalink: /talks/
         <!-- Talks Container -->
         <div class="space-y-8" id="talks-container">
             {% include talk-card.html 
+                title="DocRouter Flows: Visual Workflow Automation for Intelligent Document Processing"
+                speaker="Andrei Radulescu-Banu"
+                date="Jul 30, 2026"
+                event="Anote AI"
+                event_url="https://anote.ai/"
+                logos="/assets/images/anote_logo.png"
+                image="/assets/images/docrouter-flows-splash.png"
+                links="https://www.youtube.com/watch?v=n9UUKHSgScU;Recording|https://www.linkedin.com/feed/update/urn:li:activity:7488415996815441920/;LinkedIn Post|/ai/engineering/docrouter-flows-visual-workflow-automation-for-intelligent-document-processing/;Blog Post"
+                abstract="Most document AI tools give you one-step LLM processing. The second a customer needs branching, agents, or human-in-the-loop, you need more. DocRouter Flows is a visual, document-native workflow system with first-class OCR/LLM nodes, sandboxed Python, and durable execution via node-level checkpoints—no Temporal cluster required. Lightweight to run, and in production at scale."
+            %}
+
+            {% include talk-card.html 
                 title="How AI Agent Memory Works"
                 speaker="Andrei Radulescu-Banu"
                 date="Jul 23, 2026"
