@@ -54,7 +54,7 @@ description: "Get started with DocRouter in minutes. Create a tag, write a promp
 </div>
 
 <!-- Progress Indicator -->
-<div class="bg-gray-100 rounded-lg p-4 mb-8 sticky top-4 z-10">
+<div class="bg-gray-100 rounded-lg p-4 mb-8 sticky top-16 z-40">
   <div class="flex items-center justify-between text-sm">
     <span class="font-medium">Quick Start Progress</span>
     <span class="text-gray-600">Step <span id="current-step">1</span> of 7</span>
