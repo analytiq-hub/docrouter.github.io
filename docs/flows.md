@@ -204,6 +204,7 @@ Every execution records per-node inputs, outputs, timing, and logs in the **Exec
 - <a href="{{ '/docs/workflows/' | relative_url }}">External workflows</a> — n8n, Power Automate, Temporal
 - <a href="{{ '/docs/rest-api/' | relative_url }}">REST API</a> — Programmatic flow management (coming to SDK docs)
 - <a href="{{ '/docs/open-source/' | relative_url }}">Open Source</a> — Apache 2.0 license and self-hosting
+- <a href="{{ '/docs/on-prem-installation/' | relative_url }}">On-Prem Installation</a> — Docker Compose, Kubernetes, and cloud configuration
 
 ---
 
