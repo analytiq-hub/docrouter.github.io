@@ -18,8 +18,18 @@ DocRouter is a multi-tenant document intelligence platform: ingest documents, ru
 | **Blob storage** | Document binaries and OCR output |
 | **LLM providers** | Inference via [LiteLLM](https://github.com/BerriAI/litellm) (OpenAI, Anthropic, Bedrock, Vertex, Azure, …) |
 
-<div class="flex justify-center my-8">
-  <img src="{{ '/assets/images/docrouter/doc-router-arch.png' | relative_url }}" alt="DocRouter system architecture: frontend, backend, MongoDB, AWS, and LLM providers" class="w-full max-w-4xl rounded-lg shadow-md ring-1 ring-gray-200">
+<div data-excalidraw="/assets/excalidraw/doc_router_architecture.excalidraw" class="excalidraw-container">
+  <div class="loading-placeholder">Loading diagram...</div>
+</div>
+
+<p style="text-align: center; margin-top: 0.5rem; font-size: 0.875rem; color: #6b7280;">
+  <strong>Figure 1:</strong> DocRouter system architecture — application services, cloud APIs, and OCR/LLM providers.
+</p>
+
+<div style="text-align: center; margin-top: 1rem; margin-bottom: 2rem;">
+  <a href="/excalidraw-edit?file=/assets/excalidraw/doc_router_architecture.excalidraw" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">
+    Edit in Excalidraw
+  </a>
 </div>
 
 On-prem, the same services run under Docker Compose or Kubernetes and call managed cloud APIs for storage, OCR, email, and models. See the [on-prem architecture diagram]({{ '/docs/on-prem-installation/' | relative_url }}).
@@ -127,3 +137,28 @@ How DocRouter typically sits in a larger stack (not alternate product architectu
 - [On-Prem Installation]({{ '/docs/on-prem-installation/' | relative_url }}) — Install and cloud setup
 - [Open Source]({{ '/docs/open-source/' | relative_url }}) — License and source
 - [REST API]({{ '/docs/rest-api/' | relative_url }}) / [Python SDK]({{ '/docs/python-sdk/' | relative_url }}) / [TypeScript SDK]({{ '/docs/typescript-sdk/' | relative_url }}) — Programmatic access
+
+<style>
+.excalidraw-container {
+  width: 100%;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: white;
+  display: block;
+  margin: 2rem 0;
+  min-height: 400px;
+}
+.excalidraw-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+.loading-placeholder {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+}
+</style>
+<script type="module" src="/assets/js/excalidraw/render-excalidraw.js"></script>
