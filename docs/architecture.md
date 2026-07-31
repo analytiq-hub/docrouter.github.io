@@ -15,7 +15,7 @@ DocRouter is a multi-tenant document intelligence platform: ingest documents, ru
 | **Backend (FastAPI)** | REST API: documents, OCR, LLM results, prompts, schemas, tags, flows, webhooks, account config |
 | **Workers** | Async consumers for OCR, LLM extraction, knowledge-base indexing, webhooks, and flow runs |
 | **MongoDB** | App state, versioned prompts/schemas, encrypted credentials, flow definitions and executions, work queues |
-| **Object storage / OCR** | Document binaries and OCR (typically AWS S3 + Textract; other OCR modes per org) |
+| **Blob storage** | Document binaries and OCR output |
 | **LLM providers** | Inference via [LiteLLM](https://github.com/BerriAI/litellm) (OpenAI, Anthropic, Bedrock, Vertex, Azure, …) |
 
 <div class="flex justify-center my-8">
