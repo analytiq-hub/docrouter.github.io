@@ -1,137 +1,129 @@
 ---
 layout: docs
-title: "DocRouter Architecture Overview"
-description: "Learn how DocRouter's cloud-native architecture processes documents through a multi-stage pipeline combining OCR, AI analysis, and structured data extraction at scale."
+title: "DocRouter Architecture"
+permalink: /docs/architecture/
+description: "How DocRouter is built: frontend, API, queue workers, MongoDB, OCR and LLM services, the document pipeline, and workflow automation via Flows and external platforms."
 ---
 
-<div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-12">
-    <header class="text-center md:mb-12 mb-4">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">DocRouter Architecture</h1>
-        <div class="text-xl text-gray-600">
-            <p class="mb-2">Scalable document processing with AI-powered extraction</p>
-        </div>
-    </header>
+DocRouter is a multi-tenant document intelligence platform: ingest documents, run OCR, extract structured data with LLMs, and automate the path into downstream systems. This page describes how the pieces fit together. For deploy and cloud keys, see [On-Prem Installation]({{ '/docs/on-prem-installation/' | relative_url }}) and [Platform]({{ '/docs/platform/' | relative_url }}). For the product walkthrough, see [How It Works]({{ '/docs/how-it-works/' | relative_url }}).
 
-    <main>
-        <section id="overview" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">System Overview</h2>
-            <p class="text-gray-600 mb-6">
-                DocRouter is built on a modern, cloud-native architecture designed for scalability, reliability, and ease of integration.
-                The system processes documents through a multi-stage pipeline that combines OCR, AI analysis, and structured data extraction.
-                <a href="{{ '/docs/flows/' | relative_url }}" class="text-blue-600 hover:text-blue-800">DocRouter Flows</a> adds a visual automation layer on top of that pipeline — a node-and-canvas editor, document-native nodes, and durable execution state.
-            </p>
-            <div class="flex justify-center mb-6">
-                <img src="{{ '/assets/images/docrouter/doc-router-arch.png' | relative_url }}" alt="DocRouter Architecture Diagram" class="w-full max-w-4xl rounded-lg shadow-md">
-            </div>
-        </section>
+## System overview
 
-        <section id="components" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Core Components</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">Document Ingestion</h3>
-                    <ul class="text-gray-600 space-y-2 mb-6">
-                        <li>Multi-format document support (PDF, images, Office docs)</li>
-                        <li>Secure file upload with encryption</li>
-                        <li>Automatic format detection and conversion</li>
-                        <li>Batch processing capabilities</li>
-                    </ul>
+| Layer | Role |
+| ----- | ---- |
+| **Frontend (Next.js)** | Document library, prompts/schemas/tags, PDF review, Flows canvas, admin settings |
+| **Backend (FastAPI)** | REST API: documents, OCR, LLM results, prompts, schemas, tags, flows, webhooks, account config |
+| **Workers** | Async consumers for OCR, LLM extraction, knowledge-base indexing, webhooks, and flow runs |
+| **MongoDB** | App state, versioned prompts/schemas, encrypted credentials, flow definitions and executions, work queues |
+| **Object storage / OCR** | Document binaries and OCR (typically AWS S3 + Textract; other OCR modes per org) |
+| **LLM providers** | Inference via [LiteLLM](https://github.com/BerriAI/litellm) (OpenAI, Anthropic, Bedrock, Vertex, Azure, …) |
 
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">OCR Processing</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>Advanced optical character recognition</li>
-                        <li>Handwriting recognition support</li>
-                        <li>Multi-language text extraction</li>
-                        <li>Table and form structure detection</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">AI Analysis Engine</h3>
-                    <ul class="text-gray-600 space-y-2 mb-6">
-                        <li>Large language model integration</li>
-                        <li>Custom prompt engineering</li>
-                        <li>Schema-based data extraction</li>
-                        <li>Confidence scoring and validation</li>
-                    </ul>
-
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">Integration Layer</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li><a href="{{ '/docs/flows/' | relative_url }}" class="text-blue-600 hover:text-blue-800">DocRouter Flows</a> — built-in visual automation</li>
-                        <li>REST API for programmatic access</li>
-                        <li>Webhook notifications</li>
-                        <li>Third-party system integrations (n8n, Power Automate, Temporal)</li>
-                        <li>Real-time status updates</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="deployment" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Deployment Options</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="{{ '/assets/images/docrouter/architecture_erp.png' | relative_url }}" alt="ERP Integration Architecture" class="w-full">
-                    <div class="p-4 bg-gray-50">
-                        <h3 class="text-lg font-medium text-gray-900 mb-2">ERP Integration</h3>
-                        <p class="text-gray-600">Direct integration with existing ERP and business systems</p>
-                    </div>
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-lg">
-                    <img src="{{ '/assets/images/docrouter/architecture_ai_enabler.png' | relative_url }}" alt="AI Tech Stack Architecture" class="w-full">
-                    <div class="p-4 bg-gray-50">
-                        <h3 class="text-lg font-medium text-gray-900 mb-2">AI Tech Stack</h3>
-                        <p class="text-gray-600">Enabling component for AI-powered applications</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="security" class="bg-white rounded-lg shadow-lg p-8 mb-12">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Security & Compliance</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">🔒</span>
-                    </div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Data Encryption</h3>
-                    <p class="text-gray-600">End-to-end encryption for documents in transit and at rest</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">📄</span>
-                    </div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">Audit Trails</h3>
-                    <p class="text-gray-600">Comprehensive logging and audit trails for compliance</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">🏢</span>
-                    </div>
-                    <h3 class="text-lg font-medium text-gray-900 mb-2">On-Premise Options</h3>
-                    <p class="text-gray-600">Self-hosted deployment for maximum data control. See the <a href="{{ '/docs/on-prem-installation/' | relative_url }}" class="text-blue-600 hover:text-blue-800">On-Prem Installation</a> guides for Docker/Kubernetes install and AWS, GCP, Azure, and LLM setup.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-gray-50 rounded-lg p-8">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4 text-center">Ready to Learn More?</h2>
-            <div class="text-center">
-                <p class="text-gray-600 mb-6">
-                    Contact us to discuss architecture options and deployment strategies for your organization.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <button onclick="openCalendly()"
-                            class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
-                        Schedule Architecture Review
-                    </button>
-                    <a href="https://github.com/analytiq-hub/doc-router"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 no-underline">
-                        View Source Code
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+<div class="flex justify-center my-8">
+  <img src="{{ '/assets/images/docrouter/doc-router-arch.png' | relative_url }}" alt="DocRouter system architecture: frontend, backend, MongoDB, AWS, and LLM providers" class="w-full max-w-4xl rounded-lg shadow-md ring-1 ring-gray-200">
 </div>
+
+On-prem, the same services run under Docker Compose or Kubernetes and call managed cloud APIs for storage, OCR, email, and models. See the [on-prem architecture diagram]({{ '/docs/on-prem-installation/' | relative_url }}).
+
+### Request path
+
+1. UI or SDK/REST client calls the FastAPI backend (org-scoped routes under `/v0/orgs/{org_id}/…`).
+2. Synchronous work (auth, CRUD, reads) completes in the API process.
+3. Heavy work (OCR, LLM, flow execution, outbound webhooks) is enqueued; workers process messages and update MongoDB (and document state).
+4. Clients poll status, subscribe via webhooks, or inspect Flow execution logs.
+
+Worker pool sizes are configurable per queue (`ocr`, `llm`, `kb_index`, `webhook`, `flow_run`).
+
+## Document pipeline
+
+The default extraction path is tag- and prompt-driven:
+
+1. **Upload** — Document stored; tags select which prompts apply ([Tags]({{ '/docs/tags/' | relative_url }}), [Quick Start]({{ '/docs/quick-start/' | relative_url }})).
+2. **OCR** — Org OCR mode runs (e.g. Textract); normalized OCR payload stored for extraction and search ([Platform]({{ '/docs/platform/' | relative_url }})).
+3. **LLM extraction** — Matching [prompts]({{ '/docs/prompts/' | relative_url }}) and optional [schemas]({{ '/docs/schemas/' | relative_url }}) produce structured results via LiteLLM.
+4. **Review** — UI and Document Agent support human correction and re-runs.
+5. **Export / notify** — REST/SDK download, webhooks, or automation (below).
+
+Statuses progress through states such as `ocr_completed` → `llm_processing` → `llm_completed` (or failure). This fixed pipeline is what most orgs start with; Flows and external workflows extend or replace the “what happens after upload” story.
+
+## Automation layer (workflows)
+
+Customers need more than a fixed Upload → OCR → LLM path: branching, schedules, email/drive triggers, agents, and delivery to ERP or review queues. DocRouter supports two tiers — see [Workflows]({{ '/docs/workflows/' | relative_url }}).
+
+### Built-in: DocRouter Flows
+
+[DocRouter Flows]({{ '/docs/flows/' | relative_url }}) is a first-party visual DAG editor and runtime in the same deployment (no separate Temporal/n8n cluster required).
+
+```text
+Next.js Flows UI  ──REST──►  FastAPI (flows, credentials)
+                                    │
+                         MongoDB: flows, revisions,
+                         executions, triggers, blobs, queue
+                                    │
+                                    ▼
+                         Worker (flow_run) → run_flow()
+```
+
+| Concern | Behavior |
+| ------- | -------- |
+| Authoring | Canvas save → immutable `flow_revisions`; activate registers `flow_triggers` |
+| Run | Trigger → `flow_executions` queued → worker walks the DAG with per-node checkpoints |
+| Document nodes | Split, OCR, LLM, and related DocRouter nodes in `docrouter_flows` |
+| Generic engine | Branch, merge, HTTP, code, agents, credentials in `analytiq_data/flows` |
+| Data between nodes | `FlowItem` (JSON + binary refs in GridFS) |
+
+Triggers include manual, schedule, webhook, chat, poll, and document events. Execution history (inputs, outputs, timing, logs) is available in the UI. Details: [Flows]({{ '/docs/flows/' | relative_url }}) and the [Flows blog post]({{ site.baseurl }}{% post_url 2026-06-21-docrouter-flows-visual-workflow-automation-for-intelligent-document-processing %}).
+
+### External workflow platforms
+
+When automation lives outside DocRouter, treat DocRouter as the document/OCR/LLM service and orchestrate from elsewhere:
+
+| Platform | Role |
+| -------- | ---- |
+| [n8n]({{ '/docs/n8n/' | relative_url }}) | Visual flows with community nodes and SaaS connectors |
+| [Power Automate]({{ '/docs/power-automate/' | relative_url }}) | Microsoft cloud flows via the DocRouter custom connector |
+| [Temporal]({{ '/docs/temporal/' | relative_url }}) | Durable coded orchestration |
+| [Webhooks]({{ '/docs/webhooks/' | relative_url }}) + [REST API]({{ '/docs/rest-api/' | relative_url }}) | Event-driven or pull-based custom backends |
+
+Product webhooks (extraction completed, etc.) are distinct from Flow webhook *triggers*.
+
+## Deployment topology
+
+| Mode | What you run | Cloud / LLM config |
+| ---- | ------------ | ------------------ |
+| **Hosted SaaS** | Nothing — [app.docrouter.ai](https://app.docrouter.ai) | Provided for you ([Platform]({{ '/docs/platform/' | relative_url }})) |
+| **Self-hosted** | Frontend, backend, workers, MongoDB, reverse proxy | You supply AWS/GCP/Azure and LLM keys ([On-Prem Installation]({{ '/docs/on-prem-installation/' | relative_url }})) |
+
+Self-host via [Docker Compose]({{ '/docs/docker-compose-install/' | relative_url }}) or [Kubernetes]({{ '/docs/kubernetes-install/' | relative_url }}). DocRouter does not require AWS Lambda/ECS/EKS for on-prem; it uses cloud *APIs* (S3, Textract, SES, Bedrock, Vertex, Foundry, etc.) as configured.
+
+## Security & credentials
+
+- Documents and secrets use encryption in transit and at rest where configured for the deployment.
+- Deployment-wide cloud credentials live in MongoDB `cloud_config` (AWS, GCP, Azure); per-provider LLM keys in encrypted `llm_providers`.
+- Org and role-based access control scopes documents, prompts, and flows.
+- Audit-oriented logging supports compliance review; enable CloudTrail (and equivalents) in your cloud accounts for infrastructure audit.
+
+Admin UIs: **Account → Development** for AWS / GCP / Azure setup and LLM Manager. See [LLM Configuration]({{ '/docs/llm-configuration/' | relative_url }}).
+
+## Integration patterns
+
+How DocRouter typically sits in a larger stack (not alternate product architectures):
+
+<div class="grid md:grid-cols-2 gap-6 my-6">
+  <div>
+    <img src="{{ '/assets/images/docrouter/architecture_erp.png' | relative_url }}" alt="DocRouter feeding structured data into an ERP" class="w-full rounded-lg shadow-md ring-1 ring-gray-200">
+    <p class="text-sm text-gray-600 mt-2"><strong>ERP / ops systems</strong> — Extract with prompts or Flows, then POST or sync into ERP, EHR, or databases.</p>
+  </div>
+  <div>
+    <img src="{{ '/assets/images/docrouter/architecture_ai_enabler.png' | relative_url }}" alt="DocRouter as an AI document layer in a larger application stack" class="w-full rounded-lg shadow-md ring-1 ring-gray-200">
+    <p class="text-sm text-gray-600 mt-2"><strong>AI application layer</strong> — Use DocRouter as the document understanding service behind your own product UI and agents.</p>
+  </div>
+</div>
+
+## Related docs
+
+- [How It Works]({{ '/docs/how-it-works/' | relative_url }}) — User-facing pipeline
+- [Workflows]({{ '/docs/workflows/' | relative_url }}) / [Flows]({{ '/docs/flows/' | relative_url }}) — Automation
+- [Platform]({{ '/docs/platform/' | relative_url }}) — Clouds, LLMs, OCR modes
+- [On-Prem Installation]({{ '/docs/on-prem-installation/' | relative_url }}) — Install and cloud setup
+- [Open Source]({{ '/docs/open-source/' | relative_url }}) — License and source
+- [REST API]({{ '/docs/rest-api/' | relative_url }}) / [Python SDK]({{ '/docs/python-sdk/' | relative_url }}) / [TypeScript SDK]({{ '/docs/typescript-sdk/' | relative_url }}) — Programmatic access

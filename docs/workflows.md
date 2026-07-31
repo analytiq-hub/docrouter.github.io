@@ -73,6 +73,7 @@ DocRouter exposes a full suite of <a href="/docs/rest-api">REST APIs</a>, includ
 
 ## Learn more
 
+- [Architecture]({{ '/docs/architecture/' | relative_url }}) — System overview, document pipeline, and Flows runtime
 - [DocRouter Flows]({{ '/docs/flows/' | relative_url }}) — Built-in visual automation
 - [DocRouter Flows blog post]({{ site.baseurl }}{% post_url 2026-06-21-docrouter-flows-visual-workflow-automation-for-intelligent-document-processing %}) — Visual workflow automation for IDP
 - <a href="/docs/webhooks">Webhooks</a> — Product event notifications

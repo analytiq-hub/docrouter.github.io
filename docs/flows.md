@@ -197,7 +197,7 @@ Every execution records per-node inputs, outputs, timing, and logs in the **Exec
 ## Learn more
 
 - [Flows blog post]({{ site.baseurl }}{% post_url 2026-06-21-docrouter-flows-visual-workflow-automation-for-intelligent-document-processing %}) — Visual workflow automation for IDP
-- <a href="{{ '/docs/architecture/' | relative_url }}">Architecture</a> — Flows engine and system overview
+- <a href="{{ '/docs/architecture/' | relative_url }}">Architecture</a> — System overview, document pipeline, and Flows runtime
 - <a href="{{ '/docs/prompts/' | relative_url }}">Prompts</a> — LLM instructions used by the Run LLM node
 - <a href="{{ '/docs/tags/' | relative_url }}">Tags</a> — Filter document event triggers and route uploads
 - <a href="{{ '/docs/webhooks/' | relative_url }}">Webhooks</a> — Product event notifications (distinct from flow webhook triggers)
