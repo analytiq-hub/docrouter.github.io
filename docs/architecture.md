@@ -39,7 +39,8 @@ On-prem, the same services run under Docker Compose or Kubernetes and call manag
 1. UI or SDK/REST client calls the FastAPI backend (org-scoped routes under `/v0/orgs/{org_id}/…`).
 2. Synchronous work (auth, CRUD, reads) completes in the API process.
 3. Heavy work (OCR, LLM, flow execution, outbound webhooks) is enqueued; workers process messages and update MongoDB (and document state).
-4. Clients poll status, subscribe via webhooks, or inspect Flow execution logs.
+4. Optionally, multi-step workflows are triggered
+4. Clients poll status, subscribe via webhooks, or rely on workflow nodes to send result to target system
 
 Worker pool sizes are configurable per queue (`ocr`, `llm`, `kb_index`, `webhook`, `flow_run`).
 
@@ -50,36 +51,22 @@ The default extraction path is tag- and prompt-driven:
 1. **Upload** — Document stored; tags select which prompts apply ([Tags]({{ '/docs/tags/' | relative_url }}), [Quick Start]({{ '/docs/quick-start/' | relative_url }})).
 2. **OCR** — Org OCR mode runs (e.g. Textract); normalized OCR payload stored for extraction and search ([Platform]({{ '/docs/platform/' | relative_url }})).
 3. **LLM extraction** — Matching [prompts]({{ '/docs/prompts/' | relative_url }}) and optional [schemas]({{ '/docs/schemas/' | relative_url }}) produce structured results via LiteLLM.
-4. **Review** — UI and Document Agent support human correction and re-runs.
-5. **Export / notify** — REST/SDK download, webhooks, or automation (below).
+4. Opional **Workflow steps**, including human-in-the-loop triggers
+5. **Export / notify** — REST/SDK download, webhooks, or push to ERP.
 
-Statuses progress through states such as `ocr_completed` → `llm_processing` → `llm_completed` (or failure). This fixed pipeline is what most orgs start with; Flows and external workflows extend or replace the “what happens after upload” story.
+Statuses progress through states such as `ocr_completed` → `llm_completed`. Flows and external workflows extend or replace the “what happens after upload” story.
 
 ## Automation layer (workflows)
 
-Customers need more than a fixed Upload → OCR → LLM path: branching, schedules, email/drive triggers, agents, and delivery to ERP or review queues. DocRouter supports two tiers — see [Workflows]({{ '/docs/workflows/' | relative_url }}).
+Customers need more than a fixed Upload → OCR → LLM path: branching, schedules, email/drive triggers, agents, and delivery to ERP or review queues. DocRouter supports built-in and external [workflows]({{ '/docs/workflows/' | relative_url }}).
 
 ### Built-in: DocRouter Flows
 
 [DocRouter Flows]({{ '/docs/flows/' | relative_url }}) is a first-party visual DAG editor and runtime in the same deployment (no separate Temporal/n8n cluster required).
 
-```text
-Next.js Flows UI  ──REST──►  FastAPI (flows, credentials)
-                                    │
-                         MongoDB: flows, revisions,
-                         executions, triggers, blobs, queue
-                                    │
-                                    ▼
-                         Worker (flow_run) → run_flow()
-```
-
-| Concern | Behavior |
-| ------- | -------- |
-| Authoring | Canvas save → immutable `flow_revisions`; activate registers `flow_triggers` |
-| Run | Trigger → `flow_executions` queued → worker walks the DAG with per-node checkpoints |
-| Document nodes | Split, OCR, LLM, and related DocRouter nodes in `docrouter_flows` |
-| Generic engine | Branch, merge, HTTP, code, agents, credentials in `analytiq_data/flows` |
-| Data between nodes | `FlowItem` (JSON + binary refs in GridFS) |
+<div class="my-6">
+  <img src="{{ '/assets/images/docrouter_flow_post_to_erp_or_db.png' | relative_url }}" alt="DocRouter Flows canvas with Gmail trigger, Document Split, OCR, LLM, and HTTP nodes" class="w-full rounded-lg shadow-md ring-1 ring-gray-200" />
+</div>
 
 Triggers include manual, schedule, webhook, chat, poll, and document events. Execution history (inputs, outputs, timing, logs) is available in the UI. Details: [Flows]({{ '/docs/flows/' | relative_url }}) and the [Flows blog post]({{ site.baseurl }}{% post_url 2026-06-21-docrouter-flows-visual-workflow-automation-for-intelligent-document-processing %}).
 
