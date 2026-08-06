@@ -168,7 +168,7 @@ image: /assets/images/og-default.png
             </p>
         </section>
 
-        <!-- Platform capabilities -->
+        <!-- Platform capabilities
         <section class="mb-16 md:mb-20">
             <div class="text-center mb-10">
                 <p class="enterprise-section-label mb-3">DocRouter Platform</p>
@@ -207,7 +207,7 @@ image: /assets/images/og-default.png
                     <p class="text-slate-600 text-sm leading-relaxed">REST APIs, SDKs, webhooks, and N8N nodes for seamless system connectivity.</p>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Outcomes for operators -->
         <section class="mb-16 md:mb-20">
