@@ -364,17 +364,23 @@ image: /assets/images/og-default.png
         <!-- Security & deployment -->
         <section class="mb-16 md:mb-20">
             <div class="rounded-xl bg-[#1a2b4c] text-white p-8 md:p-12">
-                <div class="grid md:grid-cols-2 gap-10 items-center">
-                    <div>
+                <div class="grid md:grid-cols-2 gap-10 items-stretch">
+                    <div class="flex flex-col">
                         <p class="enterprise-section-label text-blue-300 mb-3">Enterprise ready</p>
                         <h2 class="text-2xl md:text-3xl font-bold mb-4">Deploy your way</h2>
                         <p class="text-slate-300 leading-relaxed mb-6">
                             SaaS or on-premises. API-first architecture with sandbox environments, role-based access, and audit-ready workflows.
                         </p>
-                        <a href="{{ '/docs/on-prem-installation/' | relative_url }}"
-                           class="inline-flex items-center text-blue-300 hover:text-white font-medium text-sm no-underline transition-colors">
-                            On-premises deployment guide →
-                        </a>
+                        <div class="mt-auto flex flex-wrap items-center gap-x-6 gap-y-2">
+                            <a href="https://app.docrouter.ai"
+                               class="inline-flex items-center whitespace-nowrap text-blue-300 hover:text-white font-medium text-sm no-underline transition-colors">
+                                SaaS login →
+                            </a>
+                            <a href="{{ '/docs/on-prem-installation/' | relative_url }}"
+                               class="inline-flex items-center whitespace-nowrap text-blue-300 hover:text-white font-medium text-sm no-underline transition-colors">
+                                On-prem deployment →
+                            </a>
+                        </div>
                     </div>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="rounded-lg bg-white/5 border border-white/10 p-4">
