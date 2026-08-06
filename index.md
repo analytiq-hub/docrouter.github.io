@@ -404,39 +404,24 @@ image: /assets/images/og-default.png
             </div>
         </section>
 
-        <!-- Developer section -->
+        <!-- Adoption path: turnkey + open source -->
         <section class="mb-16 md:mb-20">
             <div class="text-center mb-10">
-                <p class="enterprise-section-label mb-3">For developers</p>
-                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4">Built for developers, designed for business users</h2>
+                <p class="enterprise-section-label mb-3">Choose your path</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4">Turnkey when you want results. Open source when you want control.</h2>
                 <p class="text-slate-600 text-lg max-w-2xl mx-auto">
-                    Give your technical team the tools and support they need to integrate seamlessly.
+                    Have us deploy and support DocRouter—or install and integrate it yourself.
                 </p>
             </div>
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="enterprise-card p-8">
-                    <h3 class="text-xl font-semibold text-[#1a2b4c] mb-4">What your developers get</h3>
+                    <h3 class="text-xl font-semibold text-[#1a2b4c] mb-2">Turnkey deployment</h3>
+                    <p class="text-slate-600 text-sm mb-4">We stand up DocRouter for your environment and keep it running.</p>
                     <ul class="text-slate-600 space-y-3 text-sm mb-6">
-                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> REST APIs, Python &amp; TypeScript SDKs, N8N nodes, MCP server</li>
-                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Webhooks for real-time event delivery</li>
-                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Sandbox environment for testing integrations</li>
-                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Enterprise-grade security and compliance</li>
-                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Dedicated developer support and technical guidance</li>
-                    </ul>
-                    <div class="flex flex-wrap gap-2">
-                        <a href="{{ '/docs/rest-api/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline px-3 py-1.5 rounded-md bg-blue-50">API docs</a>
-                        <a href="{{ '/docs/python-sdk/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline px-3 py-1.5 rounded-md bg-blue-50">Python SDK</a>
-                        <a href="{{ '/docs/typescript-sdk/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline px-3 py-1.5 rounded-md bg-blue-50">TypeScript SDK</a>
-                    </div>
-                </div>
-                <div class="enterprise-card p-8">
-                    <h3 class="text-xl font-semibold text-[#1a2b4c] mb-4">Implementation services &amp; support</h3>
-                    <ul class="text-slate-600 space-y-3 text-sm mb-6">
-                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Custom integration architecture design</li>
-                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> End-to-end implementation and deployment</li>
+                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Architecture design and system integration</li>
+                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> End-to-end deployment (SaaS or on-prem)</li>
                         <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Team training and knowledge transfer</li>
-                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Claude integration for intelligent code generation</li>
-                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Ongoing technical support and maintenance</li>
+                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Ongoing support and maintenance</li>
                     </ul>
                     <a href="{{ site.calendly_url }}"
                        target="_blank"
@@ -444,6 +429,25 @@ image: /assets/images/og-default.png
                        class="enterprise-btn-primary inline-flex items-center justify-center px-5 py-2.5 rounded-lg font-medium text-sm transition-colors duration-200 no-underline">
                         Discuss implementation
                     </a>
+                </div>
+                <div class="enterprise-card p-8">
+                    <h3 class="text-xl font-semibold text-[#1a2b4c] mb-2">Open source, self-directed</h3>
+                    <p class="text-slate-600 text-sm mb-4">Run DocRouter yourself with the same APIs and SDKs we use in production.</p>
+                    <ul class="text-slate-600 space-y-3 text-sm mb-6">
+                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Open-source core you can inspect and self-host</li>
+                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> REST APIs, Python &amp; TypeScript SDKs, N8N nodes, MCP server</li>
+                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Webhooks and sandbox for integration testing</li>
+                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Docs for on-prem install and quick start</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="https://github.com/analytiq-hub/doc-router"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline px-3 py-1.5 rounded-md bg-blue-50">GitHub</a>
+                        <a href="{{ '/docs/rest-api/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline px-3 py-1.5 rounded-md bg-blue-50">API docs</a>
+                        <a href="{{ '/docs/python-sdk/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline px-3 py-1.5 rounded-md bg-blue-50">Python SDK</a>
+                        <a href="{{ '/docs/typescript-sdk/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline px-3 py-1.5 rounded-md bg-blue-50">TypeScript SDK</a>
+                    </div>
                 </div>
             </div>
         </section>
