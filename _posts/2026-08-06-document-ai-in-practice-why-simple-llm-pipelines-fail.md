@@ -8,11 +8,7 @@ categories: [ai, engineering]
 description: "Uploading a PDF to an LLM is easy. Building reliable document AI is not. The first edition of Document AI in Practice explores why simple pipelines fail when documents become large, messy, and operationally important."
 ---
 
-I'm launching **Document AI in Practice**, a newsletter about building reliable document-processing systems—not just impressive demos.
-
-I'll cover OCR, large document packets, workflow orchestration, human review, AI agents, and lessons from real deployments at [DocRouter.AI](https://docrouter.ai).
-
-The first edition explores why simple LLM pipelines often fail when documents become large, messy, and operationally important.
+In this post we explore why simple LLM pipelines often fail when documents become large, messy, and operationally important.
 
 ---
 
@@ -301,18 +297,18 @@ The winning architecture will not necessarily be the one that selects the perfec
 
 ---
 
-## What comes next
+## What DocRouter.AI solves
 
-In future editions of Document AI in Practice, we will explore these topics in greater detail, including:
+These are not open research questions for us. They are the problems DocRouter.AI was built to address in production:
 
-- How to evaluate language models on real documents
-- When to use OCR versus a multimodal model
-- How to process documents with hundreds of pages
-- How to compare quality, latency, and cost
-- How to build reliable multi-step workflows
-- How to use human review efficiently
-- How to validate model output against external systems
+- Evaluate language models on real documents—not vendor benchmarks
+- Choose OCR or a multimodal model based on the page, not a single default
+- Process packets with hundreds of pages through orchestrated workflows
+- Compare quality, latency, and cost across models and pipelines
+- Build reliable multi-step workflows with branching, tools, and state
+- Use human review only for uncertain or high-stakes results
+- Validate model output against external systems before it becomes a business decision
 
 Document AI is no longer limited by whether a model can read a PDF.
 
-The real challenge is building a system that can process diverse documents reliably, economically, and at scale.
+With DocRouter.AI, you can process diverse documents reliably, economically, and at scale.
