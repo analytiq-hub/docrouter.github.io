@@ -107,13 +107,74 @@ image: /assets/images/og-default.png
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
     <main>
 
+        <!-- Capabilities DocRouter solves — framed for business owners -->
+        <section class="mb-16 md:mb-20">
+            <div class="text-center mb-10">
+                <p class="enterprise-section-label mb-3">What DocRouter solves</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1a2b4c] mb-4">Production document AI that works at scale</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    DocRouter is built for large packets, messy pages, cost control, system validation, and human review when confidence is low.
+                </p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="enterprise-card p-6">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Orchestrate large packets</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Split, classify, route, and reconcile 500-page medical, legal, or insurance packets—not a single model call.</p>
+                </div>
+                <div class="enterprise-card p-6">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Control cost at scale</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Route easy work to inexpensive models and reserve stronger models for hard cases—so quality stays high without runaway spend.</p>
+                </div>
+                <div class="enterprise-card p-6">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Handle messy real documents</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Combine OCR, vision, multimodal models, and review for handwriting, faxes, stamps, rotated pages, and mixed packets.</p>
+                </div>
+                <div class="enterprise-card p-6">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Validate against your systems</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Check extracted results against policy databases, ERPs, claims systems, and contracts before they become business decisions.</p>
+                </div>
+                <div class="enterprise-card p-6">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Escalate uncertain results</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Send low-confidence or high-stakes cases to human review—and keep automation on the path when confidence is high.</p>
+                </div>
+                <div class="enterprise-card p-6">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Stay flexible as models change</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Swap models, OCR engines, and workflow steps without rebuilding everything when prices and capabilities shift.</p>
+                </div>
+            </div>
+            <p class="text-center mt-8 text-sm text-slate-600">
+                Read how we approach it in
+                <a href="{% post_url 2026-08-06-document-ai-in-practice-why-simple-llm-pipelines-fail %}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">Document AI in Practice</a>
+                or download the
+                <a href="{{ '/assets/files/document-ai-in-practice-why-simple-llm-pipelines-fail.pdf' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">white paper PDF</a>.
+            </p>
+        </section>
+
         <!-- Platform capabilities -->
         <section class="mb-16 md:mb-20">
             <div class="text-center mb-10">
-                <p class="enterprise-section-label mb-3">Platform</p>
+                <p class="enterprise-section-label mb-3">DocRouter Platform</p>
                 <h2 class="text-3xl md:text-4xl font-bold text-[#1a2b4c] mb-4">Built for operational scale</h2>
                 <p class="text-lg text-slate-600 max-w-2xl mx-auto">
-                    Everything you need to turn document chaos into reliable, structured data pipelines.
+                    Orchestrate extraction, validation, routing, and human review—so document work becomes a reliable business process, not a one-off prompt.
                 </p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -148,31 +209,31 @@ image: /assets/images/og-default.png
             </div>
         </section>
 
-        <!-- Problems eliminated -->
+        <!-- Outcomes for operators -->
         <section class="mb-16 md:mb-20">
             <div class="enterprise-card p-8 md:p-10">
-                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-8 text-center">The problems we eliminate</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-8 text-center">What operations teams get</h2>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="text-center md:text-left">
                         <div class="w-11 h-11 rounded-lg bg-slate-100 flex items-center justify-center mx-auto md:mx-0 mb-4">
                             <svg class="w-5 h-5 text-[#1a2b4c]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
                         </div>
-                        <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Manual data entry</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Stop wasting hours typing data from invoices, manifests, and reports.</p>
+                        <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Less manual rekeying</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Stop spending hours typing data from invoices, manifests, claims, and reports into downstream systems.</p>
                     </div>
                     <div class="text-center md:text-left">
                         <div class="w-11 h-11 rounded-lg bg-slate-100 flex items-center justify-center mx-auto md:mx-0 mb-4">
-                            <svg class="w-5 h-5 text-[#1a2b4c]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                            <svg class="w-5 h-5 text-[#1a2b4c]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                         </div>
-                        <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Human errors</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Eliminate costly mistakes and compliance issues from manual entry.</p>
+                        <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Fewer costly exceptions</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Catch uncertain or conflicting results before they become compliance issues, payout delays, or data quality incidents.</p>
                     </div>
                     <div class="text-center md:text-left">
                         <div class="w-11 h-11 rounded-lg bg-slate-100 flex items-center justify-center mx-auto md:mx-0 mb-4">
                             <svg class="w-5 h-5 text-[#1a2b4c]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
                         </div>
-                        <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Growing backlog</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Clear document backlogs with automated, always-on processing.</p>
+                        <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Backlogs that clear</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Keep high-volume document work moving with automated pipelines that escalate only the hard cases.</p>
                     </div>
                 </div>
             </div>
@@ -404,9 +465,9 @@ image: /assets/images/og-default.png
         <!-- CTA band -->
         <section class="mb-16 md:mb-20">
             <div class="rounded-xl border border-slate-200 bg-slate-50 p-8 md:p-12 text-center">
-                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4">Ready to transform your document workflows?</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4">Ready for production document AI?</h2>
                 <p class="text-slate-600 mb-8 max-w-xl mx-auto">
-                    Schedule a demo to see how DocRouter can streamline your operations—or launch the app to get started today.
+                    See how DocRouter handles your real document packets—with cost control, validation, and human review where it matters.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-3 justify-center">
                     <a href="{{ site.calendly_url }}"
