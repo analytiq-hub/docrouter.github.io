@@ -276,7 +276,7 @@ image: /assets/images/og-default.png
                 <a href="{{ '/case-studies/supply-chain/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
                     <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Pilot</p>
                     <p class="text-3xl font-bold text-blue-600 mb-2">Hours → min</p>
-                    <p class="text-[#1a2b4c] font-semibold mb-2">Trade document processing</p>
+                    <p class="text-[#1a2b4c] font-semibold mb-2">Supply chain document processing</p>
                     <p class="text-slate-600 text-sm mb-4">Pilot for bills of lading, commodity reports, and related trade documents—structured extraction for supply chain operations.</p>
                     <span class="text-blue-600 text-sm font-medium">Read case study →</span>
                 </a>
