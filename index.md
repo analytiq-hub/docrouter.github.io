@@ -268,8 +268,8 @@ image: /assets/images/og-default.png
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 <a href="{{ '/case-studies/insurance_wholesaler/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
                     <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Pilot</p>
-                    <p class="text-3xl font-bold text-blue-600 mb-2">75%</p>
-                    <p class="text-[#1a2b4c] font-semibold mb-2">Less manual work</p>
+                    <p class="text-3xl font-bold text-blue-600 mb-2">Acord Forms</p>
+                    <p class="text-[#1a2b4c] font-semibold mb-2">Insurance Wholesaler</p>
                     <p class="text-slate-600 text-sm mb-4">Completed pilot with a specialty insurance wholesaler—we handled ACORD form processing and ALIS clearance automation end to end.</p>
                     <span class="text-blue-600 text-sm font-medium">Read case study →</span>
                 </a>
