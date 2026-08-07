@@ -3,7 +3,7 @@ layout: post
 title: "Offline Evaluation Frameworks for AI Agents"
 date: 2026-08-07 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
-image: /assets/images/ai_agent_offline_evaluation.png
+image: /assets/images/offline-evaluation-ai-agents-splash.png
 categories: [ai, engineering]
 description: "Offline evaluation for DocRouter’s Document Agent (Smart Agent Kit), plus the same pattern applied to medical insurance claim evaluation."
 ---
