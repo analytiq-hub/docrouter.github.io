@@ -25,7 +25,6 @@ The pilot validated the following for this use case:
 - **Document processing**: Handwritten and typed ACORD forms, including complex layouts and crossed-out text
 - **Data extraction**: Key fields such as insured name, address, DOB, occupation, and agency information
 - **Classification**: Personal vs. commercial lines and binding vs. brokerage categorization
-- **ALIS integration path**: API-based clearance search and submission creation (tested in pilot scope)
 - **Human-in-the-loop review**: Confidence scoring to flag low-confidence extractions before downstream steps
 - **Compliance-oriented design**: Temporary data handling and audit-friendly review workflows
 
