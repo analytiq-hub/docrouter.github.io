@@ -47,6 +47,21 @@ permalink: /case-studies/
                     title="Consulting: Epic EHR Order Automation"
                     description="Custom Epic integration for DME order processing."
                     url="/case-studies/epic_dme_order_processing/" %}
+                {% include case-study-card.html
+                    badge="Consulting"
+                    title="Consulting: Lab Informatics Coding Copilot"
+                    description="VS Code / Claude / MCP coding agent for Starlims LIMS development."
+                    url="/case-studies/starlims-copilot/" %}
+                {% include case-study-card.html
+                    badge="Consulting"
+                    title="Consulting: Lab Informatics Support Chat"
+                    description="In-product RAG support agent for Starlims—SigAgent-based AI portal."
+                    url="/case-studies/starlims-chat/" %}
+                {% include case-study-card.html
+                    badge="Consulting"
+                    title="Consulting: Koch AI Book Companion"
+                    description="Multi-agent PBM book companion—memory, auth, and observability at scale."
+                    url="/case-studies/koch-ai-book-companion/" %}
             </div>
         </section>
 
