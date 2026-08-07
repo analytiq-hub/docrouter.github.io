@@ -111,7 +111,7 @@ image: /assets/images/og-default.png
         <section class="mb-16 md:mb-20">
             <div class="text-center mb-10">
                 <p class="enterprise-section-label mb-3">What DocRouter solves</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-[#1a2b4c] mb-4">Production document AI that works at scale</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1a2b4c] mb-4">Production document AI at scale</h2>
                 <p class="text-lg text-slate-600 max-w-3xl mx-auto">
                     DocRouter is built for large packets, messy pages, cost control, system validation, and human review when confidence is low.
                 </p>
