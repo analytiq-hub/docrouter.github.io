@@ -455,7 +455,7 @@ image: /assets/images/og-default.png
         <section class="mb-16 md:mb-20">
             <div class="text-center mb-8">
                 <p class="enterprise-section-label mb-3">Overview</p>
-                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c]">See DocRouter in action</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c]">Document processing, explained</h2>
             </div>
             <div class="enterprise-card p-2 max-w-4xl mx-auto">
                 <div class="relative w-full rounded-lg overflow-hidden" style="padding-bottom: 56.25%; height: 0;">
