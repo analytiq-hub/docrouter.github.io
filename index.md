@@ -263,7 +263,7 @@ image: /assets/images/og-default.png
         <section class="mb-16 md:mb-20">
             <div class="text-center mb-10">
                 <p class="enterprise-section-label mb-3">Case studies</p>
-                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4">Experience in regulated industries</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4">In regulated industries</h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 <a href="{{ '/case-studies/insurance_wholesaler/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
