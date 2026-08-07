@@ -282,18 +282,18 @@ image: /assets/images/og-default.png
                     <p class="text-slate-600 text-sm mb-4">Live on-prem DocRouter for anesthesia RCM—multi-page surgery packets classified, grouped by patient, and extracted at 99.9% precision.</p>
                     <span class="text-blue-600 text-sm font-medium">Read case study →</span>
                 </a>
-                <a href="{{ '/case-studies/insurance_wholesaler/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
-                    <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Pilot</p>
-                    <p class="text-3xl font-bold text-blue-600 mb-2">Acord Forms</p>
-                    <p class="text-[#1a2b4c] font-semibold mb-2">Insurance Wholesaler</p>
-                    <p class="text-slate-600 text-sm mb-4">Completed pilot with a specialty insurance wholesaler—we handled ACORD form processing and ALIS clearance automation end to end.</p>
-                    <span class="text-blue-600 text-sm font-medium">Read case study →</span>
-                </a>
                 <a href="{{ '/case-studies/supply-chain/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
                     <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Pilot</p>
                     <p class="text-3xl font-bold text-blue-600 mb-2">Bills of Lading</p>
                     <p class="text-[#1a2b4c] font-semibold mb-2">Supply chain document processing</p>
                     <p class="text-slate-600 text-sm mb-4">Pilot for bills of lading, commodity reports, and related trade documents—structured extraction for supply chain operations.</p>
+                    <span class="text-blue-600 text-sm font-medium">Read case study →</span>
+                </a>
+                <a href="{{ '/case-studies/starlims-copilot/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
+                    <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Consulting</p>
+                    <p class="text-3xl font-bold text-blue-600 mb-2">Coding Agent</p>
+                    <p class="text-[#1a2b4c] font-semibold mb-2">Starlims Copilot</p>
+                    <p class="text-slate-600 text-sm mb-4">VS Code / Claude / MCP coding agent for Starlims LIMS—accelerating XFD, SSL, and JavaScript development.</p>
                     <span class="text-blue-600 text-sm font-medium">Read case study →</span>
                 </a>
             </div>
