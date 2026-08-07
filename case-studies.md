@@ -16,8 +16,9 @@ permalink: /case-studies/
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
     <main>
         <section class="mb-14">
-            <p class="enterprise-section-label mb-2">DocRouter</p>
-            <h2 class="text-2xl font-bold text-[#1a2b4c] mb-6">Customers, deployments &amp; pilots</h2>
+            <p class="enterprise-section-label mb-2">Case studies</p>
+            <h2 class="text-2xl font-bold text-[#1a2b4c] mb-3">Customers, pilots &amp; consulting engagements</h2>
+            <p class="text-slate-600 text-sm mb-6 max-w-3xl">DocRouter customer and pilot work sits alongside consulting engagements that predate or are separate from the product. Badges on each card mark the type.</p>
             <div class="grid md:grid-cols-2 gap-6">
                 {% include case-study-card.html
                     badge="Customer"
@@ -34,14 +35,6 @@ permalink: /case-studies/
                     title="Pilot: Supply Chain Trade Documents"
                     description="Pilot for bills of lading, commodity reports, and related trade documents."
                     url="/case-studies/supply-chain/" %}
-            </div>
-        </section>
-
-        <section>
-            <p class="enterprise-section-label mb-2">Consulting</p>
-            <h2 class="text-2xl font-bold text-[#1a2b4c] mb-3">Projects for Document Processing and AI Agents</h2>
-            <p class="text-slate-600 text-sm mb-6 max-w-3xl">These engagements predate or are separate from the DocRouter product. They are documented as consulting projects.</p>
-            <div class="grid md:grid-cols-2 gap-6">
                 {% include case-study-card.html
                     badge="Consulting"
                     title="Consulting: DME Automation Platform"
