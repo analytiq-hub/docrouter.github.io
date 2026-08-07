@@ -171,6 +171,8 @@ header_pages:
         url: "/blog"
       - title: "Talks"
         url: "/talks"
+      - title: "Newsletter"
+        url: "https://www.linkedin.com/newsletters/document-ai-in-practice-7491166494890848256/"
   - title: "Company"
     url: "#"
     children:
@@ -296,6 +298,8 @@ site_map:
         url: "/blog"
       - title: "Talks"
         url: "/talks"
+      - title: "Newsletter"
+        url: "https://www.linkedin.com/newsletters/document-ai-in-practice-7491166494890848256/"
   - title: "Company"
     links:
       - title: "Pricing"
