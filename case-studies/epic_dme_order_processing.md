@@ -1,11 +1,11 @@
 ---
 layout: case-study
-title: "Prior Consulting: Epic EHR Order Automation"
+title: "Consulting: Epic EHR Order Automation"
 subtitle: Custom Epic integration for DME order processing
 permalink: /case-studies/epic_dme_order_processing/
 ---
 
-*This describes a **prior consulting engagement**, not a DocRouter customer deployment. We built a **custom Epic automation system** for a DME provider; it is **not** DocRouter and should not be read as a DocRouter case study.*
+*This describes a **consulting engagement**. We built a **custom Epic automation system** for a DME provider.*
 
 ## The Challenge
 
@@ -26,7 +26,7 @@ We delivered a **custom zero-touch Epic automation system** for this client that
 This was bespoke engineering for one client environment. It is separate from the DocRouter SaaS product.
 
 ![Epic EHR Integration]({{ '/assets/images/case-studies/epic-dme/epic-dme-hero.png' | relative_url }})
-*Custom Epic automation built in a prior consulting engagement*
+*Custom Epic automation built in a consulting engagement*
 
 ## Technical Approach
 

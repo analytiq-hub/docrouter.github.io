@@ -1,11 +1,11 @@
 ---
 layout: case-study
-title: "Prior Consulting: DME Automation Platform"
-subtitle: Custom healthcare document platform that informed DocRouter
+title: "Consulting: DME Automation Platform"
+subtitle: Custom healthcare document platform that informed DocRouter design
 permalink: /case-studies/dme/
 ---
 
-*This describes a **prior consulting engagement**, not a DocRouter customer deployment. We built a **custom platform** for a healthcare startup client; that work was a **precursor to DocRouter** and helped shape the product.*
+*This describes a **consulting engagement**. We built a **custom platform** for a healthcare startup client; that work was a **precursor to DocRouter** and helped shape the product.*
 
 ## Overview
 
@@ -14,7 +14,7 @@ A healthcare startup engaged us for a zero-to-ten implementation to digitize Dur
 We built their core document-processing platform from the ground up. That custom system later informed what became DocRouter.
 
 ![Illustration of a doctor with a patient in a wheelchair]({{ '/assets/images/case-studies/dme/dme.png' | relative_url }})
-*Custom DME document platform built in a prior consulting engagement*
+*Custom DME document platform built in a consulting engagement*
 
 ## The Challenge
 

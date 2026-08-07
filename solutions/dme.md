@@ -86,7 +86,7 @@ description: "Streamline DME order processing with AI. Automatically handle pres
                 </div>
             </div>
             <p class="text-center text-sm text-slate-500 mt-6">
-                <a href="{{ '/case-studies/dme/' | relative_url }}" class="text-blue-600 hover:text-blue-800 no-underline">Read the prior consulting case study →</a>
+                <a href="{{ '/case-studies/dme/' | relative_url }}" class="text-blue-600 hover:text-blue-800 no-underline">Read the consulting case study →</a>
             </p>
         </section>
 

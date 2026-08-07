@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Pilots & Engagements
-subtitle: DocRouter pilots and prior consulting work in regulated industries
+subtitle: DocRouter pilots and consulting work in regulated industries
 permalink: /case-studies/
 ---
 
@@ -33,18 +33,18 @@ permalink: /case-studies/
         </section>
 
         <section>
-            <p class="enterprise-section-label mb-2">Prior consulting</p>
-            <h2 class="text-2xl font-bold text-[#1a2b4c] mb-3">Custom platforms that informed DocRouter</h2>
-            <p class="text-slate-600 text-sm mb-6 max-w-3xl">These engagements predate or sit outside the DocRouter product. They are documented for transparency—not as DocRouter customer deployments.</p>
+            <p class="enterprise-section-label mb-2">Consulting</p>
+            <h2 class="text-2xl font-bold text-[#1a2b4c] mb-3">Projects for Document Processing and AI Agents</h2>
+            <p class="text-slate-600 text-sm mb-6 max-w-3xl">These engagements predate or are separate from the DocRouter product. They are documented as consulting projects.</p>
             <div class="grid md:grid-cols-2 gap-6">
                 {% include case-study-card.html
                     badge="Consulting"
-                    title="Prior Consulting: DME Automation Platform"
+                    title="Consulting: DME Automation Platform"
                     description="Custom healthcare document platform for a startup—precursor to DocRouter."
                     url="/case-studies/dme/" %}
                 {% include case-study-card.html
                     badge="Consulting"
-                    title="Prior Consulting: Epic EHR Order Automation"
+                    title="Consulting: Epic EHR Order Automation"
                     description="Custom Epic integration for DME order processing."
                     url="/case-studies/epic_dme_order_processing/" %}
             </div>
