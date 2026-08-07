@@ -73,8 +73,8 @@ image: /assets/images/og-default.png
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
                     </svg>
                 </div>
-                <span class="text-sm font-semibold text-[#1a2b4c]">Classify</span>
-                <span class="text-xs text-slate-500 mt-1">Tags &amp; schemas</span>
+                <span class="text-sm font-semibold text-[#1a2b4c]">Structure</span>
+                <span class="text-xs text-slate-500 mt-1">Classify, build knowledge base</span>
             </div>
             <svg class="hidden md:block enterprise-pipeline-wave" viewBox="0 0 80 24" preserveAspectRatio="none" aria-hidden="true">
                 <path d="M0 12 C20 12, 20 4, 40 10 S60 18, 80 12" vector-effect="non-scaling-stroke"/>
@@ -98,7 +98,7 @@ image: /assets/images/og-default.png
                     </svg>
                 </div>
                 <span class="text-sm font-semibold text-[#1a2b4c]">Integrate</span>
-                <span class="text-xs text-slate-500 mt-1">APIs &amp; webhooks</span>
+                <span class="text-xs text-slate-500 mt-1">Workflows &amp; APIs</span>
             </div>
         </div>
     </div>
