@@ -19,7 +19,7 @@ image: /assets/images/og-default.png
                     <span class="text-blue-600">operational documents</span>
                 </h1>
                 <p class="text-lg md:text-xl text-slate-600 mb-8 max-w-xl leading-relaxed">
-                    Extract, validate, and route structured data from invoices, manifests, ACORD forms, and any document—at enterprise scale.
+                    Extract, validate, and route structured data from invoices, manifests, insurance claims, and any document—at enterprise scale.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-3 mb-10">
                     <a href="{{ site.calendly_url }}"
