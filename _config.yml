@@ -173,6 +173,7 @@ header_pages:
         url: "/talks"
       - title: "Newsletter"
         url: "https://www.linkedin.com/newsletters/document-ai-in-practice-7491166494890848256/"
+        external: true
   - title: "Company"
     url: "#"
     children:
@@ -300,6 +301,7 @@ site_map:
         url: "/talks"
       - title: "Newsletter"
         url: "https://www.linkedin.com/newsletters/document-ai-in-practice-7491166494890848256/"
+        external: true
   - title: "Company"
     links:
       - title: "Pricing"
