@@ -434,9 +434,9 @@ image: /assets/images/og-default.png
                     <h3 class="text-xl font-semibold text-[#1a2b4c] mb-2">Open source, self-directed</h3>
                     <p class="text-slate-600 text-sm mb-4">Run DocRouter yourself with the same APIs and SDKs we use in production.</p>
                     <ul class="text-slate-600 space-y-3 text-sm mb-6">
-                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Open-source core you can inspect and self-host</li>
-                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> REST APIs, Python &amp; TypeScript SDKs, N8N nodes, MCP server</li>
-                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Webhooks and sandbox for integration testing</li>
+                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Open-source core you can self-host</li>
+                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> REST APIs, MCP server, N8N nodes</li>
+                        <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Workflows support</li>
                         <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> Docs for on-prem install and quick start</li>
                     </ul>
                     <div class="flex flex-wrap gap-2">
@@ -444,9 +444,8 @@ image: /assets/images/og-default.png
                            target="_blank"
                            rel="noopener noreferrer"
                            class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline px-3 py-1.5 rounded-md bg-blue-50">GitHub</a>
+                        <a href="{{ '/docs/on-prem-installation/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline px-3 py-1.5 rounded-md bg-blue-50">Install docs</a>
                         <a href="{{ '/docs/rest-api/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline px-3 py-1.5 rounded-md bg-blue-50">API docs</a>
-                        <a href="{{ '/docs/python-sdk/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline px-3 py-1.5 rounded-md bg-blue-50">Python SDK</a>
-                        <a href="{{ '/docs/typescript-sdk/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline px-3 py-1.5 rounded-md bg-blue-50">TypeScript SDK</a>
                     </div>
                 </div>
             </div>
