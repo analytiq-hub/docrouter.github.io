@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Pilots & Engagements
-subtitle: DocRouter pilots and consulting work in regulated industries
+title: Customers, Pilots & Engagements
+subtitle: Live DocRouter deployments, pilots, and consulting work in regulated industries
 permalink: /case-studies/
 ---
 
@@ -15,6 +15,18 @@ permalink: /case-studies/
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
     <main>
+        <section class="mb-14">
+            <p class="enterprise-section-label mb-2">DocRouter customers</p>
+            <h2 class="text-2xl font-bold text-[#1a2b4c] mb-6">Live production deployments</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                {% include case-study-card.html
+                    badge="Customer"
+                    title="Customer: Boston Medical Data"
+                    description="Live on-prem DocRouter for anesthesia RCM—175,000+ multi-page packets processed at 99.9% precision."
+                    url="/case-studies/boston-medical-data/" %}
+            </div>
+        </section>
+
         <section class="mb-14">
             <p class="enterprise-section-label mb-2">DocRouter pilots</p>
             <h2 class="text-2xl font-bold text-[#1a2b4c] mb-6">Completed and exploratory pilots</h2>

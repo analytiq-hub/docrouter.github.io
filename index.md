@@ -275,6 +275,13 @@ image: /assets/images/og-default.png
                 <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4">In regulated industries</h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <a href="{{ '/case-studies/boston-medical-data/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
+                    <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Deployment</p>
+                    <p class="text-3xl font-bold text-blue-600 mb-2">175K+ docs</p>
+                    <p class="text-[#1a2b4c] font-semibold mb-2">Boston Medical Data</p>
+                    <p class="text-slate-600 text-sm mb-4">Live on-prem DocRouter for anesthesia RCM—multi-page surgery packets classified, grouped by patient, and extracted at 99.9% precision.</p>
+                    <span class="text-blue-600 text-sm font-medium">Read case study →</span>
+                </a>
                 <a href="{{ '/case-studies/insurance_wholesaler/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
                     <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Pilot</p>
                     <p class="text-3xl font-bold text-blue-600 mb-2">Acord Forms</p>
@@ -288,13 +295,6 @@ image: /assets/images/og-default.png
                     <p class="text-[#1a2b4c] font-semibold mb-2">Supply chain document processing</p>
                     <p class="text-slate-600 text-sm mb-4">Pilot for bills of lading, commodity reports, and related trade documents—structured extraction for supply chain operations.</p>
                     <span class="text-blue-600 text-sm font-medium">Read case study →</span>
-                </a>
-                <a href="{{ '/solutions/clinical-trials/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
-                    <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Pilot</p>
-                    <p class="text-3xl font-bold text-blue-600 mb-2">Invoices</p>
-                    <p class="text-[#1a2b4c] font-semibold mb-2">Clinical trial billing</p>
-                    <p class="text-slate-600 text-sm mb-4">Pilot for clinical trial invoices and expense reports—structured extraction and contract-term validation for research operations.</p>
-                    <span class="text-blue-600 text-sm font-medium">Learn more →</span>
                 </a>
             </div>
         </section>
