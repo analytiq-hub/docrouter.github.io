@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "DocRouter.AI — AI Data Layer for Operational Documents"
-description: "DocRouter is the AI data layer for operational documents. Extract structured data from invoices, manifests, insurance forms, and more—cut manual data entry by 90% and processing errors by 95%."
+description: "DocRouter is the AI data layer for operational documents. Extract structured data from invoices, manifests, insurance forms, and more—cut manual data entry by up to 90% and processing errors by up to 95%."
 image: /assets/images/og-default.png
 ---
 
@@ -245,18 +245,27 @@ image: /assets/images/og-default.png
             <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-10 text-center">Document automation results</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
+                    <div class="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-1">Up to</div>
                     <div class="text-4xl md:text-5xl font-bold enterprise-metric mb-2">90%</div>
                     <div class="text-slate-600 font-medium">Faster processing</div>
                 </div>
                 <div class="text-center">
+                    <div class="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-1">Up to</div>
                     <div class="text-4xl md:text-5xl font-bold enterprise-metric mb-2">95%</div>
                     <div class="text-slate-600 font-medium">Error reduction</div>
                 </div>
                 <div class="text-center">
+                    <div class="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-1">Potential</div>
                     <div class="text-4xl md:text-5xl font-bold enterprise-metric mb-2">$50K+</div>
                     <div class="text-slate-600 font-medium">Annual savings</div>
                 </div>
             </div>
+            <p class="text-center mt-8 text-sm text-slate-600">
+                Read how we approach
+                <a href="{% post_url 2026-08-07-offline-evaluation-for-ai-agents %}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">Evaluation Frameworks for AI Agents</a>
+                or download the
+                <a href="{{ '/assets/files/Offline_Evaluation_Frameworks_for_AI_Agents_White_Paper.pdf' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">white paper PDF</a>.
+            </p>
         </section>
 
         <!-- Customer proof -->
