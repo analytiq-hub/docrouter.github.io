@@ -14,11 +14,31 @@ Language models are **stochastic**: a one-line prompt change can ripple across m
 
 That is what [offline evaluation infrastructure](/ai/programming/tutorials/how-to-train-your-ai-agent/) is for: you cannot improve what you do not measure.
 
+<div class="not-prose my-8">
+  <aside class="flex gap-3 items-start rounded-xl bg-amber-50 px-4 py-4 ring-1 ring-amber-100">
+    <span class="flex-shrink-0 mt-0.5 w-9 h-9 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg" aria-hidden="true">!</span>
+    <p class="m-0 pt-1.5 text-[#1a2b4c] font-semibold leading-snug">Stochastic systems break silently across cases. Offline evaluation is how you catch that before you ship.</p>
+  </aside>
+</div>
+
 ## Offline vs online evaluation
 
 **Offline evaluation** uses controlled, replayable datasets to measure behavior and regressions. You define representative cases and labeled expectations, run the agent, score the results, and repeat the suite after changes.
 
 **Online evaluation** measures behavior on real production traffic using telemetry, automated checks, product outcomes, and explicit user feedback. Typical setups capture tool calls and traces with **OpenTelemetry** and collect signals such as thumbs-up / thumbs-down or textual feedback for engineering and product teams.
+
+<div class="not-prose grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
+  <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+    <p class="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">Offline</p>
+    <p class="text-[#1a2b4c] font-semibold m-0 mb-2">Controlled, replayable datasets</p>
+    <p class="text-sm text-slate-600 m-0 leading-relaxed">Measure behavior and regressions before you ship—labeled cases, suite re-runs, deterministic graders, LLM rubrics.</p>
+  </div>
+  <div class="rounded-xl border border-blue-200 bg-blue-50/60 p-5">
+    <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-2">Online</p>
+    <p class="text-[#1a2b4c] font-semibold m-0 mb-2">Real production traffic</p>
+    <p class="text-sm text-slate-600 m-0 leading-relaxed">Telemetry, automated checks, product outcomes, and user feedback (OpenTelemetry, thumbs-up / thumbs-down) for engineering and product teams.</p>
+  </div>
+</div>
 
 Our product [SigAgent.AI](https://sigagent.ai) implements online evaluation for Claude agents. We will cover online evaluation in a later post.
 
@@ -44,7 +64,23 @@ The same basic pattern applies to many other agents:
 
 Figures 2 and 3 use the same architecture:
 
-**agent → dataset → tasks/tags → test run → trials → per-task evaluation → test-run aggregates**
+<div class="not-prose my-8 overflow-x-auto">
+  <div class="flex flex-wrap items-center justify-center gap-2 text-sm font-medium text-[#1a2b4c]">
+    <span class="rounded-lg bg-blue-50 border border-blue-200 px-3 py-1.5">agent</span>
+    <span class="text-slate-400">→</span>
+    <span class="rounded-lg bg-sky-50 border border-sky-200 px-3 py-1.5">dataset</span>
+    <span class="text-slate-400">→</span>
+    <span class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-1.5">tasks/tags</span>
+    <span class="text-slate-400">→</span>
+    <span class="rounded-lg bg-rose-50 border border-rose-200 px-3 py-1.5">test run</span>
+    <span class="text-slate-400">→</span>
+    <span class="rounded-lg bg-amber-50 border border-amber-200 px-3 py-1.5">trials</span>
+    <span class="text-slate-400">→</span>
+    <span class="rounded-lg bg-emerald-50 border border-emerald-200 px-3 py-1.5">per-task eval</span>
+    <span class="text-slate-400">→</span>
+    <span class="rounded-lg bg-slate-100 border border-slate-300 px-3 py-1.5">aggregates</span>
+  </div>
+</div>
 
 Figure 2 shows the **Smart Agent Kit**, which we built for DocRouter’s Document Agent. Figure 3 applies the same pattern to a **medical insurance coverage-assessment agent**. The medical example is a design, not a product we have shipped.
 
@@ -96,19 +132,33 @@ we can accidentally turn that into:
 
 Instead, separate three concepts:
 
-|                             | Role                                            | Example                                               |
-| --------------------------- | ----------------------------------------------- | ----------------------------------------------------- |
-| **Ground-truth facts**      | Things that objectively must be true            | Required field names, valid JSON, expected tag        |
-| **Reference solution**      | One known-good example                          | A schema/prompt pair known to work                    |
-| **Assertions / invariants** | Conditions any acceptable solution must satisfy | “Includes patient name and dates”; “schema validates” |
+<div class="not-prose grid sm:grid-cols-3 gap-3 my-8">
+  <div class="rounded-xl border border-emerald-200 bg-emerald-50/70 p-4">
+    <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700 mb-1">Ground-truth facts</p>
+    <p class="text-sm text-[#1a2b4c] font-medium m-0 mb-2">Objectively must be true</p>
+    <p class="text-sm text-slate-600 m-0">Required field names, valid JSON, expected tag</p>
+  </div>
+  <div class="rounded-xl border border-blue-200 bg-blue-50/70 p-4">
+    <p class="text-xs font-semibold uppercase tracking-wide text-blue-700 mb-1">Reference solution</p>
+    <p class="text-sm text-[#1a2b4c] font-medium m-0 mb-2">One known-good example</p>
+    <p class="text-sm text-slate-600 m-0">A schema/prompt pair known to work—not the only allowed shape</p>
+  </div>
+  <div class="rounded-xl border border-amber-200 bg-amber-50/70 p-4">
+    <p class="text-xs font-semibold uppercase tracking-wide text-amber-700 mb-1">Assertions / invariants</p>
+    <p class="text-sm text-[#1a2b4c] font-medium m-0 mb-2">Any acceptable solution must satisfy</p>
+    <p class="text-sm text-slate-600 m-0">“Includes patient name and dates”; “schema validates”</p>
+  </div>
+</div>
 
-A **reference solution is not necessarily the only correct solution**.
+<div class="not-prose my-8">
+  <aside class="rounded-xl border-l-4 border-blue-500 bg-slate-50 px-5 py-4">
+    <p class="m-0 text-[#1a2b4c] font-semibold leading-snug">A reference solution is not necessarily the only correct solution. Grade the <span class="text-blue-600">outcome</span>, not one particular path to that outcome.</p>
+  </aside>
+</div>
 
 For the Document Agent, much of the evaluation can therefore be deterministic: JSON parses, schema validation passes, required fields and tags exist, extraction executes, and required invariants hold.
 
 LLM judges are useful where semantics matter—for example, whether a prompt captures the requested intent or a schema adequately covers a concept.
-
-The default should be to grade the **outcome**, not require one particular path to that outcome.
 
 ## The same pattern for medical insurance
 
@@ -135,7 +185,24 @@ A trial might produce:
 
 Here the labeling distinction matters even more.
 
-Objective claim and policy attributes—dates, codes, eligibility, network status—may be **ground-truth facts**. Benefit dispositions are better treated as **expert-labeled decisions**. An examiner write-up can serve as a **reference solution**, while requirements such as “must cite the plan” or “must surface this open fact” are **assertions**.
+<div class="not-prose grid sm:grid-cols-2 gap-3 my-8">
+  <div class="rounded-xl border border-emerald-200 bg-emerald-50/70 p-4">
+    <p class="text-xs font-semibold uppercase tracking-wide text-emerald-700 mb-1">Ground-truth facts</p>
+    <p class="text-sm text-slate-700 m-0">Claim and policy attributes: dates, codes, eligibility, network status</p>
+  </div>
+  <div class="rounded-xl border border-rose-200 bg-rose-50/70 p-4">
+    <p class="text-xs font-semibold uppercase tracking-wide text-rose-700 mb-1">Expert-labeled decisions</p>
+    <p class="text-sm text-slate-700 m-0">Headline and benefit dispositions: payable / deny / pend / partial</p>
+  </div>
+  <div class="rounded-xl border border-blue-200 bg-blue-50/70 p-4">
+    <p class="text-xs font-semibold uppercase tracking-wide text-blue-700 mb-1">Reference solution</p>
+    <p class="text-sm text-slate-700 m-0">Examiner write-up / complete assessment</p>
+  </div>
+  <div class="rounded-xl border border-amber-200 bg-amber-50/70 p-4">
+    <p class="text-xs font-semibold uppercase tracking-wide text-amber-700 mb-1">Assertions</p>
+    <p class="text-sm text-slate-700 m-0">Must cite the plan; must surface this open fact; required benefit lines</p>
+  </div>
+</div>
 
 A strong agent result can be promoted into the labeled set, but only **after domain-expert review**. A high LLM-judge score should nominate a result for review, not silently turn it into tomorrow’s ground truth.
 
@@ -160,10 +227,18 @@ Multiple trials matter because agents are stochastic. If task 17 scores 85 today
 
 Two useful summaries are:
 
-* **pass@k** — did at least one of (k) trials succeed?
-* **pass^k** — did all (k) trials succeed?
-
-The first measures capability with multiple attempts. The second is useful for reliability.
+<div class="not-prose grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
+  <div class="rounded-xl border border-blue-200 bg-blue-50/60 p-5">
+    <p class="font-mono text-lg font-bold text-blue-700 m-0 mb-2">pass@k</p>
+    <p class="text-sm text-[#1a2b4c] font-semibold m-0 mb-2">At least one of k trials succeeds</p>
+    <p class="text-sm text-slate-600 m-0">Measures <strong>capability</strong> with multiple attempts</p>
+  </div>
+  <div class="rounded-xl border border-amber-200 bg-amber-50/70 p-5">
+    <p class="font-mono text-lg font-bold text-amber-700 m-0 mb-2">pass^k</p>
+    <p class="text-sm text-[#1a2b4c] font-semibold m-0 mb-2">All k trials succeed</p>
+    <p class="text-sm text-slate-600 m-0">Measures <strong>reliability</strong> / consistency</p>
+  </div>
+</div>
 
 But running ten trials on every task quickly becomes expensive. In practice:
 
@@ -189,11 +264,26 @@ Then use one or more **LLM judge rubrics** for semantic questions such as comple
 
 The pipeline becomes:
 
-**Deterministic checks → LLM rubric(s) → per-task aggregate → test-run aggregate**
+<div class="not-prose my-8 overflow-x-auto">
+  <div class="flex flex-wrap items-center justify-center gap-2 text-sm font-medium">
+    <span class="rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 px-3 py-1.5">Deterministic checks</span>
+    <span class="text-slate-400">→</span>
+    <span class="rounded-lg bg-blue-50 border border-blue-200 text-blue-800 px-3 py-1.5">LLM rubric(s)</span>
+    <span class="text-slate-400">→</span>
+    <span class="rounded-lg bg-amber-50 border border-amber-200 text-amber-800 px-3 py-1.5">Per-task aggregate</span>
+    <span class="text-slate-400">→</span>
+    <span class="rounded-lg bg-slate-100 border border-slate-300 text-slate-800 px-3 py-1.5">Test-run aggregate</span>
+  </div>
+</div>
 
 LLM judges should themselves be evaluated. A judge model does not have to be the same model as the agent. Periodically compare judge scores against human or domain-expert judgments and adjust the rubric when they diverge.
 
-Treat LLM judges as **scalable graders**, not ground truth.
+<div class="not-prose my-8">
+  <aside class="flex gap-3 items-start rounded-xl bg-amber-50 px-4 py-4 ring-1 ring-amber-100">
+    <span class="flex-shrink-0 mt-0.5 w-9 h-9 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-sm font-bold" aria-hidden="true">≠</span>
+    <p class="m-0 pt-1.5 text-[#1a2b4c] font-semibold leading-snug">Treat LLM judges as scalable graders, not ground truth.</p>
+  </aside>
+</div>
 
 ## Make evaluation cheap enough to use
 
@@ -201,13 +291,38 @@ Offline evaluation only works if engineers actually rerun it.
 
 Three features make that practical.
 
+<div class="not-prose grid sm:grid-cols-3 gap-3 my-8">
+  <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+    <p class="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-1">Tags</p>
+    <p class="text-sm text-slate-700 m-0">Segment and rerun only what changed—diagnose where regressions concentrate</p>
+  </div>
+  <div class="rounded-xl border border-amber-200 bg-amber-50/70 p-4">
+    <p class="text-xs font-semibold uppercase tracking-wide text-amber-700 mb-1">Cost &amp; latency</p>
+    <p class="text-sm text-slate-700 m-0">Track spend and speed as first-class metrics alongside quality</p>
+  </div>
+  <div class="rounded-xl border border-blue-200 bg-blue-50/60 p-4">
+    <p class="text-xs font-semibold uppercase tracking-wide text-blue-700 mb-1">Tool traces</p>
+    <p class="text-sm text-slate-700 m-0">Scores say whether; traces say how—debug without brittle path scripts</p>
+  </div>
+</div>
+
 First, **tags** let you segment the dataset. After a narrow schema-tool change, run `schema` and `validation`; after a model or system-prompt change, run the full suite. Tags also show where regressions concentrate—for example, only on `complex` claims or `behavioral` cases.
 
 Second, track **cost and latency** as evaluation metrics. An agent that becomes slightly more accurate but three times slower or more expensive may still be a regression.
 
 Third, keep **tool traces** with every trial. Scores tell you whether something failed; traces tell you how. A useful debugging loop is:
 
-**failing task → inspect trial trace → fix agent/tool → rerun affected slice**
+<div class="not-prose my-8 overflow-x-auto">
+  <div class="flex flex-wrap items-center justify-center gap-2 text-sm font-medium text-[#1a2b4c]">
+    <span class="rounded-lg bg-rose-50 border border-rose-200 px-3 py-1.5">failing task</span>
+    <span class="text-slate-400">→</span>
+    <span class="rounded-lg bg-slate-50 border border-slate-200 px-3 py-1.5">inspect trial trace</span>
+    <span class="text-slate-400">→</span>
+    <span class="rounded-lg bg-blue-50 border border-blue-200 px-3 py-1.5">fix agent/tool</span>
+    <span class="text-slate-400">→</span>
+    <span class="rounded-lg bg-emerald-50 border border-emerald-200 px-3 py-1.5">rerun affected slice</span>
+  </div>
+</div>
 
 Independent trials can also run in parallel to reduce wall-clock time without changing the evaluation methodology.
 
@@ -217,13 +332,18 @@ A timestamped result folder is useful, but it is not enough.
 
 A test run should record the versions and configuration of both the system being evaluated and the evaluator itself:
 
-* dataset version
-* selected tasks and tags
-* agent/code version
-* model and model configuration
-* prompts and tool definitions
-* grader/rubric versions
-* trial count (k)
+<div class="not-prose my-8 rounded-xl border border-slate-200 bg-slate-50 p-5">
+  <p class="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-3">Record with every test run</p>
+  <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2 m-0 pl-0 list-none text-sm text-slate-700">
+    <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> dataset version</li>
+    <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> selected tasks and tags</li>
+    <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> agent/code version</li>
+    <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> model and model configuration</li>
+    <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> prompts and tool definitions</li>
+    <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> grader/rubric versions</li>
+    <li class="flex gap-2"><span class="text-blue-600 font-bold">·</span> trial count (k)</li>
+  </ul>
+</div>
 
 Otherwise “87 last week, 92 today” may be impossible to reproduce—or even interpret.
 
@@ -243,7 +363,10 @@ That is why the distinction between **facts, reference solutions, and assertions
 
 We built the Smart Agent Kit around that principle for DocRouter’s Document Agent. The medical insurance example shows that the same architecture can transfer to a very different domain.
 
-If you are building custom agents, start collecting labeled cases early, measure every meaningful change, keep traces for debugging, track cost and latency alongside quality, and treat evaluation as part of the product rather than a one-off demo script.
+<div class="not-prose my-10 rounded-xl bg-[#1a2b4c] text-white px-6 py-5 space-y-2">
+  <p class="m-0 text-sm uppercase tracking-wide text-blue-200 font-semibold">Takeaway</p>
+  <p class="m-0 text-lg font-semibold leading-snug">Start labeled cases early. Measure every meaningful change. Keep traces. Track cost and latency with quality. Treat evaluation as part of the product—not a one-off demo script.</p>
+</div>
 
 ## Further reading
 
