@@ -10,7 +10,7 @@ description: "A founder's-eye view of building durable AI products at the applic
 
 _Through the lens of a serial entrepreneur, this article explores how the AI revolution is shifting from infrastructure to the application layer, where the greatest opportunities lie in solving specialized, data-heavy industry problems rather than perfecting raw technology._
 
-_This article originally appeared on KDnuggets. You can read the original version [here](https://www.kdnuggets.com/navigating-ai-entrepreneurship-insights-from-the-application-layer)._ 
+_This article originally appeared on KDnuggets. You can read the original version [here](https://www.kdnuggets.com/navigating-ai-entrepreneurship-insights-from-the-application-layer)._ A full local copy is also available [on this site]({{ '/docs/navigating-ai-entrepreneurship-application-layer/' | relative_url }}).
 
 # Introduction
  
@@ -26,4 +26,4 @@ This accelerated timeline reflects a broader urgency in the AI entrepreneurship 
 
 Radulescu-Banu draws parallels between today's AI boom and the internet revolution. "Just like in the past for computer networks, [you] had developers of infrastructure, let's say, computer switches and routers. And then you had application layer software sitting on top, and then you had web applications. So what's interesting is that these layers are forming now for the AI stack."
 
-_To continue reading the full piece, visit KDnuggets [here](https://www.kdnuggets.com/navigating-ai-entrepreneurship-insights-from-the-application-layer)._
+_To continue reading the full piece, see our [local full copy]({{ '/docs/navigating-ai-entrepreneurship-application-layer/' | relative_url }}) or the original on KDnuggets [here](https://www.kdnuggets.com/navigating-ai-entrepreneurship-insights-from-the-application-layer)._
