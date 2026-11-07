@@ -12,7 +12,7 @@ description: "Doc Router already ran on FastAPI. We moved the UI from Next.js to
 
 We migrated that UI from **Next.js** to **Vite**. The product should look the same; the stack should be easier to reason about and deploy.
 
-## Why not keep Next.js?
+## Why Not Keep Next.js?
 
 Next.js shines when you want file-based routing, SSR, and a JavaScript server in one package. We were using it mostly as a **thick client**—while also running **session logic and API routes in Node** that duplicated what FastAPI already did.
 
@@ -20,13 +20,13 @@ Once login, OAuth, and session cookies lived in Python, Next’s server features
 
 **Vite** fits our shape: build a static SPA, serve it from **nginx**, call **FastAPI** with cookies and `/fastapi` in dev.
 
-## AI makes code cheap—not frameworks simpler
+## Simpler Framework, More Control
 
-With Cursor, Claude Code, and similar tools, rewriting screens is fast. That is exactly why we prefer **simpler frameworks**: less magic to debug, fewer deployment paths, and **more control** when the model (or a human) changes routing or auth.
+Generating code is easy. A simpler framework is still worth it: less to debug, fewer deploy paths, and more control over routing and auth.
 
-We did not redesign Doc Router. We **re-homed** the same React components on a smaller foundation.
+We did not redesign Doc Router. We moved the same React UI onto Vite.
 
-## Architecture: before and after
+## Architecture: Before and After
 
 <div data-excalidraw="/assets/excalidraw/doc-router-nextjs-to-vite-architecture.excalidraw" class="excalidraw-container">
   <div class="loading-placeholder">Loading diagram...</div>
@@ -44,7 +44,7 @@ We did not redesign Doc Router. We **re-homed** the same React components on a s
 
 Previously the browser talked to the **Next.js UI**, the **Next.js server** (API routes and session), and **FastAPI**; both Node and Python reached the **database**. Now it loads a **static Vite SPA**, calls **FastAPI** for everything the Node server used to handle, and only FastAPI talks to the database.
 
-## What we replaced (at a glance)
+## What We Replaced (at a Glance)
 
 <div class="overflow-x-auto my-6">
 <table class="min-w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
@@ -65,23 +65,25 @@ Previously the browser talked to the **Next.js UI**, the **Next.js server** (API
 </table>
 </div>
 
-## Same look and feel
+## Same Look and Feel
 
 We kept **MUI**, **Tailwind**, **Form.io**, and the same layout shells (org, settings, dashboard). Branding still comes from env vars baked at build time. Users get the same flows—not a new skin.
 
 <img src="/assets/images/doc-router-ui-vite.png" alt="Doc Router flows editor after the Vite migration: document trigger, split, OCR, LLM, and Python nodes" style="width: 100%; max-width: 960px; margin: 1.5rem auto; display: block; border: 1px solid #e2e8f0; border-radius: 8px;">
 
-## How we migrated (short version)
+## How We Migrated (Short Version)
 
-1. **Backend first** — httpOnly session cookie, OAuth, and feedback APIs on FastAPI.
-2. **Vite spike** — dev server on **5173**, proxy `/fastapi` to the API; prove login → dashboard.
-3. **Route parity** — React Router table, lazy-loaded pages, same URLs as before.
-4. **Remove Next** — delete `src/app/`, drop the `next` package; CI/Docker build **Vite only**.
-5. **Cleanup** — `VITE_*` env docs, Vitest on the frontend, nginx SPA config.
+1. **Backend first** — moved all the Next.js server APIs to FastAPI.
+2. **Vite side by side with Next.js.**
+3. **Route parity** — same URLs, now in React Router.
+4. **Remove Next.** CI and Docker build Vite only.
+5. **Cleanup.**
 
-Roughly **47 commits** on the `vite` branch: **258 files**, about **18k** lines touched (inserts + deletes). The frontend package ended **smaller** after removing the App Router tree (~900 net lines gone there).
+The port took **two days**. Roughly **47 commits** on the `vite` branch: **258 files**, about **18k** lines touched (inserts + deletes). The frontend package ended **smaller** after removing the App Router tree (~900 net lines gone there).
 
-## Safety net: Python unit tests
+The code migration was done in Cursor with **Composer 2.5 Fast**. This post was written with **Grok**, the latest Grok coding model.
+
+## Safety Net: Python Unit Tests
 
 Before we trusted the new SPA path, we leaned on **backend tests** so auth behavior did not regress:
 
@@ -92,7 +94,7 @@ Those tests run with **`make test`** / pytest on every change. The UI could swit
 
 Frontend **Vitest** tests stayed in place for hooks and components; the migration did not remove client test coverage.
 
-## When to pick which
+## Conclusion: When to Pick Which Front End
 
 | You want… | Consider |
 |-----------|----------|
