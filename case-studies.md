@@ -32,6 +32,11 @@ permalink: /case-studies/
                     url="/case-studies/insurance_wholesaler/" %}
                 {% include case-study-card.html
                     badge="Consulting"
+                    title="Consulting: Investigation Support Agent"
+                    description="Architecture for a mid-size P&C carrier—cited coverage answers and an adjuster-ready package after FNOL."
+                    url="/case-studies/investigation-support-agent/" %}
+                {% include case-study-card.html
+                    badge="Consulting"
                     title="Consulting: Lab Informatics Coding Copilot"
                     description="VS Code / Claude / MCP coding agent for Starlims LIMS development."
                     url="/case-studies/starlims-copilot/" %}

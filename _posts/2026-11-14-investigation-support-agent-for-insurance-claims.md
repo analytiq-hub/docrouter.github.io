@@ -101,4 +101,6 @@ If you are building something similar—not only in insurance—three ideas trav
 
 DocRouter’s document intelligence stack—ingestion, OCR, schema-driven extraction, and human-in-the-loop review—is aimed at the same class of problems. Investigation Support is the claims-native expression: **documents plus policy language plus adjuster workflow**, with AI doing the first pass and people maintaining decision control.
 
-*Building in claims? Start with lesson #2: inventory your APIs before you prompt-engineer. Want a second pair of eyes on architecture or eval design? [Let's talk](/contact).* 
+*Building in claims? Start with lesson #2: inventory your APIs before you prompt-engineer. Want a second pair of eyes on architecture or eval design? [Let's talk](/contact).*
+
+*A shorter version of this engagement is the [Investigation Support case study](/case-studies/investigation-support-agent/).* 
