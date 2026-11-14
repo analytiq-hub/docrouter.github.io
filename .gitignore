@@ -17,3 +17,6 @@ tailwindcss-*
 # Claude Code agents and skills
 .agents/
 skills-lock.json
+
+# Local tooling for brand/build_logos.py
+.logo-venv/
