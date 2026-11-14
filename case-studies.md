@@ -31,21 +31,6 @@ permalink: /case-studies/
                     description="Completed DocRouter pilot with a specialty insurance wholesaler—ACORD forms and ALIS clearance workflows."
                     url="/case-studies/insurance_wholesaler/" %}
                 {% include case-study-card.html
-                    badge="Pilot"
-                    title="Pilot: Supply Chain Trade Documents"
-                    description="Pilot for bills of lading, commodity reports, and related trade documents."
-                    url="/case-studies/supply-chain/" %}
-                {% include case-study-card.html
-                    badge="Consulting"
-                    title="Consulting: DME Automation Platform"
-                    description="Custom healthcare document platform for a startup—precursor to DocRouter."
-                    url="/case-studies/dme/" %}
-                {% include case-study-card.html
-                    badge="Consulting"
-                    title="Consulting: Epic EHR Order Automation"
-                    description="Custom Epic integration for DME order processing."
-                    url="/case-studies/epic_dme_order_processing/" %}
-                {% include case-study-card.html
                     badge="Consulting"
                     title="Consulting: Lab Informatics Coding Copilot"
                     description="VS Code / Claude / MCP coding agent for Starlims LIMS development."
@@ -60,6 +45,21 @@ permalink: /case-studies/
                     title="Consulting: Koch AI Book Companion"
                     description="Multi-agent PBM book companion—memory, auth, and observability at scale."
                     url="/case-studies/koch-ai-book-companion/" %}
+                {% include case-study-card.html
+                    badge="Pilot"
+                    title="Pilot: Supply Chain Trade Documents"
+                    description="Pilot for bills of lading, commodity reports, and related trade documents."
+                    url="/case-studies/supply-chain/" %}
+                {% include case-study-card.html
+                    badge="Consulting"
+                    title="Consulting: DME Automation Platform"
+                    description="Custom healthcare document platform for a startup—precursor to DocRouter."
+                    url="/case-studies/dme/" %}
+                {% include case-study-card.html
+                    badge="Consulting"
+                    title="Consulting: Epic EHR Order Automation"
+                    description="Custom Epic integration for DME order processing."
+                    url="/case-studies/epic_dme_order_processing/" %}
             </div>
         </section>
 
