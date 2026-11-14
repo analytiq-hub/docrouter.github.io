@@ -15,8 +15,11 @@ A specialty insurance wholesaler processing roughly 7,000 submissions annually f
 
 We completed a **pilot on DocRouter** to automate insurance submission workflows while keeping human oversight for regulatory compliance. The pilot focused on handwritten and typed ACORD forms using OCR and LLM extraction, structured data output, and integration paths toward ALIS clearance workflows.
 
-![Insurance Automation Platform]({{ '/assets/images/case-studies/insurance-wholesaler/insurance-wholesaler-hero.png' | relative_url }})
-*DocRouter pilot: ACORD form processing and clearance automation*
+![Prompts configured for the insurance pilot]({{ '/assets/images/case-studies/insurance-wholesaler/prompts-list.jpg' | relative_url }}){:.case-study-shot}
+*Prompts for the pilot. A tag on the document chooses which extraction runs.*
+
+![The clearance search prompt open in the editor]({{ '/assets/images/case-studies/insurance-wholesaler/clearance-search-prompt.jpg' | relative_url }}){:.case-study-shot}
+*Opening clearance search: the instructions, and the schema they fill in.*
 
 ## What We Proved in the Pilot
 

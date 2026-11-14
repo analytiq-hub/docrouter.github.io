@@ -172,6 +172,10 @@
   border: 1px solid #e2e8f0;
 }
 
+.case-study-prose p > img.case-study-shot {
+  margin: 1.5rem 0 0.75rem;
+}
+
 .case-study-prose > p > em:only-child,
 .case-study-prose > p:first-child em {
   display: block;
