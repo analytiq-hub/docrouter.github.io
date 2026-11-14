@@ -52,6 +52,9 @@ On `document.uploaded` for the anesthesia packet tag, the flow:
 - Runs OCR and the page-classifier LLM prompt in parallel per page
 - Executes a code step that groups pages by MRN or name+DOB (with adjacency heuristics for weakly identified pages), builds one merged PDF per patient, and sets `human_review` when unknown pages remain
 
+![Surgery schedule flow: document event trigger, page split, parallel OCR and LLM, then a Python grouping step]({{ '/assets/images/case-studies/boston-medical-data/surgery-schedule-flow.jpg' | relative_url }}){:.case-study-shot}
+*The live surgery schedule flow. A document upload splits the packet; OCR and the page classifier run in parallel; Python groups pages by patient.*
+
 That native flow is what runs in production today.
 
 ### Temporal during development
