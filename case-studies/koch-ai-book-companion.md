@@ -10,9 +10,12 @@ description: "Consulting engagement: multi-agent AI book companion for Koch Indu
 
 ## Overview
 
-Koch Industries set out to make Principle-Based Management (PBM)—from the book by Chase and Charles Koch—accessible to both the reading public and Koch employees. The Book Companion helps users learn, internalize, and apply PBM principles.
+Koch Industries set out to make Principle-Based Management (PBM)—from the book by Chase and Charles Koch—accessible to both the reading public and Koch employees. The Book Companion helps users learn, internalize, and apply PBM principles. It is live at [chat.principledrivenleader.com](https://chat.principledrivenleader.com).
 
 We contributed production-grade [multi-agent]({{ '/ai/programming/tutorials/how-to-train-your-ai-agent/' | relative_url }}) architecture, enterprise authentication, per-user memory, observability, and progressive-disclosure UX—designed for roughly 8,000 to 100,000 monthly users.
+
+[![Principle Companion applying Mutual Benefit and Knowledge in a conversation]({{ '/assets/images/case-studies/koch-ai-book-companion/principle-companion.jpg' | relative_url }}){:.case-study-shot}](https://chat.principledrivenleader.com)
+*[Principle Companion](https://chat.principledrivenleader.com): a conversation that names the principles at work and asks what is driving the other side*
 
 ## The Challenge
 
@@ -20,14 +23,14 @@ The product needed to serve two audiences at scale: public book readers and Koch
 
 ## What We Built
 
-We helped architect a multi-agent AI Book Companion with three specialized agents—Learn, Prepare, and Reflect—coordinated by an orchestration layer that routes interactions by intent and context. The system included:
+We architected a multi-agent AI Book Companion with three specialized agents—Learn, Prepare, and Reflect—coordinated by an orchestration layer that routes interactions by intent and context. The system included:
 
 - Per-user memory for personalized learning journeys
 - Enterprise authentication (public and SSO)
 - Observability and tracing for agents and infrastructure
 - Feedback mechanisms for continuous improvement
 
-Deployed on AWS, the platform was validated through user testing and advanced toward broader launch.
+Deployed on AWS, the platform was validated through user testing and is live for public readers and Koch employees.
 
 ## Key Capabilities
 
@@ -71,6 +74,7 @@ As a subcontractor providing hands-on technical leadership, we drove work across
 
 ## Engagement Outcomes
 
+- The companion is live at [chat.principledrivenleader.com](https://chat.principledrivenleader.com)
 - User testing validated the multi-agent architecture, memory system, and authentication flows for enterprise requirements
 - Architecture designed and tested for tens of thousands of monthly users across public and employee paths
 - Experienced technical leadership helped move the team from concept toward a production-grade platform

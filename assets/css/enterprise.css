@@ -156,6 +156,22 @@
   box-shadow: 0 2px 8px rgba(26, 43, 76, 0.06);
 }
 
+.case-study-prose a:has(> img.case-study-shot) {
+  display: block;
+  width: min(100%, 32.5rem);
+  margin: 1.5rem 0 0.75rem;
+  line-height: 0;
+}
+
+.case-study-prose img.case-study-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
 .case-study-prose > p > em:only-child,
 .case-study-prose > p:first-child em {
   display: block;
