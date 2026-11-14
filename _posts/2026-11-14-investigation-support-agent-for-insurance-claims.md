@@ -75,9 +75,11 @@ Carrier claims environments impose constraints that shaped the design from day o
 
 ## How we built confidence before scale
 
+![Investigation Support production app, backend and frontend unit tests, offline evaluation, and Langfuse online evaluation in a closed loop](/assets/images/investigation-support-agent-confidence-loop.jpg)
+
 ### Development harness
 
-Before automating the full loop, we stood up a small **engineering harness**: each data source the agent needs (claim details, policy data, documents, policy-language search, model access) exposed through a UI so engineers and product partners could replay real claims manually. The production agent reuses those same integration boundaries.
+Before automating the full loop, we stood up a small **engineering harness**: each **data source** the agent needs (claim details, policy data, documents, policy-language search, model access) exposed through a UI so engineers and product partners could replay real claims manually. And **unit tests for the backend and the frontend**, so those integration boundaries stay correct as prompts and workflows change.
 
 ### Offline evaluation
 
