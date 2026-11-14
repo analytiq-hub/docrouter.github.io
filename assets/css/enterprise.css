@@ -176,6 +176,12 @@
   margin: 1.5rem 0 0.75rem;
 }
 
+.case-study-prose p > img.case-study-shot.case-study-shot-half {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .case-study-prose > p > em:only-child,
 .case-study-prose > p:first-child em {
   display: block;

@@ -11,8 +11,8 @@ permalink: /case-studies/supply-chain/
 
 We ran a **DocRouter pilot** to test structured extraction from complex supply chain trade documents—primarily **bills of lading** and **commodity reports**—where manual processing was slow and error-prone.
 
-![Supply Chain Automation]({{ '/assets/images/case-studies/supply-chain/supply-chain-hero.png' | relative_url }})
-*DocRouter pilot: trade document extraction*
+![Prompts for bills of lading, letters of credit, and commodity documents]({{ '/assets/images/case-studies/supply-chain/prompts-list.jpg' | relative_url }}){:.case-study-shot}
+*Prompt list. A tag on the document chooses which extraction runs.*
 
 ## The Challenge
 
@@ -52,6 +52,9 @@ The pilot used OCR and LLMs on PDFs and scanned images, including multi-language
 - Validation and human review for critical documents
 - Output structured for downstream systems (integration tested at pilot scope)
 
+![Schemas for a letter of credit and commodity specifications]({{ '/assets/images/case-studies/supply-chain/schemas.jpg' | relative_url }}){:.case-study-shot}
+*Schema list: a letter of credit and commodity specifications.*
+
 **Trade-document targets evaluated** (not all were production-hardened in the pilot):
 - Commodity contract term extraction
 - Bill of lading field extraction and normalization
@@ -64,6 +67,9 @@ The pilot showed meaningful improvements in tested scenarios:
 - **Processing time**: Complex documents moved from **hours to minutes** in pilot runs
 - **Accuracy**: Improved consistency through schema-driven extraction and review
 - **Workflow**: Staff could focus on exceptions rather than full manual re-keying
+
+![Extracted commodity contract fields, including a table of goods]({{ '/assets/images/case-studies/supply-chain/extraction.jpg' | relative_url }}){:.case-study-shot .case-study-shot-half}
+*A commodity contract extraction on anonymized sample data: the table of goods and the values read from the document.*
 
 These results reflect **pilot conditions** on sample and provided document sets—not a guaranteed outcome for every production environment.
 
