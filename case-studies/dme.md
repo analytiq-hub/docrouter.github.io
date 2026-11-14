@@ -13,9 +13,6 @@ A healthcare startup engaged us for a zero-to-ten implementation to digitize Dur
 
 We built their core document-processing platform from the ground up. That custom system later informed what became DocRouter.
 
-![Illustration of a doctor with a patient in a wheelchair]({{ '/assets/images/case-studies/dme/dme.png' | relative_url }})
-*Custom DME document platform built in a consulting engagement*
-
 ## The Challenge
 
 The startup needed a cloud platform to replace manual, paper-based review workflows. They had industry expertise and pilot partnerships but needed engineering help to turn the product vision into a scalable foundation.

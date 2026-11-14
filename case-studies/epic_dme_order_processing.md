@@ -25,9 +25,6 @@ We delivered a **custom zero-touch Epic automation system** for this client that
 
 This was bespoke engineering for one client environment. It is separate from the DocRouter SaaS product.
 
-![Epic EHR Integration]({{ '/assets/images/case-studies/epic-dme/epic-dme-hero.png' | relative_url }})
-*Custom Epic automation built in a consulting engagement*
-
 ## Technical Approach
 
 ### Epic integration pipeline
