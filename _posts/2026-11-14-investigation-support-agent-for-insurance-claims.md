@@ -14,6 +14,8 @@ We architected an **Investigation Support agent** so that legwork happens automa
 
 While the agent was deployed at a mid-size property-and-casualty carrier, this post stays at the product-pattern level and describes implementation best practices.
 
+![From first notice of loss and policy forms to an adjuster-ready package](/assets/images/investigation-support-agent-splash.jpg)
+
 ## The gap after FNOL
 
 FNOL is built for speed and empathy on the intake side. Investigation is built for accuracy, traceability, and consistency. The handoff between them is where teams lose time:
