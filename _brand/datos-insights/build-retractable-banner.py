@@ -79,68 +79,113 @@ def centered_text(
 
 
 def rounded_box(c: canvas.Canvas, left: float, top: float) -> None:
-    bw, bh = 58, 54
+    bw, bh = 48, 48
     c.setStrokeColor(PALE)
     c.setLineWidth(0.9 * U)
     c.setFillColor(WHITE)
-    c.roundRect(x(left), y(top + bh), bw * SX, bh * SY, 10 * U, stroke=1, fill=1)
+    c.roundRect(x(left), y(top + bh), bw * SX, bh * SY, 9 * U, stroke=1, fill=1)
 
 
 def icon_document(c: canvas.Canvas, left: float, top: float) -> None:
-    ox, oy = x(left + 20), y(top + 14)
+    # Exact 24 × 24 SVG geometry used by the website's Ingest icon.
+    ox, oy = left + 12, top + 12
+    k = 0.55228475
     c.setStrokeColor(BLUE)
-    c.setLineWidth(2.0 * U)
+    c.setLineWidth(1.5 * U)
+    c.setLineCap(1)
     c.setLineJoin(1)
+    c.line(x(ox + 9), y(oy + 12), x(ox + 15), y(oy + 12))
+    c.line(x(ox + 9), y(oy + 16), x(ox + 15), y(oy + 16))
     p = c.beginPath()
-    p.moveTo(ox, oy)
-    p.lineTo(x(left + 31), y(top + 14))
-    p.lineTo(x(left + 39), y(top + 22))
-    p.lineTo(x(left + 39), y(top + 42))
-    p.lineTo(x(left + 20), y(top + 42))
+    p.moveTo(x(ox + 17), y(oy + 21))
+    p.lineTo(x(ox + 7), y(oy + 21))
+    p.curveTo(
+        x(ox + 7 - 2 * k), y(oy + 21),
+        x(ox + 5), y(oy + 19 + 2 * k),
+        x(ox + 5), y(oy + 19),
+    )
+    p.lineTo(x(ox + 5), y(oy + 5))
+    p.curveTo(
+        x(ox + 5), y(oy + 5 - 2 * k),
+        x(ox + 7 - 2 * k), y(oy + 3),
+        x(ox + 7), y(oy + 3),
+    )
+    p.lineTo(x(ox + 12.586), y(oy + 3))
+    p.curveTo(
+        x(ox + 12.851), y(oy + 3),
+        x(ox + 13.106), y(oy + 3.105),
+        x(ox + 13.293), y(oy + 3.293),
+    )
+    p.lineTo(x(ox + 18.707), y(oy + 8.707))
+    p.curveTo(
+        x(ox + 18.895), y(oy + 8.894),
+        x(ox + 19), y(oy + 9.149),
+        x(ox + 19), y(oy + 9.414),
+    )
+    p.lineTo(x(ox + 19), y(oy + 19))
+    p.curveTo(
+        x(ox + 19), y(oy + 19 + 2 * k),
+        x(ox + 17 + 2 * k), y(oy + 21),
+        x(ox + 17), y(oy + 21),
+    )
     p.close()
     c.drawPath(p, stroke=1, fill=0)
-    c.line(x(left + 27), y(top + 31), x(left + 35), y(top + 31))
-    c.line(x(left + 27), y(top + 36), x(left + 35), y(top + 36))
 
 
 def icon_structure(c: canvas.Canvas, left: float, top: float) -> None:
+    # Exact four rounded 6 × 6 cells from the website SVG.
+    ox, oy = left + 12, top + 12
     c.setStrokeColor(BLUE)
-    c.setLineWidth(2.0 * U)
-    for px in (left + 16, left + 33):
-        for py in (top + 14, top + 31):
-            c.roundRect(x(px), y(py + 10), 10 * SX, 10 * SY, 2 * U, stroke=1, fill=0)
+    c.setLineWidth(1.5 * U)
+    c.setLineCap(1)
+    c.setLineJoin(1)
+    for px in (ox + 4, ox + 14):
+        for py in (oy + 4, oy + 14):
+            c.roundRect(x(px), y(py + 6), 6 * SX, 6 * SY, 2 * U, stroke=1, fill=0)
 
 
 def icon_extract(c: canvas.Canvas, left: float, top: float) -> None:
+    # Exact sparkle and two plus signs from the website SVG.
+    ox, oy = left + 12, top + 12
     c.setStrokeColor(BLUE)
-    c.setLineWidth(2.0 * U)
-    cx = left + 29
+    c.setLineWidth(1.5 * U)
+    c.setLineCap(1)
+    c.setLineJoin(1)
     p = c.beginPath()
-    p.moveTo(x(cx), y(top + 9))
-    p.lineTo(x(cx + 4), y(top + 23))
-    p.lineTo(x(cx + 15), y(top + 27))
-    p.lineTo(x(cx + 4), y(top + 31))
-    p.lineTo(x(cx), y(top + 45))
-    p.lineTo(x(cx - 4), y(top + 31))
-    p.lineTo(x(cx - 15), y(top + 27))
-    p.lineTo(x(cx - 4), y(top + 23))
+    p.moveTo(x(ox + 13), y(oy + 3))
+    p.lineTo(x(ox + 15.286), y(oy + 9.857))
+    p.lineTo(x(ox + 21), y(oy + 12))
+    p.lineTo(x(ox + 15.286), y(oy + 14.143))
+    p.lineTo(x(ox + 13), y(oy + 21))
+    p.lineTo(x(ox + 10.714), y(oy + 14.143))
+    p.lineTo(x(ox + 5), y(oy + 12))
+    p.lineTo(x(ox + 10.714), y(oy + 9.857))
     p.close()
     c.drawPath(p, stroke=1, fill=0)
-    c.line(x(cx - 15), y(top + 9), x(cx - 15), y(top + 19))
-    c.line(x(cx - 20), y(top + 14), x(cx - 10), y(top + 14))
-    c.line(x(cx - 16), y(top + 39), x(cx - 16), y(top + 47))
-    c.line(x(cx - 20), y(top + 43), x(cx - 12), y(top + 43))
+    c.line(x(ox + 5), y(oy + 3), x(ox + 5), y(oy + 7))
+    c.line(x(ox + 3), y(oy + 5), x(ox + 7), y(oy + 5))
+    c.line(x(ox + 6), y(oy + 17), x(ox + 6), y(oy + 21))
+    c.line(x(ox + 4), y(oy + 19), x(ox + 8), y(oy + 19))
 
 
 def icon_integrate(c: canvas.Canvas, left: float, top: float) -> None:
+    # Exact code-bracket icon from the website SVG.
+    ox, oy = left + 12, top + 12
     c.setStrokeColor(BLUE)
-    c.setLineWidth(2.0 * U)
+    c.setLineWidth(1.5 * U)
     c.setLineCap(1)
-    c.line(x(left + 24), y(top + 18), x(left + 16), y(top + 27))
-    c.line(x(left + 16), y(top + 27), x(left + 24), y(top + 36))
-    c.line(x(left + 36), y(top + 18), x(left + 44), y(top + 27))
-    c.line(x(left + 44), y(top + 27), x(left + 36), y(top + 36))
-    c.line(x(left + 34), y(top + 13), x(left + 27), y(top + 41))
+    c.setLineJoin(1)
+    c.line(x(ox + 10), y(oy + 20), x(ox + 14), y(oy + 4))
+    p = c.beginPath()
+    p.moveTo(x(ox + 18), y(oy + 8))
+    p.lineTo(x(ox + 22), y(oy + 12))
+    p.lineTo(x(ox + 18), y(oy + 16))
+    c.drawPath(p, stroke=1, fill=0)
+    p = c.beginPath()
+    p.moveTo(x(ox + 6), y(oy + 16))
+    p.lineTo(x(ox + 2), y(oy + 12))
+    p.lineTo(x(ox + 6), y(oy + 8))
+    c.drawPath(p, stroke=1, fill=0)
 
 
 def connector(
@@ -151,14 +196,14 @@ def connector(
     end_y: float,
 ) -> None:
     c.setStrokeColor(LIGHT_BLUE)
-    c.setLineWidth(1.5 * U)
-    c.setDash(1.2 * U, 3.5 * U)
+    c.setLineWidth(1.2 * U)
+    c.setDash(1.0 * U, 4.0 * U)
     p = c.beginPath()
     p.moveTo(x(start_x), y(start_y))
     p.curveTo(
-        x(start_x + 21),
+        x(start_x + 16),
         y(start_y),
-        x(end_x - 21),
+        x(end_x - 16),
         y(end_y),
         x(end_x),
         y(end_y),
@@ -169,7 +214,7 @@ def connector(
 
 def workflow_text(c: canvas.Canvas, center_x: float, top: float, title: str) -> None:
     c.setFillColor(NAVY)
-    c.setFont("IBM-Plex-Sans-SemiBold", 17 * U)
+    c.setFont("IBM-Plex-Sans-SemiBold", 16 * U)
     c.drawCentredString(x(center_x), y(top + 16), title)
 
 
@@ -403,21 +448,21 @@ def build_pdf() -> tuple[float, float, float]:
     draw_qr(c, matrix, qr_x, qr_y, qr_size)
 
     stages = [
-        (32, 61, 523, "Index", icon_document),
-        (137, 166, 513, "Structure", icon_structure),
-        (241, 270, 523, "Extract", icon_extract),
-        (344, 373, 513, "Integrate", icon_integrate),
+        (37, 61, 521, "Index", icon_document),
+        (142, 166, 515, "Structure", icon_structure),
+        (246, 270, 521, "Extract", icon_extract),
+        (349, 373, 515, "Integrate", icon_integrate),
     ]
 
-    # The path sits behind the boxes and reads as one continuous pipeline.
-    connector(c, 90, 550, 137, 540)
-    connector(c, 195, 540, 241, 550)
-    connector(c, 299, 550, 344, 540)
+    # The path floats between the boxes with shallow, long-wave curves.
+    connector(c, 93, 545, 134, 539)
+    connector(c, 198, 539, 238, 545)
+    connector(c, 302, 545, 341, 539)
 
     for left, center, top, title, icon in stages:
         rounded_box(c, left, top)
         icon(c, left, top)
-        workflow_text(c, center, top + 59, title)
+        workflow_text(c, center, top + 54, title)
 
     c.showPage()
     c.save()
