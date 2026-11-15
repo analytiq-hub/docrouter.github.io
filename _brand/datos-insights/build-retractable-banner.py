@@ -143,19 +143,25 @@ def icon_integrate(c: canvas.Canvas, left: float, top: float) -> None:
     c.line(x(left + 34), y(top + 13), x(left + 27), y(top + 41))
 
 
-def connector(c: canvas.Canvas, start_x: float, end_x: float, center_y: float) -> None:
+def connector(
+    c: canvas.Canvas,
+    start_x: float,
+    start_y: float,
+    end_x: float,
+    end_y: float,
+) -> None:
     c.setStrokeColor(LIGHT_BLUE)
     c.setLineWidth(1.5 * U)
     c.setDash(1.2 * U, 3.5 * U)
     p = c.beginPath()
-    p.moveTo(x(start_x), y(center_y))
+    p.moveTo(x(start_x), y(start_y))
     p.curveTo(
-        x(start_x + 12),
-        y(center_y - 8),
-        x(end_x - 12),
-        y(center_y + 8),
+        x(start_x + 21),
+        y(start_y),
+        x(end_x - 21),
+        y(end_y),
         x(end_x),
-        y(center_y),
+        y(end_y),
     )
     c.drawPath(p, stroke=1, fill=0)
     c.setDash()
@@ -396,23 +402,22 @@ def build_pdf() -> tuple[float, float, float]:
     qr_y = enclosure_y + (enclosure_size - qr_size) / 2
     draw_qr(c, matrix, qr_x, qr_y, qr_size)
 
-    box_top = 518
     stages = [
-        (32, 61, "Index", icon_document),
-        (137, 166, "Structure", icon_structure),
-        (241, 270, "Extract", icon_extract),
-        (344, 373, "Integrate", icon_integrate),
+        (32, 61, 523, "Index", icon_document),
+        (137, 166, 513, "Structure", icon_structure),
+        (241, 270, 523, "Extract", icon_extract),
+        (344, 373, 513, "Integrate", icon_integrate),
     ]
 
     # The path sits behind the boxes and reads as one continuous pipeline.
-    connector(c, 90, 137, 545)
-    connector(c, 195, 241, 545)
-    connector(c, 299, 344, 545)
+    connector(c, 90, 550, 137, 540)
+    connector(c, 195, 540, 241, 550)
+    connector(c, 299, 550, 344, 540)
 
-    for left, center, title, icon in stages:
-        rounded_box(c, left, box_top)
-        icon(c, left, box_top)
-        workflow_text(c, center, 577, title)
+    for left, center, top, title, icon in stages:
+        rounded_box(c, left, top)
+        icon(c, left, top)
+        workflow_text(c, center, top + 59, title)
 
     c.showPage()
     c.save()
