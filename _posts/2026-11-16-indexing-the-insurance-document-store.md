@@ -4,6 +4,7 @@ title: "Index Once. Let Every Agent Use It."
 date: 2026-11-16 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
 image: /assets/images/index-once-hero.png
+focus: Insurance
 categories: [ai, insurance, open-source]
 description: "Why insurance agents miss evidence in document stores—and how a reusable index can make the right page available to every workflow."
 ---
@@ -86,7 +87,7 @@ The same pattern applies to underwriting and submission intake. An MGA may use e
 
 ## Prove retrieval before automating decisions
 
-The central test is not whether the model can produce a polished answer. It is whether the system found the evidence an expert would use.
+The central test is not whether the model can produce a polished answer. Agents have gotten quite good with that! It is whether the agent found the evidence an expert would use.
 
 A focused proof of concept can start with one workflow and a small set of expert-reviewed cases. Measure:
 
