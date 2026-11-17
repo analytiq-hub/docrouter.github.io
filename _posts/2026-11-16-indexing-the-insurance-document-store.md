@@ -110,39 +110,43 @@ For a smaller carrier or MGA, the first task may be consolidating documents spre
 
 ## FAQ
 
-### We already have a data lake. Why do we need an index?
-
-A data lake stores and processes documents at scale. The index makes their contents discoverable at page level, so an agent can retrieve relevant evidence without reprocessing the full document store.
-
-### How current is the information?
-
-The index can update as new files arrive. For values that must be current at decision time, such as a structured policy field, the workflow should query the source system directly. Freshness depends on the integration and should be measured.
-
-### Where does human oversight remain?
-
-Low-confidence or high-stakes cases go to a person. The index makes review faster by keeping the supporting page attached. It does not decide whether to deny a claim or accept a risk.
-
-### What should a CTO ask an AI vendor?
-
-Ask: **Which pages did the workflow retrieve, why those pages, and how will you measure missed evidence over time?**
-
-Then test the system on cases labeled by your own experts. A polished answer is not enough if the supporting page never surfaced.
-
-### What does success look like in a proof of concept?
-
-Start with one workflow. Agree on an expert-reviewed test set and a target for finding the necessary pages. Track missed evidence and reviewer corrections. Do not confuse a successful retrieval test with proof of production-scale performance.
-
-### How do carriers think about ROI?
-
-The immediate gains are shorter cycle time, less manual evidence gathering, fewer incomplete assessments, and less repeated OCR, extraction, and summarization. This is usually a cost-avoidance and quality play—not a promise to replace adjusters or underwriters.
-
-### What about prompt debt?
-
-Prompts, extraction schemas, and workflows should be versioned together. Teams need to know which configuration produced each result and test changes against an offline set of real cases. Indexing also reduces one-off prompts because later agents query prepared evidence instead of repeatedly interpreting raw files.
-
-### How is this different from form-processing software?
-
-Form-processing products optimize the job of extracting fields and keying them into another system. A reusable index optimizes a different job: preparing a live document store so multiple agents can find and cite the evidence they need.
+<div class="not-prose my-8 space-y-8">
+  <article>
+    <h3 class="text-lg font-semibold leading-snug text-[#172554]">We already have a data lake. Why do we need an index?</h3>
+    <p class="mt-3 ml-6 border-l-2 border-[#0B63CE] pl-4 text-base leading-relaxed text-slate-600">A data lake stores and processes documents at scale. The index makes their contents discoverable at page level, so an agent can retrieve relevant evidence without reprocessing the full document store.</p>
+  </article>
+  <article>
+    <h3 class="text-lg font-semibold leading-snug text-[#172554]">How current is the information?</h3>
+    <p class="mt-3 ml-6 border-l-2 border-[#0B63CE] pl-4 text-base leading-relaxed text-slate-600">The index can update as new files arrive. For values that must be current at decision time, such as a structured policy field, the workflow should query the source system directly. Freshness depends on the integration and should be measured.</p>
+  </article>
+  <article>
+    <h3 class="text-lg font-semibold leading-snug text-[#172554]">Where does human oversight remain?</h3>
+    <p class="mt-3 ml-6 border-l-2 border-[#0B63CE] pl-4 text-base leading-relaxed text-slate-600">Low-confidence or high-stakes cases go to a person. The index makes review faster by keeping the supporting page attached. It does not decide whether to deny a claim or accept a risk.</p>
+  </article>
+  <article>
+    <h3 class="text-lg font-semibold leading-snug text-[#172554]">What should a CTO ask an AI vendor?</h3>
+    <div class="mt-3 ml-6 border-l-2 border-[#0B63CE] pl-4">
+      <p class="text-base font-semibold leading-snug text-[#172554]">Ask which pages did the workflow retrieve, why those pages, and how will you measure missed evidence over time</p>
+      <p class="mt-3 text-base leading-relaxed text-slate-600">Then test the system on cases labeled by your own experts. A polished answer is not enough if the supporting page never surfaced.</p>
+    </div>
+  </article>
+  <article>
+    <h3 class="text-lg font-semibold leading-snug text-[#172554]">What does success look like in a proof of concept?</h3>
+    <p class="mt-3 ml-6 border-l-2 border-[#0B63CE] pl-4 text-base leading-relaxed text-slate-600">Start with one workflow. Agree on an expert-reviewed test set and a target for finding the necessary pages. Track missed evidence and reviewer corrections. Do not confuse a successful retrieval test with proof of production-scale performance.</p>
+  </article>
+  <article>
+    <h3 class="text-lg font-semibold leading-snug text-[#172554]">How do carriers think about ROI?</h3>
+    <p class="mt-3 ml-6 border-l-2 border-[#0B63CE] pl-4 text-base leading-relaxed text-slate-600">The immediate gains are shorter cycle time, less manual evidence gathering, fewer incomplete assessments, and less repeated OCR, extraction, and summarization. This is usually a cost-avoidance and quality play—not a promise to replace adjusters or underwriters.</p>
+  </article>
+  <article>
+    <h3 class="text-lg font-semibold leading-snug text-[#172554]">What about prompt debt?</h3>
+    <p class="mt-3 ml-6 border-l-2 border-[#0B63CE] pl-4 text-base leading-relaxed text-slate-600">Prompts, extraction schemas, and workflows should be versioned together. Teams need to know which configuration produced each result and test changes against an offline set of real cases. Indexing also reduces one-off prompts because later agents query prepared evidence instead of repeatedly interpreting raw files.</p>
+  </article>
+  <article>
+    <h3 class="text-lg font-semibold leading-snug text-[#172554]">How is this different from form-processing software?</h3>
+    <p class="mt-3 ml-6 border-l-2 border-[#0B63CE] pl-4 text-base leading-relaxed text-slate-600">Form-processing products optimize the job of extracting fields and keying them into another system. A reusable index optimizes a different job: preparing a live document store so multiple agents can find and cite the evidence they need.</p>
+  </article>
+</div>
 
 ### What is the key takeaway?
 
