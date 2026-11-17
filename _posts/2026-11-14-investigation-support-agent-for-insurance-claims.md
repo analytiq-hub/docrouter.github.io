@@ -4,6 +4,7 @@ title: "From First Notice to First Answers: Architecting an Investigation Suppor
 date: 2026-11-14 00:00:00 +0000
 author: "Andrei Radulescu-Banu"
 image: /assets/images/investigation-support-agent-splash.jpg
+focus: Insurance
 categories: [ai, engineering, insurance]
 description: "Architecture and implementation patterns for a governed Investigation Support agent—first coverage answers, cited policy evidence, and adjuster-ready packages after FNOL."
 ---
