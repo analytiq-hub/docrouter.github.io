@@ -1,9 +1,9 @@
 <div class="enterprise-card p-6 flex flex-col h-full">
-    <div class="flex items-start gap-4 mb-4">
-        <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0 text-blue-600">
+    <div class="flex items-center gap-4 mb-4">
+        <div class="w-14 min-h-14 self-stretch rounded-lg bg-blue-50 flex items-center justify-center shrink-0 text-blue-600 [&>svg]:w-7 [&>svg]:h-7">
             {{ include.icon }}
         </div>
-        <div class="min-w-0">
+        <div class="min-w-0 flex flex-col justify-center">
             {% if include.badge %}
             <p class="enterprise-badge mb-2">{{ include.badge }}</p>
             {% endif %}
