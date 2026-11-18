@@ -341,9 +341,9 @@ image: /assets/images/og-default.png
                             <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Healthcare Denials &amp; Lab Results</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-3">Handle denials, patient records, and lab results with precision. Process complex medical documents automatically.</p>
-                            <p class="text-xs text-slate-500"><span class="font-semibold text-slate-600">Use case:</span> Streamline medical document processing and reduce errors</p>
+                            <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Medical Revenue Cycle</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-3">Prepare the documents a revenue-cycle team bills from. Anesthesia records and durable medical equipment are two of the lines.</p>
+                            <p class="text-xs text-slate-500"><span class="font-semibold text-slate-600">Problem:</span> The same chart is read again for eligibility, medical necessity, and the claim.</p>
                         </div>
                     </div>
                     <a href="{{ '/solutions/dme/' | relative_url }}" class="text-blue-600 hover:text-blue-800 text-sm font-medium no-underline">Learn more →</a>

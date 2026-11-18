@@ -57,6 +57,6 @@ We do not present this engagement as evidence of DocRouter production deployment
 
 Patterns proven in this consulting work—schema-driven extraction, human-in-the-loop review, fax and EHR-adjacent ingestion, healthcare compliance constraints—directly influenced DocRouter's architecture and roadmap.
 
-For DocRouter capabilities today, see the [DME solution]({{ '/solutions/dme/' | relative_url }}) page and [platform documentation]({{ '/docs/platform/' | relative_url }}).
+For DocRouter capabilities today, see the [Medical Revenue Cycle solution]({{ '/solutions/dme/' | relative_url }}) page and [platform documentation]({{ '/docs/platform/' | relative_url }}).
 
 For more details, contact Andrei Radulescu-Banu at andrei@docrouter.ai.

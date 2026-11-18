@@ -55,6 +55,6 @@ We are not publishing specific dollar ROI figures here; those depended on the cl
 
 Epic-specific RPA and deep EHR scraping remain **custom integration** work. DocRouter today focuses on document ingestion, extraction, validation, and API-driven integration patterns that can complement—but are not the same as—this engagement.
 
-For related healthcare document processing on DocRouter, see the [DME solution]({{ '/solutions/dme/' | relative_url }}) page.
+For related healthcare document processing on DocRouter, see the [Medical Revenue Cycle solution]({{ '/solutions/dme/' | relative_url }}) page.
 
 For more details, contact Andrei Radulescu-Banu at andrei@docrouter.ai.
