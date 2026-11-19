@@ -77,26 +77,12 @@ description: "Transform shipping manifests and supply chain documents into struc
             </div>
         </section>
 
-        <section class="enterprise-card p-8 mb-12">
-            <h2 class="text-2xl font-bold text-[#1a2b4c] mb-8 text-center">Pilot results</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="text-4xl font-bold enterprise-metric mb-2">85%</div>
-                    <div class="text-slate-600 text-sm">Faster processing</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold enterprise-metric mb-2">98%</div>
-                    <div class="text-slate-600 text-sm">Data accuracy</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold enterprise-metric mb-2">$75K+</div>
-                    <div class="text-slate-600 text-sm">Annual savings potential</div>
-                </div>
-            </div>
-            <p class="text-center text-sm text-slate-500 mt-6">
-                <a href="{{ '/case-studies/supply-chain/' | relative_url }}" class="text-blue-600 hover:text-blue-800 no-underline">Read the supply chain pilot case study →</a>
-            </p>
-        </section>
+        <p class="text-center mb-12">
+            <a href="{{ '/case-studies/supply-chain/' | relative_url }}"
+               class="inline-block rounded-full border border-blue-200 bg-blue-50 px-5 py-3 text-sm font-semibold text-blue-800 no-underline transition-colors hover:border-blue-300 hover:bg-blue-100 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2">
+                Read the supply chain pilot case study <span aria-hidden="true">→</span>
+            </a>
+        </p>
 
         {% include solution-related-docs.html
             quick_start="Set up shipping document extraction in minutes"

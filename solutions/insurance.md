@@ -25,7 +25,7 @@ description: "Index your insurance file store so claims, underwriting, and recov
         <div class="mt-8 rounded-lg border border-slate-200 bg-slate-50 p-5">
             <p class="text-sm font-semibold text-[#1a2b4c] mb-2">Illustrative finding</p>
             <p class="text-slate-600">Water backup coverage may apply. Confirm where the water entered.</p>
-            <p class="mt-2 text-sm text-slate-600"><strong>Source:</strong> Water Backup Endorsement, page 2. <strong>Ask the insured:</strong> Did the water come up through a drain?</p>
+            <p class="mt-2 text-sm text-slate-600"><strong>Source:</strong> Water Backup Endorsement, page 2.<br><strong>Ask the insured:</strong> Did the water come up through a drain?</p>
         </div>
         <p class="mt-6 text-sm text-slate-600">In a consulting engagement, we deployed an Investigation Support agent that gives adjusters a cited first pass. <a href="{{ '/case-studies/investigation-support-agent/' | relative_url }}" class="text-blue-600 underline">Read the case study</a> or <a href="{% post_url 2026-11-14-investigation-support-agent-for-insurance-claims %}" class="text-blue-600 underline">explore the agent design</a>.</p>
     </section>

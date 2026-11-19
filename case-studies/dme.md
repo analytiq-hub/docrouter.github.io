@@ -1,6 +1,6 @@
 ---
 layout: case-study
-title: "Consulting: DME Automation Platform"
+title: "Ashvin AI: DME Automation Platform"
 subtitle: Custom healthcare document platform that informed DocRouter design
 permalink: /case-studies/dme/
 logo: /assets/images/ashvin-logo.png

@@ -315,9 +315,9 @@ image: /assets/images/og-default.png
                             <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Insurance Claims &amp; ACORD Forms</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-3">Process claims and ACORD forms for faster payouts. Extract customer data and integrate with your AMS system.</p>
-                            <p class="text-xs text-slate-500"><span class="font-semibold text-slate-600">Use case:</span> Accelerate claims processing and reduce payout times</p>
+                            <h3 class="text-lg font-semibold text-[#1a2b4c] mb-2">Insurance documents</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-3">Index the file store once, and let claims, underwriting, and recovery use the same pages.</p>
+                            <p class="text-xs text-slate-500"><span class="font-semibold text-slate-600">Use case:</span> After first notice, an adjuster starts from a cited package</p>
                         </div>
                     </div>
                     <a href="{{ '/solutions/insurance/' | relative_url }}" class="text-blue-600 hover:text-blue-800 text-sm font-medium no-underline">Learn more →</a>

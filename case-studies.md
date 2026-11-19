@@ -57,7 +57,7 @@ permalink: /case-studies/
                     url="/case-studies/supply-chain/" %}
                 {% include case-study-card.html
                     badge="Consulting"
-                    title="Consulting: DME Automation Platform"
+                    title="Ashvin AI: DME Automation Platform"
                     description="Custom healthcare document platform for a startup—precursor to DocRouter."
                     url="/case-studies/dme/" %}
                 {% include case-study-card.html

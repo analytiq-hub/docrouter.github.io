@@ -70,24 +70,6 @@ description: "Extract financial data from PE fund reports automatically. DocRout
             </div>
         </section>
 
-        <section class="enterprise-card p-8 mb-12">
-            <h2 class="text-2xl font-bold text-[#1a2b4c] mb-8 text-center">Target outcomes</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="text-4xl font-bold enterprise-metric mb-2">85%</div>
-                    <div class="text-slate-600 text-sm">Time savings</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold enterprise-metric mb-2">98%</div>
-                    <div class="text-slate-600 text-sm">Data accuracy</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold enterprise-metric mb-2">$120K+</div>
-                    <div class="text-slate-600 text-sm">Annual savings potential</div>
-                </div>
-            </div>
-        </section>
-
         {% include solution-related-docs.html
             quick_start="Set up financial document extraction in minutes"
             schemas="Define fields for fund statements, investment memos, and valuations"

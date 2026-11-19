@@ -56,6 +56,10 @@ description: "Prepare the documents a revenue-cycle team bills from. Anesthesia 
                         <li>Eligibility and coverage support</li>
                         <li>The page a biller cites on the claim</li>
                     </ul>
+                    <a href="{{ '/case-studies/boston-medical-data/' | relative_url }}"
+                       class="inline-block mt-4 text-sm font-semibold text-white underline hover:text-blue-200">
+                        Read the Boston Medical Data case study →
+                    </a>
                 </div>
                 <div class="enterprise-band-card">
                     <h3 class="text-lg font-semibold text-white mb-3">Durable medical equipment</h3>
@@ -65,30 +69,18 @@ description: "Prepare the documents a revenue-cycle team bills from. Anesthesia 
                         <li>Prior authorization forms</li>
                         <li>Patient information and eligibility</li>
                     </ul>
+                    <div class="mt-4 flex flex-col items-start gap-2">
+                        <a href="{{ '/case-studies/dme/' | relative_url }}"
+                           class="text-sm font-semibold text-white underline hover:text-blue-200">
+                            Read the Ashvin AI case study →
+                        </a>
+                        <a href="{{ '/case-studies/epic_dme_order_processing/' | relative_url }}"
+                           class="text-sm font-semibold text-white underline hover:text-blue-200">
+                            Read the Epic EHR order automation case study →
+                        </a>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <section class="enterprise-card p-8 mb-12">
-            <h2 class="text-2xl font-bold text-[#1a2b4c] mb-8 text-center">Target outcomes</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="text-4xl font-bold enterprise-metric mb-2">80%</div>
-                    <div class="text-slate-600 text-sm">Faster processing</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold enterprise-metric mb-2">95%</div>
-                    <div class="text-slate-600 text-sm">Authorization accuracy</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold enterprise-metric mb-2">$90K+</div>
-                    <div class="text-slate-600 text-sm">Annual savings potential</div>
-                </div>
-            </div>
-            <p class="text-center text-sm text-slate-500 mt-6">
-                From the durable medical equipment engagement.
-                <a href="{{ '/case-studies/dme/' | relative_url }}" class="text-blue-600 hover:text-blue-800 no-underline">Read the consulting case study →</a>
-            </p>
         </section>
 
         {% include solution-related-docs.html

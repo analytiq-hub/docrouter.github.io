@@ -69,24 +69,6 @@ description: "Accelerate loan processing with AI. DocRouter automatically extrac
             </div>
         </section>
 
-        <section class="enterprise-card p-8 mb-12">
-            <h2 class="text-2xl font-bold text-[#1a2b4c] mb-8 text-center">Target outcomes</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="text-4xl font-bold enterprise-metric mb-2">75%</div>
-                    <div class="text-slate-600 text-sm">Faster processing</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold enterprise-metric mb-2">99%</div>
-                    <div class="text-slate-600 text-sm">Data accuracy</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold enterprise-metric mb-2">$100K+</div>
-                    <div class="text-slate-600 text-sm">Annual savings potential</div>
-                </div>
-            </div>
-        </section>
-
         {% include solution-related-docs.html
             quick_start="Set up loan document extraction in minutes"
             schemas="Define fields to extract from loan applications, tax returns, and financial statements"
