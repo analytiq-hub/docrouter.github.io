@@ -11,4 +11,4 @@ permalink: /case-studies/dme/
 
 We architected the platform as they hired and grew the engineering team. The product reads the incoming medical documents, extracts the fields a reviewer needs, and keeps a person on the uncertain pages.
 
-We assisted them through four customer pilots, and helped their team to make the design production-ready and robust at scale.
+We assisted them through four customer pilots, and helped their team make the design production-ready and robust at scale.
