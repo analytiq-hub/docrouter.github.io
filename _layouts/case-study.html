@@ -7,6 +7,17 @@ layout: default
       <article class="h-entry" itemscope itemtype="http://schema.org/Article">
         <header class="mb-8 pb-8 border-b border-slate-200">
           <a href="{{ '/case-studies/' | relative_url }}" class="text-sm font-medium text-blue-600 hover:text-blue-800 no-underline mb-4 inline-block">← All case studies</a>
+          {%- if page.logo -%}
+          <p class="mb-5">
+            {%- if page.logo_url -%}
+            <a href="{{ page.logo_url }}" class="inline-flex no-underline">
+            {%- endif -%}
+              <img src="{{ page.logo | relative_url }}" alt="{{ page.logo_alt | default: page.title | escape }}" class="h-12 w-auto">
+            {%- if page.logo_url -%}
+            </a>
+            {%- endif -%}
+          </p>
+          {%- endif -%}
           <h1 class="text-3xl md:text-4xl font-bold text-[#1a2b4c] mb-4 p-name leading-tight" itemprop="name headline">{{ page.title | escape }}</h1>
           {%- if page.subtitle -%}
             <p class="text-lg text-slate-600 mb-0 max-w-3xl">{{ page.subtitle | escape }}</p>
