@@ -21,12 +21,12 @@ permalink: /case-studies/
             <p class="text-slate-600 text-sm mb-6 max-w-3xl">DocRouter customer and pilot work sits alongside consulting engagements that predate or are separate from the product. Badges on each card mark the type.</p>
             <div class="grid md:grid-cols-2 gap-6">
                 {% include case-study-card.html
-                    badge="Customer"
+                    badge="Product"
                     title="Customer: Boston Medical Data"
                     description="Live on-prem DocRouter for anesthesia RCM—175,000+ multi-page packets processed at 99.9% precision."
                     url="/case-studies/boston-medical-data/" %}
                 {% include case-study-card.html
-                    badge="Pilot"
+                    badge="Product"
                     title="Pilot: Insurance ACORD & Clearance Automation"
                     description="Completed DocRouter pilot with a specialty insurance wholesaler—ACORD forms and ALIS clearance workflows."
                     url="/case-studies/insurance_wholesaler/" %}
@@ -51,7 +51,7 @@ permalink: /case-studies/
                     description="Multi-agent PBM book companion—memory, auth, and observability at scale."
                     url="/case-studies/koch-ai-book-companion/" %}
                 {% include case-study-card.html
-                    badge="Pilot"
+                    badge="Product"
                     title="Pilot: Supply Chain Trade Documents"
                     description="Pilot for bills of lading, commodity reports, and related trade documents."
                     url="/case-studies/supply-chain/" %}
