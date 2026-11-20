@@ -250,7 +250,7 @@ image: /assets/images/og-default.png
                 See more:
                 <a href="{% post_url 2026-08-07-offline-evaluation-for-ai-agents %}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">Offline Evaluation Frameworks for AI Agents</a>
                 and the
-                <a href="{{ '/assets/files/Offline_Evaluation_Frameworks_for_AI_Agents_White_Paper.pdf' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">white paper</a>.
+                <a href="{{ '/assets/files/Offline_Evaluation_Frameworks_for_AI_Agents_White_Paper.pdf' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">White Paper</a>.
             </p>
         </section>
 
