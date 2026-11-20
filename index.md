@@ -242,29 +242,15 @@ image: /assets/images/og-default.png
         <!-- Results -->
         <section class="mb-16 md:mb-20 bg-slate-50 rounded-xl border border-slate-200/80 p-8 md:p-12">
             <p class="enterprise-section-label text-center mb-3">Measured outcomes</p>
-            <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-10 text-center">Document automation results</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-1">Up to</div>
-                    <div class="text-4xl md:text-5xl font-bold enterprise-metric mb-2">90%</div>
-                    <div class="text-slate-600 font-medium">Faster processing</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-1">Up to</div>
-                    <div class="text-4xl md:text-5xl font-bold enterprise-metric mb-2">95%</div>
-                    <div class="text-slate-600 font-medium">Error reduction</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-1">Potential</div>
-                    <div class="text-4xl md:text-5xl font-bold enterprise-metric mb-2">$50K+</div>
-                    <div class="text-slate-600 font-medium">Annual savings</div>
-                </div>
-            </div>
-            <p class="text-center mt-8 text-sm text-slate-600">
-                Read how we approach
-                <a href="{% post_url 2026-08-07-offline-evaluation-for-ai-agents %}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">Evaluation Frameworks for AI Agents</a>
-                or download the
-                <a href="{{ '/assets/files/Offline_Evaluation_Frameworks_for_AI_Agents_White_Paper.pdf' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">white paper PDF</a>.
+            <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4 text-center">How results are measured</h2>
+            <p class="text-slate-600 text-center max-w-2xl mx-auto leading-relaxed">
+                A workflow is judged within an evaluation framework: expert-reviewed cases, the evidence the workflow retrieved, and the corrections a reviewer makes.
+            </p>
+            <p class="text-slate-600 text-center max-w-2xl mx-auto leading-relaxed mt-4">
+                See more:
+                <a href="{% post_url 2026-08-07-offline-evaluation-for-ai-agents %}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">Offline Evaluation Frameworks for AI Agents</a>
+                and the
+                <a href="{{ '/assets/files/Offline_Evaluation_Frameworks_for_AI_Agents_White_Paper.pdf' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">white paper</a>.
             </p>
         </section>
 
