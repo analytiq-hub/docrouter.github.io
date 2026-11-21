@@ -14,6 +14,15 @@ description: "Boston Medical Data runs DocRouter on-prem for anesthesia revenue 
 
 DocRouter runs **on-premises** in their environment. The live path is a **native DocRouter workflow**: upload → page split → OCR → page classification → patient grouping → per-patient PDF merge and downstream extraction, with human review when pages cannot be assigned confidently.
 
+## Client Feedback
+
+{% include testimonial-card.html
+    quote="DocRouter is an innovative and highly customizable solution that has helped our company streamline document processing and improve workflow efficiency. Its flexibility allows us to tailor the platform to our specific business needs. Just as importantly, Andrei has been fantastic to work with—knowledgeable, responsive, and genuinely committed to our success. I highly recommend DocRouter to any organization looking to modernize and optimize its document workflows."
+    name="Albert Woo"
+    title="CEO"
+    company="Boston Medical Data"
+    image="/assets/images/albert_woo.jpeg" %}
+
 ## The Challenge
 
 Anesthesia RCM depends on complete, accurate encounter and coverage data pulled from messy clinical packets:

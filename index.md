@@ -265,7 +265,14 @@ image: /assets/images/og-default.png
                     <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Deployment</p>
                     <p class="text-3xl font-bold text-blue-600 mb-2">175K+ docs</p>
                     <p class="text-[#1a2b4c] font-semibold mb-2">Boston Medical Data</p>
-                    <p class="text-slate-600 text-sm mb-4">Live on-prem DocRouter for anesthesia RCM—multi-page surgery packets classified, grouped by patient, and extracted at 99.9% precision.</p>
+                    <p class="text-slate-600 text-sm mb-3">Live on-prem DocRouter for anesthesia RCM—multi-page surgery packets classified, grouped by patient, and extracted at 99.9% precision.</p>
+                    <div class="bg-slate-50 rounded-lg border border-slate-200/90 p-3.5 mb-4 shadow-sm">
+                        <p class="text-[#1a2b4c] text-sm leading-relaxed border-l-4 border-blue-500 pl-3 font-medium">“An innovative and highly customizable solution that helped us streamline document processing and improve workflow efficiency.”</p>
+                        <div class="flex items-center gap-2.5 mt-3 pl-0.5">
+                            <img src="{{ '/assets/images/albert_woo.jpeg' | relative_url }}" alt="Albert Woo" width="32" height="32" class="w-8 h-8 rounded-full object-cover ring-2 ring-white shadow-sm flex-shrink-0" loading="lazy">
+                            <p class="text-xs text-slate-600 leading-tight"><span class="font-semibold text-slate-800">Albert Woo</span><br>CEO, Boston Medical Data</p>
+                        </div>
+                    </div>
                     <span class="text-blue-600 text-sm font-medium">Read case study →</span>
                 </a>
                 <a href="{{ '/case-studies/supply-chain/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
@@ -279,7 +286,14 @@ image: /assets/images/og-default.png
                     <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Consulting</p>
                     <p class="text-3xl font-bold text-blue-600 mb-2">Coding Agent</p>
                     <p class="text-[#1a2b4c] font-semibold mb-2">Starlims Copilot</p>
-                    <p class="text-slate-600 text-sm mb-4">VS Code / Claude / MCP coding agent for Starlims LIMS—accelerating XFD, SSL, and JavaScript development.</p>
+                    <p class="text-slate-600 text-sm mb-3">VS Code / Claude / MCP coding agent for Starlims LIMS—accelerating XFD, SSL, and JavaScript development.</p>
+                    <div class="bg-slate-50 rounded-lg border border-slate-200/90 p-3.5 mb-4 shadow-sm">
+                        <p class="text-[#1a2b4c] text-sm leading-relaxed border-l-4 border-blue-500 pl-3 font-medium">“Helped us bring several AI initiatives to MVP stage—we made tremendous progress and significantly accelerated our AI roadmap.”</p>
+                        <div class="flex items-center gap-2.5 mt-3 pl-0.5">
+                            <img src="{{ '/assets/images/marius_popovici.jpg' | relative_url }}" alt="Marius Popovici" width="32" height="32" class="w-8 h-8 rounded-full object-cover ring-2 ring-white shadow-sm flex-shrink-0" loading="lazy">
+                            <p class="text-xs text-slate-600 leading-tight"><span class="font-semibold text-slate-800">Marius Popovici</span><br>Senior Software Engineering Manager, STARLIMS</p>
+                        </div>
+                    </div>
                     <span class="text-blue-600 text-sm font-medium">Read case study →</span>
                 </a>
             </div>
