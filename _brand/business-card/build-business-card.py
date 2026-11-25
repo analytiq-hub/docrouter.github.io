@@ -38,7 +38,7 @@ CARD = {
     "phone": "617.216.8509",
     "qr_url": "https://www.linkedin.com/in/andrei-radulescu-banu",
     "qr_caption": "LinkedIn",
-    "tagline": "AI data layer for operational documents",
+    "tagline": ("AI data layer for ", "operational documents"),  # navy lead, blue emphasis
 }
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -151,9 +151,10 @@ def _svg_path_tokens(d: str):
         yield cmd, [float(v) for v in re.findall(r"-?\d*\.?\d+", args)]
 
 
-def draw_logo(c: canvas.Canvas, left: float, top: float, width: float) -> float:
-    """Draw the horizontal colour logo; return its rendered height."""
-    svg = LOGO_SVG.read_text()
+def draw_logo(c: canvas.Canvas, left: float, top: float, width: float,
+              svg_path: Path = LOGO_SVG) -> float:
+    """Draw a colour logo SVG (horizontal by default, or stacked); return its height."""
+    svg = svg_path.read_text()
     vb_w, vb_h = (float(v) for v in re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', svg).groups())
     s = width / vb_w
     height = vb_h * s
@@ -178,15 +179,23 @@ def draw_logo(c: canvas.Canvas, left: float, top: float, width: float) -> float:
     renderPDF.draw(drawing, c, 0, 0)
     c.restoreState()
 
-    # Mark: rebuild its path in SVG space, clip, and fill with the gradient.
+    # The stacked logo wraps the mark group in an extra translate().
+    outer = re.search(r'<g transform="translate\(([-\d.]+) ([-\d.]+)\)">\s*'
+                      r'<g transform="translate\([-\d.]+ [-\d.]+\) scale', svg)
+    ox, oy = (float(v) for v in outer.groups()) if outer else (0.0, 0.0)
+    draw_mark(c, svg, left + ox * s, top - oy * s, s)
+    return height
+
+
+def draw_mark(c: canvas.Canvas, svg: str, left: float, top: float, s: float) -> None:
+    """Draw the logo's gradient head mark from an SVG (horizontal logo or mark-only)
+    at scale s (points per SVG unit), with (left, top) as the SVG origin."""
     d = re.search(r'fill="url\(#mark\)"[^>]*\sd="([^"]+)"', svg).group(1)
     gx, gy, gs = (float(v) for v in re.search(
         r'translate\(([-\d.]+) ([-\d.]+)\) scale\(([\d.]+)\)', svg).groups())
 
     def pt(x: float, y: float) -> tuple[float, float]:
-        X = (gx + gs * x) * s
-        Y = (gy + gs * y) * s
-        return left + X, top - Y
+        return left + (gx + gs * x) * s, top - (gy + gs * y) * s
 
     path = c.beginPath()
     ys = []
@@ -205,7 +214,6 @@ def draw_logo(c: canvas.Canvas, left: float, top: float, width: float) -> float:
     _, y_bot = pt(0, max(ys))
     c.linearGradient(left, y_top, left, y_bot, MARK_STOPS, (0, 0.5, 1), extend=True)
     c.restoreState()
-    return height
 
 
 # ---------------------------------------------------------------------------
@@ -372,7 +380,7 @@ def draw_back(c: canvas.Canvas) -> None:
     hero_background(c, rings=False)
 
     # Tagline, centred, homepage hero wording with the blue emphasis.
-    lead, emph = "AI data layer for ", "operational documents"
+    lead, emph = CARD["tagline"]
     size = 9.2
     w1 = pdfmetrics.stringWidth(lead, "Inter-SemiBold", size)
     w2 = pdfmetrics.stringWidth(emph, "Inter-SemiBold", size)

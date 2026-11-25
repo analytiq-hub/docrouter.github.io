@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Build the DocRouter.AI pen wrap: navy background, white wordmark, orange mark.
+"""Build the DocRouter.AI pen wrap: "docrouter docrouter ..." all over, on navy.
 
     python3 _brand/pen/build-pen.py
 
-Matches the printer template: 2.77 x 1.4 in document including bleed. The
-1.4 in height wraps around the barrel, so the logo sits in the centre band
-and the rest is flat navy (the wrap seam disappears into the solid colour).
+VistaPrint Design Wrap Ballpoint Pen spec: bleed 2.77 x 1.40 in (document
+size), trim 2.64 x 1.36 in, safety 2.54 x 1.25 in. The 1.40 in height wraps
+around the barrel, so the pattern runs edge to edge and reads the same from
+every side. No logo: the repeated name is the branding.
 
 Outputs (next to this script):
     docrouter-pen-print.pdf   CMYK vectors, full document size with bleed
@@ -19,40 +20,71 @@ from pathlib import Path
 
 from pypdf import PdfReader, PdfWriter
 from pypdf.generic import RectangleObject
+from reportlab.lib.colors import CMYKColor
+from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfgen import canvas
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 
-# Reuse the business card's brand colours and vector logo drawing.
+# Reuse the business card's brand colours and fonts.
 _spec = importlib.util.spec_from_file_location(
     "business_card", ROOT / "_brand" / "business-card" / "build-business-card.py")
 card = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(card)
 
 IN = 72.0
-PAGE_W, PAGE_H = 2.77 * IN, 1.4 * IN   # template document size, bleed included
-BLEED = 0.055 * IN                      # same printer as the business card
-SAFE = 0.11 * IN                        # safety inset from the document edge
-LOGO_W = 1.75 * IN                      # wordmark + mark width (don't go below ~1.6 in: thin mark strokes)
+PAGE_W, PAGE_H = 2.77 * IN, 1.40 * IN
+TRIM_W, TRIM_H = 2.64 * IN, 1.36 * IN
+BLEED_X, BLEED_Y = (PAGE_W - TRIM_W) / 2, (PAGE_H - TRIM_H) / 2
+
+WORD = "docrouter"
+FONT, SIZE = "Inter-Bold", 9.0
+LEADING = 11.0             # row spacing
+GAP = 4.5                  # space between words
+ROW_SHIFT = 27.0           # each row starts offset, so the words stagger
+BACKGROUND = card.NAVY
+COLOURS = [                # cycled word by word
+    card.WHITE,
+    CMYKColor(0.55, 0.15, 0.00, 0.00),   # light brand blue
+    CMYKColor(0.00, 0.46, 0.74, 0.00),   # logo-mark orange #FF8A42
+]
 
 PDF = HERE / "docrouter-pen-print.pdf"
 PNG = HERE / "docrouter-pen.png"
 
 
+def draw(c: canvas.Canvas) -> None:
+    c.setFillColor(BACKGROUND)
+    c.rect(0, 0, PAGE_W, PAGE_H, stroke=0, fill=1)
+
+    c.saveState()
+    clip = c.beginPath()
+    clip.rect(0, 0, PAGE_W, PAGE_H)
+    c.clipPath(clip, stroke=0, fill=0)
+    c.setFont(FONT, SIZE)
+    word_w = pdfmetrics.stringWidth(WORD, FONT, SIZE) + GAP
+    row, k = 0, 0
+    yv = PAGE_H - SIZE * 0.9
+    while yv > -SIZE:
+        xv = -((row * ROW_SHIFT) % word_w) - word_w
+        while xv < PAGE_W:
+            c.setFillColor(COLOURS[k % len(COLOURS)])
+            c.drawString(xv, yv, WORD)
+            xv += word_w
+            k += 1
+        k += 1                   # so colours don't line up vertically
+        yv -= LEADING
+        row += 1
+    c.restoreState()
+
+
 def build() -> None:
+    card.register_fonts()
     tmp = HERE / ".docrouter-pen.pdf"
     c = canvas.Canvas(str(tmp), pagesize=(PAGE_W, PAGE_H), pageCompression=1)
     c.setTitle("DocRouter.AI pen wrap")
-
-    c.setFillColor(card.NAVY)
-    c.rect(0, 0, PAGE_W, PAGE_H, stroke=0, fill=1)
-
-    card.WORDMARK = card.WHITE          # white wordmark on navy; mark keeps its gradient
-    logo_h = LOGO_W * 1000.0 / 5701.62  # logo SVG aspect ratio
-    assert LOGO_W <= PAGE_W - 2 * SAFE and logo_h <= PAGE_H - 2 * SAFE
-    card.draw_logo(c, (PAGE_W - LOGO_W) / 2, PAGE_H / 2 + logo_h / 2, LOGO_W)
-
+    draw(c)
     c.showPage()
     c.save()
 
@@ -60,12 +92,12 @@ def build() -> None:
     page = reader.pages[0]
     page.mediabox = RectangleObject([0, 0, PAGE_W, PAGE_H])
     page.bleedbox = RectangleObject([0, 0, PAGE_W, PAGE_H])
-    page.trimbox = RectangleObject([BLEED, BLEED, PAGE_W - BLEED, PAGE_H - BLEED])
+    page.trimbox = RectangleObject([BLEED_X, BLEED_Y, PAGE_W - BLEED_X, PAGE_H - BLEED_Y])
     writer = PdfWriter()
     writer.add_page(page)
     writer.add_metadata({
         "/Title": "DocRouter.AI pen wrap",
-        "/Subject": "2.77 x 1.4 in with bleed, CMYK",
+        "/Subject": "2.77 x 1.40 in with bleed, 2.64 x 1.36 in trim, CMYK",
         "/Author": "DocRouter.AI",
     })
     with PDF.open("wb") as fh:

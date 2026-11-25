@@ -3,9 +3,10 @@
 
     python3 _brand/tabletop-banner/build-tabletop-banner.py
 
-Same layout as the 33 x 79 in pull-up banner
+Same design as the 33 x 79 in pull-up banner
 (_brand/datos-insights/build-retractable-banner.py), scaled uniformly to the
-tabletop spec:
+tabletop spec, with two differences: the logo mark keeps its orange gradient,
+and the QR code is larger (tabletop viewers stand close).
 
     Bleed   8.74 x 14.21 in   (document size)
     Trim    8.50 x 13.98 in
@@ -28,11 +29,9 @@ import pymupdf
 from PIL import Image, ImageCms
 from pypdf import PdfReader, PdfWriter
 from pypdf.generic import RectangleObject
-from reportlab.graphics import renderPDF
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
-from svglib.svglib import svg2rlg
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
@@ -42,6 +41,12 @@ BRAND = ROOT / "_brand" / "datos-insights"
 _spec = importlib.util.spec_from_file_location("banner", BRAND / "build-retractable-banner.py")
 banner = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(banner)
+
+# The business card's gradient-mark drawing (full-colour logo mark).
+_spec = importlib.util.spec_from_file_location(
+    "card", ROOT / "_brand" / "business-card" / "build-business-card.py")
+card = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(card)
 
 IN = 72.0
 PAGE_W, PAGE_H = 8.74 * IN, 14.21 * IN
@@ -98,30 +103,12 @@ def build_pdf() -> None:
     c.setFillColor(white)
     c.rect(0, 0, PAGE_W, PAGE_H, stroke=0, fill=1)
 
-    # Logo mark, recoloured to the banner blue.
-    svg = re.sub(r'fill="url\(#mark\)"', 'fill="#0755F5"',
-                 (BRAND / "docrouter-mark-color.svg").read_text())
-    tmp_svg = HERE / ".docrouter-mark-blue.svg"
-    tmp_svg.write_text(svg)
-    mark = svg2rlg(str(tmp_svg))
-    tmp_svg.unlink()
-
-    def recolor(node: object) -> None:
-        if getattr(node, "fillColor", None) is not None:
-            node.fillColor = blue
-        if getattr(node, "strokeColor", None) is not None:
-            node.strokeColor = blue
-        for child in getattr(node, "contents", ()):
-            recolor(child)
-
-    recolor(mark)
+    # Logo mark in its full-colour orange gradient (the pull-up banner uses blue).
+    svg = (BRAND / "docrouter-mark-color.svg").read_text()
+    vb_w, vb_h = (float(v) for v in re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', svg).groups())
     mark_w = 84 * S
-    mark_h = mark_w * mark.height / mark.width
-    c.saveState()
-    c.translate(PAGE_W / 2 - mark_w / 2, y(42) - mark_h)
-    c.scale(mark_w / mark.width, mark_h / mark.height)
-    renderPDF.draw(mark, c, 0, 0)
-    c.restoreState()
+    mark_h = mark_w * vb_h / vb_w
+    card.draw_mark(c, svg, PAGE_W / 2 - mark_w / 2, y(42), mark_w / vb_w)
     check_safe(217.5 - 42, 42, 217.5 + 42, 42 + mark_h / S)
 
     banner.centered_text(c, "DocRouter.AI", 144, "IBM-Plex-Sans-SemiBold", 38, blue)
