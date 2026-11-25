@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a two-sided DocRouter.AI business card (US 3.5 x 2 in, 1/8 in bleed).
+"""Build a two-sided DocRouter.AI business card (US 3.5 x 2 in trim, 3.61 x 2.11 in with bleed).
 
 Template: edit the CARD settings below and rerun to make a card for someone else.
 
@@ -47,13 +47,19 @@ FONTS = ROOT / "_brand" / "fonts"
 LOGO_SVG = ROOT / "_brand" / "datos-insights" / "docrouter-logo-horizontal-color.svg"
 
 # ---------------------------------------------------------------------------
-# Geometry (points). Trim 3.5 x 2 in, bleed 1/8 in, safe margin 3/16 in.
+# Geometry (points). Matches the printer template: 3.61 x 2.11 in document
+# (3.5 x 2 in trim + 0.055 in bleed per side) with the safety area 0.11 in in
+# from the document edge (0.055 in inside trim). All text, logo, icons and the
+# QR code sit inside MARGIN, which must be >= SAFE; only background art
+# (wash, dot grid, rings) runs into the bleed.
 # ---------------------------------------------------------------------------
 IN = 72.0
 TRIM_W, TRIM_H = 3.5 * IN, 2.0 * IN
-BLEED = 0.125 * IN
+BLEED = 0.055 * IN
 PAGE_W, PAGE_H = TRIM_W + 2 * BLEED, TRIM_H + 2 * BLEED
-MARGIN = 0.1875 * IN
+SAFE = 0.055 * IN                      # safety inset from trim
+MARGIN = 0.1875 * IN                   # content inset from trim
+assert MARGIN >= SAFE
 
 # ---------------------------------------------------------------------------
 # Colors: homepage tokens (assets/css/enterprise.css) converted to CMYK.
@@ -445,7 +451,7 @@ def build() -> list[Path]:
         writer.add_page(page)
     writer.add_metadata({
         "/Title": f"DocRouter.AI business card — {CARD['name']}",
-        "/Subject": "US business card, 3.5 x 2 in trim, 1/8 in bleed, CMYK",
+        "/Subject": "US business card, 3.61 x 2.11 in with bleed, 3.5 x 2 in trim, CMYK",
         "/Author": "DocRouter.AI",
     })
     with pdf_path.open("wb") as fh:
