@@ -8,6 +8,8 @@ categories: [tech, docrouter, security, programming]
 description: "DocRouter Flows lets you write Python in a Code node. Running that code in a plain Python process is not safe on a multi-tenant platform. Here is why, how we run it in a WebAssembly sandbox instead, and how to work with PDFs using pypdf."
 ---
 
+![A DocRouter flow: a Webhook trigger feeds a Code node running Python inside a WebAssembly sandbox, which feeds an HTTP Request node. The sandbox has no access to host files, network, environment variables or processes.](/assets/images/flows-code-sandbox-splash.png)
+
 [DocRouter Flows]({% post_url 2026-06-21-docrouter-flows-visual-workflow-automation-for-intelligent-document-processing %}) lets you chain document steps: a trigger, OCR, an LLM extraction, an HTTP call. When no built-in node fits, you drop in a **Code (Python)** node and write a function:
 
 ```python
