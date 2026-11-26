@@ -5,8 +5,10 @@
 
 Same design as the 33 x 79 in pull-up banner
 (_brand/datos-insights/build-retractable-banner.py), scaled uniformly to the
-tabletop spec, with two differences: the logo mark keeps its orange gradient,
-and the QR code is larger (tabletop viewers stand close).
+tabletop spec, with three differences: the logo mark keeps its orange gradient,
+the QR code is larger (tabletop viewers stand close), and the background is
+the website hero / business card front (pale blue gradient, faint dot grid,
+large faint rings in the top-right corner) instead of plain white.
 
     Bleed   8.74 x 14.21 in   (document size)
     Trim    8.50 x 13.98 in
@@ -31,6 +33,7 @@ from pypdf import PdfReader, PdfWriter
 from pypdf.generic import RectangleObject
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.lib.colors import CMYKColor
 from reportlab.pdfgen import canvas
 
 HERE = Path(__file__).resolve().parent
@@ -92,6 +95,40 @@ def check_safe(left: float, top: float, right: float, bottom: float) -> None:
         f"content box {left, top, right, bottom} is outside the safety area")
 
 
+ACCENT_LIGHT = CMYKColor(0.03, 0.015, 0.00, 0.00)   # half-strength --dr-bg-accent
+
+
+def hero_background(c: canvas.Canvas) -> None:
+    """Website hero / business card front background: pale blue gradient,
+    faint dot grid fading downwards, and large faint rings in the top-right."""
+    c.saveState()
+    p = c.beginPath()
+    p.rect(0, 0, PAGE_W, PAGE_H)
+    c.clipPath(p, stroke=0, fill=0)
+    # --dr-bg-accent at the top, easing to a lighter tint (never plain white).
+    c.linearGradient(0, PAGE_H, 0, y(CONTENT_BOTTOM + 40), (card.ACCENT, ACCENT_LIGHT), extend=True)
+    c.restoreState()
+
+    step = 14.0
+    fade_end = y(330)
+    c.setFillColor(card.DOT)
+    yv = PAGE_H - step / 2
+    while yv > fade_end:
+        r = 0.5 + 0.45 * (yv - fade_end) / (PAGE_H - fade_end)
+        xv = step / 2
+        while xv < PAGE_W:
+            c.circle(xv, yv, r, stroke=0, fill=1)
+            xv += step
+        yv -= step
+
+    # Same proportions as the card front: two concentric rings off the corner.
+    c.setStrokeColor(card.RING)
+    c.setLineWidth(1.5)
+    cx, cy = PAGE_W - BLEED_X + 0.25 * IN, PAGE_H - BLEED_Y + 0.40 * IN
+    c.circle(cx, cy, 3.30 * IN, stroke=1, fill=0)
+    c.circle(cx, cy, 2.13 * IN, stroke=1, fill=0)
+
+
 def build_pdf() -> None:
     pdfmetrics.registerFont(TTFont(
         "IBM-Plex-Sans-SemiBold", str(ROOT / "_brand/fonts/IBM-Plex-Sans-SemiBold.ttf")))
@@ -100,8 +137,7 @@ def build_pdf() -> None:
     tmp_pdf = HERE / ".docrouter-tabletop-banner.pdf"
     c = canvas.Canvas(str(tmp_pdf), pagesize=(PAGE_W, PAGE_H), pageCompression=1)
     c.setTitle("DocRouter.AI tabletop banner")
-    c.setFillColor(white)
-    c.rect(0, 0, PAGE_W, PAGE_H, stroke=0, fill=1)
+    hero_background(c)
 
     # Logo mark in its full-colour orange gradient (the pull-up banner uses blue).
     svg = (BRAND / "docrouter-mark-color.svg").read_text()
