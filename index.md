@@ -260,41 +260,47 @@ image: /assets/images/og-default.png
                 <p class="enterprise-section-label mb-3">Case studies</p>
                 <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4">In regulated industries</h2>
             </div>
+            <!-- Customer quote: Boston Medical Data only (approved wording; do not edit) -->
+            <figure class="enterprise-card max-w-4xl mx-auto mb-8 p-6 md:p-8">
+                <div class="md:flex md:items-start md:gap-8">
+                    <svg class="w-10 h-10 text-blue-200 flex-shrink-0 mb-3 md:mb-0" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.3 6C5 8.4 2 12.6 2 17.7 2 22 4.6 25 8.2 25c3 0 5.3-2.3 5.3-5.2 0-2.9-2.1-5-4.8-5-.5 0-1.2.1-1.4.2.5-3.1 3.4-6.7 6.3-8.4L9.3 6zm15.8 0c-4.3 2.4-7.3 6.6-7.3 11.7 0 4.3 2.6 7.3 6.2 7.3 3 0 5.3-2.3 5.3-5.2 0-2.9-2.1-5-4.8-5-.5 0-1.2.1-1.4.2.5-3.1 3.4-6.7 6.3-8.4L25.1 6z"/></svg>
+                    <div class="flex-1">
+                        <blockquote class="text-lg md:text-xl text-[#1a2b4c] font-medium leading-relaxed m-0">
+                            “An innovative and highly customizable solution that helped us streamline document processing and improve workflow efficiency.”
+                        </blockquote>
+                        <figcaption class="mt-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                            <div class="flex items-center gap-3">
+                                <img src="{{ '/assets/images/albert_woo.jpeg' | relative_url }}" alt="Albert Woo" width="44" height="44" class="w-11 h-11 rounded-full object-cover ring-2 ring-white shadow-sm flex-shrink-0" loading="lazy">
+                                <p class="text-sm text-slate-600 leading-snug m-0"><span class="font-semibold text-slate-800">Albert Woo</span><br>CEO, Boston Medical Data</p>
+                            </div>
+                            <a href="{{ '/case-studies/boston-medical-data/' | relative_url }}" class="text-blue-600 hover:text-blue-800 text-sm font-medium no-underline">
+                                175K+ documents · 99.9% precision · on&#8209;prem&nbsp;→
+                            </a>
+                        </figcaption>
+                    </div>
+                </div>
+            </figure>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                <a href="{{ '/case-studies/boston-medical-data/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
+                <a href="{{ '/case-studies/boston-medical-data/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline flex flex-col">
                     <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Deployment</p>
                     <p class="text-3xl font-bold text-blue-600 mb-2">175K+ docs</p>
                     <p class="text-[#1a2b4c] font-semibold mb-2">Boston Medical Data</p>
-                    <p class="text-slate-600 text-sm mb-3">Live on-prem DocRouter for anesthesia RCM—multi-page surgery packets classified, grouped by patient, and extracted at 99.9% precision.</p>
-                    <div class="bg-slate-50 rounded-lg border border-slate-200/90 p-3.5 mb-4 shadow-sm">
-                        <p class="text-[#1a2b4c] text-sm leading-relaxed border-l-4 border-blue-500 pl-3 font-medium">“An innovative and highly customizable solution that helped us streamline document processing and improve workflow efficiency.”</p>
-                        <div class="flex items-center gap-2.5 mt-3 pl-0.5">
-                            <img src="{{ '/assets/images/albert_woo.jpeg' | relative_url }}" alt="Albert Woo" width="32" height="32" class="w-8 h-8 rounded-full object-cover ring-2 ring-white shadow-sm flex-shrink-0" loading="lazy">
-                            <p class="text-xs text-slate-600 leading-tight"><span class="font-semibold text-slate-800">Albert Woo</span><br>CEO, Boston Medical Data</p>
-                        </div>
-                    </div>
-                    <span class="text-blue-600 text-sm font-medium">Read case study →</span>
+                    <p class="text-slate-600 text-sm mb-4">Live on-prem DocRouter for anesthesia RCM—multi-page surgery packets classified, grouped by patient, and extracted at 99.9% precision.</p>
+                    <span class="mt-auto text-blue-600 text-sm font-medium">Read case study →</span>
                 </a>
-                <a href="{{ '/case-studies/supply-chain/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
+                <a href="{{ '/case-studies/insurance_wholesaler/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline flex flex-col">
                     <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Pilot</p>
-                    <p class="text-3xl font-bold text-blue-600 mb-2">Bills of Lading</p>
-                    <p class="text-[#1a2b4c] font-semibold mb-2">Supply chain document processing</p>
-                    <p class="text-slate-600 text-sm mb-4">Pilot for bills of lading, commodity reports, and related trade documents—structured extraction for supply chain operations.</p>
-                    <span class="text-blue-600 text-sm font-medium">Read case study →</span>
+                    <p class="text-3xl font-bold text-blue-600 mb-2">90%+ typed</p>
+                    <p class="text-[#1a2b4c] font-semibold mb-2">Insurance ACORD &amp; clearance</p>
+                    <p class="text-slate-600 text-sm mb-4">Specialty wholesaler, ~7,000 submissions a year, about half handwritten. ACORD extraction and clearance checks in pilot testing; ~80% on handwritten forms, with human review for the rest.</p>
+                    <span class="mt-auto text-blue-600 text-sm font-medium">Read case study →</span>
                 </a>
-                <a href="{{ '/case-studies/starlims-copilot/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline block">
+                <a href="{{ '/case-studies/investigation-support-agent/' | relative_url }}" class="enterprise-card enterprise-proof-card p-6 no-underline flex flex-col">
                     <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-3">Consulting</p>
-                    <p class="text-3xl font-bold text-blue-600 mb-2">Coding Agent</p>
-                    <p class="text-[#1a2b4c] font-semibold mb-2">Starlims Copilot</p>
-                    <p class="text-slate-600 text-sm mb-3">VS Code / Claude / MCP coding agent for Starlims LIMS—accelerating XFD, SSL, and JavaScript development.</p>
-                    <div class="bg-slate-50 rounded-lg border border-slate-200/90 p-3.5 mb-4 shadow-sm">
-                        <p class="text-[#1a2b4c] text-sm leading-relaxed border-l-4 border-blue-500 pl-3 font-medium">“Helped us bring several AI initiatives to MVP stage—we made tremendous progress and significantly accelerated our AI roadmap.”</p>
-                        <div class="flex items-center gap-2.5 mt-3 pl-0.5">
-                            <img src="{{ '/assets/images/marius_popovici.jpg' | relative_url }}" alt="Marius Popovici" width="32" height="32" class="w-8 h-8 rounded-full object-cover ring-2 ring-white shadow-sm flex-shrink-0" loading="lazy">
-                            <p class="text-xs text-slate-600 leading-tight"><span class="font-semibold text-slate-800">Marius Popovici</span><br>Senior Software Engineering Manager, STARLIMS</p>
-                        </div>
-                    </div>
-                    <span class="text-blue-600 text-sm font-medium">Read case study →</span>
+                    <p class="text-3xl font-bold text-blue-600 mb-2">Cited answers</p>
+                    <p class="text-[#1a2b4c] font-semibold mb-2">Claims investigation support</p>
+                    <p class="text-slate-600 text-sm mb-4">Mid-size P&amp;C carrier. After first notice of loss, an agent assembles cited coverage answers and open questions for the adjuster. The agent recommends; the adjuster decides.</p>
+                    <span class="mt-auto text-blue-600 text-sm font-medium">Read case study →</span>
                 </a>
             </div>
         </section>
