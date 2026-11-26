@@ -3,7 +3,7 @@ layout: default
 title: "DocRouter Demo"
 permalink: /demo/
 description: "Watch DocRouter process real insurance documents: an agent builds an extraction pipeline, tags trigger the work, answers cite the policy, and a mixed packet is split by patient with a human-review flag."
-image: https://media.docrouter.ai/demos/datos-2026/poster-v2.jpg
+image: https://media.docrouter.ai/demos/datos-2026/poster-v3.jpg
 ---
 
 {% assign video_base = "https://media.docrouter.ai/demos/datos-2026" %}
@@ -41,10 +41,10 @@ image: https://media.docrouter.ai/demos/datos-2026/poster-v2.jpg
                        controls
                        playsinline
                        preload="metadata"
-                       poster="{{ video_base }}/poster-v2.jpg">
-                    <source src="{{ video_base }}/docrouter-datos-2026-v1.mp4" type="video/mp4">
+                       poster="{{ video_base }}/poster-v3.jpg">
+                    <source src="{{ video_base }}/docrouter-datos-2026-v2.mp4" type="video/mp4">
                     Your browser can't play this video.
-                    <a href="{{ video_base }}/docrouter-datos-2026-v1.mp4">Download it (MP4, 11 MB)</a>.
+                    <a href="{{ video_base }}/docrouter-datos-2026-v2.mp4">Download it (MP4, 11 MB)</a>.
                 </video>
             </div>
             <p class="text-sm text-slate-500 mt-3 text-center">
@@ -58,7 +58,7 @@ image: https://media.docrouter.ai/demos/datos-2026/poster-v2.jpg
             <ol class="demo-chapters grid gap-3 sm:grid-cols-2 list-none p-0 m-0">
                 <li><button type="button" data-t="2.8">
                     <span class="demo-chapter-time">0:02</span>
-                    <span class="demo-chapter-title">The archive</span>
+                    <span class="demo-chapter-title">The document store</span>
                     <span class="demo-chapter-desc">Claim and policy documents indexed beside the system of record, grouped into cases.</span>
                 </button></li>
                 <li><button type="button" data-t="19.5">

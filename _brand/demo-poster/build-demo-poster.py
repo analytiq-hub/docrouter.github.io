@@ -90,7 +90,8 @@ def tracked_text(d: ImageDraw.ImageDraw, xy, text, f, fill, tracking: float = 0.
         x += d.textlength(ch, font=f) + f.size * tracking
 
 
-def build_poster(label: str, title: str, subtitle: str, out: Path) -> Path:
+def background() -> Image.Image:
+    """Navy, faint diagonal pattern, faded on the left where the text goes."""
     c = Image.new("RGBA", (SW, SH), (*NAVY, 255))
     c.alpha_composite(word_pattern())
     shade = Image.new("RGBA", (SW, SH), (*NAVY, 255))
@@ -98,7 +99,21 @@ def build_poster(label: str, title: str, subtitle: str, out: Path) -> Path:
     grad = ImageChops.invert(Image.linear_gradient("L").rotate(90)).resize((SW, SH))
     shade.putalpha(grad.point(lambda v: int(v * LEFT_SHADE)))
     c.alpha_composite(shade)
+    return c
 
+
+def save(c: Image.Image, out: Path) -> Path:
+    out.parent.mkdir(parents=True, exist_ok=True)
+    img = c.convert("RGB").resize((W, H), Image.LANCZOS)
+    if out.suffix.lower() == ".png":
+        img.save(out, optimize=True)
+    else:
+        img.save(out, quality=88, optimize=True, progressive=True)
+    return out
+
+
+def build_poster(label: str, title: str, subtitle: str, out: Path) -> Path:
+    c = background()
     d = ImageDraw.Draw(c)
     x, y = TEXT_X * SS, TEXT_Y * SS
     logo = Image.open(BRAND / "datos-insights" / "docrouter-logo-horizontal-white.png").convert("RGBA")
@@ -119,19 +134,23 @@ def build_poster(label: str, title: str, subtitle: str, out: Path) -> Path:
     y += int(ft.size * 1.32)
 
     d.text((x, y), subtitle, font=font("Medium", SUBTITLE_SIZE), fill=SUBTITLE_GREY)
-
-    out.parent.mkdir(parents=True, exist_ok=True)
-    c.convert("RGB").resize((W, H), Image.LANCZOS).save(out, quality=88, optimize=True, progressive=True)
-    return out
+    return save(c, out)
 
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--label", required=True, help='small orange line, e.g. "PRODUCT DEMO  ·  3:40"')
-    ap.add_argument("--title", required=True, help="main line (shrinks to fit if long)")
-    ap.add_argument("--subtitle", required=True, help="one short line under the title")
-    ap.add_argument("--out", type=Path, default=HERE / "poster.jpg", help="output JPEG (1920x1080)")
+    ap.add_argument("--label", help='small orange line, e.g. "PRODUCT DEMO  ·  3:40"')
+    ap.add_argument("--title", help="main line (shrinks to fit if long)")
+    ap.add_argument("--subtitle", help="one short line under the title")
+    ap.add_argument("--background-only", action="store_true",
+                    help="just the background (for the demo runner's HTML title cards)")
+    ap.add_argument("--out", type=Path, default=HERE / "poster.jpg", help="output .jpg or .png (1920x1080)")
     args = ap.parse_args()
+    if args.background_only:
+        print(save(background(), args.out))
+        return
+    if not (args.label and args.title and args.subtitle):
+        ap.error("--label, --title and --subtitle are required (or use --background-only)")
     print(build_poster(args.label, args.title, args.subtitle, args.out))
 
 
