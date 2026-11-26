@@ -124,7 +124,7 @@ image: /assets/images/og-default.png
             <div class="max-w-4xl mx-auto">
                 <div class="demo-video-frame">
                     <video controls playsinline preload="metadata"
-                           poster="https://media.docrouter.ai/demos/datos-2026/poster-v1.jpg">
+                           poster="https://media.docrouter.ai/demos/datos-2026/poster-v2.jpg">
                         <source src="https://media.docrouter.ai/demos/datos-2026/docrouter-datos-2026-v1.mp4" type="video/mp4">
                         <a href="{{ '/demo/' | relative_url }}">Watch the DocRouter demo</a>
                     </video>

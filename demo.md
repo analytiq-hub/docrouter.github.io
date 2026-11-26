@@ -3,7 +3,7 @@ layout: default
 title: "DocRouter Demo"
 permalink: /demo/
 description: "Watch DocRouter process real insurance documents: an agent builds an extraction pipeline, tags trigger the work, answers cite the policy, and a mixed packet is split by patient with a human-review flag."
-image: https://media.docrouter.ai/demos/datos-2026/poster-v1.jpg
+image: https://media.docrouter.ai/demos/datos-2026/poster-v2.jpg
 ---
 
 {% assign video_base = "https://media.docrouter.ai/demos/datos-2026" %}
@@ -41,7 +41,7 @@ image: https://media.docrouter.ai/demos/datos-2026/poster-v1.jpg
                        controls
                        playsinline
                        preload="metadata"
-                       poster="{{ video_base }}/poster-v1.jpg">
+                       poster="{{ video_base }}/poster-v2.jpg">
                     <source src="{{ video_base }}/docrouter-datos-2026-v1.mp4" type="video/mp4">
                     Your browser can't play this video.
                     <a href="{{ video_base }}/docrouter-datos-2026-v1.mp4">Download it (MP4, 11 MB)</a>.
