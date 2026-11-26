@@ -16,7 +16,7 @@ image: https://media.docrouter.ai/demos/datos-2026/poster-v1.jpg
         </h1>
         <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-8">
             Claim files, policy packets and a mixed pre-op packet: from first notice of loss to a cited
-            answer and a human-review flag. Captions are on screen, so no sound is needed.
+            answer and a human-review flag.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center">
             <a href="{{ site.calendly_url }}"
@@ -96,23 +96,7 @@ image: https://media.docrouter.ai/demos/datos-2026/poster-v1.jpg
 </div>
 
 <style>
-    .demo-video-frame {
-        position: relative;
-        aspect-ratio: 16 / 9;
-        width: 100%;
-        background: #0b1220;
-        border-radius: 0.875rem;
-        overflow: hidden;
-        box-shadow: 0 20px 45px -20px rgba(15, 23, 42, 0.45);
-    }
-    .demo-video-frame video {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        display: block;
-    }
+    /* .demo-video-frame lives in assets/css/enterprise.css (shared with the front page). */
     .demo-chapters button {
         display: grid;
         grid-template-columns: auto 1fr;

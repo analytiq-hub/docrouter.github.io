@@ -21,18 +21,23 @@ image: /assets/images/og-default.png
                 <p class="text-lg md:text-xl text-slate-600 mb-8 max-w-xl leading-relaxed">
                     Extract, validate, and route structured data from invoices, manifests, insurance claims, and any document—at enterprise scale.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-3 mb-10">
+                <div class="flex flex-col sm:flex-row gap-3 mb-4">
                     <a href="{{ site.calendly_url }}"
                        target="_blank"
                        rel="noopener noreferrer"
                        class="enterprise-btn-primary inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-base transition-colors duration-200 no-underline">
                         Schedule a Demo
                     </a>
-                    <a href="{{ '/docs/how-it-works/' | relative_url }}"
-                       class="enterprise-btn-secondary inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-base transition-colors duration-200 no-underline">
-                        View Documentation
+                    <a href="#demo-video"
+                       class="enterprise-btn-secondary inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-base transition-colors duration-200 no-underline">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M6.3 3.2A1 1 0 004.8 4v12a1 1 0 001.5.86l10-6a1 1 0 000-1.72l-10-6z"/></svg>
+                        Watch the demo (3:40)
                     </a>
                 </div>
+                <p class="text-sm text-slate-500 mb-10">
+                    Building on DocRouter?
+                    <a href="{{ '/docs/how-it-works/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium no-underline whitespace-nowrap">Read the documentation&nbsp;→</a>
+                </p>
                 <div class="flex flex-wrap items-center gap-6 pt-2 border-t border-slate-200/80">
                     <span class="text-sm text-slate-500 font-medium">Member of</span>
                     <img src="{{ '/assets/images/mit_startup_exchage.png' | relative_url }}" alt="MIT Startup Exchange" class="h-10 w-auto object-contain opacity-90" />
@@ -106,6 +111,29 @@ image: /assets/images/og-default.png
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
     <main>
+
+        <!-- Product demo video (hosted on media.docrouter.ai; chapters on /demo) -->
+        <section id="demo-video" class="mb-16 md:mb-20 scroll-mt-24">
+            <div class="text-center mb-8">
+                <p class="enterprise-section-label mb-3">Product demo</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-3">See it work on real documents</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">
+                    From first notice of loss to a cited answer and a human-review flag, in 3:40.
+                </p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="demo-video-frame">
+                    <video controls playsinline preload="metadata"
+                           poster="https://media.docrouter.ai/demos/datos-2026/poster-v1.jpg">
+                        <source src="https://media.docrouter.ai/demos/datos-2026/docrouter-datos-2026-v1.mp4" type="video/mp4">
+                        <a href="{{ '/demo/' | relative_url }}">Watch the DocRouter demo</a>
+                    </video>
+                </div>
+                <p class="text-center mt-4 text-sm">
+                    <a href="{{ '/demo/' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">Jump to a chapter →</a>
+                </p>
+            </div>
+        </section>
 
         <!-- Capabilities DocRouter solves — framed for business owners -->
         <section class="mb-16 md:mb-20">
@@ -239,21 +267,6 @@ image: /assets/images/og-default.png
             </div>
         </section> -->
 
-        <!-- Results -->
-        <section class="mb-16 md:mb-20 bg-slate-50 rounded-xl border border-slate-200/80 p-8 md:p-12">
-            <p class="enterprise-section-label text-center mb-3">Measured outcomes</p>
-            <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4 text-center">How results are measured</h2>
-            <p class="text-slate-600 text-center max-w-2xl mx-auto leading-relaxed">
-                A workflow is judged within an evaluation framework: expert-reviewed cases, the evidence the workflow retrieved, and the corrections a reviewer makes.
-            </p>
-            <p class="text-slate-600 text-center max-w-2xl mx-auto leading-relaxed mt-4">
-                See more:
-                <a href="{% post_url 2026-08-07-offline-evaluation-for-ai-agents %}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">Offline Evaluation Frameworks for AI Agents</a>
-                and the
-                <a href="{{ '/assets/files/Offline_Evaluation_Frameworks_for_AI_Agents_White_Paper.pdf' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">White Paper</a>.
-            </p>
-        </section>
-
         <!-- Customer proof -->
         <section class="mb-16 md:mb-20">
             <div class="text-center mb-10">
@@ -303,6 +316,21 @@ image: /assets/images/og-default.png
                     <span class="mt-auto text-blue-600 text-sm font-medium">Read case study →</span>
                 </a>
             </div>
+        </section>
+
+        <!-- Quality measurement -->
+        <section class="mb-16 md:mb-20 bg-slate-50 rounded-xl border border-slate-200/80 p-8 md:p-12">
+            <p class="enterprise-section-label text-center mb-3">Quality</p>
+            <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4 text-center">How we measure quality</h2>
+            <p class="text-slate-600 text-center max-w-2xl mx-auto leading-relaxed">
+                A workflow is judged within an evaluation framework: expert-reviewed cases, the evidence the workflow retrieved, and the corrections a reviewer makes.
+            </p>
+            <p class="text-slate-600 text-center max-w-2xl mx-auto leading-relaxed mt-4">
+                See more:
+                <a href="{% post_url 2026-08-07-offline-evaluation-for-ai-agents %}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">Offline Evaluation Frameworks for AI Agents</a>
+                and the
+                <a href="{{ '/assets/files/Offline_Evaluation_Frameworks_for_AI_Agents_White_Paper.pdf' | relative_url }}" class="text-blue-600 hover:text-blue-800 font-medium no-underline">White Paper</a>.
+            </p>
         </section>
 
         <!-- Industry solutions -->
@@ -466,101 +494,43 @@ image: /assets/images/og-default.png
             </div>
         </section>
 
-        <!-- Video -->
-        <section class="mb-16 md:mb-20">
-            <div class="text-center mb-8">
-                <p class="enterprise-section-label mb-3">Overview</p>
-                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c]">Document processing, explained</h2>
+        <!-- Closing CTA + contact -->
+        <section class="rounded-xl border border-slate-200 bg-slate-50 p-8 md:p-12 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4">Ready for production document AI?</h2>
+            <p class="text-slate-600 mb-8 max-w-xl mx-auto">
+                See how DocRouter handles your real document packets—with cost control, validation, and human review where it matters.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="{{ site.calendly_url }}"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="enterprise-btn-primary inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-base transition-colors duration-200 no-underline">
+                    Schedule a Demo
+                </a>
+                <a href="https://app.docrouter.ai"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="enterprise-btn-secondary inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-base transition-colors duration-200 no-underline">
+                    Launch App
+                </a>
+                <a href="{{ '/pricing/' | relative_url }}"
+                   class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-base text-slate-600 hover:text-[#1a2b4c] transition-colors duration-200 no-underline">
+                    View pricing
+                </a>
             </div>
-            <div class="enterprise-card p-2 max-w-4xl mx-auto">
-                <div class="relative w-full rounded-lg overflow-hidden" style="padding-bottom: 56.25%; height: 0;">
-                    <iframe
-                        src="https://player.vimeo.com/video/1130281211?title=0&byline=0&portrait=0&color=ffffff"
-                        title="DocRouter - AI-Powered Document Processing Introduction"
-                        frameborder="0"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        allowfullscreen
-                        class="absolute top-0 left-0 w-full h-full">
-                    </iframe>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA band -->
-        <section class="mb-16 md:mb-20">
-            <div class="rounded-xl border border-slate-200 bg-slate-50 p-8 md:p-12 text-center">
-                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c] mb-4">Ready for production document AI?</h2>
-                <p class="text-slate-600 mb-8 max-w-xl mx-auto">
-                    See how DocRouter handles your real document packets—with cost control, validation, and human review where it matters.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                    <a href="{{ site.calendly_url }}"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="enterprise-btn-primary inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-base transition-colors duration-200 no-underline">
-                        Schedule a Demo
-                    </a>
-                    <a href="https://app.docrouter.ai"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="enterprise-btn-secondary inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-base transition-colors duration-200 no-underline">
-                        Launch App
-                    </a>
-                    <a href="{{ '/pricing/' | relative_url }}"
-                       class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-base text-slate-600 hover:text-[#1a2b4c] transition-colors duration-200 no-underline">
-                        View pricing
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section class="enterprise-card p-8 md:p-10">
-            <div class="text-center mb-8">
-                <p class="enterprise-section-label mb-3">Contact</p>
-                <h2 class="text-2xl md:text-3xl font-bold text-[#1a2b4c]">Talk to our team</h2>
-            </div>
-            <div class="grid md:grid-cols-2 gap-10 max-w-3xl mx-auto">
-                <div class="space-y-5">
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
-                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                        </div>
-                        <div>
-                            <p class="font-medium text-[#1a2b4c] text-sm">Email</p>
-                            <a href="mailto:andrei@docrouter.ai" class="text-blue-600 hover:text-blue-800 text-sm no-underline">andrei@docrouter.ai</a>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
-                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                        </div>
-                        <div>
-                            <p class="font-medium text-[#1a2b4c] text-sm">Phone</p>
-                            <a href="tel:6172168509" class="text-blue-600 hover:text-blue-800 text-sm no-underline">617.216.8509</a>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
-                            <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </div>
-                        <div>
-                            <p class="font-medium text-[#1a2b4c] text-sm">LinkedIn</p>
-                            <a href="https://www.linkedin.com/company/docrouter" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 text-sm no-underline">linkedin.com/company/docrouter</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col justify-center">
-                    <a href="{{ site.calendly_url }}"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="enterprise-btn-primary inline-flex items-center justify-center px-6 py-3.5 rounded-lg font-semibold text-base transition-colors duration-200 no-underline mb-4">
-                        Schedule a Meeting
-                    </a>
-                    <p class="text-sm text-slate-600 leading-relaxed">
-                        Book a time to discuss your document processing needs and see how DocRouter can help streamline your operations.
-                    </p>
-                </div>
+            <div class="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-x-8 gap-y-3 text-sm">
+                <a href="mailto:andrei@docrouter.ai" class="inline-flex items-center gap-2 text-slate-600 hover:text-blue-700 no-underline">
+                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    andrei@docrouter.ai
+                </a>
+                <a href="tel:6172168509" class="inline-flex items-center gap-2 text-slate-600 hover:text-blue-700 no-underline">
+                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    617.216.8509
+                </a>
+                <a href="https://www.linkedin.com/company/docrouter" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-slate-600 hover:text-blue-700 no-underline">
+                    <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                </a>
             </div>
         </section>
 
